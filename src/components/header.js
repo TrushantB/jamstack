@@ -4,6 +4,11 @@ export default function Header() {
     const router = useRouter();
     const navigations = [
         {
+            label: "Home",
+            href: "/home",
+            target: "_self"
+        },
+        {
             label: "About WebJ",
             href: "/about",
             target: "_self"
@@ -11,6 +16,34 @@ export default function Header() {
         {
             label: "Contact",
             href: "/contact",
+            target: "_self"
+        },
+        {
+            label: "Pricing",
+            href: "/pricing",
+            target: "_self"
+        },
+
+        {
+            label: "ecommj",
+            href: "/ecommj",
+            target: "_self"
+        },
+        {
+            label: "jamstack",
+            href: "/jamstack",
+            target: "_self"
+        }
+        ,
+        {
+            label: "faq",
+            href: "/faq",
+            target: "_self"
+        }
+        ,
+        {
+            label: "ecosysterm",
+            href: "/ecosysterm",
             target: "_self"
         }
     ]
