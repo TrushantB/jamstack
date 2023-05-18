@@ -1,83 +1,219 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-export default function Header() {
-    const router = useRouter();
-    const navigations = [
-        {
-            label: "Home",
-            href: "/home",
-            target: "_self"
-        },
-        {
-            label: "About WebJ",
-            href: "/about",
-            target: "_self"
-        },
-        {
-            label: "Contact",
-            href: "/contact",
-            target: "_self"
-        },
-        {
-            label: "Pricing",
-            href: "/pricing",
-            target: "_self"
-        },
+import { React, useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { get } from "@/client/api";
 
-        {
-            label: "ecommj",
-            href: "/ecommj",
-            target: "_self"
-        },
-        {
-            label: "jamstack",
-            href: "/jamstack",
-            target: "_self"
-        }
-        ,
-        {
-            label: "faq",
-            href: "/faq",
-            target: "_self"
-        }
-        ,
-        {
-            label: "ecosysterm",
-            href: "/ecosysterm",
-            target: "_self"
-        }
-    ]
-    return (
-        <header>
-            <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-                <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <Link href="/" className="flex items-center">
-                        <img src="/J.svg" className="mr-3 h-6 sm:h-9" alt="Jamstack+ Logo" />
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Jamstack+</span>
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const [headerData, setHeaderData] = useState([]);
+
+  useEffect(() => {
+    get("header").then((response) => {
+      console.log(response);
+      setHeaderData(response);
+    });
+  }, []);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <header>
+      <div>
+        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+          <div className="container mx-auto px-4 md:px-8 py-4 md:py-6 flex flex-col lg:flex-row justify-between items-center">
+            <div className="flex gap-5 w-full justify-between">
+              <a href="#" className="flex items-center">
+                <img
+                  src={headerData?.logo?.url}
+                  alt={headerData?.logo?.alt}
+                  width={160}
+                  height={40}
+                />
+              </a>
+              <ul
+                className={`${
+                  menuOpen ? "block" : "hidden"
+                } lg:flex font-medium flex-col md:flex-row align-middle justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
+              >
+                {headerData?.headerMenu?.map((menuItems, index) => (
+                  <li key={index}>
+                    <Link href={menuItems.href} className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0">
+                        {menuItems.label}
                     </Link>
-                    <div className="flex items-center lg:order-2">
-                        <button type="button" className="text-white bg-gradient-to-br from-[#F0027F] to-[#FF5223] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Get in touch</button>
-                        <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                            <span className="sr-only">Open main menu</span>
-                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                            <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </button>
+                  </li>
+                ))}
+              </ul>
+              <button
+                id="dropdownUserAvatarButton"
+                data-dropdown-toggle="dropdownAvatar"
+                className="text-sm"
+                type="button"
+                onClick={toggleMenu}
+              >
+                <span className="sr-only"></span>
+                <img
+                  src={headerData?.hamburgerLogo?.url}
+                  alt={headerData?.hamburgerLogo?.alt}
+                  width={40}
+                  height={40}
+                />
+              </button>
+            </div>
+            {isOpen && (
+              <div className=" flex flex-col bg-accent-100  overflow-y-scroll h-screen  p-7  lg:w-4/12  rounded-3xl  absolute right-0 z-10 top-0">
+                <div>
+                  <div className="fixed top-4 right-4">
+                    <span className="w-8 h-8 flex items-center justify-center p-1 bg-white rounded-full">
+                      <button className="text-primary" onClick={toggleMenu}>
+                        {headerData?.crossLogo?.url}
+                      </button>
+                    </span>
+                  </div>
+
+                  <div>
+                    <ul className="mt-10">
+                      {headerData?.headerMenu.map((menuItems, index) => (
+                        <li key={index}>
+                          <Link href={menuItems.href} className="block py-2 lg:hidden pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0">
+                              {menuItems.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="mt-10">
+                      {headerData.sidebarLink.map((sidebarItems, index) => (
+                        <li className="my-3" key={index}>
+                          <Link href={sidebarItems.href}>
+                            <h6>
+                              {sidebarItems.label}
+                            </h6>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className=" mt-14 mb-14">
+                      <p>{headerData?.description}</p>
+                      <button className="mt-4 font-semibold" type="button">
+                        {headerData?.buttonLabel.label}
+                      </button>
                     </div>
-                    <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                        <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                            {
-                                navigations.map((navigation) => {
-                                    return (
-                                        <li key={navigation.href}>
-                                            <Link href={navigation.href} target={navigation.target} className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700  ${router.pathname === navigation.href ? 'dark:text-white' : ''}`}>{navigation.label}</Link>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
+                    <div>
+                      <h5 className="mb-3 font-medium ">
+                        {headerData?.Contactlabel}
+                      </h5>
+                      <ul>
+                        <li className="my-3">
+                          <a>{headerData?.address.phoneNumber}</a>
+                        </li>
+                        <li>
+                          <a
+                            className="my-3"
+                            href={`mailto:${headerData?.address.email}`}
+                          >
+                            {headerData?.address.email}
+                          </a>
+                        </li>
+                        <li className="my-3">{headerData?.address.country}</li>
+                      </ul>
                     </div>
+                    <div className="lg:mt-6 mb-4">
+                      <ul className="flex items-center gap-3">
+                        {headerData?.socialLink.map((item, index) => (
+                          <li key={index}>
+                            <Link href={item.href}>
+                                <span
+                                  className={`${item.iconName} text-xl`}
+                                ></span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-            </nav>
-        </header>
-    )
+              </div>
+            )}
+            {menuOpen && (
+              <div
+                className={`${
+                  menuOpen ? "block" : "hidden"
+                } sticky top-0 md:flex font-medium flex-col md:flex-row align-middle p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full`}
+              >
+                <ul>
+                  {headerData?.headerMenu.map((menuItems, index) => (
+                    <li key={index}>
+                      <Link href={menuItems.href} className=" block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 sticky">
+                          {menuItems.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <ul className="mt-14">
+                  {headerData?.sidebarLink.map((sidebarItems, index) => (
+                    <li className="py-2 pl-3" key={index}>
+                      <Link href={sidebarItems.href}>
+                        <h6>
+                          {sidebarItems.label}
+                        </h6>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <ul>
+                  <li>
+                    <div className=" mt-14 mb-14 pl-3">
+                      <p>{headerData?.description}</p>
+                      <button className="mt-4 font-semibold" type="button">
+                        {headerData?.buttonLabel.label}
+                      </button>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="pl-3">
+                      <h5 className="mb-3 font-medium ">
+                        {headerData?.Contactlabel}
+                      </h5>
+                      <ul>
+                        <li className="py-2">
+                          <a>{headerData?.address.phoneNumber}</a>
+                        </li>
+                        <li>
+                          <a
+                            className="py-2"
+                            href={`mailto:${headerData?.address.email}`}
+                          >
+                            {headerData?.address.email}
+                          </a>
+                        </li>
+                        <li className="py-2">{headerData?.address.country}</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="lg:mt-6 mb-4 pl-3">
+                      <ul className="flex items-center gap-3">
+                        {headerData?.socialLink.map((item, index) => (
+                          <li key={index}>
+                            <Link href={item.href}>
+                                <span
+                                  className={`${item.iconName} text-xl`}
+                                ></span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
 }
