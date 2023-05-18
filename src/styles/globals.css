@@ -81,3 +81,101 @@
     line-height: 2.4rem;
   }
 }
+
+
+/* form css */
+
+.wrapper form  {
+display: flex;
+flex-direction: column;
+ 
+align-items: flex-start;
+}
+
+.wrapper form div{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap:20px;
+  
+}
+
+.wrapper form input[type="text"]{
+  background: #F1F2F6;
+  height: 60;
+  padding: 10px  16px ;
+  border-radius: 50px;
+  margin-bottom: 32px;
+  width: 100%;
+  font-size: 18px;
+ 
+  
+}
+
+.wrapper form input[type="text"]:focus{
+  outline: 1px solid #F0027F;
+  width: 100%;
+}
+
+
+.wrapper form input[type="checkbox"]{
+  visibility: hidden;
+  position: absolute;
+}
+
+.wrapper form div input[type="checkbox"]:checked + label {
+ background-color: #4767F6; 
+ color: #fff;
+}
+
+.wrapper form label{
+  margin-bottom: 24px;
+}
+
+
+.wrapper form div label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 39px;
+  border-radius: 50px;
+  height: 60px;
+  background-color: #F1F2F6;
+
+
+}
+
+.wrapper form textarea:focus{
+  outline: 1px solid #F0027F;
+}
+
+.wrapper form div :checked:checked{
+ 
+
+  background-color: blue;
+}
+
+.wrapper form textarea{
+  margin: 20px 0 0;
+  height: 200px;
+  background-color:#F1F2F6 ;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.wrapper form button{
+  padding: 0 20px;
+  height: 60px;
+  background-color: #F0027F;
+  color: #fff;
+  border-radius: 50px;
+  margin-top: 34px;
+  
+}
+
+
+
+
+
