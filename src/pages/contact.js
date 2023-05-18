@@ -1,11 +1,10 @@
-import Form from "@/components/form";
-import Layout from "@/components/layout";
+
 
 const About = () => {
     return (
         <Layout>
-            <div className="h-screen ">
-                <Form/>
+            <div className="h-screen flex justify-center items-center">
+                <h1>Contact us</h1>
             </div>
         </Layout>
     )
