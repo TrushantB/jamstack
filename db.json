@@ -3,6 +3,67 @@
     "id": 1,
     "title": "Home page"
   },
+  "pricing" : {
+    "banner" : {
+      "heading" : "Let’s boost your business with powerful ecosystem by Jamstack+.",
+      "image" : "/priceBanner.svg",
+      "alt" : "image",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "buttonLabel" : "Start A Project",
+      "type": "primary",
+      "label": "Start A Project",
+      "size": "medium"
+    },
+    "textBanner": {
+      "sliderControls": {
+        "dots": true,
+        "infinite": true,
+        "speed": 500,
+        "autoplaySpeed": 2500,
+        "autoplay": true,
+        "arrows": true,
+        "swipe": true
+      },
+      "info": [
+        {
+          "label": "Google found that 53% of mobile users will leave a website that takes longer than three seconds to load.",
+          "icon": "circle",
+          "alt": "image"
+        },
+        {
+          "label": "Microsoft found that 45% of Ecomm users will leave a website that takes longer than three seconds to load.",
+          "icon": "pentagon",
+          "alt": "image"
+        },
+        {
+          "label": "Yahoo found that 57% of mobile Web User will leave a website that takes longer than three seconds to load.",
+          "icon": "diamond",
+          "alt": "image"
+        }
+      ]
+    },
+    "Webstatstics": {
+      "heading": "Know your webstatics",
+      "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
+        "placeholder" : "Paste website URL here",
+        "buttonLabel" : "Request Report",
+        "isButton" : true
+    },
+    "customPlan" : {
+      "heading" : "Looking for ideal custom plan",
+      "description" : "Be updated with the latest technology. Choose your convenient tech stack and steps to upgrade your business with us"
+    },
+    "threC" : {
+      "heading" : "Connect, Check, Choose",
+      "description" : "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
+      "buttonLabel" : "Connect with Team",
+      "type": "primary",
+      "label": "Connect with Team",
+      "size": "medium"
+    }
+    
+  },
   "webj": {
     "id": 1,
     "title": "Website development"
