@@ -62,15 +62,17 @@ const pricing = () => {
       <Header />
 
       {/* Banner section with image bottom  */}
-      <div className="container">
+      <div className="container px-3.5 lg:pt-32 pt-14 pb-14 lg:pb-32">
         <div>
-          <div className={"text-center"}>
+          <div className="">
             <div>
               <div>
-                <h3>{priceData?.banner?.heading}</h3>
-                <div className="my-16">
+                <h2 className="text-center text-bold lg:w-6/12 mx-auto">
+                  {priceData?.banner?.heading}
+                </h2>
+                <div className="lg:my-16 my-4 text-center pt-4 lg:pt-16">
                   <button
-                    className={`bg-pink-500 text-white rounded-full px-4 py-3 font-bold`}
+                    className={`bg-pink-500 text-white rounded-full lg:px-4  px-3  py-2 lg:py-3 font-bold`}
                   >
                     {priceData?.banner?.label}
                   </button>
@@ -78,18 +80,29 @@ const pricing = () => {
               </div>
             </div>
           </div>
-          <div className="flex  items-center justify-center">
-            <img
-              className="w-10/12"
-              src={priceData?.banner?.image}
-              alt={priceData?.banner?.alt}
-            />
+
+          <div className="flex pt-16 lg:pt-24 items-center justify-center">
+            <picture>
+              <source
+                media="(min-width:650px)"
+                srcSet={priceData?.banner?.image}
+              />
+              <source
+                media="(min-width:360px)"
+                srcSet={priceData?.banner?.imageTwo}
+              />
+              <img
+                src="img_orange_flowers.jpg"
+                alt="Flowers"
+                style={{ width: "auto" }}
+              />
+            </picture>
           </div>
         </div>
       </div>
 
       {/* web facts section */}
-      <div className="p-5 lg:px-10 flex flex-col gap-5 py-12 bg-accent-100">
+      <div className="p-5 lg:px-10 flex flex-col gap-5 py-12 bg-accent-100 ">
         <Slider {...settings}>
           {priceData?.textBanner?.info.map((item, index) => (
             <div key={index}>
@@ -107,16 +120,16 @@ const pricing = () => {
 
       {/* web statics */}
 
-      <div className="bg-secondary text-white lg:pl-28 lg:py-16">
+      <div className="bg-secondary text-white  px-3.5 lg:pl-28 py-6 lg:py-16">
         <div className="">
           <h2 className="">{priceData?.Webstatstics?.heading}</h2>
         </div>
-        <div className="">
+        <div className="mt-7">
           <p className="w-7/12">{priceData?.Webstatstics?.description}</p>
         </div>
 
         {/* input start  */}
-        <div className="flex lg:flex-row gap-4 lg:gap-0 items-center">
+        <div className="flex lg:flex-row gap-4 mt-12 lg:gap-0 items-center">
           <input
             placeholder={priceData?.Webstatstics?.placeholder}
             className="border rounded-full py-2 px-2 lg:pl-4 lg:w-1/2"
@@ -133,7 +146,7 @@ const pricing = () => {
           ) : (
             isButton && (
               <button className="bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white">
-                {priceData?.Webstatstics?.buttonlabel}
+                {priceData?.Webstatstics?.buttonLabel}
               </button>
             )
           )}
@@ -149,23 +162,27 @@ const pricing = () => {
 
       {/* Custom Plan */}
 
-      <div className="border-t-2 border-b-2 border-red-600">
-        <h3 className="text-4xl text-center py-24 ">
+      <div className="py-12 lg:py-24 px-3.5">
+        <h2 className="text-center text-bold ">
           {priceData?.customPlan?.heading}
-        </h3>
-        <p>{priceData?.customPlan?.description}</p>
+        </h2>
+        <p className="text-center text-bold pt-6">
+          {priceData?.customPlan?.description}
+        </p>
       </div>
 
       {/* Pricing Faq section */}
 
       {/* Connect check choose section*/}
 
-      <div className="border-t-2 border-b-2 border-red-600 pb-32 lg:pl-24">
+      <div className="pb-10 pt-8 lg:pb-44 lg:px-24 px-3.5">
         <h2 className=" ">{priceData?.threC?.heading}</h2>
-        <p className="w-5/12">{priceData?.threC?.description}</p>
-        <div className="my-16">
+        <div className="pt-4">
+          <p className="ps-1 lg:w-5/12">{priceData?.threC?.description}</p>
+        </div>
+        <div className="my-12">
           <button
-            className={`bg-pink-500 text-white rounded-full px-4 py-3 font-bold`}
+            className={`bg-pink-500 text-white rounded-full px-3 py-1 lg:px-4 lg:py-3 font-bold`}
           >
             {priceData?.threC?.label}
           </button>

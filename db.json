@@ -7,6 +7,7 @@
     "banner" : {
       "heading" : "Let’s boost your business with powerful ecosystem by Jamstack+.",
       "image" : "/priceBanner.svg",
+      "imageTwo" : "/mobileBannerTwo.png" ,
       "alt" : "image",
       "backGroundColor": "#ffffff",
       "headingSize": "medium",
