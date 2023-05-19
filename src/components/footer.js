@@ -62,7 +62,7 @@ export default function Footer() {
             ))}
         </div>
         <div className="flex items-center sm:items-start sm:justify-end bold mt-5 sm:mt-0">
-          <span className="font-bold text-white">
+          <span className="font-bold">
             &copy;{footerData?.copyRight}
           </span>
         </div>

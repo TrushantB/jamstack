@@ -1,7 +1,7 @@
 {
   "header": {
     "logo": {
-      "url": "logo.svg",
+      "url": "/Jamstack+.svg",
       "alt": "jamstack logo"
     },
     "headerMenu": [
@@ -48,9 +48,10 @@
 
   "footer": {
     "logo": {
-      "url": "logo.svg",
+      "url": "/Jamstack+.svg",
       "alt": "jamstack logo"
     },
+    "copyRight": "Jamstack 2023 ",
     "socialIcons": [
       {
         "icon": "icon-mail1",
@@ -91,6 +92,23 @@
       { "label": "About us", "href": "aboutus", "target": "_self" },
       { "label": "Blog", "href": "blog", "target": "_self" },
       { "label": "Contact", "href": "contact", "target": "_self" }
+    ],
+    "secondaryMenu": [
+      {
+        "label": "Terms and conditions",
+        "href": "termsandcondition",
+        "target": "_self"
+      },
+      {
+        "label": "Security - GDPR, SOC",
+        "href": "Security",
+        "target": "_self"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "PrivacyPolicy",
+        "target": "_self"
+      }
     ]
   },
 
@@ -101,7 +119,7 @@
       "heading": "The ecosystem for building digital presence",
       "backGroundColor": "#ffffff",
       "headingSize": "medium",
-      "image": "placeHolder",
+      "image": "/banner.svg",
       "type": "primary",
       "label": "Start A Project",
       "size": "medium",
@@ -165,7 +183,10 @@
     },
     "Webstatstics": {
       "heading": "Know your webstatics",
-      "description": "Check your website performance and check how Jamstack+ can help you improve your business."
+      "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
+        "placeholder" : "Paste website URL here",
+        "buttonLabel" : "Request Report",
+        "isButton" : true
     },
     "benefits": {
       "heading": "Benefits of working with us:",
@@ -204,22 +225,22 @@
       "heding": "Products we Create",
       "cards": [
         {
-          "label": "Termgrid",
-          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "label": "webJ",
+          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
           "buttonLabel": "Know More",
-          "href": ""
+          "href": "#"
         },
         {
-          "label": "Crisp",
-          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "label": "ecommJ",
+          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
           "buttonLabel": "Know More",
-          "href": ""
+          "href": "#"
         },
         {
-          "label": "Ternary",
-          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "label": "mobJ",
+          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
           "buttonLabel": "Know More",
-          "href": ""
+          "href": "#"
         }
       ]
     },
@@ -243,12 +264,11 @@
       ],
       "type": "primary",
       "label": "Explore Offerings",
-      "size": "medium",
-      "layout": "Image Left"
+      "size": "medium"
     },
     "edgeNetwork": {
       "heading": "Edge Network",
-      "image": "placeHolder",
+      "image": "/world.png",
       "alt": "image"
     },
     "caseStudy": {
@@ -346,19 +366,19 @@
         {
           "name": "Kaylynn Kenter",
           "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
-          "image": "profilPlaceholder",
+          "image": "/testimonalImageOne.svg",
           "alt": "image"
         },
         {
           "name": "Kianna Franci",
           "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
-          "image": "profilPlaceholder",
+          "image": "/testimonalImageTwo.svg",
           "alt": "image"
         },
         {
           "name": "Ryan Lipshutz",
           "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
-          "image": "profilPlaceholder",
+          "image": "/testimonalIMageThree.svg",
           "alt": "image"
         }
       ]
@@ -367,26 +387,26 @@
       "heading": "Blogs",
       "cards": [
         {
-          "image": "placeHolder",
+          "image": "/Termgrid.png",
           "alt": "blog",
-          "label": "webJ",
-          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
+          "label": "Termgrid",
+          "description": "Branding a whole new category of debt management.",
           "buttonLabel": "Read more",
           "href": ""
         },
         {
-          "image": "placeHolder",
+          "image": "/Crisp.png",
           "alt": "blog",
-          "label": "ecommJ",
-          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
+          "label": "Crisp ",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
           "href": ""
         },
         {
-          "image": "placeHolder",
+          "image": "/Ternary.png",
           "alt": "blog",
-          "label": "mobJ",
-          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
+          "label": "Ternary",
+          "description": "Creating a visual identity and product for FinOps cloud innovator.",
           "buttonLabel": "Read more",
           "href": ""
         }
