@@ -41,15 +41,15 @@ function WebStactics({ heading, description , placeholder, isButton, buttonLabel
       <div className="">
         <h2 className="">{heading}</h2>
       </div>
-      <div className="mt-7">
-        <p className="w-7/12">{description}</p>
+      <div className="mt-1">
+        <p className="w-6/12">{description}</p>
       </div>
 
       {/* input start  */}
       <div className="flex lg:flex-row gap-4 mt-12 lg:gap-0 items-center">
         <input
           placeholder={placeholder}
-          className="border rounded-full py-2 px-2 lg:pl-4 lg:w-1/2"
+          className="border rounded-full py-2 px-2 lg:pl-4 lg:w-3/4"
           onBlur={handleBlur}
           onChange={handleChange}
         />

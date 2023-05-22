@@ -97,7 +97,7 @@ const Home = () => {
 
   return (
     <Layout>
-      {<Banner {...homeData.banner} />}
+      <div className="lg:px-24 py-24">{<Banner {...homeData.banner} />}</div>
 
       {<WebSection {...homeData.technologySolution} />}
 
@@ -106,14 +106,16 @@ const Home = () => {
       {/* textbannerList end  */}
 
       {/* video component section start */}
-
-      <VideoBanner {...homeData.videoBanner} />
+      <div className="lg:py-24">
+        <VideoBanner {...homeData.videoBanner} />
+      </div>
 
       {/* video banner end  */}
 
       {/* web facts section start*/}
-
-      <TextBanner {...homeData.textBanner} />
+      <div className="">
+        <TextBanner {...homeData.textBanner} />
+      </div>
 
       {/* web facts end  */}
 
@@ -124,25 +126,38 @@ const Home = () => {
       {/* web stactics end  */}
 
       {/* benifits section */}
+      <div className="lg:px-24 pb-24">
       <Benefits {...homeData.benefits} />
+      </div>
+      
 
       {/* Product card section start */}
+      <div className="pb-24  ">
+        <h2 className="text-center pb-14">Product We Create</h2>
       <ProductCard {...homeData.productCard} />
+      </div>
+     
 
       {/* product card end  */}
 
       {/* Our client section start */}
-
-      <OurClient {...homeData.ourClient} />
+<div className="lg:px-24 pb-24">
+<OurClient {...homeData.ourClient} />
+</div>
+      
 
       {/* our client end  */}
 
       {/* Edge Network section */}
       <EdgeNetwork {...homeData.edgeNetwork} />
 
-      {/* case study section start */}
+      <div className="lg:px-24">
+         {/* case study section start */}
 
       <CaseStudy {...homeData.caseStudy} />
+      </div>
+
+     
 
       {/* case study end  */}
 

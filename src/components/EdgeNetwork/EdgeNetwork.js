@@ -2,11 +2,11 @@ import React from 'react'
 
 function EdgeNetwork({heading  ,image }) {
   return (
-    <div className="border-t-2 border-b-2 pb-32 border-blue-600">
+    <div className=" pb-32">
         <h2 className="text-4xl text-center ">
-          {heading}
+          {/* {heading} */}
         </h2>
-        <div>
+        <div className='flex justify-center'>
           <img src={image} />
         </div>
       </div>

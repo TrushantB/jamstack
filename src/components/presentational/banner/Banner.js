@@ -4,16 +4,30 @@ import classNames from "classnames";
 import Button from "../../form/button/Button";
 //import "./Banner.css";
 
-const Banner = ({ heading, image, type, size, label, onClick, layout  }) => {
+const Banner = ({ heading, image, type, size, label, onClick, layout }) => {
   return (
-    <div className="container">
-      <div className={layout === "Image Bottom" ? "" : "md:flex"}>
+    <div className="">
+      <div
+        className={classNames({
+          "md:flex": true,
+          "flex-col-reverse": layout === "Image Bottom",
+        })}
+      >
         <div
-          className={layout === "Image Left" ? "md:w-1/2 flex" : "text-center"}
+          className={classNames({
+            "md:w-1/2": true,
+            "w-full": layout === "Image Bottom",
+            "flex": layout === "Image Left",
+            "text-center": layout !== "Image Left",
+          })}
         >
-          <div className={layout === "Image Left" ? "flex items-center" : ""}>
+          <div
+            className={classNames({
+              "flex items-center": layout === "Image Left",
+            })}
+          >
             <div>
-              <h2 className="text-black-950 font-bold text-7xl">{heading}</h2>
+              <h2 className="text-black-950 font-bold">{heading}</h2>
 
               <div className="my-16">
                 <Button
@@ -27,12 +41,12 @@ const Banner = ({ heading, image, type, size, label, onClick, layout  }) => {
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-center justify-center">
+          <div className="flex md:w-1/2 items-center justify-end">
             <img src={image} alt="image" />
           </div>
         )}
         {layout === "Image Bottom" && (
-          <div className="flex  items-center justify-center">
+          <div className="flex items-center justify-center">
             <img className="w-10/12" src={image} alt="image" />
           </div>
         )}

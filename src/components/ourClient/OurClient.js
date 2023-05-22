@@ -2,18 +2,19 @@ import { React, useState } from "react";
 import Button from "@/components/form/button/Button"
 
 
+
 function OurClient({heading , imageList , type  , label , size}) {
   return (
-    <div className="flex pt-5">
+    <div className="flex flex-col lg:flex-row  pt-5 ">
     <div>
       <div>
-        <h2>{heading}</h2>
+        <h2 className="lg:w-7/12 mb-7">{heading}</h2>
       </div>
       <div>
         <Button label={label}  type={type} size={size} />
       </div>
     </div>
-    <div className="lg:w-1/2">
+    <div className="lg:w-7/12 ">
       <ul className="grid grid-cols-3 border-t-2 border-b-2">
         {imageList && imageList?.map((item, index) => (
           <>

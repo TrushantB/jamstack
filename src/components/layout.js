@@ -21,7 +21,7 @@ export default function Layout({ children }) {
 
   return (
     <main className="flex flex-col h-screen">
-      <div className="container">
+      <div className="">
         {headerData && <Header {...headerData} />}
         {children}
         {footerData && <Footer {...footerData} />}

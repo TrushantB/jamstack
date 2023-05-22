@@ -160,12 +160,12 @@
     },
     "textBanner": {
       "sliderControls": {
-        "dots": true,
+        "dots": false,
         "infinite": true,
         "speed": 500,
         "autoplaySpeed": 2500,
         "autoplay": true,
-        "arrows": true,
+        "arrows": false,
         "swipe": true
       },
       "info": [
@@ -252,8 +252,8 @@
     "ourClient": {
       "heading": "Technologies we work with:",
       "imageList": [
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
+        { "image": "/placeholder.svg", "alt": "image" },
+        { "image": "/placeholder.svg", "alt": "image" },
         { "image": "placeHolder", "alt": "image" },
         { "image": "placeHolder", "alt": "image" },
         { "image": "placeHolder", "alt": "image" },

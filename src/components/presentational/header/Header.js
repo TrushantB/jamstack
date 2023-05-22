@@ -28,7 +28,7 @@ const Header = ({
     <>
       <div>
         <nav className="bg-white border-gray-200">
-          <div className="container mx-auto px-4 md:px-8 py-4 md:py-6 flex flex-col lg:flex-row justify-between items-center">
+          <div className=" mx-auto px-4 md:px-8 py-4 md:py-6 flex flex-col lg:flex-row justify-between items-center">
             <div className="flex gap-5 w-full justify-between ">
               <a href="#" className="flex items-center">
                 <img

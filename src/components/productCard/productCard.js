@@ -11,18 +11,20 @@ function ProductCard({cards}) {
     }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center  gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center m-5 lg:m-0  gap-5">
     {cards && cards?.map((card, index) => (
       <div
         key={index}
-        className=" p-6   rounded-2xl bg-accent-100  hover:bg-secondary hover:text-white"
+        className=" p-6   rounded-2xl bg-accent-100 flex flex-col justify-between  lg:w-[400px]  hover:bg-secondary hover:text-white"
         onMouseEnter={() => onMouseEnter(card)}
         onMouseLeave={() => onMouseLeave()}
       >
+        <div>
         <h3 className="font-bold tracking-tight  dark:text-white mb-6 ">
           {card.label}
         </h3>
         <p className="font-normal ">{card.description}</p>
+        </div>
         {hoverItem === card ? <div className="flex justify-end items-center  mt-14">
           <a className=" relative z-30 -m-10" href={card.href}>
             {card.buttonLabel}
