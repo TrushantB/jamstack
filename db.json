@@ -1,9 +1,10 @@
 {
   "header": {
-    "logo": {
+    "logoUrl": {
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo"
     },
+    
     "headerMenu": [
       { "label": "PRICING", "href": "pricing", "target": "_self" },
       { "label": "WEBJ", "href": "webj", "target": "_self" },
@@ -38,8 +39,8 @@
       { "iconName": "icon-facebook2", "href": "facebook", "alt": "image" },
       { "iconName": "icon-twitter", "href": "twitter", "alt": "image" }
     ],
-    "hamburgerLogo" : {"url": "hamburgerLogo.svg",
-    "alt": "hamburgerLogo logo"},
+    "hamburgerLogo" : "/Hamburger.png",
+    "hamburgerLogoalt": "Hamburger logo",
     "crossLogo" : {
       "url": "X",
       "alt": "crossLogo logo"
@@ -47,7 +48,7 @@
   },
 
   "footer": {
-    "logo": {
+    "footerLogo": {
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo"
     },
@@ -129,7 +130,7 @@
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
       "heading": "Your one stop solution in web reality.",
       "logo": {
-        "url": "logo.svg",
+        "url": "/Jamstack+.svg",
         "alt": "Jamstack+.svg"
       },
       "lineIMage" : {

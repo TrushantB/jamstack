@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-// import hamburger from '../../../assets/image/Hamburger.png'
 
 const Header = ({
   headerMenu,
@@ -14,6 +13,8 @@ const Header = ({
   email,
   country,
   socialLink,
+  hamburgerLogo,
+  hamburgerLogoalt
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,8 +32,8 @@ const Header = ({
             <div className="flex gap-5 w-full justify-between ">
               <a href="#" className="flex items-center">
                 <img
-                  src={logoUrl}
-                  alt="Company Logo"
+                  src={logoUrl?.url}
+                  alt={logoUrl?.alt}
                   width={160}
                   height={40}
                 ></img>
@@ -42,7 +43,7 @@ const Header = ({
                   menuOpen ? "block " : "hidden"
                 } lg:flex font-medium flex-col md:flex-row align-middle justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
               >
-                {headerMenu.map((menuItems, index) => (
+                {headerMenu?.map((menuItems, index) => (
                   <li key={index}>
                     <a
                       href={menuItems.href}
@@ -61,11 +62,12 @@ const Header = ({
                 onClick={toggleMenu}
               >
                 <span className="sr-only"></span>
-                {/* <img
-                  src={hamburger}
+                <img
+                  src={hamburgerLogo}
+                  alt={hamburgerLogoalt}
                   width={40}
                   height={40}
-                /> */}
+                />
               </button>
             </div>
             {isOpen && (

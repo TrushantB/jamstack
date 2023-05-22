@@ -15,7 +15,7 @@ const Footer = ({
         <div className="grid grid-cols-12">
           <div className="col-span-12 sm:col-span-6 lg:col-span-7 sm:p-5 lg:p-10 mt-10 sm:m-0">
             <div>
-              <img className="w-60 h-10" src={footerLogo} alt="logo" />
+              <img className="w-60 h-10" src={footerLogo?.url} alt="logo" />
             </div>
             <div className="flex gap-4 mt-3">
               <div className=" flex gap-7">
