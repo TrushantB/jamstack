@@ -4,7 +4,7 @@
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo"
     },
-    
+
     "headerMenu": [
       { "label": "PRICING", "href": "pricing", "target": "_self" },
       { "label": "WEBJ", "href": "webj", "target": "_self" },
@@ -26,11 +26,9 @@
       "target": "_self"
     },
     "Contactlabel": "Contact Information",
-    "address": {
-      "phoneNumber": "+990-123-4567",
-      "email": "geexu@gmail.com",
-      "country": "India"
-    },
+    "phoneNumber": "+990-123-4567",
+    "email": "geexu@gmail.com",
+    "country": "India",
 
     "socialLink": [
       { "iconName": "icon-mail", "href": "mail", "alt": "image" },
@@ -39,12 +37,12 @@
       { "iconName": "icon-facebook2", "href": "facebook", "alt": "image" },
       { "iconName": "icon-twitter", "href": "twitter", "alt": "image" }
     ],
-    "hamburgerLogo" : "/Hamburger.png",
+    "hamburgerLogo": "/Hamburger.png",
     "hamburgerLogoalt": "Hamburger logo",
-    "crossLogo" : {
+    "crossLogo": {
       "url": "X",
       "alt": "crossLogo logo"
-    } 
+    }
   },
 
   "footer": {
@@ -133,9 +131,9 @@
         "url": "/Jamstack+.svg",
         "alt": "Jamstack+.svg"
       },
-      "lineIMage" : {
-        "url" : "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
-        "alt" : "lineImage"
+      "lineIMage": {
+        "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
+        "alt": "lineImage"
       }
     },
     "textBannerList": {
@@ -189,9 +187,9 @@
     "Webstatstics": {
       "heading": "Know your webstatics",
       "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
-      "placeholder" : "Paste website URL here",
-      "buttonLabel" : "Request Report",
-      "isButton" : true
+      "placeholder": "Paste website URL here",
+      "buttonLabel": "Request Report",
+      "isButton": true
     },
     "benefits": {
       "heading": "Benefits of working with us:",
@@ -359,12 +357,11 @@
     },
     "morderTechnology": {
       "heading": "Excited to switch on modern technology?",
-      "layout" :  "Banner No Button",
-     
-        "type": "primary",
-        "label": "Start A Project",
-        "size": "medium"
-      
+      "layout": "Banner No Button",
+
+      "type": "primary",
+      "label": "Start A Project",
+      "size": "medium"
     },
     "testimonialCard": {
       "heading": "We love our customers",
