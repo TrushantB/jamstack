@@ -20,7 +20,7 @@ function ProductCard({cards}) {
         onMouseLeave={() => onMouseLeave()}
       >
         <div>
-        <h3 className="font-bold tracking-tight  dark:text-white mb-6 ">
+        <h3 className="font-bold tracking-tight  mb-6 ">
           {card.label}
         </h3>
         <p className="font-normal ">{card.description}</p>
