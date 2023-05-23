@@ -46,7 +46,7 @@ function WebStactics({ heading, description , placeholder, isButton, buttonLabel
       </div>
 
       {/* input start  */}
-      <div className="flex lg:flex-row gap-4 mt-12 lg:gap-0 items-center">
+      <div className="flex lg:flex-row gap-4 mt-5 lg:gap-0 items-center">
         <input
           placeholder={placeholder}
           className="border rounded-full py-2 px-2 lg:pl-4 lg:w-3/4"

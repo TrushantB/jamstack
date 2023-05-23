@@ -41,7 +41,7 @@ const Home = () => {
         <TextBannerList {...homeData.textBannerList} />
       </div>
 
-      <div className="lg:py-24">
+      <div className="py-24">
         <VideoBanner {...homeData.videoBanner} />
       </div>
 
