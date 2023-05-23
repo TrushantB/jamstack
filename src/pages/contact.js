@@ -1,7 +1,5 @@
 import { React, useEffect, useState } from "react";
 import Form from "@/components/form";
-import Header from "../components/header";
-import Footer from "../components/footer";
 import { get } from "@/client/api";
 
 const About = () => {
@@ -36,26 +34,19 @@ const About = () => {
 
   return (
     <div className="container">
-      {/* Header Section */}
-      <Header />
-
       {/* form section */}
-      <div className="lg:pl-24 pt-24 pb-24">
-        <h2 className="lg:w-7/12">
-          {contactData?.heading}
-        </h2>
-        <p className="w-1/2">
-        {contactData?.description}
-        </p>
-
-        <Form />
+      <div className="lg:pl-24 pt-24">
+        <h2 className="lg:w-7/12">{contactData?.heading}</h2>
+        <p className="w-1/2 pt-6">{contactData?.description}</p>
+        {/* {contactData?.form} */}
+      </div>
+      <div className="lg:pl-24 pt-10 pb-10">
+        <Form script={contactData?.form} />
       </div>
 
       {/* cta section */}
-      <div className="pl-24">
-        <h3 className="lg:w-8/12 pb-5">
-            {contactData?.contactDetails}
-        </h3>
+      <div className="pl-24 pt-32">
+        <h3 className="lg:w-8/12 pb-5">{contactData?.contactDetails}</h3>
         <a
           href="mailto: hello@jamstack.plus"
           className="text-primary heading-4"
@@ -65,7 +56,7 @@ const About = () => {
       </div>
 
       {/* case study section */}
-      <div className="">
+      <div className="pt-48">
         {contactData?.caseStudy?.heading && (
           <h2 className="lg:pl-16">{contactData?.caseStudy?.heading}</h2>
         )}
@@ -97,14 +88,12 @@ const About = () => {
           <div className="lg:w-7/12 lg:p-10 lg:px-7">
             <div className=" p-5 bg-accent-100">
               <div className="flex flex-col lg:flex-row  gap-5 lg:gap-0">
-                {selectedItem?.percentageList?.map(
-                  (percentageItem, index) => (
-                    <div className={`cursor-pointer`} key={index}>
-                      <h2>{percentageItem.percentage}</h2>
-                      <p className="w-10/12">{percentageItem.description}</p>
-                    </div>
-                  )
-                )}
+                {selectedItem?.percentageList?.map((percentageItem, index) => (
+                  <div className={`cursor-pointer`} key={index}>
+                    <h2>{percentageItem.percentage}</h2>
+                    <p className="w-10/12">{percentageItem.description}</p>
+                  </div>
+                ))}
               </div>
               <div className="pt-5 ">
                 <div>
@@ -126,52 +115,22 @@ const About = () => {
       </div>
 
       {/* Testimonial section */}
-      <div className="container px-5  gap-24 flex flex-col">
-        {contactData?.testimonialCard?.cards.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col sm:flex-row gap-6 p-3  drop-shadow-2xl justify-evenly items-center  py-5 rounded-3xl border border-black hover:bg-accent-100 hover:border-transparent"
-          >
-            <div className="flex gap-7">
-              <div className="w-4/12 lg:w-3/12 flex items-start sm:justify-center mt-7 sm:mt-0">
-                <img src={item.image} />
-              </div>
-              <div className="flex-grow sm:text-left w-5/12 lg:w-10/12  mt-6 sm:mt-0">
-                <p className="leading-relaxed text-base pb-3">
-                  {item.description}
-                </p>
-                <p>{item.name}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Blog card section */}
-      <div className="container px-5 py-10 mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center gap-7">
-          {contactData?.blogCard?.cards.map((card, index) => (
+      <div className="pt-28">
+        <div className="container px-5  gap-24 flex flex-col">
+          {contactData?.testimonialCard?.cards.map((item, index) => (
             <div
               key={index}
-              className="border-2 border-accent-100 border-opacity-60 lg:max-w-sm rounded-2xl py-1 hover:bg-accent-100"
-              onMouseEnter={() => onMouseEnter(card)}
-              onMouseLeave={() => onMouseLeave()}
+              className="flex flex-col sm:flex-row gap-6 p-3  drop-shadow-2xl justify-evenly items-center  py-5 rounded-3xl border border-black hover:bg-accent-100 hover:border-transparent"
             >
-              <img
-                className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
-                src={card.image}
-                alt={card.altTag}
-              />
-              <div className="p-4">
-                <h4 className="mb-3">{card.label}</h4>
-                <p className="leading-relaxed mb-5 w-9/12">
-                  {card.description}
-                </p>
-                <div>
-                  <a className="flex gap-3 items-center text-primary" href="#">
-                    {contactData?.blogCard?.label}
-                    <span className="icon-arrow-right2 text-2xl text-primary "></span>
-                  </a>
+              <div className="flex gap-7">
+                <div className="w-4/12 lg:w-3/12 flex items-start sm:justify-center mt-7 sm:mt-0">
+                  <img src={item.image} />
+                </div>
+                <div className="flex-grow sm:text-left w-5/12 lg:w-10/12  mt-6 sm:mt-0">
+                  <p className="leading-relaxed text-base pb-3">
+                    {item.description}
+                  </p>
+                  <p>{item.name}</p>
                 </div>
               </div>
             </div>
@@ -179,9 +138,41 @@ const About = () => {
         </div>
       </div>
 
-      {/* footer section */}
-      <div>
-        <Footer />
+      {/* Blog card section */}
+      <div className="pt-28">
+        <div className="container px-5 py-10 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center gap-7">
+            {contactData?.blogCard?.cards.map((card, index) => (
+              <div
+                key={index}
+                className="border-2 border-accent-100 border-opacity-60 lg:max-w-sm rounded-2xl py-1 hover:bg-accent-100"
+                onMouseEnter={() => onMouseEnter(card)}
+                onMouseLeave={() => onMouseLeave()}
+              >
+                <img
+                  className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
+                  src={card.image}
+                  alt={card.altTag}
+                />
+                <div className="p-4">
+                  <h4 className="mb-3">{card.label}</h4>
+                  <p className="leading-relaxed mb-5 w-9/12">
+                    {card.description}
+                  </p>
+                  <div>
+                    <a
+                      className="flex gap-3 items-center text-primary"
+                      href="#"
+                    >
+                      {contactData?.blogCard?.label}
+                      <span className="icon-arrow-right2 text-2xl text-primary "></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
