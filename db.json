@@ -127,6 +127,7 @@
     "technologySolution": {
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
       "heading": "Your one stop solution in web reality.",
+     
       "logo": {
         "url": "/Jamstack+.svg",
         "alt": "Jamstack+.svg"
@@ -225,7 +226,7 @@
       ]
     },
     "productCard": {
-      "heding": "Products we Create",
+      "heading": "Products we Create",
       "cards": [
         {
           "label": "webJ",
@@ -250,20 +251,20 @@
     "ourClient": {
       "heading": "Technologies we work with:",
       "imageList": [
-        { "image": "/placeholder.svg", "alt": "image" },
-        { "image": "/placeholder.svg", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" },
-        { "image": "placeHolder", "alt": "image" }
+        { "image": "/Adobe.png", "alt": "image" },
+        { "image": "/stripe.png", "alt": "image" },
+        { "image": "/netflix.png", "alt": "image" },
+        { "image": "/cbre.png", "alt": "image" },
+        { "image": "/mozilla.png", "alt": "image" },
+        { "image": "/okta.png", "alt": "image" },
+        { "image": "/opera.png", "alt": "image" },
+        { "image": "/oppo.png", "alt": "image" },
+        { "image": "/nbc.png", "alt": "image" },
+        { "image": "/turo.png", "alt": "image" },
+        { "image": "/clearbit.png", "alt": "image" },
+        { "image": "/crunchbase.png", "alt": "image" },
+        { "image": "/xero.png", "alt": "image" },
+        { "image": "/contact.png", "alt": "image" }
       ],
       "type": "primary",
       "label": "Explore Offerings",
@@ -357,8 +358,6 @@
     },
     "morderTechnology": {
       "heading": "Excited to switch on modern technology?",
-      "layout": "Banner No Button",
-
       "type": "primary",
       "label": "Start A Project",
       "size": "medium"

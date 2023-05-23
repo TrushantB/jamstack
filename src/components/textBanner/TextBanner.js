@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function TextBanner({info ,sliderControls}) {
   return (
-    <div className=" lg:px-24 flex flex-col gap-5 py-12 bg-accent-100">
+    <div className=" lg:px-24 px-6 flex flex-col gap-5 py-12 bg-accent-100">
     <Slider {...sliderControls}>
       {info && info?.map((item, index) => (
         <div key={index}>

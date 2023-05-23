@@ -42,7 +42,7 @@ function WebStactics({ heading, description , placeholder, isButton, buttonLabel
         <h2 className="">{heading}</h2>
       </div>
       <div className="mt-1">
-        <p className="w-6/12">{description}</p>
+        <p className="lg:w-6/12">{description}</p>
       </div>
 
       {/* input start  */}

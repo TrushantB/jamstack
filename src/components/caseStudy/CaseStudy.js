@@ -13,7 +13,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
 
   useEffect(() => {
     setSelectedItem(itemList?.length ? itemList[0] : []);
-  }, []);
+  }, [itemList]);
 
   const getIcon = (icon) => {
     if (icon.startsWith("http")) {
@@ -40,12 +40,12 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                   key={index}
                 >
                   {item === selectedItem && (
-                    <img className="w w-6 h-6" src={getIcon(icon)} alt="icon" />
+                   <div className="diamond w-8 h-8 bg-tertiary"></div>
                   )}
                   <h4
                     className={`${
                       item === selectedItem
-                        ? "font-bold text-black text-5xl"
+                        ? "font-bold text-black text-4xl"
                         : "text-gray-500"}`}>
                     {item.label}
                   </h4>

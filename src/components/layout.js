@@ -24,7 +24,10 @@ export default function Layout({ children }) {
       <div className="">
         {headerData && <Header {...headerData} />}
         {children}
+        <div className="px-5 lg:px-0">
         {footerData && <Footer {...footerData} />}
+        </div>
+       
       </div>
     </main>
   );

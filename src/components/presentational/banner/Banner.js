@@ -9,7 +9,7 @@ const Banner = ({ heading, image, type, size, label, onClick, layout }) => {
     <div className="">
       <div
         className={classNames({
-          "md:flex": true,
+          "md:flex justify-center": true,
           "flex-col-reverse": layout === "Image Bottom",
         })}
       >
@@ -17,7 +17,7 @@ const Banner = ({ heading, image, type, size, label, onClick, layout }) => {
           className={classNames({
             "md:w-1/2": true,
             "w-full": layout === "Image Bottom",
-            "flex": layout === "Image Left",
+            "flex ": layout === "Image Left",
             "text-center": layout !== "Image Left",
           })}
         >

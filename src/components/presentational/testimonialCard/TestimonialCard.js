@@ -2,8 +2,12 @@ import React from "react";
 
 function TestimonialCard({ cards, heading }) {
   return (
-    <div>
-      <div className="container px-5  gap-24 flex flex-col">
+    <div className="flex flex-col lg:flex-row ">
+      <div className="lg:w-5/12">
+      <h2 className="">We love our Customers</h2>
+      </div>
+    
+      <div className="container  gap-24 flex flex-col lg:w-8/12">
         {cards &&
           cards?.map((item, index) => (
             <div
