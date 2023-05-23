@@ -10,18 +10,16 @@ export default {
   },
 };
 
-
-const TextBanner = ({ info ,sliderControls}) => {
-  
-const settings = {
-  dots: sliderControls.dots,
-  infinite: sliderControls.infinite,
-  speed: sliderControls.speed,
-  autoplaySpeed:sliderControls.autoplaySpeed,
-  autoplay:sliderControls.autoplay,
-  arrows:sliderControls.arrows,
-  swipe:true
-};
+const TextBanner = ({ info, sliderControls }) => {
+  const settings = {
+    dots: sliderControls.dots,
+    infinite: sliderControls.infinite,
+    speed: sliderControls.speed,
+    autoplaySpeed: sliderControls.autoplaySpeed,
+    autoplay: sliderControls.autoplay,
+    arrows: sliderControls.arrows,
+    swipe: true,
+  };
   return (
     <>
       <div className=" lg:px-10 flex flex-col gap-5 py-12 bg-accent-100">
@@ -42,14 +40,14 @@ const settings = {
 
 export const Default = (args) => <TextBanner {...args} />;
 Default.args = {
-  sliderControls:{
-  dots: true,
-  infinite: true,
-  speed: 500,
-  autoplaySpeed:2500,
-  autoplay:true,
-  arrows:true,
-  swipe:true
+  sliderControls: {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 2500,
+    autoplay: true,
+    arrows: true,
+    swipe: true,
   },
   info: [
     {

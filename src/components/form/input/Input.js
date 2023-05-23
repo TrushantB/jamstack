@@ -29,28 +29,19 @@ function InputFields(props) {
           onBlur={handleBlur}
           onChange={handleChange}
         ></input>
-        {
-          isButton && (
-            <button className="bg-primary py-2 px-4 rounded-full lg:-ml-10 text-xl text-white">
-              {buttonlabel}
-            </button>
-          )
-        }
+        {isButton && (
+          <button className="bg-primary py-2 px-4 rounded-full lg:-ml-10 text-xl text-white">
+            {buttonlabel}
+          </button>
+        )}
       </div>
-      {
-        error &&
+      {error && (
         <div className="flex flex-wrap items-center ml-4 w-full sm:w-1/2 text-xs my-2">
           <p className="text-red-500">{error}</p>
         </div>
-      }
+      )}
     </>
   );
 }
-
-InputFields.propTypes = {
-  placeholder: PropTypes.string,
-  buttonlabel: PropTypes.string,
-  isButton: PropTypes.bool,
-};
 
 export default InputFields;

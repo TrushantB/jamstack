@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default {
   title: "Core/Presentational Components/features",
   argTypes: {
@@ -11,7 +10,6 @@ export default {
 };
 
 const Features = ({ benefitsList }) => {
-
   return (
     <>
       <div className="lg:pl-28 lg:py-16">

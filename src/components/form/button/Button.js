@@ -34,16 +34,6 @@ const Button = ({ type, size, label, onClick }) => {
   );
 };
 
-Button.propTypes = {
-  type: PropTypes.oneOf(["primary", "secondary", "tertiary", "disabled"]),
-
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-
-  label: PropTypes.string.isRequired,
-
-  onClick: PropTypes.func,
-};
-
 Button.defaultProps = {
   type: "primary",
   size: "medium",

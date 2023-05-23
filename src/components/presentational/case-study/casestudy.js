@@ -2,18 +2,17 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import ReadMoreLink from "../link/link";
 
-import diamond from '../../../assets/image/rectangle.png'
-import circle from '../../../assets/image/circle.png'
-import pentagon from '../../../assets/image/pentagon.png'
-import placeholder from '../../../assets/image/icon-placeholder.png'
-
+import diamond from "../../../assets/image/rectangle.png";
+import circle from "../../../assets/image/circle.png";
+import pentagon from "../../../assets/image/pentagon.png";
+import placeholder from "../../../assets/image/icon-placeholder.png";
 
 const MAP_ICONS = {
   circle,
   diamond,
   pentagon,
-  placeholder
-}
+  placeholder,
+};
 
 const Casestudy = ({
   heading,
@@ -31,15 +30,14 @@ const Casestudy = ({
 
   const getIcon = (icon) => {
     if (icon.startsWith("http")) {
-      return icon
+      return icon;
     }
     return MAP_ICONS[icon] || MAP_ICONS.placeholder;
-  }
+  };
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
-
 
   return (
     <div className="">
@@ -57,10 +55,11 @@ const Casestudy = ({
                   <img className="w w-6 h-6" src={getIcon(icon)} alt="icon" />
                 )}
                 <h4
-                  className={`${item === selectedItem
-                    ? "font-bold text-black text-5xl"
-                    : "text-gray-500"
-                    }`}
+                  className={`${
+                    item === selectedItem
+                      ? "font-bold text-black text-5xl"
+                      : "text-gray-500"
+                  }`}
                 >
                   {item.label}
                 </h4>
@@ -79,7 +78,11 @@ const Casestudy = ({
               ))}
             </div>
             <div className="pt-5 ">
-              <ReadMoreLink label={label} hasIcon={hasIcon} href={selectedItem?.href} />
+              <ReadMoreLink
+                label={label}
+                hasIcon={hasIcon}
+                href={selectedItem?.href}
+              />
             </div>
           </div>
 
@@ -92,20 +95,6 @@ const Casestudy = ({
       </div>
     </div>
   );
-};
-
-Casestudy.propTypes = {
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  icon: PropTypes.string,
-  itemList: PropTypes.shape({
-    label: PropTypes.string,
-    href: PropTypes.string,
-    percentageList: PropTypes.shape({
-      percentage: PropTypes.string,
-      description: PropTypes.string,
-    }),
-  }),
 };
 
 export default Casestudy;

@@ -57,29 +57,4 @@ const Footer = ({
   );
 };
 
-Footer.propTypes = {
-  footerLogo: PropTypes.string,
-  copyRight: PropTypes.string,
-  socialIcons: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
-    })
-  ),
-  footerMenu: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
-      target: PropTypes.string.isRequired,
-    })
-  ),
-  secondaryMenu: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
-    })
-  ),
-};
-
 export default Footer;

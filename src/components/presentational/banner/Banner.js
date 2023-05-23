@@ -55,14 +55,4 @@ const Banner = ({ heading, image, type, size, label, onClick, layout }) => {
   );
 };
 
-Banner.propTypes = {
-  heading: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  layout: PropTypes.oneOf(["Image Left", "Image Bottom", "Banner No Button"]),
-};
-
 export default Banner;
