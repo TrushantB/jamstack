@@ -10,17 +10,32 @@ function TestimonialCard({ cards, heading }) {
     slidesToShow: 1,
     arrows: false,
     autoplaySpeed: 2500,
-    autoplay: true,
+
+   
     responsive: [
+      {
+        breakpoint: 2560,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          autoplay:true,
+          autoplaySpeed: 2500,
+         
+        },
+      },
+      
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
+          autoplay:true,
           autoplaySpeed: 2500,
-          autoplay: true,
+         
         },
       },
       {
@@ -29,6 +44,7 @@ function TestimonialCard({ cards, heading }) {
           slidesToShow: 1,
           slidesToScroll: 2,
           initialSlide: 2,
+          autoplay:true,
         },
       },
       {
@@ -36,6 +52,8 @@ function TestimonialCard({ cards, heading }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true,
+          autoplay:true,
         },
       },
     ],
@@ -53,9 +71,9 @@ function TestimonialCard({ cards, heading }) {
             cards?.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col sm:flex-row gap-6 p-3  drop-shadow-2xl justify-evenly items-center  py-5 rounded-3xl border border-black hover:bg-accent-100 hover:border-transparent"
+                className="flex flex-col sm:flex-row gap-6 p-3  drop-shadow-2xl hover:drop-shadow-none justify-evenly items-center  py-5 rounded-3xl border border-black hover:rounded-3xl hover:bg-accent-100 hover:border-transparent"
               >
-                <div className="flex gap-7">
+                <div className="flex gap-7 ">
                   <div className="w-4/12 lg:w-3/12 flex items-start sm:justify-center mt-7 sm:mt-0">
                     <img src={item.image} />
                   </div>
