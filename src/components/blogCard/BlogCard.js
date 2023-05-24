@@ -24,7 +24,7 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          
         }
       },
       {
@@ -32,14 +32,17 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
+          initialSlide: 2,
+          dots: true
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: true,
+          
         }
       }
     ]
@@ -47,13 +50,13 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
 
 
   return (
-    <div className=" px-5 py-10  h-full w-full">
+    <div className=" px-5 py-10  h-full w-full blog">
       <div className="">
-        <Slider {...sliderSetting} className="lg:grid lg:grid-cols-3  lg:gap-5">
+        <Slider {...sliderSetting} className="flex flex-grow">
           {cards?.map((card, index) => (
             <div
               key={index}
-              className="border-2 border-accent-100 border-opacity-60 rounded-2xl  py-1 lg:w-1/3 hover:bg-accent-100"
+              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card  py-1 lg:w-1/3 hover:bg-accent-100"
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
@@ -62,7 +65,7 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
                 src={card.image}
                 alt={card.altTag}
               />
-              <div className="p-4">
+              <div className="p-4  flex flex-col justify-between">
                 <h4 className="mb-3">{label}</h4>
                 <p className="leading-relaxed mb-5 w-9/12">
                   {card.description}
