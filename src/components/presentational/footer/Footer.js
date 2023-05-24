@@ -43,7 +43,7 @@ const Footer = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:p-5 lg:p-10 mt-5 sm:mt-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {secondaryMenu.map((menuItems, index) => (
-              <a href={menuItems.href} className="font-bold">
+              <a key={index} href={menuItems.href} className="font-bold">
                 {menuItems.label}
               </a>
             ))}

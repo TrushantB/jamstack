@@ -10,8 +10,8 @@ function TextBannerList({heading, title, listItems }) {
     <div className="  bg-accent-100 p-5 sm:p-10  lg:p-11 lg:pl-20 rounded-t-3xl lg:rounded-t-none lg:rounded-l-3xl">
       <h4 className="mb-14 bg-grey">{title}</h4>
       <div>
-        { listItems && listItems?.map((item) => (
-          <div>
+        { listItems && listItems?.map((item , index) => (
+          <div key={index}>
             <ul>
               <li className="p-2 flex gap-4">
                 <div className={`${item.icon} w-5 h-5 bg-tertiary `}></div>
