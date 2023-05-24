@@ -6,13 +6,13 @@
   "blog": {
     "cards": [
       {
-        "image": "/blogOne.png",
+        "image": "/blogThree.png",
         "altTag": "blog",
         "heading": "Create a Serverless app with AWS Amplify and Next.js",
         "profil": "/blogUserOne.png",
         "name": "Ivan Krizaj",
         "buttonLabel": "Read more",
-        "href": ""
+        "href": "/blog1"
       },
       {
         "image": "/blogTwo.png",
@@ -21,7 +21,7 @@
         "profil": "/blogUserTwo.png",
         "name": "Anna Meleshina",
         "buttonLabel": "Read more",
-        "href": ""
+        "href": "/blog2"
       },
       {
         "image": "/blogThree.png",
@@ -30,19 +30,22 @@
         "profil": "/blogUserOne.png",
         "name": "Ivan Krizaj",
         "buttonLabel": "Read more",
-        "href": ""
+        "href": "/blog3"
       },
       {
-        "image": "placeHolder",
+        "image": "/blogOne.png",
         "altTag": "blog",
         "heading": "Design system for a white-label co-working platform",
         "profil": "/blogUserTwo.png",
         "name": "Anna Meleshina",
         "buttonLabel": "Read more",
-        "href": ""
+        "href": "/blog4"
       }
-    ]
+    ],
+    "hasIcon": false,
+    "label": "Read More"
   },
+  
   "webj": {
     "id": 1,
     "title": "Website development"
