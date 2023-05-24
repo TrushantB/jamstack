@@ -1,10 +1,10 @@
 import Layout from '@/components/layout'
 import React from 'react'
 
-export default function termsAndCondition() {
+export default function termsAndCondition({ header, footer }) {
   return (
-    <Layout>
-        <h1>terms-and-condition</h1>
+    <Layout header={header} footer={footer}>
+      <h1>terms-and-condition</h1>
     </Layout>
   )
 }
