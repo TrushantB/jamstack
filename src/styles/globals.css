@@ -102,7 +102,6 @@
 
 /* form css */
 
-<<<<<<< HEAD
 .wrapper form  {
   display: flex;
   flex-direction: column;
@@ -192,7 +191,6 @@
     margin-top: 34px;
     
   }
-=======
 .blog .slick-track .card p{
   overflow: hidden;
   display: -webkit-box;
@@ -223,4 +221,3 @@
 }
 
 
->>>>>>> 30138d81de4a5d019fedb24b3bd3a086cf77ded8
