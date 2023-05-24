@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import Link from 'next/link'
 
 const Header = ({
   headerMenu,
@@ -27,14 +28,14 @@ const Header = ({
         <nav className="bg-white border-gray-200">
           <div className="mx-auto px-4 md:px-8 py-4 md:py-6 flex flex-col lg:flex-row justify-between items-center">
             <div className="flex gap-5 w-full justify-between ">
-              <a href={logoUrl?.herf} className="flex items-center">
+              <Link href={logoUrl?.herf} className="flex items-center">
                 <img
                   src={logoUrl?.url}
                   alt={logoUrl?.alt}
                   width={160}
                   height={40}
                 />
-              </a>
+              </Link>
               <ul
                 className={`${
                   menuOpen ? "block" : "hidden"
@@ -42,12 +43,12 @@ const Header = ({
               >
                 {headerMenu?.map((menuItems, index) => (
                   <li key={index}>
-                    <a
+                    <Link
                       href={menuItems.href}
                       className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                     >
                       {menuItems.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -81,12 +82,12 @@ const Header = ({
                   <ul className="mt-10">
                     {headerMenu?.map((menuItems, index) => (
                       <li key={index}>
-                        <a
+                        <Link
                           href={menuItems.href}
                           className="block py-2 lg:hidden pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                         >
                           {menuItems.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -94,7 +95,7 @@ const Header = ({
                     {sidebarLink?.map((sidebarItems, index) => (
                       <li className="my-3" key={index}>
                         <h6>
-                          <a href={sidebarItems.href}>{sidebarItems.label}</a>
+                          <Link href={sidebarItems.href}>{sidebarItems.label}</Link>
                         </h6>
                       </li>
                     ))}
@@ -102,23 +103,23 @@ const Header = ({
 
                   <div className=" mt-14 mb-14">
                     <p>{description}</p>
-                      <a href={buttonLabel.href}>
+                      <Link href={buttonLabel.href}>
                       <button className="mt-4 font-semibold" type="button">
                       {buttonLabel?.label}
                     </button>
-                      </a>
+                      </Link>
                   </div>
 
                   <div>
                     <h5 className="mb-3 font-medium ">{label}</h5>
                     <ul>
                       <li className="my-3">
-                      <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+                      <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
                       </li>
                       <li>
-                      <a className="my-3" href={`mailto:${email}`}>
+                      <Link className="my-3" href={`mailto:${email}`}>
                           {email}
-                        </a>
+                        </Link>
                       </li>
                       <li className="my-3">{country}</li>
                     </ul>
@@ -128,9 +129,9 @@ const Header = ({
                     <ul className="flex items-center gap-3">
                       {socialLink?.map((item, index) => (
                         <li key={index}>
-                          <a href={item.href} target={item.target}>
+                          <Link href={item.href} target={item.target}>
                             <span className={`${item.iconName} text-xl`}></span>
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -148,13 +149,13 @@ const Header = ({
                 <ul>
                   {headerMenu?.map((menuItems, index) => (
                     <li key={index}>
-                      <a
+                      <Link
                         href={menuItems.href}
                         target={menuItems.target}
                         className=" block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0   sticky"
                       >
                         {menuItems.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -162,9 +163,9 @@ const Header = ({
                   {sidebarLink?.map((sidebarItems, index) => (
                     <li className="py-2 pl-3" key={index}>
                       <h6>
-                        <a href={sidebarItems.href} target={menuItems.target}>
+                        <Link href={sidebarItems.href} target={menuItems.target}>
                           {sidebarLink.label}
-                        </a>
+                        </Link>
                       </h6>
                     </li>
                   ))}
@@ -183,12 +184,12 @@ const Header = ({
                       <h5 className="mb-3 font-medium ">{label}</h5>
                       <ul>
                         <li className="py-2">
-                          <a>{phoneNumber}</a>
+                        <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
                         </li>
                         <li>
-                          <a className="py-2" href={`mailto:${email}`}>
+                          <Link className="py-2" href={`mailto:${email}`}>
                             {email}
-                          </a>
+                          </Link>
                         </li>
                         <li className="py-2">{country}</li>
                       </ul>
@@ -200,11 +201,11 @@ const Header = ({
                       <ul className="flex items-center gap-3">
                         {socialLink?.map((item, index) => (
                           <li key={index}>
-                            <a href={item.href} target={item.target}>
+                            <Link href={item.href} target={item.target}>
                               <span
                                 className={`${item.iconName} text-xl`}
                               ></span>
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>

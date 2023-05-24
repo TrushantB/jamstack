@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
+import Link from 'next/link'
 import classNames from "classnames";
 import Button from "../../form/button/Button";
+
 
 const Banner = ({ heading, image, type, size, label, layout ,href }) => {
   return (
@@ -29,13 +30,13 @@ const Banner = ({ heading, image, type, size, label, layout ,href }) => {
               <h1 className="text-black-950 font-bold">{heading}</h1>
 
               <div className="my-16">
-                <a href={href} >
+                <Link href={`${href}`} >
                 <Button
                   label={label}
                   type={type}
                   size={size}
                 />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

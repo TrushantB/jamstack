@@ -26,7 +26,7 @@
       "target": "_self"
     },
     "Contactlabel": "Contact Information",
-    "phoneNumber": "+990-123-4567",
+    "phoneNumber": "+91 990-123-4567",
     "email": "geexu@gmail.com",
     "country": "India",
 
@@ -49,7 +49,7 @@
     "footerLogo": {
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo",
-      "herf" : "/"
+      "href" : "/"
     },
     "copyRight": "Jamstack 2023 ",
     "socialIcons": [
@@ -134,11 +134,10 @@
     "technologySolution": {
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
       "heading": "Your one stop solution in web reality.",
-     
+      "href" : "/",
       "logo": {
         "url": "/Jamstack+.svg",
-        "alt": "Jamstack+.svg",
-        "herf" : "/"
+        "alt": "Jamstack+.svg"
       },
       "lineIMage": {
         "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
@@ -161,7 +160,7 @@
     "videoBanner": {
       "heading": "What is JAMstack?",
       "video": {
-        "Videolink": "https://www.w3schools.com/html/mov_bbb.mp4",
+        "Videolink": "/strategy.mp4",
         "alt": "image"
       }
     },
@@ -198,7 +197,6 @@
       "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
       "placeholder": "Paste website URL here",
       "buttonLabel": "Request Report",
-      "href" : "contact",
       "isButton": true
     },
     "benefits": {
@@ -360,7 +358,8 @@
       ],
       "hasIcon": true,
       "label": "Read More",
-      "icon": "diamond"
+      "icon": "diamond",
+      "href" : "contact"
     },
     "morderTechnology": {
       "heading": "Excited to switch on modern technology?",

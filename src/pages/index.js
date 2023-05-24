@@ -17,7 +17,7 @@ import BlogCard from "@/components/blogCard/BlogCard";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 
 const Home = () => {
-  const [homeData, setHomeData] = useState([]);
+  const [homeData, setHomeData] = useState(null);
 
   useEffect(() => {
     get("home").then((response) => {

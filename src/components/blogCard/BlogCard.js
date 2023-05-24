@@ -2,6 +2,8 @@ import { React, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from 'next/link'
+
 
 function BlogCard({ cards, hasIcon, label , sliderControls }) {
   const [hoverItem, setHoverItem] = useState(null);
@@ -74,10 +76,10 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
                 </p>
                 <div className="h-8">
                   {hoverItem === card && (
-                    <a className="flex gap-3 items-center text-primary" href="#">
+                    <Link className="flex gap-3 items-center text-primary" href="#">
                       {label}
                       <span className="icon-arrow-right2 text-2xl text-primary "></span>
-                    </a>
+                    </Link>
                   )}
                 </div>
               </div>
