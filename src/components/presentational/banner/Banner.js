@@ -41,7 +41,7 @@ const Banner = ({ heading, image, type, size, label, layout ,href }) => {
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-center justify-end">
+          <div className="flex md:w-1/2 items-start lg:items-center justify-end">
             <img src={image} alt="image" />
           </div>
         )}

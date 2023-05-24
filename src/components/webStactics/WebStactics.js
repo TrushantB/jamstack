@@ -40,18 +40,18 @@ function WebStactics({
 
   return (
     <div className="bg-secondary text-white  px-3.5 lg:pl-28 py-6 lg:py-16">
-      <div className="">
+      <div className="pt-6 lg:pt-0">
         <h2 className="">{heading}</h2>
       </div>
-      <div className="mt-1">
+      <div className="my-10 lg:my-0 ">
         <p className="lg:w-6/12">{description}</p>
       </div>
 
       {/* input start  */}
-      <div className="flex lg:flex-row gap-4 mt-5 lg:gap-0 items-center">
+      <div className="flex lg:flex-row gap-4 pb-10 lg:pb-0 mt-5 lg:gap-0 items-center">
         <input
           placeholder={placeholder}
-          className="border rounded-full py-2 px-2 lg:pl-4 lg:w-3/4 outline-none text-black"
+          className="border rounded-full p-2 w-full  lg:pl-4 lg:w-3/4 outline-none text-black"
           onBlur={handleBlur}
           onChange={handleChange}
         />

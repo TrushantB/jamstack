@@ -48,7 +48,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                   <h4
                     className={`${
                       item === selectedItem
-                        ? "font-bold text-black text-4xl ml-5 w-10/12"
+                        ? "font-bold text-black text-4xl lg:ml-5 sm:ml-14 w-10/12"
                         : "text-gray-500 w-9/12 ml-auto"}`}>
                     {item.label}
                   </h4>
