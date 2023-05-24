@@ -1,14 +1,12 @@
 import React from "react";
 import Link from 'next/link'
 
-
 const Footer = ({
   footerLogo,
   copyRight,
   socialIcons,
   footerMenu,
   secondaryMenu,
-
 }) => {
   return (
     <>
@@ -16,9 +14,9 @@ const Footer = ({
         <div className="grid grid-cols-12">
           <div className="col-span-12 sm:col-span-6 lg:col-span-7 sm:p-5 lg:p-10 mt-10 sm:m-0">
             <div>
-             <Link href={footerLogo?.href}>
-             <img className="w-60 h-10" src={footerLogo?.url} alt="logo" />
-             </Link>
+              <Link href={footerLogo?.href}>
+                <img className="w-60 h-10" src={footerLogo?.url} alt="logo" />
+              </Link>
             </div>
             <div className="flex gap-4 mt-3">
               <div className=" flex gap-7">

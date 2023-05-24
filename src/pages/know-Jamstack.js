@@ -1,10 +1,10 @@
 import Layout from '@/components/layout'
 import React from 'react'
 
-export default function knowJamstack() {
+export default function knowJamstack({ header, footer }) {
   return (
-    <Layout>
-        <h1>know-Jamstack page</h1>
+    <Layout header={header} footer={footer}>
+      <h1>know-Jamstack page</h1>
     </Layout>
   )
 }
