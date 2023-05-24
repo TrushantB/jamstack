@@ -68,7 +68,7 @@ const Header = ({
               </button>
             </div>
             {isOpen && (
-              <div className="flex flex-col bg-accent-100  overflow-y-scroll h-screen  p-7  lg:w-4/12  rounded-3xl  absolute right-0 z-10 top-0">
+              <div className="flex flex-col bg-accent-100  overflow-y-scroll h-screen  p-7  lg:w-4/12  rounded-3xl  fixed right-0 z-10 top-0">
                 <div className="fixed top-4 right-4">
                   <span className="w-8 h-8 flex items-center justify-center p-1 bg-white rounded-full">
                     <button className="text-primary" onClick={toggleMenu}>
