@@ -1,12 +1,10 @@
 import { React, useEffect, useState } from "react";
-import Header from "../components/header";
-import Footer from "../components/footer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { get } from "@/client/api";
 
-const pricing = () => {
+const Pricing = () => {
   const [priceData, setPriceData] = useState([]);
   const [isMobileView, setIsMobileView] = useState(false);
   const [error, setError] = useState("");
@@ -57,10 +55,7 @@ const pricing = () => {
   };
 
   return (
-    <div className="container">
-      {/* Header Section */}
-      <Header />
-
+    <Layout>
       {/* Banner section with image bottom  */}
       <div className="container px-3.5 lg:pt-32 pt-14 pb-14 lg:pb-32">
         <div>
@@ -124,76 +119,37 @@ const pricing = () => {
         <div className="">
           <h2 className="">{priceData?.Webstatstics?.heading}</h2>
         </div>
-        <div className="mt-7">
-          <p className="w-7/12">{priceData?.Webstatstics?.description}</p>
+        <div className="">
+          <p className="w-7/12">
+            Check your website performance and check how Jamstack+ can help you
+            improve your business.
+          </p>
         </div>
-
-        {/* input start  */}
-        <div className="flex lg:flex-row gap-4 mt-12 lg:gap-0 items-center">
-          <input
-            placeholder={priceData?.Webstatstics?.placeholder}
-            className="border rounded-full py-2 px-2 lg:pl-4 lg:w-1/2"
-            onBlur={handleBlur}
-            onChange={handleChange}
-          />
-          {isMobileView ? (
-            <div className="bg-primary rounded-full w-10 flex justify-center items-center -ml-14 h-10">
-              <a
-                href="#"
-                className="icon-arrow-right2 text-2xl text-white "
-              ></a>
-            </div>
-          ) : (
-            isButton && (
-              <button className="bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white">
-                {priceData?.Webstatstics?.buttonLabel}
-              </button>
-            )
-          )}
-        </div>
-        {error && (
-          <div className="flex flex-wrap items-center ml-4 w-full sm:w-1/2 text-xs my-2">
-            <p className="text-red-500">{error}</p>
-          </div>
-        )}
-
-        {/* input end  */}
       </div>
 
       {/* Custom Plan */}
 
-      <div className="py-12 lg:py-24 px-3.5">
-        <h2 className="text-center text-bold ">
-          {priceData?.customPlan?.heading}
-        </h2>
-        <p className="text-center text-bold pt-6">
-          {priceData?.customPlan?.description}
-        </p>
+      <div className="border-t-2 border-b-2 border-red-600">
+        <h3 className="text-4xl text-center py-24 ">Custom Plan</h3>
       </div>
 
       {/* Pricing Faq section */}
 
-      {/* Connect check choose section*/}
-
-      <div className="pb-10 pt-8 lg:pb-44 lg:px-24 px-3.5">
-        <h2 className=" ">{priceData?.threC?.heading}</h2>
-        <div className="pt-4">
-          <p className="ps-1 lg:w-5/12">{priceData?.threC?.description}</p>
-        </div>
-        <div className="my-12">
-          <button
-            className={`bg-pink-500 text-white rounded-full px-3 py-1 lg:px-4 lg:py-3 font-bold`}
-          >
-            {priceData?.threC?.label}
-          </button>
-        </div>
+      <div className="border-t-2 border-b-2 border-blue-600 pb-32">
+        <h3 className="text-4xl  text-center ">Pricing Faq</h3>
       </div>
 
-      {/* Footer section*/}
+      {/* Connect check choose section*/}
 
-      <Footer />
-    </div>
+      <div className="border-t-2 border-b-2 border-red-600 pb-32 lg:pl-24">
+        <h2 className=" ">Connect, Check, Choose</h2>
+        <p className="w-5/12">
+          Not sure what will work for you. Connect with Jamstack+ and know how
+          can we help you improve your business.
+        </p>
+      </div>
+    </Layout>
   );
 };
 
-export default pricing;
+export default Pricing;

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(icon.css);
 
 @layer base {
   @font-face {
@@ -17,6 +18,15 @@
     font-weight: 400;
     font-display: swap;
     font-style: normal;
+  }
+
+  @font-face {
+    font-family: "icomoon";
+    src: url(../assets/icon-fonts/icomoon.woff) format("woff");
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
   }
 
   [class^="icon-"],
@@ -80,11 +90,44 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+
+}
+
+.blog .slick-track{
+ display: flex !important;
+  gap: 30px !important;
+  flex-grow: 1;
 }
 
 
 
+.blog .slick-track .card p{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+   }
 
 
+
+
+
+.pentagon{
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.circle{
+  clip-path: circle(50% at 50% 50%);
+}
+
+.diamond{
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.video {
+  aspect-ratio: 16 / 9;
+  width: 85%;
+  margin:0 auto
+}
 
 
