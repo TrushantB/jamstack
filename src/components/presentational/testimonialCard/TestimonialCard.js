@@ -7,22 +7,26 @@ function TestimonialCard({ cards, heading }) {
   const sliderSetting = {
     dots: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     arrows: false,
+    autoplaySpeed: 2500,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
+          autoplaySpeed: 2500,
+          autoplay: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 2,
           initialSlide: 2,
         },
@@ -44,7 +48,7 @@ function TestimonialCard({ cards, heading }) {
       </div>
 
       <div className="container  gap-14 flex flex-col lg:w-8/12">
-        <Slider>
+        <Slider {...sliderSetting}>
           {cards &&
             cards?.map((item, index) => (
               <div
