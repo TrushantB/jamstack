@@ -1,7 +1,428 @@
 {
+  "header": {
+    "logoUrl": {
+      "url": "/Jamstack+.svg",
+      "alt": "jamstack logo",
+      "herf" : "/"
+    },
+    "headerMenu": [
+      { "label": "PRICING", "href": "pricing", "target": "_self" },
+      { "label": "WEBJ", "href": "webj", "target": "_self" },
+      { "label": "MOBJ", "href": "mobj", "target": "_self" },
+      { "label": "ECOMMJ", "href": "ecommj", "target": "_self" },
+      { "label": "CONTACT US", "href": "contact", "target": "_self" }
+    ],
+    "sidebarLink": [
+      { "label": "WHAT IS JAMSTACK", "href": "know-Jamstack", "target": "_self" },
+      { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
+      { "label": "ABOUT US", "href": "about", "target": "_self" },
+      { "label": "CASE STUDIES", "href": "case-study", "target": "_self" },
+      { "label": "BLOG", "href": "blog", "target": "_self" }
+    ],
+    "description": "Leading brand in enhancing the JAMstack to offer technical solutions to accelerate the phases of digital presence",
+    "buttonLabel": {
+      "label": "Lets Talk",
+      "href": "contact",
+      "target": "_self"
+    },
+    "Contactlabel": "Contact Information",
+    "phoneNumber": "+91 990-123-4567",
+    "email": "geexu@gmail.com",
+    "country": "India",
+
+    "socialLink": [
+      { "iconName": "icon-mail", "href": "https://mail.google.com/", "alt": "image" , "target": "_blank" },
+      { "iconName": "icon-instagam", "href": "https://www.instagram.com/", "alt": "image" ,"target": "_blank" },
+      { "iconName": "icon-whatsapp1", "href": "https://www.whatsapp.com/", "alt": "image" , "target": "_blank"},
+      { "iconName": "icon-facebook2", "href": "https://www.facebook.com/", "alt": "image", "target": "_blank" },
+      { "iconName": "icon-twitter", "href": "https://twitter.com/", "alt": "image", "target": "_blank" }
+    ],
+    "hamburgerLogo": "/Hamburger.png",
+    "hamburgerLogoalt": "Hamburger logo",
+    "crossLogo": {
+      "url": "X",
+      "alt": "crossLogo logo"
+    }
+  },
+
+  "footer": {
+    "footerLogo": {
+      "url": "/Jamstack+.svg",
+      "alt": "jamstack logo",
+      "href" : "/"
+    },
+    "copyRight": "Jamstack 2023 ",
+    "socialIcons": [
+      {
+        "icon": "icon-mail1",
+        "href": "https://mail.google.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "icon": "icon-instagam",
+        "href": "https://www.instagram.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "icon": "icon-twitter",
+        "href": "https://twitter.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "icon": "icon-whatsapp1",
+        "href": "https://www.whatsapp.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "icon": "icon-facebook2",
+        "href": "https://www.facebook.com/",
+        "alt": "image",
+        "target": "_blank"
+      }
+    ],
+    "footerMenu": [
+      { "label": "Ecosystem", "href": "ecosystem", "target": "_self" },
+      { "label": "Know Jamstack", "href": "know-Jamstack", "target": "_self" },
+      { "label": "Pricing", "href": "pricing", "target": "_self" },
+
+      { "label": "EcommJ", "href": "ecommJ", "target": "_self" },
+      { "label": "WEBJ", "href": "webj", "target": "_self" },
+      { "label": "MobJ", "href": "mobj", "target": "_self" },
+
+      { "label": "FAQ", "href": "faq", "target": "_self" },
+      { "label": "About us", "href": "about", "target": "_self" },
+      { "label": "Blog", "href": "blog", "target": "_self" },
+      { "label": "Contact", "href": "contact", "target": "_self" }
+    ],
+    "secondaryMenu": [
+      {
+        "label": "Terms and conditions",
+        "href": "terms-and-condition",
+        "target": "_self"
+      },
+      {
+        "label": "Security - GDPR, SOC",
+        "href": "security",
+        "target": "_self"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "privacy-policy",
+        "target": "_self"
+      }
+    ]
+  },
+
   "home": {
     "id": 1,
-    "title": "Home page"
+    "title": "Home page",
+    "banner": {
+      "heading": "The ecosystem for building digital presence",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "image": "/banner.svg",
+      "type": "primary",
+      "label": "Start A Project",
+      "size": "medium",
+      "layout": "Image Left",
+      "href" : "contact"
+    },
+    "technologySolution": {
+      "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
+      "heading": "Your one stop solution in web reality.",
+      "href" : "/",
+      "logo": {
+        "url": "/Jamstack+.svg",
+        "alt": "Jamstack+.svg"
+      },
+      "lineIMage": {
+        "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
+        "alt": "lineImage"
+      }
+    },
+    "textBannerList": {
+      "heading": "Jamstack+ , the leading brand that provides start to end solutions to all web problems.",
+      "title": "Jamstack+ , the leading brand that provides start to end solutions to all web problems.",
+      "listItems": [
+        { "icon": "circle", "label": "High performance", "alt": "image" },
+        {
+          "icon": "diamond",
+          "label": "Futuristic tech solutions",
+          "alt": "image"
+        },
+        { "icon": "pentagon", "label": "Uniquely engineered", "alt": "image" }
+      ]
+    },
+    "videoBanner": {
+      "heading": "What is JAMstack?",
+      "video": {
+        "Videolink": "/strategy.mp4",
+        "alt": "image"
+      }
+    },
+    "textBanner": {
+      "sliderControls": {
+        "dots": false,
+        "infinite": true,
+        "speed": 500,
+        "autoplaySpeed": 2500,
+        "autoplay": true,
+        "arrows": false,
+        "swipe": true
+      },
+      "info": [
+        {
+          "label": "Google found that 53% of mobile users will leave a website that takes longer than three seconds to load.",
+          "icon": "circle",
+          "alt": "image"
+        },
+        {
+          "label": "Microsoft found that 45% of Ecomm users will leave a website that takes longer than three seconds to load.",
+          "icon": "pentagon",
+          "alt": "image"
+        },
+        {
+          "label": "Yahoo found that 57% of mobile Web User will leave a website that takes longer than three seconds to load.",
+          "icon": "diamond",
+          "alt": "image"
+        }
+      ]
+    },
+    "Webstatstics": {
+      "heading": "Know your webstatics",
+      "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
+      "placeholder": "Paste website URL here",
+      "buttonLabel": "Request Report",
+      "isButton": true
+    },
+    "benefits": {
+      "heading": "Benefits of working with us:",
+      "benefitsList": [
+        {
+          "icon": "circle",
+          "alt": "image",
+          "heading": "Everything for everyone ",
+          "description": "We cater from small businesses to big established businesses. We provide all kinds of solution right from planning to launch on any platform in web reality."
+        },
+        {
+          "icon": "diamond",
+          "alt": "image",
+          "heading": "Being Faster to deliver",
+          "description": "Being faster to deliver - JAMstack provides fast development, and so do us too. Enhancing the features of JAMstack helps to build and complete projects on time."
+        },
+        {
+          "icon": "pentagon",
+          "alt": "image",
+          "heading": "Wise experts",
+          "description": "We are experts in what we do. Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely. We strictly follow a systematic agile process of working that yields in excellent, robust and world class projects."
+        },
+        {
+          "icon": "diamond",
+          "alt": "image",
+          "heading": "Pocket friendly",
+          "description": "With us it’s always a pocket friendly, time saving and easy to work. We do not exaggerate on costs and make it easy for everyone to provide awesome projects."
+        }
+      ]
+    },
+    "productCard": {
+      "heading": "Products we Create",
+      "cards": [
+        {
+          "label": "webJ",
+          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
+          "buttonLabel": "Know More",
+          "href": "webj"
+        },
+        {
+          "label": "ecommJ",
+          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
+          "buttonLabel": "Know More",
+          "href": "ecommj"
+        },
+        {
+          "label": "mobJ",
+          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
+          "buttonLabel": "Know More",
+          "href": "mobj"
+        }
+      ]
+    },
+    "ourClient": {
+      "heading": "Technologies we work with:",
+      "href": "contact",
+      "imageList": [
+        { "image": "/Adobe.png", "alt": "image" },
+        { "image": "/stripe.png", "alt": "image" },
+        { "image": "/netflix.png", "alt": "image" },
+        { "image": "/cbre.png", "alt": "image" },
+        { "image": "/mozilla.png", "alt": "image" },
+        { "image": "/okta.png", "alt": "image" },
+        { "image": "/opera.png", "alt": "image" },
+        { "image": "/oppo.png", "alt": "image" },
+        { "image": "/nbc.png", "alt": "image" },
+        { "image": "/turo.png", "alt": "image" },
+        { "image": "/clearbit.png", "alt": "image" },
+        { "image": "/crunchbase.png", "alt": "image" },
+        { "image": "/xero.png", "alt": "image" },
+        { "image": "/contact.png", "alt": "image" }
+      ],
+      "type": "primary",
+      "label": "Explore Offerings",
+      "size": "medium"
+    },
+    "edgeNetwork": {
+      "heading": "Edge Network",
+      "image": "/world.png",
+      "alt": "image"
+    },
+    "caseStudy": {
+      "heading": "Case Study",
+      "description": "We are experts in what we do. Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely. We strictly follow a systematic agile process of working that yields in excellent, robust and world class projects.",
+      "itemList": [
+        {
+          "label": "Wise Experts",
+          "href": "wise-experts",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "80%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "150%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Logic Tales",
+          "href": "logic-tales",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "30%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "190%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Intercollab",
+          "href": "Intercollab",
+          "percentageList": [
+            {
+              "percentage": "100%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "10%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "10%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Skype",
+          "href": "Skype",
+          "percentageList": [
+            {
+              "percentage": "110%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "60%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "90%",
+              "description": "Indexed Pages"
+            }
+          ]
+        }
+      ],
+      "hasIcon": true,
+      "label": "Read More",
+      "icon": "diamond",
+      "href" : "contact"
+    },
+    "morderTechnology": {
+      "heading": "Excited to switch on modern technology?",
+      "href" :"contact",
+      "type": "primary",
+      "label": "Start A Project",
+      "size": "medium"
+    },
+    "testimonialCard": {
+      "heading": "We love our customers",
+      "cards": [
+        {
+          "name": "Kaylynn Kenter",
+          "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
+          "image": "/testimonalImageOne.svg",
+          "alt": "image"
+        },
+        {
+          "name": "Kianna Franci",
+          "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
+          "image": "/testimonalImageTwo.svg",
+          "alt": "image"
+        },
+        {
+          "name": "Ryan Lipshutz",
+          "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
+          "image": "/testimonalIMageThree.svg",
+          "alt": "image"
+        }
+      ]
+    },
+    "blogCard": {
+      "heading": "Blogs",
+      "cards": [
+        {
+          "image": "/Termgrid.png",
+          "alt": "blog",
+          "label": "Termgrid",
+          "description": "Branding a whole new category of debt management.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        },
+        {
+          "image": "/Crisp.png",
+          "alt": "blog",
+          "label": "Crisp ",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        },
+        {
+          "image": "/Ternary.png",
+          "alt": "blog",
+          "label": "Ternary",
+          "description": "Creating a visual identity and product for FinOps cloud innovator.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        }
+      ],
+      "hasIcon": true,
+      "label": "Read More"
+     
+    }
   },
   "webj": {
     "id": 1,
