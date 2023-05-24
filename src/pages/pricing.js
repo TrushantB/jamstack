@@ -1,9 +1,9 @@
 import Layout from "@/components/layout";
 import React from "react";
 
-const pricing = () => {
+const pricing = ({ header, footer }) => {
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       {/* Banner section with image bottom  */}
       <div className="pb-24 border-t-2 border-b-2 border-blue-600">
         <h2 className="text-center text-4xl">Banner Image bottom </h2>
