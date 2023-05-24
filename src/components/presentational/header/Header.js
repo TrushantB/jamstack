@@ -27,7 +27,7 @@ const Header = ({
         <nav className="bg-white border-gray-200">
           <div className="mx-auto px-4 md:px-8 py-4 md:py-6 flex flex-col lg:flex-row justify-between items-center">
             <div className="flex gap-5 w-full justify-between ">
-              <a href="#" className="flex items-center">
+              <a href={logoUrl?.herf} className="flex items-center">
                 <img
                   src={logoUrl?.url}
                   alt={logoUrl?.alt}
@@ -102,19 +102,21 @@ const Header = ({
 
                   <div className=" mt-14 mb-14">
                     <p>{description}</p>
-                    <button className="mt-4 font-semibold" type="button">
+                      <a href={buttonLabel.href}>
+                      <button className="mt-4 font-semibold" type="button">
                       {buttonLabel?.label}
                     </button>
+                      </a>
                   </div>
 
                   <div>
                     <h5 className="mb-3 font-medium ">{label}</h5>
                     <ul>
                       <li className="my-3">
-                        <a>{phoneNumber}</a>
+                      <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
                       </li>
                       <li>
-                        <a className="my-3" href="mailto:geexu@gmail.com">
+                      <a className="my-3" href={`mailto:${email}`}>
                           {email}
                         </a>
                       </li>
@@ -126,7 +128,7 @@ const Header = ({
                     <ul className="flex items-center gap-3">
                       {socialLink?.map((item, index) => (
                         <li key={index}>
-                          <a href={item.href} target={socialLink.target}>
+                          <a href={item.href} target={item.target}>
                             <span className={`${item.iconName} text-xl`}></span>
                           </a>
                         </li>
@@ -184,7 +186,7 @@ const Header = ({
                           <a>{phoneNumber}</a>
                         </li>
                         <li>
-                          <a className="py-2" href="mailto:setoo@gmail.com">
+                          <a className="py-2" href={`mailto:${email}`}>
                             {email}
                           </a>
                         </li>

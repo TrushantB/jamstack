@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import Button from "../../form/button/Button";
-//import "./Banner.css";
 
-const Banner = ({ heading, image, type, size, label, onClick, layout }) => {
+const Banner = ({ heading, image, type, size, label, layout ,href }) => {
   return (
     <div className="">
       <div
@@ -30,12 +29,13 @@ const Banner = ({ heading, image, type, size, label, onClick, layout }) => {
               <h1 className="text-black-950 font-bold">{heading}</h1>
 
               <div className="my-16">
+                <a href={href} >
                 <Button
                   label={label}
-                  onClick={onClick}
                   type={type}
                   size={size}
                 />
+                </a>
               </div>
             </div>
           </div>

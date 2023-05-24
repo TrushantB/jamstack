@@ -9,7 +9,9 @@ function WebSection({ heading, description, lineIMage, logo }) {
         </p>
         <img className="py-8" src={lineIMage?.url}></img>
         <h4 className="lg:w-4/12 font-bold text-center">{heading}</h4>
+        <a href={logo?.href} >
         <img className="mt-5" src={logo?.url} />
+        </a>
       </div>
     </div>
   );

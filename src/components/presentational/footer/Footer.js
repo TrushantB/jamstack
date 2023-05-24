@@ -8,6 +8,7 @@ const Footer = ({
   socialIcons,
   footerMenu,
   secondaryMenu,
+
 }) => {
   return (
     <>
@@ -15,12 +16,14 @@ const Footer = ({
         <div className="grid grid-cols-12">
           <div className="col-span-12 sm:col-span-6 lg:col-span-7 sm:p-5 lg:p-10 mt-10 sm:m-0">
             <div>
-              <img className="w-60 h-10" src={footerLogo?.url} alt="logo" />
+             <a href={footerLogo?.href}>
+             <img className="w-60 h-10" src={footerLogo?.url} alt="logo" />
+             </a>
             </div>
             <div className="flex gap-4 mt-3">
               <div className=" flex gap-7">
                 {socialIcons.map((item, index) => (
-                  <a className="flex items-center" key={index} href={item.link}>
+                  <a className="flex items-center" key={index} target={item.target} href={item.href}>
                     <span className={`${item.icon} text-2xl`}></span>
                   </a>
                 ))}
