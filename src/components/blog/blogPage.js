@@ -3,7 +3,7 @@ import LinkButton from '../Link/Link'
 
 export default function Blogpage({ cards, hasIcon, label }) {
   return (
-    <div className='pt-32'>
+    <div className='pt-32 pl-28'>
     {cards && cards.map((item, index) => (
       <div key={index} className="lg:flex items-start pb-32 ">
         <div className="lg:w-2/5 pr-4">
