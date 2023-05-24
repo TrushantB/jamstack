@@ -113,10 +113,10 @@ const Header = ({
                     <h5 className="mb-3 font-medium ">{label}</h5>
                     <ul>
                       <li className="my-3">
-                        <a>{phoneNumber}</a>
+                      <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
                       </li>
                       <li>
-                        <a className="my-3" href="mailto:geexu@gmail.com">
+                      <a className="my-3" href={`mailto:${email}`}>
                           {email}
                         </a>
                       </li>
