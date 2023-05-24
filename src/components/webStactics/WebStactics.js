@@ -1,40 +1,42 @@
 import React, { useEffect, useState } from "react";
 
-function WebStactics({ heading, description , placeholder, isButton, buttonLabel}) {
+function WebStactics({
+  heading,
+  description,
+  placeholder,
+  isButton,
+  buttonLabel,
+}) {
+  const [error, setError] = useState("");
+  const [isMobileView, setIsMobileView] = useState(false);
 
-    const [error, setError] = useState("");
-    const [isMobileView, setIsMobileView] = useState(false);
-  
-    const handleBlur = (event) => {
-      if (event.target.value === "") {
-        setError("This field is required");
-      } else {
-        setError("");
-      }
+  const handleBlur = (event) => {
+    if (event.target.value === "") {
+      setError("This field is required");
+    } else {
+      setError("");
+    }
+  };
+
+  const handleChange = (event) => {
+    if (error) {
+      setError("");
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768);
     };
-  
-    const handleChange = (event) => {
-      if (error) {
-        setError("");
-      }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobileView(window.innerWidth <= 768);
-      };
-  
-      handleResize();
-  
-      window.addEventListener("resize", handleResize);
-  
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
-
-
-
+  }, []);
 
   return (
     <div className="bg-secondary text-white  px-3.5 lg:pl-28 py-6 lg:py-16">
@@ -55,7 +57,10 @@ function WebStactics({ heading, description , placeholder, isButton, buttonLabel
         />
         {isMobileView ? (
           <div className="bg-primary rounded-full w-10 flex justify-center items-center -ml-14 h-10">
-            <a href="contact" className="icon-arrow-right2 text-2xl text-white "></a>
+            <a
+              href="contact"
+              className="icon-arrow-right2 text-2xl text-white "
+            ></a>
           </div>
         ) : (
           isButton && (

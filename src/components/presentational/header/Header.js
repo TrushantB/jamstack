@@ -102,9 +102,11 @@ const Header = ({
 
                   <div className=" mt-14 mb-14">
                     <p>{description}</p>
-                    <button className="mt-4 font-semibold" type="button">
+                      <a href={buttonLabel.href}>
+                      <button className="mt-4 font-semibold" type="button">
                       {buttonLabel?.label}
                     </button>
+                      </a>
                   </div>
 
                   <div>
@@ -184,7 +186,7 @@ const Header = ({
                           <a>{phoneNumber}</a>
                         </li>
                         <li>
-                          <a className="py-2" href="mailto:setoo@gmail.com">
+                          <a className="py-2" href={`mailto:${email}`}>
                             {email}
                           </a>
                         </li>

@@ -13,10 +13,10 @@
       { "label": "CONTACT US", "href": "contactus", "target": "_self" }
     ],
     "sidebarLink": [
-      { "label": "WHAT IS JAMSTACK", "href": "jamstack", "target": "_self" },
-      { "label": "OUR ECOSYSTEM", "href": "ourecosystem", "target": "_self" },
-      { "label": "ABOUT US", "href": "aboutus", "target": "_self" },
-      { "label": "CASE STUDIES", "href": "casestudy", "target": "_self" },
+      { "label": "WHAT IS JAMSTACK", "href": "know-Jamstack", "target": "_self" },
+      { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
+      { "label": "ABOUT US", "href": "about", "target": "_self" },
+      { "label": "CASE STUDIES", "href": "case-study", "target": "_self" },
       { "label": "BLOG", "href": "blog", "target": "_self" }
     ],
     "description": "Leading brand in enhancing the JAMstack to offer technical solutions to accelerate the phases of digital presence",
@@ -198,6 +198,7 @@
       "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
       "placeholder": "Paste website URL here",
       "buttonLabel": "Request Report",
+      "href" : "contact",
       "isButton": true
     },
     "benefits": {
