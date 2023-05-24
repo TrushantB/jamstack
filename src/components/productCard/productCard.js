@@ -1,4 +1,6 @@
 import  { React,useState } from "react";
+import Link from 'next/link'
+
 
 function ProductCard({cards}) {
 
@@ -26,13 +28,13 @@ function ProductCard({cards}) {
         <p className="font-normal ">{card.description}</p>
         </div>
         {hoverItem === card ? <div className="flex justify-end items-center  mt-14">
-          <a className=" relative z-30 -m-10" href={card.href}>
+          <Link className=" relative z-30 -m-10" href={card.href}>
             {card.buttonLabel}
-          </a>
+          </Link>
           <div className="w-28 h-28 rounded-full bg-primary"></div>
         </div> :
           <div className="flex justify-end items-end mt-32">
-            <div className="w-10 h-10 rounded-full bg-tertiary "></div>
+            <div className="w-14 h-14 rounded-full bg-tertiary "></div>
           </div>
         }
       </div>

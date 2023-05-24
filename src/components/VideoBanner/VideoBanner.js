@@ -8,7 +8,7 @@ function VideoBanner({ heading, video }) {
           <h2>{heading}</h2>
         </div>
         <div>
-          <video className="rounded-3xl video" controls>
+          <video className="rounded-3xl video" controls={true} loop={true} autoPlay={true}>
             <source src={video?.Videolink} type="video/mp4" />
             <source src={video?.Videolink} type="video/ogg" />
           </video>

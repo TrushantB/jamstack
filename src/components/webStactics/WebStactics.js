@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Link from 'next/link'
+
 
 function WebStactics({
   heading,
@@ -57,10 +59,7 @@ function WebStactics({
         />
         {isMobileView ? (
           <div className="bg-primary rounded-full w-10 flex justify-center items-center -ml-14 h-10">
-            <a
-              href="contact"
-              className="icon-arrow-right2 text-2xl text-white "
-            ></a>
+            <a className="icon-arrow-right2 text-2xl text-white "></a>
           </div>
         ) : (
           isButton && (

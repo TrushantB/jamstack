@@ -1,5 +1,7 @@
 import { React, useState } from "react";
 import Button from "@/components/form/button/Button";
+import Link from 'next/link'
+
 
 function OurClient({ heading, imageList, type, label, size , href}) {
   return (
@@ -9,9 +11,9 @@ function OurClient({ heading, imageList, type, label, size , href}) {
           <h2 className="lg:w-8/12 mb-7">{heading}</h2>
         </div>
         <div className="mb-7 lg:0">
-          <a href={href}>
+          <Link href={href}>
           <Button label={label} type={type} size={size} />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="lg:w-7/12 ">
@@ -25,10 +27,8 @@ function OurClient({ heading, imageList, type, label, size , href}) {
                   index % 3 !== 0 && (index + 1) % 3 !== 0
                     ? "border-l-2 border-r-2 border-b-2"
                     : "border-b-2"
-                }
-              `}
-                  key={index}
-                >
+                }`}
+                  key={index}>
                   {item.image ? (
                     <img
                       className="w-full p-4"

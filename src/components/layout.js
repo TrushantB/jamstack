@@ -1,33 +1,16 @@
-import { useEffect, useState } from "react";
-import { get } from "@/client/api";
 import Header from "@/components/presentational/header/Header";
 import Footer from "@/components/presentational/footer/Footer";
 
-export default function Layout({ children }) {
-  const [headerData, setHeaderData] = useState(null);
-  const [footerData, setFooterData] = useState(null);
-
-  useEffect(() => {
-    get("header").then((response) => {
-      setHeaderData(response);
-    });
-  }, []);
-
-  useEffect(() => {
-    get("footer").then((response) => {
-      setFooterData(response);
-    });
-  }, []);
-
+export default function Layout({ children, header, footer }) {
   return (
     <main className="flex flex-col h-screen">
       <div className="">
-        {headerData && <Header {...headerData} />}
+        {header && <Header {...header} />}
         {children}
         <div className="px-5 lg:px-24 border-t">
-        {footerData && <Footer {...footerData} />}
+          {footer && <Footer {...footer} />}
         </div>
-       
+
       </div>
     </main>
   );

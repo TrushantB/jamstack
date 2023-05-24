@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
-const About = () => {
+const About = ({ header, footer }) => {
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       {/* form section */}
       <div className="lg:pl-24 pt-24 pb-24">
         <h2 className="lg:w-7/12">
