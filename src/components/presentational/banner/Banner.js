@@ -27,7 +27,7 @@ const Banner = ({ heading, image, type, size, label, onClick, layout }) => {
             })}
           >
             <div>
-              <h2 className="text-black-950 font-bold">{heading}</h2>
+              <h1 className="text-black-950 font-bold">{heading}</h1>
 
               <div className="my-16">
                 <Button

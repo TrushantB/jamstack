@@ -8,7 +8,7 @@ function OurClient({ heading, imageList, type, label, size }) {
         <div>
           <h2 className="lg:w-8/12 mb-7">{heading}</h2>
         </div>
-        <div>
+        <div className="mb-7 lg:0">
           <Button label={label} type={type} size={size} />
         </div>
       </div>
