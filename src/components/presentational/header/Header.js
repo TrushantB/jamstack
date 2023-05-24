@@ -126,7 +126,7 @@ const Header = ({
                     <ul className="flex items-center gap-3">
                       {socialLink?.map((item, index) => (
                         <li key={index}>
-                          <a href={item.href} target={socialLink.target}>
+                          <a href={item.href} target={item.target}>
                             <span className={`${item.iconName} text-xl`}></span>
                           </a>
                         </li>
