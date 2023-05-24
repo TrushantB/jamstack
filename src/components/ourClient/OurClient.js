@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import Button from "@/components/form/button/Button";
 
-function OurClient({ heading, imageList, type, label, size }) {
+function OurClient({ heading, imageList, type, label, size , href}) {
   return (
     <div className="flex flex-col lg:flex-row  pt-5 ">
       <div>
@@ -9,7 +9,9 @@ function OurClient({ heading, imageList, type, label, size }) {
           <h2 className="lg:w-8/12 mb-7">{heading}</h2>
         </div>
         <div className="mb-7 lg:0">
+          <a href={href}>
           <Button label={label} type={type} size={size} />
+          </a>
         </div>
       </div>
       <div className="lg:w-7/12 ">

@@ -20,12 +20,11 @@ const ButtonType = (type) => {
   });
 };
 
-const Button = ({ type, size, label, onClick }) => {
+const Button = ({ type, size, label }) => {
   return (
     <div>
       <button
         className={`${ButtonType(type)} ${ButtonSize(size)}`}
-        onClick={onClick}
         disabled={type === "disabled"}
       >
         {label}
@@ -37,7 +36,6 @@ const Button = ({ type, size, label, onClick }) => {
 Button.defaultProps = {
   type: "primary",
   size: "medium",
-  onClick: "button is click",
 };
 
 export default Button;

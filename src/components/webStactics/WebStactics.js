@@ -55,7 +55,7 @@ function WebStactics({ heading, description , placeholder, isButton, buttonLabel
         />
         {isMobileView ? (
           <div className="bg-primary rounded-full w-10 flex justify-center items-center -ml-14 h-10">
-            <a href="#" className="icon-arrow-right2 text-2xl text-white "></a>
+            <a href="contact" className="icon-arrow-right2 text-2xl text-white "></a>
           </div>
         ) : (
           isButton && (
