@@ -10,7 +10,7 @@
       { "label": "WEBJ", "href": "webj", "target": "_self" },
       { "label": "MOBJ", "href": "mobj", "target": "_self" },
       { "label": "ECOMMJ", "href": "ecommj", "target": "_self" },
-      { "label": "CONTACT US", "href": "contactus", "target": "_self" }
+      { "label": "CONTACT US", "href": "contact", "target": "_self" }
     ],
     "sidebarLink": [
       { "label": "WHAT IS JAMSTACK", "href": "know-Jamstack", "target": "_self" },
@@ -237,19 +237,19 @@
           "label": "webJ",
           "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
           "buttonLabel": "Know More",
-          "href": "webJ"
+          "href": "webj"
         },
         {
           "label": "ecommJ",
           "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
           "buttonLabel": "Know More",
-          "href": "ecommJ"
+          "href": "ecommj"
         },
         {
           "label": "mobJ",
           "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
           "buttonLabel": "Know More",
-          "href": "mobJ"
+          "href": "mobj"
         }
       ]
     },
