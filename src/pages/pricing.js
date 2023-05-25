@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { get } from "@/client/api";
+import Layout from "@/components/layout";
+import PricingPlan from "@/components/pricingPlan/PricingPlan";
 
 const Pricing = () => {
   const [priceData, setPriceData] = useState([]);
@@ -28,7 +30,6 @@ const Pricing = () => {
     };
   }, []);
 
-  const isButton = true;
 
   const handleBlur = (event) => {
     if (event.target.value === "") {
@@ -129,8 +130,9 @@ const Pricing = () => {
 
       {/* Custom Plan */}
 
-      <div className="border-t-2 border-b-2 border-red-600">
-        <h3 className="text-4xl text-center py-24 ">Custom Plan</h3>
+      <div className="border-t-2 border-b-2 border-red-600 py-24">
+        {/* <h3 className="text-4xl text-center py-24 ">Custom Plan</h3> */}
+        <PricingPlan customPlan={priceData.customPlan} />
       </div>
 
       {/* Pricing Faq section */}

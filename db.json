@@ -3,7 +3,7 @@
     "logoUrl": {
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo",
-      "herf" : "/"
+      "herf": "/"
     },
     "headerMenu": [
       { "label": "PRICING", "href": "pricing", "target": "_self" },
@@ -13,7 +13,11 @@
       { "label": "CONTACT US", "href": "contact", "target": "_self" }
     ],
     "sidebarLink": [
-      { "label": "WHAT IS JAMSTACK", "href": "know-Jamstack", "target": "_self" },
+      {
+        "label": "WHAT IS JAMSTACK",
+        "href": "know-Jamstack",
+        "target": "_self"
+      },
       { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
       { "label": "ABOUT US", "href": "about", "target": "_self" },
       { "label": "CASE STUDIES", "href": "case-study", "target": "_self" },
@@ -31,11 +35,36 @@
     "country": "India",
 
     "socialLink": [
-      { "iconName": "icon-mail", "href": "https://mail.google.com/", "alt": "image" , "target": "_blank" },
-      { "iconName": "icon-instagam", "href": "https://www.instagram.com/", "alt": "image" ,"target": "_blank" },
-      { "iconName": "icon-whatsapp1", "href": "https://www.whatsapp.com/", "alt": "image" , "target": "_blank"},
-      { "iconName": "icon-facebook2", "href": "https://www.facebook.com/", "alt": "image", "target": "_blank" },
-      { "iconName": "icon-twitter", "href": "https://twitter.com/", "alt": "image", "target": "_blank" }
+      {
+        "iconName": "icon-mail",
+        "href": "https://mail.google.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-instagam",
+        "href": "https://www.instagram.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-whatsapp1",
+        "href": "https://www.whatsapp.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-facebook2",
+        "href": "https://www.facebook.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-twitter",
+        "href": "https://twitter.com/",
+        "alt": "image",
+        "target": "_blank"
+      }
     ],
     "hamburgerLogo": "/Hamburger.png",
     "hamburgerLogoalt": "Hamburger logo",
@@ -49,7 +78,7 @@
     "footerLogo": {
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo",
-      "href" : "/"
+      "href": "/"
     },
     "copyRight": "Jamstack 2023 ",
     "socialIcons": [
@@ -129,12 +158,12 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href" : "contact"
+      "href": "contact"
     },
     "technologySolution": {
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
       "heading": "Your one stop solution in web reality.",
-      "href" : "/",
+      "href": "/",
       "logo": {
         "url": "/Jamstack+.svg",
         "alt": "Jamstack+.svg"
@@ -359,11 +388,11 @@
       "hasIcon": true,
       "label": "Read More",
       "icon": "diamond",
-      "href" : "contact"
+      "href": "contact"
     },
     "morderTechnology": {
       "heading": "Excited to switch on modern technology?",
-      "href" :"contact",
+      "href": "contact",
       "type": "primary",
       "label": "Start A Project",
       "size": "medium"
@@ -421,18 +450,17 @@
       ],
       "hasIcon": true,
       "label": "Read More"
-     
     }
   },
-  "pricing" : {
-    "banner" : {
-      "heading" : "Let’s boost your business with powerful ecosystem by Jamstack+.",
-      "image" : "/priceBanner.svg",
-      "imageTwo" : "/mobileBannerTwo.png" ,
-      "alt" : "image",
+  "pricing": {
+    "banner": {
+      "heading": "Let’s boost your business with powerful ecosystem by Jamstack+.",
+      "image": "/priceBanner.svg",
+      "imageTwo": "/mobileBannerTwo.png",
+      "alt": "image",
       "backGroundColor": "#ffffff",
       "headingSize": "medium",
-      "buttonLabel" : "Start A Project",
+      "buttonLabel": "Start A Project",
       "type": "primary",
       "label": "Start A Project",
       "size": "medium"
@@ -468,23 +496,65 @@
     "Webstatstics": {
       "heading": "Know your webstatics",
       "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
-        "placeholder" : "Paste website URL here",
-        "buttonLabel" : "Request Report",
-        "isButton" : true
+      "placeholder": "Paste website URL here",
+      "buttonLabel": "Request Report",
+      "isButton": true
     },
-    "customPlan" : {
-      "heading" : "Looking for ideal custom plan",
-      "description" : "Be updated with the latest technology. Choose your convenient tech stack and steps to upgrade your business with us"
+    "customPlan": {
+      "heading": "Looking for ideal custom plan",
+      "description": "Be updated with the latest technology. Choose your convenient tech stack and steps to upgrade your business with us",
+      "platform": {
+        "heading": "Select platform",
+        "platforms": [
+          {
+            "name": "ecommJ",
+            "icon": "",
+            "id": "ecommj"
+          },
+          {
+            "name": "webJ",
+            "icon": "",
+            "id": "webj"
+          },
+          {
+            "name": "mobj+webJ",
+            "icon": "",
+            "id": "mobj-webj"
+          },
+          {
+            "name": "Strapi",
+            "icon": "",
+            "id": "strapi"
+          }
+        ]
+      },
+      "Plan": [
+        {
+          "name": "Platform",
+          "id": "platform"
+        },
+        {
+          "name": "Frontend",
+          "id": "frontend"
+        },
+        {
+          "name": "Backend",
+          "id": "backend"
+        },
+        {
+          "name": "Other Services",
+          "id": "other-services"
+        }
+      ]
     },
-    "threC" : {
-      "heading" : "Connect, Check, Choose",
-      "description" : "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
-      "buttonLabel" : "Connect with Team",
+    "threC": {
+      "heading": "Connect, Check, Choose",
+      "description": "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
+      "buttonLabel": "Connect with Team",
       "type": "primary",
       "label": "Connect with Team",
       "size": "medium"
     }
-    
   },
   "webj": {
     "id": 1,
