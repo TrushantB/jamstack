@@ -12,9 +12,9 @@ const Accordion = ({ accordin }) => {
   return (
     <div className="px-12">
       {accordin?.map((item, index) => (
-        <div className="accordion-item border-t-2 border-accent-200" key={index}>
+        <div className="accordion-item border-t-2 border-accent-200 cursor-pointer" key={index}>
           <div
-            className="accordion-title flex justify-between p-5"
+            className="accordion-title flex justify-between p-5 items-center"
             onClick={() => toggleAccordion(index)}
           >
             <div>
