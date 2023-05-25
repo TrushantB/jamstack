@@ -1,9 +1,9 @@
 import Layout from "@/components/layout";
 import React from "react";
 
-const mobj = () => {
+const mobj = ({ header, footer }) => {
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       {/* Banner section */}
       <div className="border-t-2 border-b-2 border-blue-600 pb-32">
         <h2 className="text-center text-2xl">Banner</h2>

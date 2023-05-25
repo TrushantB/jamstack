@@ -1,9 +1,9 @@
 import Layout from "@/components/layout";
 import React from "react";
 
-const ecosysterm = () => {
+const ecosysterm = ({ header, footer }) => {
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       <div className="pl-24 pb-24 pt-24">
         <h1>What is Eco System?</h1>
         <p className="w-7/12 pt-5">

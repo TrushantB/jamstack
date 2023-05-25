@@ -54,8 +54,9 @@ const Pricing = () => {
     swipe: priceData?.textBanner?.sliderControls?.swipe,
   };
 
+const pricing = () => {
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       {/* Banner section with image bottom  */}
       <div className="container px-3.5 lg:pt-32 pt-14 pb-14 lg:pb-32">
         <div>
