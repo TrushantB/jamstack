@@ -579,7 +579,10 @@
       "heading": "Purpose behind Jamstack+",
       "description" : "Technology that simplifies digital journey for ambitious businesses!"
     },
-    "jamStackRecipe" : "At Jamstack+ we serve the perfect RECIPE",
+    "jamStackRecipe" : {
+      "heading" : "At Jamstack+ we serve the perfect",
+      "label" : "RECIPE"
+    },
     "jamStackStories": {
       "heading" : "Journey of Jamstack+" ,
       "descriptionArray" : [
@@ -593,23 +596,23 @@
       "cardsArray" : [
         {
           "title": "Keen on details",
-          "class": "icon-ic_Easy-CMS"
+          "class": "icon-ic_Keen-on-details"
         },
         {
           "title": "Coherent communication",
-          "class": "icon-ic_Cheap-Scaling"
+          "class": "icon-ic_Coherent-communication"
         },
         {
           "title": "Factual truthful",
-          "class": "icon-ic_Highly-Secure"
+          "class": "icon-ic_Factual-truthful"
         },
         {
           "title": "Remarkable on timeless",
-          "class": "icon-ic_Tailored-Tech-Stack"
+          "class": "icon-ic_Remarkable-on-timeless"
         },
         {
           "title": "Accountable partner",
-          "class": "icon-ic_Cheap-Scaling"
+          "class": "icon-ic_Accountable-partner"
         },
         {
           "title": "Futuristic visioner",
@@ -671,7 +674,7 @@
       ]
     },
     "jamstackQuote" : {
-      "haeding" : "“Simplifying and scaling up your noteworthy digital journey”",
+      "heading" : "“Simplifying and scaling up your noteworthy digital journey”",
       "author" : "—Team Jamstack+"
     }
   },
