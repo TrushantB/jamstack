@@ -1,7 +1,23 @@
+import {React , useState , useEffect} from "react";
 import Layout from "@/components/layout";
-import React from "react";
+import { get } from "@/client/api";
+import Stepper from "@/components/stepper/stepper";
 
-const ecommj = ({ header, footer }) => {
+
+
+  const Ecommj = ({ header, footer }) => {
+    const [EcommjData, setEcommjData] = useState(null);
+  
+    useEffect(() => {
+      get("ecommj").then((response) => {
+        setEcommjData(response);
+      });
+    }, []);
+    console.log(header, footer);
+  
+    if (!EcommjData) {
+      return <></>;
+    }
   return (
     <Layout header={header} footer={footer}>
       {/* Banner section */}
@@ -37,6 +53,10 @@ const ecommj = ({ header, footer }) => {
           and capable of producing greater value over time for any brand with a
           quality products{" "}
         </h3>
+      </div>
+
+      <div >
+          <Stepper script={EcommjData?.stepper?.sections}/>
       </div>
 
       {/* Facts Section with bg color */}
@@ -75,4 +95,4 @@ const ecommj = ({ header, footer }) => {
   );
 };
 
-export default ecommj;
+export default Ecommj;
