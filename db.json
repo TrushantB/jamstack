@@ -632,6 +632,39 @@
      
     }
   },
+  "ecoSystem" : {
+    "ecoBanner" : {
+      "heading" : "What is Eco System?",
+      "description" : "In the digital era, it’s very important to build your web presence first. But the journey of getting good business doesn’t always stop there. We know that it’s not just the product but the brand name that rules over the market. And we sincerely want you to stand out and to be recognised as a well known brand.",
+      "title" : "Ecosystem of making online brands with popular technology."
+    },
+    "accordinData" : {
+      "heading" : "Ecosystem",
+      "accordin" : [
+        {"label" : "Awareness." ,
+        "description" : "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable."
+      },
+        {"label" : "Presence." ,
+        "description" : "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable."
+      },
+        {"label" : "Accelerate." ,
+        "description" : "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable."
+      },
+        {"label" : "Maintenance." ,
+        "description" : "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable."
+      }
+      ]
+    },
+    "ConnectChoose": {
+      "heading": "Connect, Check, Choose",
+      "description": "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
+      "buttonLabel": "Connect with Team",
+      "type": "primary",
+      "label": "Connect with Team",
+      "size": "medium"
+    }
+
+  },
   "webj": {
     "id": 1,
     "title": "Website development"
