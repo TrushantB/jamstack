@@ -566,6 +566,72 @@
     },
     "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
   },
+  "faq" : {
+    "banner": {
+      "heading": "The ecosystem for building digital presence",
+      "backGroundColor": "#ffffff",
+      "description" : "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
+      "headingSize": "medium",
+      "image": "/faqBanner.png",
+      "layout": "Image Left"
+    },
+    "accordinData" : {
+      "accordin" : [
+        {"label" : "How much time does it take to develop a JAMstack website having 10-20 pages?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "What is the onboarding process to get started?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Is it possible to upgrade old UI/UX of the website to new one with fast speed?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "I have business idea and some budget can J+ help me with that?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Do you follow agile methodology?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Why do my business need Jamstack+ developed site?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "I already have my ecommerce site , can you help me with mobile app?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "I am not techno savvy person , how do I choose correct technology?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Can you build an app for iOS?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"}
+      ]
+    },
+    "blogCard": {
+      "heading": "Blogs",
+      "cards": [
+        {
+          "image": "/Termgrid.png",
+          "alt": "blog",
+          "label": "Termgrid",
+          "description": "Branding a whole new category of debt management.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        },
+        {
+          "image": "/Crisp.png",
+          "alt": "blog",
+          "label": "Crisp ",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        },
+        {
+          "image": "/Ternary.png",
+          "alt": "blog",
+          "label": "Ternary",
+          "description": "Creating a visual identity and product for FinOps cloud innovator.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        }
+      ],
+      "hasIcon": true,
+      "label": "Read More"
+     
+    }
+  },
   "webj": {
     "id": 1,
     "title": "Website development"
