@@ -34,7 +34,17 @@ const Steps = [
   {
     label: "Choose your tech-stack",
     content:
-      "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+    `
+    <p><span style="font-size: 20px; color: rgb(0, 0, 0);"><span style="white-space: pre-wrap;">We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></span></p>
+    <p><span style="color: rgb(0, 0, 0);"><strong><span style="font-size: 20px;"><span style="white-space: pre-wrap;">Shipping</span>:&nbsp;</span></strong></span></p>
+    <p><span style="font-size: 20px; color: rgb(0, 0, 0);"><span style="white-space: pre-wrap;">Look for an option that suits your needs:</span></span></p>
+    <p><span style="color: rgb(0, 0, 0); display: flex; flex-wrap: wrap; padding: 20px 0;"><img src="blob:https://www.tiny.cloud/d25b9283-3a42-4f0b-bac4-357fb5580db4" alt="next-js-img" width="94" height="55"> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+    <p><span style="color: rgb(0, 0, 0);"><strong><span style="font-size: 20px;"><span style="white-space: pre-wrap;">Payment Gateways</span></span></strong></span></p>
+    <p><strong><span style="white-space: pre-wrap;">Look for an option that suits your needs:</span></strong></p>
+    <p><span style="font-size: 20px; color: rgb(0, 0, 0); text-decoration: underline;"><img src="blob:https://www.tiny.cloud/16bd37a3-a898-4115-a961-3573e74ec574" width="213" height="45"></span><span style="font-size: 20px; color: rgb(0, 0, 0);"> &nbsp; &nbsp; &nbsp; <img src="blob:https://www.tiny.cloud/718c6144-6b9b-455f-8a08-9e62748a99ff" width="90" height="43">&nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+    <p><strong><span style="font-size: 20px; color: rgb(0, 0, 0);"><span style="white-space: pre-wrap;">Integrations</span></span></strong></p>
+    <p><strong><span style="font-size: 20px; color: rgb(0, 0, 0);"><span style="white-space: pre-wrap;">Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>
+  `,
     image: "/Design.png",
     layout: "imageRight",
     id: "step-3",
