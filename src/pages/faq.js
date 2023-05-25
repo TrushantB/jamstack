@@ -14,8 +14,6 @@ const Faq = ({ header, footer }) => {
     });
   }, []);
 
-  console.log("here", faqData?.accordinData?.accordin);
-
   return (
     <Layout header={header} footer={footer}>
       <div className="px-3 lg:px-24 py-8">
@@ -25,8 +23,14 @@ const Faq = ({ header, footer }) => {
       <div className="pt-14 lg:px-25">
         <Accordion {...faqData?.accordinData} />
       </div>
-      <div className="pt-36 ">
-        <BlogCard {...faqData?.blogCard} />
+
+       <div className="lg:px-24 pt-24 ">
+        <div className="text-center">
+          <h2>{faqData?.blogCard?.heading}</h2>
+        </div>
+        <div>
+          <BlogCard {...faqData?.blogCard} />
+        </div>
       </div>
     </Layout>
   );
