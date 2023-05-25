@@ -18,11 +18,11 @@ const Faq = ({ header, footer }) => {
 
   return (
     <Layout header={header} footer={footer}>
-      <div className="px-24 py-8">
+      <div className="px-3 lg:px-24 py-8">
         <Banner {...faqData?.banner} />
       </div>
 
-      <div className="pt-14 lg:px-24">
+      <div className="pt-14 lg:px-25">
         <Accordion {...faqData?.accordinData} />
       </div>
       <div className="pt-36 ">
