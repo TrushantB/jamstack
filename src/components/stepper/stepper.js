@@ -4,7 +4,7 @@ import Button from "../form/button/Button";
 
 
 const Stepper = (stepper) => {
-  const [selectedStep, setSelectedStep] = useState(null);
+  const [selectedStep, setSelectedStep] = useState(1);
 
   const handleStepClick = (index) => {
     setSelectedStep(index);
@@ -16,9 +16,9 @@ const Stepper = (stepper) => {
   return (
     <>
       {/* stepper code */}
-      <div className="pb-28 text-center"><h2>{stepper?.heading}</h2></div>
+      <div className="pb-28 text-center relative"><h2>{stepper?.heading}</h2></div>
       <div className="">
-        <div className="stepper flex justify-center gap-5 text-md text-center lg:text-left">
+        <div className="stepper flex justify-center gap-5 text-xs lg:text-base mb-7 text-center lg:text-left sticky top-0 py-3 bg-white">
           {stepper?.stepper.map((step, index) => (
             <a href={`#${step.id}`} key={index}>
               <div
@@ -62,6 +62,7 @@ const Stepper = (stepper) => {
                 <div className="lg:w-1/2 lg:p-2 flex justify-center items-center">
                   <img src={step.image} alt="Step Image" />
                 </div>
+                
               </>
             ) : (
               <div

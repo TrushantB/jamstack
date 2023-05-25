@@ -9,6 +9,7 @@ import TestimonialCard from "@/components/presentational/testimonialCard/Testimo
 import CaseStudy from "@/components/caseStudy/CaseStudy";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
+import Accordion2 from "@/components/platformAccordian/platformAccordian";
 
 
 
@@ -30,7 +31,7 @@ import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnolo
   return (
     <Layout header={header} footer={footer}>
       {/* Banner section */}
-      <div className=" pb-32 pt-32 px-24 ">
+      <div className=" pb-32 pt-32 px-5 lg:px-24 ">
       <Banner {...ecommjData.banner}/>
       </div>
 
@@ -38,7 +39,7 @@ import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnolo
      <Info {...ecommjData.info}/>
 
       {/* Ecomm process */}
-      <div className="pb-24 px-24 ">
+      <div className="pb-24 lg:px-24 px-5 ">
 
         
           <Stepper {...ecommjData?.stepperData}/>
@@ -46,7 +47,7 @@ import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnolo
       </div>
 
       {/* Facts Section with bg color */}
-      <div>
+      <div className="px-5">
         <ModernTechnologyOne {...ecommjData?.morderTechnologyOne}/>
         
       </div>
@@ -55,30 +56,31 @@ import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnolo
 
       {/* Facts Section with bg color */}
      
-        <h2 className="text-center text-4xl">Accordian Section</h2>
-        <div className="flex flex-col lg:flex-row bg-white  ">
-          <div className="px-10 py-1 border-2 w-5/12">section1</div>
-          <div className="px-10 py-1 border-2 w-7/12">Section2</div>
+        <div className="lg:px-24 py-32">
+        {<Accordion2 {...ecommjData?.accordian}/>}
         </div>
+      
+         
+        
       
 
       {/* case study section */}
-      <div className=" border-t-2 border-b-2 pb-24">
+      <div className=" pb-24 lg:px-24 px-5">
        <CaseStudy {...ecommjData?.caseStudy}/>
       </div>
 
       {/* cta section */}
-      <div className="flex fle-col bg-accent-100 justify-center items-center">
+      <div className="flex flex-col bg-accent-100 justify-center items-center">
         <h2 className="text-4xl py-20 ">Excited to switch to ecommJ?</h2>
       </div>
 
       {/* Testimonial section */}
-      <div className="py-24 border-t-2 border-b-2 ">
+      <div className="py-24 lg:px-24 px-5 border-b-2  ">
         <TestimonialCard {...ecommjData?.testimonialCard}/>
       </div>
 
       {/*  blog section */}
-      <div className=" border-b-2 pb-24 ">
+      <div className=" border-b-2 pb-24 px-5 lg:px-24 ">
        <BlogCard {...ecommjData?.blogCard}/>
       </div>
     </Layout>

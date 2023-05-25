@@ -604,7 +604,23 @@
             "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
             "layout": "imageRight",
             "image": "/onboarding.png",
-            "id": "step-1"
+            "id": "step-1",
+            "faqs":[
+              {"label" : "Limitless customization and personalization" ,
+              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon" :  "diamond"  ,
+              "arrow" : true
+              },
+              {"label" : "Improved time to value" ,
+              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon" :  "diamond"  ,
+              "arrow" : true
+              }
+            ],
+            "cta":{
+              "label":"text",
+              "href":"/"
+            }
           },
           {
             "label": "Choose your tech-stack",
