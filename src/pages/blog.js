@@ -15,7 +15,7 @@ function Blog() {
   
 
   return (
-    <Layout>
+    <Layout >
         <div>
             {<Blogpage {...blogData} />}
         </div>            

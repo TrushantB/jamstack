@@ -1,4 +1,4 @@
-import Form from "@/components/form";
+import React from "react";
 
 
 const About = () => {
@@ -14,7 +14,6 @@ const About = () => {
             <h2 className="lg:w-7/12">Let’s prepare your uniquely engineered digital presence together!</h2>
             <p className="w-1/2">We are eager to connect with you in the journey of enhancing the PLUS in your business. Help us to know more about you.</p>
 
-            <Form/>
         </div>
 
     {/* cta section */}
