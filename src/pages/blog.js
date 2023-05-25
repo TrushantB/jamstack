@@ -16,7 +16,7 @@ function Blog() {
 
   return (
     <Layout >
-        <div>
+        <div className="bg-green-700">
             {<Blogpage {...blogData} />}
         </div>            
     </Layout>
