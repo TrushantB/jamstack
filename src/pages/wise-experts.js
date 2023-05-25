@@ -1,11 +1,11 @@
 import Layout from '@/components/layout'
 import React from 'react'
 
-export default  function wiseExperts() {
+export default function wiseExperts({ header, footer }) {
   return (
-    <Layout>
-            <h1>wise Experts Page</h1>
+    <Layout header={header} footer={footer}>
+      <h1>wise Experts Page</h1>
     </Layout>
-    )
+  )
 }
 

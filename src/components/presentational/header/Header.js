@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import Link from 'next/link'
 
 const Header = ({
@@ -37,9 +37,8 @@ const Header = ({
                 />
               </Link>
               <ul
-                className={`${
-                  menuOpen ? "block" : "hidden"
-                } lg:flex font-medium flex-col md:flex-row align-middle justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
+                className={`${menuOpen ? "block" : "hidden"
+                  } lg:flex font-medium flex-col md:flex-row align-middle justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
               >
                 {headerMenu?.map((menuItems, index) => (
                   <li key={index}>
@@ -103,21 +102,21 @@ const Header = ({
 
                   <div className=" mt-14 mb-14">
                     <p>{description}</p>
-                      <Link href={buttonLabel.href}>
+                    <Link href={buttonLabel.href}>
                       <button className="mt-4 font-semibold" type="button">
-                      {buttonLabel?.label}
-                    </button>
-                      </Link>
+                        {buttonLabel?.label}
+                      </button>
+                    </Link>
                   </div>
 
                   <div>
                     <h5 className="mb-3 font-medium ">{label}</h5>
                     <ul>
                       <li className="my-3">
-                      <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
+                        <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
                       </li>
                       <li>
-                      <Link className="my-3" href={`mailto:${email}`}>
+                        <Link className="my-3" href={`mailto:${email}`}>
                           {email}
                         </Link>
                       </li>
@@ -142,9 +141,8 @@ const Header = ({
 
             {menuOpen && (
               <div
-                className={`${
-                  menuOpen ? "block" : "hidden"
-                } sticky top-0 md:flex font-medium flex-col md:flex-row align-middle p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full`}
+                className={`${menuOpen ? "block" : "hidden"
+                  } sticky top-0 md:flex font-medium flex-col md:flex-row align-middle p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full`}
               >
                 <ul>
                   {headerMenu?.map((menuItems, index) => (
@@ -184,7 +182,7 @@ const Header = ({
                       <h5 className="mb-3 font-medium ">{label}</h5>
                       <ul>
                         <li className="py-2">
-                        <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
+                          <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
                         </li>
                         <li>
                           <Link className="py-2" href={`mailto:${email}`}>

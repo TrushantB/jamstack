@@ -35,7 +35,7 @@ export default function PricingPlan({ customPlan }) {
 
     }
     return (
-        <div>
+        <div className='my-16'>
             <div className="text-center">
                 <h2 className="font-medium text-6xl">
                     {customPlan?.heading}

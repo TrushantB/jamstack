@@ -463,7 +463,8 @@
       "buttonLabel": "Start A Project",
       "type": "primary",
       "label": "Start A Project",
-      "size": "medium"
+      "size": "medium",
+      "layout" : "Image Bottom"
     },
     "textBanner": {
       "sliderControls": {
@@ -585,7 +586,7 @@
         }
       ]
     },
-    "threC": {
+    "ConnectChoose": {
       "heading": "Connect, Check, Choose",
       "description": "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
       "buttonLabel": "Connect with Team",

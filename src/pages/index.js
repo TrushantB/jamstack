@@ -16,7 +16,7 @@ import TestimonialCard from "@/components/presentational/testimonialCard/Testimo
 import BlogCard from "@/components/blogCard/BlogCard";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 
-const Home = () => {
+const Home = ({ header, footer }) => {
   const [homeData, setHomeData] = useState(null);
 
   useEffect(() => {
@@ -24,13 +24,14 @@ const Home = () => {
       setHomeData(response);
     });
   }, []);
+  console.log(header, footer);
 
   if (!homeData) {
     return <></>;
   }
 
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       <div className="lg:px-24 px-5 py-24">
         {<Banner {...homeData.banner} />}
       </div>

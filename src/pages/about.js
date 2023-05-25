@@ -1,8 +1,8 @@
 import Layout from "@/components/layout";
 
-const About = () => {
+const About = ({ header, footer }) => {
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       <div>
         <div className="border-t-2 border-b-2 border-red-600">
           <h2 className="text-center text-2xl">Banner</h2>

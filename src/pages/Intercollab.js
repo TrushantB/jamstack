@@ -3,8 +3,8 @@ import React from 'react'
 
 function Intercollab() {
   return (
-    <Layout>
-        <h1>Intercollab</h1>
+    <Layout header={header} footer={footer}>
+      <h1>Intercollab</h1>
     </Layout>
   )
 }
