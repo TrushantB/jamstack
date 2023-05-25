@@ -18,11 +18,11 @@ const Pricing = ({ header, footer }) => {
 
   return (
     <Layout header={header} footer={footer}>
-      <div>
+      <div className="pt-32">
         <Banner {...priceData?.banner} />
       </div>
 
-      <div>
+      <div className="pt-36">
         <TextBanner {...priceData?.textBanner} />
       </div>
 
