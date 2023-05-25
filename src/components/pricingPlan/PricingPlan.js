@@ -1,5 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 export default function PricingPlan({ customPlan }) {
+    const [plans, setPlans] = useState([]);
+    const [current, setCurrent] = useState(0);
+    const [dragDetails, setDragDetails] = useState({});
+    useEffect(() => {
+        setPlans(customPlan?.plans || [])
+    }, [customPlan?.plans])
+    const handleClose = (index, planIndex) => {
+        setCurrent(index);
+        if (index === 0) {
+            plans.map((plan) => {
+                plan.selected = []
+            })
+        } else {
+            plans[index].selected.splice(planIndex, 1)
+        }
+        setPlans([...plans])
+    }
+    const onDragOver = (e) => {
+        e.preventDefault()
+    }
+    const onDrop = (e) => {
+        plans[current].selected.push(dragDetails.option);
+        for (let plan = 0; plan < plans.length; plan++) {
+            const element = plans[plan];
+            if (!element?.selected?.length) {
+                setCurrent(plan)
+                break;
+            } else if (plan === plans.length - 1) {
+                setCurrent(plan)
+            }
+        }
+        setPlans([...plans])
+
+    }
     return (
         <div>
             <div className="text-center">
@@ -16,100 +50,78 @@ export default function PricingPlan({ customPlan }) {
                         <div className="w-14 h-14 bg-[#FF5223] rounded-full ">
 
                         </div>
-                        <h3 className="text-3xl md:text-5xl font-medium">
-                            {customPlan?.platform?.heading}
+                        <h3 className=" font-medium">
+                            Select platform
                         </h3>
                     </div>
                     <div className="flex justify-center items-center gap-x-12 gap-y-8 lg:gap-x-24 lg:gap-y-16 flex-wrap">
                         {
-                            customPlan?.platform?.platforms?.map((platform, index) => {
+                            plans.length && plans[current]?.options?.map((option, index) => {
+                                if (plans[current].selected.includes(option)) {
+                                    return
+                                }
                                 return (
-                                    <div key={index} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md">
+                                    <div key={index} draggable={true} onDragStart={() => setDragDetails({ option })} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md" >
                                         <div>
-                                            <img className="max-h-28 max-w-[112px] mx-auto" src="./src/assets/image/ecommj.svg" alt="ecommj" />
-                                            <p className="font-medium text-xl text-center md:text-3xl mt-2">
-                                                {platform.name}
+                                            <img className="max-h-28 max-w-[112px] mx-auto" src={option.icon} alt="ecommj" />
+                                            <p className="font-medium  text-center  mt-2">
+                                                {option.name}
                                             </p>
                                         </div>
                                     </div>
                                 )
                             })
                         }
-
-                        {/* <div className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md">
-                            <div>
-                                <img className="max-h-28 max-w-[112px] mx-auto" src="./src/assets/image/ecommj.svg" alt="ecommj" />
-                                <p className="font-medium text-xl text-center md:text-3xl mt-2">
-                                    ecommJ
-                                </p>
-                            </div>
-                        </div>
-                        <div className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md">
-                            <div>
-                                <img className="max-h-28 max-w-[112px] mx-auto" src="./src/assets/image/webJ.svg" alt="webJ" />
-                                <p className="font-medium text-xl text-center md:text-3xl mt-2">
-                                    webJ
-                                </p>
-                            </div>
-                        </div>
-                        <div className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md active:border-2 active:border-rose-400">
-                            <div>
-                                <img className="max-h-28 max-w-[112px]  mx-auto" src="./src/assets/image/mobj+webJ.svg" alt="ecommj" />
-                                <p className="font-medium text-xl text-center md:text-3xl mt-2 ">
-                                    mobj+webJ
-                                </p>
-                            </div>
-                        </div>
-                        <div className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md">
-                            <div>
-                                <img className="max-h-28 max-w-[112px]  mx-auto" src="./src/assets/image/mobj.svg" alt="mobj" />
-                                <p className="font-medium text-xl text-center md:text-3xl mt-2">
-                                    mobj
-                                </p>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 <div className="lg:w-1/2 rounded-[40px] bg-[#F1F2F6] pl-4 my-10 lg:my-0 lg:pl-24 pr-7 py-16">
-                    <h3 className="text-5xl font-medium text-center">
+                    <h3 className="font-medium text-center">
                         Ideal Plan
                     </h3>
-                    <ul className="pb-16 lg:pb-52">
-                        <li>
-                            <div>
-                                <p className="w-64 my-8 text-4xl">
-                                    Platform
-                                </p>
-                                <div className="flex w-64 shadow-lg py-3 px-4 rounded-lg bg bg-sky-600 my-8 text-white text-4xl items-center justify-between">
-                                    <p>
-                                        ecommJ
-                                    </p>
-                                    <span className="w-6 h-6 rounded-full flex justify-center items-center cursor-pointer  bg-slate-300 text-center ">
-                                        <svg width="14px" height="14px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                                            <g id="Menu / Close_LG">
-                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </g>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <p className="w-64 text-rose-400  my-8 text-4xl">
-                                    Frontend
-                                </p>
-                                <div className="px-16 py-11 border-dashed bg-red-100 border-2 text-2xl text-center border-rose-400">
-                                    Drag and Drop
-                                </div>
-                            </div>
-                        </li>
-                        <li className="w-64 text-slate-400 my-8 text-4xl">
-                            Backend
-                        </li>
-                        <li className="w-64 text-slate-400 my-8 text-4xl">
-                            Other Services
-                        </li>
+                    <ul className="pb-16">
+                        {
+                            plans?.map((plan, index) => {
+                                return (
+                                    <li>
+                                        <div>
+                                            <h4 className={`w-64 my-4  ${current === index ? 'text-primary ' : ''}`}>
+                                                {plan.name}
+                                            </h4>
+                                            {
+                                                plan.selected.length ?
+                                                    plan.selected.map((selectedPlan, planIndex) => {
+                                                        return (
+                                                            <>
+                                                                <div className="flex w-64 shadow-lg py-3 px-4 rounded-lg bg bg-secondary  text-white mb-4 items-center justify-between">
+                                                                    <p>
+                                                                        {selectedPlan.name}
+                                                                    </p>
+                                                                    <span className="w-6 h-6 rounded-full flex justify-center items-center cursor-pointer  bg-[#6d8ae0] text-center " onClick={() => handleClose(index, planIndex)}>
+                                                                        <svg width="14px" height="14px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                                            <g id="Menu / Close_LG">
+                                                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                                                            </g>
+                                                                        </svg>
+                                                                    </span>
+                                                                </div>
+                                                                {
+                                                                    current === index && (plan.selected.length < plan?.options?.length) && <div onDragOver={(e) => onDragOver(e)} onDrop={(e) => onDrop(e)} className="px-16 py-11  border-dashed border text-2xl text-center border-primary bg-[#f0e7f2]">
+                                                                        Drag and Drop
+                                                                    </div>
+                                                                }
+                                                            </>
+                                                        )
+                                                    })
+                                                    : current === index && <div onDragOver={(e) => onDragOver(e)} onDrop={(e) => onDrop(e)} className="px-16 py-11  border-dashed border text-2xl text-center border-primary bg-[#f0e7f2]">
+                                                        Drag and Drop
+                                                    </div>
+                                            }
+
+                                        </div>
+                                    </li>
+                                )
+                            })
+                        }
                     </ul>
                     <div>
                         <button type="button" className="py-4 px-5 bg-[#F0027F] rounded-[40px] text-2xl text-white font-semibold">

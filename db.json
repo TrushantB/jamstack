@@ -503,47 +503,85 @@
     "customPlan": {
       "heading": "Looking for ideal custom plan",
       "description": "Be updated with the latest technology. Choose your convenient tech stack and steps to upgrade your business with us",
-      "platform": {
-        "heading": "Select platform",
-        "platforms": [
-          {
-            "name": "ecommJ",
-            "icon": "",
-            "id": "ecommj"
-          },
-          {
-            "name": "webJ",
-            "icon": "",
-            "id": "webj"
-          },
-          {
-            "name": "mobj+webJ",
-            "icon": "",
-            "id": "mobj-webj"
-          },
-          {
-            "name": "Strapi",
-            "icon": "",
-            "id": "strapi"
-          }
-        ]
-      },
-      "Plan": [
+
+      "plans": [
         {
           "name": "Platform",
-          "id": "platform"
+          "id": "platform",
+          "options": [
+            {
+              "name": "ecommJ",
+              "icon": "",
+              "id": "ecommj"
+            },
+            {
+              "name": "webJ",
+              "icon": "",
+              "id": "webj"
+            },
+            {
+              "name": "mobj+webJ",
+              "icon": "",
+              "id": "mobj-webj"
+            },
+            {
+              "name": "Strapi",
+              "icon": "",
+              "id": "strapi"
+            }
+          ],
+          "selected": []
         },
         {
           "name": "Frontend",
-          "id": "frontend"
+          "id": "frontend",
+          "options": [
+            {
+              "name": "NextJs",
+              "icon": "",
+              "id": "nextjs"
+            },
+            {
+              "name": "Angular",
+              "icon": "",
+              "id": "angular"
+            }
+          ],
+          "selected": []
         },
         {
           "name": "Backend",
-          "id": "backend"
+          "id": "backend",
+          "options": [
+            {
+              "name": "Strapi",
+              "icon": "",
+              "id": "strapi"
+            },
+            {
+              "name": "Sanity",
+              "icon": "",
+              "id": "sanity"
+            }
+          ],
+          "selected": []
         },
         {
           "name": "Other Services",
-          "id": "other-services"
+          "id": "other",
+          "options": [
+            {
+              "name": "GTM",
+              "icon": "",
+              "id": "gtm"
+            },
+            {
+              "name": "Sendgrid",
+              "icon": "",
+              "id": "sendgrid"
+            }
+          ],
+          "selected": []
         }
       ]
     },
