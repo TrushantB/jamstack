@@ -566,6 +566,115 @@
     },
     "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
   },
+  "aboutUs" : {
+    "banner": {
+      "heading": "We Know. We Create.We Stand Unique.",
+      "backGroundColor": "#ffffff",
+      "description" : "We are Jamstack+, a platform that provides a complete digital presence ecosystem through our very own, crafted products: webJ, ecommJ, and mobJ.",
+      "headingSize": "medium",
+      "image": "/faqBanner.png",
+      "layout": "Image Left"
+    },
+    "morderTechnology": {
+      "heading": "Purpose behind Jamstack+",
+      "description" : "Technology that simplifies digital journey for ambitious businesses!"
+    },
+    "jamStackRecipe" : "At Jamstack+ we serve the perfect RECIPE",
+    "jamStackStories": {
+      "heading" : "Journey of Jamstack+" ,
+      "descriptionArray" : [
+        {"description" : "We began the journey with the goal of giving the best, creatively made, and timeless solutions to our valued consumers through technology. On this journey, we worked with the same JAMstack basics from beginning to end of the project."},
+        {"description" : "We envisioned building a single platform that would provide everything for everyone online. As a result of our efforts to justify JAMstack, we created the Jamstack+: the next generation of modern technology."},
+        {"description" : "We developed J+heros to deliver solutions across all platforms. These are thoroughly processed, rehearsed, and well-engineered solutions for anyone wishing to advance their digital platforms using popular technology."}
+      ]
+    },
+    "cards" : {
+      "heading" : "Our PLUS factors:",
+      "cardsArray" : [
+        {
+          "title": "Keen on details",
+          "class": "icon-ic_Easy-CMS"
+        },
+        {
+          "title": "Coherent communication",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+        {
+          "title": "Factual truthful",
+          "class": "icon-ic_Highly-Secure"
+        },
+        {
+          "title": "Remarkable on timeless",
+          "class": "icon-ic_Tailored-Tech-Stack"
+        },
+        {
+          "title": "Accountable partner",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+        {
+          "title": "Futuristic visioner",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "jamStackProcess" : {
+      "heading" : "How we do it",
+      "processArray" : [
+        {"title" : "Discuss- get started:",
+        "image" : "",
+        "layout" : "imageRight",
+        "labelArray" : [
+          {"label" : "Brainstorming on idea"},
+          {"label" : "Strategy planning"},
+          {"label" : "Requirement gathering"},
+          {"label" : "Analysis and approach"}
+        ]
+      },
+        {"title" : "Define and Design:",
+        "image" : "",
+        "layout" : "imageLeft",
+        "labelArray" : [
+          {"label" : "Analysis documentation"},
+          {"label" : "Wireframes and mockups"},
+          {"label" : "Design architecture"},
+          {"label" : "Design templates with style guide"}
+        ]
+      },
+        {"title" : "Develop:",
+        "image" : "",
+        "layout" : "imageRight",
+        "labelArray" : [
+          {"label" : "Code ready to test"},
+          {"label" : "Dev documentation and approach"},
+          {"label" : "Frontend, backend with DB"},
+          {"label" : "Unit testing"}
+        ]
+      },
+        {"title" : "Deploy -pre and post methods:",
+        "image" : "",
+        "layout" : "imageLeft",
+        "labelArray" : [
+          {"label" : "Quality assurance testing"},
+          {"label" : "CDN/edge networking"},
+          {"label" : "Usage guidelines"},
+          {"label" : "Hosting"}
+        ]
+      },
+        {"title" : "Accelerate",
+        "image" : "",
+        "layout" : "imageRight",
+        "labelArray" : [
+          {"label" : "Business analysis and dashboard"},
+          {"label" : "Recommendations and insights of the business"},
+          {"label" : "Recommendations and insights of the business"}       ]
+      }
+      ]
+    },
+    "jamstackQuote" : {
+      "haeding" : "“Simplifying and scaling up your noteworthy digital journey”",
+      "author" : "—Team Jamstack+"
+    }
+  },
   "webj": {
     "id": 1,
     "title": "Website development"
