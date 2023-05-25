@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Button from "../../form/button/Button";
 
 
-const Banner = ({ heading, image, type, size, label, layout ,href }) => {
+const Banner = ({ heading, image, type, size, label, layout ,href , description }) => {
   return (
     <div className="">
       <div
@@ -28,8 +28,11 @@ const Banner = ({ heading, image, type, size, label, layout ,href }) => {
           >
             <div>
               <h1 className="text-black-950 font-bold">{heading}</h1>
+              {description && <div>
+                <p className="pt-5 ">{description}</p>
+              </div>}
 
-              <div className="my-16">
+              {label && <div className="my-16">
                 <Link href={`${href}`} >
                 <Button
                   label={label}
@@ -37,12 +40,13 @@ const Banner = ({ heading, image, type, size, label, layout ,href }) => {
                   size={size}
                 />
                 </Link>
-              </div>
+              </div>}
+              
             </div>
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:items-center justify-end">
+          <div className="flex md:w-1/2 items-start lg:items-center justify-start">
             <img src={image} alt="image" />
           </div>
         )}

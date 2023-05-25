@@ -577,81 +577,69 @@
   "ecomj" : {
     "banner": {
         "heading": "Start your journey of modern online business.",
-        "descriptipn" : " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
+        "description" : " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
         "backGroundColor": "#ffffff",
         "headingSize": "medium",
-        "image": "/banner.svg",
+        "image": "/ecommj.svg",
         "type": "primary",
         "label": "Start A Project",
         "size": "medium",
         "layout": "Image Left",
         "href" : "contact"
       },
-      "technologySolution": {
+      "info": {
         "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
         "question": "What is ecommJ?.",
-        "heading": "How ecommJ processes?",
         "href" : "/",
-        "logo": {
-          "url": "/Jamstack+.svg",
-          "alt": "Jamstack+.svg"
-        },
         "lineIMage": {
           "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
           "alt": "lineImage"
         }
       },
-      "stepper":{
-        "sections": [
-            {
-              "content": "<p><span style=\"font-size: 20px; color: rgb(0, 0, 0);\">Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>"
-            },
-            {
-              "content": "<p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 20px;\">Static Site Generator(SSG):&nbsp;</span></strong></span></p>"
-            },
-            {
-              "content": "<p><span style=\"font-size: 20px; color: rgb(0, 0, 0);\">There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p>"
-            },
-            {
-              "content": "<p><span style=\"color: rgb(0, 0, 0);\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/2560px-Nextjs-logo.svg.png\" alt=\"next-js-img\" width=\"114\" height=\"23\"> &nbsp; &nbsp; &nbsp; <img src=\"https://www.datocms-assets.com/205/1521408762-gatsbyjs.jpg\" alt=\"gatsbyjs-img\" width=\"114\" height=\"23\"> &nbsp; &nbsp; &nbsp; <img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/2560px-Nextjs-logo.svg.png\" alt=\"nuxtjs\" width=\"114\" height=\"23\"></span></p>"
-            },
-            {
-              "content": "<p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 20px;\">Choose CMS (Content Management System)&nbsp;</span></strong></span></p>"
-            },
-            {
-              "content": "<p><span style=\"font-size: 20px; color: rgb(0, 0, 0);\">To manage your content effectively, we recommend a few of the following</span></p>"
-            },
-            {
-              "content": "<p><span style=\"text-decoration: underline;\"><span style=\"font-size: 20px; color: rgb(0, 0, 0); text-decoration: underline;\"><img src=\"blob:https://www.tiny.cloud/7f062e2f-a80b-4d2d-b0cb-af3281619d1c\" width=\"140\" height=\"34\"></span></span><span style=\"font-size: 20px; color: rgb(0, 0, 0);\"> &nbsp; &nbsp; &nbsp; <img src=\"https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png\" alt=\"contentful-logo\" width=\"140\" height=\"32\"> &nbsp; &nbsp; &nbsp; <img src=\"blob:https://www.tiny.cloud/bea0b012-c631-4b73-9f4f-9f1b1f40c493\" alt=\"prismic-logo\" width=\"140\" height=\"34\"></span></p>"
-            },
-            {
-              "content": "<p><strong><span style=\"font-size: 20px; color: rgb(0, 0, 0);\">Choose front-end framework&nbsp;<br></span></strong></p>"
-            },
-            {
-              "content": "<p><span style=\"font-size: 20px; color: rgb(0, 0, 0);\">We provide you JS framework options that are mostly used like</span></p>"
-            },
-            {
-              "content": "<p><span style=\"font-size: 20px; color: rgb(0, 0, 0);\"><img src=\"blob:https://www.tiny.cloud/d0f8400b-be8c-42e4-b828-74db022e25e8\" alt=\"react-logo\" width=\"120\" height=\"37\"> &nbsp; &nbsp; &nbsp; <img src=\"blob:https://www.tiny.cloud/510b25be-c954-4a30-b1e4-dc80c2bf0aa3\" alt=\"veujs-logo\" width=\"120\" height=\"37\"> &nbsp; &nbsp; &nbsp; <img src=\"blob:https://www.tiny.cloud/5f6d3f1f-84e2-4c61-8ce5-617d5c6bd16a\" alt=\"angular\" width=\"120\" height=\"37\"></span></p>"
-            },
-            {
-              "content": "<p><strong><span style=\"font-size: 20px; color: rgb(0, 0, 0);\">Hosting&nbsp;</span></strong></p>"
-            },
-            {
-              "content": "<p><span style=\"font-size: 20px; color: rgb(0, 0, 0);\">We provide you hosting options that are mostly used like</span></p>"
-            },
-            {
-              "content": "<p><span style=\"font-size: 20px; color: rgb(0, 0, 0);\"><img src=\"blob:https://www.tiny.cloud/2754434e-33e2-4430-a5ea-b050330dd6c2\" alt=\"aws-logo\" width=\"48\" height=\"29\"> &nbsp; &nbsp; &nbsp; <img src=\"https://popupsmart.com/assets/img/vercel-logo.png\" alt=\"vercel\" width=\"118\" height=\"29\"></span></p>"
-            }
-          ]
+      "stepperData" : {
+        "heading": "How ecommJ processes?",
+        "stepper":[
+          {
+            "label": "On boarding",
+            "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+            "layout": "imageRight",
+            "image": "/onboarding.png",
+            "id": "step-1"
+          },
+          {
+            "label": "Choose your tech-stack",
+            "content": " <p><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p><span><strong><span>Static Site Generator(SSG):&nbsp;</span></strong></span></p>  <p><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p> <p><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://tinyurl.com/y4vcyhbr' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://tinyurl.com/ykda7xch' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
+            "image": "/choose.png",
+            "layout": "imageLeft",
+            "id": "step-2"
+          },
+          {"label": "Business Essentials:", 
+          "content": "<p><span>We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></p><p><span><strong><span>Shipping:</span></strong></span></p><p><span><span>Look for an option that suits your needs:</span></span></p><p><span><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/fedex.png?raw=true' alt='fedex-img' width='94' height='55'> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span><strong><span>Payment Gateways</span></strong></span></p><p><span>Look for an option that suits your needs:</span></p><p style='display:flex; align-items:center; padding:20px 0; '><span style='display:flex; align-items:center; padding:20px 0; flex-wrap:wrap;'><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/razorpay.png?raw=true' width='213' height='45'>&nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/stripe.png?raw=true' width='90' height='43'>&nbsp; &nbsp; &nbsp; &nbsp;<span/></p><p><strong><span><span>Integrations</span></span></strong></p><p><strong><span><span>Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>", 
+          "image": "/Design.png", 
+          "layout": "imageRight", 
+          "id": "step-3"},
+
+          {"label": "Choose your tech-stack", 
+          "content":"We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+          "image": "/Design.png", 
+          "layout": "imageLeft", 
+          "id": "step-4"},
+
+          {
+            "label": "Go Live",
+            "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+            "layout": "imageCenter",
+            "id": "step-5"
+          }
+  
+          
+        ]
       },
       "morderTechnologyOne": {
-        "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products",
-        "href" :"contact",
-        "type": "primary",
-        "label": "Know Ecosystem",
-        "size": "medium"
+        "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products"
+      
       },
-      "accordina" : {
+      "accordian" : {
         "heading" : "How amazing is ecommJ to build your app?",
         "accordinaList" : [
             {"label" : "Limitless customization and personalization" ,
