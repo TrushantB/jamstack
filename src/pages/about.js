@@ -1,15 +1,26 @@
+import { React, useEffect, useState } from "react";
+import { get } from "@/client/api";
 import Layout from "@/components/layout";
+import Banner from "@/components/presentational/banner/Banner";
 
 const About = ({ header, footer }) => {
+
+  const [aboutData, setAboutData] = useState(null);
+
+  useEffect(() => {
+    get("aboutUs").then((response) => {
+      setAboutData(response);
+      console.log(aboutData)
+    });
+  }, []);
+  console.log(header, footer);
+
+
   return (
     <Layout header={header} footer={footer}>
       <div>
-        <div className="border-t-2 border-b-2 border-red-600">
-          <h2 className="text-center text-2xl">Banner</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 bg-white mb-32">
-            <div className="border-2  p-10">section1</div>
-            <div className="border-2  p-10">Section2</div>
-          </div>
+        <div>
+            <Banner {...aboutData.banner} />
         </div>
 
         <div className="flex flex-col py-16 bg-accent-100 ">
