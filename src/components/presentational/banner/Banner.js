@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Button from "../../form/button/Button";
 
 
-const Banner = ({ heading, image, type, size, label, layout ,href , description }) => {
+const Banner = ({ heading, image, type, size, label, layout ,href  , description}) => {
   return (
     <div className="">
       <div
