@@ -18,7 +18,14 @@
     font-display: swap;
     font-style: normal;
   }
+  @font-face {
+    font-family: "icomoon";
+    src: url(../assets/icon-fonts/icomoon.woff) format("woff");
 
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
   [class^="icon-"],
   [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */

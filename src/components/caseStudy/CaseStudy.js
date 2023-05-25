@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Link from "../Link/Link";
+import ReadMoreLink  from '../Link/Link'
 
 const MAP_ICONS = {
   circle: "/circle.png",
@@ -68,7 +68,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 ))}
             </div>
             <div className="pt-5">
-              <Link label={label} hasIcon={hasIcon} href={selectedItem?.href} />
+              <ReadMoreLink label={label} hasIcon={hasIcon} href={selectedItem?.href} />
             </div>
           </div>
 
