@@ -1,29 +1,35 @@
+import { React, useEffect, useState } from "react";
+import { get } from "@/client/api";
 import Layout from "@/components/layout";
-import React from "react";
+import Banner from "@/components/presentational/banner/Banner";
+import Accordion from "@/components/accordian/accordion";
+import BlogCard from "@/components/blogCard/BlogCard";
 
-const faq = ({ header, footer }) => {
+const Faq = ({ header, footer }) => {
+  const [faqData, setFaqData] = useState(null);
+
+  useEffect(() => {
+    get("faq").then((response) => {
+      setFaqData(response);
+    });
+  }, []);
+
+  console.log("here", faqData?.accordinData?.accordin);
+
   return (
     <Layout header={header} footer={footer}>
-      {/* Banner section */}
-      <div className="border-t-2 border-b-2 border-red-600 pb-32">
-        <h2 className="text-center text-2xl">Banner</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 bg-white ">
-          <div className="border-2  p-10">section1</div>
-          <div className="border-2  p-10">Section2</div>
-        </div>
+      <div className="px-24 py-8">
+        <Banner {...faqData?.banner} />
       </div>
 
-      {/* Faq  section */}
-      <div className=" border-t-2 border-b-2 border-red-600 pb-32 ">
-        <h2 className="text-center text-4xl">Faq section</h2>
+      <div className="pt-14 lg:px-24">
+        <Accordion {...faqData?.accordinData} />
       </div>
-
-      {/* Blog card section */}
-      <div className="pb-24 border-t-2 border-b-2 border-blue-500">
-        <h2 className="text-center text-4xl">Blog card</h2>
+      <div className="pt-36 ">
+        <BlogCard {...faqData?.blogCard} />
       </div>
     </Layout>
   );
 };
 
-export default faq;
+export default Faq;
