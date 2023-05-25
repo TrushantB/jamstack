@@ -10,6 +10,7 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
 import Accordion2 from "@/components/platformAccordian/platformAccordian";
+import Cta from "@/components/cta/cta";
 
 
 
@@ -23,7 +24,7 @@ import Accordion2 from "@/components/platformAccordian/platformAccordian";
       });
     }, []);
 
-  console.log("here" , ecommjData?.stepperData)
+  console.log("here",ecommjData?.cta)
 
     if (!ecommjData) {
       return <></>;
@@ -47,7 +48,7 @@ import Accordion2 from "@/components/platformAccordian/platformAccordian";
       </div>
 
       {/* Facts Section with bg color */}
-      <div className="px-5">
+      <div className="">
         <ModernTechnologyOne {...ecommjData?.morderTechnologyOne}/>
         
       </div>
@@ -71,16 +72,17 @@ import Accordion2 from "@/components/platformAccordian/platformAccordian";
 
       {/* cta section */}
       <div className="flex flex-col bg-accent-100 justify-center items-center">
-        <h2 className="text-4xl py-20 ">Excited to switch to ecommJ?</h2>
+       <Cta {...ecommjData?.cta}/>
+       
       </div>
 
       {/* Testimonial section */}
-      <div className="py-24 lg:px-24 px-5 border-b-2  ">
+      <div className="py-24 lg:px-24 px-5  ">
         <TestimonialCard {...ecommjData?.testimonialCard}/>
       </div>
 
       {/*  blog section */}
-      <div className=" border-b-2 pb-24 px-5 lg:px-24 ">
+      <div className=" pb-24 px-5 lg:px-24 ">
        <BlogCard {...ecommjData?.blogCard}/>
       </div>
     </Layout>

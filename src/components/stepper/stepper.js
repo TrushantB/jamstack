@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import Button from "../form/button/Button";
+import Accordion from "../accordian/accordion";
 
 
 
@@ -18,7 +19,7 @@ const Stepper = (stepper) => {
       {/* stepper code */}
       <div className="pb-28 text-center relative"><h2>{stepper?.heading}</h2></div>
       <div className="">
-        <div className="stepper flex justify-center gap-5 text-xs lg:text-base mb-7 text-center lg:text-left sticky top-0 py-3 bg-white">
+        <div className="stepper flex justify-center gap-3 lg:gap-10 text-xs  lg:text-base mb-7 text-center lg:text-left sticky top-0 py-3 bg-white">
           {stepper?.stepper.map((step, index) => (
             <a href={`#${step.id}`} key={index}>
               <div
@@ -43,7 +44,7 @@ const Stepper = (stepper) => {
         {/* stepper section */}
          {stepper?.stepper.map((step,index) => (
           <div
-            className={`flex flex-col gap-5 lg:gap-0 p-2 lg:p-5 my-2 lg:my-0 ${
+            className={`flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 lg:my-0 ${
               step.layout === "imageLeft"
                 ? "lg:flex-row-reverse"
                 : "lg:flex-row"
@@ -57,12 +58,15 @@ const Stepper = (stepper) => {
                   <h3 className="pb-5">
                     <span>{index+1}.</span> {step.label}
                   </h3>
-                  <div className="p-3" dangerouslySetInnerHTML={{ __html: step.content }}></div>
+                  
+                  <div className="" dangerouslySetInnerHTML={{ __html: step.content }}></div>
+                  {step?.faqs?.length && <Accordion accordin={step?.faqs} isInner={true}/>}
+                {step?.cta?.label && <Button {...step?.cta} />}
                 </div>
                 <div className="lg:w-1/2 lg:p-2 flex justify-center items-center">
                   <img src={step.image} alt="Step Image" />
                 </div>
-                
+               
               </>
             ) : (
               <div
