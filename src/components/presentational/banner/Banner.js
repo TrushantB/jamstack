@@ -28,6 +28,9 @@ const Banner = ({ heading, image, type, size, label, layout ,href  , description
           >
             <div>
               <h1 className="text-black-950 font-bold">{heading}</h1>
+              {description && <div>
+                <p className="pt-5 ">{description}</p>
+              </div>}
 
               {label && <div className="my-16">
                 <Link href={`${href}`} >
@@ -38,14 +41,12 @@ const Banner = ({ heading, image, type, size, label, layout ,href  , description
                 />
                 </Link>
               </div>}
-              {description && <div>
-                <p className="lg:pt-8 pt-3">{description}</p>
-              </div>}
+              
             </div>
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:items-center justify-end">
+          <div className="flex md:w-1/2 items-start lg:items-center justify-start">
             <img src={image} alt="image" />
           </div>
         )}
