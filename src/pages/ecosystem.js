@@ -4,6 +4,7 @@ import { EcoSystemBanner } from "@/components/ecoSystemBanner/ecoSystemBanner";
 import Layout from "@/components/layout";
 import Accordion from "@/components/accordian/accordion";
 import ConnectChoose from "@/components/connectChoose/ConnectChoose";
+import EcosystemAccordion from "@/components/ecosystermAccordian/ecosystemAccordian";
 
 const Ecosysterm = ({ header, footer }) => {
 
@@ -22,22 +23,22 @@ const Ecosysterm = ({ header, footer }) => {
   return (
     <Layout header={header} footer={footer}>
 
-      <div>
+      <div className="px-5 lg:px-24 py-24  " >
       {<EcoSystemBanner {...ecoData.ecoBanner} />}
       </div>
 
-      <div >
-        <div className="px-24 pb-6">
+      <div className="pb-24 px-5 lg:px-24">
+        <div className=" pb-6">
           <h2>{ecoData.accordinData?.heading}</h2>
         </div>
-      <div className="pb-24 px-24">
-        {<Accordion  {...ecoData.accordinData} />}
+      <div className="">
+        {<EcosystemAccordion  {...ecoData.accordinData} />}
       </div>
       </div>
 
       {/* Connect check choose section*/}
 
-      <div className="">
+      <div className="lg:px-24 px-5 pb-24 ">
         <ConnectChoose  {...ecoData.ConnectChoose} />
       </div>
     </Layout>
