@@ -1,7 +1,7 @@
 {
   "header": {
     "logoUrl": {
-      "url": "/Jamstack+.svg",
+      "url": "/logo.svg",
       "alt": "jamstack logo",
       "herf": "/"
     },
@@ -76,7 +76,7 @@
 
   "footer": {
     "footerLogo": {
-      "url": "/Jamstack+.svg",
+      "url": "/logo.svg",
       "alt": "jamstack logo",
       "href": "/"
     },
@@ -165,7 +165,7 @@
       "heading": "Your one stop solution in web reality.",
       "href": "/",
       "logo": {
-        "url": "/Jamstack+.svg",
+        "url": "/logo.svg",
         "alt": "Jamstack+.svg"
       },
       "lineIMage": {
@@ -862,6 +862,49 @@
       "author": "—Team Jamstack+"
     }
   },
+  "blog": {
+    "cards": [
+      {
+        "image": "/blogThree.png",
+        "altTag": "blog",
+        "heading": "Create a Serverless app with AWS Amplify and Next.js",
+        "profil": "/blogUserOne.png",
+        "name": "Ivan Krizaj",
+        "buttonLabel": "Read more",
+        "href": "/blog1"
+      },
+      {
+        "image": "/blogTwo.png",
+        "altTag": "blog",
+        "heading": "Design system for a white-label co-working platform",
+        "profil": "/blogUserTwo.png",
+        "name": "Anna Meleshina",
+        "buttonLabel": "Read more",
+        "href": "/blog2"
+      },
+      {
+        "image": "/blogThree.png",
+        "altTag": "blog",
+        "heading": "Create a Serverless app with AWS Amplify and Next.js",
+        "profil": "/blogUserOne.png",
+        "name": "Ivan Krizaj",
+        "buttonLabel": "Read more",
+        "href": "/blog3"
+      },
+      {
+        "image": "/blogOne.png",
+        "altTag": "blog",
+        "heading": "Design system for a white-label co-working platform",
+        "profil": "/blogUserTwo.png",
+        "name": "Anna Meleshina",
+        "buttonLabel": "Read more",
+        "href": "/blog4"
+      }
+    ],
+    "hasIcon": false,
+    "label": "Read More"
+  },
+  
   "webj": {
     "banner": {
       "heading": "Sustainable, secured and scalable websites",
