@@ -7,7 +7,6 @@ import Info from "@/components/presentational/info/info";
 import BlogCard from "@/components/blogCard/BlogCard";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import CaseStudy from "@/components/caseStudy/CaseStudy";
-import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
 import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
@@ -24,7 +23,6 @@ const Ecommj = ({ header, footer }) => {
     });
   }, []);
 
-  console.log("here", ecommjData?.cta)
 
   if (!ecommjData) {
     return <></>;
@@ -53,17 +51,11 @@ const Ecommj = ({ header, footer }) => {
 
       </div>
 
-
-
       {/* Facts Section with bg color */}
 
       <div className="lg:px-24 py-32">
         {<PlatformAccordian {...ecommjData?.accordian} />}
       </div>
-
-
-
-
 
       {/* case study section */}
       <div className=" pb-24 lg:px-24 px-5">
