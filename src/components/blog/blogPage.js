@@ -1,3 +1,5 @@
+import LinkButton from "../Link/Link";
+
 export default function Blogpage({ cards, hasIcon, label }) {
   return (
     <div className=''>
