@@ -91,7 +91,7 @@ export default function PricingPlan({ customPlan }) {
                         {
                             plans?.map((plan, index) => {
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <div>
                                             <h4 className={`w-64 my-4  ${current === index ? 'text-primary ' : ''}`}>
                                                 {plan.name}
