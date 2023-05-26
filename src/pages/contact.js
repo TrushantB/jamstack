@@ -1,64 +1,57 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
+import Layout from "@/components/layout";
+import Form from "@/components/form";
+import { get } from "@/client/api";
+import CaseStudy from "@/components/caseStudy/CaseStudy";
+import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
+import BlogCard from "@/components/blogCard/BlogCard";
 
+const Contact = ({header , footer}) => {
+  const [contactData, setContactData] = useState(null);
 
-const About = () => {
-    return (
-    <div className="container">
-         {/* Header Section */}
-      <div className=" h-7 mb-6 ">
-        <h2 className="text-center text-4xl">Header</h2>
-      </div>
+  useEffect(() => { 
+    get("contactUs").then((response) => {
+      setContactData(response);
+    });
+  }, []);
 
-      {/* form section */}
-        <div className="lg:pl-24 pt-24 pb-24">
-            <h2 className="lg:w-7/12">Let’s prepare your uniquely engineered digital presence together!</h2>
-            <p className="w-1/2">We are eager to connect with you in the journey of enhancing the PLUS in your business. Help us to know more about you.</p>
-
+  return (
+    <Layout header = {header} footer={footer}>
+    
+      <div className="container mx-auto">
+        <div className="lg:px-24 px-5 pt-24">
+          <h2 className="lg:w-3/4">{contactData?.heading}</h2>
+          <p className="lg:w-3/4 pt-6">{contactData?.description}</p>
+        </div>
+        <div className="lg:px-24 px-5 pt-10 pb-10">
+          <Form script={contactData?.form} />
         </div>
 
-    {/* cta section */}
-    <div className="pl-24">
-        <h3 className="lg:w-8/12 pb-5">If you prefer, send us an email for new business opportunities or job openings.</h3>
-        <a href="mailto: hello@jamstack.plus" className="text-primary heading-4"> hello@jamstack.plus</a>
-
-    </div>
-
-
-      {/* case study section */}
-      <div className=" border-t-2 border-b-2 pb-24 border-blue-600">
-        <h2 className="text-4xl text-center ">Case Study</h2>
-      </div>
-
-
-      {/* Testimonial section */}
-      <div className="pb-24 border-t-2 border-b-2 border-red-600">
-        <h2 className="text-4xl text-center ">Testimonial</h2>
-        <div className="flex flex-col lg:flex-row  ">
-          <div className="lg:w-5/12 border-2 px-10 py-2">section1</div>
-          <div className="lg:w-7/12 border-2 px-10 py-2">Section2</div>
+        <div className="lg:px-24 px-5 pt-32">
+          <h3 className=" pb-5">{contactData?.contactDetails}</h3>
+          <a
+            href="mailto: hello@jamstack.plus"
+            className="text-primary heading-5 lg:text-4xl"
+          >
+            {contactData?.contactEmail}
+          </a>
         </div>
-      </div>
 
-
-          {/* Blog card section */}
-          <div className="pb-24 border-t-2 border-b-2 border-blue-500">
-        <h2 className="text-center text-4xl">Blog card</h2>
-      </div>
-
-      {/* footer section */}
-      <div className="">
-        <h2 className="text-center text-4xl">Footer</h2>
-      </div>
-    
-    </div> 
-
-
-
-
-
-    
+        <div className="pt-24 px-5 lg:px-24">
+          <CaseStudy {...contactData?.caseStudy} />
           
-        
-    )
-}
-export default About;
+        </div>
+
+        <div className="lg:px-24 px-5 pt-28">
+          <TestimonialCard {...contactData?.testimonialCard} />
+        </div>
+
+        <div className="lg:px-20  pt-24">
+          <BlogCard {...contactData?.blogCard} />
+        </div>
+      </div>
+  
+    </Layout>
+  );
+};
+export default Contact;
