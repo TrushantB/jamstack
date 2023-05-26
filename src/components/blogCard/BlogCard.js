@@ -54,7 +54,7 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
 
 
   return (
-    <div className=" px-5 py-10  h-full w-full blog">
+    <div className="  py-10  h-full w-full blog">
       <div className="">
         <Slider {...sliderSetting} className="flex flex-grow">
           {cards?.map((card, index) => (

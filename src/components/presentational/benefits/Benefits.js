@@ -4,7 +4,7 @@ function Benefits({heading , benefitsList}) {
   return (
     <div className=" flex flex-col lg:flex-row  p-5 pb-0 lg:pt-32">
         <div className=" lg:w-4/12">
-          <h3 className="lg:w-8/12 mb-5">{heading}</h3>
+          <h2 className="lg:w-8/12 mb-5">{heading}</h2>
         </div>
 
         <div className="lg:w-8/12">

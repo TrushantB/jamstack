@@ -24,7 +24,6 @@ const Home = ({ header, footer }) => {
       setHomeData(response);
     });
   }, []);
-  console.log(header, footer);
 
   if (!homeData) {
     return <></>;
