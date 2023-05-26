@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from "react";
 import { get } from "@/client/api";
 import Layout from '@/components/layout'
-import Blogpage from "@/components/blog/Blogpage";
+import Blogpage from "@/components/blog/blogPage";
 
-function Blog() {
+function Blog({ header, footer }) {
 
   const [blogData, setBlogData] = useState([]);
 
@@ -15,8 +15,8 @@ function Blog() {
 
 
   return (
-    <Layout >
-      <div className="bg-green-700">
+    <Layout header={header} footer={footer} >
+      <div className="lg:px-24 p-5">
         {<Blogpage {...blogData} />}
       </div>
     </Layout>
