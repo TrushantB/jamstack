@@ -14,7 +14,11 @@ const Pricing = ({ header, footer }) => {
     get("pricing").then((response) => {
       setPriceData(response);
     });
-  });
+  }, []);
+
+  if (!priceData) {
+    return <></>
+  }
 
   return (
     <Layout header={header} footer={footer}>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Button from '../form/button/Button';
 export default function PricingPlan({ customPlan }) {
     const [plans, setPlans] = useState([]);
     const [current, setCurrent] = useState(0);
@@ -34,6 +35,11 @@ export default function PricingPlan({ customPlan }) {
         setPlans([...plans])
 
     }
+
+    const checkIsValid = () => {
+        return plans.every(plan => plan.selected.length !== 0);
+    }
+
     return (
         <div className='my-16'>
             <div className="text-center">
@@ -48,10 +54,9 @@ export default function PricingPlan({ customPlan }) {
                 <div className="lg:w-1/2">
                     <div className="flex my-8 md:my-16 items-center gap-5 pl-16 md:pl-28 lg:pl-16 ">
                         <div className="w-14 h-14 bg-[#FF5223] rounded-full ">
-
                         </div>
                         <h3 className=" font-medium">
-                            Select platform
+                            {customPlan?.selectPlanHeading}
                         </h3>
                     </div>
                     <div className="flex justify-center items-center gap-x-12 gap-y-8 lg:gap-x-24 lg:gap-y-16 flex-wrap">
@@ -76,7 +81,7 @@ export default function PricingPlan({ customPlan }) {
                 </div>
                 <div className="lg:w-1/2 rounded-[40px] bg-[#F1F2F6] pl-4 my-10 lg:my-0 lg:pl-24 pr-7 py-16">
                     <h3 className="font-medium text-center">
-                        Ideal Plan
+                        {customPlan?.idealPlanHeading}
                     </h3>
                     <ul className="pb-16">
                         {
@@ -124,9 +129,7 @@ export default function PricingPlan({ customPlan }) {
                         }
                     </ul>
                     <div>
-                        <button type="button" className="py-4 px-5 bg-[#F0027F] rounded-[40px] text-2xl text-white font-semibold">
-                            Schedule Meeting
-                        </button>
+                        <Button label={'Schedule Meeting'} type={checkIsValid() ? 'primary' : 'disabled'} size={'medium'} />
                     </div>
                 </div>
             </div>
