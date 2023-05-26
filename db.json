@@ -452,6 +452,150 @@
       "label": "Read More"
     }
   },
+  "pricing": {
+    "banner": {
+      "heading": "Let’s boost your business with powerful ecosystem by Jamstack+.",
+      "image": "/priceBanner.svg",
+      "imageTwo": "/mobileBannerTwo.png",
+      "alt": "image",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "buttonLabel": "Start A Project",
+      "type": "primary",
+      "label": "Start A Project",
+      "size": "medium",
+      "layout": "Image Bottom"
+    },
+    "textBanner": {
+      "sliderControls": {
+        "dots": true,
+        "infinite": true,
+        "speed": 500,
+        "autoplaySpeed": 2500,
+        "autoplay": true,
+        "arrows": true,
+        "swipe": true
+      },
+      "info": [
+        {
+          "label": "Google found that 53% of mobile users will leave a website that takes longer than three seconds to load.",
+          "icon": "circle",
+          "alt": "image"
+        },
+        {
+          "label": "Microsoft found that 45% of Ecomm users will leave a website that takes longer than three seconds to load.",
+          "icon": "pentagon",
+          "alt": "image"
+        },
+        {
+          "label": "Yahoo found that 57% of mobile Web User will leave a website that takes longer than three seconds to load.",
+          "icon": "diamond",
+          "alt": "image"
+        }
+      ]
+    },
+    "Webstatstics": {
+      "heading": "Know your webstatics",
+      "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
+      "placeholder": "Paste website URL here",
+      "buttonLabel": "Request Report",
+      "isButton": true
+    },
+    "customPlan": {
+      "heading": "Looking for ideal custom plan",
+      "description": "Be updated with the latest technology. Choose your convenient tech stack and steps to upgrade your business with us",
+      "selectPlanHeading": "Select platform",
+      "idealPlanHeading": "Ideal plan",
+      "plans": [
+        {
+          "name": "Platform",
+          "id": "platform",
+          "options": [
+            {
+              "name": "EcommJ",
+              "icon": "icon-ecomm",
+              "id": "ecommj"
+            },
+            {
+              "name": "WebJ",
+              "icon": "icon-web",
+              "id": "webj"
+            },
+            {
+              "name": "Mobj",
+              "icon": "icon-mob",
+              "id": "mobj"
+            },
+            {
+              "name": "Mobj-WebJ",
+              "icon": "icon-newspaper",
+              "id": "mobjWebj"
+            }
+          ],
+          "selected": []
+        },
+        {
+          "name": "Frontend",
+          "id": "frontend",
+          "options": [
+            {
+              "name": "NextJs",
+              "icon": "icon-web",
+              "id": "nextjs"
+            },
+            {
+              "name": "Angular",
+              "icon": "icon-group",
+              "id": "angular"
+            }
+          ],
+          "selected": []
+        },
+        {
+          "name": "Backend",
+          "id": "backend",
+          "options": [
+            {
+              "name": "Strapi",
+              "icon": "icon-newspaper",
+              "id": "strapi"
+            },
+            {
+              "name": "Sanity",
+              "icon": "icon-database",
+              "id": "sanity"
+            }
+          ],
+          "selected": []
+        },
+        {
+          "name": "Other Services",
+          "id": "other",
+          "options": [
+            {
+              "name": "GTM",
+              "icon": "icon-stack",
+              "id": "gtm"
+            },
+            {
+              "name": "Sendgrid",
+              "icon": "icon-stackoverflow",
+              "id": "sendgrid"
+            }
+          ],
+          "selected": []
+        }
+      ]
+    },
+    "ConnectChoose": {
+      "heading": "Connect, Check, Choose",
+      "description": "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
+      "buttonLabel": "Connect with Team",
+      "type": "primary",
+      "label": "Connect with Team",
+      "size": "medium"
+    }
+  },
   "contactUs": {
     "heading": "Let’s prepare your uniquely engineered digital presence together!",
     "description": "We are eager to connect with you in the journey of enhancing the PLUS in your business. Help us to know more about you.",
@@ -594,89 +738,128 @@
     },
     "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
   },
-  "faq": {
+  "aboutUs": {
     "banner": {
-      "heading": "The ecosystem for building digital presence",
+      "heading": "We Know. We Create.We Stand Unique.",
       "backGroundColor": "#ffffff",
-      "description": "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
+      "description": "We are Jamstack+, a platform that provides a complete digital presence ecosystem through our very own, crafted products: webJ, ecommJ, and mobJ.",
       "headingSize": "medium",
-      "image": "/faqBanner.png",
+      "image": "/aboutus.svg",
       "layout": "Image Left"
     },
-    "accordinData": {
-      "accordin": [
+    "morderTechnology": {
+      "heading": "Purpose behind Jamstack+",
+      "description": "Technology that simplifies digital journey for ambitious businesses!"
+    },
+    "jamStackRecipe": {
+      "heading": "At Jamstack+ we serve the perfect",
+      "label": "RECIPE"
+    },
+    "jamStackStories": {
+      "heading": "Journey of Jamstack+",
+      "descriptionArray": [
         {
-          "label": "How much time does it take to develop a JAMstack website having 10-20 pages?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+          "description": "We began the journey with the goal of giving the best, creatively made, and timeless solutions to our valued consumers through technology. On this journey, we worked with the same JAMstack basics from beginning to end of the project."
         },
         {
-          "label": "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+          "description": "We envisioned building a single platform that would provide everything for everyone online. As a result of our efforts to justify JAMstack, we created the Jamstack+: the next generation of modern technology."
         },
         {
-          "label": "What is the onboarding process to get started?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "Is it possible to upgrade old UI/UX of the website to new one with fast speed?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "I have business idea and some budget can J+ help me with that?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "Do you follow agile methodology?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "Why do my business need Jamstack+ developed site?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "I already have my ecommerce site , can you help me with mobile app?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "I am not techno savvy person , how do I choose correct technology?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "Can you build an app for iOS?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+          "description": "We developed J+heros to deliver solutions across all platforms. These are thoroughly processed, rehearsed, and well-engineered solutions for anyone wishing to advance their digital platforms using popular technology."
         }
       ]
     },
-    "blogCard": {
-      "heading": "Blogs",
-      "cards": [
+    "cards": {
+      "heading": "Our PLUS factors:",
+      "cardsArray": [
         {
-          "image": "/Termgrid.png",
-          "alt": "blog",
-          "label": "Termgrid",
-          "description": "Branding a whole new category of debt management.",
-          "buttonLabel": "Read more",
-          "href": "blog"
+          "title": "Keen on details",
+          "class": "icon-ic_Keen-on-details"
         },
         {
-          "image": "/Crisp.png",
-          "alt": "blog",
-          "label": "Crisp ",
-          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
-          "buttonLabel": "Read more",
-          "href": "blog"
+          "title": "Coherent communication",
+          "class": "icon-ic_Coherent-communication"
         },
         {
-          "image": "/Ternary.png",
-          "alt": "blog",
-          "label": "Ternary",
-          "description": "Creating a visual identity and product for FinOps cloud innovator.",
-          "buttonLabel": "Read more",
-          "href": "blog"
+          "title": "Factual truthful",
+          "class": "icon-ic_Factual-truthful"
+        },
+        {
+          "title": "Remarkable on timeless",
+          "class": "icon-ic_Remarkable-on-timeless"
+        },
+        {
+          "title": "Accountable partner",
+          "class": "icon-ic_Accountable-partner"
+        },
+        {
+          "title": "Futuristic visioner",
+          "class": "icon-ic_Easy-Maintain"
         }
-      ],
-      "hasIcon": true,
-      "label": "Read More"
+      ]
+    },
+    "jamStackProcess": {
+      "heading": "How we do it",
+      "processArray": [
+        {
+          "title": "Discuss- get started:",
+          "image": "",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Brainstorming on idea" },
+            { "label": "Strategy planning" },
+            { "label": "Requirement gathering" },
+            { "label": "Analysis and approach" }
+          ]
+        },
+        {
+          "title": "Define and Design:",
+          "image": "",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Analysis documentation" },
+            { "label": "Wireframes and mockups" },
+            { "label": "Design architecture" },
+            { "label": "Design templates with style guide" }
+          ]
+        },
+        {
+          "title": "Develop:",
+          "image": "",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Code ready to test" },
+            { "label": "Dev documentation and approach" },
+            { "label": "Frontend, backend with DB" },
+            { "label": "Unit testing" }
+          ]
+        },
+        {
+          "title": "Deploy -pre and post methods:",
+          "image": "",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Quality assurance testing" },
+            { "label": "CDN/edge networking" },
+            { "label": "Usage guidelines" },
+            { "label": "Hosting" }
+          ]
+        },
+        {
+          "title": "Accelerate",
+          "image": "",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Business analysis and dashboard" },
+            { "label": "Recommendations and insights of the business" },
+            { "label": "Recommendations and insights of the business" }
+          ]
+        }
+      ]
+    },
+    "jamstackQuote": {
+      "heading": "“Simplifying and scaling up your noteworthy digital journey”",
+      "author": "—Team Jamstack+"
     }
   },
   "blog": {
@@ -1007,6 +1190,50 @@
       ],
       "hasIcon": true,
       "label": "Read More"
+    }
+  },
+  "ecoSystem": {
+    "ecoBanner": {
+      "heading": "What is Eco System?",
+      "description": "In the digital era, it’s very important to build your web presence first. But the journey of getting good business doesn’t always stop there. We know that it’s not just the product but the brand name that rules over the market. And we sincerely want you to stand out and to be recognised as a well known brand.",
+      "title": "Ecosystem of making online brands with popular technology."
+    },
+    "accordinData": {
+      "heading": "Ecosystem",
+      "accordin": [
+        {
+          "label": "Awareness.",
+          "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
+          "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
+          "image": "/accordianImage.svg"
+        },
+        {
+          "label": "Presence.",
+          "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
+          "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
+          "image": "/accordianImage.svg"
+        },
+        {
+          "label": "Accelerate.",
+          "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
+          "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
+          "image": "/accordianImage.svg"
+        },
+        {
+          "label": "Maintenance.",
+          "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
+          "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
+          "image": "/accordianImage.svg"
+        }
+      ]
+    },
+    "ConnectChoose": {
+      "heading": "Connect, Check, Choose",
+      "description": "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
+      "buttonLabel": "Connect with Team",
+      "type": "primary",
+      "label": "Connect with Team",
+      "size": "medium"
     }
   },
   "mobj": {

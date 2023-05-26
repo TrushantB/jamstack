@@ -5,23 +5,23 @@ import Blogpage from "@/components/blog/Blogpage";
 
 function Blog() {
 
-    const [blogData, setBlogData] = useState([]);
+  const [blogData, setBlogData] = useState([]);
 
-    useEffect(() => {
-      get("blog").then((response) => {
-        setBlogData(response);
-      });
-    }, []);
-  
+  useEffect(() => {
+    get("blog").then((response) => {
+      setBlogData(response);
+    });
+  }, []);
+
 
   return (
     <Layout >
-        <div className="bg-green-700">
-            {<Blogpage {...blogData} />}
-        </div>            
+      <div className="bg-green-700">
+        {<Blogpage {...blogData} />}
+      </div>
     </Layout>
 
-    )
+  )
 }
 
 export default Blog
