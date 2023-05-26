@@ -7,6 +7,7 @@ import { JamStackRecipe } from "@/components/jamStackRecipe/jamStackRecipe";
 import { JamStackStories } from "@/components/jamStackStories/JamStackStories";
 import Card from "@/components/presentational/card/Card";
 import JamSTackAuthor from "@/components/jamStactAuthor/JamSTackAuthor";
+import { AboutArticle } from "@/components/aboutArticle/aboutArticle";
 
 const About = ({ header, footer }) => {
   const [aboutData, setAboutData] = useState(null);
@@ -16,8 +17,11 @@ const About = ({ header, footer }) => {
       setAboutData(response);
     });
   }, []);
-
+ 
   return (
+
+    
+
     <Layout header={header} footer={footer}>
       <div className="lg:px-24 px-5 py-24">
         <Banner {...aboutData?.banner} />
@@ -33,6 +37,10 @@ const About = ({ header, footer }) => {
 
       <div className="flex flex-col text-white lg:px-24 px-5   bg-secondary ">
         <JamStackStories {...aboutData?.jamStackStories} />
+      </div>
+
+      <div>
+          <AboutArticle jamStackProcess={aboutData?.jamStackProcess} />
       </div>
 
       <div className="flex flex-col lg:flex-row items-center lg:px-24 px-5  py-24">
