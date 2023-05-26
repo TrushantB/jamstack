@@ -513,22 +513,22 @@
           "options": [
             {
               "name": "ecommJ",
-              "icon": "",
+              "icon": "icon-ecomm",
               "id": "ecommj"
             },
             {
               "name": "webJ",
-              "icon": "",
+              "icon": "icon-web",
               "id": "webj"
             },
             {
               "name": "mobj+webJ",
-              "icon": "",
+              "icon": "icon-mob",
               "id": "mobj-webj"
             },
             {
               "name": "Strapi",
-              "icon": "",
+              "icon": "icon-newspaper",
               "id": "strapi"
             }
           ],
@@ -540,12 +540,12 @@
           "options": [
             {
               "name": "NextJs",
-              "icon": "",
+              "icon": "icon-web",
               "id": "nextjs"
             },
             {
               "name": "Angular",
-              "icon": "",
+              "icon": "icon-group",
               "id": "angular"
             }
           ],
@@ -557,12 +557,12 @@
           "options": [
             {
               "name": "Strapi",
-              "icon": "",
+              "icon": "icon-newspaper",
               "id": "strapi"
             },
             {
               "name": "Sanity",
-              "icon": "",
+              "icon": "icon-database",
               "id": "sanity"
             }
           ],
@@ -574,12 +574,12 @@
           "options": [
             {
               "name": "GTM",
-              "icon": "",
+              "icon": "icon-stack",
               "id": "gtm"
             },
             {
               "name": "Sendgrid",
-              "icon": "",
+              "icon": "icon-stackoverflow",
               "id": "sendgrid"
             }
           ],
