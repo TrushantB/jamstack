@@ -39,6 +39,10 @@ export default function PricingPlan({ customPlan }) {
     const checkIsValid = () => {
         return plans.every(plan => plan.selected.length !== 0);
     }
+    const scheduleMeeting = () => {
+        console.log("slected plan details", plans);
+        window.open('https://harishboke-setoo.zohobookings.in/#/customer/contactus', '_blank')
+    }
 
     return (
         <div className='my-16'>
@@ -129,7 +133,7 @@ export default function PricingPlan({ customPlan }) {
                         }
                     </ul>
                     <div>
-                        <Button label={'Schedule Meeting'} type={checkIsValid() ? 'primary' : 'disabled'} size={'medium'} />
+                        <Button label={'Schedule Meeting'} type={checkIsValid() ? 'primary' : 'disabled'} size={'medium'} onClick={() => scheduleMeeting()} />
                     </div>
                 </div>
             </div>
