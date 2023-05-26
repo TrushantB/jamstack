@@ -3,12 +3,12 @@ import Button from "../form/button/Button";
 import Link from 'next/link'
 
 
-function MordernTechnology({ heading, type, label, size , href , description}) {
+function MordernTechnology({ heading, type, label, size , href , description,isInner=false}) {
   return (
     <>
-      <div className="text-center lg:w-8/12 mx-auto pt-10">
+      <div className={`${isInner ? 'text-left lg:px-24 px-5 ': 'text-center lg:w-8/12  mx-auto    '} lg:w-12/12  pt-10`}>
         <h2 className="pb-8 ">{heading}</h2>
-        {description && <div className="heading-4 lg:pl-24 lg:w-10/12 pt-3" >
+        {description && <div className={`heading-4 ${isInner ? 'lg:w-10/12': ' '} pt-3`} >
           <p>{description}</p>
         </div>}
        { label && <div className="pb-10">

@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ cardsArray }) => {
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:w-1/2 gap-5 card">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-5 card">
         {cardsArray?.map((item , index) => (
           <div
             key={index}
