@@ -20,38 +20,29 @@ const Ecommj = ({ header, footer }) => {
     });
   }, []);
 
-  console.log("here", mobjData?.cta);
-
   if (!mobjData) {
     return <></>;
   }
   return (
     <Layout header={header} footer={footer}>
-      {/* Banner section */}
       <div className=" pb-32 pt-32 px-5 lg:px-24 ">
         <Banner {...mobjData.banner} />
       </div>
 
-      {/* Ecomm section */}
       <Info {...mobjData.info} />
 
-      {/* Ecomm process */}
       <div className="pb-24 lg:px-24 px-5 ">
         <Stepper {...mobjData?.stepperData} />
       </div>
 
-      {/* Facts Section with bg color */}
       <div className="">
         <ModernTechnologyOne {...mobjData?.morderTechnologyOne} />
       </div>
-
-      {/* Facts Section with bg color */}
 
       <div className="lg:px-24 py-32">
         {<Accordion2 {...mobjData?.accordian} />}
       </div>
 
-      {/* case study section */}
       <div className=" pb-24 lg:px-24 px-5">
         <CaseStudy {...mobjData?.caseStudy} />
       </div>
