@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 
-const Accordion2 = (accordian) => {
+const PlatformAccordian = (accordian) => {
   const [active, setActive] = useState({});
 
   const toggleAccordion = (accordianItem) => {
@@ -22,10 +22,10 @@ const Accordion2 = (accordian) => {
         <div className='lg:w-8/12 px-5'>
           {accordian?.accordinaList.map((item, index) => (
             <div className="accordion-item" key={index}>
-              <div className="accordion-title flex items-center gap-2 py-5 " onClick={() => toggleAccordion(item)}>
+              <div className="accordion-title flex items-center gap-2 py-5 cursor-pointer" onClick={() => toggleAccordion(item)}>
                 <div className="flex items-center gap-2">
                   <div>
-                    {active === item && <div className="diamond h-5 w-5  bg-primary"></div>}
+                    {<div className={`diamond h-5 w-5  bg-primary ${active !== item ? 'invisible' : ''}`}></div>}
                   </div>
 
                   <h5>{item.label}</h5>
@@ -71,7 +71,7 @@ const Accordion2 = (accordian) => {
                   )}
                 </div>
               </div>
-              {active === item && <div className="accordion-content py-5 pl-12">{item.description}</div>}
+              {active === item && <div className="accordion-content py-5 pl-7">{item.description}</div>}
             </div>
           ))}
         </div>
@@ -82,4 +82,4 @@ const Accordion2 = (accordian) => {
   );
 };
 
-export default Accordion2;
+export default PlatformAccordian;
