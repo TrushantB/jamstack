@@ -10,7 +10,7 @@ const Footer = ({
 }) => {
   return (
     <>
-      <footer className=" mt-7">
+      <footer className="mt-7">
         <div className="grid grid-cols-12">
           <div className="col-span-12 sm:col-span-6 lg:col-span-7 sm:p-5 lg:p-10 mt-10 sm:m-0">
             <div>
