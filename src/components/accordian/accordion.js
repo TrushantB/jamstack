@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 
-const Accordion = ({ accordin }) => {
+const Accordion = ({ accordin, isInner=false }) => {
   const [active, setActive] = useState({});
 
   const toggleAccordion = (accordianItem) => {
@@ -11,15 +11,15 @@ const Accordion = ({ accordin }) => {
     }
   };
   return (
-    <div className="lg:px-12 px-3">
+    <div className={isInner ? "my-6": 'lg:px-12 px-3'}>
       {accordin?.map((item, index) => (
-        <div className="accordion-item border-t-2 border-accent-200 cursor-pointer" key={index}>
+        <div className={`accordion-item border-t-2 border-accent-200 cursor-pointer ${isInner ? "": 'p-5'}`} key={index}>
           <div
-            className="accordion-title flex justify-between lg:p-5 items-center"
+            className={`accordion-title flex justify-between items-center ${isInner ? "py-5": 'lg:p-5 '}`}
             onClick={() => toggleAccordion(item)}
           >
             <div>
-              <h5>{item.label}</h5>
+              <h5 className={`${isInner ? 'text-base': ''}`}>{item.label}</h5>
             </div>
             <div>
               {active === item ? (
@@ -63,7 +63,7 @@ const Accordion = ({ accordin }) => {
             </div>
           </div>
           {active === item && (
-            <div className="accordion-content  lg:ml-5 pb-5">{item.description}</div>
+            <div className={`accordion-content  ${isInner ? "": 'lg:ml-5 '} pb-5`}>{item.description}</div>
           )}
         </div>
       ))}

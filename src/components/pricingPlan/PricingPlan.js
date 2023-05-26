@@ -55,7 +55,7 @@ export default function PricingPlan({ customPlan }) {
                     <div className="flex my-8 md:my-16 items-center gap-5 pl-16 md:pl-28 lg:pl-16 ">
                         <div className="w-14 h-14 bg-[#FF5223] rounded-full ">
                         </div>
-                        <h3 className=" font-medium">
+                        <h3 className="font-medium">
                             {customPlan?.selectPlanHeading}
                         </h3>
                     </div>
@@ -67,7 +67,7 @@ export default function PricingPlan({ customPlan }) {
                                 }
                                 return (
                                     <div key={index} draggable={true} onDragStart={() => setDragDetails({ option })} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md" >
-                                        <div>
+                                        <div className='text-center'>
                                             <span className={`max-h-28 max-w-[112px] mx-auto text-5xl text-tertiary ${option.icon}`}></span>
                                             <p className="font-medium  text-center  mt-2">
                                                 {option.name}
