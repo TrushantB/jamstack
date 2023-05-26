@@ -1,7 +1,7 @@
 {
   "header": {
     "logoUrl": {
-      "url": "/Jamstack+.svg",
+      "url": "/logo.svg",
       "alt": "jamstack logo",
       "herf": "/"
     },
@@ -76,7 +76,7 @@
 
   "footer": {
     "footerLogo": {
-      "url": "/Jamstack+.svg",
+      "url": "/logo.svg",
       "alt": "jamstack logo",
       "href": "/"
     },
@@ -165,7 +165,7 @@
       "heading": "Your one stop solution in web reality.",
       "href": "/",
       "logo": {
-        "url": "/Jamstack+.svg",
+        "url": "/logo.svg",
         "alt": "Jamstack+.svg"
       },
       "lineIMage": {

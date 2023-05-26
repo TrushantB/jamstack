@@ -3,15 +3,15 @@ import LinkButton from '../Link/Link'
 
 export default function Blogpage({ cards, hasIcon, label }) {
   return (
-    <div className='pt-32 lg:px-28 px-10'>
+    <div className=''>
     {cards && cards.map((item, index) => (
-      <div key={index} className="lg:flex items-start pb-32 ">
-        <div className="lg:w-2/5">
+      <div key={index} className="sm:flex  items-start gap-5 pb-32 ">
+        <div className="lg:w-2/5 pb-5 lg:pb-0">
           <img  className="w-96 h-auto rounded-3xl " src={item.image} />
         </div>
         <div className="w-ful ">
           <div>
-            <h4>{item.heading}</h4>
+            <h4 className=''>{item.heading}</h4>
           </div>
           <div className="pt-4">
             <div className="flex gap-4">
