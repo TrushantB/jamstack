@@ -71,7 +71,7 @@ const Accordion2 = (accordian) => {
                   )}
                 </div>
               </div>
-              {active === item && <div className="accordion-content py-5 pl-12">{item.description}</div>}
+              {active === item && <div className="accordion-content py-5 pl-7">{item.description}</div>}
             </div>
           ))}
         </div>
