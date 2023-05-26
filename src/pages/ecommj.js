@@ -1,4 +1,4 @@
-import {React , useState , useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Stepper from "@/components/stepper/stepper";
@@ -9,81 +9,81 @@ import TestimonialCard from "@/components/presentational/testimonialCard/Testimo
 import CaseStudy from "@/components/caseStudy/CaseStudy";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
-import Accordion2 from "@/components/platformAccordian/platformAccordian";
+import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
 
 
 
-  const Ecommj = ({ header, footer }) => {
-    const [ecommjData, setEcommjData] = useState(null);
-  
-    useEffect(() => {
-      get("ecomj").then((response) => {
-        setEcommjData(response);
-        
-      });
-    }, []);
+const Ecommj = ({ header, footer }) => {
+  const [ecommjData, setEcommjData] = useState(null);
 
-  console.log("here",ecommjData?.cta)
+  useEffect(() => {
+    get("ecomj").then((response) => {
+      setEcommjData(response);
 
-    if (!ecommjData) {
-      return <></>;
-    }
+    });
+  }, []);
+
+  console.log("here", ecommjData?.cta)
+
+  if (!ecommjData) {
+    return <></>;
+  }
   return (
     <Layout header={header} footer={footer}>
       {/* Banner section */}
       <div className=" pb-32 pt-32 px-5 lg:px-24 ">
-      <Banner {...ecommjData.banner}/>
+        <Banner {...ecommjData.banner} />
       </div>
 
       {/* Ecomm section */}
-     <Info {...ecommjData.info}/>
+      <Info {...ecommjData.info} />
 
       {/* Ecomm process */}
       <div className="pb-24 lg:px-24 px-5 ">
 
-        
-          <Stepper {...ecommjData?.stepperData}/>
-    
+
+        <Stepper {...ecommjData?.stepperData} />
+
       </div>
 
       {/* Facts Section with bg color */}
       <div className="">
-        <ModernTechnologyOne {...ecommjData?.morderTechnologyOne}/>
-        
+        <ModernTechnologyOne {...ecommjData?.morderTechnologyOne} />
+
       </div>
 
-     
+
 
       {/* Facts Section with bg color */}
-     
-        <div className="lg:px-24 py-32">
-        {<Accordion2 {...ecommjData?.accordian}/>}
-        </div>
-      
-         
-        
-      
+
+      <div className="lg:px-24 py-32">
+        {<PlatformAccordian {...ecommjData?.accordian} />}
+      </div>
+
+
+
+
 
       {/* case study section */}
       <div className=" pb-24 lg:px-24 px-5">
-       <CaseStudy {...ecommjData?.caseStudy}/>
+        <CaseStudy {...ecommjData?.caseStudy} />
       </div>
 
       {/* cta section */}
       <div className="flex flex-col bg-accent-100 justify-center items-center">
-       <Cta {...ecommjData?.cta}/>
-       
+        <Cta {...ecommjData?.cta} />
+
       </div>
 
       {/* Testimonial section */}
       <div className="py-24 lg:px-24 px-5  ">
-        <TestimonialCard {...ecommjData?.testimonialCard}/>
+        <TestimonialCard {...ecommjData?.testimonialCard} />
       </div>
 
       {/*  blog section */}
       <div className=" pb-24 px-5 lg:px-24 ">
-       <BlogCard {...ecommjData?.blogCard}/>
+        <BlogCard {...ecommjData?.blogCard} />
       </div>
     </Layout>
   );

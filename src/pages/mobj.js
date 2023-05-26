@@ -8,7 +8,7 @@ import BlogCard from "@/components/blogCard/BlogCard";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import CaseStudy from "@/components/caseStudy/CaseStudy";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
-import Accordion2 from "@/components/platformAccordian/platformAccordian";
+import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
 
 const Ecommj = ({ header, footer }) => {
@@ -40,7 +40,7 @@ const Ecommj = ({ header, footer }) => {
       </div>
 
       <div className="lg:px-24 py-32">
-        {<Accordion2 {...mobjData?.accordian} />}
+        {<PlatformAccordian {...mobjData?.accordian} />}
       </div>
 
       <div className=" pb-24 lg:px-24 px-5">
