@@ -6,18 +6,18 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import BlogCard from "@/components/blogCard/BlogCard";
 
-const Contact = ({header , footer}) => {
+const Contact = ({ header, footer }) => {
   const [contactData, setContactData] = useState(null);
 
-  useEffect(() => { 
+  useEffect(() => {
     get("contactUs").then((response) => {
       setContactData(response);
     });
   }, []);
 
   return (
-    <Layout header = {header} footer={footer}>
-    
+    <Layout header={header} footer={footer}>
+
       <div className="container mx-auto">
         <div className="lg:px-24 px-5 pt-24">
           <h2 className="lg:w-3/4">{contactData?.heading}</h2>
@@ -39,7 +39,7 @@ const Contact = ({header , footer}) => {
 
         <div className="pt-24 px-5 lg:px-24">
           <CaseStudy {...contactData?.caseStudy} />
-          
+
         </div>
 
         <div className="lg:px-24 px-5 pt-28">
@@ -50,7 +50,7 @@ const Contact = ({header , footer}) => {
           <BlogCard {...contactData?.blogCard} />
         </div>
       </div>
-  
+
     </Layout>
   );
 };

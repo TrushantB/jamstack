@@ -39,7 +39,7 @@ const Stepper = (stepper) => {
         {/* stepper section */}
         {stepper?.stepper.map((step, index) => (
           <div
-            className={`flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 lg:my-0 ${step.layout === "imageLeft"
+            className={`flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${step.layout === "imageLeft"
               ? "lg:flex-row-reverse"
               : "lg:flex-row"
               }`}
@@ -56,7 +56,7 @@ const Stepper = (stepper) => {
                   {step?.faqs?.length && <Accordion accordin={step?.faqs} isInner={true} />}
                   {step?.cta?.label && <Button {...step?.cta} />}
                 </div>
-                <div className="lg:w-1/2 lg:p-2 flex justify-center items-center">
+                <div className="lg:w-1/2 lg:p-2 flex justify-center items-start lg:mt-10">
                   <img src={step.image} alt="Step Image" />
                 </div>
               </>

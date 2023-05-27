@@ -20,12 +20,13 @@ const ButtonType = (type) => {
   });
 };
 
-const Button = ({ type, size, label }) => {
+const Button = ({ type, size, label, ...rest }) => {
   return (
     <div>
       <button
         className={`${ButtonType(type)} ${ButtonSize(size)}`}
         disabled={type === "disabled"}
+        {...rest}
       >
         {label}
       </button>
