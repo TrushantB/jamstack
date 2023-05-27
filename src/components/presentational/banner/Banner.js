@@ -17,7 +17,7 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
           className={classNames({
             // "md:w-1/2": true,
             "w-full": layout === "Image Bottom",
-            "flex ": layout === "Image Left",
+            "flex md:w-1/2 ": layout === "Image Left",
             "text-center": layout !== "Image Left",
           })}
         >
@@ -29,7 +29,7 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
             <div>
               <h1 className="text-black-950 font-bold">{heading}</h1>
               {description && <div>
-                <p className="pt-5 ">{description}</p>
+                <p className="pt-5 lg:w-6/12 mx-auto pb-14 ">{description}</p>
               </div>}
 
               {label && <div className="my-16">
