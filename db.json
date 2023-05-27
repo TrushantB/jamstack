@@ -836,7 +836,7 @@
         },
         {
           "title": "Deploy -pre and post methods:",
-          "image": "articleFour.svg",
+          "image": "articleFive.svg",
           "layout": "imageLeft",
           "labelArray": [
             { "label": "Quality assurance testing" },
@@ -847,7 +847,7 @@
         },
         {
           "title": "Accelerate",
-          "image": "articleFive.svg",
+          "image": "articleFour.svg",
           "layout": "imageRight",
           "labelArray": [
             { "label": "Business analysis and dashboard" },

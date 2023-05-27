@@ -39,7 +39,7 @@ const About = ({ header, footer }) => {
         <JamStackStories {...aboutData?.jamStackStories} />
       </div>
 
-      <div>
+      <div className="lg:px-24 px-5 py-32">
           <AboutArticle jamStackProcess={aboutData?.jamStackProcess} />
       </div>
 
