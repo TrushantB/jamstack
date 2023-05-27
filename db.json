@@ -568,7 +568,7 @@
   },
   "faq" : {
     "banner": {
-      "heading": "The ecosystem for building digital presence",
+      "heading": "Frequently asked question",
       "backGroundColor": "#ffffff",
       "description" : "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
       "headingSize": "medium",
