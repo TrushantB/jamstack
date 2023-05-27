@@ -27,8 +27,8 @@ const Jamstack = ({ header, footer }) => {
       <Banner {...jamstackData.banner} />
     </div>
 
-        <div className="flex flex-col lg:flex-row">
-          <div className="lg:pl-24 lg:w-5/12">
+        <div className="flex flex-col  lg:flex-row px-24">
+          <div className=" lg:w-5/12">
             <h2 className="w-10/12 pb-2">{...jamstackData.cards?.heading}</h2>
             <p className=" text-justify ">
             {...jamstackData.cards?.description}
