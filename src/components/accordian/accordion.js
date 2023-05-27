@@ -1,27 +1,28 @@
 import { React, useState } from "react";
 
 const Accordion = ({ accordin }) => {
-  const [activeItems, setActiveItems] = useState({});
+  const [active, setActive] = useState({});
 
-  const toggleAccordion = (index) => {
-    setActiveItems((prevActiveItems) => ({
-      ...prevActiveItems,
-      [index]: !prevActiveItems[index],
-    }));
+  const toggleAccordion = (accordianItem) => {
+    if (active !== accordianItem) {
+      setActive(accordianItem);
+    } else {
+      setActive({})
+    }
   };
   return (
-    <div className="px-12">
+    <div className="lg:px-12 px-3">
       {accordin?.map((item, index) => (
         <div className="accordion-item border-t-2 border-accent-200 cursor-pointer" key={index}>
           <div
-            className="accordion-title flex justify-between p-5 items-center"
-            onClick={() => toggleAccordion(index)}
+            className="accordion-title flex justify-between lg:p-5 items-center"
+            onClick={() => toggleAccordion(item)}
           >
             <div>
               <h5>{item.label}</h5>
             </div>
             <div>
-              {activeItems[index] ? (
+              {active === item ? (
                 <svg
                   style={{ transform: "rotate(180deg)" }}
                   width="24px"
@@ -61,8 +62,8 @@ const Accordion = ({ accordin }) => {
               )}
             </div>
           </div>
-          {activeItems[index] && (
-            <div className="accordion-content p-2">{item.description}</div>
+          {active === item && (
+            <div className="accordion-content  lg:ml-5 pb-5">{item.description}</div>
           )}
         </div>
       ))}
