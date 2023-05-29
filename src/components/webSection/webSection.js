@@ -12,7 +12,7 @@ function WebSection({ heading, description, lineIMage, logo }) {
           <div className="w-[1px] h-30 py-32 bg-black"></div>
           <div className="circle w-5 h-5 bg-black"></div>
         </div>
-        <h2 className="font-bold text-center lg:w-6/12">{heading}</h2>
+        <h2 className="font-bold text-center lg:w-7/12">{heading}</h2>
         <img className="mt-5 lg:w-2/12" src={logo?.url} />
       </div>
     </div>
