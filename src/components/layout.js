@@ -8,7 +8,7 @@ export default function Layout({ children, header, footer }) {
         {header && <Header {...header} />}
         {children}
       </div>
-      <div className="mt-auto">
+      <div className="mt-auto border-t">
         {footer && <Footer {...footer} />}
       </div>
     </main>
