@@ -1,13 +1,12 @@
 import { React, useState } from "react";
 import Button from "@/components/form/button/Button";
-import Link from 'next/link'
+import Link from "next/link";
 
-
-function OurClient({ heading, imageList, type, label, size , href}) {
+function OurClient({ heading, imageList, type, label, size, href }) {
   return (
     <div className="flex flex-col lg:flex-row    container lg:mx-auto  py-16  lg:py-24">
       <div className="mb-12 md:mb-0 mx-4">
-        <h2 className="lg:w-8/12 mb-7">{heading}</h2>        
+        <h2 className="lg:w-8/12 mb-7">{heading}</h2>
         <div className="mb-7 lg:0">
           <Link href={href} className="btn">
             {label}
@@ -23,11 +22,16 @@ function OurClient({ heading, imageList, type, label, size , href}) {
                   className={` flex items-center
                 ${
                   index % 3 !== 0 && (index + 1) % 3 !== 0
-                  // TODO: Find better solution, This is temporary for now
-                  ? index=== 13 ? "border-l-2 border-r-2" : 'border-l-2 border-r-2 border-b-2'
-                  : index!== 12 ? "border-b-2" :''
+                    ? // TODO: Find better solution, This is temporary for now
+                      index === 13
+                      ? "border-l-2 border-r-2"
+                      : "border-l-2 border-r-2 border-b-2"
+                    : index !== 12
+                    ? "border-b-2"
+                    : ""
                 }`}
-                  key={index}>
+                  key={index}
+                >
                   {item.image ? (
                     <img
                       className="w-full p-4"

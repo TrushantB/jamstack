@@ -2,10 +2,9 @@ import { React, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Link from 'next/link'
+import Link from "next/link";
 
-
-function BlogCard({ cards, hasIcon, label , sliderControls }) {
+function BlogCard({ cards, hasIcon, label, sliderControls }) {
   const [hoverItem, setHoverItem] = useState(null);
   const onMouseEnter = (card) => {
     setHoverItem(card);
@@ -26,8 +25,7 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          
-        }
+        },
       },
       {
         breakpoint: 768,
@@ -35,8 +33,8 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 480,
@@ -44,14 +42,12 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          autoplay:true,
-          autoplaySpeed:2000
-          
-        }
-      }
-    ]
-  }
-
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="container lg:mx-auto  py-10  h-full  blog">
@@ -76,7 +72,10 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
                 </p>
                 <div className="h-8">
                   {hoverItem === card && (
-                    <Link className="flex gap-3 items-center text-primary" href="#">
+                    <Link
+                      className="flex gap-3 items-center text-primary"
+                      href="#"
+                    >
                       {label}
                       <span className="icon-arrow-right2 text-2xl text-primary "></span>
                     </Link>
@@ -85,10 +84,8 @@ function BlogCard({ cards, hasIcon, label , sliderControls }) {
               </div>
             </div>
           ))}
-
         </Slider>
       </div>
-     
     </div>
   );
 }

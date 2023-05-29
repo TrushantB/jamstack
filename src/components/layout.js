@@ -7,10 +7,7 @@ export default function Layout({ children, header, footer }) {
       <div className="">
         {header && <Header {...header} />}
         {children}
-        <div>
-          {footer && <Footer {...footer} />}
-        </div>
-
+        <div>{footer && <Footer {...footer} />}</div>
       </div>
     </main>
   );

@@ -31,9 +31,7 @@ const Home = ({ header, footer }) => {
 
   return (
     <Layout header={header} footer={footer}>
-      <div>
-        {<Banner {...homeData.banner} />}
-      </div>
+      <div>{<Banner {...homeData.banner} />}</div>
 
       {<WebSection {...homeData.technologySolution} />}
 
@@ -84,7 +82,7 @@ const Home = ({ header, footer }) => {
         <div className="text-center">
           <h2>{homeData?.blogCard?.heading}</h2>
         </div>
-        <div >
+        <div>
           <BlogCard {...homeData.blogCard} />
         </div>
       </div>

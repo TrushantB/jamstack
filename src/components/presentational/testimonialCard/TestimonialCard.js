@@ -11,7 +11,6 @@ function TestimonialCard({ cards, heading }) {
     arrows: false,
     autoplaySpeed: 2500,
 
-   
     responsive: [
       {
         breakpoint: 2560,
@@ -20,12 +19,11 @@ function TestimonialCard({ cards, heading }) {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
-          autoplay:true,
+          autoplay: true,
           autoplaySpeed: 2500,
-         
         },
       },
-      
+
       {
         breakpoint: 1024,
         settings: {
@@ -33,9 +31,8 @@ function TestimonialCard({ cards, heading }) {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
-          autoplay:true,
+          autoplay: true,
           autoplaySpeed: 2500,
-         
         },
       },
       {
@@ -44,7 +41,7 @@ function TestimonialCard({ cards, heading }) {
           slidesToShow: 1,
           slidesToScroll: 2,
           initialSlide: 2,
-          autoplay:true,
+          autoplay: true,
         },
       },
       {
@@ -53,7 +50,7 @@ function TestimonialCard({ cards, heading }) {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          autoplay:true,
+          autoplay: true,
         },
       },
     ],
@@ -65,7 +62,7 @@ function TestimonialCard({ cards, heading }) {
         <h2 className="mb-5 lg:mb-0">{heading}</h2>
       </div>
 
-      <div className="  gap-14 flex flex-col lg:w-8/12  mx-4 lg:mx-0">
+      <div className="  gap-14 flex flex-col lg:w-8/12  mx-4 lg:mx-0 product ">
         <Slider {...sliderSetting}>
           {cards &&
             cards?.map((item, index) => (
