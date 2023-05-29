@@ -19,7 +19,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
             imageList?.map((item, index) => (
               <>
                 <li
-                  className={` flex items-center
+                  className={` flex items-center image
                 ${
                   index % 3 !== 0 && (index + 1) % 3 !== 0
                     ? // TODO: Find better solution, This is temporary for now

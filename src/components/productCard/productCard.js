@@ -16,7 +16,7 @@ function ProductCard({ cards }) {
         cards?.map((card, index) => (
           <div
             key={index}
-            className=" p-6 mx-4   rounded-2xl bg-accent-100 flex flex-col justify-between  lg:w-[400px]  hover:bg-secondary hover:text-white"
+            className=" p-6 mx-4 sm:mx-0   rounded-2xl bg-accent-100 flex flex-col justify-between  lg:w-[400px]  hover:bg-secondary hover:text-white"
             onMouseEnter={() => onMouseEnter(card)}
             onMouseLeave={() => onMouseLeave()}
           >
