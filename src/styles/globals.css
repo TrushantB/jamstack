@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url(icon.css);
+@import url(editor.css);
 
 @layer base {
   @font-face {
