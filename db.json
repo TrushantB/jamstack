@@ -15,7 +15,7 @@
     "sidebarLink": [
       {
         "label": "WHAT IS JAMSTACK",
-        "href": "know-Jamstack",
+        "href": "jamstack",
         "target": "_self"
       },
       { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
@@ -36,7 +36,7 @@
 
     "socialLink": [
       {
-        "iconName": "icon-mail",
+        "iconName": "icon-mail1",
         "href": "https://mail.google.com/",
         "alt": "image",
         "target": "_blank"
@@ -71,6 +71,123 @@
     "crossLogo": {
       "url": "X",
       "alt": "crossLogo logo"
+    }
+  },
+  "jamStack": {
+    "banner": {
+      "heading": "What is Jamstack? ",
+      "description": "Modern architecture gives the approach of building everything on the web from apps to websites based on Javascript, ApIs and Markup(JAM).",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "image": "/jamStackBanner.png",
+      "type": "primary",
+      "size": "medium",
+      "layout": "Image Bottom",
+      "href": "contact"
+    },
+    "cards": {
+      "heading": "Why we love JAM?",
+      "description": "Since JAM development is not a specific technology or language to build the web solutions, it’s instead a countless combination of tools and languages that are combined to create the final product.",
+      "cardsitems": [
+        {
+          "title": "Easy CMS",
+          "class": "icon-ic_Easy-CMS"
+        },
+        {
+          "title": "Ultra Fast",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Highly Secure",
+          "class": "icon-ic_Highly-Secure"
+        },
+
+        {
+          "title": "Tailored Tech Stack",
+          "class": "icon-ic_Tailored-Tech-Stack"
+        },
+
+        {
+          "title": "Cheap Scaling",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Easy Maintain",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "accordian": {
+      "heading": "Benefits of JAMSTACK:",
+      "accordinaList": [
+        {
+          "label": "Cost effective CDN use",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image":"/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Decoupled functionalities",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image":"/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Security",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image":"/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Progressive web apps",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image":"/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Timeless technology",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image":"/jamstackOne.svg",
+          "arrow": true
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Jamstack is the way to sustainable success and Jamstack+ is your gateway.",
+      "href": "contact",
+      "type": "primary",
+      "label": "Get Started",
+      "size": "medium"
+    },
+    "productCard": {
+      "heading": "Products we Create",
+      "cards": [
+        {
+          "label": "webJ",
+          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
+          "buttonLabel": "Know More",
+          "href": "webj"
+        },
+        {
+          "label": "ecommJ",
+          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
+          "buttonLabel": "Know More",
+          "href": "ecommj"
+        },
+        {
+          "label": "mobJ",
+          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
+          "buttonLabel": "Know More",
+          "href": "mobj"
+        }
+      ]
     }
   },
 
@@ -115,7 +232,7 @@
     ],
     "footerMenu": [
       { "label": "Ecosystem", "href": "ecosystem", "target": "_self" },
-      { "label": "Know Jamstack", "href": "know-Jamstack", "target": "_self" },
+      { "label": "Know Jamstack", "href": "jamstack", "target": "_self" },
       { "label": "Pricing", "href": "pricing", "target": "_self" },
 
       { "label": "EcommJ", "href": "ecommJ", "target": "_self" },
@@ -738,7 +855,7 @@
     },
     "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
   },
-  "aboutUs": {
+  "faq" : {
     "banner": {
       "heading": "We Know. We Create.We Stand Unique.",
       "backGroundColor": "#ffffff",
