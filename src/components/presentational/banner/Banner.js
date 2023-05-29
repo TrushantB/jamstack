@@ -18,16 +18,15 @@ const Banner = ({
     <div className="container mx-auto lg:py-24 py-16">
       <div
         className={classNames({
-          "md:flex justify-center px-5 flex-col sm:flex-row   ": true,
-          "flex-col-reverse": layout === "Image Bottom",
+          "md:flex justify-center px-5 flex-col sm:flex-row": true,
+          "flex-col-reverse sm:flex-col": layout === "Image Bottom",
         })}
       >
         <div
           className={classNames({
             // "md:w-1/2": true,
-            "w-full mt-0 md:mt-12": layout === "Image Bottom",
-            "flex lg:w-1/2 ": layout === "Image Left",
-            "text-center flex flex-col lg:flex-row lg:w-1/2": layout !== "Image Left",
+            "w-full mt-0 md:mb-12 text-center": layout === "Image Bottom",
+            "flex lg:w-1/2 ": layout === "Image Left"            
           })}
         >
           <div
