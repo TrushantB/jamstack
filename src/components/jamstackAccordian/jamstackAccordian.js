@@ -32,13 +32,11 @@ const JamstackAccordion = ({ accordin }) => {
           </div>
           {active === item && (
 
-            <div className="accordion-content flex-col lg:flex-row justify-between flex gap-4 pl-9 pb-5">
+            <div className="accordion-content flex-col lg:flex-row justify-between flex gap-4 pl-9 pr-9 sm:pr-0 pb-5">
               <div className="lg:w-1/2">
-                <div className="w-full" >{item.description}</div>
-
+                <p className="w-full mb-4" >{item.description}</p>
               </div>
-              <div className="w-1/2 flex justify-end items-center">
-
+              <div className="w-full md:w-1/2 flex justify-end items-center">
                 <img className="w-full h-full" src={`${item.image}`} />
               </div>
             </div>

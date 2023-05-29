@@ -14,7 +14,7 @@ const Stepper = (stepper) => {
   return (
     <>
       {/* stepper code */}
-      <div className="pb-28 text-center relative"><h2>{stepper?.heading}</h2></div>
+      <div className="pb-12 text-center relative"><h2>{stepper?.heading}</h2></div>
       <div className="">
         <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs  lg:text-sm mb-7 text-center lg:text-left sticky top-0 py-3 bg-white">
           {stepper?.stepper.map((step, index) => (
@@ -39,7 +39,7 @@ const Stepper = (stepper) => {
         {/* stepper section */}
         {stepper?.stepper.map((step, index) => (
           <div
-            className={`flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${step.layout === "imageLeft"
+            className={`flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-0 lg:pt-6 pb-14 lg:my-0 ${step.layout === "imageLeft"
               ? "lg:flex-row-reverse"
               : "lg:flex-row"
               }`}
@@ -62,15 +62,15 @@ const Stepper = (stepper) => {
               </>
             ) : (
               <div
-                className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-5 my-2 lg:my-0 "
+                className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 "
                 id={step.id}
               >
                 <div className="lg:w-1/2 mx-auto">
-                  <div className="icon-ic_launch text-7xl text-center text-tertiary"></div>
+                  <div className="icon-ic_launch text-7xl text-center text-tertiary pb-6"></div>
                   <h3 className="pb-4 text-center">
                     <span>{index + 1}.</span> {step.label}
                   </h3>
-                  <p className="text-center">{step.content}</p>
+                  <p className="text-center pb-6">{step.content}</p>
                   <div className="flex justify-center items-center mt-4">
                     <Button label="Start Project Now" size="medium" />
                   </div>

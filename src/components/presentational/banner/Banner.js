@@ -25,7 +25,7 @@ const Banner = ({
         <div
           className={classNames({
             // "md:w-1/2": true,
-            "w-full": layout === "Image Bottom",
+            "w-full mt-0 md:mt-12": layout === "Image Bottom",
             "flex lg:w-1/2 ": layout === "Image Left",
             "text-center": layout !== "Image Left",
           })}
@@ -39,12 +39,12 @@ const Banner = ({
               <h1 className="text-black-950">{heading}</h1>
               {description && (
                 <div>
-                  <p className="pt-5 ">{description}</p>
+                  <p className="pt-5 max-w-[70ch] mx-auto">{description}</p>
                 </div>
               )}
 
               {label && (
-                <div className="my-16">
+                <div className="mt-12">
                   <Link href={`${href}`} className="btn">
                     {label}
                   </Link>
@@ -60,7 +60,7 @@ const Banner = ({
         )}
         {layout === "Image Bottom" && (
           <div className="flex items-center justify-center">
-            <img className="w-10/12" src={image} alt="image" srcSet="" />
+            <img className="w-10/12 mt-12 sm:mt-0" src={image} alt="image" srcSet="" />
           </div>
         )}
       </div>
