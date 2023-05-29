@@ -2,7 +2,7 @@ import React from 'react'
 
 function EdgeNetwork({heading  ,image }) {
   return (
-    <div className=" pb-24 container mx-auto">
+    <div className=" lg:pb-24 pb-16 container mx-auto">
         <h2 className="text-4xl text-center  pb-10 ">
           {heading}
         </h2>

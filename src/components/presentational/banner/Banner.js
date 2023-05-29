@@ -6,10 +6,10 @@ import Button from "../../form/button/Button";
 
 const Banner = ({ heading, image, type, size, label, layout, href, description }) => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto lg:py-24 py-16">
       <div
         className={classNames({
-          "md:flex justify-center px-5 py-24": true,
+          "md:flex justify-center px-5  ": true,
           "flex-col-reverse": layout === "Image Bottom",
         })}
       >

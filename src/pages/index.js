@@ -72,7 +72,7 @@ const Home = ({ header, footer }) => {
         <CaseStudy {...homeData.caseStudy} />
       </div>
 
-      <div className="pt-6 pb-4 my-24 bg-accent-100 ">
+      <div className="pt-6 pb-4 my-16 lg:my-24 bg-accent-100 ">
         {<MordernTechnology {...homeData.morderTechnology} />}
       </div>
 
@@ -80,11 +80,11 @@ const Home = ({ header, footer }) => {
         <TestimonialCard {...homeData.testimonialCard} />
       </div>
 
-      <div className="pt-24  ">
+      <div className="lg:pt-24 pt-14 ">
         <div className="text-center">
           <h2>{homeData?.blogCard?.heading}</h2>
         </div>
-        <div>
+        <div >
           <BlogCard {...homeData.blogCard} />
         </div>
       </div>
