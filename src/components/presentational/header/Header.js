@@ -25,6 +25,7 @@ const Header = ({
       document.body.style.padding = '0 10px 0 0';
     } else {
       document.body.style.overflow = 'visible';
+      document.body.style.padding = '0 0 0 0';
     }
   };
   useEffect(() => {
