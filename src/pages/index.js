@@ -56,7 +56,7 @@ const Home = ({ header, footer }) => {
       </div>
 
       <div className=" ">
-        <h2 className="text-center ">{homeData?.productCard?.heading}</h2>
+        <h2 className="text-center pb-10">{homeData?.productCard?.heading}</h2>
         <ProductCard {...homeData.productCard} />
       </div>
 

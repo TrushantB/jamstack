@@ -6,7 +6,7 @@ function TextBannerList({ heading, title, listItems }) {
       <div className="">
         <div className="grid grid-col-1 lg:grid-cols-2">
           <div className="">
-            <h2 className="p-5 text-white lg:p-11 lg:pl-24 sm:p-10">{heading}</h2>
+            <h2 className="p-5 text-white lg:p-11 lg:pl-16 sm:p-10">{heading}</h2>
           </div>
           <div className="bg-accent-100 p-5 sm:p-10  lg:p-11 lg:pl-20 rounded-t-3xl lg:rounded-r-none lg:rounded-l-3xl">
             <h4 className="mb-14 font-normal">{title}</h4>
