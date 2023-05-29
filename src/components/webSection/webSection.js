@@ -10,8 +10,8 @@ function WebSection({ heading, description, lineIMage, logo }) {
           {description}
         </p>
         <img className="py-8" src={lineIMage?.url}></img>
-        <h4 className="lg:w-4/12 font-bold text-center">{heading}</h4>
-        <img className="mt-5" src={logo?.url} />
+        <h2 className="lg:w-6/12 font-bold text-center">{heading}</h2>
+        <img className="mt-5" src={logo?.url} alt="Jamstack+ - One stop solution in web reality." />
       </div>
     </div>
   );

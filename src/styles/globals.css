@@ -6,23 +6,51 @@
 @layer base {
   @font-face {
     font-family: "Neo Sans Pro";
-    src: url(../assets/fonts/Neo-sans-Pro.woff) format(woff);
+    src: url('../assets/fonts/Neo-Sans/Neo-Sans-Pro.woff') format(woff);
     font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Neo Sans Pro";
+    src: url('../assets/fonts/Neo-Sans/Neo-Sans-Pro-Medium.OTF') format(woff);
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Neo Sans Pro";
+    src: url('../assets/fonts/Neo-Sans/Neo-Sans-Pro-Bold.OTF') format(woff);
+    font-weight: 700;
     font-display: swap;
     font-style: normal;
   }
 
   @font-face {
     font-family: "Inter";
-    src: url(../assets/fonts/Inter.woff2) format(woff);
+    src: url('../assets/fonts/Inter/Inter.woff2') format(woff);
     font-weight: 400;
     font-display: swap;
     font-style: normal;
   }
   @font-face {
-    font-family: "icomoon";
-    src: url(../assets/icon-fonts/icomoon.woff) format("woff");
+    font-family: "Inter";
+    src: url('../assets/fonts/Inter/Inter-Medium.ttf') format(woff);
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url('../assets/fonts/Inter/Inter-Bold.ttf') format(woff);
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+  }
 
+  @font-face {
+    font-family: "icomoon";
+    src: url('../assets/icon-fonts/icomoon.woff') format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -35,11 +63,7 @@
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    line-height: 1;    
   }
 
   html,
@@ -48,6 +72,9 @@
     line-height: 1.5rem;
     font-family: "Inter";
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1c1c1c;
   }
 
   h1,
@@ -84,18 +111,23 @@
     line-height: 2.4rem;
     font-family: "Neo Sans Pro";
   }
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+  }
 
   button {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
-
+  .btn{
+    @apply bg-pink-500 text-white rounded-full text-xl border-solid px-4 py-3 font-bold;
+  }
 
 
 }
 
 .blog .slick-track{
- display: flex !important;
+  display: flex !important;
   gap: 30px !important;
   flex-grow: 1;
 }

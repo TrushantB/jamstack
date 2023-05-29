@@ -23,22 +23,18 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
         >
           <div
             className={classNames({
-              "flex items-center": layout === "Image Left",
+              "flex items-center md:pr-16": layout === "Image Left",
             })}
           >
             <div>
-              <h1 className="text-black-950 font-bold">{heading}</h1>
+              <h1 className="text-black-950">{heading}</h1>
               {description && <div>
                 <p className="pt-5 ">{description}</p>
               </div>}
 
               {label && <div className="my-16">
-                <Link href={`${href}`} >
-                  <Button
-                    label={label}
-                    type={type}
-                    size={size}
-                  />
+                <Link href={`${href}`} className="btn">
+                  {label}                  
                 </Link>
               </div>}
 
@@ -46,7 +42,7 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:items-center justify-end mt-10 lg:mt-0">
+          <div className="flex md:w-1/2 items-start lg:items-start justify-end mt-10 lg:mt-0">
             <img src={image} alt="image" />
           </div>
         )}
