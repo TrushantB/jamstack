@@ -33,7 +33,7 @@ const Header = ({
                   src={logoUrl?.url}
                   alt={logoUrl?.alt}
                   width={160}
-                  height={40}
+                  height={150}
                 />
               </Link>
               <ul
