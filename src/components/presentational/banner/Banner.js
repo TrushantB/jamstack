@@ -37,20 +37,16 @@ const Banner = ({
           >
             <div>
               <h1 className="text-black-950">{heading}</h1>
-              {description && <div>
-                <p className="pt-5 ">{description}</p>
-              </div>}
-
-              {label && <div className="my-16">
-                <Link href={`${href}`} className="btn">
-                  {label}                  
-                </Link>
-              </div>}
+              {description && (
+                <div>
+                  <p className="pt-5 ">{description}</p>
+                </div>
+              )}
 
               {label && (
                 <div className="my-16">
-                  <Link href={`${href}`}>
-                    <Button label={label} type={type} size={size} />
+                  <Link href={`${href}`} className="btn">
+                    {label}
                   </Link>
                 </div>
               )}
