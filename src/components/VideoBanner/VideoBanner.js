@@ -3,8 +3,8 @@ import React from "react";
 function VideoBanner({ heading, video }) {
   return (
     <>
-      <div>
-        <div className="text-center mb-12">
+      <div className="container py-24 mx-auto">
+        <div className="mb-12 text-center">
           <h2>{heading}</h2>
         </div>
         <div>
