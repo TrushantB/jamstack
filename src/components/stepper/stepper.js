@@ -56,7 +56,7 @@ const Stepper = (stepper) => {
                   {step?.faqs?.length && <Accordion accordin={step?.faqs} isInner={true} />}
                   {step?.cta?.label && <Button {...step?.cta} />}
                 </div>
-                <div className="lg:w-1/2 lg:p-2 flex justify-center items-start lg:mt-10">
+                <div className="lg:w-1/2 lg:p-2 flex justify-center items-start lg:mt-36">
                   <img src={step.image} alt="Step Image" />
                 </div>
               </>
