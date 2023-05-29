@@ -3,7 +3,7 @@
     "logoUrl": {
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo",
-      "herf" : "/"
+      "herf": "/"
     },
     "headerMenu": [
       { "label": "PRICING", "href": "pricing", "target": "_self" },
@@ -13,7 +13,11 @@
       { "label": "CONTACT US", "href": "contact", "target": "_self" }
     ],
     "sidebarLink": [
-      { "label": "WHAT IS JAMSTACK", "href": "know-Jamstack", "target": "_self" },
+      {
+        "label": "WHAT IS JAMSTACK",
+        "href": "know-Jamstack",
+        "target": "_self"
+      },
       { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
       { "label": "ABOUT US", "href": "about", "target": "_self" },
       { "label": "CASE STUDIES", "href": "case-study", "target": "_self" },
@@ -31,11 +35,36 @@
     "country": "India",
 
     "socialLink": [
-      { "iconName": "icon-mail", "href": "https://mail.google.com/", "alt": "image" , "target": "_blank" },
-      { "iconName": "icon-instagam", "href": "https://www.instagram.com/", "alt": "image" ,"target": "_blank" },
-      { "iconName": "icon-whatsapp1", "href": "https://www.whatsapp.com/", "alt": "image" , "target": "_blank"},
-      { "iconName": "icon-facebook2", "href": "https://www.facebook.com/", "alt": "image", "target": "_blank" },
-      { "iconName": "icon-twitter", "href": "https://twitter.com/", "alt": "image", "target": "_blank" }
+      {
+        "iconName": "icon-mail",
+        "href": "https://mail.google.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-instagam",
+        "href": "https://www.instagram.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-whatsapp1",
+        "href": "https://www.whatsapp.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-facebook2",
+        "href": "https://www.facebook.com/",
+        "alt": "image",
+        "target": "_blank"
+      },
+      {
+        "iconName": "icon-twitter",
+        "href": "https://twitter.com/",
+        "alt": "image",
+        "target": "_blank"
+      }
     ],
     "hamburgerLogo": "/Hamburger.png",
     "hamburgerLogoalt": "Hamburger logo",
@@ -49,7 +78,7 @@
     "footerLogo": {
       "url": "/Jamstack+.svg",
       "alt": "jamstack logo",
-      "href" : "/"
+      "href": "/"
     },
     "copyRight": "Jamstack 2023 ",
     "socialIcons": [
@@ -129,12 +158,12 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href" : "contact"
+      "href": "contact"
     },
     "technologySolution": {
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
       "heading": "Your one stop solution in web reality.",
-      "href" : "/",
+      "href": "/",
       "logo": {
         "url": "/Jamstack+.svg",
         "alt": "Jamstack+.svg"
@@ -359,11 +388,11 @@
       "hasIcon": true,
       "label": "Read More",
       "icon": "diamond",
-      "href" : "contact"
+      "href": "contact"
     },
     "morderTechnology": {
       "heading": "Excited to switch on modern technology?",
-      "href" :"contact",
+      "href": "contact",
       "type": "primary",
       "label": "Start A Project",
       "size": "medium"
@@ -421,7 +450,6 @@
       ],
       "hasIcon": true,
       "label": "Read More"
-     
     }
   },
   "contactUs": {
@@ -566,37 +594,57 @@
     },
     "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
   },
-  "faq" : {
+  "faq": {
     "banner": {
       "heading": "The ecosystem for building digital presence",
       "backGroundColor": "#ffffff",
-      "description" : "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
+      "description": "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
       "headingSize": "medium",
       "image": "/faqBanner.png",
       "layout": "Image Left"
     },
-    "accordinData" : {
-      "accordin" : [
-        {"label" : "How much time does it take to develop a JAMstack website having 10-20 pages?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "What is the onboarding process to get started?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Is it possible to upgrade old UI/UX of the website to new one with fast speed?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I have business idea and some budget can J+ help me with that?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Do you follow agile methodology?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Why do my business need Jamstack+ developed site?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I already have my ecommerce site , can you help me with mobile app?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I am not techno savvy person , how do I choose correct technology?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Can you build an app for iOS?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"}
+    "accordinData": {
+      "accordin": [
+        {
+          "label": "How much time does it take to develop a JAMstack website having 10-20 pages?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "What is the onboarding process to get started?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Is it possible to upgrade old UI/UX of the website to new one with fast speed?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I have business idea and some budget can J+ help me with that?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Do you follow agile methodology?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Why do my business need Jamstack+ developed site?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I already have my ecommerce site , can you help me with mobile app?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I am not techno savvy person , how do I choose correct technology?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Can you build an app for iOS?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        }
       ]
     },
     "blogCard": {
@@ -629,7 +677,6 @@
       ],
       "hasIcon": true,
       "label": "Read More"
-     
     }
   },
   "webj": {
@@ -640,7 +687,7 @@
     "id": 1,
     "title": "Application development"
   },
-  "ecomj" : {
+  "ecomj": {
     "banner": {
         "heading": "Start your journey of modern online business.",
         "description" : " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
@@ -715,243 +762,248 @@
           "image": "/Design.png", 
           "layout": "imageRight", 
           "id": "step-3",
-          "faqs":[
-            {"label" : "Limitless customization and personalization" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
+          "faqs": [
+            {
+              "label": "Limitless customization and personalization",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
             }
-            
           ]
         },
-          
 
-          {"label": "Design, Development and Testing:", 
-          "content":"We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
-          "image": "/Design.png", 
-          "layout": "imageLeft", 
+        {
+          "label": "Design, Development and Testing:",
+          "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+          "image": "/Design.png",
+          "layout": "imageLeft",
           "id": "step-4",
-          "faqs":[
-            {"label" : "Limitless customization and personalization" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
+          "faqs": [
+            {
+              "label": "Limitless customization and personalization",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
             }
-            
           ]
         },
-          
 
-          {
-            "label": "Go Live",
-            "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
-            "layout": "imageCenter",
-            "id": "step-5"
-          }
-  
-          
-        ]
-      },
-      "morderTechnologyOne": {
-        "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products"
-      
-      },
-      "accordian" : {
-        "heading" : "How amazing is ecommJ to build your app?",
-        "accordinaList" : [
-            {"label" : "Limitless customization and personalization" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
+        {
+          "label": "Go Live",
+          "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+          "layout": "imageCenter",
+          "id": "step-5"
+        }
+      ]
+    },
+    "morderTechnologyOne": {
+      "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products",
+      "label": "Know Ecosystem",
+      "size": "medium",
+      "href": "ecosystem"
+    },
+    "accordian": {
+      "heading": "How amazing is ecommJ to build your app?",
+      "accordinaList": [
+        {
+          "label": "Limitless customization and personalization",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "Improved time to value",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "convenient technology",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "Beta engine for SEO",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "Manageable CMS",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "PWA benefits",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "Acceleration",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "Get detailed business analysis",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        },
+        {
+          "label": "Role Based Admin Control",
+          "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+          "icon": "diamond",
+          "arrow": true
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Excited to switch to ecommJ?",
+      "href": "contact",
+      "type": "primary",
+      "label": "Get Started",
+      "size": "medium"
+    },
+
+    "caseStudy": {
+      "heading": "Case Study",
+      "description": "We are experts in what we do. Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely. We strictly follow a systematic agile process of working that yields in excellent, robust and world class projects.",
+      "itemList": [
+        {
+          "label": "Wise Experts",
+          "href": "wise-experts",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
             },
-            {"label" : "Improved time to value" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
+            {
+              "percentage": "80%",
+              "description": "Decrease in Time from Idea to Publishing"
             },
-            {"label" : "convenient technology" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
-            },
-            {"label" : "Beta engine for SEO" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
-            },
-            {"label" : "Manageable CMS" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
-            },
-            {"label" : "PWA benefits" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
-            },
-            {"label" : "Acceleration" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
-            },
-            {"label" : "Get detailed business analysis" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
-            },
-            {"label" : "Role Based Admin Control" ,
-            "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-            "icon" :  "diamond"  ,
-            "arrow" : true
+            {
+              "percentage": "150%",
+              "description": "Indexed Pages"
             }
-        ]
-
-        
-      },
-      "cta": {
-        "heading": "Excited to switch to ecommJ?",
-        "href" :"contact",
-        "type": "primary",
-        "label": "Get Started",
-        "size": "medium"
-      },
-
-      "caseStudy": {
-        "heading": "Case Study",
-        "description": "We are experts in what we do. Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely. We strictly follow a systematic agile process of working that yields in excellent, robust and world class projects.",
-        "itemList": [
-          {
-            "label": "Wise Experts",
-            "href": "wise-experts",
-            "percentageList": [
-              {
-                "percentage": "120%",
-                "description": "Increase in Content Engagement"
-              },
-              {
-                "percentage": "80%",
-                "description": "Decrease in Time from Idea to Publishing"
-              },
-              {
-                "percentage": "150%",
-                "description": "Indexed Pages"
-              }
-            ]
-          },
-          {
-            "label": "Logic Tales",
-            "href": "logic-tales",
-            "percentageList": [
-              {
-                "percentage": "120%",
-                "description": "Increase in Content Engagement"
-              },
-              {
-                "percentage": "30%",
-                "description": "Decrease in Time from Idea to Publishing"
-              },
-              {
-                "percentage": "190%",
-                "description": "Indexed Pages"
-              }
-            ]
-          },
-          {
-            "label": "Intercollab",
-            "href": "Intercollab",
-            "percentageList": [
-              {
-                "percentage": "100%",
-                "description": "Increase in Content Engagement"
-              },
-              {
-                "percentage": "10%",
-                "description": "Decrease in Time from Idea to Publishing"
-              },
-              {
-                "percentage": "10%",
-                "description": "Indexed Pages"
-              }
-            ]
-          },
-          {
-            "label": "Skype",
-            "href": "Skype",
-            "percentageList": [
-              {
-                "percentage": "110%",
-                "description": "Increase in Content Engagement"
-              },
-              {
-                "percentage": "60%",
-                "description": "Decrease in Time from Idea to Publishing"
-              },
-              {
-                "percentage": "90%",
-                "description": "Indexed Pages"
-              }
-            ]
-          }
-        ],
-        "hasIcon": true,
-        "label": "Read More",
-        "icon": "diamond",
-        "href" : "contact"
-      },
-      "testimonialCard": {
-        "heading": "We love our customers",
-        "cards": [
-          {
-            "name": "Kaylynn Kenter",
-            "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
-            "image": "/testimonalImageOne.svg",
-            "alt": "image"
-          },
-          {
-            "name": "Kianna Franci",
-            "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
-            "image": "/testimonalImageTwo.svg",
-            "alt": "image"
-          },
-          {
-            "name": "Ryan Lipshutz",
-            "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
-            "image": "/testimonalIMageThree.svg",
-            "alt": "image"
-          }
-        ]
-      },
-      "blogCard": {
-        "heading": "Blogs",
-        "cards": [
-          {
-            "image": "/Termgrid.png",
-            "alt": "blog",
-            "label": "Termgrid",
-            "description": "Branding a whole new category of debt management.",
-            "buttonLabel": "Read more",
-            "href": "blog"
-          },
-          {
-            "image": "/Crisp.png",
-            "alt": "blog",
-            "label": "Crisp ",
-            "description": "Designing a new mobile experience for the all-in-one messaging platform.",
-            "buttonLabel": "Read more",
-            "href": "blog"
-          },
-          {
-            "image": "/Ternary.png",
-            "alt": "blog",
-            "label": "Ternary",
-            "description": "Creating a visual identity and product for FinOps cloud innovator.",
-            "buttonLabel": "Read more",
-            "href": "blog"
-          }
-        ],
-        "hasIcon": true,
-        "label": "Read More"
-       
-      }
-}
+          ]
+        },
+        {
+          "label": "Logic Tales",
+          "href": "logic-tales",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "30%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "190%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Intercollab",
+          "href": "Intercollab",
+          "percentageList": [
+            {
+              "percentage": "100%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "10%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "10%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Skype",
+          "href": "Skype",
+          "percentageList": [
+            {
+              "percentage": "110%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "60%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "90%",
+              "description": "Indexed Pages"
+            }
+          ]
+        }
+      ],
+      "hasIcon": true,
+      "label": "Read More",
+      "icon": "diamond",
+      "href": "contact"
+    },
+    "testimonialCard": {
+      "heading": "We love our customers",
+      "cards": [
+        {
+          "name": "Kaylynn Kenter",
+          "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
+          "image": "/testimonalImageOne.svg",
+          "alt": "image"
+        },
+        {
+          "name": "Kianna Franci",
+          "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
+          "image": "/testimonalImageTwo.svg",
+          "alt": "image"
+        },
+        {
+          "name": "Ryan Lipshutz",
+          "description": "Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely.",
+          "image": "/testimonalIMageThree.svg",
+          "alt": "image"
+        }
+      ]
+    },
+    "blogCard": {
+      "heading": "Blogs",
+      "cards": [
+        {
+          "image": "/Termgrid.png",
+          "alt": "blog",
+          "label": "Termgrid",
+          "description": "Branding a whole new category of debt management.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        },
+        {
+          "image": "/Crisp.png",
+          "alt": "blog",
+          "label": "Crisp ",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        },
+        {
+          "image": "/Ternary.png",
+          "alt": "blog",
+          "label": "Ternary",
+          "description": "Creating a visual identity and product for FinOps cloud innovator.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        }
+      ],
+      "hasIcon": true,
+      "label": "Read More"
+    }
+  }
 }
