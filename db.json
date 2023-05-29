@@ -297,6 +297,7 @@
         { "image": "/clearbit.png", "alt": "image" },
         { "image": "/crunchbase.png", "alt": "image" },
         { "image": "/xero.png", "alt": "image" },
+        { "image": "/oppo.png", "alt": "image" },
         { "image": "/contact.png", "alt": "image" }
       ],
       "type": "primary",
@@ -904,7 +905,7 @@
     "hasIcon": false,
     "label": "Read More"
   },
-  
+
   "webj": {
     "banner": {
       "heading": "Sustainable, secured and scalable websites",
