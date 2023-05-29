@@ -25,7 +25,7 @@ function InputFields(props) {
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 ">
         <input
           placeholder={placeholder}
-          className="border rounded-full py-2 px-2 lg:pl-4 lg:w-1/2 "
+          className="border rounded-full py-2 px-2 lg:pl-4 lg:w-1/2"
           onBlur={handleBlur}
           onChange={handleChange}
         ></input>
