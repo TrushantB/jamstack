@@ -17,11 +17,8 @@ const About = ({ header, footer }) => {
       setAboutData(response);
     });
   }, []);
- 
+
   return (
-
-    
-
     <Layout header={header} footer={footer}>
       <div className="lg:px-24 px-5 py-24">
         <Banner {...aboutData?.banner} />
@@ -38,20 +35,17 @@ const About = ({ header, footer }) => {
       <div className="flex flex-col text-white lg:px-24 px-5   bg-secondary ">
         <JamStackStories {...aboutData?.jamStackStories} />
       </div>
-
-      <div className="lg:px-24 px-5 py-32">
-          <AboutArticle jamStackProcess={aboutData?.jamStackProcess} />
-      </div>
-
       <div className="flex flex-col lg:flex-row items-center lg:px-24 px-5  py-24">
         <div className="lg:w-3/12 pb-6  ">
-          <h2>
-               {aboutData && aboutData.cards && aboutData.cards.heading}
-          </h2>
+          <h2>{aboutData && aboutData.cards && aboutData.cards.heading}</h2>
         </div>
         <div className="lg:w-8/12">
           <Card {...aboutData?.cards} />
         </div>
+      </div>
+
+      <div className="lg:px-24 px-5 py-32">
+        <AboutArticle jamStackProcess={aboutData?.jamStackProcess} />
       </div>
 
       <div className="flex flex-col text-white lg:px-24 px-5  bg-secondary ">
