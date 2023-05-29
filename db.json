@@ -920,7 +920,7 @@
       "processArray": [
         {
           "title": "Discuss- get started:",
-          "image": "",
+          "image": "articleOne.png",
           "layout": "imageRight",
           "labelArray": [
             { "label": "Brainstorming on idea" },
@@ -931,7 +931,7 @@
         },
         {
           "title": "Define and Design:",
-          "image": "",
+          "image": "articleTwo.png",
           "layout": "imageLeft",
           "labelArray": [
             { "label": "Analysis documentation" },
@@ -942,7 +942,7 @@
         },
         {
           "title": "Develop:",
-          "image": "",
+          "image": "articleThree.png",
           "layout": "imageRight",
           "labelArray": [
             { "label": "Code ready to test" },
@@ -953,7 +953,7 @@
         },
         {
           "title": "Deploy -pre and post methods:",
-          "image": "",
+          "image": "articleFive.svg",
           "layout": "imageLeft",
           "labelArray": [
             { "label": "Quality assurance testing" },
@@ -964,7 +964,7 @@
         },
         {
           "title": "Accelerate",
-          "image": "",
+          "image": "articleFour.svg",
           "layout": "imageRight",
           "labelArray": [
             { "label": "Business analysis and dashboard" },

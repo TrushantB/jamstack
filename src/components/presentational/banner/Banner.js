@@ -15,39 +15,37 @@ const Banner = ({
   isInner = false,
 }) => {
   return (
-    <div className="">
+    <div className="container mx-auto">
       <div
         className={classNames({
-          "md:flex justify-center": true,
-          "flex-col": layout === "Image Bottom",
+          "md:flex justify-center px-5 py-24": true,
+          "flex-col-reverse": layout === "Image Bottom",
         })}
       >
         <div
           className={classNames({
             // "md:w-1/2": true,
             "w-full": layout === "Image Bottom",
-            "flex md:w-1/2 ": layout === "Image Left",
+            "flex lg:w-1/2 ": layout === "Image Left",
             "text-center": layout !== "Image Left",
           })}
         >
           <div
             className={classNames({
-              "flex items-center": layout === "Image Left",
+              "flex items-center md:pr-16": layout === "Image Left",
             })}
           >
             <div>
-              <h1 className="text-black-950 font-bold">{heading}</h1>
-              {description && (
-                <div>
-                  <p
-                    className={`pt-5 ${
-                      isInner ? "lg:w-6/12 mx-auto" : ""
-                    } pb-14 `}
-                  >
-                    {description}
-                  </p>
-                </div>
-              )}
+              <h1 className="text-black-950">{heading}</h1>
+              {description && <div>
+                <p className="pt-5 ">{description}</p>
+              </div>}
+
+              {label && <div className="my-16">
+                <Link href={`${href}`} className="btn">
+                  {label}                  
+                </Link>
+              </div>}
 
               {label && (
                 <div className="my-16">
@@ -60,7 +58,7 @@ const Banner = ({
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:start justify-end mt-10 lg:mt-0">
+          <div className="flex md:w-1/2 items-start lg:items-start justify-end mt-10 lg:mt-0">
             <img src={image} alt="image" />
           </div>
         )}
