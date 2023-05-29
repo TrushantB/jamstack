@@ -6,11 +6,11 @@ import Button from "../../form/button/Button";
 
 const Banner = ({ heading, image, type, size, label, layout, href, description }) => {
   return (
-    <div className="">
+    <div className="container mx-auto">
       <div
         className={classNames({
-          "md:flex justify-center": true,
-          "flex-col": layout === "Image Bottom",
+          "md:flex justify-center px-5 py-24": true,
+          "flex-col-reverse": layout === "Image Bottom",
         })}
       >
         <div
@@ -27,7 +27,7 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
             })}
           >
             <div>
-              <h1 className="text-black-950 font-bold">{heading}</h1>
+              <h1 className="font-bold text-black-950">{heading}</h1>
               {description && <div>
                 <p className="pt-5 ">{description}</p>
               </div>}
@@ -46,7 +46,7 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:items-center justify-end mt-10 lg:mt-0">
+          <div className="flex items-start justify-end md:w-1/2 lg:items-center">
             <img src={image} alt="image" />
           </div>
         )}
