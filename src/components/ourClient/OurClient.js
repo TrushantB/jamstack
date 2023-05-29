@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function OurClient({ heading, imageList, type, label, size, href }) {
   return (
-    <div className="flex flex-col lg:flex-row    container lg:mx-auto  py-16  lg:py-24">
+    <div className="flex flex-col lg:flex-row container lg:mx-auto  py-16  lg:py-24">
       <div className="mb-12 md:mb-0 mx-4">
         <h2 className="lg:w-8/12 mb-7">{heading}</h2>
         <div className="mb-7 lg:0">
@@ -28,7 +28,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
                       : "border-l-2 border-r-2 border-b-2"
                     : index !== 12
                     ? "border-b-2"
-                    : ""
+                    : "border-b-0"
                 }`}
                   key={index}
                 >
