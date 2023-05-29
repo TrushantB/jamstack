@@ -1,8 +1,6 @@
 import React from "react";
 
 export const AboutArticle = ({ jamStackProcess }) => {
-  console.log("processArray", jamStackProcess);
-  
   return (
     <div className="">
       <div className="pb-10" >
