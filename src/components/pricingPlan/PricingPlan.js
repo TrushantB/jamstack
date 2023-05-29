@@ -40,7 +40,6 @@ export default function PricingPlan({ customPlan }) {
         return plans.every(plan => plan.selected.length !== 0);
     }
     const scheduleMeeting = () => {
-        console.log("slected plan details", plans);
         window.open('https://harishboke-setoo.zohobookings.in/#/customer/contactus', '_blank')
     }
 

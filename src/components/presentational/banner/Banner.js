@@ -12,6 +12,7 @@ const Banner = ({
   layout,
   href,
   description,
+  isInner = false,
 }) => {
   return (
     <div className="container mx-auto lg:py-24 py-16">
