@@ -37,9 +37,7 @@ const About = ({ header, footer }) => {
 
       <div className="flex flex-col lg:flex-row items-center lg:px-24 px-5  py-24">
         <div className="lg:w-3/12 pb-6  ">
-          <h2>
-               {aboutData && aboutData.cards && aboutData.cards.heading}
-          </h2>
+          <h2>{aboutData && aboutData.cards && aboutData.cards.heading}</h2>
         </div>
         <div className="lg:w-8/12">
           <Card {...aboutData?.cards} />

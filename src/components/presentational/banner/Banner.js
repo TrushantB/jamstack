@@ -1,10 +1,19 @@
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import classNames from "classnames";
 import Button from "../../form/button/Button";
 
-
-const Banner = ({ heading, image, type, size, label, layout, href, description }) => {
+const Banner = ({
+  heading,
+  image,
+  type,
+  size,
+  label,
+  layout,
+  href,
+  description,
+  isInner = false,
+}) => {
   return (
     <div className="">
       <div
@@ -28,25 +37,30 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
           >
             <div>
               <h1 className="text-black-950 font-bold">{heading}</h1>
-              {description && <div>
-                <p className="pt-5 lg:w-6/12 mx-auto pb-14 ">{description}</p>
-              </div>}
+              {description && (
+                <div>
+                  <p
+                    className={`pt-5 ${
+                      isInner ? "lg:w-6/12 mx-auto" : ""
+                    } pb-14 `}
+                  >
+                    {description}
+                  </p>
+                </div>
+              )}
 
-              {label && <div className="my-16">
-                <Link href={`${href}`} >
-                  <Button
-                    label={label}
-                    type={type}
-                    size={size}
-                  />
-                </Link>
-              </div>}
-
+              {label && (
+                <div className="my-16">
+                  <Link href={`${href}`}>
+                    <Button label={label} type={type} size={size} />
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:items-center justify-end mt-10 lg:mt-0">
+          <div className="flex md:w-1/2 items-start lg:start justify-end mt-10 lg:mt-0">
             <img src={image} alt="image" />
           </div>
         )}
