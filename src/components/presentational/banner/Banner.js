@@ -17,7 +17,7 @@ const Banner = ({ heading, image, type, size, label, layout, href, description }
           className={classNames({
             // "md:w-1/2": true,
             "w-full": layout === "Image Bottom",
-            "flex ": layout === "Image Left",
+            "flex lg:w-1/2 ": layout === "Image Left",
             "text-center": layout !== "Image Left",
           })}
         >
