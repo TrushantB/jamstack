@@ -15,10 +15,10 @@ const Banner = ({
   isInner = false,
 }) => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto lg:py-24 py-16">
       <div
         className={classNames({
-          "md:flex justify-center px-5 py-24": true,
+          "md:flex justify-center px-5 flex-col sm:flex-row   ": true,
           "flex-col-reverse": layout === "Image Bottom",
         })}
       >
@@ -27,12 +27,12 @@ const Banner = ({
             // "md:w-1/2": true,
             "w-full mt-0 md:mt-12": layout === "Image Bottom",
             "flex lg:w-1/2 ": layout === "Image Left",
-            "text-center": layout !== "Image Left",
+            "text-center flex flex-col lg:flex-row lg:w-1/2": layout !== "Image Left",
           })}
         >
           <div
             className={classNames({
-              "flex items-center md:pr-16": layout === "Image Left",
+              "flex items-center md:pr-16 ": layout === "Image Left",
             })}
           >
             <div>
@@ -54,7 +54,7 @@ const Banner = ({
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:items-start justify-end mt-10 lg:mt-0">
+          <div className="flex sm:justify-center lg:w-1/2 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
             <img src={image} alt="image" />
           </div>
         )}
