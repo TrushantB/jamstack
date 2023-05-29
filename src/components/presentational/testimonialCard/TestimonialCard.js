@@ -60,12 +60,12 @@ function TestimonialCard({ cards, heading }) {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row ">
-      <div className="lg:w-5/12">
+    <div className="flex flex-col lg:flex-row container lg:mx-auto ">
+      <div className="lg:w-5/12  mx-4 lg:mx-0">
         <h2 className="mb-5 lg:mb-0">{heading}</h2>
       </div>
 
-      <div className="container  gap-14 flex flex-col lg:w-8/12">
+      <div className="  gap-14 flex flex-col lg:w-8/12  mx-4 lg:mx-0">
         <Slider {...sliderSetting}>
           {cards &&
             cards?.map((item, index) => (

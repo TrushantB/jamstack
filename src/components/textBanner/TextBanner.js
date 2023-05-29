@@ -7,7 +7,7 @@ function TextBanner({ info, sliderControls }) {
 
   return (
     <div className="flex flex-col bg-accent-100">
-      <div className="container gap-5 px-6 py-12 mx-auto lg:px-20">
+      <div className="container gap-5 px-6 lg:px-0 py-12 mx-auto ">
         <Slider {...sliderControls}>
           {info &&
             info?.map((item, index) => (

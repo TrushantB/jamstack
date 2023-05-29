@@ -3,7 +3,7 @@ import React from 'react'
 function TextBannerList({ heading, title, listItems }) {
   return (
     <div className="bg-secondary">
-      <div className="container mx-auto">
+      <div className="">
         <div className="grid grid-col-1 lg:grid-cols-2">
           <div className="">
             <h2 className="p-5 text-white lg:p-11 lg:pl-24 sm:p-10">{heading}</h2>

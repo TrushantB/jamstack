@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function WebSection({ heading, description, lineIMage, logo }) {
   return (
-    <div className="container px-5 mx-auto lg:px-0">
+    <div className="container px-4 mx-auto lg:px-0">
       <div className="flex flex-col items-center pb-36">
         <p className="mx-auto font-normal text-center heading-4 lg:w-7/12 ">
           {description}

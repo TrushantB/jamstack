@@ -27,7 +27,8 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
   };
 
   return (
-    <div className="">
+    <div className="mx-auto container ">
+      <div className="mx-4">
       {heading && <h2 className="lg:pl-1 mb-8">{heading}</h2>}
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-4/12 pb-12 md:pb-0">
@@ -79,6 +80,8 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
           )}
         </div>
       </div>
+      </div>
+     
     </div>
   );
 }

@@ -13,11 +13,11 @@ function ProductCard({cards}) {
     }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center m-5 lg:m-0  gap-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center  gap-5 container lg:mx-auto">
     {cards && cards?.map((card, index) => (
       <div
         key={index}
-        className=" p-6   rounded-2xl bg-accent-100 flex flex-col justify-between  lg:w-[400px]  hover:bg-secondary hover:text-white"
+        className=" p-6 mx-4   rounded-2xl bg-accent-100 flex flex-col justify-between  lg:w-[400px]  hover:bg-secondary hover:text-white"
         onMouseEnter={() => onMouseEnter(card)}
         onMouseLeave={() => onMouseLeave()}
       >

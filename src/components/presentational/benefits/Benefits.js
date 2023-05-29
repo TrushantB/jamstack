@@ -2,11 +2,11 @@ import React from 'react'
 
 function Benefits({heading , benefitsList}) {
   return (
-    <div className=" flex flex-col lg:flex-row  p-5 pb-0 lg:pt-32">
-        <div className=" lg:w-4/12">
+    <div className=" flex flex-col lg:flex-row  py-24 container lg:mx-auto ">
+        <div className="mx-4 lg:mx-0 lg:w-4/12">
           <h2 className="lg:w-10/12 mb-5">{heading}</h2>
         </div>
-        <div className="lg:w-8/12">
+        <div className="mx-4 lg:mx-0 lg:w-8/12">
           <div className=" ">
             {benefitsList && benefitsList?.map((item, index) => (
               <div key={index} className="border-t  border-tertiary">

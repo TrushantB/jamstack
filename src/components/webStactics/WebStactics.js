@@ -41,7 +41,8 @@ function WebStactics({
   }, []);
 
   return (
-    <div className="bg-secondary text-white px-3.5 lg:pl-28 py-6 lg:pt-16 lg:pb-20">
+    <div className="bg-secondary">
+        <div className="bg-secondary text-white px-3.5  py-6 lg:pt-16 container mx-auto">
       <div className="pt-6 lg:pt-0">
         <h2 className="">{heading}</h2>
       </div>
@@ -78,6 +79,8 @@ function WebStactics({
 
       {/* input end  */}
     </div>
+    </div>
+    
   );
 }
 

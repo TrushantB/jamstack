@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 function OurClient({ heading, imageList, type, label, size , href}) {
   return (
-    <div className="flex flex-col lg:flex-row  pt-5">
-      <div className="mb-12 md:mb-0">
+    <div className="flex flex-col lg:flex-row  pt-5  container lg:mx-auto my-24">
+      <div className="mb-12 md:mb-0 mx-4">
         <h2 className="lg:w-8/12 mb-7">{heading}</h2>        
         <div className="mb-7 lg:0">
           <Link href={href} className="btn">
@@ -14,7 +14,7 @@ function OurClient({ heading, imageList, type, label, size , href}) {
           </Link>
         </div>
       </div>
-      <div className="lg:w-7/12 ">
+      <div className="lg:w-7/12 mx-4 ">
         <ul className="grid grid-cols-3 border-t-2 border-b-2">
           {imageList &&
             imageList?.map((item, index) => (
@@ -23,8 +23,9 @@ function OurClient({ heading, imageList, type, label, size , href}) {
                   className={` flex items-center
                 ${
                   index % 3 !== 0 && (index + 1) % 3 !== 0
-                    ? "border-l-2 border-r-2 border-b-2"
-                    : "border-b-2"
+                  // TODO: Find better solution, This is temporary for now
+                  ? index=== 13 ? "border-l-2 border-r-2" : 'border-l-2 border-r-2 border-b-2'
+                  : index!== 12 ? "border-b-2" :''
                 }`}
                   key={index}>
                   {item.image ? (

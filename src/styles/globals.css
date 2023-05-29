@@ -203,7 +203,7 @@
 
 .video {
   aspect-ratio: 16 / 9;
-  width: 85%;
+  width: 100%;
   margin:0 auto
 }
 
@@ -321,5 +321,7 @@
     font-size: 20px;
   }
 }
+
+
 
 
