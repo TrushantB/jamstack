@@ -30,7 +30,7 @@ const Ecommj = ({ header, footer }) => {
   return (
     <Layout header={header} footer={footer}>
       {/* Banner section */}
-      <div className=" pb-32 pt-32 px-5 lg:px-24 ">
+      <div className="pb-0 pt-0">
         <Banner {...ecommjData.banner} />
       </div>
 
@@ -38,7 +38,7 @@ const Ecommj = ({ header, footer }) => {
       <Info {...ecommjData.info} />
 
       {/* Ecomm process */}
-      <div className="pb-24 lg:px-24 px-5 ">
+      <div className="pb-12 md:pb-24 lg:px-24 px-5 ">
 
 
         <Stepper {...ecommjData?.stepperData} />

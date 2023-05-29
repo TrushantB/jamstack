@@ -44,7 +44,7 @@ export default function PricingPlan({ customPlan }) {
     }
 
     return (
-        <div className='my-16'>
+        <div className='mt-16'>
             <div className="text-center">
                 <h2 className="font-medium text-6xl">
                     {customPlan?.heading}
@@ -53,16 +53,16 @@ export default function PricingPlan({ customPlan }) {
                     {customPlan?.description}
                 </p>
             </div>
-            <div className="my-16 lg:flex">
+            <div className="mt-16 lg:flex">
                 <div className="lg:w-1/2">
                     <div className="flex my-8 md:my-16 items-center gap-5 pl-16 md:pl-28 lg:pl-16 ">
-                        <div className="w-14 h-14 bg-[#FF5223] rounded-full ">
+                        <div className="w-8 h-8 md:w-14 md:h-14 bg-[#FF5223] rounded-full ">
                         </div>
-                        <h3 className="font-medium">
+                        <h3 className="font-medium text-3xl md:text-4xl">
                             {customPlan?.selectPlanHeading}
                         </h3>
                     </div>
-                    <div className="flex justify-center items-center gap-x-12 gap-y-8 lg:gap-x-24 lg:gap-y-16 flex-wrap">
+                    <div className="flex justify-center items-center gap-x-8 md:gap-x-12 gap-y-8 lg:gap-x-24 lg:gap-y-16 flex-wrap mb-8 md:mb-0">
                         {
                             plans.length && plans[current]?.options?.map((option, index) => {
                                 if (plans[current].selected.includes(option)) {
@@ -82,7 +82,7 @@ export default function PricingPlan({ customPlan }) {
                         }
                     </div>
                 </div>
-                <div className="lg:w-1/2 rounded-[40px] bg-[#F1F2F6] pl-4 my-10 lg:my-0 lg:pl-24 pr-7 py-16">
+                <div className="lg:w-1/2 rounded-[40px] bg-[#F1F2F6] pl-4 lg:my-0 lg:pl-24 pr-7 py-16">
                     <h3 className="font-medium text-center">
                         {customPlan?.idealPlanHeading}
                     </h3>

@@ -25,13 +25,13 @@ const Ecommj = ({ header, footer }) => {
   }
   return (
     <Layout header={header} footer={footer}>
-      <div className=" pb-32 pt-32 px-5 lg:px-24 ">
+      <div className="pb-0 pt-0">
         <Banner {...mobjData.banner} />
       </div>
 
       <Info {...mobjData.info} />
 
-      <div className="pb-24 lg:px-24 px-5 ">
+      <div className="pb-12 md:pb-24 lg:px-24 px-5 ">
         <Stepper {...mobjData?.stepperData} />
       </div>
 

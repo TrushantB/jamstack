@@ -40,8 +40,8 @@ function WebStactics({
   }, []);
 
   return (
-    <div className="bg-secondary ">
-      <div className="bg-secondary text-white px-3.5  py-6 lg:pt-16 container mx-auto">
+    <div className="bg-secondary">
+      <div className="text-white px-3.5 lg:pl-28 py-6 lg:pt-16 lg:pb-20 relative container mx-auto">
         <div className="pt-6 lg:pt-0">
           <h2 className="">{heading}</h2>
         </div>
@@ -71,7 +71,7 @@ function WebStactics({
           )}
         </div>
         {error && (
-          <div className="absolute flex flex-wrap items-center w-full sm:w-1/2 text-xs my-2">
+            <div className="absolute bottom-4 md:bottom-auto flex flex-wrap items-center w-full sm:w-1/2 text-xs my-2">
             <p className="text-red-600 bg-red-100 py-1 px-3 rounded-full">
               {error}
             </p>
