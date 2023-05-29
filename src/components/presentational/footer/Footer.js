@@ -20,7 +20,7 @@ const Footer = ({
             </div>
             <div className="flex gap-4 mt-3">
               <div className=" flex gap-7">
-                {socialIcons.map((item, index) => (
+                {socialIcons?.map((item, index) => (
                   <Link className="flex items-center" key={index} target={item.target} href={item.href}>
                     <span className={`${item.icon} text-2xl`}></span>
                   </Link>
@@ -31,7 +31,7 @@ const Footer = ({
 
           <div className="col-span-12 sm:col-span-6 lg:col-span-6 mt-5 sm:mt-0">
             <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:p-5 lg:p-10">
-              {footerMenu.map((menuItems, index) => (
+              {footerMenu?.map((menuItems, index) => (
                 <li key={index} className="font-semibold mb-2">
                   <Link href={menuItems.href} target={menuItems.target}>
                     {menuItems.label}
@@ -43,7 +43,7 @@ const Footer = ({
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:p-5 lg:p-10 mt-5 sm:mt-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {secondaryMenu.map((menuItems, index) => (
+            {secondaryMenu?.map((menuItems, index) => (
               <Link key={index} href={menuItems.href} className="font-bold">
                 {menuItems.label}
               </Link>
