@@ -19,8 +19,8 @@ const Footer = ({
               </Link>
             </div>
             <div className="flex gap-4 mt-3">
-              <div className="flex gap-7">
-                {socialIcons.map((item, index) => (
+              <div className=" flex gap-7">
+                {socialIcons?.map((item, index) => (
                   <Link className="flex items-center" key={index} target={item.target} href={item.href}>
                     <span className={`${item.icon} text-2xl`}></span>
                   </Link>
@@ -28,11 +28,10 @@ const Footer = ({
               </div>
             </div>
           </div>
-
-          <div className="col-span-12 mt-5 sm:col-span-6 lg:col-span-5 sm:mt-0">
-            <ul className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-3 sm:py-5 lg:py-10">
-              {footerMenu.map((menuItems, index) => (
-                <li key={index} className="mb-2 font-semibold">
+          <div className="col-span-12 sm:col-span-6 lg:col-span-6 mt-5 sm:mt-0">
+            <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:p-5 lg:p-10">
+              {footerMenu?.map((menuItems, index) => (
+                <li key={index} className="font-semibold mb-2">
                   <Link href={menuItems.href} target={menuItems.target}>
                     {menuItems.label}
                   </Link>
@@ -41,9 +40,9 @@ const Footer = ({
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-1 mt-5 sm:grid-cols-3 sm:py-5 lg:py-10 sm:mt-0">
-          <div className="grid grid-cols-1 md:gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:col-span-2">
-            {secondaryMenu.map((menuItems, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:p-5 lg:p-10 mt-5 sm:mt-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {secondaryMenu?.map((menuItems, index) => (
               <Link key={index} href={menuItems.href} className="font-bold">
                 {menuItems.label}
               </Link>

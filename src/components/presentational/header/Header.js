@@ -75,7 +75,10 @@ const Header = ({
                 {/* <div className="fixed top-5 right-10">
                   <span className="flex items-center justify-center w-8 h-8 p-1 bg-white rounded-full">
                     <button className="text-primary" onClick={toggleMenu}>
-                      x
+                      <svg width="16" height="16" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.26889" y1="18.8641" x2="17.6432" y2="1.31752" stroke="#F0027F" stroke-width="2" />
+                        <line x1="1.19965" y1="1.31752" x2="17.5792" y2="18.8592" stroke="#F0027F" stroke-width="2" />
+                      </svg>
                     </button>
                   </span>
                 </div> */}
