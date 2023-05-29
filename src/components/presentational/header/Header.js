@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 
 const Header = ({
   headerMenu,
@@ -21,16 +21,16 @@ const Header = ({
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.padding = '0 10px 0 0';
+      document.body.style.overflow = "hidden";
+      document.body.style.padding = "0 10px 0 0";
     } else {
-      document.body.style.overflow = 'visible';
-      document.body.style.padding = '0 0 0 0';
+      document.body.style.overflow = "visible";
+      document.body.style.padding = "0 0 0 0";
     }
   };
   useEffect(() => {
-    document.body.style.overflow = 'visible';
-  }, [])
+    document.body.style.overflow = "visible";
+  }, []);
 
   return (
     <>
@@ -46,14 +46,19 @@ const Header = ({
                 />
               </Link>
               <ul
-                className={`${menuOpen ? "block" : "hidden"
-                  } lg:flex flex-col md:flex-row items-center justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
+                className={`${
+                  menuOpen ? "block" : "hidden"
+                } lg:flex flex-col md:flex-row items-center justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
               >
                 {headerMenu?.map((menuItems, index) => (
                   <li key={index}>
                     <Link
                       href={menuItems.href}
-                      className={`${menuItems.href==="contact" ? "bg-pink-500 text-white rounded-full text-xs border-solid px-3 py-2 font-medium" : "block py-2 pl-3 pr-4 text-xs font-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 active:text-pink-500"}`}
+                      className={`${
+                        menuItems.href === "contact"
+                          ? "bg-pink-500 text-white rounded-full text-xs border-solid px-3 py-2 font-medium"
+                          : "block py-2 pl-3 pr-4 text-xs font-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 active:text-pink-500"
+                      }`}
                     >
                       {menuItems.label}
                     </Link>
@@ -63,7 +68,9 @@ const Header = ({
               <button
                 id="dropdownUserAvatarButton"
                 data-dropdown-toggle="dropdownAvatar"
-                className={` header-toggle ${isOpen ? 'header-toggle-open' : ''} `}
+                className={` header-toggle ${
+                  isOpen ? "header-toggle-open" : ""
+                } `}
                 type="button"
                 onClick={toggleMenu}
               >
@@ -101,7 +108,9 @@ const Header = ({
                     {sidebarLink?.map((sidebarItems, index) => (
                       <li className="my-3" key={index}>
                         <h6>
-                          <Link href={sidebarItems.href}>{sidebarItems.label}</Link>
+                          <Link href={sidebarItems.href}>
+                            {sidebarItems.label}
+                          </Link>
                         </h6>
                       </li>
                     ))}
@@ -148,8 +157,9 @@ const Header = ({
 
             {menuOpen && (
               <div
-                className={`${menuOpen ? "block" : "hidden"
-                  } sticky top-0 md:flex font-medium flex-col md:flex-row align-middle p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full`}
+                className={`${
+                  menuOpen ? "block" : "hidden"
+                } sticky top-0 md:flex font-medium flex-col md:flex-row align-middle p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full`}
               >
                 <ul>
                   {headerMenu?.map((menuItems, index) => (
@@ -168,7 +178,10 @@ const Header = ({
                   {sidebarLink?.map((sidebarItems, index) => (
                     <li className="py-2 pl-3" key={index}>
                       <h6>
-                        <Link href={sidebarItems.href} target={menuItems.target}>
+                        <Link
+                          href={sidebarItems.href}
+                          target={menuItems.target}
+                        >
                           {sidebarLink.label}
                         </Link>
                       </h6>
