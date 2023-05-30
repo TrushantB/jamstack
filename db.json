@@ -30,8 +30,8 @@
       "target": "_self"
     },
     "Contactlabel": "Contact Information",
-    "phoneNumber": "+91 990-123-4567",
-    "email": "geexu@gmail.com",
+    "phoneNumber": "+91 9130 036 036",
+    "email": "hello@jamstack.plus",
     "country": "India",
 
     "socialLink": [
@@ -73,124 +73,6 @@
       "alt": "crossLogo logo"
     }
   },
-  "jamStack": {
-    "banner": {
-      "heading": "What is Jamstack? ",
-      "description": "Modern architecture gives the approach of building everything on the web from apps to websites based on Javascript, ApIs and Markup(JAM).",
-      "backGroundColor": "#ffffff",
-      "headingSize": "medium",
-      "image": "/jamStackBanner.png",
-      "type": "primary",
-      "size": "medium",
-      "layout": "Image Bottom",
-      "href": "contact"
-    },
-    "cards": {
-      "heading": "Why we love JAM?",
-      "description": "Since JAM development is not a specific technology or language to build the web solutions, it’s instead a countless combination of tools and languages that are combined to create the final product.",
-      "cardsitems": [
-        {
-          "title": "Easy CMS",
-          "class": "icon-ic_Easy-CMS"
-        },
-        {
-          "title": "Ultra Fast",
-          "class": "icon-ic_Cheap-Scaling"
-        },
-
-        {
-          "title": "Highly Secure",
-          "class": "icon-ic_Highly-Secure"
-        },
-
-        {
-          "title": "Tailored Tech Stack",
-          "class": "icon-ic_Tailored-Tech-Stack"
-        },
-
-        {
-          "title": "Cheap Scaling",
-          "class": "icon-ic_Cheap-Scaling"
-        },
-
-        {
-          "title": "Easy Maintain",
-          "class": "icon-ic_Easy-Maintain"
-        }
-      ]
-    },
-    "accordian": {
-      "heading": "Benefits of JAMSTACK:",
-      "accordinaList": [
-        {
-          "label": "Cost effective CDN use",
-          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
-          "icon": "diamond",
-          "image":"/jamstackOne.svg",
-          "arrow": true
-        },
-        {
-          "label": "Decoupled functionalities",
-          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
-          "icon": "diamond",
-          "image":"/jamstackTwo.svg",
-          "arrow": true
-        },
-        {
-          "label": "Security",
-          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
-          "icon": "diamond",
-          "image":"/jamstackOne.svg",
-          "arrow": true
-        },
-        {
-          "label": "Progressive web apps",
-          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
-          "icon": "diamond",
-          "image":"/jamstackTwo.svg",
-          "arrow": true
-        },
-        {
-          "label": "Timeless technology",
-          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
-          "icon": "diamond",
-          "image":"/jamstackOne.svg",
-          "arrow": true
-        }
-      ]
-    },
-    "cta": {
-      "heading": "Jamstack is the way to sustainable success and Jamstack+ is your gateway.",
-      "href": "contact",
-      "type": "primary",
-      "label": "Get Started",
-      "size": "medium"
-    },
-    "productCard": {
-      "heading": "Products we Create",
-      "cards": [
-        {
-          "label": "webJ",
-          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
-          "buttonLabel": "Know More",
-          "href": "webj"
-        },
-        {
-          "label": "ecommJ",
-          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
-          "buttonLabel": "Know More",
-          "href": "ecommj"
-        },
-        {
-          "label": "mobJ",
-          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
-          "buttonLabel": "Know More",
-          "href": "mobj"
-        }
-      ]
-    }
-  },
-
   "footer": {
     "footerLogo": {
       "url": "/logo.svg",
@@ -662,9 +544,9 @@
               "id": "nextjs"
             },
             {
-              "name": "Angular",
+              "name": "NuxtJs",
               "icon": "icon-group",
-              "id": "angular"
+              "id": "nuxtjs"
             }
           ],
           "selected": []
@@ -856,7 +738,7 @@
     },
     "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
   },
-  "faq" : {
+  "faq": {
     "banner": {
       "heading": "We Know. We Create.We Stand Unique.",
       "backGroundColor": "#ffffff",
@@ -1639,78 +1521,81 @@
   },
   "ecomj": {
     "banner": {
-        "heading": "Start your journey of modern online business.",
-        "description" : " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
-        "backGroundColor": "#ffffff",
-        "headingSize": "medium",
-        "image": "/ecommj.svg",
-        "type": "primary",
-        "label": "Start A Project",
-        "size": "medium",
-        "layout": "Image Left",
-        "href" : "contact"
-      },
-      "info": {
-        "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
-        "question": "What is ecommJ?.",
-        "href" : "/",
-        "lineIMage": {
-          "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
-          "alt": "lineImage"
-        }
-      },
-      "stepperData" : {
-        "heading": "How ecommJ processes?",
-        "stepper":[
-          {
-            "label": "On boarding",
-            "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
-            "layout": "imageRight",
-            "image": "/onboarding.png",
-            "id": "step-1",
-            "faqs":[
-              {"label" : "Limitless customization and personalization" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              },
-              {"label" : "Improved time to value" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              }
-            ],
-            "cta":{
-              "label":"Get your plan",
-              "size":"medium",
-              "type":"primary"
+      "heading": "Start your journey of modern online business.",
+      "description": " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "image": "/ecommj.svg",
+      "type": "primary",
+      "label": "Start A Project",
+      "size": "medium",
+      "layout": "Image Left",
+      "href": "contact"
+    },
+    "info": {
+      "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
+      "question": "What is ecommJ?.",
+      "href": "/",
+      "lineIMage": {
+        "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
+        "alt": "lineImage"
+      }
+    },
+    "stepperData": {
+      "heading": "How ecommJ processes?",
+      "stepper": [
+        {
+          "label": "On boarding",
+          "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+          "layout": "imageRight",
+          "image": "/onboarding.png",
+          "id": "step-1",
+          "faqs": [
+            {
+              "label": "Limitless customization and personalization",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
+            },
+            {
+              "label": "Improved time to value",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
             }
-          },
-          {
-            "label": "Choose your tech-stack",
-            "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
-            "image": "/choose.png",
-            "layout": "imageLeft",
-            "id": "step-2",
-            "faqs":[
-              {"label" : "Limitless customization and personalization" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              },
-              {"label" : "Improved time to value" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              }
-            ]
-            
-
-          },
-          {"label": "Business Essentials:", 
-          "content": "<p><span>We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></p><p><span><strong><span>Shipping:</span></strong></span></p><p><span><span>Look for an option that suits your needs:</span></span></p><p><span><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/fedex.png?raw=true' alt='fedex-img' width='94' height='55'> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span><strong><span>Payment Gateways</span></strong></span></p><p><span>Look for an option that suits your needs:</span></p><p style='display:flex; align-items:center; padding:20px 0; '><span style='display:flex; align-items:center; padding:20px 0; flex-wrap:wrap;'><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/razorpay.png?raw=true' width='213' height='45'>&nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/stripe.png?raw=true' width='90' height='43'>&nbsp; &nbsp; &nbsp; &nbsp;<span/></p><p><strong><span><span>Integrations</span></span></strong></p><p><strong><span><span>Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>", 
-          "image": "/Design.png", 
-          "layout": "imageRight", 
+          ],
+          "cta": {
+            "label": "Get your plan",
+            "size": "medium",
+            "type": "primary"
+          }
+        },
+        {
+          "label": "Choose your tech-stack",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
+          "image": "/choose.png",
+          "layout": "imageLeft",
+          "id": "step-2",
+          "faqs": [
+            {
+              "label": "Limitless customization and personalization",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
+            },
+            {
+              "label": "Improved time to value",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
+            }
+          ]
+        },
+        {
+          "label": "Business Essentials:",
+          "content": "<p><span>We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></p><p><span><strong><span>Shipping:</span></strong></span></p><p><span><span>Look for an option that suits your needs:</span></span></p><p><span><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/fedex.png?raw=true' alt='fedex-img' width='94' height='55'> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span><strong><span>Payment Gateways</span></strong></span></p><p><span>Look for an option that suits your needs:</span></p><p style='display:flex; align-items:center; padding:20px 0; '><span style='display:flex; align-items:center; padding:20px 0; flex-wrap:wrap;'><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/razorpay.png?raw=true' width='213' height='45'>&nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/stripe.png?raw=true' width='90' height='43'>&nbsp; &nbsp; &nbsp; &nbsp;<span/></p><p><strong><span><span>Integrations</span></span></strong></p><p><strong><span><span>Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>",
+          "image": "/Design.png",
+          "layout": "imageRight",
           "id": "step-3",
           "faqs": [
             {
@@ -1954,6 +1839,247 @@
       ],
       "hasIcon": true,
       "label": "Read More"
+    }
+  },
+  "jamStack": {
+    "banner": {
+      "heading": "What is Jamstack? ",
+      "description": "Modern architecture gives the approach of building everything on the web from apps to websites based on Javascript, ApIs and Markup(JAM).",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "image": "/jamStackBanner.png",
+      "type": "primary",
+      "size": "medium",
+      "layout": "Image Bottom",
+      "href": "contact"
+    },
+    "cards": {
+      "heading": "Why we love JAM?",
+      "description": "Since JAM development is not a specific technology or language to build the web solutions, it’s instead a countless combination of tools and languages that are combined to create the final product.",
+      "cardsitems": [
+        {
+          "title": "Easy CMS",
+          "class": "icon-ic_Easy-CMS"
+        },
+        {
+          "title": "Ultra Fast",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Highly Secure",
+          "class": "icon-ic_Highly-Secure"
+        },
+
+        {
+          "title": "Tailored Tech Stack",
+          "class": "icon-ic_Tailored-Tech-Stack"
+        },
+
+        {
+          "title": "Cheap Scaling",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Easy Maintain",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "accordian": {
+      "heading": "Benefits of JAMSTACK:",
+      "accordinaList": [
+        {
+          "label": "Cost effective CDN use",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Decoupled functionalities",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Security",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Progressive web apps",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Timeless technology",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Jamstack is the way to sustainable success and Jamstack+ is your gateway.",
+      "href": "contact",
+      "type": "primary",
+      "label": "Get Started",
+      "size": "medium"
+    },
+    "productCard": {
+      "heading": "Products we Create",
+      "cards": [
+        {
+          "label": "webJ",
+          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
+          "buttonLabel": "Know More",
+          "href": "webj"
+        },
+        {
+          "label": "ecommJ",
+          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
+          "buttonLabel": "Know More",
+          "href": "ecommj"
+        },
+        {
+          "label": "mobJ",
+          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
+          "buttonLabel": "Know More",
+          "href": "mobj"
+        }
+      ]
+    }
+  },
+  "aboutUs": {
+    "banner": {
+      "heading": "We Know. We Create.We Stand Unique.",
+      "backGroundColor": "#ffffff",
+      "description": "We are Jamstack+, a platform that provides a complete digital presence ecosystem through our very own, crafted products: webJ, ecommJ, and mobJ.",
+      "headingSize": "medium",
+      "image": "/aboutus.svg",
+      "layout": "Image Left"
+    },
+    "morderTechnology": {
+      "heading": "Purpose behind Jamstack+",
+      "description": "Technology that simplifies digital journey for ambitious businesses!"
+    },
+    "jamStackRecipe": {
+      "heading": "At Jamstack+ we serve the perfect",
+      "label": "RECIPE"
+    },
+    "jamStackStories": {
+      "heading": "Journey of Jamstack+",
+      "descriptionArray": [
+        {
+          "description": "We began the journey with the goal of giving the best, creatively made, and timeless solutions to our valued consumers through technology. On this journey, we worked with the same JAMstack basics from beginning to end of the project."
+        },
+        {
+          "description": "We envisioned building a single platform that would provide everything for everyone online. As a result of our efforts to justify JAMstack, we created the Jamstack+: the next generation of modern technology."
+        },
+        {
+          "description": "We developed J+heros to deliver solutions across all platforms. These are thoroughly processed, rehearsed, and well-engineered solutions for anyone wishing to advance their digital platforms using popular technology."
+        }
+      ]
+    },
+    "cards": {
+      "heading": "Our PLUS factors:",
+      "cardsArray": [
+        {
+          "title": "Keen on details",
+          "class": "icon-ic_Keen-on-details"
+        },
+        {
+          "title": "Coherent communication",
+          "class": "icon-ic_Coherent-communication"
+        },
+        {
+          "title": "Factual truthful",
+          "class": "icon-ic_Factual-truthful"
+        },
+        {
+          "title": "Remarkable on timeless",
+          "class": "icon-ic_Remarkable-on-timeless"
+        },
+        {
+          "title": "Accountable partner",
+          "class": "icon-ic_Accountable-partner"
+        },
+        {
+          "title": "Futuristic visioner",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "jamStackProcess": {
+      "heading": "How we do it",
+      "processArray": [
+        {
+          "title": "Discuss- get started:",
+          "image": "articleOne.png",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Brainstorming on idea" },
+            { "label": "Strategy planning" },
+            { "label": "Requirement gathering" },
+            { "label": "Analysis and approach" }
+          ]
+        },
+        {
+          "title": "Define and Design:",
+          "image": "articleTwo.png",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Analysis documentation" },
+            { "label": "Wireframes and mockups" },
+            { "label": "Design architecture" },
+            { "label": "Design templates with style guide" }
+          ]
+        },
+        {
+          "title": "Develop:",
+          "image": "articleThree.png",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Code ready to test" },
+            { "label": "Dev documentation and approach" },
+            { "label": "Frontend, backend with DB" },
+            { "label": "Unit testing" }
+          ]
+        },
+        {
+          "title": "Deploy -pre and post methods:",
+          "image": "articleFive.svg",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Quality assurance testing" },
+            { "label": "CDN/edge networking" },
+            { "label": "Usage guidelines" },
+            { "label": "Hosting" }
+          ]
+        },
+        {
+          "title": "Accelerate",
+          "image": "articleFour.svg",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Business analysis and dashboard" },
+            { "label": "Recommendations and insights of the business" },
+            { "label": "Recommendations and insights of the business" }
+          ]
+        }
+      ]
+    },
+    "jamstackQuote": {
+      "heading": "“Simplifying and scaling up your noteworthy digital journey”",
+      "author": "—Team Jamstack+"
     }
   }
 }
