@@ -26,12 +26,12 @@ const Banner = ({
           className={classNames({
             // "md:w-1/2": true,
             "w-full mt-0 md:mb-12 text-center": layout === "Image Bottom",
-            "flex lg:w-1/2 ": layout === "Image Left"            
+            "flex lg:w-3/5 ": layout === "Image Left"            
           })}
         >
           <div
             className={classNames({
-              "flex items-center md:pr-16 ": layout === "Image Left",
+              "flex items-center md:pr-0": layout === "Image Left",
             })}
           >
             <div>
@@ -53,7 +53,7 @@ const Banner = ({
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex sm:justify-center lg:w-1/2 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
+          <div className="flex sm:justify-center lg:w-2/5 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
             <img src={image} alt="image" />
           </div>
         )}

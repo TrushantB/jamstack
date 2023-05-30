@@ -9,9 +9,9 @@ export const AboutArticle = ({ jamStackProcess }) => {
       <div>
         <div>
           <div className="">
-            <ul>
+            <ul className="space-y-8">
               {jamStackProcess?.processArray?.map((item, index) => (
-                <div key={index} className={item.layout === "imageRight" ? "flex flex-col lg:flex-row mb-14" : "flex flex-col lg:flex-row-reverse mb-14"}>
+                <li key={index} className={item.layout === "imageRight" ? "flex flex-col lg:flex-row mb-0" : "flex flex-col lg:flex-row-reverse"}>
                   <div className="lg:w-1/2 flex flex-col justify-center">
                     <h5 className="pb-5">{item.title}</h5>
                     <ul className=" list-disc list-inside text-tertiary">
@@ -23,7 +23,7 @@ export const AboutArticle = ({ jamStackProcess }) => {
                   <div className="lg:w-1/2 ">
                     <img src={item.image} alt="image" />
                   </div>
-                </div>
+                </li>
               ))}
             </ul>
           </div>

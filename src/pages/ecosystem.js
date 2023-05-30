@@ -22,12 +22,12 @@ const Ecosysterm = ({ header, footer }) => {
   return (
     <Layout header={header} footer={footer}>
 
-      <div className="px-5 lg:px-24 py-24  " >
+      <div className="container mx-auto px-4 xl:px-0 py-16 lg:py-24" >
         {<EcoSystemBanner {...ecoData.ecoBanner} />}
       </div>
 
-      <div className="pb-24 px-5 lg:px-24">
-        <div className=" pb-6">
+      <div className="container mx-auto px-4 xl:px-0">
+        <div className="pb-6">
           <h2>{ecoData.accordinData?.heading}</h2>
         </div>
         <div className="">
@@ -36,7 +36,7 @@ const Ecosysterm = ({ header, footer }) => {
       </div>
 
       {/* Connect check choose section*/}
-      <div className="lg:px-24 px-5 pb-24 ">
+      <div className="container mx-auto px-4 xl:px-0 pb-6">
         <ConnectChoose  {...ecoData.ConnectChoose} />
       </div>
     </Layout>
