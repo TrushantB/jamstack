@@ -20,10 +20,10 @@ const Footer = ({
                 </Link>
               </div>
               <div className="flex gap-4 mt-3">
-                <div className=" flex gap-7">
+                <div className="flex gap-7">
                   {socialIcons?.map((item, index) => (
                     <Link
-                      className="flex items-center"
+                      className="flex items-center btn-link"
                       key={index}
                       target={item.target}
                       href={item.href}
@@ -38,7 +38,7 @@ const Footer = ({
               <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:p-0 lg:p-0">
                 {footerMenu?.map((menuItems, index) => (
                   <li key={index} className="font-semibold mb-2">
-                    <Link href={menuItems.href} target={menuItems.target}>
+                    <Link className="btn-link" href={menuItems.href} target={menuItems.target}>
                       {menuItems.label}
                     </Link>
                   </li>
@@ -47,13 +47,15 @@ const Footer = ({
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 sm:py-5 lg:py-10 mt-5 sm:mt-0 ">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
-                <Link key={index} href={menuItems.href} className="font-bold">
-                  {menuItems.label}
-                </Link>
+                <li>
+                  <Link key={index} href={menuItems.href} className="font-bold btn-link">
+                    {menuItems.label}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
             <div className="flex items-center mt-5 sm:items-start sm:justify-end bold sm:mt-0">
               <span className="font-bold">&copy;{copyRight}</span>
             </div>

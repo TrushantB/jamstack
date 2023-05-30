@@ -2,9 +2,9 @@ import React from 'react'
 
 export const JamStackRecipe = ({heading , label}) => {
   return (
-    <div>
-        <h2  className=" text-center  ">{heading}</h2>
-        <h2 className="text-tertiary text-center">{label}</h2>
+    <div className='text-center'>
+      <h2  className="text-4xl md:text-5xl mb-4">{heading}</h2>
+      <h3 className="text-tertiary text-4xl md:text-5xl">{label}</h3>
     </div>
   )
 }
