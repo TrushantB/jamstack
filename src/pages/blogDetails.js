@@ -7,7 +7,7 @@ import BlogContentWriting from "@/components/blogContentWriting/blogContentWriti
 import BlogContactCard from "@/components/blogContactCard/blogContactCard";
 import BlogCard from "@/components/blogCard/BlogCard";
 
-export default function BlogDetails() {
+export default function BlogDetails({ header, footer }) {
   const [blogData, setBlogData] = useState(null);
 
   useEffect(() => {
@@ -17,7 +17,8 @@ export default function BlogDetails() {
   }, []);
 
   return (
-    <div>
+    <Layout header={header} footer={footer}>
+       <div>
       <BlogDetailsBanner blogData={blogData} />
       <BlogDetailsTableContent blogData={blogData} />
       <div className="my-8 lg:my-16">
@@ -29,5 +30,6 @@ export default function BlogDetails() {
         </div>
       </div>
     </div>
+    </Layout>
   );
 }
