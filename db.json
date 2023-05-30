@@ -1,95 +1,245 @@
 {
-  "blogDetailsPage" : {
-        "heading" : "Governance by human-centered design",
-        "blogBanner" : "/blogDetailsBanner.png",
-        "alt" : "blogDetailsBanner",
-        "author" : {
-          "image" : "/clientPage.png",
-          "alt" : "clientPagePerson",
-          "name" : "Ivan Krizaj",
-          "description" : "Ivan Krizaj is Hygraph's Head of Developer Relations. He has a strong passion for developer education and experience as well as decoupled architectures, frontend development, and clean design.",
-          "socialSharing" : [
-            {"icon" : "icon-twitter" , "alt" : "twitter" , "href" : "" , "target" : "_blank"},
-            {"icon" : "icon-facebook2" , "alt" : "facebook" , "href" : "" , "target" : "_blank"},
-            {"icon" : "icon-linkedin" , "alt" : "linkedin" , "href" : "" , "target" : "_blank"}
-          ]
+  "blogDetailsPage": {
+    "heading": "Governance by human-centered design",
+    "blogBanner": "/blogDetailsBanner.png",
+    "alt": "blogDetailsBanner",
+    "author": {
+      "image": "/clientPage.png",
+      "alt": "clientPagePerson",
+      "name": "Ivan Krizaj",
+      "description": "Ivan Krizaj is Hygraph's Head of Developer Relations. He has a strong passion for developer education and experience as well as decoupled architectures, frontend development, and clean design.",
+      "socialSharing": [
+        {
+          "icon": "icon-twitter",
+          "alt": "twitter",
+          "href": "",
+          "target": "_blank"
         },
-        "publishDate" : {
-          "icon" : "calendar.png",
-          "alt" : "calendar" ,
-          "date" : "27, FEB 2023"
+        {
+          "icon": "icon-facebook2",
+          "alt": "facebook",
+          "href": "",
+          "target": "_blank"
         },
-        "screnTime" : {
-          "icon" : "clock.png",
-          "alt" : "clock" ,
-          "duration" : "2 Mins"
-        },
-        "tableHeading" : "Table of Content",
-        "iconHeading" : "Share this article",
-        "tabelContent" : [
+        {
+          "icon": "icon-linkedin",
+          "alt": "linkedin",
+          "href": "",
+          "target": "_blank"
+        }
+      ]
+    },
+    "publishDate": {
+      "icon": "calendar.png",
+      "alt": "calendar",
+      "date": "27, FEB 2023"
+    },
+    "screnTime": {
+      "icon": "clock.png",
+      "alt": "clock",
+      "duration": "2 Mins"
+    },
+    "tableHeading": "Table of Content",
+    "iconHeading": "Share this article",
+    "tabelContent": [
+      {
+        "title": "Digital design process",
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 1 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
+        "socialSharing": [
           {
-            "title" : "Digital design process",
-            "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 1 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
-            "socialSharing" : [
-              {"icon" : "icon-twitter" , "alt" : "twitter" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-whatsapp1" , "alt" : "whatsApp" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-facebook2" , "alt" : "facebook" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-linkedin" , "alt" : "linkedin" , "href" : "" , "target" : "_blank"}
-            ],
-            "suggestionPost" : [
-              {"image" : "blogContentCard.png" , "alt" : "blogContentCard" , "title" : "Excited to switch on modern technology?" , "buttonLabel" : "Let’s Talk" , "href" : ""}
-            ]
+            "icon": "icon-twitter",
+            "alt": "twitter",
+            "href": "",
+            "target": "_blank"
           },
           {
-            "title" : "Key elements for effective design",
-             "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 2 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
-             "socialSharing" : [
-              {"icon" : "icon-twitter" , "alt" : "twitter" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-whatsapp1" , "alt" : "whatsApp" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-facebook2" , "alt" : "facebook" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-linkedin" , "alt" : "linkedin" , "href" : "" , "target" : "_blank"}
-            ],
-            "suggestionPost" : [
-              {"image" : "blogContentCard.png" , "alt" : "blogContentCard" , "title" : "Excited to switch on modern technology?" , "buttonLabel" : "Let’s Talk" , "href" : ""}
-            ]
+            "icon": "icon-whatsapp1",
+            "alt": "whatsApp",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-facebook2",
+            "alt": "facebook",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-linkedin",
+            "alt": "linkedin",
+            "href": "",
+            "target": "_blank"
           }
         ],
-        "blogCard": {
-          "heading": "Related Blogs",
-          "cards": [
-            {
-              "image": "/Termgrid.png",
-              "alt": "blog",
-              "label": "Termgrid",
-              "description": "Branding a whole new category of debt management.",
-              "buttonLabel": "Read more",
-              "href": "blog"
-            },
-            {
-              "image": "/Crisp.png",
-              "alt": "blog",
-              "label": "Crisp ",
-              "description": "Designing a new mobile experience for the all-in-one messaging platform.",
-              "buttonLabel": "Read more",
-              "href": "blog"
-            },
-            {
-              "image": "/Ternary.png",
-              "alt": "blog",
-              "label": "Ternary",
-              "description": "Creating a visual identity and product for FinOps cloud innovator.",
-              "buttonLabel": "Read more",
-              "href": "blog"
-            }
-          ],
-          "hasIcon": true,
-          "label": "Read More"
+        "suggestionPost": [
+          {
+            "image": "blogContentCard.png",
+            "alt": "blogContentCard",
+            "title": "Excited to switch on modern technology?",
+            "buttonLabel": "Let’s Talk",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "title": "Key elements for effective design",
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 2 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
+        "socialSharing": [
+          {
+            "icon": "icon-twitter",
+            "alt": "twitter",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-whatsapp1",
+            "alt": "whatsApp",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-facebook2",
+            "alt": "facebook",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-linkedin",
+            "alt": "linkedin",
+            "href": "",
+            "target": "_blank"
+          }
+        ],
+        "suggestionPost": [
+          {
+            "image": "blogContentCard.png",
+            "alt": "blogContentCard",
+            "title": "Excited to switch on modern technology?",
+            "buttonLabel": "Let’s Talk",
+            "href": ""
+          }
+        ]
+      }
+    ],
+    "blogCard": {
+      "heading": "Related Blogs",
+      "cards": [
+        {
+          "image": "/Termgrid.png",
+          "alt": "blog",
+          "label": "Termgrid",
+          "description": "Branding a whole new category of debt management.",
+          "buttonLabel": "Read more",
+          "href": "blog"
         },
-        "blogContactCard" : {
-          "heading" : " Excited to switch on modern technology?",
-          "buttonLabel" : "Let’s Talk"
+        {
+          "image": "/Crisp.png",
+          "alt": "blog",
+          "label": "Crisp ",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "buttonLabel": "Read more",
+          "href": "blog"
+        },
+        {
+          "image": "/Ternary.png",
+          "alt": "blog",
+          "label": "Ternary",
+          "description": "Creating a visual identity and product for FinOps cloud innovator.",
+          "buttonLabel": "Read more",
+          "href": "blog"
         }
-      
+      ],
+      "hasIcon": true,
+      "label": "Read More"
+    },
+    "blogContactCard": {
+      "heading": " Excited to switch on modern technology?",
+      "buttonLabel": "Let’s Talk"
+    }
+  },
+  "caseStudyPage": {
+    "caseStudy": {
+      "heading": "Case Study",
+      "description": "We are experts in what we do. Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely. We strictly follow a systematic agile process of working that yields in excellent, robust and world class projects.",
+      "itemList": [
+        {
+          "label": "Wise Experts",
+          "href": "wise-experts",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "80%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "150%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Logic Tales",
+          "href": "logic-tales",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "30%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "190%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Intercollab",
+          "href": "Intercollab",
+          "percentageList": [
+            {
+              "percentage": "100%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "10%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "10%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Skype",
+          "href": "Skype",
+          "percentageList": [
+            {
+              "percentage": "110%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "60%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "90%",
+              "description": "Indexed Pages"
+            }
+          ]
+        }
+      ],
+      "hasIcon": true,
+      "label": "Read More",
+      "icon": "diamond",
+      "href": "contact"
+    }
   },
   "header": {
     "logoUrl": {
@@ -107,7 +257,7 @@
     "sidebarLink": [
       {
         "label": "WHAT IS JAMSTACK",
-        "href": "know-Jamstack",
+        "href": "jamstack",
         "target": "_self"
       },
       { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
@@ -122,13 +272,13 @@
       "target": "_self"
     },
     "Contactlabel": "Contact Information",
-    "phoneNumber": "+91 990-123-4567",
-    "email": "geexu@gmail.com",
+    "phoneNumber": "+91 9130 036 036",
+    "email": "hello@jamstack.plus",
     "country": "India",
 
     "socialLink": [
       {
-        "iconName": "icon-mail",
+        "iconName": "icon-mail1",
         "href": "https://mail.google.com/",
         "alt": "image",
         "target": "_blank"
@@ -165,7 +315,6 @@
       "alt": "crossLogo logo"
     }
   },
-
   "footer": {
     "footerLogo": {
       "url": "/logo.svg",
@@ -207,7 +356,7 @@
     ],
     "footerMenu": [
       { "label": "Ecosystem", "href": "ecosystem", "target": "_self" },
-      { "label": "Know Jamstack", "href": "know-Jamstack", "target": "_self" },
+      { "label": "Know Jamstack", "href": "jamstack", "target": "_self" },
       { "label": "Pricing", "href": "pricing", "target": "_self" },
 
       { "label": "EcommJ", "href": "ecommJ", "target": "_self" },
@@ -389,6 +538,7 @@
         { "image": "/clearbit.png", "alt": "image" },
         { "image": "/crunchbase.png", "alt": "image" },
         { "image": "/xero.png", "alt": "image" },
+        { "image": "/oppo.png", "alt": "image" },
         { "image": "/contact.png", "alt": "image" }
       ],
       "type": "primary",
@@ -636,9 +786,9 @@
               "id": "nextjs"
             },
             {
-              "name": "Angular",
+              "name": "NuxtJs",
               "icon": "icon-group",
-              "id": "angular"
+              "id": "nuxtjs"
             }
           ],
           "selected": []
@@ -830,7 +980,7 @@
     },
     "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
   },
-  "aboutUs": {
+  "faq": {
     "banner": {
       "heading": "We Know. We Create.We Stand Unique.",
       "backGroundColor": "#ffffff",
@@ -895,7 +1045,7 @@
       "processArray": [
         {
           "title": "Discuss- get started:",
-          "image": "",
+          "image": "articleOne.png",
           "layout": "imageRight",
           "labelArray": [
             { "label": "Brainstorming on idea" },
@@ -906,7 +1056,7 @@
         },
         {
           "title": "Define and Design:",
-          "image": "",
+          "image": "articleTwo.png",
           "layout": "imageLeft",
           "labelArray": [
             { "label": "Analysis documentation" },
@@ -917,7 +1067,7 @@
         },
         {
           "title": "Develop:",
-          "image": "",
+          "image": "articleThree.png",
           "layout": "imageRight",
           "labelArray": [
             { "label": "Code ready to test" },
@@ -928,7 +1078,7 @@
         },
         {
           "title": "Deploy -pre and post methods:",
-          "image": "",
+          "image": "articleFive.svg",
           "layout": "imageLeft",
           "labelArray": [
             { "label": "Quality assurance testing" },
@@ -939,7 +1089,7 @@
         },
         {
           "title": "Accelerate",
-          "image": "",
+          "image": "articleFour.svg",
           "layout": "imageRight",
           "labelArray": [
             { "label": "Business analysis and dashboard" },
@@ -996,7 +1146,7 @@
     "hasIcon": false,
     "label": "Read More"
   },
-  
+
   "webj": {
     "banner": {
       "heading": "Sustainable, secured and scalable websites",
@@ -1044,7 +1194,7 @@
         },
         {
           "label": "Choose your tech-stack",
-          "content": " <p><span class='pb-2'>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p><span className='pb-5 pt-27'><strong><span className='mb-5 ' >Static Site Generator(SSG):&nbsp;</span></strong></span></p>  <p><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p> <p><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://tinyurl.com/y4vcyhbr' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://tinyurl.com/ykda7xch' alt='prismic' width='140' height='32'> </p>",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "step-2",
@@ -1375,7 +1525,7 @@
         },
         {
           "label": "Choose your tech-stack",
-          "content": " <p><span class='pb-2'>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p><span className='pb-5 pt-27'><strong><span className='mb-5 ' >Static Site Generator(SSG):&nbsp;</span></strong></span></p>  <p><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p> <p><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://tinyurl.com/y4vcyhbr' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://tinyurl.com/ykda7xch' alt='prismic' width='140' height='32'> </p>",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "step-2",
@@ -1664,7 +1814,7 @@
         },
         {
           "label": "Choose your tech-stack",
-          "content": " <p><span class='pb-2'>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p><span className='pb-5'><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp;</span></strong></span></p>  <p><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p> <p><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://tinyurl.com/y4vcyhbr' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://tinyurl.com/ykda7xch' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap p-3 items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "step-2",
@@ -1724,7 +1874,10 @@
       ]
     },
     "morderTechnologyOne": {
-      "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products"
+      "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products",
+      "label": "Know Ecosystem",
+      "size": "medium",
+      "href": "ecosystem"
     },
     "accordian": {
       "heading": "How amazing is ecommJ to build your app?",
@@ -1928,6 +2081,247 @@
       ],
       "hasIcon": true,
       "label": "Read More"
+    }
+  },
+  "jamStack": {
+    "banner": {
+      "heading": "What is Jamstack? ",
+      "description": "Modern architecture gives the approach of building everything on the web from apps to websites based on Javascript, ApIs and Markup(JAM).",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "image": "/jamStackBanner.png",
+      "type": "primary",
+      "size": "medium",
+      "layout": "Image Bottom",
+      "href": "contact"
+    },
+    "cards": {
+      "heading": "Why we love JAM?",
+      "description": "Since JAM development is not a specific technology or language to build the web solutions, it’s instead a countless combination of tools and languages that are combined to create the final product.",
+      "cardsitems": [
+        {
+          "title": "Easy CMS",
+          "class": "icon-ic_Easy-CMS"
+        },
+        {
+          "title": "Ultra Fast",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Highly Secure",
+          "class": "icon-ic_Highly-Secure"
+        },
+
+        {
+          "title": "Tailored Tech Stack",
+          "class": "icon-ic_Tailored-Tech-Stack"
+        },
+
+        {
+          "title": "Cheap Scaling",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Easy Maintain",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "accordian": {
+      "heading": "Benefits of JAMSTACK:",
+      "accordinaList": [
+        {
+          "label": "Cost effective CDN use",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Decoupled functionalities",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Security",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Progressive web apps",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Timeless technology",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Jamstack is the way to sustainable success and Jamstack+ is your gateway.",
+      "href": "contact",
+      "type": "primary",
+      "label": "Get Started",
+      "size": "medium"
+    },
+    "productCard": {
+      "heading": "Products we Create",
+      "cards": [
+        {
+          "label": "webJ",
+          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
+          "buttonLabel": "Know More",
+          "href": "webj"
+        },
+        {
+          "label": "ecommJ",
+          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
+          "buttonLabel": "Know More",
+          "href": "ecommj"
+        },
+        {
+          "label": "mobJ",
+          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
+          "buttonLabel": "Know More",
+          "href": "mobj"
+        }
+      ]
+    }
+  },
+  "aboutUs": {
+    "banner": {
+      "heading": "We Know. We Create.We Stand Unique.",
+      "backGroundColor": "#ffffff",
+      "description": "We are Jamstack+, a platform that provides a complete digital presence ecosystem through our very own, crafted products: webJ, ecommJ, and mobJ.",
+      "headingSize": "medium",
+      "image": "/aboutus.svg",
+      "layout": "Image Left"
+    },
+    "morderTechnology": {
+      "heading": "Purpose behind Jamstack+",
+      "description": "Technology that simplifies digital journey for ambitious businesses!"
+    },
+    "jamStackRecipe": {
+      "heading": "At Jamstack+ we serve the perfect",
+      "label": "RECIPE"
+    },
+    "jamStackStories": {
+      "heading": "Journey of Jamstack+",
+      "descriptionArray": [
+        {
+          "description": "We began the journey with the goal of giving the best, creatively made, and timeless solutions to our valued consumers through technology. On this journey, we worked with the same JAMstack basics from beginning to end of the project."
+        },
+        {
+          "description": "We envisioned building a single platform that would provide everything for everyone online. As a result of our efforts to justify JAMstack, we created the Jamstack+: the next generation of modern technology."
+        },
+        {
+          "description": "We developed J+heros to deliver solutions across all platforms. These are thoroughly processed, rehearsed, and well-engineered solutions for anyone wishing to advance their digital platforms using popular technology."
+        }
+      ]
+    },
+    "cards": {
+      "heading": "Our PLUS factors:",
+      "cardsArray": [
+        {
+          "title": "Keen on details",
+          "class": "icon-ic_Keen-on-details"
+        },
+        {
+          "title": "Coherent communication",
+          "class": "icon-ic_Coherent-communication"
+        },
+        {
+          "title": "Factual truthful",
+          "class": "icon-ic_Factual-truthful"
+        },
+        {
+          "title": "Remarkable on timeless",
+          "class": "icon-ic_Remarkable-on-timeless"
+        },
+        {
+          "title": "Accountable partner",
+          "class": "icon-ic_Accountable-partner"
+        },
+        {
+          "title": "Futuristic visioner",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "jamStackProcess": {
+      "heading": "How we do it",
+      "processArray": [
+        {
+          "title": "Discuss- get started:",
+          "image": "articleOne.png",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Brainstorming on idea" },
+            { "label": "Strategy planning" },
+            { "label": "Requirement gathering" },
+            { "label": "Analysis and approach" }
+          ]
+        },
+        {
+          "title": "Define and Design:",
+          "image": "articleTwo.png",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Analysis documentation" },
+            { "label": "Wireframes and mockups" },
+            { "label": "Design architecture" },
+            { "label": "Design templates with style guide" }
+          ]
+        },
+        {
+          "title": "Develop:",
+          "image": "articleThree.png",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Code ready to test" },
+            { "label": "Dev documentation and approach" },
+            { "label": "Frontend, backend with DB" },
+            { "label": "Unit testing" }
+          ]
+        },
+        {
+          "title": "Deploy -pre and post methods:",
+          "image": "articleFive.svg",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Quality assurance testing" },
+            { "label": "CDN/edge networking" },
+            { "label": "Usage guidelines" },
+            { "label": "Hosting" }
+          ]
+        },
+        {
+          "title": "Accelerate",
+          "image": "articleFour.svg",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Business analysis and dashboard" },
+            { "label": "Recommendations and insights of the business" },
+            { "label": "Recommendations and insights of the business" }
+          ]
+        }
+      ]
+    },
+    "jamstackQuote": {
+      "heading": "“Simplifying and scaling up your noteworthy digital journey”",
+      "author": "—Team Jamstack+"
     }
   }
 }

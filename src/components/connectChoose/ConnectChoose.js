@@ -3,8 +3,8 @@ import Button from '../form/button/Button'
 
 function ConnectChoose({ heading, description, type, size, label }) {
   return (
-    <div className="px-4 pb-32 lg:pl-24 pt-32">
-      <h2 className="text-centre text-2xl lg:text-6xl">{heading}</h2>
+    <div className="container mx-auto py-16 px-4 md:px-0">
+      <h2 className="text-centre text-5xl leading-snug">{heading}</h2>
       <p className="lg:w-5/12 pt-4">
         {description}
       </p>

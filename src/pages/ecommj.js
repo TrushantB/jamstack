@@ -30,7 +30,7 @@ const Ecommj = ({ header, footer }) => {
   return (
     <Layout header={header} footer={footer}>
       {/* Banner section */}
-      <div className=" pb-32 pt-32 px-5 lg:px-24 ">
+      <div className="pb-0 pt-0">
         <Banner {...ecommjData.banner} />
       </div>
 
@@ -38,7 +38,7 @@ const Ecommj = ({ header, footer }) => {
       <Info {...ecommjData.info} />
 
       {/* Ecomm process */}
-      <div className="pb-24 lg:px-24 px-5 ">
+      <div className="pb-12 md:pb-24 lg:px-24 px-5 ">
 
 
         <Stepper {...ecommjData?.stepperData} />
@@ -53,12 +53,12 @@ const Ecommj = ({ header, footer }) => {
 
       {/* Facts Section with bg color */}
 
-      <div className="lg:px-24 py-32">
+      <div className="container mx-auto px-4 md:px-0 py-16 md:py-24">
         {<PlatformAccordian {...ecommjData?.accordian} />}
       </div>
 
       {/* case study section */}
-      <div className=" pb-24 lg:px-24 px-5">
+      <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <CaseStudy {...ecommjData?.caseStudy} />
       </div>
 
@@ -69,12 +69,12 @@ const Ecommj = ({ header, footer }) => {
       </div>
 
       {/* Testimonial section */}
-      <div className="py-24 lg:px-24 px-5  ">
+      <div className="py-12 md:py-24 container mx-auto px-4 md:px-0">
         <TestimonialCard {...ecommjData?.testimonialCard} />
       </div>
 
       {/*  blog section */}
-      <div className=" pb-24 px-5 lg:px-24 ">
+      <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <BlogCard {...ecommjData?.blogCard} />
       </div>
     </Layout>

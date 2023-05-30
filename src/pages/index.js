@@ -31,17 +31,15 @@ const Home = ({ header, footer }) => {
 
   return (
     <Layout header={header} footer={footer}>
-      <div className="lg:px-24 px-5 py-24">
-        {<Banner {...homeData.banner} />}
-      </div>
+      <div>{<Banner {...homeData.banner} />}</div>
 
-      {<WebSection {...homeData.technologySolution} />}
+      <WebSection {...homeData.technologySolution} />
 
       <div>
         <TextBannerList {...homeData.textBannerList} />
       </div>
 
-      <div className="py-24">
+      <div>
         <VideoBanner {...homeData.videoBanner} />
       </div>
 
@@ -51,36 +49,36 @@ const Home = ({ header, footer }) => {
 
       <WebStactics {...homeData.Webstatstics} />
 
-      <div className="lg:px-24 pb-24">
+      <div className="">
         <Benefits {...homeData.benefits} />
       </div>
 
-      <div className="pb-24 lg:px-24 ">
-        <h2 className="text-center pb-14">{homeData?.productCard?.heading}</h2>
+      <div className=" ">
+        <h2 className="text-center pb-10">{homeData?.productCard?.heading}</h2>
         <ProductCard {...homeData.productCard} />
       </div>
 
-      <div className="lg:px-24 px-5 pb-24">
+      <div className="">
         <OurClient {...homeData.ourClient} />
       </div>
 
-      <div className="lg:px-24 px-5">
+      <div className="">
         <EdgeNetwork {...homeData.edgeNetwork} />
       </div>
 
-      <div className="lg:px-24 px-5">
+      <div className="">
         <CaseStudy {...homeData.caseStudy} />
       </div>
 
-      <div className="my-24 pt-6 pb-4 bg-accent-100 ">
+      <div className="pt-6 pb-4 my-16 lg:my-24 bg-accent-100 ">
         {<MordernTechnology {...homeData.morderTechnology} />}
       </div>
 
-      <div className="lg:px-24 px-5">
+      <div className="">
         <TestimonialCard {...homeData.testimonialCard} />
       </div>
 
-      <div className="lg:px-24 pt-24 ">
+      <div className="lg:pt-24 pt-14 ">
         <div className="text-center">
           <h2>{homeData?.blogCard?.heading}</h2>
         </div>

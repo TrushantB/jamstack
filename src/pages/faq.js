@@ -16,7 +16,7 @@ const Faq = ({ header, footer }) => {
 
   return (
     <Layout header={header} footer={footer}>
-      <div className="px-3 lg:px-24 py-8">
+      <div className="container mx-auto">
         <Banner {...faqData?.banner} />
       </div>
 

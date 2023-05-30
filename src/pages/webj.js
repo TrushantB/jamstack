@@ -25,13 +25,13 @@ const Ecommj = ({ header, footer }) => {
   }
   return (
     <Layout header={header} footer={footer}>
-      <div className=" pb-32 pt-32 px-5 lg:px-24 ">
+      <div className="pb-0 pt-0">
         <Banner {...webData.banner} />
       </div>
 
       <Info {...webData.info} />
 
-      <div className="pb-24 lg:px-24 px-5 ">
+      <div className="pb-12 md:pb-24 lg:px-24 px-5 ">
         <Stepper {...webData?.stepperData} />
       </div>
 
@@ -39,11 +39,11 @@ const Ecommj = ({ header, footer }) => {
         <ModernTechnologyOne {...webData?.morderTechnologyOne} />
       </div>
 
-      <div className="lg:px-24 py-32">
+      <div className="container mx-auto px-4 md:px-0 py-16 md:py-24">
         {<PlatformAccordian {...webData?.accordian} />}
       </div>
 
-      <div className=" pb-24 lg:px-24 px-5">
+      <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <CaseStudy {...webData?.caseStudy} />
       </div>
 
@@ -53,12 +53,12 @@ const Ecommj = ({ header, footer }) => {
       </div>
 
       {/* Testimonial section */}
-      <div className="py-24 lg:px-24 px-5  ">
+      <div className="py-12 md:py-24 container mx-auto px-4 md:px-0">
         <TestimonialCard {...webData?.testimonialCard} />
       </div>
 
       {/*  blog section */}
-      <div className=" pb-24 px-5 lg:px-24 ">
+    <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <BlogCard {...webData?.blogCard} />
       </div>
     </Layout>

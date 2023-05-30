@@ -1,17 +1,47 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
 
 const Info = ({description,question,lineIMage}) => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      defaults: { duration: 6, ease: "linear" },
+    });
+
+    tl.fromTo(
+      ".line",
+      { opacity: 0, height: 0 },
+      { opacity: 1, height: "100%", backgroundColor: "black", duration: 6 }
+    )
+      .to(".dot", { duration: 2, opacity: 1 ,scale:1})
+      
+
+      
+
+    ScrollTrigger.create({
+      trigger: ".section",
+      start: "20% 30%",
+      end: "bottom center",
+      scrub: true,
+      animation: tl,
+    
+    });
+  }, []);
   return (
    
-         <div className="mb-32 flex flex-col items-center px-5 lg:px-0">
+         <div className="mb-20 flex flex-col items-center px-5 lg:px-0 section">
         <h2 className="text-center pb-5">{question}</h2>
         <p className="lg:w-7/12 mx-auto text-center">
           {description}
         </p>
-        <img
-          className="py-4"
-          src={`${lineIMage.url}`}
-        ></img>
+        <div className="flex justify-between items-center flex-col h-80">
+          <div className="line border-3 w-[1px] border-green bg-black"></div>
+          <div className="w-5 h-5 rounded-full bg-black dot opacity-0 "></div>
+        </div>
       </div>
    
   )
