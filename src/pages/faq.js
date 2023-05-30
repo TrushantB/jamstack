@@ -2,8 +2,8 @@ import { React, useEffect, useState } from "react";
 import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
-import Accordion from "@/components/accordian/accordion";
 import BlogCard from "@/components/blogCard/BlogCard";
+import Accordion from "@/components/accordian/accordion";
 
 const Faq = ({ header, footer }) => {
   const [faqData, setFaqData] = useState(null);
@@ -32,7 +32,7 @@ const Faq = ({ header, footer }) => {
           <BlogCard {...faqData?.blogCard} />
         </div>
       </div>
-    </Layout>
+    </Layout> 
   );
 };
 
