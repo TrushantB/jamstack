@@ -1,11 +1,28 @@
-import Layout from '@/components/layout'
-import React from 'react'
+import { React, useEffect, useState } from "react";
+import { get } from "@/client/api";
+import CaseStudy from "@/components/caseStudy/CaseStudy";
+import Layout from "@/components/layout";
 
-export default function caseStudy({ header, footer }) {
+const CaseStudyPage = ({ header, footer }) => {
+  const [caseStudyData, setCaseStudyData] = useState(null);
+
+  useEffect(() => {
+    get("caseStudyPage").then((response) => {
+      setCaseStudyData(response);
+    });
+  }, []);
+
+  if (!caseStudyData) {
+    return <></>;
+  }
+
   return (
     <Layout header={header} footer={footer}>
-      <h1 className='container mx-auto'> Case Study</h1>
+      <div className="container my-9">
+      <CaseStudy {...caseStudyData.caseStudy} />
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
+export default CaseStudyPage;
