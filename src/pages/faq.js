@@ -22,11 +22,11 @@ const Faq = ({ header, footer }) => {
         <Banner {...faqData?.banner} />
       </div>
 
-      <div className="pt-14 lg:px-25">
+      <div className="conatiner mx-auto px-4 lg:px-0">
         <Accordion {...faqData?.accordinData} />
       </div>
 
-       <div className="lg:px-24 pt-24 ">
+       <div className="container mx-auto px-4 lg:px-0 py-12 lg:py-18">
         <div className="text-center">
           <h2>{faqData?.blogCard?.heading}</h2>
         </div>
