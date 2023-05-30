@@ -45,7 +45,7 @@ function WebStactics({
         <div className="pt-6 lg:pt-0">
           <h2 className="">{heading}</h2>
         </div>
-        <div className="my-10 lg:my-0 ">
+        <div className="my-4 lg:my-0 ">
           <p className="lg:w-6/12">{description}</p>
         </div>
 
@@ -64,7 +64,7 @@ function WebStactics({
             </button>
           ) : (
             isButton && (
-              <button className="bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white">
+              <button className="bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn">
                 {buttonLabel}
               </button>
             )
