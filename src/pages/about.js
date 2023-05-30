@@ -20,7 +20,7 @@ const About = ({ header, footer }) => {
 
   return (
     <Layout header={header} footer={footer}>
-      <div className="lg:px-24 px-5 py-24">
+      <div className="container mx-auto">
         <Banner {...aboutData?.banner} />
       </div>
 
@@ -32,11 +32,13 @@ const About = ({ header, footer }) => {
         <JamStackRecipe {...aboutData?.jamStackRecipe} />
       </div>
 
-      <div className="flex flex-col text-white lg:px-24 px-5   bg-secondary ">
-        <JamStackStories {...aboutData?.jamStackStories} />
+      <div className="text-white bg-secondary py-12 md:py-24 px-4 xl:px-0">
+        <div className="container mx-auto flex flex-col">
+          <JamStackStories {...aboutData?.jamStackStories} />
+        </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center lg:px-24 px-5  py-24">
-        <div className="lg:w-3/12 pb-6  ">
+      <div className="flex flex-col lg:flex-row lg:items-center container mx-auto px-4 xl:px-0 py-24">
+        <div className="lg:w-3/12 pb-6">
           <h2>{aboutData && aboutData.cards && aboutData.cards.heading}</h2>
         </div>
         <div className="lg:w-8/12">
@@ -44,12 +46,14 @@ const About = ({ header, footer }) => {
         </div>
       </div>
 
-      <div className="lg:px-24 px-5 py-32">
+      <div className="container mx-auto px-4 md:px-0 py-16 lg:py-24">
         <AboutArticle jamStackProcess={aboutData?.jamStackProcess} />
       </div>
 
-      <div className="flex flex-col text-white lg:px-24 px-5  bg-secondary ">
-        <JamSTackAuthor {...aboutData?.jamstackQuote} />
+      <div className="text-white bg-secondary">
+        <div className="container mx-auto px-4 md:px-0 py-16 lg:py-24 flex flex-col">
+          <JamSTackAuthor {...aboutData?.jamstackQuote} />
+        </div>        
       </div>
     </Layout>
   );

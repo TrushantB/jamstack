@@ -13,13 +13,13 @@ const Accordion = ({ accordin, isInner=false }) => {
   return (
     <div className={isInner ? "my-6": 'lg:px-12 px-3'}>
       {accordin?.map((item, index) => (
-        <div className={`accordion-item border-t-2 border-accent-200 cursor-pointer ${isInner ? "": 'p-5'}`} key={index}>
+        <div className={`accordion-item border-t border-accent-200 cursor-pointer ${isInner ? "": 'p-5'}`} key={index}>
           <div
-            className={`accordion-title flex justify-between items-center ${isInner ? "py-5": 'lg:p-5 '}`}
+            className={`accordion-title flex justify-between items-start ${isInner ? "py-5": 'lg:p-5 '}`}
             onClick={() => toggleAccordion(item)}
           >
             <div>
-              <h5 className={`${isInner ? 'text-base': ''}`}>{item.label}</h5>
+              <h5 className={`${isInner ? 'text-base font-body font-bold': ''}`}>{item.label}</h5>
             </div>
             <div>
               {active === item ? (

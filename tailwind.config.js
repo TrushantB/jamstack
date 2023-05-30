@@ -21,6 +21,10 @@ module.exports = {
         "spin-slow": "spin 10s linear infinite",
       },
     },
+    fontFamily: {      
+      'body': ['Inter'],
+      'title': ['Neo Sans Pro'],
+    }
   },
   variants: {
     extend: {},
