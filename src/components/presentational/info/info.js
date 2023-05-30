@@ -11,10 +11,10 @@ const Info = ({ description, question, lineImage }) => {
     });
 
     tl.fromTo(
-      ".section .line1",
+      ".section .line",
       { opacity: 0, height: 0 },
       { opacity: 1, height: "100%", backgroundColor: "black", duration: 6 }
-    ).to(".section .dot1", { duration: 2, opacity: 1, scale: 1 });
+    ).to(".section .dot", { duration: 2, opacity: 1, scale: 1 });
 
     const start = window.innerWidth < 768 ? "center 30%" : "20% 30%";
     const end = window.innerWidth < 768 ? "100% 10%" : "bottom center";
