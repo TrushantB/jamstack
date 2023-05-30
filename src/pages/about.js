@@ -33,8 +33,9 @@ const About = ({ header, footer }) => {
       </div>
 
       <div className="text-white bg-secondary py-12 md:py-24 px-4 xl:px-0">
-        <div className="container mx-auto flex flex-col"></div>
-        <JamStackStories {...aboutData?.jamStackStories} />
+        <div className="container mx-auto flex flex-col">
+          <JamStackStories {...aboutData?.jamStackStories} />
+        </div>
       </div>
       <div className="flex flex-col lg:flex-row lg:items-center container mx-auto px-4 xl:px-0 py-24">
         <div className="lg:w-3/12 pb-6">
