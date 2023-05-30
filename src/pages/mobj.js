@@ -39,11 +39,11 @@ const Ecommj = ({ header, footer }) => {
         <ModernTechnologyOne {...mobjData?.morderTechnologyOne} />
       </div>
 
-      <div className="lg:px-24 py-32">
+      <div className="container mx-auto px-4 md:px-0 py-16 md:py-24">
         {<PlatformAccordian {...mobjData?.accordian} />}
       </div>
 
-      <div className=" pb-24 lg:px-24 px-5">
+      <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <CaseStudy {...mobjData?.caseStudy} />
       </div>
 
@@ -53,12 +53,12 @@ const Ecommj = ({ header, footer }) => {
       </div>
 
       {/* Testimonial section */}
-      <div className="py-24 lg:px-24 px-5  ">
+      <div className="py-12 md:py-24 container mx-auto px-4 md:px-0">
         <TestimonialCard {...mobjData?.testimonialCard} />
       </div>
 
       {/*  blog section */}
-      <div className=" pb-24 px-5 lg:px-24 ">
+      <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <BlogCard {...mobjData?.blogCard} />
       </div>
     </Layout>
