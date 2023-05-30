@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function BlogContactCard() {
+export default function BlogContactCard({blogContactCard}) {
+
+    console.log("blogContactCard===<<<<<<<<" , blogContactCard)
   return (
 
     <div className=''> 
@@ -9,11 +11,11 @@ export default function BlogContactCard() {
             <img className='w-full h-full' src="blogContentCard.png" alt='blogContentCard' />
         </div>
         <div className='font-semibold text-2xl my-5'>
-            Excited to switch on modern technology?
+            {blogContactCard?.heading}
         </div>
         <div className='mt-11 font-semibold'>
             <a className='text-primary text-2xl' href='#'>
-                Let’s Talk
+            {blogContactCard?.buttonLabel}
             </a>
         </div>
     </div>
