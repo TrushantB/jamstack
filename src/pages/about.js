@@ -37,12 +37,12 @@ const About = ({ header, footer }) => {
           <JamStackStories {...aboutData?.jamStackStories} />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row lg:items-center container mx-auto px-4 xl:px-0 py-24">
-        <div className="lg:w-3/12 pb-6">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between container mx-auto px-4 xl:px-0 pt-16 xl:pt-20 xl:pb-4">
+        <div className="lg:w-3/12 pb-0">
           <h2>{aboutData && aboutData.cards && aboutData.cards.heading}</h2>
         </div>
         <div className="lg:w-8/12">
-          <Card {...aboutData?.cards} />
+          <Card items={aboutData?.cards?.cardsArray} />
         </div>
       </div>
 
