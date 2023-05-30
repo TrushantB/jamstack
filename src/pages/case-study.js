@@ -4,7 +4,7 @@ import React from 'react'
 export default function caseStudy({ header, footer }) {
   return (
     <Layout header={header} footer={footer}>
-      <h1> case Study page</h1>
+      <h1 className='container mx-auto'> Case Study</h1>
     </Layout>
   )
 }

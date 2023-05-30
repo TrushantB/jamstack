@@ -1,57 +1,65 @@
 import React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import classNames from "classnames";
 import Button from "../../form/button/Button";
 
-
-const Banner = ({ heading, image, type, size, label, layout ,href  , description}) => {
+const Banner = ({
+  heading,
+  image,
+  type,
+  size,
+  label,
+  layout,
+  href,
+  description,
+  isInner = false,
+}) => {
   return (
-    <div className="">
+    <div className="container mx-auto lg:py-24 py-16">
       <div
         className={classNames({
-          "md:flex justify-center": true,
-          "flex-col-reverse": layout === "Image Bottom",
+          "md:flex justify-center px-5 flex-col sm:flex-row": true,
+          "flex-col-reverse sm:flex-col": layout === "Image Bottom",
         })}
       >
         <div
           className={classNames({
-            "md:w-1/2": true,
-            "w-full": layout === "Image Bottom",
-            "flex ": layout === "Image Left",
-            "text-center": layout !== "Image Left",
+            // "md:w-1/2": true,
+            "w-full mt-0 md:mb-12 text-center": layout === "Image Bottom",
+            "flex lg:w-3/5 ": layout === "Image Left"            
           })}
         >
           <div
             className={classNames({
-              "flex items-center": layout === "Image Left",
+              "flex items-center md:pr-0": layout === "Image Left",
             })}
           >
             <div>
-              <h1 className="text-black-950 font-bold">{heading}</h1>
+              <h1 className="text-black-950">{heading}</h1>
+              {description && (
+                <div>
+                  <p className="pt-5 max-w-[70ch] mx-auto">{description}</p>
+                </div>
+              )}
 
-              {label && <div className="my-16">
-                <Link href={`${href}`} >
-                <Button
-                  label={label}
-                  type={type}
-                  size={size}
-                />
-                </Link>
-              </div>}
-              {description && <div>
-                <p className="lg:pt-8 pt-3">{description}</p>
-              </div>}
+              {label && (
+                <div className="mt-12">
+                  <Link href={`${href}`} className="btn">
+                    {label}
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
         {layout === "Image Left" && (
-          <div className="flex md:w-1/2 items-start lg:items-center justify-end">
+          <div className="flex sm:justify-center lg:w-2/5 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
             <img src={image} alt="image" />
           </div>
         )}
         {layout === "Image Bottom" && (
           <div className="flex items-center justify-center">
-            <img className="w-10/12" src={image} alt="image" />
+            <img className="w-10/12 mt-12 sm:mt-0" src={image} alt="image" srcSet="" />
           </div>
         )}
       </div>

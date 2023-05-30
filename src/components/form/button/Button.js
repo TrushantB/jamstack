@@ -13,19 +13,20 @@ const ButtonSize = (size) => {
 
 const ButtonType = (type) => {
   return classNames({
-    "bg-pink-500 text-white": type === "primary",
-    "bg-blue-500 text-white": type === "secondary",
-    "bg-gray-500 text-white": type === "tertiary",
+    "bg-pink-500 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-black ring-offset-2": type === "primary",
+    "bg-blue-500 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-black ring-offset-2": type === "secondary",
+    "bg-gray-500 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-black ring-offset-2": type === "tertiary",
     "bg-gray-300 text-gray-500 cursor-not-allowed": type === "disabled",
   });
 };
 
-const Button = ({ type, size, label }) => {
+const Button = ({ type, size, label, ...rest }) => {
   return (
     <div>
       <button
         className={`${ButtonType(type)} ${ButtonSize(size)}`}
         disabled={type === "disabled"}
+        {...rest}
       >
         {label}
       </button>
