@@ -230,7 +230,7 @@
   -webkit-line-clamp: 3;
 }
 
-.product .slick-track {
+.testimonial  .slick-track {
   display: flex !important;
   gap: 20px;
 }

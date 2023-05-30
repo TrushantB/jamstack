@@ -62,7 +62,7 @@ function TestimonialCard({ cards, heading }) {
         <h2 className="mb-5 lg:mb-0">{heading}</h2>
       </div>
 
-      <div className="  gap-14 flex flex-col lg:w-8/12  mx-4 lg:mx-0 product ">
+      <div className="  gap-14 flex flex-col lg:w-8/12  mx-4 lg:mx-0 testimonial ">
         <Slider {...sliderSetting}>
           {cards &&
             cards?.map((item, index) => (
@@ -86,6 +86,7 @@ function TestimonialCard({ cards, heading }) {
         </Slider>
       </div>
     </div>
+    
   );
 }
 
