@@ -204,14 +204,23 @@
 
 .pentagon {
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation-delay: 5s;
 }
 
 .circle {
   clip-path: circle(50% at 50% 50%);
+  
+
 }
+
+
 
 .diamond {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.diamond::after{
+  animation-delay: 2s;
 }
 
 .video {
@@ -331,9 +340,67 @@
   border-bottom: none;
 }
 
+
+.animation {
+  position: relative;
+  background: #FF5223;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.animation::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  height: 200%;
+  width: 200%;
+  box-sizing: border-box;
+  background-color: #F1F2F6;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-100%) rotate(0deg);
+  }
+  51% {
+    transform: translateY(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100%) rotate(360deg);
+  }
+}
+
+.diamond::after {
+  animation: spin 6s linear infinite;
+}
+
+.circle::after {
+  animation: spin 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.pentagon::after {
+  animation: spin 6s linear infinite;
+  animation-delay: 4s;
+}
+
+
+
+
+
 @media screen and (min-width: 1024px) {
   body,
   html {
     font-size: 20px;
   }
+
+
+
+
+
 }
+

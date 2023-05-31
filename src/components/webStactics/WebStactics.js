@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import ReportLoader from "./reportLoader";
 
 function WebStactics({
   heading,
@@ -75,10 +76,14 @@ function WebStactics({
             <p className="text-red-600 bg-red-100 py-1 px-3 rounded-full">
               {error}
             </p>
+            
           </div>
         )}
 
         {/* input end  */}
+        <div className="bg-white py-100">
+          <ReportLoader/>
+        </div>
       </div>
     </div>
   );
