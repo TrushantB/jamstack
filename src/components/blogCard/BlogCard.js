@@ -50,7 +50,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
   };
 
   return (
-    <div className="container lg:mx-auto  py-10  h-full  blog">
+    <div className="container mx-auto py-10 h-full blog">
       <div className="mx-4 lg:mx-0 ">
         <Slider {...sliderSetting} className="flex flex-grow">
           {cards?.map((card, index) => (
@@ -66,7 +66,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                 alt={card.altTag}
               />
               <div className="p-4  flex flex-col justify-between">
-                <h4 className="mb-3">{label}</h4>
+                <h4 className="mb-3">{card.label}</h4>
                 <p className="leading-relaxed mb-5 w-9/12">
                   {card.description}
                 </p>
@@ -74,7 +74,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                   {hoverItem === card && (
                     <Link
                       className="flex gap-3 items-center text-primary"
-                      href="#"
+                      href={`/blogs/${card.slug}`}
                     >
                       {label}
                       <span className="icon-arrow-right2 text-2xl text-primary "></span>

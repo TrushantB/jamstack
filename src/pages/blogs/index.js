@@ -1,10 +1,9 @@
 import { React, useEffect, useState } from "react";
 import { get } from "@/client/api";
-import Layout from '@/components/layout'
+import Layout from "@/components/layout";
 import Blogpage from "@/components/blog/blogPage";
 
 function Blog({ header, footer }) {
-
   const [blogData, setBlogData] = useState([]);
 
   useEffect(() => {
@@ -13,15 +12,13 @@ function Blog({ header, footer }) {
     });
   }, []);
 
-
   return (
-    <Layout header={header} footer={footer} >
+    <Layout header={header} footer={footer}>
       <div className="lg:px-24 p-5">
-        {<Blogpage {...blogData} />}
+        <Blogpage {...blogData} />
       </div>
     </Layout>
-
-  )
+  );
 }
 
-export default Blog
+export default Blog;

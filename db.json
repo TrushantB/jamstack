@@ -1,96 +1,166 @@
 {
-  "blogDetailsPage" : {
-        "heading" : "Governance by human-centered design",
-        "blogBanner" : "/blogDetailsBanner.png",
-        "alt" : "blogDetailsBanner",
-        "author" : {
-          "image" : "/clientPage.png",
-          "alt" : "clientPagePerson",
-          "name" : "Ivan Krizaj",
-          "description" : "Ivan Krizaj is Hygraph's Head of Developer Relations. He has a strong passion for developer education and experience as well as decoupled architectures, frontend development, and clean design.",
-          "socialSharing" : [
-            {"icon" : "icon-twitter" , "alt" : "twitter" , "href" : "" , "target" : "_blank"},
-            {"icon" : "icon-facebook2" , "alt" : "facebook" , "href" : "" , "target" : "_blank"},
-            {"icon" : "icon-linkedin" , "alt" : "linkedin" , "href" : "" , "target" : "_blank"}
-          ]
+  "blogDetailsPage": {
+    "heading": "Governance by human-centered design",
+    "blogBanner": "/blogDetailsBanner.png",
+    "alt": "blogDetailsBanner",
+    "author": {
+      "image": "/clientPage.png",
+      "alt": "clientPagePerson",
+      "name": "Ivan Krizaj",
+      "description": "Ivan Krizaj is Hygraph's Head of Developer Relations. He has a strong passion for developer education and experience as well as decoupled architectures, frontend development, and clean design.",
+      "socialSharing": [
+        {
+          "icon": "icon-twitter",
+          "alt": "twitter",
+          "href": "",
+          "target": "_blank"
         },
-        "publishDate" : {
-          "icon" : "calendar.png",
-          "alt" : "calendar" ,
-          "date" : "27, FEB 2023"
+        {
+          "icon": "icon-facebook2",
+          "alt": "facebook",
+          "href": "",
+          "target": "_blank"
         },
-        "screnTime" : {
-          "icon" : "clock.png",
-          "alt" : "clock" ,
-          "duration" : "2 Mins"
-        },
-        "tableHeading" : "Table of Content",
-        "iconHeading" : "Share this article",
-        "tabelContent" : [
+        {
+          "icon": "icon-linkedin",
+          "alt": "linkedin",
+          "href": "",
+          "target": "_blank"
+        }
+      ]
+    },
+    "publishDate": {
+      "icon": "/calendar.png",
+      "alt": "calendar",
+      "date": "27, FEB 2023"
+    },
+    "screnTime": {
+      "icon": "/clock.png",
+      "alt": "clock",
+      "duration": "2 Mins"
+    },
+    "tableHeading": "Table of Content",
+    "iconHeading": "Share this article",
+    "tabelContent": [
+      {
+        "title": "Digital design process",
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 1 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
+        "socialSharing": [
           {
-            "title" : "Digital design process",
-            "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 1 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
-            "socialSharing" : [
-              {"icon" : "icon-twitter" , "alt" : "twitter" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-whatsapp1" , "alt" : "whatsApp" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-facebook2" , "alt" : "facebook" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-linkedin" , "alt" : "linkedin" , "href" : "" , "target" : "_blank"}
-            ],
-            "suggestionPost" : [
-              {"image" : "blogContentCard.png" , "alt" : "blogContentCard" , "title" : "Excited to switch on modern technology?" , "buttonLabel" : "Let’s Talk" , "href" : ""}
-            ]
+            "icon": "icon-twitter",
+            "alt": "twitter",
+            "href": "",
+            "target": "_blank"
           },
           {
-            "title" : "Key elements for effective design",
-             "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 2 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
-             "socialSharing" : [
-              {"icon" : "icon-twitter" , "alt" : "twitter" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-whatsapp1" , "alt" : "whatsApp" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-facebook2" , "alt" : "facebook" , "href" : "" , "target" : "_blank"},
-              {"icon" : "icon-linkedin" , "alt" : "linkedin" , "href" : "" , "target" : "_blank"}
-            ],
-            "suggestionPost" : [
-              {"image" : "blogContentCard.png" , "alt" : "blogContentCard" , "title" : "Excited to switch on modern technology?" , "buttonLabel" : "Let’s Talk" , "href" : ""}
-            ]
+            "icon": "icon-whatsapp1",
+            "alt": "whatsApp",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-facebook2",
+            "alt": "facebook",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-linkedin",
+            "alt": "linkedin",
+            "href": "",
+            "target": "_blank"
           }
         ],
-        "blogCard": {
-          "heading": "Related Blogs",
-          "cards": [
-            {
-              "image": "/Termgrid.png",
-              "alt": "blog",
-              "label": "Termgrid",
-              "description": "Branding a whole new category of debt management.",
-              "buttonLabel": "Read more",
-              "href": "blog"
-            },
-            {
-              "image": "/Crisp.png",
-              "alt": "blog",
-              "label": "Crisp ",
-              "description": "Designing a new mobile experience for the all-in-one messaging platform.",
-              "buttonLabel": "Read more",
-              "href": "blog"
-            },
-            {
-              "image": "/Ternary.png",
-              "alt": "blog",
-              "label": "Ternary",
-              "description": "Creating a visual identity and product for FinOps cloud innovator.",
-              "buttonLabel": "Read more",
-              "href": "blog"
-            }
-          ],
-          "hasIcon": true,
-          "label": "Read More"
+        "suggestionPost": 
+          {
+            "image": "/blogContentCard.png",
+            "alt": "blogContentCard",
+            "title": "Excited to switch on modern technology?",
+            "buttonLabel": "Let’s Talk",
+            "href": ""
+          }
+        
+      },
+      {
+        "title": "Key elements for effective design",
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 2 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
+        "socialSharing": [
+          {
+            "icon": "icon-twitter",
+            "alt": "twitter",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-whatsapp1",
+            "alt": "whatsApp",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-facebook2",
+            "alt": "facebook",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-linkedin",
+            "alt": "linkedin",
+            "href": "",
+            "target": "_blank"
+          }
+        ],
+        "suggestionPost": 
+          {
+            "image": "/blogContentCard.png",
+            "alt": "blogContentCard",
+            "title": "Excited to switch on modern technology?",
+            "buttonLabel": "Let’s Talk",
+            "href": ""
+          }
+        
+      }
+    ],
+    "blogCard": {
+      "heading": "Related Blogs",
+      "cards": [
+        {
+          "slug": "termgrid",
+          "image": "/Termgrid.png",
+          "alt": "blog",
+          "label": "Termgrid",
+          "description": "Branding a whole new category of debt management.",
+          "buttonLabel": "Read more",
+          "href": "blogs"
         },
-        "blogContactCard" : {
-          "heading" : " Excited to switch on modern technology?",
-          "buttonLabel" : "Let’s Talk"
+        {
+          "slug": "crisp",
+          "image": "/Crisp.png",
+          "alt": "blog",
+          "label": "Crisp ",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "buttonLabel": "Read more",
+          "href": "blogs"
+        },
+        {
+          "slug": "ternary",
+          "image": "/Ternary.png",
+          "alt": "blog",
+          "label": "Ternary",
+          "description": "Creating a visual identity and product for FinOps cloud innovator.",
+          "buttonLabel": "Read more",
+          "href": "blogs"
         }
+      ],
+      "hasIcon": true,
+      "label": "Read More"
+    },
+    "blogContactCard": {
+      "heading": " Excited to switch on modern technology?",
+      "buttonLabel": "Let’s Talk"
+    }
   },
-  "caseStudyPage" : {
+  "caseStudyPage": {
     "caseStudy": {
       "heading": "Case Study",
       "description": "We are experts in what we do. Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely. We strictly follow a systematic agile process of working that yields in excellent, robust and world class projects.",
@@ -173,7 +243,6 @@
       "icon": "diamond",
       "href": "contact"
     }
-
   },
   "header": {
     "logoUrl": {
@@ -185,7 +254,7 @@
       { "label": "PRICING", "href": "pricing", "target": "_self" },
       { "label": "WEBJ", "href": "webj", "target": "_self" },
       { "label": "MOBJ", "href": "mobj", "target": "_self" },
-      { "label": "ECOMMJ", "href": "ecommj", "target": "_self" },
+      { "label": "ECOMJ", "href": "ecomj", "target": "_self" },
       { "label": "CONTACT US", "href": "contact", "target": "_self" }
     ],
     "sidebarLink": [
@@ -197,7 +266,7 @@
       { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
       { "label": "ABOUT US", "href": "about", "target": "_self" },
       { "label": "CASE STUDIES", "href": "case-study", "target": "_self" },
-      { "label": "BLOG", "href": "blog", "target": "_self" }
+      { "label": "BLOGS", "href": "blogs", "target": "_self" }
     ],
     "description": "Leading brand in enhancing the JAMstack to offer technical solutions to accelerate the phases of digital presence",
     "buttonLabel": {
@@ -209,7 +278,6 @@
     "phoneNumber": "+91 9130 036 036",
     "email": "hello@jamstack.plus",
     "country": "India",
-
     "socialLink": [
       {
         "iconName": "icon-mail1",
@@ -299,7 +367,7 @@
 
       { "label": "FAQ", "href": "faq", "target": "_self" },
       { "label": "About us", "href": "about", "target": "_self" },
-      { "label": "Blog", "href": "blog", "target": "_self" },
+      { "label": "Blog", "href": "blogs", "target": "_self" },
       { "label": "Contact", "href": "contact", "target": "_self" }
     ],
     "secondaryMenu": [
@@ -600,28 +668,31 @@
       "heading": "Blogs",
       "cards": [
         {
+          "slug": "termgrid",
           "image": "/Termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "crisp",
           "image": "/Crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "ternary",
           "image": "/Ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         }
       ],
       "hasIcon": true,
@@ -885,28 +956,31 @@
       "heading": "Blogs",
       "cards": [
         {
+          "slug": "termgrid",
           "image": "/Termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
           "buttonLabel": "Read more",
-          "href": ""
+          "href": "blogs"
         },
         {
+          "slug": "crisp",
           "image": "/Crisp.png",
           "alt": "blog",
           "label": "Crisp",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
-          "href": ""
+          "href": "blogs"
         },
         {
+          "slug": "ternary",
           "image": "/Ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
           "buttonLabel": "Read more",
-          "href": ""
+          "href": "blogs"
         }
       ],
       "hasIcon": true,
@@ -923,56 +997,79 @@
       "image": "/aboutus.svg",
       "layout": "Image Left"
     },
-    "accordinData" : {
-      "accordin" : [
-        {"label" : "How much time does it take to develop a JAMstack website having 10-20 pages?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "What is the onboarding process to get started?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Is it possible to upgrade old UI/UX of the website to new one with fast speed?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I have business idea and some budget can J+ help me with that?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Do you follow agile methodology?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Why do my business need Jamstack+ developed site?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I already have my ecommerce site , can you help me with mobile app?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I am not techno savvy person , how do I choose correct technology?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Can you build an app for iOS?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"}
+    "accordinData": {
+      "accordin": [
+        {
+          "label": "How much time does it take to develop a JAMstack website having 10-20 pages?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "What is the onboarding process to get started?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Is it possible to upgrade old UI/UX of the website to new one with fast speed?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I have business idea and some budget can J+ help me with that?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Do you follow agile methodology?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Why do my business need Jamstack+ developed site?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I already have my ecommerce site , can you help me with mobile app?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I am not techno savvy person , how do I choose correct technology?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Can you build an app for iOS?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        }
       ]
     },
     "blogCard": {
       "heading": "Blogs",
       "cards": [
         {
+          "slug": "termgrid",
           "image": "/Termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "crisp",
           "image": "/Crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "ternary",
           "image": "/Ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         }
       ],
       "hasIcon": true,
@@ -982,40 +1079,44 @@
   "blog": {
     "cards": [
       {
+        "slug": "create-a-Serverless-app-with-AWS-Amplify-and-Next.js",
         "image": "/blogThree.png",
         "altTag": "blog",
         "heading": "Create a Serverless app with AWS Amplify and Next.js",
         "profil": "/blogUserOne.png",
         "name": "Ivan Krizaj",
         "buttonLabel": "Read more",
-        "href": "/blog1"
+        "href": "create-a-Serverless-app-with-AWS-Amplify-and-Next.js"
       },
       {
+        "slug": "design-system-for-a-white-label-co-working-platform",
         "image": "/blogTwo.png",
         "altTag": "blog",
         "heading": "Design system for a white-label co-working platform",
         "profil": "/blogUserTwo.png",
         "name": "Anna Meleshina",
         "buttonLabel": "Read more",
-        "href": "/blog2"
+        "href": "design-system-for-a-white-label-co-working-platform"
       },
       {
+        "slug": "create-a-serverless-app-with-aws-amplify-and-next.js",
         "image": "/blogThree.png",
         "altTag": "blog",
         "heading": "Create a Serverless app with AWS Amplify and Next.js",
         "profil": "/blogUserOne.png",
         "name": "Ivan Krizaj",
         "buttonLabel": "Read more",
-        "href": "/blog3"
+        "href": "create-a-serverless-app-with-aws-amplify-and-next.js"
       },
       {
+        "slug": "design-system-for-a-white-label-co-workin-platform",
         "image": "/blogOne.png",
         "altTag": "blog",
         "heading": "Design system for a white-label co-working platform",
         "profil": "/blogUserTwo.png",
         "name": "Anna Meleshina",
         "buttonLabel": "Read more",
-        "href": "/blog4"
+        "href": "design-system-for-a-white-label-co-workin-platform"
       }
     ],
     "hasIcon": false,
@@ -1281,28 +1382,31 @@
       "heading": "Blogs",
       "cards": [
         {
+          "slug": "termgrid",
           "image": "/Termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "crisp",
           "image": "/Crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "ternary",
           "image": "/Ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         }
       ],
       "hasIcon": true,
@@ -1608,28 +1712,31 @@
       "heading": "Blogs",
       "cards": [
         {
+          "slug": "termgrid",
           "image": "/Termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "crisp",
           "image": "/Crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "ternary",
           "image": "/Ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         }
       ],
       "hasIcon": true,
@@ -1930,28 +2037,31 @@
       "heading": "Blogs",
       "cards": [
         {
+          "slug": "termgrid",
           "image": "/Termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "crisp",
           "image": "/Crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         },
         {
+          "slug": "ternary",
           "image": "/Ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
           "buttonLabel": "Read more",
-          "href": "blog"
+          "href": "blogs"
         }
       ],
       "hasIcon": true,
