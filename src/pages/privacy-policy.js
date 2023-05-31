@@ -141,7 +141,7 @@ export default function privacyPolicy({ header, footer }) {
 
   return (
     <Layout header={header} footer={footer}>
-      <div className='container mx-auto'>
+      <div className='mx-auto'>
           <div dangerouslySetInnerHTML={{__html:`${privacyPolicyData}`}}></div>
       </div>
     </Layout>

@@ -123,8 +123,8 @@ export default function termsAndCondition({ header, footer }) {
 
   return (
     <Layout header={header} footer={footer}>
-       <div className='container mx-auto my-auto'>
-          <div dangerouslySetInnerHTML={{__html:`${termsAndConditionData}`}}></div>
+       <div className='mx-auto'>
+          <div className='termsAndCondtion' dangerouslySetInnerHTML={{__html:`${termsAndConditionData}`}}></div>
       </div>
     </Layout>
   )

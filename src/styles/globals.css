@@ -335,3 +335,7 @@
 .image:last-child{
   border-bottom: none;
 }
+.termsAndCondtion ul,
+.termsAndCondtion ol  {
+  list-style-type: decimal;
+}
