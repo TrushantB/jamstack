@@ -288,7 +288,7 @@
 }
 
 .wrapper form label {
-  margin-bottom: 24px;
+  @apply mb-2 text-gray-400 text-sm;
 }
 
 .wrapper form div label {
