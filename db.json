@@ -89,7 +89,91 @@
           "heading" : " Excited to switch on modern technology?",
           "buttonLabel" : "Let’s Talk"
         }
-      
+  },
+  "caseStudyPage" : {
+    "caseStudy": {
+      "heading": "Case Study",
+      "description": "We are experts in what we do. Our team has hands on on the modern and trendy tools with great knowledge of choosing them wisely. We strictly follow a systematic agile process of working that yields in excellent, robust and world class projects.",
+      "itemList": [
+        {
+          "label": "Wise Experts",
+          "href": "wise-experts",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "80%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "150%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Logic Tales",
+          "href": "logic-tales",
+          "percentageList": [
+            {
+              "percentage": "120%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "30%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "190%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Intercollab",
+          "href": "Intercollab",
+          "percentageList": [
+            {
+              "percentage": "100%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "10%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "10%",
+              "description": "Indexed Pages"
+            }
+          ]
+        },
+        {
+          "label": "Skype",
+          "href": "Skype",
+          "percentageList": [
+            {
+              "percentage": "110%",
+              "description": "Increase in Content Engagement"
+            },
+            {
+              "percentage": "60%",
+              "description": "Decrease in Time from Idea to Publishing"
+            },
+            {
+              "percentage": "90%",
+              "description": "Indexed Pages"
+            }
+          ]
+        }
+      ],
+      "hasIcon": true,
+      "label": "Read More",
+      "icon": "diamond",
+      "href": "contact"
+    }
+
   },
   "header": {
     "logoUrl": {
@@ -107,7 +191,7 @@
     "sidebarLink": [
       {
         "label": "WHAT IS JAMSTACK",
-        "href": "know-Jamstack",
+        "href": "jamstack",
         "target": "_self"
       },
       { "label": "OUR ECOSYSTEM", "href": "ecosystem", "target": "_self" },
@@ -122,13 +206,13 @@
       "target": "_self"
     },
     "Contactlabel": "Contact Information",
-    "phoneNumber": "+91 990-123-4567",
-    "email": "geexu@gmail.com",
+    "phoneNumber": "+91 9130 036 036",
+    "email": "hello@jamstack.plus",
     "country": "India",
 
     "socialLink": [
       {
-        "iconName": "icon-mail",
+        "iconName": "icon-mail1",
         "href": "https://mail.google.com/",
         "alt": "image",
         "target": "_blank"
@@ -165,7 +249,6 @@
       "alt": "crossLogo logo"
     }
   },
-
   "footer": {
     "footerLogo": {
       "url": "/logo.svg",
@@ -207,7 +290,7 @@
     ],
     "footerMenu": [
       { "label": "Ecosystem", "href": "ecosystem", "target": "_self" },
-      { "label": "Know Jamstack", "href": "know-Jamstack", "target": "_self" },
+      { "label": "Know Jamstack", "href": "jamstack", "target": "_self" },
       { "label": "Pricing", "href": "pricing", "target": "_self" },
 
       { "label": "EcommJ", "href": "ecommJ", "target": "_self" },
@@ -389,6 +472,7 @@
         { "image": "/clearbit.png", "alt": "image" },
         { "image": "/crunchbase.png", "alt": "image" },
         { "image": "/xero.png", "alt": "image" },
+        { "image": "/oppo.png", "alt": "image" },
         { "image": "/contact.png", "alt": "image" }
       ],
       "type": "primary",
@@ -560,12 +644,12 @@
     },
     "textBanner": {
       "sliderControls": {
-        "dots": true,
+        "dots": false,
         "infinite": true,
         "speed": 500,
         "autoplaySpeed": 2500,
         "autoplay": true,
-        "arrows": true,
+        "arrows": false,
         "swipe": true
       },
       "info": [
@@ -636,9 +720,9 @@
               "id": "nextjs"
             },
             {
-              "name": "Angular",
+              "name": "NuxtJs",
               "icon": "icon-group",
-              "id": "angular"
+              "id": "nuxtjs"
             }
           ],
           "selected": []
@@ -828,130 +912,71 @@
       "hasIcon": true,
       "label": "Read More"
     },
-    "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} placeholder=\"Email\" />\n\n  <label>productName<em>*</em></label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\"></textarea>\n  <button type=\"submit\"><em>Set Up Meeting</em></button>\n</form>"
+    "form": "<form action=\"https://forms.zohopublic.in/setoosolutionsprivatelimited/form/ContactUsJamstackplus/formperma/Pp2Ws2PM0DANC2AnR60st_Y1vzc5y2QYa3qUYgzzfgY/htmlRecords/submit\" name=\"form\" id=\"form\" method=\"POST\" accept-charset=\"UTF-8\" enctype=\"multipart/form-data\">\n  <input type=\"hidden\" name=\"zf_referrer_name\" value=\"\" />\n  <input type=\"hidden\" name=\"zf_redirect_url\" value=\"\" />\n  <input type=\"hidden\" name=\"zc_gad\" value=\"\" />\n\n  <input type=\"text\" name=\"SingleLine\" fieldType={1} maxlength=\"255\" required placeholder=\"Name\" />\n\n  <label></label>\n  <input type=\"text\" maxlength=\"255\" name=\"Email\" fieldType={9} required placeholder=\"Email\" />\n\n  <label class='mb-2 text-md text-gray-400'>Select Product*</label>\n  <div>\n    <input type=\"checkbox\" id=\"Checkbox_1\" name=\"Checkbox\" value=\"WebJ\" checked />\n    <label for=\"Checkbox_1\">WebJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_2\" name=\"Checkbox\" value=\"EcommJ\" />\n    <label for=\"Checkbox_2\">EcommJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_3\" name=\"Checkbox\" value=\"MobJ\" />\n    <label for=\"Checkbox_3\">MobJ</label>\n    <input type=\"checkbox\" id=\"Checkbox_4\" name=\"Checkbox\" value=\"Custom\" />\n    <label for=\"Checkbox_4\">Custom</label>\n  </div>\n\n  <label></label>\n  <textarea name=\"MultiLine\" maxlength=\"65535\" placeholder=\"Product details\" required></textarea>\n  <button class='btn' type=\"submit\">Set Up Meeting</button>\n</form>"
   },
-  "aboutUs": {
+  "faq": {
     "banner": {
-      "heading": "We Know. We Create.We Stand Unique.",
+      "heading": "Frequently asked question",
       "backGroundColor": "#ffffff",
-      "description": "We are Jamstack+, a platform that provides a complete digital presence ecosystem through our very own, crafted products: webJ, ecommJ, and mobJ.",
+      "description": "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
       "headingSize": "medium",
       "image": "/aboutus.svg",
       "layout": "Image Left"
     },
-    "morderTechnology": {
-      "heading": "Purpose behind Jamstack+",
-      "description": "Technology that simplifies digital journey for ambitious businesses!"
-    },
-    "jamStackRecipe": {
-      "heading": "At Jamstack+ we serve the perfect",
-      "label": "RECIPE"
-    },
-    "jamStackStories": {
-      "heading": "Journey of Jamstack+",
-      "descriptionArray": [
-        {
-          "description": "We began the journey with the goal of giving the best, creatively made, and timeless solutions to our valued consumers through technology. On this journey, we worked with the same JAMstack basics from beginning to end of the project."
-        },
-        {
-          "description": "We envisioned building a single platform that would provide everything for everyone online. As a result of our efforts to justify JAMstack, we created the Jamstack+: the next generation of modern technology."
-        },
-        {
-          "description": "We developed J+heros to deliver solutions across all platforms. These are thoroughly processed, rehearsed, and well-engineered solutions for anyone wishing to advance their digital platforms using popular technology."
-        }
+    "accordinData" : {
+      "accordin" : [
+        {"label" : "How much time does it take to develop a JAMstack website having 10-20 pages?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "What is the onboarding process to get started?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Is it possible to upgrade old UI/UX of the website to new one with fast speed?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "I have business idea and some budget can J+ help me with that?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Do you follow agile methodology?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Why do my business need Jamstack+ developed site?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "I already have my ecommerce site , can you help me with mobile app?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "I am not techno savvy person , how do I choose correct technology?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Can you build an app for iOS?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"}
       ]
     },
-    "cards": {
-      "heading": "Our PLUS factors:",
-      "cardsArray": [
+    "blogCard": {
+      "heading": "Blogs",
+      "cards": [
         {
-          "title": "Keen on details",
-          "class": "icon-ic_Keen-on-details"
+          "image": "/Termgrid.png",
+          "alt": "blog",
+          "label": "Termgrid",
+          "description": "Branding a whole new category of debt management.",
+          "buttonLabel": "Read more",
+          "href": "blog"
         },
         {
-          "title": "Coherent communication",
-          "class": "icon-ic_Coherent-communication"
+          "image": "/Crisp.png",
+          "alt": "blog",
+          "label": "Crisp ",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
+          "buttonLabel": "Read more",
+          "href": "blog"
         },
         {
-          "title": "Factual truthful",
-          "class": "icon-ic_Factual-truthful"
-        },
-        {
-          "title": "Remarkable on timeless",
-          "class": "icon-ic_Remarkable-on-timeless"
-        },
-        {
-          "title": "Accountable partner",
-          "class": "icon-ic_Accountable-partner"
-        },
-        {
-          "title": "Futuristic visioner",
-          "class": "icon-ic_Easy-Maintain"
+          "image": "/Ternary.png",
+          "alt": "blog",
+          "label": "Ternary",
+          "description": "Creating a visual identity and product for FinOps cloud innovator.",
+          "buttonLabel": "Read more",
+          "href": "blog"
         }
-      ]
-    },
-    "jamStackProcess": {
-      "heading": "How we do it",
-      "processArray": [
-        {
-          "title": "Discuss- get started:",
-          "image": "",
-          "layout": "imageRight",
-          "labelArray": [
-            { "label": "Brainstorming on idea" },
-            { "label": "Strategy planning" },
-            { "label": "Requirement gathering" },
-            { "label": "Analysis and approach" }
-          ]
-        },
-        {
-          "title": "Define and Design:",
-          "image": "",
-          "layout": "imageLeft",
-          "labelArray": [
-            { "label": "Analysis documentation" },
-            { "label": "Wireframes and mockups" },
-            { "label": "Design architecture" },
-            { "label": "Design templates with style guide" }
-          ]
-        },
-        {
-          "title": "Develop:",
-          "image": "",
-          "layout": "imageRight",
-          "labelArray": [
-            { "label": "Code ready to test" },
-            { "label": "Dev documentation and approach" },
-            { "label": "Frontend, backend with DB" },
-            { "label": "Unit testing" }
-          ]
-        },
-        {
-          "title": "Deploy -pre and post methods:",
-          "image": "",
-          "layout": "imageLeft",
-          "labelArray": [
-            { "label": "Quality assurance testing" },
-            { "label": "CDN/edge networking" },
-            { "label": "Usage guidelines" },
-            { "label": "Hosting" }
-          ]
-        },
-        {
-          "title": "Accelerate",
-          "image": "",
-          "layout": "imageRight",
-          "labelArray": [
-            { "label": "Business analysis and dashboard" },
-            { "label": "Recommendations and insights of the business" },
-            { "label": "Recommendations and insights of the business" }
-          ]
-        }
-      ]
-    },
-    "jamstackQuote": {
-      "heading": "“Simplifying and scaling up your noteworthy digital journey”",
-      "author": "—Team Jamstack+"
+      ],
+      "hasIcon": true,
+      "label": "Read More"
     }
   },
   "blog": {
@@ -996,7 +1021,7 @@
     "hasIcon": false,
     "label": "Read More"
   },
-  
+
   "webj": {
     "banner": {
       "heading": "Sustainable, secured and scalable websites",
@@ -1044,7 +1069,7 @@
         },
         {
           "label": "Choose your tech-stack",
-          "content": " <p><span class='pb-2'>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p><span className='pb-5 pt-27'><strong><span className='mb-5 ' >Static Site Generator(SSG):&nbsp;</span></strong></span></p>  <p><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p> <p><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://tinyurl.com/y4vcyhbr' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://tinyurl.com/ykda7xch' alt='prismic' width='140' height='32'> </p>",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "step-2",
@@ -1375,7 +1400,7 @@
         },
         {
           "label": "Choose your tech-stack",
-          "content": " <p><span class='pb-2'>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p><span className='pb-5 pt-27'><strong><span className='mb-5 ' >Static Site Generator(SSG):&nbsp;</span></strong></span></p>  <p><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p> <p><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://tinyurl.com/y4vcyhbr' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://tinyurl.com/ykda7xch' alt='prismic' width='140' height='32'> </p>",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "step-2",
@@ -1664,7 +1689,7 @@
         },
         {
           "label": "Choose your tech-stack",
-          "content": " <p><span class='pb-2'>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p><span className='pb-5'><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp;</span></strong></span></p>  <p><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p> <p><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://tinyurl.com/y4vcyhbr' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://www.pngfind.com/pngs/m/413-4135111_contentful-logo-contentful-logo-png-transparent-png.png' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://tinyurl.com/ykda7xch' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap p-3 items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "step-2",
@@ -1724,7 +1749,10 @@
       ]
     },
     "morderTechnologyOne": {
-      "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products"
+      "heading": "Did you know that, eCommerce acceleration is systematic, data-driven and capable of producing greater value over time for any brand with a quality products",
+      "label": "Know Ecosystem",
+      "size": "medium",
+      "href": "ecosystem"
     },
     "accordian": {
       "heading": "How amazing is ecommJ to build your app?",
@@ -1928,6 +1956,247 @@
       ],
       "hasIcon": true,
       "label": "Read More"
+    }
+  },
+  "jamStack": {
+    "banner": {
+      "heading": "What is Jamstack? ",
+      "description": "Modern architecture gives the approach of building everything on the web from apps to websites based on Javascript, ApIs and Markup(JAM).",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "image": "/jamStackBanner.png",
+      "type": "primary",
+      "size": "medium",
+      "layout": "Image Bottom",
+      "href": "contact"
+    },
+    "cards": {
+      "heading": "Why we love JAM?",
+      "description": "Since JAM development is not a specific technology or language to build the web solutions, it’s instead a countless combination of tools and languages that are combined to create the final product.",
+      "cardsitems": [
+        {
+          "title": "Easy CMS",
+          "class": "icon-ic_Easy-CMS"
+        },
+        {
+          "title": "Ultra Fast",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Highly Secure",
+          "class": "icon-ic_Highly-Secure"
+        },
+
+        {
+          "title": "Tailored Tech Stack",
+          "class": "icon-ic_Tailored-Tech-Stack"
+        },
+
+        {
+          "title": "Cheap Scaling",
+          "class": "icon-ic_Cheap-Scaling"
+        },
+
+        {
+          "title": "Easy Maintain",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "accordian": {
+      "heading": "Benefits of JAMSTACK:",
+      "accordinaList": [
+        {
+          "label": "Cost effective CDN use",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Decoupled functionalities",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Security",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        },
+        {
+          "label": "Progressive web apps",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackTwo.svg",
+          "arrow": true
+        },
+        {
+          "label": "Timeless technology",
+          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "icon": "diamond",
+          "image": "/jamstackOne.svg",
+          "arrow": true
+        }
+      ]
+    },
+    "cta": {
+      "heading": "Jamstack is the way to sustainable success and Jamstack+ is your gateway.",
+      "href": "contact",
+      "type": "primary",
+      "label": "Get Started",
+      "size": "medium"
+    },
+    "productCard": {
+      "heading": "Products we Create",
+      "cards": [
+        {
+          "label": "webJ",
+          "description": "The ultimate platform for building your future-proof web presence with modern technology. Get your blazing fast, highly scalable, traffic driven and well-equipped webJ today!",
+          "buttonLabel": "Know More",
+          "href": "webj"
+        },
+        {
+          "label": "ecommJ",
+          "description": "The modern e-commerce solution extended from webJ to upgrade your business. Accelerate your business with exceptional ecommJ today!",
+          "buttonLabel": "Know More",
+          "href": "ecommj"
+        },
+        {
+          "label": "mobJ",
+          "description": "Multi-platform yet single codebase mobile application. Get your innovative, unique, manageable and collaborative mobJ today!",
+          "buttonLabel": "Know More",
+          "href": "mobj"
+        }
+      ]
+    }
+  },
+  "aboutUs": {
+    "banner": {
+      "heading": "We Know. We Create.We Stand Unique.",
+      "backGroundColor": "#ffffff",
+      "description": "We are Jamstack+, a platform that provides a complete digital presence ecosystem through our very own, crafted products: webJ, ecommJ, and mobJ.",
+      "headingSize": "medium",
+      "image": "/aboutus.svg",
+      "layout": "Image Left"
+    },
+    "morderTechnology": {
+      "heading": "Purpose behind Jamstack+",
+      "description": "Technology that simplifies digital journey for ambitious businesses!"
+    },
+    "jamStackRecipe": {
+      "heading": "At Jamstack+ we serve the perfect",
+      "label": "RECIPE"
+    },
+    "jamStackStories": {
+      "heading": "Journey of Jamstack+",
+      "descriptionArray": [
+        {
+          "description": "We began the journey with the goal of giving the best, creatively made, and timeless solutions to our valued consumers through technology. On this journey, we worked with the same JAMstack basics from beginning to end of the project."
+        },
+        {
+          "description": "We envisioned building a single platform that would provide everything for everyone online. As a result of our efforts to justify JAMstack, we created the Jamstack+: the next generation of modern technology."
+        },
+        {
+          "description": "We developed J+heros to deliver solutions across all platforms. These are thoroughly processed, rehearsed, and well-engineered solutions for anyone wishing to advance their digital platforms using popular technology."
+        }
+      ]
+    },
+    "cards": {
+      "heading": "Our PLUS factors:",
+      "cardsArray": [
+        {
+          "title": "Keen on details",
+          "class": "icon-ic_Keen-on-details"
+        },
+        {
+          "title": "Coherent communication",
+          "class": "icon-ic_Coherent-communication"
+        },
+        {
+          "title": "Factual truthful",
+          "class": "icon-ic_Factual-truthful"
+        },
+        {
+          "title": "Remarkable on timeless",
+          "class": "icon-ic_Remarkable-on-timeless"
+        },
+        {
+          "title": "Accountable partner",
+          "class": "icon-ic_Accountable-partner"
+        },
+        {
+          "title": "Futuristic visioner",
+          "class": "icon-ic_Easy-Maintain"
+        }
+      ]
+    },
+    "jamStackProcess": {
+      "heading": "How we do it",
+      "processArray": [
+        {
+          "title": "Discuss- get started:",
+          "image": "articleOne.png",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Brainstorming on idea" },
+            { "label": "Strategy planning" },
+            { "label": "Requirement gathering" },
+            { "label": "Analysis and approach" }
+          ]
+        },
+        {
+          "title": "Define and Design:",
+          "image": "articleTwo.png",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Analysis documentation" },
+            { "label": "Wireframes and mockups" },
+            { "label": "Design architecture" },
+            { "label": "Design templates with style guide" }
+          ]
+        },
+        {
+          "title": "Develop:",
+          "image": "articleThree.png",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Code ready to test" },
+            { "label": "Dev documentation and approach" },
+            { "label": "Frontend, backend with DB" },
+            { "label": "Unit testing" }
+          ]
+        },
+        {
+          "title": "Deploy -pre and post methods:",
+          "image": "articleFive.svg",
+          "layout": "imageLeft",
+          "labelArray": [
+            { "label": "Quality assurance testing" },
+            { "label": "CDN/edge networking" },
+            { "label": "Usage guidelines" },
+            { "label": "Hosting" }
+          ]
+        },
+        {
+          "title": "Accelerate",
+          "image": "articleFour.svg",
+          "layout": "imageRight",
+          "labelArray": [
+            { "label": "Business analysis and dashboard" },
+            { "label": "Recommendations and insights of the business" },
+            { "label": "Recommendations and insights of the business" }
+          ]
+        }
+      ]
+    },
+    "jamstackQuote": {
+      "heading": "“Simplifying and scaling up your noteworthy digital journey”",
+      "author": "—Team Jamstack+"
     }
   }
 }
