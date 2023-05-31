@@ -14,7 +14,7 @@ export default function BlogDetailsBanner({blogData}) {
             </div>            
               <div className="flex flex-wrap items-center gap-3 md:gap-8 mb-10">
                 <div className="flex items-center md:justify-center gap-2">
-                    <a href='#' className='flex gap-2'>
+                      <a href='#' className='flex gap-2 hover:text-primary transition ease-in delay-50'>
                         <img className='w-6 h-6' src={blogData?.author?.image} alt={blogData?.author?.alt} />
                         <span>{blogData?.author?.name}</span>
                     </a>

@@ -21,7 +21,7 @@ export default function BlogDetails({ header, footer }) {
        <div>
       <BlogDetailsBanner blogData={blogData} />
       <BlogDetailsTableContent blogData={blogData} />
-      <div className="my-8 lg:my-16">
+      <div className="pb-8 sm:pb-12 lg:pb-16">
         <div className="text-center">
           <h2>{blogData?.blogCard?.heading}</h2>
         </div>
