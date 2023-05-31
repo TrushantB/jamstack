@@ -3,8 +3,7 @@ import React from 'react'
 
 export default function privacyPolicy({ header, footer }) {
 
-  const privacyPolicyData = `
-  <h3><span style="color: rgb(0, 0, 0);"><span data-token-index="0">Privacy Policy</span> </span></h3>
+  const privacyPolicyData = `  
   <p><span style="color: rgb(0, 0, 0);">Last updated: April 6 2023 </span></p>
   <p><span style="color: rgb(0, 0, 0);">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You. </span></p>
   <p><span style="color: rgb(0, 0, 0);">We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. </span></p>
