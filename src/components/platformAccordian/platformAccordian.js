@@ -15,14 +15,14 @@ const PlatformAccordian = (accordian) => {
 
   return (
     <>
-      <div className='flex flex-col lg:flex-row  '>
+      <div className='flex flex-col lg:flex-row'>
         <div className='lg:w-4/12 p-5'>
-          <span className='icon-ic_growth text-7xl text-tertiary'></span>
-          <h2 className='lg:w-10/12'>{accordian?.heading}</h2></div>
+          <span className='icon-ic_growth text-7xl text-tertiary mb-4 inline-block'></span>
+          <h2 className=''>{accordian?.heading}</h2></div>
         <div className='lg:w-8/12 px-5'>
           {accordian?.accordinaList.map((item, index) => (
             <div className="accordion-item" key={index}>
-              <div className="accordion-title flex items-center gap-2 py-5 cursor-pointer" onClick={() => toggleAccordion(item)}>
+              <div className="accordion-title flex items-center gap-2 pt-4 pb-2 cursor-pointer" onClick={() => toggleAccordion(item)}>
                 <div className="flex items-center gap-2">
                   <div>
                     {<div className={`diamond h-5 w-5  bg-primary ${active !== item ? 'invisible' : ''}`}></div>}
@@ -71,7 +71,7 @@ const PlatformAccordian = (accordian) => {
                   )}
                 </div>
               </div>
-              {active === item && <div className="accordion-content py-5 pl-7">{item.description}</div>}
+              {active === item && <div className="accordion-content pb-5 pl-7">{item.description}</div>}
             </div>
           ))}
         </div>

@@ -69,14 +69,14 @@ export default function PricingPlan({ customPlan }) {
                                     return
                                 }
                                 return (
-                                    <div key={index} draggable={true} onDragStart={() => setDragDetails({ option })} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md" >
+                                    <button type='button' key={index} draggable={true} onDragStart={() => setDragDetails({ option })} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md" >
                                         <div className='text-center'>
                                             <span className={`max-h-28 max-w-[112px] mx-auto text-5xl text-tertiary ${option.icon}`}></span>
-                                            <p className="font-medium  text-center  mt-2">
+                                            <p className="font-medium text-center mt-2 text-base">
                                                 {option.name}
                                             </p>
                                         </div>
-                                    </div>
+                                    </button>
                                 )
                             })
                         }
@@ -100,18 +100,18 @@ export default function PricingPlan({ customPlan }) {
                                                     plan.selected.map((selectedPlan, planIndex) => {
                                                         return (
                                                             <>
-                                                                <div className="flex w-64 shadow-lg py-3 px-4 rounded-lg bg bg-secondary  text-white mb-4 items-center justify-between">
+                                                                <button type='button' className="flex w-64 shadow-lg py-3 px-4 rounded-lg bg bg-secondary  text-white mb-4 items-center justify-between text-base">
                                                                     <p>
                                                                         {selectedPlan.name}
                                                                     </p>
-                                                                    <span className="w-6 h-6 rounded-full flex justify-center items-center cursor-pointer  bg-[#6d8ae0] text-center " onClick={() => handleClose(index, planIndex)}>
-                                                                        <svg width="14px" height="14px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                                    <span aria-label="Close" tabIndex={0} className="w-6 h-6 rounded-full flex justify-center items-center cursor-pointer  bg-[#6d8ae0] text-center " onClick={() => handleClose(index, planIndex)}>
+                                                                        <svg width="14px" height="14px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                                                             <g id="Menu / Close_LG">
                                                                                 <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                                                             </g>
                                                                         </svg>
                                                                     </span>
-                                                                </div>
+                                                                </button>
                                                                 {
                                                                     current === index && (plan.selected.length < plan?.options?.length) && <div onDragOver={(e) => onDragOver(e)} onDrop={(e) => onDrop(e)} className="px-16 py-11  border-dashed border text-2xl text-center border-primary bg-[#f0e7f2]">
                                                                         Drag and Drop
