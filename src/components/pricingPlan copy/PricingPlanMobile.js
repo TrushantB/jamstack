@@ -85,7 +85,6 @@ export default function PricingPlanMobile({ customPlan }) {
                                                                 {
                                                                     current === index && (plan.selected.length < plan?.options?.length) && <div>
                                                                         <select onChange={(e) => {
-                                                                            console.log(e.target.value);
                                                                             const selected = plans[current]?.options.find(option => option.id === e.target.value)
                                                                             selected && onDrop(selected);
                                                                         }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -96,7 +95,7 @@ export default function PricingPlanMobile({ customPlan }) {
                                                                                         return
                                                                                     }
                                                                                     return (
-                                                                                        <option value={option.id}>{option.name}</option>
+                                                                                        <option key={index} value={option.id}>{option.name}</option>
                                                                                     )
                                                                                 })
                                                                             }
@@ -118,7 +117,7 @@ export default function PricingPlanMobile({ customPlan }) {
                                                                         return
                                                                     }
                                                                     return (
-                                                                        <option value={option.id}>{option.name}</option>
+                                                                        <option key={index} value={option.id}>{option.name}</option>
                                                                     )
                                                                 })
                                                             }
