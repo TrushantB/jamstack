@@ -1,17 +1,13 @@
-import { React, useState , useRef } from "react";
+import { React, useState, useRef } from "react";
 import Button from "../form/button/Button";
 import Accordion from "../accordian/accordion";
 
 const Stepper = (stepper) => {
-
-
   const [selectedStep, setSelectedStep] = useState(1);
 
   const handleStepClick = (index) => {
     setSelectedStep(index);
   };
-
-
 
   return (
     <>
@@ -22,7 +18,7 @@ const Stepper = (stepper) => {
       <div className="">
         <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs  lg:text-sm mb-7 text-center lg:text-left sticky py-1 top-0 bg-white">
           {stepper?.stepper.map((step, index) => (
-            <a  href={`#${step.id}`} key={index}>
+            <a href={`#${step.id}`} key={index}>
               <div
                 className={`step1 flex flex-col lg:flex-row gap-2 items-center ${
                   selectedStep === index + 1 ? "text-primary" : ""
