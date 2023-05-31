@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../form/button/Button';
-export default function PricingPlan({ customPlan }) {
+export default function PricingPlanMobile({ customPlan }) {
     const [plans, setPlans] = useState([]);
     const [current, setCurrent] = useState(0);
-    const [dragDetails, setDragDetails] = useState({});
     useEffect(() => {
         setPlans(customPlan?.plans || [])
     }, [customPlan?.plans])
@@ -18,11 +17,9 @@ export default function PricingPlan({ customPlan }) {
         }
         setPlans([...plans])
     }
-    const onDragOver = (e) => {
-        e.preventDefault()
-    }
-    const onDrop = (e) => {
-        plans[current].selected.push(dragDetails.option);
+
+    const onDrop = (option) => {
+        plans[current].selected.push(option);
         for (let plan = 0; plan < plans.length; plan++) {
             const element = plans[plan];
             if (!element?.selected?.length) {
@@ -54,35 +51,7 @@ export default function PricingPlan({ customPlan }) {
                 </p>
             </div>
             <div className="mt-16 lg:flex">
-                <div className="lg:w-1/2">
-                    <div className="flex my-8 md:my-16 items-center gap-5 pl-16 md:pl-28 lg:pl-16 ">
-                        <div className="w-8 h-8 md:w-14 md:h-14 bg-[#FF5223] rounded-full ">
-                        </div>
-                        <h3 className="font-medium text-3xl md:text-4xl">
-                            {customPlan?.selectPlanHeading}
-                        </h3>
-                    </div>
-                    <div className="flex justify-center items-center gap-x-8 md:gap-x-12 gap-y-8 lg:gap-x-24 lg:gap-y-16 flex-wrap mb-8 md:mb-0">
-                        {
-                            plans.length && plans[current]?.options?.map((option, index) => {
-                                if (plans[current].selected.includes(option)) {
-                                    return
-                                }
-                                return (
-                                    <button type='button' key={index} draggable={true} onDragStart={() => setDragDetails({ option })} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md" >
-                                        <div className='text-center'>
-                                            <span className={`max-h-28 max-w-[112px] mx-auto text-5xl text-tertiary ${option.icon}`}></span>
-                                            <p className="font-medium text-center mt-2 text-base">
-                                                {option.name}
-                                            </p>
-                                        </div>
-                                    </button>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-                <div className="lg:w-1/2 rounded-[40px] bg-[#F1F2F6] pl-4 lg:my-0 lg:pl-24 pr-7 py-16">
+                <div className="rounded-[40px] bg-[#F1F2F6] pl-4 lg:my-0 lg:pl-24 pr-7 py-16">
                     <h3 className="font-medium text-center">
                         {customPlan?.idealPlanHeading}
                     </h3>
@@ -112,19 +81,50 @@ export default function PricingPlan({ customPlan }) {
                                                                         </svg>
                                                                     </span>
                                                                 </button>
+
                                                                 {
-                                                                    current === index && (plan.selected.length < plan?.options?.length) && <div onDragOver={(e) => onDragOver(e)} onDrop={(e) => onDrop(e)} className="px-16 py-11  border-dashed border text-2xl text-center border-primary bg-[#f0e7f2]">
-                                                                        Drag and Drop
+                                                                    current === index && (plan.selected.length < plan?.options?.length) && <div>
+                                                                        <select onChange={(e) => {
+                                                                            console.log(e.target.value);
+                                                                            const selected = plans[current]?.options.find(option => option.id === e.target.value)
+                                                                            selected && onDrop(selected);
+                                                                        }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                                            <option value={"choose"}>{`Choose ${plan.name}`}</option>
+                                                                            {
+                                                                                plans.length && plans[current]?.options?.map((option, index) => {
+                                                                                    if (plans[current].selected.includes(option)) {
+                                                                                        return
+                                                                                    }
+                                                                                    return (
+                                                                                        <option value={option.id}>{option.name}</option>
+                                                                                    )
+                                                                                })
+                                                                            }
+                                                                        </select>
                                                                     </div>
                                                                 }
                                                             </>
                                                         )
                                                     })
-                                                    : current === index && <div onDragOver={(e) => onDragOver(e)} onDrop={(e) => onDrop(e)} className="px-16 py-11  border-dashed border text-2xl text-center border-primary bg-[#f0e7f2]">
-                                                        Drag and Drop
+                                                    : current === index && <div >
+                                                        <select onChange={(e) => {
+                                                            const selected = plans[current]?.options.find(option => option.id === e.target.value)
+                                                            onDrop(selected)
+                                                        }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" >
+                                                            <option value={"choose"}>{`Choose ${plan.name}`}</option>
+                                                            {
+                                                                plans.length && plans[current]?.options?.map((option, index) => {
+                                                                    if (plans[current].selected.includes(option)) {
+                                                                        return
+                                                                    }
+                                                                    return (
+                                                                        <option value={option.id}>{option.name}</option>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </select>
                                                     </div>
                                             }
-
                                         </div>
                                     </li>
                                 )
