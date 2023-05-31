@@ -1,9 +1,42 @@
-import { React, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function TestimonialCard({ cards, heading }) {
+  const cardsRef = useRef(null);
+
+  useEffect(() => {
+    const cards = Array.from(cardsRef.current.children);
+  
+    cards.forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          x: 1000,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "sine",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            end: "top 20%",
+            scrub: true,
+            markers: true,
+          },
+        }
+      );
+    });
+  }, []);
+
   const sliderSetting = {
     dots: false,
     speed: 500,
@@ -86,13 +119,13 @@ function TestimonialCard({ cards, heading }) {
         </Slider>
       </div>
 
-      <div className="  gap-14 lg:w-8/12  mx-4 lg:mx-0 testimonial hidden lg:block ">
-    
+      <div ref={cardsRef}  className="gap-14 lg:w-8/12  mx-4 lg:mx-0 testimonial hidden lg:block overflow-hidden">
+    <div>
           {cards &&
             cards?.map((item, index) => (
-              <div
+              <div 
                 key={index}
-                className="flex flex-col sm:flex-row gap-6 p-3  mb-14  drop-shadow-2xl hover:drop-shadow-none justify-evenly items-center  py-5 rounded-3xl border border-black hover:rounded-3xl hover:bg-accent-100"
+                className="flex flex-col sm:flex-row gap-6 p-3  mb-14  drop-shadow-2xl hover:drop-shadow-none justify-evenly items-center  py-5 rounded-3xl border border-black hover:rounded-3xl hover:bg-accent-100 card"
               >
                 <div className="flex gap-7 ">
                   <div className="w-4/12 lg:w-3/12 flex items-start sm:justify-center mt-7 sm:mt-0">
@@ -107,6 +140,8 @@ function TestimonialCard({ cards, heading }) {
                 </div>
               </div>
             ))}
+    </div>
+          
         
       </div>
     </div>
