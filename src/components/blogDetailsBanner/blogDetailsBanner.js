@@ -6,20 +6,20 @@ export default function BlogDetailsBanner({blogData}) {
 
   return (
     <>
-        <div className='container mx-auto px-3 mt-3'>
-            <h1 className='lg:w-3/5'>
-                {blogData?.heading}
-            </h1>
-            <div className="md:flex items-center gap-3 md:gap-8 my-10">
-                <div className="flex items-center md:justify-center gap-2 mb-6 md:mb-0 ">
-                    <div>
+        <div className='max-w-3xl mx-auto px-3 mt-3'>
+            <div className='py-6'>
+                <h1 className='lg:w-full'>
+                    {blogData?.heading}
+                </h1>
+            </div>            
+              <div className="flex flex-wrap items-center gap-3 md:gap-8 mb-10">
+                <div className="flex items-center md:justify-center gap-2">
+                    <a href='#' className='flex gap-2'>
                         <img className='w-6 h-6' src={blogData?.author?.image} alt={blogData?.author?.alt} />
-                    </div>
-                    <div>
-                        {blogData?.author?.name}
-                    </div>
+                        <span>{blogData?.author?.name}</span>
+                    </a>
                 </div>
-                <div className="flex items-center md:justify-center gap-2 mb-6 md:mb-0 ">
+                <div className="flex items-center md:justify-center gap-2">
                     <div>
                         <img src={blogData?.publishDate?.icon} alt={blogData?.publishDate.alt} />
                     </div>
@@ -27,7 +27,7 @@ export default function BlogDetailsBanner({blogData}) {
                     {blogData?.publishDate?.date}
                     </div>
                 </div>
-                <div className="flex items-center md:justify-center gap-2 ">
+                <div className="flex items-center md:justify-center gap-2">
                     <div>
                         <img src={blogData?.screnTime?.icon} alt={blogData?.screnTime?.alt}/>
                     </div>
