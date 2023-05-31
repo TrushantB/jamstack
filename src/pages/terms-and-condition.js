@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function termsAndCondition({ header, footer }) {
 
-  const termsAndConditionData = `<h1 style="text-align: center;">Terms and conditions</h1>
-  <p>Welcome to Jamstack+</p>
+  const termsAndConditionData = `
+  <h3>Welcome to Jamstack+</h3>
   <p>These terms and conditions outline the rules and regulations for the use of Jamstack+'s Website, located at jamstack.plus</p>
   <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Jamstack+ if you do not agree to take all of the terms and conditions stated on this page.</p>
   <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company&rsquo;s terms and conditions. "The team", "Ourselves", "We", "Our" and "Us", refers to our Team. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client&rsquo;s needs in respect of provision of the Team&rsquo;s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
@@ -104,7 +104,7 @@ export default function termsAndCondition({ header, footer }) {
   <h3><strong>Content Liability</strong></h3>
   <p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
   <h3><strong>Your Privacy</strong></h3>
-  <p>Please read Privacy Policy</p>
+  <p>Please read <a href="/privacy-policy">Privacy Policy</a></p>
   <h3><strong>Reservation of Rights</strong></h3>
   <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it&rsquo;s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
   <p><strong>Removal of links from our website</strong></p>
@@ -123,8 +123,11 @@ export default function termsAndCondition({ header, footer }) {
 
   return (
     <Layout header={header} footer={footer}>
-       <div className='mx-auto'>
-          <div className='termsAndCondtion' dangerouslySetInnerHTML={{__html:`${termsAndConditionData}`}}></div>
+      <div className='max-w-2xl xl:max-w-3xl mx-auto px-4'>
+        <div className="page-title py-8">
+          <h1>Terms and conditions</h1>
+        </div>
+        <div className='text-page-content max-w-4xl mx-auto pb-12' dangerouslySetInnerHTML={{__html:`${termsAndConditionData}`}}></div>
       </div>
     </Layout>
   )

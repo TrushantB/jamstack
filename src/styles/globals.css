@@ -331,6 +331,27 @@
   border-bottom: none;
 }
 
+.text-page-content p{
+  @apply mb-4;
+}
+.text-page-content a{
+  @apply underline hover:text-primary;
+}
+.text-page-content ol,
+.text-page-content ul{
+ @apply list-outside space-y-3 mb-8 ml-5;
+}
+.text-page-content ul{
+  @apply list-disc;
+}
+.text-page-content ol{
+  @apply list-decimal;
+}
+.text-page-content ul ::marker,
+.text-page-content ol ::marker{
+  @apply text-tertiary;
+}
+
 @media screen and (min-width: 1024px) {
   body,
   html {

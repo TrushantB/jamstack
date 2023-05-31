@@ -3,16 +3,14 @@ import React from 'react'
 
 export default function privacyPolicy({ header, footer }) {
 
-  const privacyPolicyData = `<h1 style="text-align: center;"><span style="color: rgb(0, 0, 0);">Privacy policy</span></h1>
+  const privacyPolicyData = `
   <h3><span style="color: rgb(0, 0, 0);"><span data-token-index="0">Privacy Policy</span> </span></h3>
   <p><span style="color: rgb(0, 0, 0);">Last updated: April 6 2023 </span></p>
   <p><span style="color: rgb(0, 0, 0);">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You. </span></p>
   <p><span style="color: rgb(0, 0, 0);">We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. </span></p>
-  <p>&nbsp;</p>
   <p><span style="color: rgb(0, 0, 0);"><span data-token-index="0">Interpretation and Definitions</span> </span></p>
   <h4><span style="color: rgb(0, 0, 0);"><span data-token-index="0">Interpretation</span> </span></h4>
   <p><span style="color: rgb(0, 0, 0);">The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in the plural. </span></p>
-  <h4>&nbsp;</h4>
   <h4><span style="color: rgb(0, 0, 0);"><span data-token-index="0">Definitions</span> </span></h4>
   <p><span style="color: rgb(0, 0, 0);">For the purposes of this Privacy Policy: </span></p>
   <ul>
@@ -68,7 +66,6 @@ export default function privacyPolicy({ header, footer }) {
   <li style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</span></li>
   </ul>
   <p><span style="color: rgb(0, 0, 0);">For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</span></p>
-  <p>&nbsp;</p>
   <h2><span style="color: rgb(0, 0, 0);"><span class="notion-enable-hover" style="font-weight: 600;" data-token-index="0">Use of Your Personal Data</span> </span></h2>
   <p><span style="color: rgb(0, 0, 0);">The Company may use Personal Data for the following purposes: </span></p>
   <ul>
@@ -93,12 +90,10 @@ export default function privacyPolicy({ header, footer }) {
   <h3><span style="color: rgb(0, 0, 0);"><span class="notion-enable-hover" style="font-weight: 600;" data-token-index="0">Retention of Your Personal Data</span> </span></h3>
   <p><span style="color: rgb(0, 0, 0);">The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</span></p>
   <p><span style="color: rgb(0, 0, 0);">The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</span></p>
-  <p>&nbsp;</p>
   <h3><span style="color: rgb(0, 0, 0);"><span class="notion-enable-hover" style="font-weight: 600;" data-token-index="0">Transfer of Your Personal Data</span> </span></h3>
   <p><span style="color: rgb(0, 0, 0);">Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to &mdash; and maintained on &mdash; computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</span></p>
   <p><span style="color: rgb(0, 0, 0);">Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</span></p>
   <p><span style="color: rgb(0, 0, 0);">The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</span></p>
-  <p>&nbsp;</p>
   <h3><span style="color: rgb(0, 0, 0);"><span class="notion-enable-hover" style="font-weight: 600;" data-token-index="0">Delete Your Personal Data</span> </span></h3>
   <p><span style="color: rgb(0, 0, 0);">You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</span></p>
   <p><span style="color: rgb(0, 0, 0);">Our Service may give You the ability to delete certain information about You from within the Service.</span></p>
@@ -133,16 +128,17 @@ export default function privacyPolicy({ header, footer }) {
   <h2><span style="color: rgb(0, 0, 0);"><strong>Contact Us</strong></span></h2>
   <p><span style="color: rgb(0, 0, 0);">If you have any questions about this Privacy Policy, You can contact us:</span></p>
   <ul>
-  <li style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">By email:&nbsp;hello@jamstack.plus</span></li>
-  </ul>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>`;
+  <li style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0);">By email:&nbsp; <a href="mailto:hello@jamstack.plus">hello@jamstack.plus</a></span></li>
+  </ul>`;
 
 
   return (
     <Layout header={header} footer={footer}>
-      <div className='mx-auto'>
-          <div dangerouslySetInnerHTML={{__html:`${privacyPolicyData}`}}></div>
+      <div className='max-w-2xl xl:max-w-3xl mx-auto px-4'>
+        <div className="page-title py-8">
+          <h1>Privacy Policy</h1>
+        </div>        
+        <div className='text-page-content max-w-4xl mx-auto pb-12' dangerouslySetInnerHTML={{__html:`${privacyPolicyData}`}}></div>
       </div>
     </Layout>
   )
