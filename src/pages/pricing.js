@@ -6,6 +6,7 @@ import Banner from "@/components/presentational/banner/Banner";
 import TextBanner from "@/components/textBanner/TextBanner";
 import WebStactics from "@/components/webStactics/WebStactics";
 import ConnectChoose from "@/components/connectChoose/ConnectChoose";
+import PricingPlanMobile from "@/components/pricingPlan copy/PricingPlanMobile";
 
 const Pricing = ({ header, footer }) => {
   const [priceData, setPriceData] = useState(null);
@@ -33,8 +34,11 @@ const Pricing = ({ header, footer }) => {
       <div>
         <WebStactics {...priceData?.Webstatstics} />
       </div>
-      <div>
+      <div className="hidden md:block">
         <PricingPlan customPlan={priceData.customPlan} />
+      </div>
+      <div className="md:hidden">
+        <PricingPlanMobile customPlan={priceData.customPlan} />
       </div>
 
       <div>
