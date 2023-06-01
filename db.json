@@ -167,31 +167,31 @@
     "socialIcons": [
       {
         "icon": "icon-mail1",
-        "href": "https://mail.google.com/",
+        "href": "mailto:hello@jamstack.plus",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-instagam",
-        "href": "https://www.instagram.com/",
+        "href": "https://www.instagram.com/jamstack_plus/",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-twitter",
-        "href": "https://twitter.com/",
+        "href": "https://www.linkedin.com/showcase/jamstack-plus/",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-whatsapp1",
-        "href": "https://www.whatsapp.com/",
+        "href": "https://wa.me/+919130036036?text=Hi%20Team%20I%20Need%20infomation%20for%20Jamstack+",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-facebook2",
-        "href": "https://www.facebook.com/",
+        "href": "https://www.facebook.com/profile.php?id=100093205203639",
         "alt": "image",
         "target": "_blank"
       }
