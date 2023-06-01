@@ -22,7 +22,6 @@ const Pricing = ({ header, footer }) => {
   if (!priceData) {
     return <></>;
   }
-  console.log("kkkkk", priceData?.accordinData?.button?.buttonLabel);
   return (
     <Layout header={header} footer={footer}>
       <div className="pt-0">
