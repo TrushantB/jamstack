@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-
+import React, { useState , useEffect } from 'react';
 
 const PlatformAccordian = (accordian) => {
   const [active, setActive] = useState({});
@@ -12,6 +10,10 @@ const PlatformAccordian = (accordian) => {
       setActive({});
     }
   };
+
+  // useEffect(() => {
+  //   accordin?.length && setActive(accordin[0])
+  // }, [accordin])
 
   return (
     <>

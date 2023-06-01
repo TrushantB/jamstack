@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState , useEffect } from "react";
 
 const Accordion = ({ accordin, isInner=false }) => {
   const [active, setActive] = useState({});
@@ -10,6 +10,11 @@ const Accordion = ({ accordin, isInner=false }) => {
       setActive({})
     }
   };
+
+  useEffect(() => {
+    accordin?.length && setActive(accordin[0])
+  }, [accordin])
+
   return (
     <div className={isInner ? "my-6": 'lg:px-0 px-0'}>
       {accordin?.map((item, index) => (
