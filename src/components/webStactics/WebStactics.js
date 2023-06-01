@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import ReportLoader from "./reportLoader";
+import ReportUI from "./reportUI";
+import ProgressBar from "./reportUI";
 
 function WebStactics({
   heading,
@@ -100,16 +102,20 @@ function WebStactics({
         <h2 className="text-center py-10">Generating your report</h2>
         <div className="flex justify-center items-center gap-5 py-10">
           <div className="diamond bg-accent-200 w-10 h-10">
-            <div className="fill bg-orange-500 w-full h-full"></div>
+            <div className="fill bg-tertiary w-full h-full"></div>
           </div>
           <div className="circle bg-accent-200 w-10 h-10">
-            <div className="fill bg-orange-500 w-full h-full"></div>
+            <div className="fill bg-tertiary w-full h-full"></div>
           </div>
           <div className="pentagon bg-accent-200 w-10 h-10">
-            <div className="fill bg-orange-500 w-full h-full"></div>
+            <div className="fill bg-tertiary w-full h-full"></div>
           </div>
         </div>
+        
+        
       </div>
+     <ProgressBar/>
+      
   </>
    
   );
