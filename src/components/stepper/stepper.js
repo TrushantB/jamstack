@@ -15,22 +15,20 @@ const Stepper = (stepper) => {
       <div className="pb-28 text-center relative">
         <h2>{stepper?.heading}</h2>
       </div>
-      <div id="menu">
-        <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-7 text-center lg:text-left sticky py-2 top-20 bg-white">
+      <div>
+        <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-7 text-center lg:text-left sticky py-2 top-16 bg-white">
           {stepper?.stepper.map((step, index) => (
             <a href={`#${step.id}`} key={index} >
               <div
-                className={`step1 flex flex-col lg:flex-row gap-2 items-center ${
-                  selectedStep === index + 1 ? "text-primary" : ""
-                }`}
+                className={`flex flex-col lg:flex-row gap-2 items-center ${selectedStep === index + 1 ? "text-primary" : ""
+                  }`}
                 onClick={() => handleStepClick(index + 1)}
               >
                 <div
-                  className={`${
-                    selectedStep === index + 1
-                      ? "bg-black text-white"
-                      : "bg-accent-100 "
-                  } p-3  rounded-full h-5 w-5 flex justify-center items-center`}
+                  className={`${selectedStep === index + 1
+                    ? "bg-black text-white"
+                    : "bg-accent-100 "
+                    } p-3  rounded-full h-5 w-5 flex justify-center items-center`}
                 >
                   {index + 1}
                 </div>
@@ -43,11 +41,10 @@ const Stepper = (stepper) => {
         {/* stepper section */}
         {stepper?.stepper.map((step, index) => (
           <div
-            className={`stepperItem flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${
-              step.layout === "imageLeft"
-                ? "lg:flex-row-reverse"
-                : "lg:flex-row"
-            }`}
+            className={`stepperItem flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${step.layout === "imageLeft"
+              ? "lg:flex-row-reverse"
+              : "lg:flex-row"
+              }`}
             id={step.id}
             key={step.id}
           >
