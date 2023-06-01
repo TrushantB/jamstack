@@ -1,4 +1,4 @@
-import { React, useState, useRef } from "react";
+import { React, useState } from "react";
 import Button from "../form/button/Button";
 import Accordion from "../accordian/accordion";
 
@@ -15,10 +15,10 @@ const Stepper = (stepper) => {
       <div className="pb-28 text-center relative">
         <h2>{stepper?.heading}</h2>
       </div>
-      <div className="">
-        <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs  lg:text-sm mb-7 text-center lg:text-left sticky py-1 top-0 bg-white">
+      <div id="menu">
+        <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-7 text-center lg:text-left sticky py-2 top-20 bg-white">
           {stepper?.stepper.map((step, index) => (
-            <a href={`#${step.id}`} key={index}>
+            <a href={`#${step.id}`} key={index} >
               <div
                 className={`step1 flex flex-col lg:flex-row gap-2 items-center ${
                   selectedStep === index + 1 ? "text-primary" : ""
@@ -43,7 +43,7 @@ const Stepper = (stepper) => {
         {/* stepper section */}
         {stepper?.stepper.map((step, index) => (
           <div
-            className={`flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${
+            className={`stepperItem flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${
               step.layout === "imageLeft"
                 ? "lg:flex-row-reverse"
                 : "lg:flex-row"
