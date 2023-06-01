@@ -2,7 +2,7 @@ import { React, useState } from "react";
 
 const Accordion = ({ accordin, isInner=false }) => {
   const [active, setActive] = useState({});
-
+  console.log("accordin===>" , accordin)
   const toggleAccordion = (accordianItem) => {
     if (active !== accordianItem) {
       setActive(accordianItem);

@@ -14,6 +14,8 @@ const Faq = ({ header, footer }) => {
     });
   }, []);
 
+  console.log("dataaaa==>" , faqData?.accordinData)
+
   return (
     <Layout header={header} footer={footer}>
       <div className="container mx-auto">
