@@ -1,39 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import gsap from 'gsap';
 
 const ReportLoader = () => {
-    const containers = document.querySelectorAll('.animation > div');
-const fillClass = 'fill';
+  useEffect(() => {
+    const fills = gsap.utils.toArray('.report .fill');
 
-function fillContainers() {
-  containers.forEach((container, index) => {
-    setTimeout(() => {
-      container.classList.add(fillClass);
-      if (index === containers.length - 1) {
-        setTimeout(resetContainers, 6000);
-      }
-    }, index * 2000);
-  });
-}
+    const animation = gsap.timeline({ repeat: -1 });
 
-function resetContainers() {
-  containers.forEach(container => {
-    container.classList.remove(fillClass);
-  });
-  fillContainers();
-}
+    animation
+      .fromTo(
+        fills,
+        { scaleY: 0 },
+        { scaleY: 1, transformOrigin: 'bottom', duration: 2, stagger: 2 }
+      ) .to(fills, { scaleY: 0, transformOrigin: 'bottom', duration: 2 });
+    return () => animation.kill();
+  }, []);
 
-fillContainers();
   return (
-    <div className='flex justify-center items-center gap-5 py-10'>
-        <div className='diamond animation bg-accent-200 w-10 h-10'></div>
-        <div className='circle animation bg-accent-200 w-10 h-10'></div>
-
-        <div className='pentagon animation bg-accent-200 w-10 h-10'></div>
-
-        
-
+    <div className='report'>
+      <h2 className="text-center py-10">Generating your report</h2>
+      <div className="flex justify-center items-center gap-5 py-10">
+        <div className="diamond bg-accent-200 w-10 h-10">
+          <div className="fill bg-orange-500 w-full h-full"></div>
+        </div>
+        <div className="circle bg-accent-200 w-10 h-10">
+          <div className="fill bg-orange-500 w-full h-full"></div>
+        </div>
+        <div className="pentagon bg-accent-200 w-10 h-10">
+          <div className="fill bg-orange-500 w-full h-full"></div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ReportLoader
+export default ReportLoader;
