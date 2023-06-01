@@ -63,7 +63,7 @@ const Accordion = ({ accordin, isInner=false }) => {
             </div>
           </div>
           {active === item && (
-            <div className={`accordion-content  ${isInner ? "": 'lg:ml-5 '} pb-5`}>{item.description}</div>
+            <div className={`accordion-content accordian-inactive  ${active === item ? '  accordian-active ml-7 ' : 'ml-7 in '}  ${isInner ? "": 'lg:ml-5 '} pb-5`}>{item.description}</div>
           )}
         </div>
       ))}

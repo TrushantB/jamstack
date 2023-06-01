@@ -331,6 +331,45 @@
   border-bottom: none;
 }
 
+.accordian-inactive{
+ height: 0;
+
+ overflow: hidden;
+
+
+}
+
+.in{
+  height: 0;
+  overflow: hidden;
+  opacity: 0 ;
+  transition: 0.3s linear;
+}
+
+.accordian-active{
+  transition:  0.3s linear;
+  height: auto;
+  padding-top: 5px;
+  opacity: 1;
+}
+
+.symbol-inactive{
+  visibility: hidden;
+  transition: visibility 0.4ms linear;
+}
+
+.sin{
+  visibility: hidden;
+  transition: visibility 0.4ms linear;
+}
+
+.symbol-active{
+  visibility: visible;
+  transition: visibility 0.5s linear;
+}
+
+
+
 @media screen and (min-width: 1024px) {
   body,
   html {
