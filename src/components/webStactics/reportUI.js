@@ -5,6 +5,8 @@ const ProgressBar = () => {
   return (
     <div className="container mx-auto pt-24 lg:pt-14">
       <h4 className=" font-normal mb-14 ml-5">Here are your web vitals</h4>
+
+      {/* report results */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="relative pt-1 mx-5 ">
           <h5 className="mb-5 text-2xl sm:text-3xl">
@@ -114,13 +116,15 @@ const ProgressBar = () => {
       </div>
 
       <div>
+
+        {/* form  */}
         <form className="flex flex-col gap-8 ml-5 py-24 pb-16 ">
           <input
-            className="w-1/2 rounded-full bg-accent-100 px-6 h-[60px] "
+            className="sm:w-3/4  rounded-full bg-accent-100 px-6 h-[60px] "
             placeholder="Name"
           ></input>
           <input
-            className="w-1/2 rounded-full bg-accent-100 px-6 h-[60px]"
+            className="sm:w-3/4 rounded-full bg-accent-100 px-6 h-[60px]"
             placeholder="Email"
           ></input>
 
