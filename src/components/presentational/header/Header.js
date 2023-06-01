@@ -36,7 +36,7 @@ const Header = ({
     <>
       <div className="sticky top-0 z-50">
         <nav className="bg-white border-gray-200">
-          <div className="flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8">
+          <div className="flex items-center justify-between px-6 py-5 mx-auto max-w-7xl lg:px-8 lg:py-3">
             <div className="flex items-center justify-between w-full gap-5">
               <Link href={logoUrl?.herf} className="flex items-center">
                 <img
@@ -92,12 +92,12 @@ const Header = ({
                 </div> */}
 
                 <div>
-                  <ul className="mt-10">
+                  <ul className="mt-10 lg:hidden">
                     {headerMenu?.map((menuItems, index) => (
-                      <li key={index}>
+                      <li key={index} className="my-3">
                         <Link
                           href={menuItems.href}
-                          className="block py-2 pr-4 text-gray-900 rounded lg:hidden hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
+                          className="btn-link font-medium"
                         >
                           {menuItems.label}
                         </Link>
@@ -106,12 +106,10 @@ const Header = ({
                   </ul>
                   <ul className="mt-10">
                     {sidebarLink?.map((sidebarItems, index) => (
-                      <li className="my-3" key={index}>
-                        <h6>
-                          <Link href={sidebarItems.href}>
+                      <li className="my-3" key={index}>                        
+                        <Link href={sidebarItems.href} className="btn-link font-medium">
                             {sidebarItems.label}
-                          </Link>
-                        </h6>
+                          </Link>                        
                       </li>
                     ))}
                   </ul>
@@ -119,7 +117,7 @@ const Header = ({
                   <div className=" mt-14 mb-14">
                     <p>{description}</p>
                     <Link href={buttonLabel.href}>
-                      <button className="mt-4 font-semibold" type="button">
+                      <button className="mt-4 font-semibold hover:underline hover:text-primary transition duration-200 ease" type="button">
                         {buttonLabel?.label}
                       </button>
                     </Link>
@@ -127,16 +125,16 @@ const Header = ({
 
                   <div>
                     <h5 className="mb-3 font-medium ">{label}</h5>
-                    <ul>
-                      <li className="my-3">
-                        <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
+                    <ul className="space-y-2">
+                      <li>
+                        <Link className="btn-link hover:underline" href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
                       </li>
                       <li>
-                        <Link className="my-3" href={`mailto:${email}`}>
+                        <Link className="btn-link hover:underline" href={`mailto:${email}`}>
                           {email}
                         </Link>
                       </li>
-                      <li className="my-3">{country}</li>
+                      <li>{country}</li>
                     </ul>
                   </div>
 
@@ -144,7 +142,7 @@ const Header = ({
                     <ul className="flex items-center gap-3">
                       {socialLink?.map((item, index) => (
                         <li key={index}>
-                          <Link href={item.href} target={item.target}>
+                          <Link className="btn-link" href={item.href} target={item.target}>
                             <span className={`${item.iconName} text-xl`}></span>
                           </Link>
                         </li>

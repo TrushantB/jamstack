@@ -66,21 +66,21 @@ const Stepper = (stepper) => {
                   )}
                   {step?.cta?.label && <Button {...step?.cta} />}
                 </div>
-                <div className="lg:w-1/2 lg:p-2 flex justify-center items-start lg:mt-20">
+                <div className="lg:w-1/2 lg:p-2 flex justify-center items-start mt-8 lg:mt-20">
                   <img src={step.image} alt="Step Image" />
                 </div>
               </>
             ) : (
               <div
-                className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-5 my-2 lg:my-0 "
+                className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 "
                 id={step.id}
               >
                 <div className="lg:w-1/2 mx-auto">
-                  <div className="icon-ic_launch text-7xl text-center text-tertiary"></div>
+                  <div className="icon-ic_launch text-7xl text-center text-tertiary pb-6"></div>
                   <h3 className="pb-4 text-center">
                     <span>{index + 1}.</span> {step.label}
                   </h3>
-                  <p className="text-center">{step.content}</p>
+                  <p className="text-center pb-6">{step.content}</p>
                   <div className="flex justify-center items-center mt-4">
                     <Button label="Start Project Now" size="medium" />
                   </div>

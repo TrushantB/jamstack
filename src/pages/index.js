@@ -33,7 +33,7 @@ const Home = ({ header, footer }) => {
     <Layout header={header} footer={footer}>
       <div>{<Banner {...homeData.banner} />}</div>
 
-      {<WebSection {...homeData.technologySolution} />}
+      <WebSection {...homeData.technologySolution} />
 
       <div>
         <TextBannerList {...homeData.textBannerList} />

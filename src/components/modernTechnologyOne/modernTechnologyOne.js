@@ -5,19 +5,17 @@ import Link from 'next/link'
 
 const ModernTechnologyOne = ({ heading, label, size, type, href }) => {
   return (
-    <div className=" bg-secondary flex flex-col items-center  pt-24 pb-32">
-      <h3 className="text-center text-white w-11/12 ">
-        {heading}
-      </h3>
-      {label && <div className='pt-16'>
-        <Link href={href} >
-          <Button
-            label={label}
-            type={type}
-            size={size}
-          />
-        </Link>
-      </div>}
+    <div className="bg-secondary pt-12 md:pt-24 pb-16 md:pb-24">
+      <div className='container mx-auto flex flex-col items-center'>
+        <h3 className="text-center text-white w-11/12 ">
+          {heading}
+        </h3>
+        {label && <div className='pt-8 md:pt-16'>
+          <Link className='btn' href={href} >
+            {label}
+          </Link>
+        </div>}
+      </div>
     </div>
   )
 }
