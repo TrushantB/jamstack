@@ -92,26 +92,24 @@ const Header = ({
                 </div> */}
 
                 <div>
-                  {/* <ul className="mt-10">
+                  <ul className="mt-10 lg:hidden">
                     {headerMenu?.map((menuItems, index) => (
-                      <li key={index}>
+                      <li key={index} className="my-3">
                         <Link
                           href={menuItems.href}
-                          className="block py-2 pr-4 text-gray-900 rounded lg:hidden hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
+                          className="btn-link font-medium"
                         >
                           {menuItems.label}
                         </Link>
                       </li>
                     ))}
-                  </ul> */}
+                  </ul>
                   <ul className="mt-10">
                     {sidebarLink?.map((sidebarItems, index) => (
-                      <li className="my-3" key={index}>
-                        <h6>
-                          <Link href={sidebarItems.href} className="btn-link">
+                      <li className="my-3" key={index}>                        
+                        <Link href={sidebarItems.href} className="btn-link font-medium">
                             {sidebarItems.label}
-                          </Link>
-                        </h6>
+                          </Link>                        
                       </li>
                     ))}
                   </ul>
