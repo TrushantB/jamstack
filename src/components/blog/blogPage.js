@@ -3,7 +3,7 @@ import LinkButton from "../Link/Link";
 export default function Blogpage({ cards, hasIcon, label }) {
   return (
     <div className=''>
-      <div className="page-title py-8">
+    <div className="page-title py-8">
         <h1>Blog</h1>
       </div>
       {cards && cards.map((item, index) => (
