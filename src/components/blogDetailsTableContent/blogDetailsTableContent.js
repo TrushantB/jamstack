@@ -1,22 +1,22 @@
-import { React, useEffect, useState } from "react";
-import { get } from "@/client/api";
+import { React, useEffect, useState , useRef } from "react";
 import BlogContactCard from "../blogContactCard/blogContactCard";
 import BlogContentWriting from "../blogContentWriting/blogContentWriting";
 
 export default function BlogDetailsTableContent({ blogData }) {
-
   const [selectedContent, setSelectedContent] = useState({});
+
+  const containerRef = useRef(null);
 
   const handleItemClick = (item) => {
     setSelectedContent(item);
-    console.log("setSelectedContent" , item)
+    if (containerRef) {
+      containerRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
   
   useEffect(() => {
-    blogData?.tabelContent?.length &&
-      setSelectedContent(blogData.tabelContent[0]);
+    blogData?.tabelContent?.length && setSelectedContent(blogData.tabelContent[0]);
   }, [blogData]);
-  console.log(selectedContent.socialSharing);
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function BlogDetailsTableContent({ blogData }) {
                 <h4 className="text-xl">{blogData?.tableHeading}</h4>
                 <ol className="list-decimal font-medium text-sm ml-4">
                   {blogData?.tabelContent?.map((item, index) => (
-                    <li key={index} className="active:text-primary my-3">
+                    <li key={index} className={`my-3 ${selectedContent === item ? 'text-primary' : ''}`}>
                       <button
                         className="active:text-primary cursor-pointer text-sm text-left font-medium hover:text-primary transition ease-in delay-50"
                         onClick={() => handleItemClick(item)}
