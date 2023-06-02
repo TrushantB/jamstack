@@ -14,8 +14,6 @@ const JamstackAccordion = ({ accordin }) => {
     accordin?.length && setActive(accordin[0])
   }, [accordin])
 
-  console.log(accordin,"shere is adcfoas daws");
-
   return (
     <div className="">
       {accordin?.map((item, index) => (
