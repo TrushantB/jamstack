@@ -69,7 +69,7 @@ const PlatformAccordian = (accordian) => {
                   )}
                 </div>
               </div>
-              <div className={`accordion-content accordian-inactive   ${active === item ? '  accordian-active ml-7 ' : 'ml-7 in '}`}>
+              <div className={`accordion-content accordian-inactive   ${active === item ? '  accordian-active ml-7 ' : 'ml-7 accordian-close '}`}>
                 {item.description}
               </div>
             </div>
