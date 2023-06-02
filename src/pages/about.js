@@ -16,7 +16,6 @@ const About = ({ header, footer, aboutData }) => {
       <div className="container mx-auto">
         <Banner {...aboutData?.banner} />
       </div>
-
       <div className="flex flex-col py-16 bg-accent-100 ">
         <MordernTechnology {...aboutData?.morderTechnology} isInner={true} />
       </div>
