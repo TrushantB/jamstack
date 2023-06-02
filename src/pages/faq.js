@@ -18,24 +18,24 @@ const Faq = ({ header, footer }) => {
     <Layout header={header} footer={footer}>
       <div className="container mx-auto">
 
-      <div className="">
-        <Banner {...faqData?.banner} />
-      </div>
-
-      <div className="conatiner mx-auto px-4 lg:px-0">
-        <Accordion {...faqData?.accordinData} />
-      </div>
-
-       <div className="container mx-auto px-4 lg:px-0 py-12 lg:py-18">
-        <div className="text-center">
-          <h2>{faqData?.blogCard?.heading}</h2>
+        <div className="">
+          <Banner {...faqData?.banner} />
         </div>
-        <div>
-          <BlogCard {...faqData?.blogCard} />
+
+        <div className="conatiner mx-auto px-4 lg:px-0">
+          <Accordion {...faqData?.accordinData} />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-0 py-12 lg:py-18">
+          <div className="text-center">
+            <h2>{faqData?.blogCard?.heading}</h2>
+          </div>
+          <div>
+            <BlogCard {...faqData?.blogCard} />
+          </div>
         </div>
       </div>
-      </div>
-    </Layout> 
+    </Layout>
   );
 };
 

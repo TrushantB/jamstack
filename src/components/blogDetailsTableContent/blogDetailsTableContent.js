@@ -4,12 +4,14 @@ import BlogContactCard from "../blogContactCard/blogContactCard";
 import BlogContentWriting from "../blogContentWriting/blogContentWriting";
 
 export default function BlogDetailsTableContent({ blogData }) {
+
   const [selectedContent, setSelectedContent] = useState({});
-  console.log("blodDetailsTableContent--->" , blogData)
-  console.log("blodDetailsTableContent========////////////////--->" , blogData?.tabelContent)
+
   const handleItemClick = (item) => {
     setSelectedContent(item);
+    console.log("setSelectedContent" , item)
   };
+  
   useEffect(() => {
     blogData?.tabelContent?.length &&
       setSelectedContent(blogData.tabelContent[0]);
@@ -25,7 +27,7 @@ export default function BlogDetailsTableContent({ blogData }) {
               <div className="toc mb-8">
                 <h4 className="text-xl">{blogData?.tableHeading}</h4>
                 <ol className="list-decimal font-medium text-sm ml-4">
-                  {blogData?.tabelContent.map((item, index) => (
+                  {blogData?.tabelContent?.map((item, index) => (
                     <li key={index} className="active:text-primary my-3">
                       <button
                         className="active:text-primary cursor-pointer text-sm text-left font-medium hover:text-primary transition ease-in delay-50"
@@ -50,9 +52,8 @@ export default function BlogDetailsTableContent({ blogData }) {
                   ))}
                 </ul>
               </div>
-
               <div className="my-6 sticky top-0 hidden lg:block">
-                <BlogContactCard suggestionPost={blogData?.tabelContent} />
+                <BlogContactCard blogData={blogData} />
               </div>
             </div>
             <div className="lg:w-3/4">

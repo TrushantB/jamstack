@@ -41,7 +41,7 @@
     },
     "tableHeading": "Table of Content",
     "iconHeading": "Share this article",
-    "tabelContent": [
+    "tabelContent":  [
       {
         "title": "Digital design process",
         "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 1 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
@@ -70,16 +70,7 @@
             "href": "",
             "target": "_blank"
           }
-        ],
-        "suggestionPost": 
-          {
-            "image": "/blogContentCard.png",
-            "alt": "blogContentCard",
-            "title": "Excited to switch on modern technology?",
-            "buttonLabel": "Let’s Talk",
-            "href": ""
-          }
-        
+        ]
       },
       {
         "title": "Key elements for effective design",
@@ -109,18 +100,49 @@
             "href": "",
             "target": "_blank"
           }
-        ],
-        "suggestionPost": 
+        ]
+      }
+      ,
+      {
+        "title": "blogs 3",
+        "content": "<p><span style=\"color: rgb(0, 0, 0);\">Governance 3 by human-centered design refers to an approach to designing and implementing governance systems and processes that are focused on meeting the needs and addressing the concerns of individuals and communities. This approach involves seeking input and feedback from stakeholders, including those affected by the governance decisions, and using this input to inform the design and implementation of the governance system.</span></p><p><span style=\"color: rgb(0, 0, 0);\">Human-centered design in governance can involve a variety of approaches and techniques, such as participatory design, co-creation, and stakeholder engagement. It emphasizes the importance of understanding the needs and perspectives of different groups and creating governance systems that are responsive to those needs and are able to adapt and evolve over time.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">One key aspect of human-centered design in governance is the recognition that governance systems and processes are not neutral and can significantly impact the lives and well-being of individuals and communities. By considering the human dimensions of governance, it is possible to design systems and processes that are more effective, equitable, and sustainable.</span></p> <p><span style=\"color: rgb(0, 0, 0);\">Digital design governance refers to the process of establishing and maintaining standards and guidelines for the design of digital products, services, and experiences. It is an essential aspect of digital design because it helps ensure that the design of a digital product or service is consistent, coherent, and user-friendly. It also helps ensure that the design aligns with the goals and values of the organization and that it meets the needs of the target audience.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">Having a digital design governance process in place can help organizations to:</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Maintain the integrity and coherence of their brand across all digital channels and touchpoints </span></p><ol class=\"list-decimal\"> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Foster collaboration and alignment among design teams and stakeholders </span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Streamline the design process by providing clear guidelines and standards to follow</span></li><li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Ensure that the design of digital products and services meets the needs and expectations of users </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Improve the overall user experience of digital products and services </span></li> <li style=\"font-size: 20px;\"><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Reduce the risk of design errors and inconsistencies</span></li></ol><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Digital design governance can involve various activities, such as establishing design principles and guidelines, creating templates and patterns for design elements, and conducting design reviews to ensure that designs meet standards and guidelines. It can also involve establishing processes for design feedback, version control, and collaboration. Overall, digital design governance is important because it helps ensure that digital products and services are well-designed, consistent, and meet users' needs.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design-led governance refers to the processes, policies, and practices a company or organization puts in place to ensure that its design activities align with its overall business strategy and goals. This can include everything from setting design standards and guidelines to establishing design review processes to creating a design-driven culture within the organization.</span></p> <p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance can help an organization innovate by ensuring that design efforts are focused on creating value for customers and stakeholders. It can also help to ensure that design activities are aligned with the overall business strategy and goals, which can help to drive innovation by ensuring that design efforts are focused on solving the right problems and creating new opportunities for the organization.</span></p> <h4><span style=\"color: rgb(0, 0, 0);\">There are a few key elements that are important for effective design governance:</span></h4><h4><span style=\"color: rgb(0, 0, 0);\">Clear goals and objectives</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">It is important to have clear goals and objectives for design efforts so that everyone involved knows what they are working towards.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Strong leadership</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance requires strong leadership that is committed to design and innovation, and is able to communicate the importance of design to the rest of the organization.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Collaboration</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Design governance should encourage collaboration and cross-functional teamwork, as this can help to ensure that design efforts are aligned with the overall business strategy and goals.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Processes and procedures&nbsp;</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Establishing clear processes and procedures for design review, feedback, and decision-making can help to ensure that design efforts are efficient and effective.</span></p><h4><span style=\"color: rgb(0, 0, 0);\">Communication</span></h4><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective communication is key to successful design governance. It is important to establish clear communication channels between designers, stakeholders, and other team members to ensure everyone is on the same page and working towards the same goals.</span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 20px;\">Effective design governance and innovation require a culture of continuous learning and improvement, as well as strong organizational leadership and communication. It is important to foster an environment where design teams feel empowered to take risks and experiment with new ideas while having the support and resources they need to develop and implement those ideas effectively.</span></p>",
+        "socialSharing": [
           {
-            "image": "/blogContentCard.png",
-            "alt": "blogContentCard",
-            "title": "Excited to switch on modern technology?",
-            "buttonLabel": "Let’s Talk",
-            "href": ""
+            "icon": "icon-twitter",
+            "alt": "twitter",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-whatsapp1",
+            "alt": "whatsApp",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-facebook2",
+            "alt": "facebook",
+            "href": "",
+            "target": "_blank"
+          },
+          {
+            "icon": "icon-linkedin",
+            "alt": "linkedin",
+            "href": "",
+            "target": "_blank"
           }
-        
+        ]
       }
     ],
+      "suggestionPost": 
+        {
+          "image": "/blogContentCard.png",
+          "alt": "blogContentCard",
+          "title": "Excited to switch on modern technology?",
+          "buttonLabel": "Let’s Talk",
+          "href": ""
+        } 
+    },
     "blogCard": {
       "heading": "Related Blogs",
       "cards": [
@@ -158,8 +180,7 @@
     "blogContactCard": {
       "heading": " Excited to switch on modern technology?",
       "buttonLabel": "Let’s Talk"
-    }
-  },
+    },
   "caseStudyPage": {
     "caseStudy": {
       "heading": "Case Study",
@@ -327,31 +348,31 @@
     "socialIcons": [
       {
         "icon": "icon-mail1",
-        "href": "https://mail.google.com/",
+        "href": "mailto:hello@jamstack.plus",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-instagam",
-        "href": "https://www.instagram.com/",
+        "href": "https://www.instagram.com/jamstack_plus/",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-twitter",
-        "href": "https://twitter.com/",
+        "href": "https://www.linkedin.com/showcase/jamstack-plus/",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-whatsapp1",
-        "href": "https://www.whatsapp.com/",
+        "href": "https://wa.me/+919130036036?text=Hi%20Team%20I%20Need%20infomation%20for%20Jamstack+",
         "alt": "image",
         "target": "_blank"
       },
       {
         "icon": "icon-facebook2",
-        "href": "https://www.facebook.com/",
+        "href": "https://www.facebook.com/profile.php?id=100093205203639",
         "alt": "image",
         "target": "_blank"
       }
@@ -834,6 +855,21 @@
         }
       ]
     },
+    "accordinData" : {
+      "heading" : "Pricing packages related FAQ" ,
+      "button" : {
+        "buttonLabel": "Know More",
+        "href" : "blog"
+        },
+      "accordin" : [
+        {"label" : "Can I exchange or extend my plan?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Does the other services are included in basic plan?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
+        {"label" : "Is there AMC (Annual Maintenance Contract)?" ,
+      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"}
+      ]
+    },
     "ConnectChoose": {
       "heading": "Connect, Check, Choose",
       "description": "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
@@ -994,7 +1030,7 @@
       "backGroundColor": "#ffffff",
       "description": "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
       "headingSize": "medium",
-      "image": "/aboutus.svg",
+      "image": "/faqBanner.png",
       "layout": "Image Left"
     },
     "accordinData": {
@@ -1049,7 +1085,7 @@
           "image": "/Termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
-          "description": "Branding a whole new category of debt management.",
+          "description": "Designing a new mobile experience for the all-in-one messaging platform.",
           "buttonLabel": "Read more",
           "href": "blogs"
         },
@@ -1153,7 +1189,7 @@
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageRight",
           "image": "/onboarding.png",
-          "id": "step-1",
+          "id": "on-boarding",
           "faqs": [
             {
               "label": "Can I manage my own content with webJ site?",
@@ -1173,7 +1209,7 @@
           "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
-          "id": "step-2",
+          "id": "choose-your-tech-stack",
           "faqs": [
             {
               "label": "In how many days will I get my website done?",
@@ -1188,7 +1224,7 @@
           "content": "Our experts will build the architecture, layout and design. Then developers will take over the project further for development. We are not done, it’s time to check for performance and all the needful things after development and testing.",
           "image": "/Design.png",
           "layout": "imageRight",
-          "id": "step-3",
+          "id": "design-development-testing",
           "faqs": [
             {
               "label": "Will my website work well on mobile as well?",
@@ -1202,7 +1238,7 @@
           "label": "Go Live",
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageCenter",
-          "id": "step-4"
+          "id": "go-live"
         }
       ]
     },
@@ -1487,7 +1523,7 @@
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageRight",
           "image": "/onboarding.png",
-          "id": "step-1",
+          "id": "on-boarding",
           "faqs": [
             {
               "label": "Can you build an app for iOS?",
@@ -1507,7 +1543,7 @@
           "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
           "image": "/choose.png",
           "layout": "imageLeft",
-          "id": "step-2",
+          "id": "choose-your-tech-stack",
           "faqs": [
             {
               "label": "I don’t have technical background , can you please help me with choosing tech stack?",
@@ -1522,7 +1558,7 @@
           "content": "Our experts will build the architecture, layout and design. Then developers will take over the project further for development. We are not done, it’s time to check for performance and all the needful things after development and testing.",
           "image": "/Design.png",
           "layout": "imageRight",
-          "id": "step-3",
+          "id": "business-essentials",
           "faqs": [
             {
               "label": "Can I preview app design before building an app?",
@@ -1543,7 +1579,7 @@
           "label": "Go Live",
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageCenter",
-          "id": "step-4"
+          "id": "go-live"
         }
       ]
     },
@@ -1745,82 +1781,79 @@
   },
   "ecomj": {
     "banner": {
-      "heading": "Start your journey of modern online business.",
-      "description": " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
-      "backGroundColor": "#ffffff",
-      "headingSize": "medium",
-      "image": "/ecommj.svg",
-      "type": "primary",
-      "label": "Start A Project",
-      "size": "medium",
-      "layout": "Image Left",
-      "href": "contact"
-    },
-    "info": {
-      "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
-      "question": "What is ecommJ?.",
-      "href": "/",
-      "lineIMage": {
-        "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
-        "alt": "lineImage"
-      }
-    },
-    "stepperData": {
-      "heading": "How ecommJ processes?",
-      "stepper": [
-        {
-          "label": "On boarding",
-          "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
-          "layout": "imageRight",
-          "image": "/onboarding.png",
-          "id": "step-1",
-          "faqs": [
-            {
-              "label": "Limitless customization and personalization",
-              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon": "diamond",
-              "arrow": true
-            },
-            {
-              "label": "Improved time to value",
-              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon": "diamond",
-              "arrow": true
+        "heading": "Start your journey of modern online business.",
+        "description" : " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
+        "backGroundColor": "#ffffff",
+        "headingSize": "medium",
+        "image": "/ecommj.svg",
+        "type": "primary",
+        "label": "Start A Project",
+        "size": "medium",
+        "layout": "Image Left",
+        "href" : "contact"
+      },
+      "info": {
+        "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
+        "question": "What is ecommJ?.",
+        "href" : "/",
+        "lineIMage": {
+          "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
+          "alt": "lineImage"
+        }
+      },
+      "stepperData" : {
+        "heading": "How ecommJ processes?",
+        "stepper":[
+          {
+            "label": "On boarding",
+            "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+            "layout": "imageRight",
+            "image": "/onboarding.png",
+            "id": "on-boarding",
+            "faqs":[
+              {"label" : "Limitless customization and personalization" ,
+              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon" :  "diamond"  ,
+              "arrow" : true
+              },
+              {"label" : "Improved time to value" ,
+              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon" :  "diamond"  ,
+              "arrow" : true
+              }
+            ],
+            "cta":{
+              "label":"Get your plan",
+              "size":"medium",
+              "type":"primary"
             }
-          ],
-          "cta": {
-            "label": "Get your plan",
-            "size": "medium",
-            "type": "primary"
-          }
-        },
-        {
-          "label": "Choose your tech-stack",
-          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
-          "image": "/choose.png",
-          "layout": "imageLeft",
-          "id": "step-2",
-          "faqs": [
-            {
-              "label": "Limitless customization and personalization",
-              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon": "diamond",
-              "arrow": true
-            },
-            {
-              "label": "Improved time to value",
-              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon": "diamond",
-              "arrow": true
-            }
-          ]
-        },
-        {
-          "label": "Business Essentials:",
-          "content": "<p><span>We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></p><p><span><strong><span>Shipping:</span></strong></span></p><p><span><span>Look for an option that suits your needs:</span></span></p><p><span><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/fedex.png?raw=true' alt='fedex-img' width='94' height='55'> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span><strong><span>Payment Gateways</span></strong></span></p><p><span>Look for an option that suits your needs:</span></p><p style='display:flex; align-items:center; padding:20px 0; '><span style='display:flex; align-items:center; padding:20px 0; flex-wrap:wrap;'><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/razorpay.png?raw=true' width='213' height='45'>&nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/stripe.png?raw=true' width='90' height='43'>&nbsp; &nbsp; &nbsp; &nbsp;<span/></p><p><strong><span><span>Integrations</span></span></strong></p><p><strong><span><span>Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>",
-          "image": "/Design.png",
-          "layout": "imageRight",
-          "id": "step-3",
+          },
+          {
+            "label": "Choose your tech-stack",
+            "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
+            "image": "/choose.png",
+            "layout": "imageLeft",
+            "id": "choose-your-tech-stack",
+            "faqs":[
+              {"label" : "Limitless customization and personalization" ,
+              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon" :  "diamond"  ,
+              "arrow" : true
+              },
+              {"label" : "Improved time to value" ,
+              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon" :  "diamond"  ,
+              "arrow" : true
+              }
+            ]
+            
+
+          },
+          {"label": "Business Essentials:", 
+          "content": "<p><span>We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></p><p><span><strong><span>Shipping:</span></strong></span></p><p><span><span>Look for an option that suits your needs:</span></span></p><p><span><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/fedex.png?raw=true' alt='fedex-img' width='94' height='55'> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span><strong><span>Payment Gateways</span></strong></span></p><p><span>Look for an option that suits your needs:</span></p><p style='display:flex; align-items:center; padding:20px 0; '><span style='display:flex; align-items:center; padding:20px 0; flex-wrap:wrap;'><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/razorpay.png?raw=true' width='213' height='45'>&nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/stripe.png?raw=true' width='90' height='43'>&nbsp; &nbsp; &nbsp; &nbsp;<span/></p><p><strong><span><span>Integrations</span></span></strong></p><p><strong><span><span>Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>", 
+          "image": "/Design.png", 
+          "layout": "imageRight", 
+          "id": "business-essentials",
           "faqs": [
             {
               "label": "Limitless customization and personalization",
@@ -1836,7 +1869,7 @@
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "image": "/Design.png",
           "layout": "imageLeft",
-          "id": "step-4",
+          "id": "design-development-testing",
           "faqs": [
             {
               "label": "Limitless customization and personalization",
@@ -1851,7 +1884,7 @@
           "label": "Go Live",
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageCenter",
-          "id": "step-5"
+          "id": "go-live"
         }
       ]
     },
