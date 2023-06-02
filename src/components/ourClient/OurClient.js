@@ -23,10 +23,10 @@ function OurClient({ heading, imageList, type, label, size, href }) {
                 ${
                   index % 3 !== 0 && (index + 1) % 3 !== 0
                     ? // TODO: Find better solution, This is temporary for now
-                      index === 13
-                      ? "border-l-2 border-r-2"
+                      index === 6
+                      ? "border-l-2 border-r-2 border-collapse bg-green-400"
                       : "border-l-2 border-r-2 border-b-2"
-                    : index !== 12
+                    : index !== 6
                     ? "border-b-2"
                     : "border-b-0"
                 }`}
