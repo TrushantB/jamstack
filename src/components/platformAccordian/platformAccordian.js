@@ -12,8 +12,8 @@ const PlatformAccordian = (accordian) => {
   };
 
   useEffect(() => {
-    accordin?.length && setActive(accordin[0]);
-  }, [accordin]);
+    accordian?.length && setActive(accordian[0]);
+  }, [accordian]);
 
   return (
     <>
@@ -32,9 +32,8 @@ const PlatformAccordian = (accordian) => {
                 <div className="flex items-center gap-2">
                   <div>
                     <div
-                      className={`diamond h-5 w-5  bg-primary symbol-inactive ${
-                        active !== item ? "sin" : "symbol-active"
-                      }`}
+                      className={`diamond h-5 w-5  bg-primary symbol-inactive ${active !== item ? "sin" : "symbol-active"
+                        }`}
                     ></div>
                   </div>
                   <h5>{item.label}</h5>
@@ -81,11 +80,10 @@ const PlatformAccordian = (accordian) => {
                 </div>
               </div>
               <div
-                className={`accordion-content accordian-inactive   ${
-                  active === item
+                className={`accordion-content accordian-inactive   ${active === item
                     ? "  accordian-active ml-7 "
                     : "ml-7 accordian-close "
-                }`}
+                  }`}
               >
                 {item.description}
               </div>

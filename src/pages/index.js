@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
@@ -16,14 +16,7 @@ import TestimonialCard from "@/components/presentational/testimonialCard/Testimo
 import BlogCard from "@/components/blogCard/BlogCard";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 
-const Home = ({ header, footer }) => {
-  const [homeData, setHomeData] = useState(null);
-
-  useEffect(() => {
-    get("home").then((response) => {
-      setHomeData(response);
-    });
-  }, []);
+const Home = ({ header, footer, homeData }) => {
 
   if (!homeData) {
     return <></>;
@@ -89,5 +82,10 @@ const Home = ({ header, footer }) => {
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const homeData = await get("home");
+  return { props: { homeData } };
+}
 
 export default Home;
