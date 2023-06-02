@@ -1,17 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { React} from "react";
 import { get } from "@/client/api";
 import CaseStudy from "@/components/caseStudy/CaseStudy";
 import Layout from "@/components/layout";
 
-const CaseStudyPage = ({ header, footer }) => {
-  const [caseStudyData, setCaseStudyData] = useState(null);
-
-  useEffect(() => {
-    get("caseStudyPage").then((response) => {
-      setCaseStudyData(response);
-    });
-  }, []);
-
+const CaseStudyPage = ({ header, footer , caseStudyData }) => {
+ 
   if (!caseStudyData) {
     return <></>;
   }
@@ -24,5 +17,9 @@ const CaseStudyPage = ({ header, footer }) => {
     </Layout>
   );
 };
+export async function getServerSideProps() {
+  const caseStudyData = await get("caseStudyPage");
+  return { props: { caseStudyData } };
+}
 
 export default CaseStudyPage;

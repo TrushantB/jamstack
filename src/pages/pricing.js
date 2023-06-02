@@ -10,14 +10,7 @@ import PricingPlanMobile from "@/components/pricingPlan copy/PricingPlanMobile";
 import Accordion from "@/components/accordian/accordion";
 import Link from "next/link";
 
-const Pricing = ({ header, footer }) => {
-  const [priceData, setPriceData] = useState(null);
-
-  useEffect(() => {
-    get("pricing").then((response) => {
-      setPriceData(response);
-    });
-  }, []);
+const Pricing = ({ header, footer , priceData }) => {
 
   if (!priceData) {
     return <></>;
@@ -67,4 +60,9 @@ const Pricing = ({ header, footer }) => {
     </Layout>
   );
 };
+
+export async function getServerSideProps() {
+  const priceData = await get("pricing");
+  return { props: { priceData } };
+}
 export default Pricing;

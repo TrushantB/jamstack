@@ -5,19 +5,10 @@ import Banner from "@/components/presentational/banner/Banner";
 import BlogCard from "@/components/blogCard/BlogCard";
 import Accordion from "@/components/accordian/accordion";
 
-const Faq = ({ header, footer }) => {
-  const [faqData, setFaqData] = useState(null);
-
-  useEffect(() => {
-    get("faq").then((response) => {
-      setFaqData(response);
-    });
-  }, []);
-
+const Faq = ({ header, footer, faqData }) => {
   return (
     <Layout header={header} footer={footer}>
       <div className="container mx-auto">
-
         <div className="">
           <Banner {...faqData?.banner} />
         </div>
@@ -38,5 +29,10 @@ const Faq = ({ header, footer }) => {
     </Layout>
   );
 };
+
+export async function getServerSideProps() {
+  const faqData = await get("faq");
+  return { props: { faqData } };
+}
 
 export default Faq;

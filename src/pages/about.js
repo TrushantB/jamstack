@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
@@ -9,14 +9,7 @@ import Card from "@/components/presentational/card/Card";
 import JamSTackAuthor from "@/components/jamStactAuthor/JamSTackAuthor";
 import { AboutArticle } from "@/components/aboutArticle/aboutArticle";
 
-const About = ({ header, footer }) => {
-  const [aboutData, setAboutData] = useState(null);
-
-  useEffect(() => {
-    get("aboutUs").then((response) => {
-      setAboutData(response);
-    });
-  }, []);
+const About = ({ header, footer, aboutData }) => {
 
   return (
     <Layout header={header} footer={footer}>
@@ -53,9 +46,15 @@ const About = ({ header, footer }) => {
       <div className="text-white bg-secondary">
         <div className="container mx-auto px-4 md:px-0 py-16 lg:py-24 flex flex-col">
           <JamSTackAuthor {...aboutData?.jamstackQuote} />
-        </div>        
+        </div>
       </div>
     </Layout>
   );
 };
+
+export async function getServerSideProps() {
+  const aboutData = await get("aboutUs");
+  return { props: { aboutData } };
+}
+
 export default About;
