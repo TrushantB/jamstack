@@ -17,7 +17,7 @@ const CaseStudyPage = ({ header, footer , caseStudyData }) => {
     </Layout>
   );
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const caseStudyData = await get("caseStudyPage");
   return { props: { caseStudyData } };
 }

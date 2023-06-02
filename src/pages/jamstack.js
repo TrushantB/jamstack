@@ -48,7 +48,7 @@ const Jamstack = ({ header, footer ,jamstackData }) => {
     </Layout>
   );
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const jamstackData = await get("jamStack");
   return { props: { jamstackData } };
 }

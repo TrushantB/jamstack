@@ -52,7 +52,7 @@ const About = ({ header, footer, aboutData }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const aboutData = await get("aboutUs");
   return { props: { aboutData } };
 }

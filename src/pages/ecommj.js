@@ -52,7 +52,7 @@ const Ecommj = ({ header, footer, ecommjData }) => {
     </Layout>
   );
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const ecommjData = await get("ecomj");
   return { props: { ecommjData } };
 }

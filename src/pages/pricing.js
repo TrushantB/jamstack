@@ -61,7 +61,7 @@ const Pricing = ({ header, footer , priceData }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const priceData = await get("pricing");
   return { props: { priceData } };
 }

@@ -54,7 +54,7 @@ const Ecommj = ({ header, footer ,mobjData }) => {
     </Layout>
   );
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const mobjData = await get("mobj");
   return { props: { mobjData } };
 }

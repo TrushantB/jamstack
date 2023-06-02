@@ -56,7 +56,7 @@ const Ecommj = ({ header, footer , webData}) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const webData = await get("webj");
   return { props: { webData } };
 }

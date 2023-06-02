@@ -30,7 +30,7 @@ const Faq = ({ header, footer, faqData }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const faqData = await get("faq");
   return { props: { faqData } };
 }

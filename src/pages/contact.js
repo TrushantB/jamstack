@@ -49,7 +49,7 @@ const Contact = ({ header, footer ,contactData}) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const contactData = await get("contactUs");
   return { props: { contactData } };
 }

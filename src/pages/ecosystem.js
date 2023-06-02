@@ -32,7 +32,7 @@ const Ecosysterm = ({ header, footer ,ecoData }) => {
     </Layout>
   );
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const ecoData = await get("ecoSystem");
   return { props: { ecoData } };
 }
