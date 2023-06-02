@@ -1,8 +1,7 @@
 import { React, useState } from "react";
 
-const Accordion = ({ accordin, isInner=false }) => {
+const Accordion = ({ accordin, isInner = false }) => {
   const [active, setActive] = useState({});
-
   const toggleAccordion = (accordianItem) => {
     if (active !== accordianItem) {
       setActive(accordianItem);
@@ -11,15 +10,15 @@ const Accordion = ({ accordin, isInner=false }) => {
     }
   };
   return (
-    <div className={isInner ? "my-6": 'lg:px-0 px-0'}>
+    <div className={isInner ? "my-6" : 'lg:px-0 px-0'}>
       {accordin?.map((item, index) => (
-        <div className={`accordion-item border-t border-accent-200 cursor-pointer ${isInner ? "py-4": 'px-3 py-5'}`} key={index}>
+        <div className={`accordion-item border-t border-accent-200 cursor-pointer ${isInner ? "py-4" : 'px-3 py-5'}`} key={index}>
           <div
-            className={`accordion-title flex justify-between items-start gap-3 ${isInner ? "pt-0 pb-0": 'pb-0'}`}
+            className={`accordion-title flex justify-between items-start gap-3 ${isInner ? "pt-0 pb-0" : 'pb-0'}`}
             onClick={() => toggleAccordion(item)}
           >
             <div>
-              <h5 className={`${isInner ? 'text-base font-body font-bold': 'text-2xl leading-normal lg:text-3xl font-normal lg:leading-snug'}`}>{item.label}</h5>
+              <h5 className={`${isInner ? 'text-base font-body font-bold' : 'text-2xl leading-normal lg:text-3xl font-normal lg:leading-snug'}`}>{item.label}</h5>
             </div>
             <div>
               {active === item ? (
