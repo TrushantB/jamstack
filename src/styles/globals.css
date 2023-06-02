@@ -130,7 +130,7 @@
     @apply bg-pink-500 text-white rounded-full text-xl border-solid px-4 py-3 font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-black ring-offset-2;
   }
 }
-.btn-link{
+.btn-link {
   @apply hover:text-primary transition ease-in duration-100;
 }
 ::-webkit-scrollbar-track {
@@ -283,7 +283,7 @@
 
 .wrapper form div input[type="checkbox"]:checked + label {
   background-color: #4767f6;
-  color: #fff;  
+  color: #fff;
 }
 
 .wrapper form label {
@@ -331,8 +331,6 @@
   border-bottom: none;
 }
 
-
-
 @media screen and (min-width: 1024px) {
   body,
   html {
@@ -345,53 +343,47 @@
   }
 }
 
-.image:last-child{
+.image:last-child {
   border-bottom: none;
 }
 
-
 /* accoridan animation */
-.accordian-inactive{
- height: 0;
+.accordian-inactive {
+  height: 0;
 
- overflow: hidden;
-
-
+  overflow: hidden;
 }
 
-.accordian-close{
+.accordian-close {
   height: 0;
   overflow: hidden;
-  opacity: 0 ;
+  opacity: 0;
   transition: 0.3s linear;
 }
 
-.accordian-active{
-  transition:  0.3s linear;
+.accordian-active {
+  transition: 0.3s linear;
   height: auto;
   padding-top: 5px;
   opacity: 1;
-
 }
 
-.symbol-inactive{
+.symbol-inactive {
   visibility: hidden;
   transition: visibility 0.4ms linear;
 }
 
-.sin{
+.sin {
   visibility: hidden;
   transition: visibility 0.4ms linear;
 }
 
-.symbol-active{
+.symbol-active {
   visibility: visible;
   transition: visibility 0.5s linear;
 }
 
 /* accordian animation end */
-
-
 
 @media screen and (min-width: 1024px) {
   body,
