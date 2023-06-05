@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import Layout from "@/components/layout";
 import Form from "@/components/form";
 import { get } from "@/client/api";
@@ -6,14 +6,8 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import BlogCard from "@/components/blogCard/BlogCard";
 
-const Contact = ({ header, footer }) => {
-  const [contactData, setContactData] = useState(null);
-
-  useEffect(() => {
-    get("contactUs").then((response) => {
-      setContactData(response);
-    });
-  }, []);
+const Contact = ({ header, footer ,contactData}) => {
+  
 
   return (
     <Layout header={header} footer={footer}>
@@ -54,4 +48,10 @@ const Contact = ({ header, footer }) => {
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const contactData = await get("contactUs");
+  return { props: { contactData } };
+}
+
 export default Contact;

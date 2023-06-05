@@ -11,14 +11,8 @@ import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnolo
 import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
 
-const Ecommj = ({ header, footer }) => {
-  const [webData, setWebData] = useState(null);
-
-  useEffect(() => {
-    get("webj").then((response) => {
-      setWebData(response);
-    });
-  }, []);
+const Ecommj = ({ header, footer , webData}) => {
+ 
 
   if (!webData) {
     return <></>;
@@ -47,22 +41,24 @@ const Ecommj = ({ header, footer }) => {
         <CaseStudy {...webData?.caseStudy} />
       </div>
 
-      {/* cta section */}
       <div className="flex flex-col bg-accent-100 justify-center items-center">
         <Cta {...webData?.cta} />
       </div>
 
-      {/* Testimonial section */}
       <div className="py-12 md:py-24 container mx-auto px-4 md:px-0">
         <TestimonialCard {...webData?.testimonialCard} />
       </div>
 
-      {/*  blog section */}
     <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <BlogCard {...webData?.blogCard} />
       </div>
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const webData = await get("webj");
+  return { props: { webData } };
+}
 
 export default Ecommj;
