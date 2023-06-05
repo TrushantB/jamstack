@@ -1,4 +1,4 @@
-import { React, useEffect, useState , useRef } from "react";
+import { React, useEffect, useState, useRef } from "react";
 import BlogContactCard from "../blogContactCard/blogContactCard";
 import BlogContentWriting from "../blogContentWriting/blogContentWriting";
 
@@ -10,12 +10,13 @@ export default function BlogDetailsTableContent({ blogData }) {
   const handleItemClick = (item) => {
     setSelectedContent(item);
     if (containerRef) {
-      containerRef.current?.scrollIntoView({ behavior: 'smooth' });
+      containerRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   useEffect(() => {
-    blogData?.tabelContent?.length && setSelectedContent(blogData.tabelContent[0]);
+    blogData?.tabelContent?.length &&
+      setSelectedContent(blogData.tabelContent[0]);
   }, [blogData]);
 
   return (
@@ -28,13 +29,19 @@ export default function BlogDetailsTableContent({ blogData }) {
                 <h4 className="text-xl">{blogData?.tableHeading}</h4>
                 <ol className="list-decimal font-medium text-sm ml-4">
                   {blogData?.tabelContent?.map((item, index) => (
-                    <li key={index} className={`my-3 ${selectedContent === item ? 'text-primary' : ''}`}>
+                    <li key={index}
+                    className={`my-3 ${
+                      selectedContent === item ? "text-primary" : ""
+                    }`}
+                    >
+                      <a  href="#">
                       <button
                         className="active:text-primary cursor-pointer text-sm text-left font-medium hover:text-primary transition ease-in delay-50"
                         onClick={() => handleItemClick(item)}
                       >
                         {item.title}
                       </button>
+                      </a>
                     </li>
                   ))}
                 </ol>
@@ -44,8 +51,12 @@ export default function BlogDetailsTableContent({ blogData }) {
                 <ul className="my-2 flex items-center gap-6">
                   {selectedContent?.socialSharing?.map((item, index) => (
                     <li key={index}>
-                      <a href={item.href} target={item.target} className="hover:text-primary transition ease-in delay-50
-                      ">
+                      <a
+                        href={item.href}
+                        target={item.target}
+                        className="hover:text-primary transition ease-in delay-50
+                      "
+                      >
                         <i className={item.icon}></i>
                       </a>
                     </li>

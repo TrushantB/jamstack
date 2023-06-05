@@ -7,14 +7,12 @@ const JamstackAccordion = ({ accordin }) => {
     if (active !== accordianItem) {
       setActive(accordianItem);
     } else {
-      setActive({})
+      setActive({});
     }
   };
   useEffect(() => {
-    accordin?.length && setActive(accordin[0])
-  }, [accordin])
-
-  console.log(accordin,"shere is adcfoas daws");
+    accordin?.length && setActive(accordin[0]);
+  }, [accordin]);
 
   return (
     <div className="">
@@ -28,20 +26,16 @@ const JamstackAccordion = ({ accordin }) => {
               <div className="diamond mt-5 lg:mt-0 w-1 h-1 p-3 bg-tertiary"></div>
               <h3>{item.label}</h3>
             </div>
-
           </div>
           {active === item && (
-
             <div className="accordion-content flex-col lg:flex-row justify-between flex gap-4 pl-9 pr-9 sm:pr-0 pb-5">
               <div className="lg:w-1/2">
-                <p className="w-full mb-4" >{item.description}</p>
+                <p className="w-full mb-4">{item.description}</p>
               </div>
               <div className="w-full md:w-1/2 flex justify-end items-center">
                 <img className="w-full h-full" src={`${item.image}`} />
               </div>
             </div>
-
-
           )}
         </div>
       ))}

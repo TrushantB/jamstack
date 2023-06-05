@@ -13,10 +13,8 @@ const Jamstack = ({ header, footer }) => {
   useEffect(() => {
     get("jamStack").then((response) => {
       setJamstackData(response);
-      console.log("data", response);
     });
   }, []);
-  console.log("nooo", jamstackData?.cards?.Cardsitems);
   if (!jamstackData) {
     return <></>;
   }
@@ -48,7 +46,9 @@ const Jamstack = ({ header, footer }) => {
       </div>
 
       <div className="pb-24">
-        <h2 className="text-center mb-6 md:mb-8">{jamstackData?.productCard?.heading}</h2>
+        <h2 className="text-center mb-6 md:mb-8">
+          {jamstackData?.productCard?.heading}
+        </h2>
         <div>
           <ProductCard cards={jamstackData?.productCard?.cards} />
         </div>
