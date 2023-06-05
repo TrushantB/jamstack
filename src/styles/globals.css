@@ -204,6 +204,7 @@
 
 .pentagon {
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  animation-delay: 5s;
 }
 
 .circle {
@@ -212,6 +213,10 @@
 
 .diamond {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.diamond::after {
+  animation-delay: 2s;
 }
 
 .video {
