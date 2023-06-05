@@ -1,17 +1,12 @@
-import { React, useEffect, useState, useRef } from "react";
+import { React, useEffect, useState } from "react";
 import BlogContactCard from "../blogContactCard/blogContactCard";
 import BlogContentWriting from "../blogContentWriting/blogContentWriting";
 
 export default function BlogDetailsTableContent({ blogData }) {
   const [selectedContent, setSelectedContent] = useState({});
 
-  const containerRef = useRef(null);
-
   const handleItemClick = (item) => {
     setSelectedContent(item);
-    if (containerRef) {
-      containerRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
   };
 
   useEffect(() => {
@@ -24,23 +19,24 @@ export default function BlogDetailsTableContent({ blogData }) {
       <div className="max-w-3xl mx-auto">
         <div className="my-8 lg:my-16">
           <div className="md:flex justify-center items-start md:gap-4 lg:gap-4">
-            <div className="md:w-1/4 px-3 mb-8 lg:mb-0">
+            <div className="md:w-1/4 px-3 mb-8 lg:mb-0 sticky top-[80px]">
               <div className="toc mb-8">
                 <h4 className="text-xl">{blogData?.tableHeading}</h4>
-                <ol className="list-decimal font-medium text-sm ml-4">
+                <ol className="list-decimal font-medium text-sm ml-4 ">
                   {blogData?.tabelContent?.map((item, index) => (
-                    <li key={index}
-                    className={`my-3 ${
-                      selectedContent === item ? "text-primary" : ""
-                    }`}
+                    <li
+                      key={index}
+                      className={`my-3 ${
+                        selectedContent === item ? "text-primary" : ""
+                      } hover:text-primary`}
                     >
-                      <a  href="#">
-                      <button
-                        className="active:text-primary cursor-pointer text-sm text-left font-medium hover:text-primary transition ease-in delay-50"
-                        onClick={() => handleItemClick(item)}
-                      >
-                        {item.title}
-                      </button>
+                      <a href={`#${index}`}>
+                        <button
+                          className="active:text-primary cursor-pointer text-sm text-left font-medium hover:text-primary transition ease-in delay-50"
+                          onClick={() => handleItemClick(item)}
+                        >
+                          {item.title}
+                        </button>
                       </a>
                     </li>
                   ))}
@@ -68,12 +64,16 @@ export default function BlogDetailsTableContent({ blogData }) {
               </div>
             </div>
             <div className="lg:w-3/4">
-              {selectedContent.content && (
-                <div
-                  className="px-3 blogDetailsInnerPage"
-                  dangerouslySetInnerHTML={{ __html: selectedContent.content }}
-                />
-              )}
+              {blogData?.tabelContent?.map((item, index) => (
+                <div key={index} className="blogDetailsItems" id={`${index}`}>
+                <h2 className="px-3">{item.title}</h2>
+                  <div
+                    key={index}
+                    className="px-3 blogDetailsInnerPage"
+                    dangerouslySetInnerHTML={{ __html: item.content }}
+                  />
+                </div>
+              ))}
               <div className="flex md:justify-end">
                 <div className="px-3 ">
                   <BlogContentWriting author={blogData?.author} />
