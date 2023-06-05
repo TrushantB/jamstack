@@ -162,7 +162,7 @@ function WebStactics({
               <p className="text-red-600 bg-red-100 py-1 px-3 rounded-full">
                 {error}
               </p>
-            </div>
+            </div> 
           )}
           {/* input end  */}
         </div>
