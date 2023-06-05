@@ -2,6 +2,8 @@ import { React, useState } from "react";
 import Button from "../form/button/Button";
 import Accordion from "../accordian/accordion";
 
+import Onboarding from "../svgAnimations/onboarding";
+
 const Stepper = (stepper) => {
   const [selectedStep, setSelectedStep] = useState(1);
 
@@ -64,7 +66,7 @@ const Stepper = (stepper) => {
                   {step?.cta?.label && <Button {...step?.cta} />}
                 </div>
                 <div className="lg:w-1/2 lg:p-2 flex justify-center items-start mt-8 lg:mt-20">
-                  <img src={step.image} alt="Step Image" />
+                  <Onboarding/>
                 </div>
               </>
             ) : (

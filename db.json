@@ -1008,7 +1008,7 @@
         {
           "label": "Design, Development and Testing:",
           "content": "Our experts will build the architecture, layout and design. Then developers will take over the project further for development. We are not done, it’s time to check for performance and all the needful things after development and testing.",
-          "image": "/Design.png",
+          "image": "/design.svg",
           "layout": "imageRight",
           "id": "design-development-testing",
           "faqs": [
