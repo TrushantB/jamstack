@@ -374,8 +374,9 @@
         { "image": "/javascript.svg", "alt": "javascript logo" },
         { "image": "/react.svg", "alt": "react logo" },
         { "image": "/vue.svg", "alt": "vue logo" },
-        { "image": "/strapi.svg", "alt": "strapi" },
-        { "image": "/sanity.svg", "alt": "sanity logo" }
+        { "image": "/strapi_1.svg", "alt": "strapi" },
+        { "image": "/sanity.svg", "alt": "sanity logo" },
+        { "image": "/prismic.svg", "alt": "sanity logo" }
      
       ],
       "type": "primary",
