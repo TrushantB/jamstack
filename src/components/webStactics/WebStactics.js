@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import ReportLoader from "./reportLoader";
 import ReportUI from "./reportUI";
 import ProgressBar from "./reportUI";
+import axios from "axios";
 
 function WebStactics({
   heading,
@@ -17,7 +18,9 @@ function WebStactics({
   const [showButton, setShowButton] = useState(true);
   const [showProgressBar, setShowProgressBar] = useState(false);
   const [animateReport, setAnimateReport] = useState(false);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
+  const [progressiveData, setProgressiveData] = useState(null);
+
 
   const handleBlur = (event) => {
     if (event.target.value === "") {
@@ -31,8 +34,7 @@ function WebStactics({
     if (error) {
       setError("");
     }
-    setInputValue(event.target.value)
-    
+    setInputValue(event.target.value);
   };
 
   useEffect(() => {
@@ -52,52 +54,34 @@ function WebStactics({
   const handleButtonClick = () => {
     setShowButton(false);
     setAnimateReport(true);
-  
-    // const requestData = {
-    //   url: inputValue,
-    //   device: 'desktop',
-    //   parameters: ['--output=html']
-    // };
+
     var data = JSON.stringify({
       url: inputValue,
-      device: "desktop",
-      proxyCountry: "us",
-      followRedirect: true,
-      parameters: ["--output=json"],
+      output: "json",
     });
-    
-    fetch('https://api.geekflare.com/lighthouse', {
-      method: 'POST',
-      headers: {
-        "x-api-key": '467e9b93-7654-4294-b9bd-44fee71b2800',
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-      },
-      body: JSON.stringify(data)
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Request failed');
-        }
-      })
-      .then((data) => {
-        // Handle the response here
-        console.log("data" , data);
-  
-        setTimeout(() => {
-          setAnimateReport(false);
-          setShowProgressBar(true);
-        }, 10000);
-      })
-      .catch((error) => {
-        // Handle errors here
-        console.error("error" , error);
-      });
-  };  
+
+    const fetchData = async () =>{
+      try {
+        const response = await fetch("https://api-assets.geekflare.com/tests/lighthouse/v0dyzv073o0tvfit69dn0ngl.json");
+        const jsonData = await response.json();
+        console.log("jsonData" , jsonData)
+        setProgressiveData(jsonData);
+      } catch (error) {
+        console.log("error" , error)
+      }
+    }
+    fetchData();
+  };
+  //   useEffect(() => {
+  // axios.post('https://jamstack-site-analysis-report.onrender.com/light-house-report', {
+  //   "url": "https://setoo.co",
+  //   "output": "html"
+  // }).then((response)=> {
+  //   console.log({ response});
+  // }).catch((err) => {
+  //   console.log(err);
+  // })
+  //   },[])
 
   const Animation = () => {
     gsap.set(".report", { display: "block" });
@@ -113,7 +97,8 @@ function WebStactics({
   useEffect(() => {
     if (animateReport) {
       Animation();
-    } else {}
+    } else {
+    }
   }, [animateReport]);
 
   return (
@@ -162,7 +147,7 @@ function WebStactics({
               <p className="text-red-600 bg-red-100 py-1 px-3 rounded-full">
                 {error}
               </p>
-            </div> 
+            </div>
           )}
           {/* input end  */}
         </div>

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import Button from "../form/button/Button";
 
 const ProgressBar = () => {
+
   return (
     <div className="container mx-auto pt-24 lg:pt-14">
       <h4 className=" font-normal mb-14 ml-5">Here are your web vitals</h4>
