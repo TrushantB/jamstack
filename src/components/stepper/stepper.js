@@ -2,7 +2,10 @@ import { React, useState } from "react";
 import Button from "../form/button/Button";
 import Accordion from "../accordian/accordion";
 
-import Onboarding from "../svgAnimations/onboarding";
+import Onboarding from "../svgAnimations/stepper/onboarding";
+import Choose from "../svgAnimations/stepper/choose";
+import Design from "../svgAnimations/stepper/design";
+import Bussiness from "../svgAnimations/stepper/bussiness";
 
 const Stepper = (stepper) => {
   const [selectedStep, setSelectedStep] = useState(1);
@@ -10,6 +13,13 @@ const Stepper = (stepper) => {
   const handleStepClick = (index) => {
     setSelectedStep(index);
   };
+  const MAP_STEPPER_COMPONENT = {
+    choose:Choose,
+    onboarding:Onboarding,
+    design:Design,
+    bussiness:Bussiness
+  }
+
 
   return (
     <>
@@ -41,53 +51,56 @@ const Stepper = (stepper) => {
         </div>
 
         {/* stepper section */}
-        {stepper?.stepper.map((step, index) => (
-          <div
-            className={`stepperItem flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${step.layout === "imageLeft"
-              ? "lg:flex-row-reverse"
-              : "lg:flex-row"
-              }`}
-            id={step.id}
-            key={step.id}
-          >
-            {step.layout !== "imageCenter" ? (
-              <>
-                <div className="lg:w-1/2">
-                  <h3 className="pb-5">
-                    <span>{index + 1}.</span> {step.label}
-                  </h3>
-                  <div
-                    className=""
-                    dangerouslySetInnerHTML={{ __html: step.content }}
-                  ></div>
-                  {step?.faqs?.length && (
-                    <Accordion accordin={step?.faqs} isInner={true} />
-                  )}
-                  {step?.cta?.label && <Button {...step?.cta} />}
-                </div>
-                <div className="lg:w-1/2 lg:p-2 flex justify-center items-start mt-8 lg:mt-20">
-                  <Onboarding/>
-                </div>
-              </>
-            ) : (
-              <div
-                className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 "
-                id={step.id}
-              >
-                <div className="lg:w-1/2 mx-auto">
-                  <div className="icon-ic_launch text-7xl text-center text-tertiary pb-6"></div>
-                  <h3 className="pb-4 text-center">
-                    <span>{index + 1}.</span> {step.label}
-                  </h3>
-                  <p className="text-center pb-6">{step.content}</p>
-                  <div className="flex justify-center items-center mt-4">
-                    <Button label="Start Project Now" size="medium" />
+        {stepper?.stepper.map((step, index) => {
+          const Component = MAP_STEPPER_COMPONENT[step.animationType] || Choose
+          return (
+            <div
+              className={`stepperItem flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${step.layout === "imageLeft"
+                ? "lg:flex-row-reverse"
+                : "lg:flex-row"
+                }`}
+              id={step.id}
+              key={step.id}
+            >
+              {step.layout !== "imageCenter" ? (
+                <>
+                  <div className="lg:w-1/2">
+                    <h3 className="pb-5">
+                      <span>{index + 1}.</span> {step.label}
+                    </h3>
+                    <div
+                      className=""
+                      dangerouslySetInnerHTML={{ __html: step.content }}
+                    ></div>
+                    {step?.faqs?.length && (
+                      <Accordion accordin={step?.faqs} isInner={true} />
+                    )}
+                    {step?.cta?.label && <Button {...step?.cta} />}
+                  </div>
+                  <div className="lg:w-1/2  flex justify-center items-start mt-8 lg:mt-20">
+                   <Component />
+                  </div>
+                </>
+              ) : (
+                <div
+                  className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 "
+                  id={step.id}
+                >
+                  <div className="lg:w-1/2 mx-auto">
+                    <div className="icon-ic_launch text-7xl text-center text-tertiary pb-6"></div>
+                    <h3 className="pb-4 text-center">
+                      <span>{index + 1}.</span> {step.label}
+                    </h3>
+                    <p className="text-center pb-6">{step.content}</p>
+                    <div className="flex justify-center items-center mt-4">
+                      <Button label="Start Project Now" size="medium" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-        ))}
+              )}
+            </div>
+          )
+        })}
       </div>
     </>
   );

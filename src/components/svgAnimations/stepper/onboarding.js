@@ -17,29 +17,26 @@ const Onboarding = () => {
         
     
         tl.to("#j-circle", { scale:1, opacity: 1, duration: 0.3 })
-        tl.to("#transfer", { scale:1, opacity: 1, duration: 0.3 })
-
-        
+        .to("#transfer", { scale:1, opacity: 1, duration: 0.3 })
         .to("#you-circle", {  scale:1, opacity: 1, duration: 0.3 })
-       
         .to("#top-card", { opacity: 1, y: 0, duration:0.3 })
         .to("#middle-card", { opacity: 1, y: 0, duration:0.3 })
-        .to("#bottom-card", { opacity: 1, y: 0,duration:0.3  })
+        .to("#bottom-card", { opacity: 1, y: 0,duration:0.3  });
          
       
         ScrollTrigger.create({
           trigger: "#main",
-          start: "40% 60%", // Adjust the starting position for the trigger
+          start: "20% 60%", // Adjust the starting position for the trigger
           end: "80% 70%", // Adjust the ending position for the trigger
           animation: tl,
           toggleActions: "restart none none reverse",
-          markers: true,
+          
           stagger: 0.2, // Adjust the stagger value as per your preference
         });
       }, []);
   return (
-    <div>
-        <svg width="397" height="439" viewBox="0 0 397 439" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className="lg:w-10/12">
+        <svg width="" height="" viewBox="0 0 397 439" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="main" className=" overflow-hidden" clip-path="url(#clip0_5_78)" filter="url(#filter0_d_5_78)">
 
 <g id="top-card">

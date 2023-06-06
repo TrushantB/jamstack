@@ -844,7 +844,8 @@
       "description": "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
       "headingSize": "medium",
       "image": "/faqBanner.png",
-      "layout": "Image Left"
+      "layout": "Image Left",
+      "animationType":"faq"
     },
     "accordinData" : {
       "accordin" : [
@@ -956,7 +957,8 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href": "contact"
+      "href": "contact",
+      "animationType":"webj"
     },
     "info": {
       "description": "The webJ is an innovation by Jamstack+ based on JAMstack architecture.The platform provides quick, secured, durable and easily manageable digital presence that is uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
@@ -976,6 +978,7 @@
           "layout": "imageRight",
           "image": "/onboarding.png",
           "id": "on-boarding",
+          "animationType":"onboarding",
           "faqs": [
             {
               "label": "Can I manage my own content with webJ site?",
@@ -996,6 +999,7 @@
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "choose-your-tech-stack",
+          "animationType":"choose",
           "faqs": [
             {
               "label": "In how many days will I get my website done?",
@@ -1011,6 +1015,7 @@
           "image": "/design.svg",
           "layout": "imageRight",
           "id": "design-development-testing",
+          "animationType":"design",
           "faqs": [
             {
               "label": "Will my website work well on mobile as well?",
@@ -1287,7 +1292,8 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href": "contact"
+      "href": "contact",
+      "animationType":"mobj"
     },
     "info": {
       "description": "The mobJ is innovation by Jamstack+ to build the collaborative mobile apps. The architecture is flexible enough to give you freedom to manage your app content seamlessly. It provides the app that can run on any platform and on any screen smoothly. Your app content is secured and get through API to reflect on screens. With saving time on developing for each possible platform , mobJ provides sleek, custom apps that stand out and give maximum user experience.",
@@ -1307,6 +1313,7 @@
           "layout": "imageRight",
           "image": "/onboarding.png",
           "id": "on-boarding",
+          "animationType":"onboarding",
           "faqs": [
             {
               "label": "Can you build an app for iOS?",
@@ -1327,6 +1334,8 @@
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "choose-your-tech-stack",
+          "animationType":"choose",
+
           "faqs": [
             {
               "label": "I don’t have technical background , can you please help me with choosing tech stack?",
@@ -1342,6 +1351,8 @@
           "image": "/Design.png",
           "layout": "imageRight",
           "id": "business-essentials",
+          "animationType":"design",
+
           "faqs": [
             {
               "label": "Can I preview app design before building an app?",
@@ -1570,7 +1581,8 @@
         "label": "Start A Project",
         "size": "medium",
         "layout": "Image Left",
-        "href" : "contact"
+        "href" : "contact",
+        "animationType":"ecomj"
       },
       "info": {
         "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
@@ -1590,6 +1602,7 @@
             "layout": "imageRight",
             "image": "/onboarding.png",
             "id": "on-boarding",
+            "animationType":"onboarding",
             "faqs":[
               {"label" : "Limitless customization and personalization" ,
               "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
@@ -1614,6 +1627,7 @@
             "image": "/choose.png",
             "layout": "imageLeft",
             "id": "choose-your-tech-stack",
+            "animationType":"choose",
             "faqs":[
               {"label" : "Limitless customization and personalization" ,
               "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
@@ -1634,6 +1648,7 @@
           "image": "/Design.png", 
           "layout": "imageRight", 
           "id": "business-essentials",
+          "animationType":"bussiness",
           "faqs": [
             {
               "label": "Limitless customization and personalization",
@@ -1650,6 +1665,7 @@
           "image": "/Design.png",
           "layout": "imageLeft",
           "id": "design-development-testing",
+          "animationType":"design",
           "faqs": [
             {
               "label": "Limitless customization and personalization",

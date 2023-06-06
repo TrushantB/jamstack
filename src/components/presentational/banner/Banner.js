@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
-import Button from "../../form/button/Button";
+import Ecomj from "@/components/svgAnimations/banner/ecomj";
+import Webj from "@/components/svgAnimations/banner/webj";
+import Mobj from "@/components/svgAnimations/banner/mobj";
+import Faq from "@/components/svgAnimations/banner/faq";
 
 const Banner = ({
   heading,
@@ -13,7 +16,18 @@ const Banner = ({
   href,
   description,
   isInner = false,
+  animationType
 }) => {
+
+  const MAP_STEPPER_COMPONENT = {
+    ecomj:Ecomj,
+    webj:Webj,
+    mobj:Mobj,
+    faq:Faq
+  
+  }
+  const Component = MAP_STEPPER_COMPONENT[animationType] || Ecomj
+
   return (
     <div className="container mx-auto lg:py-24 py-16">
       <div
@@ -53,8 +67,9 @@ const Banner = ({
           </div>
         </div>
         {layout === "Image Left" && (
+          
           <div className="flex sm:justify-center lg:w-2/5 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
-            <img src={image} alt="image" />
+            <Component/>
           </div>
         )}
         {layout === "Image Bottom" && (

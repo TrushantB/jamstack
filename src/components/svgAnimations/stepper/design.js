@@ -1,31 +1,32 @@
-import gsap from "gsap";
 import React, { useEffect } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Design = () => {
   useEffect(() => {
-    const tl = gsap.timeline();
-
+    const tl1 = gsap.timeline();
+  
     gsap.set(".frame", { opacity: 0, y: 20 });
     gsap.set(".text", { y: 30, opacity: 0 });
     gsap.set(".testing", { x: 100, opacity: 0 });
-    gsap.set(".pentagons", { x:-50, opacity: 0 });
-
-    tl.to(".frame", { opacity: 1, y: 0, duration: 0.2 })
-      .to(".text", { y: 0, opacity: 1, duration: 0.2 })
-      .to(".testing", { x: 0, opacity: 1, duration: 0.2 })
-      .to(".pentagons", { x:0, opacity: 1, duration: 0.2 });
-
+    gsap.set(".pentagons", { x: -30, opacity: 0 });
+  
+    tl1.to(".frame", { opacity: 1, y: 0, duration: 0.3 })
+      .to(".text", { y: 0, opacity: 1, duration: 0.3 })
+      .to(".testing", { x: 0, opacity: 1, duration: 0.3 })
+      .to(".pentagons", { x: 0, opacity: 1, duration: 0.3 });
+  
     ScrollTrigger.create({
       trigger: ".design",
-      start: "top 60%", // Adjust the starting position for the trigger
+      start: "top 70%", // Adjust the starting position for the trigger
       end: "80% 70%", // Adjust the ending position for the trigger
-      animation: tl,
+      animation: tl1,
       toggleActions: "restart none none reverse",
-      markers: true,
-      stagger: 0.2, // Adjust the stagger value as per your preference
+      markers:false,
+      reverse: true
     });
   }, []);
+  
 
   return (
     <div className="lg:w-10/12 overflow-hidden">
