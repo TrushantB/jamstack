@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 const apiKey = process.env.NEXT_PUBLIC_EDGE_NETWORK_API
 const apiLink = process.env.NEXT_PUBLIC_EDGE_NETWORK_API_KEY
 
-
 function EdgeNetwork({ heading, image }) {
 
   const [city , setCity] = useState("")
