@@ -19,7 +19,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
             imageList?.map((item, index) => (
               <>
                 <li
-                  className={` flex items-center image w-full min-h-[180px] max-h-[180px] h-full
+                  className={` flex items-center px-4 py-4 lg:px-10 image w-full min-h-[140px] max-h-[140px] h-full
                 ${
                   index % 3 !== 0 && (index + 1) % 3 !== 0
                     ? // TODO: Find better solution, This is temporary for now
@@ -34,7 +34,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
                 >
                   {item.image ? (
                     <img
-                      className="w-full p-4 h-48"
+                      className="w-full h-auto"
                       src={item.image}
                       alt={item.altTag}
                       href={item.href}
