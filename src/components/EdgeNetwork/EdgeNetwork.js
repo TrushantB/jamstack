@@ -274,7 +274,7 @@ function EdgeNetwork({ heading, image }) {
           <div className="flex justify-center -mt-5">
             <div className="my-8">
               <div>
-                <div className="flex items-center flex-col rotate-[90deg] mt-0 -ml-1">
+                <div className="flex items-center flex-col rotate-[90deg] mt-0 -ml-2">
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
@@ -293,7 +293,7 @@ function EdgeNetwork({ heading, image }) {
               </div>
               <div className="text-lg md:text-2xl flex items-center justify-center my-6 md:my-12 gap-2">
                 👨
-                <span className="text-slate-700 inline-flex text-sm -mr-16">{" it's you!"}</span>
+                <span className="text-slate-700 inline-flex text-sm -mr-14">{" it's you!"}</span>
               </div>
             </div>
             {/* <div className="my-8">
