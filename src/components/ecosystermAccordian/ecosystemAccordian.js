@@ -1,4 +1,7 @@
 import { React, useEffect, useState } from "react";
+import Acclerate from "../svgAnimations/ecosystem/acclerate";
+import Presense from "../svgAnimations/ecosystem/presense";
+import Awarness from "../svgAnimations/ecosystem/awarness";
 
 const EcosystemAccordion = ({ accordin }) => {
   const [active, setActive] = useState({});
@@ -35,8 +38,8 @@ const EcosystemAccordion = ({ accordin }) => {
               <div className="lg:w-1/2">
                 <div className="w-full" dangerouslySetInnerHTML={{ __html: item.content }}></div>
               </div>
-              <div className="w-1/2 flex justify-end items-center">
-                <img className="w-full h-full" src={`${item.image}`} />
+              <div className="lg:w-1/2 flex justify-end items-center">
+               <Awarness/>
               </div>
             </div>
           )}
