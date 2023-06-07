@@ -167,7 +167,7 @@ function EdgeNetwork({ heading, image }) {
             />
           </div>
           <div className="relative ">
-            <div className="rotate-[90deg] absolute md:left-[7%] lg:left-1 top-[-80%] lg:-ml-4">
+            <div className="rotate-[90deg] absolute md:ml-0 top-[-80%] lg:-ml-4">
               <div
                 dangerouslySetInnerHTML={{
                   __html: `
