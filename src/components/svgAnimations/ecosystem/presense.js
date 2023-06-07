@@ -8,25 +8,25 @@ const Presense = () => {
 
     const presense = gsap.timeline();
 
-    gsap.set("#frame", { opacity: 0, y: 20 });
-    gsap.set("#avatar-card", { scale: 0, opacity: 0 });
-    gsap.set("#avatar", { y: 30, opacity: 0 });
-    gsap.set("#symbol-card", { x: 50, opacity: 0 });
-    gsap.set("#text-card", { x: 30, opacity: 0 });
-    gsap.set("#diamond-card", { x: -30, opacity: 0 });
-    gsap.set("#card-dot", { x: 30, opacity: 0 });
+    gsap.set(".presense .frame", { opacity: 0, y: 20 });
+    gsap.set(".presense .avatar-card", { scale: 0, opacity: 0 });
+    gsap.set(".presense .avatar", { y: 30, opacity: 0 });
+    gsap.set(".presense .symbol-card", { x: 50, opacity: 0 });
+    gsap.set(".presense .text-card", { x: 30, opacity: 0 });
+    gsap.set(".presense .diamond-card", { x: -30, opacity: 0 });
+    gsap.set(".presense .card-dot", { x: 30, opacity: 0 });
 
     presense
-      .to("#frame", { opacity: 1, y: 0, duration: 0.3 })
-      .to("#avatar-card", { scale: 1, opacity: 1, duration: 0.3 })
-      .to("#avatar", { y: 0, opacity: 1, duration: 0.3 })
-      .to("#diamond-card", { x: 0, opacity: 1, duration: 0.3 })
-      .to("#card-dot", { x: 0, opacity: 1, duration: 0.3 })
-      .to("#text-card", { x: 0, opacity: 1, duration: 0.3 })
-      .to("#symbol-card", { x: 0, opacity: 1, duration: 0.3 });
+      .to(".presense .frame", { opacity: 1, y: 0, duration: 0.3 })
+      .to(".presense .avatar-card", { scale: 1, opacity: 1, duration: 0.3 })
+      .to(".presense .avatar", { y: 0, opacity: 1, duration: 0.3 })
+      .to(".presense .diamond-card", { x: 0, opacity: 1, duration: 0.3 })
+      .to(".presense .card-dot", { x: 0, opacity: 1, duration: 0.3 })
+      .to(".presense .text-card", { x: 0, opacity: 1, duration: 0.3 })
+      .to(".presense .symbol-card", { x: 0, opacity: 1, duration: 0.3 });
 
     ScrollTrigger.create({
-      trigger: "#presense",
+      trigger: ".presense",
       start: "1% 20%",
       end: "80% 70%",
       animation: presense,
@@ -37,8 +37,8 @@ const Presense = () => {
   return (
     <div className="lg:w-10/12 mx-auto">
       <svg
-        id="presense"
-        className=" overflow-hidden"
+       
+        className=" overflow-hidden presense"
         width=""
         height=""
         viewBox="0 0 436 329"
@@ -46,7 +46,7 @@ const Presense = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clip-path="url(#clip0_0_1)">
-          <g id="frame">
+          <g className="frame">
             <path
               id="Vector"
               d="M403.788 1H10C5.02944 1 1 5.02944 1 10V319C1 323.971 5.02944 328 10 328H403.788C408.759 328 412.788 323.971 412.788 319V10C412.788 5.02944 408.759 1 403.788 1Z"
@@ -72,7 +72,7 @@ const Presense = () => {
               fill="#4767F6"
             />
           </g>
-          <g id="card-dot">
+          <g className="card-dot">
             <path
               id="Vector_3"
               d="M304.52 240.256C304.52 237.494 306.758 235.256 309.52 235.256H378.336C381.098 235.256 383.336 237.494 383.336 240.256V294.145C383.336 296.907 381.098 299.145 378.336 299.145H309.52C306.758 299.145 304.52 296.907 304.52 294.145V240.256Z"
@@ -86,7 +86,7 @@ const Presense = () => {
               />
             </g>
           </g>
-          <g id="diamond-card">
+          <g className="diamond-card">
             <g id="Group 330">
               <path
                 id="Vector_5"
@@ -100,13 +100,13 @@ const Presense = () => {
               />
             </g>
           </g>
-          <g id="avatar-card">
+          <g className="avatar-card">
             <path
               id="Vector_7"
               d="M28.6602 53.9619C28.6602 51.2005 30.8987 48.9619 33.6602 48.9619H195.027C197.788 48.9619 200.027 51.2005 200.027 53.9619V294.145C200.027 296.907 197.788 299.145 195.027 299.145H33.6602C30.8987 299.145 28.6602 296.907 28.6602 294.145V53.9619Z"
               fill="#F1F2F6"
             />
-            <g id="avatar">
+            <g className="avatar">
               <path
                 id="Vector_8"
                 d="M173.159 136.437C173.159 147.172 170.283 157.24 165.249 165.907C165.06 166.235 164.858 166.563 164.656 166.891C164.189 167.673 163.697 168.455 163.18 169.212C162.966 169.527 162.751 169.843 162.512 170.158C154.841 181.146 143.487 189.346 130.266 193.068C129.989 193.144 129.698 193.219 129.421 193.295C124.614 194.569 119.555 195.251 114.345 195.251C94.0216 195.251 76.0947 184.944 65.5607 169.262C64.564 167.812 63.6431 166.298 62.7978 164.759C58.1679 156.357 55.5312 146.706 55.5312 136.437C55.5312 103.951 81.8601 77.6226 114.345 77.6226C146.83 77.6226 173.159 103.951 173.159 136.437Z"
@@ -214,7 +214,7 @@ const Presense = () => {
               fill="#D1D5E6"
             />
           </g>
-          <g id="text-card">
+          <g className="text-card">
             <path
               id="Vector_29"
               d="M211.969 147.109C211.969 144.347 214.207 142.109 216.969 142.109H378.335C381.097 142.109 383.335 144.347 383.335 147.109V217.12C383.335 219.881 381.097 222.12 378.335 222.12H216.969C214.207 222.12 211.969 219.881 211.969 217.12V147.109Z"
@@ -236,7 +236,7 @@ const Presense = () => {
               fill="#D1D5E6"
             />
           </g>
-          <g id="symbol-card">
+          <g className="symbol-card">
             <path
               id="Vector_33"
               d="M265.125 53.9619C265.125 51.4766 267.14 49.4619 269.625 49.4619H430.992C433.477 49.4619 435.492 51.4766 435.492 53.9619V123.973C435.492 126.458 433.477 128.473 430.992 128.473H269.625C267.14 128.473 265.125 126.458 265.125 123.973V53.9619Z"
