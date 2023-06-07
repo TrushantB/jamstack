@@ -37,7 +37,6 @@ const Presense = () => {
   return (
     <div className="lg:w-10/12 mx-auto">
       <svg
-       
         className=" overflow-hidden presense"
         width=""
         height=""
