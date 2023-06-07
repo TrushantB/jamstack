@@ -1,25 +1,44 @@
-import { React, useState } from "react";
+import { React, useState , useEffect } from "react";
 
-const Accordion = ({ accordin, isInner=false }) => {
+const Accordion = ({ accordin, isInner = false }) => {
   const [active, setActive] = useState({});
-
   const toggleAccordion = (accordianItem) => {
     if (active !== accordianItem) {
       setActive(accordianItem);
     } else {
-      setActive({})
+      setActive({});
     }
   };
+
+  useEffect(() => {
+    accordin?.length && setActive(accordin[0])
+  }, [accordin])
+
   return (
-    <div className={isInner ? "my-6": 'lg:px-12 px-3'}>
+    <div className={isInner ? "my-6" : "lg:px-0 px-0"}>
       {accordin?.map((item, index) => (
-        <div className={`accordion-item border-t border-accent-200 cursor-pointer ${isInner ? "": 'p-5'}`} key={index}>
+        <div
+          className={`accordion-item border-t border-accent-200 cursor-pointer ${
+            isInner ? "py-4" : "px-3 py-5"
+          }`}
+          key={index}
+        >
           <div
-            className={`accordion-title flex justify-between items-start ${isInner ? "py-5": 'lg:p-5 '}`}
+            className={`accordion-title flex justify-between items-start gap-3 ${
+              isInner ? "pt-0 pb-0" : "pb-0"
+            }`}
             onClick={() => toggleAccordion(item)}
           >
             <div>
-              <h5 className={`${isInner ? 'text-base font-body font-bold': ''}`}>{item.label}</h5>
+              <h5
+                className={`${
+                  isInner
+                    ? "text-base font-body font-bold"
+                    : "text-2xl leading-normal lg:text-3xl font-normal lg:leading-snug"
+                }`}
+              >
+                {item.label}
+              </h5>
             </div>
             <div>
               {active === item ? (
@@ -30,6 +49,7 @@ const Accordion = ({ accordin, isInner=false }) => {
                   viewBox="0 0 24 24"
                   id="magicoon-Filled"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <title>chevron-down</title>
                   <g id="chevron-down-Filled">
@@ -48,6 +68,7 @@ const Accordion = ({ accordin, isInner=false }) => {
                   viewBox="0 0 24 24"
                   id="magicoon-Filled"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
                   <title>chevron-down</title>
                   <g id="chevron-down-Filled">
@@ -62,9 +83,14 @@ const Accordion = ({ accordin, isInner=false }) => {
               )}
             </div>
           </div>
-          {active === item && (
-            <div className={`accordion-content  ${isInner ? "": 'lg:ml-5 '} pb-5`}>{item.description}</div>
-          )}
+
+          <div
+            className={` ${
+              active === item ? "  accordian-active" : " accordian-close"
+            }  ${isInner ? "" : " "} accordian-inactive `}
+          >
+            {item.description}
+          </div>
         </div>
       ))}
     </div>

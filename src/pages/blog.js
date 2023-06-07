@@ -1,18 +1,9 @@
-import { React, useEffect, useState } from "react";
+import { React} from "react";
 import { get } from "@/client/api";
 import Layout from '@/components/layout'
 import Blogpage from "@/components/blog/blogPage";
 
-function Blog({ header, footer }) {
-
-  const [blogData, setBlogData] = useState([]);
-
-  useEffect(() => {
-    get("blog").then((response) => {
-      setBlogData(response);
-    });
-  }, []);
-
+function Blog({ header, footer , blogData }) {
 
   return (
     <Layout header={header} footer={footer} >
@@ -22,6 +13,11 @@ function Blog({ header, footer }) {
     </Layout>
 
   )
+}
+
+export async function getStaticProps() {
+  const blogData = await get("blog");
+  return { props: { blogData } };
 }
 
 export default Blog

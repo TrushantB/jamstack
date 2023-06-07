@@ -10,9 +10,11 @@ const EcosystemAccordion = ({ accordin }) => {
       setActive({})
     }
   };
+
   useEffect(() => {
     accordin?.length && setActive(accordin[0])
   }, [accordin])
+
   return (
     <div className="">
       {accordin?.map((item, index) => (
