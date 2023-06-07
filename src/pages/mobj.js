@@ -11,14 +11,7 @@ import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnolo
 import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
 
-const Ecommj = ({ header, footer }) => {
-  const [mobjData, setMobjData] = useState(null);
-
-  useEffect(() => {
-    get("mobj").then((response) => {
-      setMobjData(response);
-    });
-  }, []);
+const Ecommj = ({ header, footer ,mobjData }) => {
 
   if (!mobjData) {
     return <></>;
@@ -47,22 +40,22 @@ const Ecommj = ({ header, footer }) => {
         <CaseStudy {...mobjData?.caseStudy} />
       </div>
 
-      {/* cta section */}
       <div className="flex flex-col bg-accent-100 justify-center items-center">
         <Cta {...mobjData?.cta} />
       </div>
 
-      {/* Testimonial section */}
       <div className="py-12 md:py-24 container mx-auto px-4 md:px-0">
         <TestimonialCard {...mobjData?.testimonialCard} />
       </div>
 
-      {/*  blog section */}
       <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
         <BlogCard {...mobjData?.blogCard} />
       </div>
     </Layout>
   );
 };
-
+export async function getStaticProps() {
+  const mobjData = await get("mobj");
+  return { props: { mobjData } };
+}
 export default Ecommj;

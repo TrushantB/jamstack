@@ -66,7 +66,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                 alt={card.altTag}
               />
               <div className="p-4  flex flex-col justify-between">
-                <h4 className="mb-3">{label}</h4>
+                <h4 className="mb-3">{card.label}</h4>
                 <p className="leading-relaxed mb-5 w-9/12">
                   {card.description}
                 </p>

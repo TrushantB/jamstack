@@ -7,16 +7,8 @@ import Accordion from "@/components/accordian/accordion";
 import ProductCard from "@/components/productCard/productCard";
 import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian";
 
-const Jamstack = ({ header, footer }) => {
-  const [jamstackData, setJamstackData] = useState(null);
-
-  useEffect(() => {
-    get("jamStack").then((response) => {
-      setJamstackData(response);
-      console.log("data", response);
-    });
-  }, []);
-  console.log("nooo", jamstackData?.cards?.Cardsitems);
+const Jamstack = ({ header, footer ,jamstackData }) => {
+  
   if (!jamstackData) {
     return <></>;
   }
@@ -56,5 +48,9 @@ const Jamstack = ({ header, footer }) => {
     </Layout>
   );
 };
+export async function getStaticProps() {
+  const jamstackData = await get("jamStack");
+  return { props: { jamstackData } };
+}
 
 export default Jamstack;

@@ -33,6 +33,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
                   key={index}
                 >
                   {item.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       className="w-full h-auto"
                       src={item.image}

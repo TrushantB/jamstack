@@ -5,16 +5,7 @@ import Layout from "@/components/layout";
 import ConnectChoose from "@/components/connectChoose/ConnectChoose";
 import EcosystemAccordion from "@/components/ecosystermAccordian/ecosystemAccordian";
 
-const Ecosysterm = ({ header, footer }) => {
-
-  const [ecoData, setEcoData] = useState(null);
-
-  useEffect(() => {
-    get("ecoSystem").then((response) => {
-      setEcoData(response);
-    });
-  }, []);
-
+const Ecosysterm = ({ header, footer ,ecoData }) => {
 
   if (!ecoData) {
     return <></>;
@@ -35,12 +26,14 @@ const Ecosysterm = ({ header, footer }) => {
         </div>
       </div>
 
-      {/* Connect check choose section*/}
       <div className="container mx-auto px-4 xl:px-0 pb-6">
         <ConnectChoose  {...ecoData.ConnectChoose} />
       </div>
     </Layout>
   );
 };
-
+export async function getStaticProps() {
+  const ecoData = await get("ecoSystem");
+  return { props: { ecoData } };
+}
 export default Ecosysterm;
