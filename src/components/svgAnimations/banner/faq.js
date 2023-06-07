@@ -19,19 +19,12 @@ const Faq = () => {
     gsap.set("#content-card", { x: 50, opacity: 0 });
 
     faq
-      .to("#frame", { opacity: 1, y: 0,duration:0.3 })
-      .to("#text", { x: 0, opacity: 1,duration:0.3 })
-      .to("#section_1", { y: 0, opacity: 1 ,duration:0.3})
-      .to("#section_2", { y: 0, opacity: 1,duration:0.3 })
-      .to("#color_section", { opacity: 1 ,duration:0.3})
-      .to("#question_section", { opacity: 1,duration:0.3 })
-      
-      
-         
-         
-         
-         
-      
+      .to("#frame", { opacity: 1, y: 0, duration: 0.3 })
+      .to("#text", { x: 0, opacity: 1, duration: 0.3 })
+      .to("#section_1", { y: 0, opacity: 1, duration: 0.3 })
+      .to("#section_2", { y: 0, opacity: 1, duration: 0.3 })
+      .to("#color_section", { opacity: 1, duration: 0.3 })
+      .to("#question_section", { opacity: 1, duration: 0.3 });
 
     ScrollTrigger.create({
       trigger: "#faq",
@@ -39,7 +32,6 @@ const Faq = () => {
       end: "80% 70%",
       animation: faq,
       toggleActions: "restart none none reverse",
-      markers: true,
     });
   }, []);
   return (

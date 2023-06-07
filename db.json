@@ -241,7 +241,8 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href": "contact"
+      "href": "contact",
+      "animationType":"home"
     },
     "technologySolution": {
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
@@ -1250,25 +1251,29 @@
           "label": "Awareness.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"awarness"
         },
         {
           "label": "Presence.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"presense"
         },
         {
           "label": "Accelerate.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"acclerate"
         },
         {
           "label": "Maintenance.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"maintainence"
         }
       ]
     },
