@@ -6,8 +6,6 @@ export default defineType({
   title: 'Pricing',
   type: 'document',
   icon: DashboardIcon,
-  // Uncomment below to have edits publish automatically as you type
-  // liveEdit: true,
   fields: [
     defineField({
       type: 'string',
