@@ -241,7 +241,8 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href": "contact"
+      "href": "contact",
+      "animationType":"home"
     },
     "technologySolution": {
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
@@ -839,7 +840,8 @@
       "description": "If you're new to Jamstack technology or have questions regarding the process, this FAQ's will help you learn more about the technology and its benefits.",
       "headingSize": "medium",
       "image": "/faqBanner.png",
-      "layout": "Image Left"
+      "layout": "Image Left",
+      "animationType":"faq"
     },
     "accordinData" : {
       "accordin" : [
@@ -951,7 +953,8 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href": "contact"
+      "href": "contact",
+      "animationType":"webj"
     },
     "info": {
       "description": "The webJ is an innovation by Jamstack+ based on JAMstack architecture.The platform provides quick, secured, durable and easily manageable digital presence that is uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
@@ -971,6 +974,7 @@
           "layout": "imageRight",
           "image": "/onboarding.png",
           "id": "on-boarding",
+          "animationType":"onboarding",
           "faqs": [
             {
               "label": "Can I manage my own content with webJ site?",
@@ -991,6 +995,7 @@
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "choose-your-tech-stack",
+          "animationType":"choose",
           "faqs": [
             {
               "label": "In how many days will I get my website done?",
@@ -1003,9 +1008,10 @@
         {
           "label": "Design, Development and Testing:",
           "content": "Our experts will build the architecture, layout and design. Then developers will take over the project further for development. We are not done, it’s time to check for performance and all the needful things after development and testing.",
-          "image": "/Design.png",
+          "image": "/design.svg",
           "layout": "imageRight",
           "id": "design-development-testing",
+          "animationType":"design",
           "faqs": [
             {
               "label": "Will my website work well on mobile as well?",
@@ -1240,25 +1246,29 @@
           "label": "Awareness.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"awarness"
         },
         {
           "label": "Presence.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"presense"
         },
         {
           "label": "Accelerate.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"acclerate"
         },
         {
           "label": "Maintenance.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
-          "image": "/accordianImage.svg"
+          "image": "/accordianImage.svg",
+          "animationType":"maintainence"
         }
       ]
     },
@@ -1282,7 +1292,8 @@
       "label": "Start A Project",
       "size": "medium",
       "layout": "Image Left",
-      "href": "contact"
+      "href": "contact",
+      "animationType":"mobj"
     },
     "info": {
       "description": "The mobJ is innovation by Jamstack+ to build the collaborative mobile apps. The architecture is flexible enough to give you freedom to manage your app content seamlessly. It provides the app that can run on any platform and on any screen smoothly. Your app content is secured and get through API to reflect on screens. With saving time on developing for each possible platform , mobJ provides sleek, custom apps that stand out and give maximum user experience.",
@@ -1302,6 +1313,7 @@
           "layout": "imageRight",
           "image": "/onboarding.png",
           "id": "on-boarding",
+          "animationType":"onboarding",
           "faqs": [
             {
               "label": "Can you build an app for iOS?",
@@ -1322,6 +1334,8 @@
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "choose-your-tech-stack",
+          "animationType":"choose",
+
           "faqs": [
             {
               "label": "I don’t have technical background , can you please help me with choosing tech stack?",
@@ -1337,6 +1351,8 @@
           "image": "/Design.png",
           "layout": "imageRight",
           "id": "business-essentials",
+          "animationType":"design",
+
           "faqs": [
             {
               "label": "Can I preview app design before building an app?",
@@ -1565,7 +1581,8 @@
         "label": "Start A Project",
         "size": "medium",
         "layout": "Image Left",
-        "href" : "contact"
+        "href" : "contact",
+        "animationType":"ecomj"
       },
       "info": {
         "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
@@ -1585,6 +1602,7 @@
             "layout": "imageRight",
             "image": "/onboarding.png",
             "id": "on-boarding",
+            "animationType":"onboarding",
             "faqs":[
               {"label" : "Limitless customization and personalization" ,
               "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
@@ -1609,6 +1627,7 @@
             "image": "/choose.png",
             "layout": "imageLeft",
             "id": "choose-your-tech-stack",
+            "animationType":"choose",
             "faqs":[
               {"label" : "Limitless customization and personalization" ,
               "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
@@ -1629,6 +1648,7 @@
           "image": "/Design.png", 
           "layout": "imageRight", 
           "id": "business-essentials",
+          "animationType":"bussiness",
           "faqs": [
             {
               "label": "Limitless customization and personalization",
@@ -1645,6 +1665,7 @@
           "image": "/Design.png",
           "layout": "imageLeft",
           "id": "design-development-testing",
+          "animationType":"design",
           "faqs": [
             {
               "label": "Limitless customization and personalization",

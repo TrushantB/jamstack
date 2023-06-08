@@ -37,7 +37,7 @@ function EdgeNetwork({ heading, image }) {
                     <div
                       dangerouslySetInnerHTML={{
                         __html: `
-                              <svg class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line class="" x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `,
@@ -46,7 +46,7 @@ function EdgeNetwork({ heading, image }) {
                     <div
                       dangerouslySetInnerHTML={{
                         __html: `
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `,
@@ -64,7 +64,7 @@ function EdgeNetwork({ heading, image }) {
                     <div
                       dangerouslySetInnerHTML={{
                         __html: `
-                              <svg class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `,
@@ -73,7 +73,7 @@ function EdgeNetwork({ heading, image }) {
                     <div
                       dangerouslySetInnerHTML={{
                         __html: `
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `,
@@ -85,7 +85,7 @@ function EdgeNetwork({ heading, image }) {
             </div>
             <button
               type="button"
-              className="relative min-w-[70px] md:min-w-[96px] z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3  text-center mx-auto  font-medium edgenetworkbtn text-[#423d3d]  rounded-lg"
+              className="relative min-w-[70px] md:min-w-[96px] z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 text-center mx-auto bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg"
             >
               Canada
             </button>
@@ -106,7 +106,7 @@ function EdgeNetwork({ heading, image }) {
                     className=""
                     dangerouslySetInnerHTML={{
                       __html: `
-                              <svg class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `,
@@ -115,7 +115,7 @@ function EdgeNetwork({ heading, image }) {
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `,
@@ -130,7 +130,7 @@ function EdgeNetwork({ heading, image }) {
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                              <svg class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `,
@@ -139,7 +139,7 @@ function EdgeNetwork({ heading, image }) {
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `,
@@ -152,14 +152,14 @@ function EdgeNetwork({ heading, image }) {
               </div>
             </div>
           </div>
-          <div className="relative text-center z-20 min-w-[70px] md:min-w-[96px] shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 edgenetworkbtn font-medium text-[#423d3d]  rounded-lg">
+          <span className="relative text-center z-20 min-w-[70px] md:min-w-[96px] shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg">
             Detroit
-          </div>
+          </span>
           <div className="rotate-[180deg]">
             <div
               dangerouslySetInnerHTML={{
                 __html: `
-                  <svg class="w-8 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" class="w-8 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <line x1="1" y1="1" x2="190" y2="1" />
                   </svg>                  
                   `,
@@ -167,25 +167,25 @@ function EdgeNetwork({ heading, image }) {
             />
           </div>
           <div className="relative ">
-            <div className="rotate-[90deg] absolute md:left-[7%] lg:left-1 top-[-80%] lg:-ml-[12px]">
+            <div className="rotate-[90deg] absolute ml-0 top-[-80%] lg:-ml-3">
               <div
                 dangerouslySetInnerHTML={{
                   __html: `
-                  <svg class="w-16 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" class="w-16 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <line x1="1" y1="1" x2="190" y2="1" />
                   </svg>                  
                   `,
                 }}
               />
             </div>
-            <div className="relative z-20 shadow-xl min-w-[70px] text-center md:min-w-[96px] text-xs md:text-sm px-1 py-2 md:p-3 edgenetworkbtn font-medium text-[#423d3d] rounded-lg">
+            <span className="relative z-20 shadow-xl min-w-[70px] text-center md:min-w-[96px] text-xs md:text-sm px-1 py-2 md:p-3 bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg">
               Origin 🤖
-            </div>
-            <div className="rotate-[90deg] absolute md:left-[7%] lg:left-0 bottom-[-80%] lg:-ml-[8px]">
+            </span>
+            <div className="rotate-[90deg] absolute md:left-0 lg:left-0 bottom-[-80%] lg:-ml-3">
               <div
                 dangerouslySetInnerHTML={{
                   __html: `
-                  <svg class="w-16 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" class="w-16 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <line x1="1" y1="1" x2="190" y2="1" />
                   </svg>                  
                   `,
@@ -197,14 +197,14 @@ function EdgeNetwork({ heading, image }) {
             <div
               dangerouslySetInnerHTML={{
                 __html: `
-                  <svg class="w-8 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <svg aria-hidden="true" class="w-8 md:w-20 lg:w-24 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <line x1="1" y1="1" x2="190" y2="1" />
                   </svg>                  
                   `,
               }}
             />
           </div>
-          <div className="relative min-w-[70px] md:min-w-[96px] text-center z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 edgenetworkbtn font-medium text-[#423d3d] rounded-lg">
+          <div className="relative min-w-[70px] md:min-w-[96px] text-center z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg">
             Sydney
           </div>
           <div>
@@ -217,7 +217,7 @@ function EdgeNetwork({ heading, image }) {
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                              <svg class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `,
@@ -226,7 +226,7 @@ function EdgeNetwork({ heading, image }) {
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `,
@@ -241,7 +241,7 @@ function EdgeNetwork({ heading, image }) {
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                              <svg class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `,
@@ -250,7 +250,7 @@ function EdgeNetwork({ heading, image }) {
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `,
@@ -267,45 +267,45 @@ function EdgeNetwork({ heading, image }) {
         <div className=" text-center mx-auto -my-9 lg:-my-6">
           <button
             type="button"
-            className="relative min-w-[70px] md:min-w-[96px] z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 text-[#423d3d] mx-auto  font-medium edgenetworkbtn rounded-lg"
+            className="relative min-w-[70px] md:min-w-[96px] z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 mx-auto bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg"
           >
             {city ? city : "India"}
           </button>
           <div className="flex justify-center -mt-5">
             <div className="my-8">
               <div>
-                <div className="flex items-center flex-col rotate-[90deg] mt-0 -ml-1">
+                <div className="flex items-center flex-col rotate-[90deg] mt-0 -ml-2">
                   <div
                     dangerouslySetInnerHTML={{
                       __html: `
-                              <svg class="w-16 md:w-20 lg:w-24 edgenetworkprimaryline " viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-16 md:w-20 lg:w-24 edgenetworkprimaryline " viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line class="" x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `,
                     }}
                   />
                   {/* <div dangerouslySetInnerHTML={{__html:`
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `}}/> */}
                 </div>
               </div>
-              <div className="text-lg md:text-2xl flex items-center justify-center my-7 md:my-10">
+              <div className="text-lg md:text-2xl flex items-center justify-center my-6 md:my-12 gap-2">
                 👨
-                <span className="text-slate-400 text-sm ">{" it's you!"}</span>
+                <span className="text-slate-700 inline-flex text-sm -mr-14">{" it's you!"}</span>
               </div>
             </div>
             {/* <div className="my-8">
                 <div>
                     <div className="flex items-center flex-col rotate-[59deg] m-3 mt-0">
                           <div dangerouslySetInnerHTML={{__html:`
-                              <svg class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                              <svg aria-hidden="true" class="w-10 md:w-16 edgenetworkprimaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                               <line x1="1" y1="1" x2="190" y2="1" />
                               </svg>                  
                           `}}/>
                           <div dangerouslySetInnerHTML={{__html:`
-                          <svg class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                          <svg aria-hidden="true" class="w-10 md:w-16 edgenetworksecondaryline" viewBox="0 0 110 10" version="1.1" xmlns="http://www.w3.org/2000/svg">
                           <line x1="1" y1="1" x2="190" y2="1" />
                           </svg>                            
                       `}}/>
