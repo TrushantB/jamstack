@@ -30,11 +30,11 @@ const Decoupled = () => {
     
           ScrollTrigger.create({
             trigger: "#decoupled",
-            start: "1% 20%",
+            start: "1% 50%",
             end: "80% 70%",
             animation:decoupled,
             toggleActions: "restart none none reverse",
-            markers:true
+           
           });
 
       }, []);

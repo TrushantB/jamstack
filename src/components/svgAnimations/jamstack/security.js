@@ -28,16 +28,17 @@ const Security = () => {
     
           ScrollTrigger.create({
             trigger: "#security",
-            start: "1% 20%",
+            start: "1% 50%",
             end: "80% 70%",
             animation: security,
             toggleActions: "restart none none reverse",
+          
           });
 
       }, []);
   return (
     <div className=" lg:w-10/12">
-      <svg id="security" width="447" height="263" viewBox="0 0 447 263" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg id="security" width="" height="" viewBox="0 0 447 263" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <g id="security" clip-path="url(#clip0_0_1)">
 <g id="frame">

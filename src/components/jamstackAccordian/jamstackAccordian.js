@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Security from "../svgAnimations/jamstack/security";
 import Progressive from "../svgAnimations/jamstack/progressive";
 import Decoupled from "../svgAnimations/jamstack/decoupled";
+import Timeless from "../svgAnimations/jamstack/timeless";
+import Cdn from "../svgAnimations/jamstack/cdn";
 
 const JamstackAccordion = ({ accordin }) => {
   const [active, setActive] = useState({});
@@ -22,6 +24,8 @@ const JamstackAccordion = ({ accordin }) => {
     security: Security,
     progressive: Progressive,
     decoupled: Decoupled,
+    timeless:Timeless,
+    cdn:Cdn
   };
 
   return (

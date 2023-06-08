@@ -1948,6 +1948,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
+          "animationType":"cdn",
           "arrow": true
         },
         {
@@ -1955,6 +1956,8 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackTwo.svg",
+          "animationType":"decoupled",
+          
           "arrow": true
         },
         {
@@ -1962,6 +1965,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
+          "animationType":"security",
           "arrow": true
         },
         {
@@ -1969,6 +1973,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackTwo.svg",
+          "animationType":"progressive",
           "arrow": true
         },
         {
@@ -1976,6 +1981,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
+          "animationType":"timeless",
           "arrow": true
         }
       ]

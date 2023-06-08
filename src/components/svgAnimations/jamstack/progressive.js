@@ -38,11 +38,11 @@ const Progressive = () => {
     
           ScrollTrigger.create({
             trigger: "#security",
-            start: "1% 20%",
+            start: "1% 50%",
             end: "80% 70%",
             animation: security,
             toggleActions: "restart none none reverse",
-            markers:true
+       
           });
 
       }, []);
