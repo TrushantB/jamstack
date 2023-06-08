@@ -59,6 +59,30 @@ export default defineType({
               type: 'pricing',
             },
             {
+              type: 'ecosystem',
+            },
+            {
+              type: 'caseStudy',
+            },
+            {
+              type: 'blog',
+            },
+            {
+              type: 'blogs',
+            },
+            {
+              type: 'compliences',
+            },
+            {
+              type: 'about',
+            },
+            {
+              type: 'faqs',
+            },
+            {
+              type: 'jamstack',
+            },
+            {
               type: 'contact',
             },
           ],
@@ -83,6 +107,30 @@ export default defineType({
             },
             {
               type: 'pricing',
+            },
+            {
+              type: 'ecosystem',
+            },
+            {
+              type: 'caseStudy',
+            },
+            {
+              type: 'blog',
+            },
+            {
+              type: 'blogs',
+            },
+            {
+              type: 'compliences',
+            },
+            {
+              type: 'about',
+            },
+            {
+              type: 'faqs',
+            },
+            {
+              type: 'jamstack',
             },
             {
               type: 'contact',
@@ -142,6 +190,30 @@ export default defineType({
             },
             {
               type: 'pricing',
+            },
+            {
+              type: 'ecosystem',
+            },
+            {
+              type: 'caseStudy',
+            },
+            {
+              type: 'blog',
+            },
+            {
+              type: 'blogs',
+            },
+            {
+              type: 'compliences',
+            },
+            {
+              type: 'about',
+            },
+            {
+              type: 'faqs',
+            },
+            {
+              type: 'jamstack',
             },
             {
               type: 'contact',
@@ -247,6 +319,30 @@ export default defineType({
               type: 'pricing',
             },
             {
+              type: 'ecosystem',
+            },
+            {
+              type: 'caseStudy',
+            },
+            {
+              type: 'blog',
+            },
+            {
+              type: 'blogs',
+            },
+            {
+              type: 'compliences',
+            },
+            {
+              type: 'about',
+            },
+            {
+              type: 'faqs',
+            },
+            {
+              type: 'jamstack',
+            },
+            {
               type: 'contact',
             },
           ],
@@ -264,16 +360,46 @@ export default defineType({
           type: 'reference',
           to: [
             {
-              type: 'home',
-            },
-            {
-              type: 'platforms',
-            },
-            {
-              type: 'pricing',
-            },
-            {
-              type: 'contact',
+              title: 'Reference',
+              type: 'reference',
+              to: [
+                {
+                  type: 'home',
+                },
+                {
+                  type: 'platforms',
+                },
+                {
+                  type: 'pricing',
+                },
+                {
+                  type: 'ecosystem',
+                },
+                {
+                  type: 'caseStudy',
+                },
+                {
+                  type: 'blog',
+                },
+                {
+                  type: 'blogs',
+                },
+                {
+                  type: 'compliences',
+                },
+                {
+                  type: 'about',
+                },
+                {
+                  type: 'faqs',
+                },
+                {
+                  type: 'jamstack',
+                },
+                {
+                  type: 'contact',
+                },
+              ],
             },
           ],
         },
