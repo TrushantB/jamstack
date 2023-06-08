@@ -1,0 +1,15 @@
+<svg width="416" height="271" viewBox="0 0 416 271" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="416" height="271" fill="#E0E0E0"/>
+<g id="Group 1070">
+<g id="decoupled">
+<rect id="Rectangle 469" x="1" y="1" width="413" height="269" rx="9" fill="white" stroke="#4767F6" stroke-width="2"/>
+<path id="Rectangle 470" d="M11 2.5H406C411.247 2.5 415.5 6.75329 415.5 12V17.5H1.5V12C1.5 6.75329 5.75329 2.5 11 2.5Z" fill="#4767F6" stroke="#4767F6"/>
+<rect id="Rectangle 472" x="23" y="40" width="118" height="206" fill="#F1F2F6"/>
+<rect id="Rectangle 473" x="151" y="40" width="118" height="206" fill="#F1F2F6"/>
+<rect id="Rectangle 474" x="279" y="40" width="118" height="206" fill="#F1F2F6"/>
+<path id="Star 28" d="M79.5 63L57.6344 79.4046L35.2759 95.1307L44.1207 120.995L52.168 147.119L79.5 146.7L106.832 147.119L114.879 120.995L123.724 95.1307L101.366 79.4046L79.5 63Z" fill="#FF5223"/>
+<path id="Ellipse 207" d="M253.5 143.5C253.5 120.325 233.822 101.5 209.5 101.5C185.178 101.5 165.5 120.325 165.5 143.5C165.5 166.675 185.178 185.5 209.5 185.5C233.822 185.5 253.5 166.675 253.5 143.5Z" fill="#4767F6" stroke="#4767F6"/>
+<rect id="Rectangle 475" width="63.6406" height="63.6406" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 338 231.001)" fill="#F0027F"/>
+</g>
+</g>
+</svg>

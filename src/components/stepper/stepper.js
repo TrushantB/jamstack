@@ -53,7 +53,7 @@ const Stepper = (stepper) => {
 
         {/* stepper section */}
         {stepper?.stepper.map((step, index) => {
-          console.log(step.animationType)
+         
           const Component = MAP_STEPPER_COMPONENT[step.animationType] || Choose
           return (
             <div
