@@ -1,15 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { JamstackOne } from "@/components/animationSvg/jamtack";
 
 const Cdn = () => {
   return (
-    <div>
-      <Image
-        src="/articleThree.png"
-        fill
-        alt="Essential svg"
-        className="images"
-      />
+    <div className="relative h-60 w-full">
+    <JamstackOne/>
     </div>
   );
 };

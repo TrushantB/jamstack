@@ -3,12 +3,13 @@ import Image from "next/image";
 
 const Bussiness = () => {
   return (
-    <div>
+    <div className="relative h-96 lg:h-80 w-full">
       <Image
-        src="/EssentialSVG.svg"
+        src="/essentialSVG.svg"
         fill
         alt="Essential svg"
-        className="images"
+        className=" -z-10"
+     
       />
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { StepperOne } from "@/components/animationSvg/mobj";
 
 const Onboarding = () => {
   useEffect(() => {
@@ -44,7 +45,7 @@ const Onboarding = () => {
   }, []);
   return (
     <div className="lg:w-8/12">
-    <OnBoarding/>
+    <StepperOne/>
     </div>
   );
 };
