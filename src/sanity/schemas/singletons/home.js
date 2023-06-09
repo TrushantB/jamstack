@@ -1,5 +1,6 @@
 import { HomeIcon } from "@sanity/icons";
 import { defineArrayMember, defineField, defineType } from "sanity";
+import { urlForImage } from '@/lib/sanity.image'
 
 export default defineType({
   name: "home",
@@ -86,15 +87,7 @@ export default defineType({
         {
           name: "backgroundColor",
           type: "string",
-          title: "Background Color",
-          options: {
-            list: [
-              { title: "primary", value: "primary" },
-              { title: "secondary", value: "secondary" },
-              { title: "tertiary", value: "tertiary" },
-            ],
-          },
-          initialValue: "primary",
+          title: "Background Color"
         },
 
         {
@@ -371,19 +364,24 @@ export default defineType({
           title: "Information",
           of: [
             {
-              name: "label",
-              type: "string",
-              title: "Label",
-            },
-            {
-              name: "icon",
-              type: "string",
-              title: "Icon",
-            },
-            {
-              name: "alt",
-              type: "string",
-              title: "Alt Text",
+              type: "object",
+              fields: [
+                {
+                  name: "label",
+                  type: "string",
+                  title: "Label",
+                },
+                {
+                  name: "icon",
+                  type: "string",
+                  title: "Icon",
+                },
+                {
+                  name: "alt",
+                  type: "string",
+                  title: "Alt Text",
+                },
+              ],
             },
           ],
         },
@@ -720,6 +718,14 @@ export default defineType({
           name: "type",
           type: "string",
           title: "Type",
+          options: {
+            list: [
+              { title: "Primary", value: "primary" },
+              { title: "Secondary", value: "secondary" },
+              { title: "Tertiary", value: "tertiary" },
+            ],
+          },
+          initialValue: "primary",
         },
         {
           name: "label",
@@ -730,9 +736,18 @@ export default defineType({
           name: "size",
           type: "string",
           title: "Size",
+          options: {
+            list: [
+              { title: "Small", value: "small" },
+              { title: "Medium", value: "medium" },
+              { title: "Large", value: "large" },
+            ],
+          },
+          initialValue: "medium",
         },
       ],
     }),
+    
     defineField({
       name: "testimonialCard",
       title: "Testimonial Card",
