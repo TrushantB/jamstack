@@ -17,11 +17,13 @@ import BlogCard from "@/components/blogCard/BlogCard";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 import { getSettings, getHomePage } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
+import { refactorHome } from "@/utils/home";
 
 const IndexPage = ({ header, footer, homeData, settings }) => {
   if (!homeData) {
     return <></>;
   }
+  console.log(homeData.banner);
 
   return (
     <Layout header={settings.header} footer={settings.footer}>
@@ -96,8 +98,8 @@ export const getStaticProps = async (ctx) => {
 
   return {
     props: {
-      homeData,
-      page,
+      homeData:refactorHome(page),
+      // page: refactorHome(page),
       settings: refactorSettings(settings),
       preview,
       token: previewData.token ?? null,
