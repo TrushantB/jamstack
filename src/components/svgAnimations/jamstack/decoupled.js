@@ -14,7 +14,7 @@ const Decoupled = () => {
     gsap.set("#ellipse", { opacity: 0 });
     gsap.set(".rectangle-box", { opacity: 0 });
 
-    const decoupled = gsap.timeline({repeat:-1});
+    const decoupled = gsap.timeline({ repeat: -1 });
 
     decoupled
       .to(".rect-frame", { y: 0, opacity: 1 })
@@ -25,17 +25,17 @@ const Decoupled = () => {
       .to("#ellipse", { opacity: 1 })
       .to(".rectangle-box", { opacity: 1 });
 
-      decoupled.repeatDelay(3);
+    decoupled.repeatDelay(3);
 
-      decoupled.play();
-  
-      return () => {
-        decoupled.kill();
-      };
+    decoupled.play();
+
+    return () => {
+      decoupled.kill();
+    };
   }, []);
   return (
     <div className="lg:w-10/12 mx-auto ">
-    <JamstackTwo/>
+      <JamstackTwo />
     </div>
   );
 };

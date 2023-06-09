@@ -5,7 +5,7 @@ import { JamstackOne } from "@/components/animationSvg/jamtack";
 const Cdn = () => {
   return (
     <div className="relative h-60 w-full">
-    <JamstackOne/>
+      <JamstackOne />
     </div>
   );
 };

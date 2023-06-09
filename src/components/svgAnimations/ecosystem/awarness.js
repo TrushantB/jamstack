@@ -4,7 +4,7 @@ import { EcomsystemOne } from "@/components/animationSvg/ecosystem";
 
 const Awarness = () => {
   useEffect(() => {
-    const awarness = gsap.timeline({repeat:-1});
+    const awarness = gsap.timeline({ repeat: -1 });
 
     gsap.set("#frame", { opacity: 0, y: 20 });
     gsap.set("#shortcard-1", { y: 10, opacity: 0 });

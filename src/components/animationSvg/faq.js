@@ -1,7 +1,7 @@
 const FaqAnimation = () => {
-    return (
-      <div className="w-10/12">
-           <svg
+  return (
+    <div className="w-10/12">
+      <svg
         width=""
         height=""
         viewBox="0 0 562 484"
@@ -113,10 +113,8 @@ const FaqAnimation = () => {
           </g>
         </g>
       </svg>
-      </div>
-       
-      
-    )
-}
+    </div>
+  );
+};
 
-export { FaqAnimation }
+export { FaqAnimation };

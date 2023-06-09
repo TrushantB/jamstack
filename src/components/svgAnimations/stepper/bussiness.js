@@ -9,7 +9,6 @@ const Bussiness = () => {
         fill
         alt="Essential svg"
         className=" -z-10"
-     
       />
     </div>
   );

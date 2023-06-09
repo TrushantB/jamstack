@@ -34,7 +34,7 @@ const Ecomj = () => {
 
   return (
     <div className="mx-auto lg:w-10/12">
-      <EcomJBanner/>
+      <EcomJBanner />
     </div>
   );
 };

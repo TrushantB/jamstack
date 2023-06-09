@@ -5,7 +5,6 @@ import { JamstackThree } from "@/components/animationSvg/jamtack";
 
 const Security = () => {
   useEffect(() => {
-   
     gsap.set("#frame", { opacity: 0, y: 20 });
     gsap.set("#text", { opacity: 0 });
     gsap.set("#line", { scaleX: 0, opacity: 0 });
@@ -14,7 +13,7 @@ const Security = () => {
     gsap.set("#button", { x: -30, scale: 1.5, opacity: 0 });
     gsap.set("#lock-circle", { opacity: 0 });
 
-    const security = gsap.timeline({repeat:-1});
+    const security = gsap.timeline({ repeat: -1 });
 
     security
       .to("#frame", { opacity: 1, y: 0, duration: 0.3 })
@@ -29,17 +28,17 @@ const Security = () => {
       })
       .to("#lock-circle", { opacity: 1, ease: "ease-in-out" });
 
-      security.repeatDelay(3);
+    security.repeatDelay(3);
 
-      security.play();
-  
-      return () => {
-        security.kill();
-      };
+    security.play();
+
+    return () => {
+      security.kill();
+    };
   }, []);
   return (
     <div className=" lg:w-10/12">
-      <JamstackThree/>
+      <JamstackThree />
     </div>
   );
 };

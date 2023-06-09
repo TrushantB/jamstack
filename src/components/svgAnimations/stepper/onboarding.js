@@ -45,7 +45,7 @@ const Onboarding = () => {
   }, []);
   return (
     <div className="lg:w-8/12">
-    <StepperOne/>
+      <StepperOne />
     </div>
   );
 };

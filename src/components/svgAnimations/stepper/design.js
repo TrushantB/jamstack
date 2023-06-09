@@ -30,7 +30,7 @@ const Design = () => {
 
   return (
     <div className="lg:w-10/12 overflow-hidden">
-     <StepperThree/>
+      <StepperThree />
     </div>
   );
 };

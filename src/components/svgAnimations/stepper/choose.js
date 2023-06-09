@@ -30,7 +30,7 @@ const Choose = () => {
 
   return (
     <div className="lg:w-10/12 mx-auto">
-     <StepperTwo/>
+      <StepperTwo />
     </div>
   );
 };
