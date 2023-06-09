@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { CustomPortableText } from "@/components/shared/CustomPortableText";
 
 const Footer = ({
   footerLogo,
@@ -38,8 +39,8 @@ const Footer = ({
               <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:p-0 lg:p-0">
                 {footerMenu?.map((menuItems, index) => (
                   <li key={index} className="font-semibold mb-2">
-                    <Link className="btn-link" href={menuItems.href} target={menuItems.target}>
-                      {menuItems.label}
+                    <Link className="btn-link capitalize" href={menuItems.href} target={menuItems.target}>
+                      {`${menuItems.label}`.toLowerCase()}
                     </Link>
                   </li>
                 ))}
@@ -50,14 +51,17 @@ const Footer = ({
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
                 <li key={index}>
-                  <Link href={menuItems.href} className="font-bold btn-link">
+                  <Link href={menuItems.href} className="font-bold btn-link capitalize">
                     {menuItems.label}
                   </Link>
                 </li>
               ))}
             </ul>
             <div className="flex items-center mt-5 sm:items-start sm:justify-end bold sm:mt-0">
-              <span className="font-bold">&copy;{copyRight}</span>
+              <CustomPortableText
+                paragraphClasses="font-bold"
+                value={copyRight}
+              />
             </div>
           </div>
         </div>
