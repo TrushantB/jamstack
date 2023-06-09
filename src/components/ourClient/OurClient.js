@@ -35,7 +35,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
                   {item.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      className="w-full h-auto"
+                      className="w-full h-full object-contain"
                       src={item.image}
                       alt={item.altTag}
                       href={item.href}
