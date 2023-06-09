@@ -6,7 +6,7 @@ const Mobj = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
 
-    const mobj = gsap.timeline();
+    const mobj = gsap.timeline({repeat:-1});
 
     gsap.set("#frame", { opacity: 0, y: 20 });
     gsap.set("#shapes-card", { y: 30, opacity: 0 });
@@ -43,16 +43,16 @@ const Mobj = () => {
       .to("#circle_2", { opacity: 1, duration: 0.3 })
       .to("#content-card", { x: 0, opacity: 1, duration: 0.3 });
 
-    ScrollTrigger.create({
-      trigger: "#mobj",
-      start: "1% 20%",
-      end: "80% 70%",
-      animation: mobj,
-      toggleActions: "restart none none reverse",
-    });
+      mobj.repeatDelay(3); 
+  
+      mobj.play(); 
+    
+      return () => {
+        mobj.kill(); 
+      };
   }, []);
   return (
-    <div className="lg:w-8/12">
+    <div className="lg:w-7/12">
       <svg
         id="mobj"
         width=""
