@@ -1,13 +1,17 @@
- import React from 'react'
+import React from "react";
+import Image from "next/image";
 
 const Cdn = () => {
   return (
     <div>
-        
-        <img src="/articleThree.png"></img>
-   
+      <Image
+        src="/articleThree.png"
+        fill
+        alt="Essential svg"
+        className="images"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Cdn
+export default Cdn;

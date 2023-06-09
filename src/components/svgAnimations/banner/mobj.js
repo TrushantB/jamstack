@@ -6,7 +6,7 @@ const Mobj = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
 
-    const mobj = gsap.timeline({repeat:-1});
+    const mobj = gsap.timeline({ repeat: -1 });
 
     gsap.set("#frame", { opacity: 0, y: 20 });
     gsap.set("#shapes-card", { y: 30, opacity: 0 });
@@ -15,7 +15,6 @@ const Mobj = () => {
     gsap.set("#avatar_group", { y: 10, opacity: 0 });
     gsap.set("#circle_1", { opacity: 0 });
     gsap.set("#circle_2", { opacity: 0 });
-
     gsap.set("#content-card", { x: 50, opacity: 0 });
 
     mobj
@@ -43,13 +42,13 @@ const Mobj = () => {
       .to("#circle_2", { opacity: 1, duration: 0.3 })
       .to("#content-card", { x: 0, opacity: 1, duration: 0.3 });
 
-      mobj.repeatDelay(3); 
-  
-      mobj.play(); 
-    
-      return () => {
-        mobj.kill(); 
-      };
+    mobj.repeatDelay(3);
+
+    mobj.play();
+
+    return () => {
+      mobj.kill();
+    };
   }, []);
   return (
     <div className="lg:w-7/12">

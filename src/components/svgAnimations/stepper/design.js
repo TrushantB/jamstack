@@ -29,7 +29,7 @@ const Design = () => {
 
   return (
     <div className="lg:w-10/12 overflow-hidden">
-     <svg
+      <svg
         width="%"
         height="%"
         viewBox="0 0 508 305"
@@ -92,10 +92,18 @@ const Design = () => {
 
         {/* pentagon path */}
         <g className="pentagons w-2">
-        <circle className="w-10" cx="78.7721" cy="225.867" r="78.7721" fill="#F1F2F6"/>
-<path d="M78.37 167.994L105.395 188.269L133.029 207.705L122.097 239.673L112.151 271.961L78.37 271.442L44.589 271.961L34.643 239.673L23.7113 207.705L51.3452 188.269L78.37 167.994Z" fill="#FF5223"/>
+          <circle
+            className="w-10"
+            cx="78.7721"
+            cy="225.867"
+            r="78.7721"
+            fill="#F1F2F6"
+          />
+          <path
+            d="M78.37 167.994L105.395 188.269L133.029 207.705L122.097 239.673L112.151 271.961L78.37 271.442L44.589 271.961L34.643 239.673L23.7113 207.705L51.3452 188.269L78.37 167.994Z"
+            fill="#FF5223"
+          />
         </g>
-        
 
         <defs>
           <filter

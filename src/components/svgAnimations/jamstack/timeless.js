@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
 const Timeless = () => {
   return (
     <div>
-        <img src="articleTwo.png"></img>
+      <Image
+        src="/articleTwo.png"
+        fill
+        alt="Essential svg"
+        className="images"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Timeless
+export default Timeless;
