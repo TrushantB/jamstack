@@ -89,7 +89,7 @@ export const getStaticProps = async (ctx) => {
   const homeData = await get("home");
 
   const token = previewData.token
-  const [settings, page = fallbackPage] = await Promise.all([
+  const [settings, page] = await Promise.all([
     getSettings({ token }),
     getHomePage({ token }),
   ])

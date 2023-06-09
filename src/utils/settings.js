@@ -23,8 +23,7 @@ const refactorSettings = (data) => {
                 })
             ),
 
-            description:
-                'Leading brand in enhancing the JAMstack to offer technical solutions to accelerate the phases of digital presence',
+            description: data?.description,
             buttonLabel: {
                 label: data.contactButton?.label,
                 href: data.contactButton.Page?._ref,
@@ -49,7 +48,7 @@ const refactorSettings = (data) => {
                 alt: data.logo.logoAlt,
                 href: '/',
             },
-            copyRight: 'Jamstack 2023 ',
+            copyRight: data?.copyRight,
 
             socialLink: data?.socialLinks?.map(
                 (item) => ({
