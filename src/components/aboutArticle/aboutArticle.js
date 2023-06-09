@@ -1,4 +1,5 @@
 import React from "react";
+import Aboutone from "../svgAnimations/about/articleOne";
 
 export const AboutArticle = ({ jamStackProcess }) => {
   return (
@@ -21,7 +22,7 @@ export const AboutArticle = ({ jamStackProcess }) => {
                     </ul>
                   </div>
                   <div className="lg:w-1/2 ">
-                    <img src={item.image} alt="image" />
+                    <Aboutone/>
                   </div>
                 </li>
               ))}

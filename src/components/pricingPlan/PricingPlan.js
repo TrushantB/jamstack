@@ -107,7 +107,7 @@ export default function PricingPlan({ customPlan }) {
                                                                     <span aria-label="Close" tabIndex={0} className="w-6 h-6 rounded-full flex justify-center items-center cursor-pointer  bg-[#6d8ae0] text-center " onClick={() => handleClose(index, planIndex)}>
                                                                         <svg width="14px" height="14px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                                                             <g id="Menu / Close_LG">
-                                                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" stroke-linecap="round" strokeLinejoin="round" />
                                                                             </g>
                                                                         </svg>
                                                                     </span>
