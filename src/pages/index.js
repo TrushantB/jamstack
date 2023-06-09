@@ -15,15 +15,17 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import BlogCard from "@/components/blogCard/BlogCard";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
+import { getSettings, getHomePage } from "@/lib/sanity.client";
+import { refactorSettings } from "@/utils/settings";
+import { refactorHome } from "@/utils/home";
 
-const Home = ({ header, footer, homeData }) => {
-
+const IndexPage = ({ header, footer, homeData, settings }) => {
   if (!homeData) {
     return <></>;
   }
 
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div>{<Banner {...homeData.banner} />}</div>
 
       <WebSection {...homeData.technologySolution} />
@@ -83,9 +85,25 @@ const Home = ({ header, footer, homeData }) => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps = async (ctx) => {
+  const { preview = false, previewData = {} } = ctx
   const homeData = await get("home");
-  return { props: { homeData } };
+
+  const token = previewData.token
+  const [settings, page] = await Promise.all([
+    getSettings({ token }),
+    getHomePage({ token }),
+  ])
+
+  return {
+    props: {
+      homeData: refactorHome(page),
+      // page: refactorHome(page),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
-export default Home;
+export default IndexPage;
