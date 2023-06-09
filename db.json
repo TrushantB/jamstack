@@ -374,7 +374,7 @@
         { "image": "/javascript.svg", "alt": "javascript logo" },
         { "image": "/react.svg", "alt": "react logo" },
         { "image": "/vue.svg", "alt": "vue logo" },
-        { "image": "/strapi_1.svg", "alt": "strapi" },
+        { "image": "/strapi.svg", "alt": "strapi" },
         { "image": "/sanity.svg", "alt": "sanity logo" },
         { "image": "/prismic.svg", "alt": "sanity logo" }
      
@@ -504,7 +504,7 @@
       "heading": "Blogs",
       "cards": [
         {
-          "image": "/Termgrid.png",
+          "image": "/termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
@@ -512,7 +512,7 @@
           "href": "blog"
         },
         {
-          "image": "/Crisp.png",
+          "image": "/crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
@@ -520,7 +520,7 @@
           "href": "blog"
         },
         {
-          "image": "/Ternary.png",
+          "image": "/ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
@@ -804,7 +804,7 @@
       "heading": "Blogs",
       "cards": [
         {
-          "image": "/Termgrid.png",
+          "image": "/termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
@@ -812,7 +812,7 @@
           "href": ""
         },
         {
-          "image": "/Crisp.png",
+          "image": "/crisp.png",
           "alt": "blog",
           "label": "Crisp",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
@@ -820,7 +820,7 @@
           "href": ""
         },
         {
-          "image": "/Ternary.png",
+          "image": "/ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
@@ -871,7 +871,7 @@
       "heading": "Blogs",
       "cards": [
         {
-          "image": "/Termgrid.png",
+          "image": "/termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
@@ -879,7 +879,7 @@
           "href": "blog"
         },
         {
-          "image": "/Crisp.png",
+          "image": "/crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
@@ -887,7 +887,7 @@
           "href": "blog"
         },
         {
-          "image": "/Ternary.png",
+          "image": "/ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
@@ -1205,7 +1205,7 @@
       "heading": "Blogs",
       "cards": [
         {
-          "image": "/Termgrid.png",
+          "image": "/termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
@@ -1213,7 +1213,7 @@
           "href": "blog"
         },
         {
-          "image": "/Crisp.png",
+          "image": "/crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
@@ -1221,7 +1221,7 @@
           "href": "blog"
         },
         {
-          "image": "/Ternary.png",
+          "image": "/ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
@@ -1542,7 +1542,7 @@
       "heading": "Blogs",
       "cards": [
         {
-          "image": "/Termgrid.png",
+          "image": "/termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
@@ -1550,7 +1550,7 @@
           "href": "blog"
         },
         {
-          "image": "/Crisp.png",
+          "image": "/crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
@@ -1558,7 +1558,7 @@
           "href": "blog"
         },
         {
-          "image": "/Ternary.png",
+          "image": "/ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
@@ -1866,7 +1866,7 @@
       "heading": "Blogs",
       "cards": [
         {
-          "image": "/Termgrid.png",
+          "image": "/termgrid.png",
           "alt": "blog",
           "label": "Termgrid",
           "description": "Branding a whole new category of debt management.",
@@ -1874,7 +1874,7 @@
           "href": "blog"
         },
         {
-          "image": "/Crisp.png",
+          "image": "/crisp.png",
           "alt": "blog",
           "label": "Crisp ",
           "description": "Designing a new mobile experience for the all-in-one messaging platform.",
@@ -1882,7 +1882,7 @@
           "href": "blog"
         },
         {
-          "image": "/Ternary.png",
+          "image": "/ternary.png",
           "alt": "blog",
           "label": "Ternary",
           "description": "Creating a visual identity and product for FinOps cloud innovator.",
@@ -1900,7 +1900,7 @@
       "description": "Modern architecture gives the approach of building everything on the web from apps to websites based on Javascript, ApIs and Markup(JAM).",
       "backGroundColor": "#ffffff",
       "headingSize": "medium",
-      "image": "/jamStackBanner.png",
+      "image": "/jamstackBanner.png",
       "type": "primary",
       "size": "medium",
       "layout": "Image Bottom",
@@ -1948,6 +1948,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
+          "animationType":"cdn",
           "arrow": true
         },
         {
@@ -1955,6 +1956,8 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackTwo.svg",
+          "animationType":"decoupled",
+          
           "arrow": true
         },
         {
@@ -1962,6 +1965,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
+          "animationType":"security",
           "arrow": true
         },
         {
@@ -1969,6 +1973,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackTwo.svg",
+          "animationType":"progressive",
           "arrow": true
         },
         {
@@ -1976,6 +1981,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
+          "animationType":"timeless",
           "arrow": true
         }
       ]
