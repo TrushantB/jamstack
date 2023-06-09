@@ -53,7 +53,7 @@ const refactorSettings = (data) => {
             socialLink: data?.socialLinks?.map(
                 (item) => ({
                     iconName: item.icon,
-                    href: item.href,
+                    href: item?.href || "",
                     alt: item.name,
                     target: item.target,
                 })
@@ -62,7 +62,7 @@ const refactorSettings = (data) => {
             footerMenu: data?.footerItems?.map(
                 (item) => ({
                     label: item.title,
-                    href: item.slug,
+                    href: item?.slug || "",
                 })
             ),
 

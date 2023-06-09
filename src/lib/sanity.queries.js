@@ -2,18 +2,7 @@ import { groq } from 'next-sanity'
 
 export const homePageQuery = groq`
   *[_type == "home"][0]{
-    _id,
-    footer,
-    overview,
-    showcaseProjects[]->{
-      _type,
-      coverImage,
-      overview,
-      "slug": slug.current,
-      tags,
-      title,
-    },
-    title,
+    ...
   }
 `
 
