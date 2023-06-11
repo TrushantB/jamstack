@@ -6,6 +6,7 @@ import Webj from "@/components/svgAnimations/banner/webj";
 import Mobj from "@/components/svgAnimations/banner/mobj";
 import Faq from "@/components/svgAnimations/banner/faq";
 import Home from "@/components/svgAnimations/banner/home";
+import Pricing from "@/components/svgAnimations/banner/pricingDesktop";
 
 const Banner = ({
   heading,
@@ -19,14 +20,14 @@ const Banner = ({
   isInner = false,
   animationType,
 }) => {
-  const MAP_STEPPER_COMPONENT = {
+  const MAP_BANNER_LEFT_COMPONENT = {
     ecomj: Ecomj,
     webj: Webj,
     mobj: Mobj,
     faq: Faq,
     home: Home,
   };
-  const Component = MAP_STEPPER_COMPONENT[animationType] || Ecomj;
+  const Component = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
 
   return (
     <div className="container mx-auto lg:py-24 py-16">
@@ -40,12 +41,14 @@ const Banner = ({
           className={classNames({
             // "md:w-1/2": true,
             "w-full mt-0 md:mb-12 text-center": layout === "Image Bottom",
-            "flex lg:w-3/5 ": (layout === "Image Left" || layout === "image-left"),
+            "flex lg:w-3/5 ":
+              layout === "Image Left" || layout === "image-left",
           })}
         >
           <div
             className={classNames({
-              "flex items-center md:pr-0": (layout === "Image Left" || layout === "image-left"),
+              "flex items-center md:pr-0":
+                layout === "Image Left" || layout === "image-left",
             })}
           >
             <div>
@@ -73,12 +76,7 @@ const Banner = ({
         )}
         {layout === "Image Bottom" && (
           <div className="flex items-center justify-center">
-            <img
-              className="w-10/12 mt-12 sm:mt-0"
-              src={image}
-              alt="image"
-              srcSet=""
-            />
+            <Pricing />
           </div>
         )}
       </div>

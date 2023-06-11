@@ -4,7 +4,7 @@ import { JamstackFive } from "@/components/animationSvg/jamtack";
 
 const Timeless = () => {
   return (
-    <div className="relative h-96 lg:h-80 w-full">
+    <div className=" w-6/12 mx-auto">
       <JamstackFive />
     </div>
   );

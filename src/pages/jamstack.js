@@ -7,8 +7,7 @@ import Accordion from "@/components/accordian/accordion";
 import ProductCard from "@/components/productCard/productCard";
 import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian";
 
-const Jamstack = ({ header, footer ,jamstackData }) => {
-  
+const Jamstack = ({ header, footer, jamstackData }) => {
   if (!jamstackData) {
     return <></>;
   }
@@ -28,7 +27,7 @@ const Jamstack = ({ header, footer ,jamstackData }) => {
         </div>
       </div>
 
-      <div className="lg:px-24 py-12 px-5">
+      <div className=" py-12 px-5">
         <div className="pb-6">
           <h2 className=" ">{jamstackData?.accordian?.heading}</h2>
         </div>
@@ -40,7 +39,9 @@ const Jamstack = ({ header, footer ,jamstackData }) => {
       </div>
 
       <div className="pb-24">
-        <h2 className="text-center mb-6 md:mb-8">{jamstackData?.productCard?.heading}</h2>
+        <h2 className="text-center mb-6 md:mb-8">
+          {jamstackData?.productCard?.heading}
+        </h2>
         <div>
           <ProductCard cards={jamstackData?.productCard?.cards} />
         </div>
