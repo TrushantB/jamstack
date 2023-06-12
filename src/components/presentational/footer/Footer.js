@@ -39,8 +39,8 @@ const Footer = ({
               <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:p-0 lg:p-0">
                 {footerMenu?.map((menuItems, index) => (
                   <li key={index} className="font-semibold mb-2">
-                    <Link className="btn-link capitalize" href={menuItems.href} target={menuItems.target}>
-                      {`${menuItems.label}`.toLowerCase()}
+                    <Link className="btn-link" href={menuItems.href} target={menuItems.target}>
+                      {menuItems.label}
                     </Link>
                   </li>
                 ))}
@@ -51,7 +51,7 @@ const Footer = ({
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
                 <li key={index}>
-                  <Link href={menuItems.href} className="font-bold btn-link capitalize">
+                  <Link href={menuItems.href} className="font-bold btn-link">
                     {menuItems.label}
                   </Link>
                 </li>
