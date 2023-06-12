@@ -9,19 +9,9 @@ const refactorSettings = (data) => {
                 herf: '/',
             },
 
-            headerMenu: data?.menuItems?.map(
-                (item) => ({
-                    label: item?.title,
-                    href: item?.slug,
-                })
-            ),
+            headerMenu: data?.headerMenus?.menus,
 
-            sidebarLink: data?.sidebarLink?.map(
-                (item) => ({
-                    label: item?.title,
-                    href: item?.slug,
-                })
-            ),
+            sidebarLink: data?.sidebarMenus?.menus,
 
             description: data?.description,
             buttonLabel: {
@@ -59,21 +49,11 @@ const refactorSettings = (data) => {
                 })
             ),
 
-            footerMenu: data?.footerItems?.map(
-                (item) => ({
-                    label: item.title,
-                    href: item?.slug || "",
-                })
-            ),
+            footerMenu: data?.footerMenus?.menus,
 
-            secondaryMenu: data?.secondaryFooterItems?.map(
-                (item) => ({
-                    label: item.title,
-                    href: item.slug,
-                })
-            ),
-        },
+            secondaryMenu: data?.secondaryFooterMenus.menus,
 
+        }
     }
 }
 

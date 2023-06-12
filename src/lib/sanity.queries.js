@@ -72,27 +72,38 @@ export const pagePaths = groq`
 export const settingsQuery = groq`
   *[_type == "settings"][0]{
     ...,
-    menuItems[]->{
-      _type,
-      "slug": slug.current,
-      title
+    headerMenus {
+     menus[] {
+       "label": displayName,
+       "href": Menu-> {
+         "slug":slug.current
+       }.slug
+     }
     },
-       sidebarLink[]->{
-      _type,
-      "slug": slug.current,
-      title
+    footerMenus {
+     menus[] {
+       "label": displayName,
+       "href": Menu-> {
+         "slug":slug.current
+       }.slug
+     }
     },
-      secondaryFooterItems[]->{
-      _type,
-      "slug": slug.current,
-      title
+    sidebarMenus {
+     menus[] {
+       "label": displayName,
+       "href": Menu-> {
+         "slug":slug.current
+       }.slug
+     }
     },
-      footerItems[]->{
-      _type,
-      "slug": slug.current,
-      title
+    secondaryFooterMenus {
+     menus[] {
+       "label": displayName,
+       "href": Menu-> {
+         "slug":slug.current
+       }.slug
+     }
     },
-      
-    ogImage,
+    ogImage
   }
 `

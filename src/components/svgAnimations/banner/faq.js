@@ -5,9 +5,9 @@ import { FaqAnimation } from "@/components/animationSvg/faq";
 
 const Faq = () => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
 
-    const faq = gsap.timeline({ repeat: -1 });
+    const faq = gsap.timeline();
 
     gsap.set("#frame", { opacity: 0, y: 20 });
     gsap.set("#text", { x: 100, opacity: 0 });
@@ -27,13 +27,13 @@ const Faq = () => {
       .to("#color_section", { opacity: 1, duration: 0.3 })
       .to("#question_section", { opacity: 1, duration: 0.3 });
 
-    faq.repeatDelay(3);
-
-    faq.play();
-
-    return () => {
-      faq.kill();
-    };
+    ScrollTrigger.create({
+      trigger: "#faq",
+      start: "1% 20%",
+      end: "80% 70%",
+      animation: faq,
+      toggleActions: "restart none none reverse",
+    });
   }, []);
   return (
     <div className="lg:w-10/12">

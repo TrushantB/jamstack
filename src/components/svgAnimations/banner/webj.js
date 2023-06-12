@@ -13,7 +13,7 @@ const Webj = () => {
     gsap.set("#bottom-card_1", { x: 100, opacity: 0 });
     gsap.set("#bag", { scale: 0, opacity: 0 });
 
-    const webj = gsap.timeline({repeat:-1});
+    const webj = gsap.timeline();
 
     webj
       .to("#frame", { opacity: 1, y: 0, duration: 0.3 })
@@ -23,18 +23,18 @@ const Webj = () => {
       .to("#top-card_1", { x: 0, opacity: 1, duration: 0.3 })
       .to("#bag", { scale: 1, opacity: 1, duration: 0.3 });
 
-      webj.repeatDelay(3); 
-  
-      webj.play(); 
-    
-      return () => {
-        webj.kill(); 
-      };
+    ScrollTrigger.create({
+      trigger: ".webj",
+      start: "1% 20%",
+      end: "80% 70%",
+      animation: webj,
+      toggleActions: "restart none none reverse",
+    });
   }, []);
 
   return (
     <div className="lg:w-10/12">
-      <WebJBanner/>
+      <WebJBanner />
     </div>
   );
 };
