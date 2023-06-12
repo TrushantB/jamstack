@@ -11,7 +11,7 @@ const Cdn = () => {
     gsap.set("#diamond_2", { y: -140, opacity: 0 });
     gsap.set("#pentagon_1", { x: 150, opacity: 0 });
     gsap.set("#pentagon_2", { x: -150, opacity: 0 });
-    gsap.set("#group", { rotate: 180 });
+
 
     const decoupled = gsap.timeline({ repeat: -1 });
 
@@ -22,12 +22,10 @@ const Cdn = () => {
       .to("#diamond_2", { y: 0, opacity: 1 })
       .to("#pentagon_1", { x: 0, opacity: 1 })
       .to("#pentagon_2", { x: 0, opacity: 1 })
-      .to("#diamond-frame", { rotate: 0 })
-      .to("#group", {
-        rotate: 0,
-        transformOrigin: "center center",
-        duration: 1,
-      });
+
+
+      
+      
 
     decoupled.repeatDelay(3);
 

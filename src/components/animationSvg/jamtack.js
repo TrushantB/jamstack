@@ -9,7 +9,7 @@ const JamstackOne = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_0_1)">
+      <g id="group"  clip-path="url(#clip0_0_1)">
         <g id="diamond_frame">
           <path
             id="Vector"
