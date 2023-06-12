@@ -10,13 +10,16 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
 import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
+import { getPlatformsQueryEcomj, getSettings } from "@/lib/sanity.client";
+import { refactorSettings } from "@/utils/settings";
+import { refactorPlatforms } from "@/utils/platforms";
 
-const Ecommj = ({ header, footer, ecommjData }) => {
+const Ecommj = ({ header, footer, ecommjData, settings }) => {
   if (!ecommjData) {
     return <></>;
   }
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="pb-0 pt-0">
         <Banner {...ecommjData.banner} />
       </div>
@@ -52,9 +55,23 @@ const Ecommj = ({ header, footer, ecommjData }) => {
     </Layout>
   );
 };
-export async function getStaticProps() {
-  const ecommjData = await get("ecomj");
-  return { props: { ecommjData } };
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, platform] = await Promise.all([
+    getSettings({ token }),
+    getPlatformsQueryEcomj({ token }),
+  ])
+
+  return {
+    props: {
+      ecommjData: refactorPlatforms(platform),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
 export default Ecommj;

@@ -4,9 +4,14 @@ import {
   homePageTitleQuery,
   pagePaths,
   pagesBySlugQuery,
+  platformsQuery,
   projectBySlugQuery,
   projectPaths,
   settingsQuery,
+  platformsQueryEcomj,
+  platformsQueryMObj,
+  platformsQueryWebj,
+  contactQuery
 } from './sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -54,4 +59,26 @@ export async function getProjectPaths() {
 
 export async function getPagePaths() {
   return await sanityClient()?.fetch(pagePaths)
+}
+
+export async function getPlatformsQueryEcomj({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(platformsQueryEcomj)
+}
+export async function getPlatformsQueryMObj({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(platformsQueryMObj)
+}
+export async function getPlatformsQueryWebj({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(platformsQueryWebj)
+}
+
+export async function getContacts({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(contactQuery)
 }

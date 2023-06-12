@@ -1025,7 +1025,8 @@
           "label": "Go Live",
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageCenter",
-          "id": "go-live"
+          "id": "go-live",
+          "faqs": []
         }
       ]
     },
@@ -1373,7 +1374,8 @@
           "label": "Go Live",
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageCenter",
-          "id": "go-live"
+          "id": "go-live",
+          "faqs": []
         }
       ]
     },
@@ -1680,7 +1682,8 @@
           "label": "Go Live",
           "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
           "layout": "imageCenter",
-          "id": "go-live"
+          "id": "go-live",
+          "faqs": []
         }
       ]
     },

@@ -10,6 +10,9 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
 import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
+import { getPlatformsQueryWebj, getSettings } from "@/lib/sanity.client";
+import { refactorPlatforms } from "@/utils/platforms";
+import { refactorSettings } from "@/utils/settings";
 
 const Ecommj = ({ header, footer , webData}) => {
  
@@ -56,9 +59,23 @@ const Ecommj = ({ header, footer , webData}) => {
   );
 };
 
-export async function getStaticProps() {
-  const webData = await get("webj");
-  return { props: { webData } };
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, platform] = await Promise.all([
+    getSettings({ token }),
+    getPlatformsQueryWebj({ token }),
+  ])
+
+  return {
+    props: {
+      webData: refactorPlatforms(platform),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
 export default Ecommj;

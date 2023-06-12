@@ -1,14 +1,14 @@
 import { React } from "react";
 import Layout from "@/components/layout";
 import Form from "@/components/form";
-import { get } from "@/client/api";
 import CaseStudy from "@/components/caseStudy/CaseStudy";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import BlogCard from "@/components/blogCard/BlogCard";
+import { getContacts,  getSettings } from "@/lib/sanity.client";
+import { refactorContact } from "@/utils/contact";
+import { refactorSettings } from "@/utils/settings";
 
 const Contact = ({ header, footer ,contactData}) => {
-  
-
   return (
     <Layout header={header} footer={footer}>
 
@@ -49,9 +49,23 @@ const Contact = ({ header, footer ,contactData}) => {
   );
 };
 
-export async function getStaticProps() {
-  const contactData = await get("contactUs");
-  return { props: { contactData } };
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, contact] = await Promise.all([
+    getSettings({ token }),
+    getContacts({ token }),
+  ])
+
+  return {
+    props: {
+      contactData: refactorContact(contact),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
 export default Contact;
