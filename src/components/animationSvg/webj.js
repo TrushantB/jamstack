@@ -1,7 +1,7 @@
 const WebJBanner = () => {
   return (
     <svg
-      className="mobj"
+      className="webj"
       width="%"
       height="%"
       viewBox="0 0 527 484"

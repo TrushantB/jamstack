@@ -3,12 +3,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import MobJPAGE, { MobJBanner } from "@/components/animationSvg/mobj";
 
-
 const Mobj = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
 
-    const mobj = gsap.timeline({ repeat: -1 });
+    const mobj = gsap.timeline();
 
     gsap.set("#frame", { opacity: 0, y: 20 });
     gsap.set("#shapes-card", { y: 30, opacity: 0 });
@@ -44,17 +43,17 @@ const Mobj = () => {
       .to("#circle_2", { opacity: 1, duration: 0.3 })
       .to("#content-card", { x: 0, opacity: 1, duration: 0.3 });
 
-    mobj.repeatDelay(3);
-
-    mobj.play();
-
-    return () => {
-      mobj.kill();
-    };
+    ScrollTrigger.create({
+      trigger: ".mobj",
+      start: "30% 20%",
+      end: "80% 70%",
+      animation: mobj,
+      toggleActions: "restart none none reverse",
+    });
   }, []);
   return (
     <div className="lg:w-7/12">
-      <MobJBanner/>
+      <MobJBanner />
     </div>
   );
 };
