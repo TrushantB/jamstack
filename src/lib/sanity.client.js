@@ -11,7 +11,8 @@ import {
   platformsQueryEcomj,
   platformsQueryMObj,
   platformsQueryWebj,
-  contactQuery
+  contactQuery,
+  jamStackQuery
 } from './sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -81,4 +82,9 @@ export async function getContacts({
   token,
 }) {
   return await sanityClient(token)?.fetch(contactQuery)
+}
+export async function getJamStack({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(jamStackQuery)
 }

@@ -1,11 +1,14 @@
 import { React, useState, useEffect } from "react";
-import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import Card from "@/components/presentational/card/Card";
 import Accordion from "@/components/accordian/accordion";
 import ProductCard from "@/components/productCard/productCard";
 import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian";
+import { getJamStack, getSettings } from "@/lib/sanity.client";
+import jamstack from "@/sanity/schemas/singletons/jamstack";
+import { refactorJamStack } from "@/utils/jamStack";
+import { refactorSettings } from "@/utils/settings";
 
 const Jamstack = ({ header, footer ,jamstackData }) => {
   
@@ -48,9 +51,23 @@ const Jamstack = ({ header, footer ,jamstackData }) => {
     </Layout>
   );
 };
-export async function getStaticProps() {
-  const jamstackData = await get("jamStack");
-  return { props: { jamstackData } };
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, jamstack] = await Promise.all([
+    getSettings({ token }),
+    getJamStack({ token }),
+  ])
+
+  return {
+    props: {
+      contactData: refactorJamStack(jamstack),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
 export default Jamstack;

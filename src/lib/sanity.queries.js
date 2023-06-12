@@ -25,6 +25,12 @@ export const contactQuery = groq`
   ...
 }
 `
+export const jamStackQuery = groq`
+*[_type == "jamstack"][0] {
+  ...
+  banner
+}
+`
 
 export const homePageTitleQuery = groq`
   *[_type == "home"][0].title
