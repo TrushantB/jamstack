@@ -12,7 +12,6 @@ const Cdn = () => {
     gsap.set("#pentagon_1", { x: 150, opacity: 0 });
     gsap.set("#pentagon_2", { x: -150, opacity: 0 });
 
-
     const decoupled = gsap.timeline({ repeat: -1 });
 
     decoupled
@@ -21,11 +20,7 @@ const Cdn = () => {
       .to("#diamond_1", { y: 0, opacity: 1 })
       .to("#diamond_2", { y: 0, opacity: 1 })
       .to("#pentagon_1", { x: 0, opacity: 1 })
-      .to("#pentagon_2", { x: 0, opacity: 1 })
-
-
-      
-      
+      .to("#pentagon_2", { x: 0, opacity: 1 });
 
     decoupled.repeatDelay(3);
 
@@ -36,7 +31,7 @@ const Cdn = () => {
     };
   }, []);
   return (
-    <div className="w-8/12">
+    <div className="w-8/12 mx-auto">
       <JamstackOne />
     </div>
   );
