@@ -1,5 +1,3 @@
-import { React, useState, useEffect } from "react";
-import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Stepper from "@/components/stepper/stepper";
 import Banner from "@/components/presentational/banner/Banner";
@@ -10,50 +8,49 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
 import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
-import { getPlatformsQueryWebj, getSettings } from "@/lib/sanity.client";
+import { getPlatformsQuery, getSettings } from "@/lib/sanity.client";
 import { refactorPlatforms } from "@/utils/platforms";
 import { refactorSettings } from "@/utils/settings";
 
-const Ecommj = ({ header, footer , webData}) => {
- 
+const Webj = ({ platformsData, settings }) => {
 
-  if (!webData) {
+  if (!platformsData) {
     return <></>;
   }
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="pb-0 pt-0">
-        <Banner {...webData.banner} />
+        <Banner {...platformsData.banner} />
       </div>
 
-      <Info {...webData.info} />
+      <Info {...platformsData.info} />
 
       <div className="pb-12 md:pb-24 lg:px-24 px-5 ">
-        <Stepper {...webData?.stepperData} />
+        <Stepper {...platformsData?.stepperData} />
       </div>
 
       <div className="">
-        <ModernTechnologyOne {...webData?.morderTechnologyOne} />
+        <ModernTechnologyOne {...platformsData?.morderTechnologyOne} />
       </div>
 
       <div className="container mx-auto px-4 md:px-0 py-16 md:py-24">
-        {<PlatformAccordian {...webData?.accordian} />}
+        {<PlatformAccordian {...platformsData?.accordian} />}
       </div>
 
       <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
-        <CaseStudy {...webData?.caseStudy} />
+        <CaseStudy {...platformsData?.caseStudy} />
       </div>
 
       <div className="flex flex-col bg-accent-100 justify-center items-center">
-        <Cta {...webData?.cta} />
+        <Cta {...platformsData?.cta} />
       </div>
 
       <div className="py-12 md:py-24 container mx-auto px-4 md:px-0">
-        <TestimonialCard {...webData?.testimonialCard} />
+        <TestimonialCard {...platformsData?.testimonialCard} />
       </div>
 
-    <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
-        <BlogCard {...webData?.blogCard} />
+      <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
+        <BlogCard {...platformsData?.blogCard} />
       </div>
     </Layout>
   );
@@ -65,12 +62,12 @@ export async function getStaticProps(ctx) {
   const token = previewData.token
   const [settings, platform] = await Promise.all([
     getSettings({ token }),
-    getPlatformsQueryWebj({ token }),
+    getPlatformsQuery({ token, slug: "webj" }),
   ])
 
   return {
     props: {
-      webData: refactorPlatforms(platform),
+      platformsData: refactorPlatforms(platform),
       settings: refactorSettings(settings),
       preview,
       token: previewData.token ?? null,
@@ -78,4 +75,4 @@ export async function getStaticProps(ctx) {
   }
 }
 
-export default Ecommj;
+export default Webj;

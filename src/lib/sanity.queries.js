@@ -5,21 +5,13 @@ export const homePageQuery = groq`
     ...
   }
 `
-export const platformsQueryEcomj = groq`
-*[_type == "platforms" && slug.current == "ecommj"][0] {
-  ...
-}
-`
-export const platformsQueryMObj = groq`
-*[_type == "platforms" && slug.current == "mobj"][0] {
-  ...
-}
-`
-export const platformsQueryWebj = groq`
-*[_type == "platforms" && slug.current == "webj"][0] {
-  ...
-}
-`
+
+export const platformsQuery = groq`
+  *[_type == "platforms" && slug.current == $slug][0] {
+   ...
+  }
+  `
+
 export const contactQuery = groq`
 *[_type == "contact"][0] {
   ...
@@ -28,21 +20,14 @@ export const contactQuery = groq`
 export const jamStackQuery = groq`
 *[_type == "jamstack"][0] {
   ...
-  banner
 }
 `
 
-export const homePageTitleQuery = groq`
-  *[_type == "home"][0].title
-`
-
-export const pagesBySlugQuery = groq`
-  *[_type == "page" && slug.current == $slug][0] {
-    _id,
-    body,
-    overview,
+export const complienceBySlugQuery = groq`
+  *[_type == "compliences" && slug.current == $slug][0] {
     title,
     "slug": slug.current,
+    content
   }
 `
 

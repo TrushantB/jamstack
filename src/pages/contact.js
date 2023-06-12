@@ -4,14 +4,13 @@ import Form from "@/components/form";
 import CaseStudy from "@/components/caseStudy/CaseStudy";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import BlogCard from "@/components/blogCard/BlogCard";
-import { getContacts,  getSettings } from "@/lib/sanity.client";
+import { getContacts, getSettings } from "@/lib/sanity.client";
 import { refactorContact } from "@/utils/contact";
 import { refactorSettings } from "@/utils/settings";
 
-const Contact = ({ header, footer ,contactData}) => {
+const Contact = ({ contactData, settings }) => {
   return (
-    <Layout header={header} footer={footer}>
-
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="container mx-auto">
         <div className="lg:px-6 px-5 pt-24">
           <h2 className="lg:w-3/4">{contactData?.heading}</h2>

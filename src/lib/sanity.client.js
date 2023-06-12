@@ -3,7 +3,7 @@ import {
   homePageQuery,
   homePageTitleQuery,
   pagePaths,
-  pagesBySlugQuery,
+  complienceBySlugQuery,
   platformsQuery,
   projectBySlugQuery,
   projectPaths,
@@ -26,12 +26,6 @@ export async function getHomePage({
   token,
 }) {
   return await sanityClient(token)?.fetch(homePageQuery)
-}
-
-export async function getHomePageTitle({
-  token,
-}) {
-  return await sanityClient(token)?.fetch(homePageTitleQuery)
 }
 
 export async function getPageBySlug({
@@ -87,4 +81,18 @@ export async function getJamStack({
   token,
 }) {
   return await sanityClient(token)?.fetch(jamStackQuery)
+}
+
+export async function getComplienceBySlug({
+  slug,
+  token,
+}) {
+  return await sanityClient(token)?.fetch(complienceBySlugQuery, { slug })
+}
+
+export async function getPlatformsQuery({
+  slug,
+  token,
+}) {
+  return await sanityClient(token)?.fetch(platformsQuery, { slug })
 }

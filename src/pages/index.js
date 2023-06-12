@@ -1,5 +1,4 @@
 import { React } from "react";
-import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import WebSection from "@/components/webSection/webSection";
@@ -19,7 +18,7 @@ import { getSettings, getHomePage } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { refactorHome } from "@/utils/home";
 
-const IndexPage = ({ header, footer, homeData, settings }) => {
+const IndexPage = ({ homeData, settings }) => {
   if (!homeData) {
     return <></>;
   }
@@ -87,7 +86,6 @@ const IndexPage = ({ header, footer, homeData, settings }) => {
 
 export const getStaticProps = async (ctx) => {
   const { preview = false, previewData = {} } = ctx
-  const homeData = await get("home");
 
   const token = previewData.token
   const [settings, page] = await Promise.all([
@@ -98,7 +96,6 @@ export const getStaticProps = async (ctx) => {
   return {
     props: {
       homeData: refactorHome(page),
-      // page: refactorHome(page),
       settings: refactorSettings(settings),
       preview,
       token: previewData.token ?? null,

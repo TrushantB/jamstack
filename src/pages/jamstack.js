@@ -2,21 +2,19 @@ import { React, useState, useEffect } from "react";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import Card from "@/components/presentational/card/Card";
-import Accordion from "@/components/accordian/accordion";
 import ProductCard from "@/components/productCard/productCard";
 import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian";
 import { getJamStack, getSettings } from "@/lib/sanity.client";
-import jamstack from "@/sanity/schemas/singletons/jamstack";
 import { refactorJamStack } from "@/utils/jamStack";
 import { refactorSettings } from "@/utils/settings";
 
-const Jamstack = ({ header, footer ,jamstackData }) => {
-  
+const Jamstack = ({ jamstackData, settings }) => {
+
   if (!jamstackData) {
     return <></>;
   }
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="pt-0">
         <Banner {...jamstackData.banner} isInner={true} />
       </div>
@@ -62,7 +60,7 @@ export async function getStaticProps(ctx) {
 
   return {
     props: {
-      contactData: refactorJamStack(jamstack),
+      jamstackData: refactorJamStack(jamstack),
       settings: refactorSettings(settings),
       preview,
       token: previewData.token ?? null,
