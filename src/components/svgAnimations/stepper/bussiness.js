@@ -1,13 +1,17 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 const Bussiness = () => {
   return (
-    <div>
-      <img src="/EssentialSVG.svg"></img>
+    <div className="relative h-96 lg:h-80 w-full">
+      <Image
+        src="/essentialSVG.svg"
+        fill
+        alt="Essential svg"
+        className=" -z-10"
+      />
     </div>
-  );f
+  );
 };
 
 export default Bussiness;

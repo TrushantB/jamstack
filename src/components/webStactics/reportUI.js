@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../form/button/Button";
+import axios from 'axios';
 
-const ProgressBar = () => {
+const ProgressBar = ({ report, setShowProgressBar, setShowButton }) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const submitReport = () => {
+    axios.post("/api/postReport", {
+      "reportUrl": report.data,
+      "webSiteUrl": report.meta.redirectedURL,
+      "email": email,
+      "name": name
+    })
+      .then((data) => {
+        setShowProgressBar(false);
+        setShowButton(true);
+        alert('Report sent successfully. Please check your mail')
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  }
   return (
     <div className="container mx-auto pt-24 lg:pt-14">
       <h4 className=" font-normal mb-14 ml-5">Here are your web vitals</h4>
@@ -118,18 +138,23 @@ const ProgressBar = () => {
       <div>
 
         {/* form  */}
-        <form className="flex flex-col gap-8 ml-5 py-24 pb-16 ">
+        <div className="flex flex-col gap-8 ml-5 py-24 pb-16 " >
           <input
             className="sm:w-3/4  rounded-full bg-accent-100 px-6 h-[60px] "
             placeholder="Name"
-          ></input>
+            required
+            onChange={(e) => setName(e.target.value)}
+          />
           <input
             className="sm:w-3/4 rounded-full bg-accent-100 px-6 h-[60px]"
             placeholder="Email"
-          ></input>
+            type="email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-          <Button label={"yes send me the Results"} />
-        </form>
+          <Button onClick={submitReport} label={"Yes send me the results"} />
+        </div>
       </div>
     </div>
   );
