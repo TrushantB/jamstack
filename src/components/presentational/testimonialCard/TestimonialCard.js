@@ -15,6 +15,7 @@ function TestimonialCard({ cards, heading }) {
   useEffect(() => {
     const cards = Array.from(cardsRef.current.children);
     const timeline = gsap.timeline({ defaults: { duration: 3 } });
+    
 
     gsap.set(cards, { opacity: 0, x: 500 });
 
@@ -22,14 +23,14 @@ function TestimonialCard({ cards, heading }) {
       gsap.to(card, {
         x: 0,
         opacity: 1,
-        duration: 4,
+        duration: 1,
         ease: "ease-in-out",
         scrollTrigger: {
           trigger: card,
-          start: "40% 60%",
-          end: "bottom 50%",
+          start: "top 60%",
+          end: "+=400",
           scrub: true,
-          markers: true,
+          markers:true
         },
       });
     });
