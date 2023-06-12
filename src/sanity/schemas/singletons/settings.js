@@ -38,104 +38,14 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'menuItems',
-      title: 'Menu Item list',
-      description: 'Links displayed on the header of your site.',
-      type: 'array',
-      of: [
-        {
-          title: 'Reference',
-          type: 'reference',
-          to: [
-            {
-              type: 'home',
-            },
-            {
-              type: 'platforms',
-            },
-            {
-              type: 'pricing',
-            },
-            {
-              type: 'ecosystem',
-            },
-            {
-              type: 'caseStudy',
-            },
-            {
-              type: 'blog',
-            },
-            {
-              type: 'blogs',
-            },
-            {
-              type: 'compliences',
-            },
-            {
-              type: 'about',
-            },
-            {
-              type: 'faqs',
-            },
-            {
-              type: 'jamstack',
-            },
-            {
-              type: 'contact',
-            },
-          ],
-        },
-      ],
+      title: 'Header Menus',
+      name: 'headerMenus',
+      type: 'navigation'
     }),
     defineField({
-      name: 'sidebarLink',
-      title: 'Sidebar Links',
-      description: 'Links displayed on the header of your site.',
-      type: 'array',
-      of: [
-        {
-          title: 'Reference',
-          type: 'reference',
-          to: [
-            {
-              type: 'home',
-            },
-            {
-              type: 'platforms',
-            },
-            {
-              type: 'pricing',
-            },
-            {
-              type: 'ecosystem',
-            },
-            {
-              type: 'caseStudy',
-            },
-            {
-              type: 'blog',
-            },
-            {
-              type: 'blogs',
-            },
-            {
-              type: 'compliences',
-            },
-            {
-              type: 'about',
-            },
-            {
-              type: 'faqs',
-            },
-            {
-              type: 'jamstack',
-            },
-            {
-              type: 'contact',
-            },
-          ],
-        },
-      ],
+      title: 'Sidebar Menus',
+      name: 'sidebarMenus',
+      type: 'navigation'
     }),
     defineField({
       name: 'description',
@@ -298,104 +208,14 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'footerItems',
-      title: 'Footer Items',
-      description: 'Links displayed on the footer of your site.',
-      type: 'array',
-      of: [
-        {
-          title: 'Reference',
-          type: 'reference',
-          to: [
-            {
-              type: 'home',
-            },
-            {
-              type: 'platforms',
-            },
-            {
-              type: 'pricing',
-            },
-            {
-              type: 'ecosystem',
-            },
-            {
-              type: 'caseStudy',
-            },
-            {
-              type: 'blog',
-            },
-            {
-              type: 'blogs',
-            },
-            {
-              type: 'compliences',
-            },
-            {
-              type: 'about',
-            },
-            {
-              type: 'faqs',
-            },
-            {
-              type: 'jamstack',
-            },
-            {
-              type: 'contact',
-            },
-          ],
-        },
-      ],
+      title: 'Footer Menus',
+      name: 'footerMenus',
+      type: 'navigation'
     }),
     defineField({
-      name: 'secondaryFooterItems',
-      title: 'Secondary Footer Items',
-      description: 'Secondary links displayed on the footer of your site.',
-      type: 'array',
-      of: [
-        {
-          title: 'Reference',
-          type: 'reference',
-          to: [
-            {
-              type: 'home',
-            },
-            {
-              type: 'platforms',
-            },
-            {
-              type: 'pricing',
-            },
-            {
-              type: 'ecosystem',
-            },
-            {
-              type: 'caseStudy',
-            },
-            {
-              type: 'blog',
-            },
-            {
-              type: 'blogs',
-            },
-            {
-              type: 'compliences',
-            },
-            {
-              type: 'about',
-            },
-            {
-              type: 'faqs',
-            },
-            {
-              type: 'jamstack',
-            },
-            {
-              type: 'contact',
-            },
-          ],
-        },
-      ],
+      title: 'Secondary Footer Menus',
+      name: 'secondaryFooterMenus',
+      type: 'navigation'
     }),
     defineField({
       name: 'copyRight',
