@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import ReportLoader from "./reportLoader";
-import ReportUI from "./reportUI";
 import ProgressBar from "./reportUI";
+import axios from 'axios'
 
 function WebStactics({
   heading,
@@ -18,6 +17,7 @@ function WebStactics({
   const [showProgressBar, setShowProgressBar] = useState(false);
   const [animateReport, setAnimateReport] = useState(false);
   const [inputValue, setInputValue] = useState('');
+  const [report, setReport] = useState(null);
 
   const handleBlur = (event) => {
     if (event.target.value === "") {
@@ -32,7 +32,7 @@ function WebStactics({
       setError("");
     }
     setInputValue(event.target.value)
-    
+
   };
 
   useEffect(() => {
@@ -49,55 +49,28 @@ function WebStactics({
     };
   }, []);
 
+
   const handleButtonClick = () => {
-    setShowButton(false);
-    setAnimateReport(true);
-  
-    // const requestData = {
-    //   url: inputValue,
-    //   device: 'desktop',
-    //   parameters: ['--output=html']
-    // };
-    var data = JSON.stringify({
-      url: inputValue,
-      device: "desktop",
-      proxyCountry: "us",
-      followRedirect: true,
-      parameters: ["--output=json"],
-    });
-    
-    fetch('https://api.geekflare.com/lighthouse', {
-      method: 'POST',
-      headers: {
-        "x-api-key": '467e9b93-7654-4294-b9bd-44fee71b2800',
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-      },
-      body: JSON.stringify(data)
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Request failed');
-        }
+    if (`${inputValue}`.trim()) {
+      setShowButton(false);
+      setAnimateReport(true);
+      axios.post("/api/getReport", {
+        "url": inputValue,
+        "output": "html"
       })
-      .then((data) => {
-        // Handle the response here
-        console.log("data" , data);
-  
-        setTimeout(() => {
+        .then((data) => {
+          setReport(data.data.data.data);
           setAnimateReport(false);
           setShowProgressBar(true);
-        }, 10000);
-      })
-      .catch((error) => {
-        // Handle errors here
-        console.error("error" , error);
-      });
-  };  
+          setInputValue('');
+        })
+        .catch((error) => {
+          setAnimateReport(false);
+          setShowProgressBar(true);
+          console.error("error", error);
+        });
+    }
+  };
 
   const Animation = () => {
     gsap.set(".report", { display: "block" });
@@ -113,7 +86,7 @@ function WebStactics({
   useEffect(() => {
     if (animateReport) {
       Animation();
-    } else {}
+    } else { }
   }, [animateReport]);
 
   return (
@@ -128,9 +101,8 @@ function WebStactics({
           </div>
           {/* input start  */}
           <div
-            className={`flex lg:flex-row gap-4 pb-10 lg:pb-0 mt-5 lg:gap-0 items-center relative ${
-              showButton ? "" : "hidden"
-            }`}
+            className={`flex lg:flex-row gap-4 pb-10 lg:pb-0 mt-5 lg:gap-0 items-center relative ${showButton ? "" : "hidden"
+              }`}
           >
             <input
               placeholder={placeholder}
@@ -138,6 +110,7 @@ function WebStactics({
               ring-1 ring-inset ring-gray-50 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-pink-600"
               onBlur={handleBlur}
               onChange={handleChange}
+              required
             />
             {isMobileView ? (
               <button
@@ -162,7 +135,7 @@ function WebStactics({
               <p className="text-red-600 bg-red-100 py-1 px-3 rounded-full">
                 {error}
               </p>
-            </div> 
+            </div>
           )}
           {/* input end  */}
         </div>
@@ -186,7 +159,7 @@ function WebStactics({
 
       {showProgressBar && !animateReport && (
         <div>
-          <ProgressBar />
+          <ProgressBar report={report} setShowProgressBar={setShowProgressBar} setShowButton={setShowButton} />
         </div>
       )}
     </>
