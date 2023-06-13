@@ -30,7 +30,7 @@ const Jamstack = ({ jamstackData, settings }) => {
         </div>
       </div>
 
-      <div className="lg:px-24 py-12 px-5">
+      <div className=" py-12 px-5">
         <div className="pb-6">
           <h2 className=" ">{jamstackData?.accordian?.heading}</h2>
         </div>

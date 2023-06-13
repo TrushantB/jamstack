@@ -34,7 +34,7 @@ const Decoupled = () => {
     };
   }, []);
   return (
-    <div className="lg:w-10/12 mx-auto ">
+    <div className="w-10/12 mx-auto ">
       <JamstackTwo />
     </div>
   );
