@@ -7,7 +7,6 @@ import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian"
 import { getJamStack, getSettings } from "@/lib/sanity.client";
 import { refactorJamStack } from "@/utils/jamStack";
 import { refactorSettings } from "@/utils/settings";
-import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
 import Cta from "@/components/cta/cta";
 
 const Jamstack = ({ jamstackData, settings }) => {
@@ -42,11 +41,11 @@ const Jamstack = ({ jamstackData, settings }) => {
         </div>
       </div>
 
-      <div className="my-16 lg:my-24">
+      <div className="flex flex-col bg-accent-100 justify-center items-center">
         <Cta isInner={true} {...jamstackData?.cta} />
       </div>
 
-      <div className="pb-24">
+      <div className="py-24">
         <h2 className="text-center mb-6 md:mb-8">{jamstackData?.productCard?.heading}</h2>
         <div>
           <ProductCard cards={jamstackData?.productCard?.cards} />
