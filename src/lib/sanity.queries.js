@@ -5,6 +5,11 @@ export const homePageQuery = groq`
     ...
   }
 `
+export const faqPageQuery = groq`
+  *[_type == "faqs"][0]{
+    ...
+  }
+`
 
 export const platformsQuery = groq`
   *[_type == "platforms" && slug.current == $slug][0] {

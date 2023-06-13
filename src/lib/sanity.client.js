@@ -12,7 +12,8 @@ import {
   platformsQueryMObj,
   platformsQueryWebj,
   contactQuery,
-  jamStackQuery
+  jamStackQuery,
+  faqPageQuery
 } from './sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -95,4 +96,10 @@ export async function getPlatformsQuery({
   token,
 }) {
   return await sanityClient(token)?.fetch(platformsQuery, { slug })
+}
+
+export async function getFAQ({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(faqPageQuery)
 }
