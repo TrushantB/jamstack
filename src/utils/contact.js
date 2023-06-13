@@ -2,11 +2,12 @@
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorContact = (data) => {
+  console.log("data==>" , data?.caseStudy?.itemList)
     return  {
-      "heading": data?.heading,
-      "description": data?.description,
-      "contactDetails": data?.contactDetails,
-      "contactEmail":  data?.contactEmail ,
+      "heading": data?.contactSection?.heading ,
+      "description": data?.contactSection?.description,
+      "contactDetails": data?.contactSection?.contactDetails ,
+      "contactEmail":  data?.contactSection?.contactEmail  ,
       caseStudy: {
         heading: data?.caseStudy?.heading,
         description: data?.caseStudy?.description,

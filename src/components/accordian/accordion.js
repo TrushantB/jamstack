@@ -10,9 +10,6 @@ const Accordion = ({ accordin, isInner = false }) => {
     }
   };
 
-  useEffect(() => {
-    accordin?.length && setActive(accordin[0])
-  }, [accordin])
 
   return (
     <div className={isInner ? "my-6" : "lg:px-0 px-0"}>

@@ -27,6 +27,7 @@ const refactorPlatforms = (data) => {
         label: item.label,
         content: item.content,
         layout: item.layout,
+        animationType: item.animationType !== undefined ? item.animationType : null,
         id: item.id,
         faqs: item?.faqs?.map((faq) => ({
           label: faq.label,
@@ -48,12 +49,12 @@ const refactorPlatforms = (data) => {
       "href": data?.morderTechnologyOne?.href
     },
     "accordian": {
-      "heading": "How amazing is ecommJ to build your app?",
+      "heading": data?.accordian?.heading,
       "accordinaList": data?.accordian?.accordinaList?.map((item) => ({
         label: item.label,
         description: item.description,
-        icon: item.icon,
-        arrow: item.arrow
+        icon: item.icon || null ,
+        arrow: item.arrow || null
       })) || []
     },
     "cta": {

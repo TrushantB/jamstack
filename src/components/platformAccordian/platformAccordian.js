@@ -12,7 +12,7 @@ const PlatformAccordian = (accordian) => {
   };
 
   useEffect(() => {
-    accordian?.length && setActive(accordian[0]);
+    accordian?.accordinaList?.length && setActive(accordian.accordinaList[0]);
   }, [accordian]);
 
   return (
