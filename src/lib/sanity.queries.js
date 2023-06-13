@@ -5,6 +5,12 @@ export const homePageQuery = groq`
     ...
   }
 `
+
+export const pricingQuery = groq`
+  *[_type == "pricing"][0] {
+   ...
+  }
+  `
 export const faqPageQuery = groq`
   *[_type == "faqs"][0]{
     ...
