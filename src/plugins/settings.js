@@ -2,10 +2,8 @@
  * This plugin contains all the logic for setting up the singletons
  */
 
-// import { apiVersion, previewSecretId } from 'lib/sanity.api'
-
-// import { PREVIEWABLE_DOCUMENT_TYPES } from '../sanity.config'
-// import { PreviewPane } from './previewPane/PreviewPane'
+// Schema type objects
+const objectTypes = ['navigation'];
 
 export const singletonPlugin = (types) => {
   return {
@@ -53,8 +51,16 @@ export const pageStructure = (
 
     // The default root list items (except custom ones)
     const defaultListItems = S.documentTypeListItems().filter(
-      (listItem) =>
-        !typeDefArray.find((singleton) => singleton.name === listItem.getId())
+      (listItem) => {
+        return !typeDefArray.find((singleton) => {
+          if (singleton.name === listItem.getId()) {
+            return true
+          } else if (objectTypes.includes(listItem.getId())) {
+            return true
+          }
+        })
+      }
+
     )
 
     return S.list()

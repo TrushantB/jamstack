@@ -242,7 +242,7 @@
       "size": "medium",
       "layout": "Image Left",
       "href": "contact",
-      "animationType":"home"
+      "animationType": "home"
     },
     "technologySolution": {
       "description": "The all-in-one modern technology solution that offers everything to accelerate your business across the digital platforms.",
@@ -374,10 +374,9 @@
         { "image": "/javascript.svg", "alt": "javascript logo" },
         { "image": "/react.svg", "alt": "react logo" },
         { "image": "/vue.svg", "alt": "vue logo" },
-        { "image": "/strapi.svg", "alt": "strapi" },
+        { "image": "/strapi_1.svg", "alt": "strapi" },
         { "image": "/sanity.svg", "alt": "sanity logo" },
         { "image": "/prismic.svg", "alt": "sanity logo" }
-     
       ],
       "type": "primary",
       "label": "Explore Offerings",
@@ -667,19 +666,25 @@
         }
       ]
     },
-    "accordinData" : {
-      "heading" : "Pricing packages related FAQ" ,
-      "button" : {
+    "accordinData": {
+      "heading": "Pricing packages related FAQ",
+      "button": {
         "buttonLabel": "Know More",
-        "href" : "blog"
+        "href": "blog"
+      },
+      "accordin": [
+        {
+          "label": "Can I exchange or extend my plan?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
         },
-      "accordin" : [
-        {"label" : "Can I exchange or extend my plan?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Does the other services are included in basic plan?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Is there AMC (Annual Maintenance Contract)?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"}
+        {
+          "label": "Does the other services are included in basic plan?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Is there AMC (Annual Maintenance Contract)?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        }
       ]
     },
     "ConnectChoose": {
@@ -841,30 +846,50 @@
       "headingSize": "medium",
       "image": "/faqBanner.png",
       "layout": "Image Left",
-      "animationType":"faq"
+      "animationType": "faq"
     },
-    "accordinData" : {
-      "accordin" : [
-        {"label" : "How much time does it take to develop a JAMstack website having 10-20 pages?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "What is the onboarding process to get started?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Is it possible to upgrade old UI/UX of the website to new one with fast speed?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I have business idea and some budget can J+ help me with that?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Do you follow agile methodology?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Why do my business need Jamstack+ developed site?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I already have my ecommerce site , can you help me with mobile app?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "I am not techno savvy person , how do I choose correct technology?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"},
-        {"label" : "Can you build an app for iOS?" ,
-      "description" : "How much time does it take to develop a JAMstack website having 10-20 pages?"}
+    "accordinData": {
+      "accordin": [
+        {
+          "label": "How much time does it take to develop a JAMstack website having 10-20 pages?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Can we migrate from our existing CMS to Jamstack+ CMS with SSGs approach in JAM stack?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "What is the onboarding process to get started?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Is it possible to upgrade old UI/UX of the website to new one with fast speed?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I have business idea and some budget can J+ help me with that?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Do you follow agile methodology?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Why do my business need Jamstack+ developed site?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I already have my ecommerce site , can you help me with mobile app?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "I am not techno savvy person , how do I choose correct technology?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        },
+        {
+          "label": "Can you build an app for iOS?",
+          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
+        }
       ]
     },
     "blogCard": {
@@ -954,7 +979,7 @@
       "size": "medium",
       "layout": "Image Left",
       "href": "contact",
-      "animationType":"webj"
+      "animationType": "webj"
     },
     "info": {
       "description": "The webJ is an innovation by Jamstack+ based on JAMstack architecture.The platform provides quick, secured, durable and easily manageable digital presence that is uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
@@ -974,7 +999,7 @@
           "layout": "imageRight",
           "image": "/onboarding.png",
           "id": "on-boarding",
-          "animationType":"onboarding",
+          "animationType": "onboarding",
           "faqs": [
             {
               "label": "Can I manage my own content with webJ site?",
@@ -995,7 +1020,7 @@
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "choose-your-tech-stack",
-          "animationType":"choose",
+          "animationType": "choose",
           "faqs": [
             {
               "label": "In how many days will I get my website done?",
@@ -1011,7 +1036,7 @@
           "image": "/design.svg",
           "layout": "imageRight",
           "id": "design-development-testing",
-          "animationType":"design",
+          "animationType": "design",
           "faqs": [
             {
               "label": "Will my website work well on mobile as well?",
@@ -1247,28 +1272,28 @@
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
           "image": "/accordianImage.svg",
-          "animationType":"awarness"
+          "animationType": "awarness"
         },
         {
           "label": "Presence.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
           "image": "/accordianImage.svg",
-          "animationType":"presense"
+          "animationType": "presense"
         },
         {
           "label": "Accelerate.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
           "image": "/accordianImage.svg",
-          "animationType":"acclerate"
+          "animationType": "acclerate"
         },
         {
           "label": "Maintenance.",
           "description": "Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.",
           "content": "<div className='accordion-content flex-col lg:flex-row justify-between flex gap-5 items-center lg:pl-10 pb-5'><div class=''><h5 class='border-l-4 mb-5 pl-2 font-bold border-tertiary'>It's not only about one-time success, it's the consistency in maintaining success.</h5><p class='pb-5'>Even though you have flown high with success. There is the speed and pace to maintain you on the top. To sustain in any field, timely maintenance is unavoidable.</p><p>Maintenance is not a thing that should be done only when some crisis happens. It is an ongoing process as we keep on accelerating the car while driving on the road at the right speed. We provide you a tool that follows the proven steps to achieve the desired output under AMC.</p></div>",
           "image": "/accordianImage.svg",
-          "animationType":"maintainence"
+          "animationType": "maintainence"
         }
       ]
     },
@@ -1293,7 +1318,7 @@
       "size": "medium",
       "layout": "Image Left",
       "href": "contact",
-      "animationType":"mobj"
+      "animationType": "mobj"
     },
     "info": {
       "description": "The mobJ is innovation by Jamstack+ to build the collaborative mobile apps. The architecture is flexible enough to give you freedom to manage your app content seamlessly. It provides the app that can run on any platform and on any screen smoothly. Your app content is secured and get through API to reflect on screens. With saving time on developing for each possible platform , mobJ provides sleek, custom apps that stand out and give maximum user experience.",
@@ -1313,7 +1338,7 @@
           "layout": "imageRight",
           "image": "/onboarding.png",
           "id": "on-boarding",
-          "animationType":"onboarding",
+          "animationType": "onboarding",
           "faqs": [
             {
               "label": "Can you build an app for iOS?",
@@ -1334,7 +1359,7 @@
           "image": "/choose.png",
           "layout": "imageLeft",
           "id": "choose-your-tech-stack",
-          "animationType":"choose",
+          "animationType": "choose",
 
           "faqs": [
             {
@@ -1351,7 +1376,7 @@
           "image": "/Design.png",
           "layout": "imageRight",
           "id": "business-essentials",
-          "animationType":"design",
+          "animationType": "design",
 
           "faqs": [
             {
@@ -1572,83 +1597,86 @@
   },
   "ecomj": {
     "banner": {
-        "heading": "Start your journey of modern online business.",
-        "description" : " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
-        "backGroundColor": "#ffffff",
-        "headingSize": "medium",
-        "image": "/ecommj.svg",
-        "type": "primary",
-        "label": "Start A Project",
-        "size": "medium",
-        "layout": "Image Left",
-        "href" : "contact",
-        "animationType":"ecomj"
-      },
-      "info": {
-        "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
-        "question": "What is ecommJ?.",
-        "href" : "/",
-        "lineIMage": {
-          "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
-          "alt": "lineImage"
-        }
-      },
-      "stepperData" : {
-        "heading": "How ecommJ processes?",
-        "stepper":[
-          {
-            "label": "On boarding",
-            "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
-            "layout": "imageRight",
-            "image": "/onboarding.png",
-            "id": "on-boarding",
-            "animationType":"onboarding",
-            "faqs":[
-              {"label" : "Limitless customization and personalization" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              },
-              {"label" : "Improved time to value" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              }
-            ],
-            "cta":{
-              "label":"Get your plan",
-              "size":"medium",
-              "type":"primary"
+      "heading": "Start your journey of modern online business.",
+      "description": " Powerful platform that offers solutions to new and acceleration to mature and established businesses to grow digitally with modern technology.",
+      "backGroundColor": "#ffffff",
+      "headingSize": "medium",
+      "image": "/ecommj.svg",
+      "type": "primary",
+      "label": "Start A Project",
+      "size": "medium",
+      "layout": "Image Left",
+      "href": "contact",
+      "animationType": "ecomj"
+    },
+    "info": {
+      "description": "The ecommJ is an innovation of Jamstack+ based on JAMstack architecture.The platform delivers fast, easily managed CMS, eCommerce vitals for businesses that are uniquely tailored with popular tech stack by decoupling frontend and backend responsibilities.",
+      "question": "What is ecommJ?.",
+      "href": "/",
+      "lineIMage": {
+        "url": "https://github.com/MurtazaKp/Jamstack/blob/main/public/images/line-circle.png?raw=true",
+        "alt": "lineImage"
+      }
+    },
+    "stepperData": {
+      "heading": "How ecommJ processes?",
+      "stepper": [
+        {
+          "label": "On boarding",
+          "content": "We start with getting to know your problems and requirements. One dedicated person will take all the necessary steps to get you on board. Based on collected data and analysis, we get ready with preliminary tasks like mockups and design.",
+          "layout": "imageRight",
+          "image": "/onboarding.png",
+          "id": "on-boarding",
+          "animationType": "onboarding",
+          "faqs": [
+            {
+              "label": "Limitless customization and personalization",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
+            },
+            {
+              "label": "Improved time to value",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
             }
-          },
-          {
-            "label": "Choose your tech-stack",
-            "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
-            "image": "/choose.png",
-            "layout": "imageLeft",
-            "id": "choose-your-tech-stack",
-            "animationType":"choose",
-            "faqs":[
-              {"label" : "Limitless customization and personalization" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              },
-              {"label" : "Improved time to value" ,
-              "description" : "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
-              "icon" :  "diamond"  ,
-              "arrow" : true
-              }
-            ]
-            
-
-          },
-          {"label": "Business Essentials:", 
-          "content": "<p><span>We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></p><p><span><strong><span>Shipping:</span></strong></span></p><p><span><span>Look for an option that suits your needs:</span></span></p><p><span><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/fedex.png?raw=true' alt='fedex-img' width='94' height='55'> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span><strong><span>Payment Gateways</span></strong></span></p><p><span>Look for an option that suits your needs:</span></p><p style='display:flex; align-items:center; padding:20px 0; '><span style='display:flex; align-items:center; padding:20px 0; flex-wrap:wrap;'><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/razorpay.png?raw=true' width='213' height='45'>&nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/stripe.png?raw=true' width='90' height='43'>&nbsp; &nbsp; &nbsp; &nbsp;<span/></p><p><strong><span><span>Integrations</span></span></strong></p><p><strong><span><span>Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>", 
-          "image": "/Design.png", 
-          "layout": "imageRight", 
+          ],
+          "cta": {
+            "label": "Get your plan",
+            "size": "medium",
+            "type": "primary"
+          }
+        },
+        {
+          "label": "Choose your tech-stack",
+          "content": " <p class='pb-6'><span>Before starting development on mockups and design, check all the technical things for:&nbsp;</span></p>  <p class='pb-4'><span ><strong><span className='mb-5' >Static Site Generator(SSG):&nbsp; :&nbsp; </span></strong></span></p>  <p class='pb-4'><span>There are many popular SSGs available to create static files. Choose from the options we provide&nbsp;</span></p><p class='pb-5'><img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/f606eec62e9f9d04ea6a265674d638b977d7d79c/public/images/next.svg' width='140' height='34'></p> <p class='pb-4'><span><strong><span>Choose CMS (Content Management System)&nbsp;</span></strong></span></p> <p><span>To manage your content effectively, we recommend a few of the following:</span></p> <p style='display:flex; align-items:center; flex-wrap:wrap; padding:20px 0;'> <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/d8165ad6434280f4e35466b22336616fdcddaba1/public/images/strapi.svg' width='140' height='34'>&nbsp; &nbsp; &nbsp;<img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/contentful.svg' alt='contentful-logo' width='140' height='32'> &nbsp; &nbsp; &nbsp; <img src='https://raw.githubusercontent.com/MurtazaKp/Jamstack/616a2559114a5318227be22c8515ee69c1defce4/public/images/prismic.svg' alt='prismic' width='140' height='32'> </p> <p><strong><span>Choose front-end framework&nbsp;<br></span></strong></p> <p><span>We provide you JS framework options that are mostly used, like:</span></p> <p><span class='flex flex-wrap  items-center'><img src='https://tinyurl.com/4bh4ktud' alt='react-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/vue.png?raw=true' alt='veujs-logo' width='120' height='37'> &nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/Group.png?raw=true' alt='angular' width='120' height='37'></span></p> <p><strong><span>Hosting&nbsp;</span></strong></p> <p><span>We provide you hosting options that are mostly used, like:</span></p> <p><span class='flex flex-wrap items-center py-2'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/150px-Amazon_Web_Services_Logo.svg.png' alt='aws-logo' width='48' height='29'> &nbsp; &nbsp; &nbsp; <img src='https://popupsmart.com/assets/img/vercel-logo.png' alt='vercel' width='118' height='29'></span></p>",
+          "image": "/choose.png",
+          "layout": "imageLeft",
+          "id": "choose-your-tech-stack",
+          "animationType": "choose",
+          "faqs": [
+            {
+              "label": "Limitless customization and personalization",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
+            },
+            {
+              "label": "Improved time to value",
+              "description": "For both buyers and administrators, the ecommJ creates the exact experience that is desired. It allows you to personalise the experience . Here, the edge network is crucial in order to deliver the personalised content more quickly and according to the user's location.",
+              "icon": "diamond",
+              "arrow": true
+            }
+          ]
+        },
+        {
+          "label": "Business Essentials:",
+          "content": "<p><span>We know only developing the website is not enough in ecommerce, there are some prerequisites before you actually get into the market. We help you through all this by providing the best options.</span></p><p><span><strong><span>Shipping:</span></strong></span></p><p><span><span>Look for an option that suits your needs:</span></span></p><p><span><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/fedex.png?raw=true' alt='fedex-img' width='94' height='55'> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span><strong><span>Payment Gateways</span></strong></span></p><p><span>Look for an option that suits your needs:</span></p><p style='display:flex; align-items:center; padding:20px 0; '><span style='display:flex; align-items:center; padding:20px 0; flex-wrap:wrap;'><img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/razorpay.png?raw=true' width='213' height='45'>&nbsp; &nbsp; &nbsp; <img src='https://github.com/MurtazaKp/Jamstack/blob/main/public/images/stripe.png?raw=true' width='90' height='43'>&nbsp; &nbsp; &nbsp; &nbsp;<span/></p><p><strong><span><span>Integrations</span></span></strong></p><p><strong><span><span>Choose and get the communication integration via: <br>sms, WA, email</span></span></strong></p>",
+          "image": "/Design.png",
+          "layout": "imageRight",
           "id": "business-essentials",
-          "animationType":"bussiness",
+          "animationType": "bussiness",
           "faqs": [
             {
               "label": "Limitless customization and personalization",
@@ -1665,7 +1693,7 @@
           "image": "/Design.png",
           "layout": "imageLeft",
           "id": "design-development-testing",
-          "animationType":"design",
+          "animationType": "design",
           "faqs": [
             {
               "label": "Limitless customization and personalization",
@@ -1900,7 +1928,7 @@
       "description": "Modern architecture gives the approach of building everything on the web from apps to websites based on Javascript, ApIs and Markup(JAM).",
       "backGroundColor": "#ffffff",
       "headingSize": "medium",
-      "image": "/jamstackBanner.png",
+      "image": "/jamStackBanner.png",
       "type": "primary",
       "size": "medium",
       "layout": "Image Bottom",
@@ -1945,10 +1973,10 @@
       "accordinaList": [
         {
           "label": "Cost effective CDN use",
-          "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
+          "description": "Unlike sdfksdklfhsdlfhsdjfh monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
-          "animationType":"cdn",
+          "animationType": "cdn",
           "arrow": true
         },
         {
@@ -1956,8 +1984,8 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackTwo.svg",
-          "animationType":"decoupled",
-          
+          "animationType": "decoupled",
+
           "arrow": true
         },
         {
@@ -1965,7 +1993,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
-          "animationType":"security",
+          "animationType": "security",
           "arrow": true
         },
         {
@@ -1973,7 +2001,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackTwo.svg",
-          "animationType":"progressive",
+          "animationType": "progressive",
           "arrow": true
         },
         {
@@ -1981,7 +2009,7 @@
           "description": "Unlike monolithic architecture , JAMstack mobile apps are built with the combination of discrete parts to serve the purpose. This makes it easy to test and maintain. Also, being decoupled in services, if any component fails you don’t have to make changes to the entire app, you can only focus on fixing the faulty components without disturbing others.",
           "icon": "diamond",
           "image": "/jamstackOne.svg",
-          "animationType":"timeless",
+          "animationType": "timeless",
           "arrow": true
         }
       ]
