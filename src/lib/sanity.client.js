@@ -13,7 +13,8 @@ import {
   platformsQueryWebj,
   contactQuery,
   jamStackQuery,
-  faqPageQuery
+  faqPageQuery,
+  pricingQuery
 } from './sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -102,4 +103,10 @@ export async function getFAQ({
   token,
 }) {
   return await sanityClient(token)?.fetch(faqPageQuery)
+}
+
+export async function getPricing({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(pricingQuery)
 }
