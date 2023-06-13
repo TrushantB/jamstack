@@ -16,7 +16,7 @@ const Faq = ({ header, footer, faqData }) => {
         </div>
 
         <div className="conatiner mx-auto px-4 lg:px-0">
-          <Accordion {...faqData?.accordinData} />
+          <Accordion {...faqData?.accordinData} isActiveFirst={true} />
         </div>
 
         <div className="container mx-auto px-4 lg:px-0 py-12 lg:py-18">
