@@ -6,13 +6,12 @@ const refactorJamStack = (data) => {
     "banner": {
       "heading": data?.banner?.heading,
       "description": data.banner?.description,
-      "backGroundColor": data.banner?.backGroundColor,
+      "backGroundColor": data.banner?.backgroundColor,
       "headingSize": data.banner?.headingSize,
       "image": "/jamstackBanner.png",
       "type": data?.banner?.type,
       "size": data.banner?.size,
       "layout": data.banner?.layout,
-      "href": data.banner?.href
     },
     "cards": {
       "heading": data?.cards?.heading,

@@ -108,6 +108,7 @@ export default defineType({
               { title: "Image Left", value: "image-left" },
               { title: "Image Right", value: "image-right" },
               { title: "Image Top", value: "image-top" },
+              { title: "Image Bottom", value: "Image Bottom" },
             ],
           },
           initialValue: "image-left",

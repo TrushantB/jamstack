@@ -7,6 +7,8 @@ import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian"
 import { getJamStack, getSettings } from "@/lib/sanity.client";
 import { refactorJamStack } from "@/utils/jamStack";
 import { refactorSettings } from "@/utils/settings";
+import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
+import Cta from "@/components/cta/cta";
 
 const Jamstack = ({ jamstackData, settings }) => {
 
@@ -38,6 +40,10 @@ const Jamstack = ({ jamstackData, settings }) => {
             accordin={jamstackData?.accordian?.accordinaList}
           />
         </div>
+      </div>
+
+      <div className="my-16 lg:my-24">
+        <Cta isInner={true} {...jamstackData?.cta} />
       </div>
 
       <div className="pb-24">
