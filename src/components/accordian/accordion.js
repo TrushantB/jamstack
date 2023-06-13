@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 
-const Accordion = ({ accordin, isInner = false }) => {
+const Accordion = ({ accordin, isInner = false, isActiveFirst = false }) => {
   const [active, setActive] = useState({});
   const toggleAccordion = (accordianItem) => {
     if (active !== accordianItem) {
@@ -11,7 +11,7 @@ const Accordion = ({ accordin, isInner = false }) => {
   };
 
   useEffect(() => {
-    if (accordin.length) {
+    if (accordin.length && isActiveFirst) {
       setActive(accordin[0]);
     }
   }, []);
@@ -33,8 +33,8 @@ const Accordion = ({ accordin, isInner = false }) => {
             <div>
               <h5
                 className={`${isInner
-                    ? "text-base font-body font-bold"
-                    : "text-2xl leading-normal lg:text-3xl font-normal lg:leading-snug"
+                  ? "text-base font-body font-bold"
+                  : "text-2xl leading-normal lg:text-3xl font-normal lg:leading-snug"
                   }`}
               >
                 {item.label}
