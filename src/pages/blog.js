@@ -1,9 +1,9 @@
-import { React} from "react";
+import { React } from "react";
 import { get } from "@/client/api";
 import Layout from '@/components/layout'
 import Blogpage from "@/components/blog/blogPage";
 
-function Blog({ header, footer , blogData }) {
+function Blog({ header, footer, blogData }) {
 
   return (
     <Layout header={header} footer={footer} >
@@ -20,4 +20,4 @@ export async function getStaticProps() {
   return { props: { blogData } };
 }
 
-export default Blog
+export default Blog;

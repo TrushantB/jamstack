@@ -6,17 +6,39 @@ export const homePageQuery = groq`
   }
 `
 
-export const homePageTitleQuery = groq`
-  *[_type == "home"][0].title
+export const pricingQuery = groq`
+  *[_type == "pricing"][0] {
+   ...
+  }
+  `
+export const faqPageQuery = groq`
+  *[_type == "faqs"][0]{
+    ...
+  }
 `
 
-export const pagesBySlugQuery = groq`
-  *[_type == "page" && slug.current == $slug][0] {
-    _id,
-    body,
-    overview,
+export const platformsQuery = groq`
+  *[_type == "platforms" && slug.current == $slug][0] {
+   ...
+  }
+  `
+
+export const contactQuery = groq`
+*[_type == "contact"][0] {
+  ...
+}
+`
+export const jamStackQuery = groq`
+*[_type == "jamstack"][0] {
+  ...
+}
+`
+
+export const complienceBySlugQuery = groq`
+  *[_type == "compliences" && slug.current == $slug][0] {
     title,
     "slug": slug.current,
+    content
   }
 `
 
