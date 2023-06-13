@@ -4,7 +4,7 @@ import { CustomPortableText } from '@/components/shared/CustomPortableText';
 import { getComplienceBySlug, getSettings } from '@/lib/sanity.client';
 import { refactorSettings } from '@/utils/settings';
 
-export default function Security({ compliencesData, settings }) {
+export default function TermsAndConditions({ compliencesData, settings }) {
   return (
     <Layout header={settings.header} footer={settings.footer}>
       <div className='max-w-2xl xl:max-w-3xl mx-auto px-4'>
@@ -24,7 +24,7 @@ export const getStaticProps = async (ctx) => {
 
   const [settings, complience] = await Promise.all([
     getSettings({ token }),
-    getComplienceBySlug({ token, slug: 'security' }),
+    getComplienceBySlug({ token, slug: 'terms-and-conditions' }),
   ])
 
   if (!complience) {

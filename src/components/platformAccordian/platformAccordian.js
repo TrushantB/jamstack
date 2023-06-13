@@ -12,7 +12,7 @@ const PlatformAccordian = (accordian) => {
   };
 
   useEffect(() => {
-    accordian?.length && setActive(accordian[0]);
+    accordian?.accordinaList?.length && setActive(accordian.accordinaList[0]);
   }, [accordian]);
 
   return (
@@ -23,7 +23,7 @@ const PlatformAccordian = (accordian) => {
           <h2 className="">{accordian?.heading}</h2>
         </div>
         <div className="lg:w-8/12 px-5">
-          {accordian?.accordinaList.map((item, index) => (
+          {accordian?.accordinaList?.map((item, index) => (
             <div className="accordion-item" key={index}>
               <div
                 className="accordion-title flex items-center gap-2 pt-4  cursor-pointer"

@@ -1,19 +1,21 @@
 import { React, useState, useEffect } from "react";
-import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import Card from "@/components/presentational/card/Card";
-import Accordion from "@/components/accordian/accordion";
 import ProductCard from "@/components/productCard/productCard";
 import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian";
+import { getJamStack, getSettings } from "@/lib/sanity.client";
+import { refactorJamStack } from "@/utils/jamStack";
+import { refactorSettings } from "@/utils/settings";
+import Cta from "@/components/cta/cta";
 
-const Jamstack = ({ header, footer ,jamstackData }) => {
-  
+const Jamstack = ({ jamstackData, settings }) => {
+
   if (!jamstackData) {
     return <></>;
   }
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="pt-0">
         <Banner {...jamstackData.banner} isInner={true} />
       </div>
@@ -39,7 +41,11 @@ const Jamstack = ({ header, footer ,jamstackData }) => {
         </div>
       </div>
 
-      <div className="pb-24">
+      <div className="flex flex-col bg-accent-100 justify-center items-center">
+        <Cta isInner={true} {...jamstackData?.cta} />
+      </div>
+
+      <div className="py-24">
         <h2 className="text-center mb-6 md:mb-8">{jamstackData?.productCard?.heading}</h2>
         <div>
           <ProductCard cards={jamstackData?.productCard?.cards} />
@@ -48,9 +54,23 @@ const Jamstack = ({ header, footer ,jamstackData }) => {
     </Layout>
   );
 };
-export async function getStaticProps() {
-  const jamstackData = await get("jamStack");
-  return { props: { jamstackData } };
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, jamstack] = await Promise.all([
+    getSettings({ token }),
+    getJamStack({ token }),
+  ])
+
+  return {
+    props: {
+      jamstackData: refactorJamStack(jamstack),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
 export default Jamstack;
