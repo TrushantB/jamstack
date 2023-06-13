@@ -31,7 +31,6 @@ const Pricing = () => {
       end: "80% 70%",
       animation: pricing,
       toggleActions: "restart none none reverse",
-      markers: true,
     });
   }, []);
 
@@ -58,7 +57,7 @@ const Pricing = () => {
       end: "80% 70%",
       animation: mobile,
       toggleActions: "restart none none reverse",
-      markers: true,
+  
     });
   }, []);
 

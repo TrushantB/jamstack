@@ -2,8 +2,8 @@ const EcomsystemOne = () => {
   return (
     <svg
       id="Awarness"
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 361 271"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -226,8 +226,8 @@ const EcomsystemTwo = () => {
   return (
     <svg
       className=" overflow-hidden presense"
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 436 329"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -471,8 +471,8 @@ const EcomsystemThree = () => {
   return (
     <svg
       id="Acclerate"
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 361 271"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -645,8 +645,8 @@ const EcomsystemThree = () => {
 const EcomsystemFour = () => {
   return (
     <svg
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 478 393"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

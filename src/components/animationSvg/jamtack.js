@@ -3,8 +3,8 @@ const JamstackOne = () => {
   return (
     <svg
       id="CDN"
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 511 511"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const JamstackTwo = () => {
   return (
     <svg
       id="decoupled"
-      width="auto"
+      width="100%"
       height="auto"
       viewBox="0 0 416 271"
       fill="none"
@@ -151,8 +151,8 @@ const JamstackThree = () => {
   return (
     <svg
       id="security"
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 447 263"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -329,7 +329,7 @@ const JamstackFour = () => {
   return (
     <svg
       id="progressive"
-      width="auto"
+      width="100%"
       height="auto"
       viewBox="0 0 518 349"
       fill="none"
@@ -758,7 +758,7 @@ const JamstackFour = () => {
 const JamstackFive = () => {
   return (
     <svg
-      width="auto"
+      width="100%"
       height="auto"
       viewBox="0 0 335 208"
       fill="none"
