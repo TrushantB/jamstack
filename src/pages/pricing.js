@@ -41,7 +41,7 @@ const Pricing = ({ pricingData, settings }) => {
           <h2>{pricingData?.accordinData.heading}</h2>
         </div>
         <div>
-          <Accordion {...pricingData?.accordinData} />
+          <Accordion {...pricingData?.accordinData} isActiveFirst={true} />
         </div>
         <div className="container mx-auto">
           <div className="flex justify-start items-center">

@@ -14,11 +14,11 @@ const Stepper = (stepper) => {
     setSelectedStep(index);
   };
   const MAP_STEPPER_COMPONENT = {
-    choose:Choose,
-    onboarding:Onboarding,
-    design:Design,
-    bussiness:Bussiness
-  
+    choose: Choose,
+    onboarding: Onboarding,
+    design: Design,
+    bussiness: Bussiness
+
   }
 
 
@@ -53,7 +53,7 @@ const Stepper = (stepper) => {
 
         {/* stepper section */}
         {stepper?.stepper.map((step, index) => {
-         
+
           const Component = MAP_STEPPER_COMPONENT[step.animationType] || Choose
           return (
             <div
@@ -80,7 +80,7 @@ const Stepper = (stepper) => {
                     {step?.cta?.label && <Button {...step?.cta} />}
                   </div>
                   <div className="lg:w-1/2  flex justify-center items-start mt-8 lg:mt-20">
-                   <Component />
+                    <Component />
                   </div>
                 </>
               ) : (
