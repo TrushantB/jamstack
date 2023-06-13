@@ -2052,6 +2052,7 @@
       "description": "We are Jamstack+, a platform that provides a complete digital presence ecosystem through our very own, crafted products: webJ, ecommJ, and mobJ.",
       "headingSize": "medium",
       "image": "/aboutus.svg",
+      "animationType":"about",
       "layout": "Image Left"
     },
     "morderTechnology": {

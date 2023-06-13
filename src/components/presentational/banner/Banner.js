@@ -7,6 +7,7 @@ import Mobj from "@/components/svgAnimations/banner/mobj";
 import Faq from "@/components/svgAnimations/banner/faq";
 import Home from "@/components/svgAnimations/banner/home";
 import Pricing from "@/components/svgAnimations/banner/pricingDesktop";
+import About from "@/components/svgAnimations/banner/about";
 
 const Banner = ({
   heading,
@@ -26,6 +27,7 @@ const Banner = ({
     mobj: Mobj,
     faq: Faq,
     home: Home,
+    about:About
   };
   const Component = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
 
