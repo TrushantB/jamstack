@@ -197,8 +197,8 @@
   transform-style: preserve-3d;
 }
 .blog .slick-track {
-  display: flex !important;
-  gap: 30px !important;
+  display: flex ;
+  gap: 30px ;
   flex-grow: 1;
 }
 
@@ -226,8 +226,8 @@
 }
 
 .blog .slick-track {
-  display: flex !important;
-  gap: 30px !important;
+  display: flex;
+  gap: 30px;
   flex-grow: 1;
 }
 
@@ -239,7 +239,7 @@
 }
 
 .testimonial  .slick-track {
-  display: flex !important;
+  display: flex;
   gap: 20px;
 }
 
