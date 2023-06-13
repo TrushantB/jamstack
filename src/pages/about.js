@@ -8,6 +8,9 @@ import { JamStackStories } from "@/components/jamStackStories/JamStackStories";
 import Card from "@/components/presentational/card/Card";
 import JamSTackAuthor from "@/components/jamStactAuthor/JamSTackAuthor";
 import { AboutArticle } from "@/components/aboutArticle/aboutArticle";
+import { getAbout, getSettings } from "@/lib/sanity.client";
+import { refactorSettings } from "@/utils/settings";
+import { refactorAbout } from "@/utils/about";
 
 const About = ({ header, footer, aboutData }) => {
 
@@ -51,9 +54,23 @@ const About = ({ header, footer, aboutData }) => {
   );
 };
 
-export async function getStaticProps() {
-  const aboutData = await get("aboutUs");
-  return { props: { aboutData } };
+export const getStaticProps = async (ctx) => {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, data] = await Promise.all([
+    getSettings({ token }),
+    getAbout({ token }),
+  ])
+
+  return {
+    props: {
+      aboutData: refactorAbout(data),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
 export default About;

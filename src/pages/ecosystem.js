@@ -4,6 +4,9 @@ import { EcoSystemBanner } from "@/components/ecoSystemBanner/ecoSystemBanner";
 import Layout from "@/components/layout";
 import ConnectChoose from "@/components/connectChoose/ConnectChoose";
 import EcosystemAccordion from "@/components/ecosystermAccordian/ecosystemAccordian";
+import { getEcoSystem, getSettings } from "@/lib/sanity.client";
+import { refactorEco } from "@/utils/ecosystem";
+import { refactorSettings } from "@/utils/settings";
 
 const Ecosysterm = ({ header, footer ,ecoData }) => {
 
@@ -32,8 +35,22 @@ const Ecosysterm = ({ header, footer ,ecoData }) => {
     </Layout>
   );
 };
-export async function getStaticProps() {
-  const ecoData = await get("ecoSystem");
-  return { props: { ecoData } };
+export const getStaticProps = async (ctx) => {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, data] = await Promise.all([
+    getSettings({ token }),
+    getEcoSystem({ token }),
+  ])
+
+  return {
+    props: {
+      ecoData: refactorEco(data),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 export default Ecosysterm;

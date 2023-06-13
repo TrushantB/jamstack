@@ -5,9 +5,24 @@ export const homePageQuery = groq`
     ...
   }
 `
+export const ecoQuery = groq`
+  *[_type == "ecosystem"][0]{
+    ...
+  }
+`
+export const aboutQuery = groq`
+*[_type == "about"][0]{
+  ...
+}
+`
 
 export const pricingQuery = groq`
   *[_type == "pricing"][0] {
+   ...
+  }
+  `
+export const caseStudyQuery = groq`
+  *[_type == "caseStudy"][0] {
    ...
   }
   `

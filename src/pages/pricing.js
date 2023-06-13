@@ -66,21 +66,14 @@ export const getStaticProps = async (ctx) => {
   const { preview = false, previewData = {} } = ctx
 
   const token = previewData.token
-
-  const [settings, pricing] = await Promise.all([
+  const [settings, data] = await Promise.all([
     getSettings({ token }),
     getPricing({ token }),
   ])
 
-  if (!pricing) {
-    return {
-      notFound: true,
-    }
-  }
-
   return {
     props: {
-      pricingData: refactorPricing(pricing),
+      pricingData: refactorPricing(data),
       settings: refactorSettings(settings),
       preview,
       token: previewData.token ?? null,
