@@ -19,22 +19,23 @@ function OurClient({ heading, imageList, type, label, size, href }) {
             imageList?.map((item, index) => (
               <>
                 <li
-                  className={` flex items-center image
+                  className={` flex items-center px-4 py-4 lg:px-10 image w-full min-h-[140px] max-h-[140px] h-full
                 ${
                   index % 3 !== 0 && (index + 1) % 3 !== 0
                     ? // TODO: Find better solution, This is temporary for now
-                      index === 13
-                      ? "border-l-2 border-r-2"
+                      index === 6 || index === 7
+                      ? "border-l-2 border-r-2 border-collapse"
                       : "border-l-2 border-r-2 border-b-2"
-                    : index !== 12
+                    : index !== 6
                     ? "border-b-2"
                     : "border-b-0"
                 }`}
                   key={index}
                 >
                   {item.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      className="w-full p-4"
+                      className="w-full h-full object-contain"
                       src={item.image}
                       alt={item.altTag}
                       href={item.href}

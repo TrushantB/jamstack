@@ -65,7 +65,7 @@ export default function PricingPlan({ customPlan }) {
                     <div className="flex justify-center items-center gap-x-8 md:gap-x-12 gap-y-8 lg:gap-x-24 lg:gap-y-16 flex-wrap mb-8 md:mb-0">
                         {
                             plans.length && plans[current]?.options?.map((option, index) => {
-                                if (plans[current].selected.includes(option)) {
+                                if (plans[current].selected?.includes(option)) {
                                     return
                                 }
                                 return (
@@ -96,7 +96,7 @@ export default function PricingPlan({ customPlan }) {
                                                 {plan.name}
                                             </h4>
                                             {
-                                                plan.selected.length ?
+                                                plan?.selected?.length ?
                                                     plan.selected.map((selectedPlan, planIndex) => {
                                                         return (
                                                             <>
@@ -107,7 +107,7 @@ export default function PricingPlan({ customPlan }) {
                                                                     <span aria-label="Close" tabIndex={0} className="w-6 h-6 rounded-full flex justify-center items-center cursor-pointer  bg-[#6d8ae0] text-center " onClick={() => handleClose(index, planIndex)}>
                                                                         <svg width="14px" height="14px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                                                             <g id="Menu / Close_LG">
-                                                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" stroke-linecap="round" strokeLinejoin="round" />
                                                                             </g>
                                                                         </svg>
                                                                     </span>

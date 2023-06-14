@@ -1,27 +1,21 @@
 import { React, useState, useEffect } from "react";
-import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import Card from "@/components/presentational/card/Card";
-import Accordion from "@/components/accordian/accordion";
 import ProductCard from "@/components/productCard/productCard";
 import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian";
+import { getJamStack, getSettings } from "@/lib/sanity.client";
+import { refactorJamStack } from "@/utils/jamStack";
+import { refactorSettings } from "@/utils/settings";
+import Cta from "@/components/cta/cta";
 
-const Jamstack = ({ header, footer }) => {
-  const [jamstackData, setJamstackData] = useState(null);
+const Jamstack = ({ jamstackData, settings }) => {
 
-  useEffect(() => {
-    get("jamStack").then((response) => {
-      setJamstackData(response);
-      console.log("data", response);
-    });
-  }, []);
-  console.log("nooo", jamstackData?.cards?.Cardsitems);
   if (!jamstackData) {
     return <></>;
   }
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="pt-0">
         <Banner {...jamstackData.banner} isInner={true} />
       </div>
@@ -36,7 +30,7 @@ const Jamstack = ({ header, footer }) => {
         </div>
       </div>
 
-      <div className="lg:px-24 py-12 px-5">
+      <div className=" py-12 px-5">
         <div className="pb-6">
           <h2 className=" ">{jamstackData?.accordian?.heading}</h2>
         </div>
@@ -47,7 +41,11 @@ const Jamstack = ({ header, footer }) => {
         </div>
       </div>
 
-      <div className="pb-24">
+      <div className="flex flex-col bg-accent-100 justify-center items-center">
+        <Cta isInner={true} {...jamstackData?.cta} />
+      </div>
+
+      <div className="py-24">
         <h2 className="text-center mb-6 md:mb-8">{jamstackData?.productCard?.heading}</h2>
         <div>
           <ProductCard cards={jamstackData?.productCard?.cards} />
@@ -56,5 +54,23 @@ const Jamstack = ({ header, footer }) => {
     </Layout>
   );
 };
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, jamstack] = await Promise.all([
+    getSettings({ token }),
+    getJamStack({ token }),
+  ])
+
+  return {
+    props: {
+      jamstackData: refactorJamStack(jamstack),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
+}
 
 export default Jamstack;

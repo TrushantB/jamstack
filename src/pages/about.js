@@ -1,5 +1,4 @@
-import { React, useEffect, useState } from "react";
-import { get } from "@/client/api";
+import { React } from "react";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
@@ -8,22 +7,17 @@ import { JamStackStories } from "@/components/jamStackStories/JamStackStories";
 import Card from "@/components/presentational/card/Card";
 import JamSTackAuthor from "@/components/jamStactAuthor/JamSTackAuthor";
 import { AboutArticle } from "@/components/aboutArticle/aboutArticle";
+import { getAbout, getSettings } from "@/lib/sanity.client";
+import { refactorSettings } from "@/utils/settings";
+import { refactorAbout } from "@/utils/about";
 
-const About = ({ header, footer }) => {
-  const [aboutData, setAboutData] = useState(null);
-
-  useEffect(() => {
-    get("aboutUs").then((response) => {
-      setAboutData(response);
-    });
-  }, []);
+const About = ({ aboutData, settings }) => {
 
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="container mx-auto">
         <Banner {...aboutData?.banner} />
       </div>
-
       <div className="flex flex-col py-16 bg-accent-100 ">
         <MordernTechnology {...aboutData?.morderTechnology} isInner={true} />
       </div>
@@ -53,9 +47,29 @@ const About = ({ header, footer }) => {
       <div className="text-white bg-secondary">
         <div className="container mx-auto px-4 md:px-0 py-16 lg:py-24 flex flex-col">
           <JamSTackAuthor {...aboutData?.jamstackQuote} />
-        </div>        
+        </div>
       </div>
     </Layout>
   );
 };
+
+export const getStaticProps = async (ctx) => {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, data] = await Promise.all([
+    getSettings({ token }),
+    getAbout({ token }),
+  ])
+
+  return {
+    props: {
+      aboutData: refactorAbout(data),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
+}
+
 export default About;

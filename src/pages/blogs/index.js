@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Blogpage from "@/components/blog/blogPage";

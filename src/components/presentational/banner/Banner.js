@@ -1,7 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
-import Button from "../../form/button/Button";
+import Ecomj from "@/components/svgAnimations/banner/ecomj";
+import Webj from "@/components/svgAnimations/banner/webj";
+import Mobj from "@/components/svgAnimations/banner/mobj";
+import Faq from "@/components/svgAnimations/banner/faq";
+import Home from "@/components/svgAnimations/banner/home";
+import Pricing from "@/components/svgAnimations/banner/pricingDesktop";
+import About from "@/components/svgAnimations/banner/about";
 
 const Banner = ({
   heading,
@@ -13,7 +19,18 @@ const Banner = ({
   href,
   description,
   isInner = false,
+  animationType,
 }) => {
+  const MAP_BANNER_LEFT_COMPONENT = {
+    ecomj: Ecomj,
+    webj: Webj,
+    mobj: Mobj,
+    faq: Faq,
+    home: Home,
+    about:About
+  };
+  const Component = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
+
   return (
     <div className="container mx-auto lg:py-24 py-16">
       <div
@@ -26,12 +43,14 @@ const Banner = ({
           className={classNames({
             // "md:w-1/2": true,
             "w-full mt-0 md:mb-12 text-center": layout === "Image Bottom",
-            "flex lg:w-3/5 ": layout === "Image Left"            
+            "flex lg:w-3/5 ":
+              layout === "Image Left" || layout === "image-left",
           })}
         >
           <div
             className={classNames({
-              "flex items-center md:pr-0": layout === "Image Left",
+              "flex items-center md:pr-0":
+                layout === "Image Left" || layout === "image-left",
             })}
           >
             <div>
@@ -52,14 +71,14 @@ const Banner = ({
             </div>
           </div>
         </div>
-        {layout === "Image Left" && (
+        {(layout === "Image Left" || layout === "image-left") && (
           <div className="flex sm:justify-center lg:w-2/5 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
-            <img src={image} alt="image" />
+            <Component />
           </div>
         )}
         {layout === "Image Bottom" && (
           <div className="flex items-center justify-center">
-            <img className="w-10/12 mt-12 sm:mt-0" src={image} alt="image" srcSet="" />
+            <Pricing />
           </div>
         )}
       </div>

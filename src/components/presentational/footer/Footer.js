@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { CustomPortableText } from "@/components/shared/CustomPortableText";
 
 const Footer = ({
   footerLogo,
@@ -57,7 +58,10 @@ const Footer = ({
               ))}
             </ul>
             <div className="flex items-center mt-5 sm:items-start sm:justify-end bold sm:mt-0">
-              <span className="font-bold">&copy;{copyRight}</span>
+              <CustomPortableText
+                paragraphClasses="font-bold"
+                value={copyRight}
+              />
             </div>
           </div>
         </div>
