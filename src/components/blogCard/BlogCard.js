@@ -66,7 +66,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                 alt={card.altTag}
               />
               <div className="p-4  flex flex-col justify-between">
-                <h4 className="mb-3">{card.label}</h4>
+                <h3 className="mb-3 heading-4">{card.label}</h3>
                 <p className="leading-relaxed mb-5 w-9/12">
                   {card.description}
                 </p>
@@ -74,7 +74,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                   {hoverItem === card && (
                     <Link
                       className="flex gap-3 items-center text-primary"
-                      href="#"
+                      href="/jamstack"
                     >
                       {label}
                       <span className="icon-arrow-right2 text-2xl text-primary "></span>

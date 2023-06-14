@@ -45,15 +45,15 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                           <div className="diamond w-8 h-8 bg-tertiary"></div>
                         </div>
                       )}
-                      <h4
-                        className={`${
+                      <h3
+                        className={`heading-4 ${
                           item === selectedItem
-                            ? "font-bold text-black text-4xl lg:ml-0 sm:ml-140 w-10/12"
+                            ? "font-bold text-black text-4xl lg:ml-0 sm:ml-140 w-10/12 "
                             : "text-gray-500 w-10/12 ml-[16.6667%]"
                         }`}
                       >
                         {item.label}
-                      </h4>
+                      </h3>
                     </button>
                   </li>
                 ))}
@@ -65,7 +65,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 {selectedItem &&
                   selectedItem?.percentageList?.map((percentageItem, index) => (
                     <div className={`cursor-auto`} key={index}>
-                      <h2>{percentageItem.percentage}</h2>
+                      <h4 className="heading-2">{percentageItem.percentage}</h4>
                       <p className="">{percentageItem.description}</p>
                     </div>
                   ))}

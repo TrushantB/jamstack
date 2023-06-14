@@ -43,6 +43,8 @@ const Header = ({
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
   };
+    console.log(socialLink)
+
 
   return (
     <>
@@ -174,17 +176,20 @@ const Header = ({
                   </div>
 
                   <div className="mb-4 lg:mt-6">
-                    <ul className="flex items-center gap-3">
-                      {socialLink?.map((item, index) => (
+                    <ul  className="flex items-center gap-3">
+                      {socialLink?.map((iteccm, index) => (
                         <li key={index}>
+                              
+
                           <Link
                             className={`btn-link ${item.href === activeMenu ? "text-primary" : ""
                               }`}
                             href={item.href}
                             target={item.target}
                             onClick={() => handleMenuClick(item.href)}
-                          >
-                            <span className={`${item.iconName} text-xl`}></span>
+                          >   
+                            <span className="sr-only">{item.alt}</span>
+                            <span aria-hidden="true" className={`${item.iconName} text-xl`}></span>
                           </Link>
                         </li>
                       ))}
@@ -244,7 +249,7 @@ const Header = ({
                       <h5 className="mb-3 font-medium ">{label}</h5>
                       <ul>
                         <li className="py-2">
-                          <Link href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
+                          <Link  href={`tel:${phoneNumber}`}>{phoneNumber}</Link>
                         </li>
                         <li>
                           <Link className="py-2" href={`mailto:${email}`}>
@@ -255,14 +260,15 @@ const Header = ({
                       </ul>
                     </div>
                   </li>
-
+                 
                   <li>
                     <div className="pl-3 mb-4 lg:mt-6">
                       <ul className="flex items-center gap-3">
                         {socialLink?.map((item, index) => (
-                          <li key={index}>
-                            <Link href={item.href} target={item.target}>
-                              <span
+                          <li  key={index}>
+                            <Link  href={item.href} target={item.target}>
+                             
+                              <span 
                                 className={`${item.iconName} text-xl`}
                               ></span>
                             </Link>

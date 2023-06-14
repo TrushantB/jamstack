@@ -63,7 +63,7 @@ const Banner = ({
 
               {label && (
                 <div className="mt-12">
-                  <Link href={`${href}`} className="btn">
+                  <Link href={`${href}`} role="button" className="btn">
                     {label}
                   </Link>
                 </div>
