@@ -14,7 +14,10 @@ import {
   contactQuery,
   jamStackQuery,
   faqPageQuery,
-  pricingQuery
+  pricingQuery,
+  ecoQuery,
+  aboutQuery,
+  caseStudyQuery
 } from './sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -28,6 +31,22 @@ export async function getHomePage({
   token,
 }) {
   return await sanityClient(token)?.fetch(homePageQuery)
+}
+export async function getEcoSystem({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(ecoQuery)
+}
+export async function getCaseStudy({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(caseStudyQuery)
+}
+
+export async function getAbout({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(aboutQuery)
 }
 
 export async function getPageBySlug({
@@ -110,3 +129,4 @@ export async function getPricing({
 }) {
   return await sanityClient(token)?.fetch(pricingQuery)
 }
+

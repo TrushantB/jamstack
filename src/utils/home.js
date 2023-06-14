@@ -38,8 +38,8 @@ const refactorHome = (data) => {
         "videoBanner": {
           "heading": data?.videoBanner?.heading,
           "video": {
-            "Videolink": "/strategy.mp4",
-            // "Videolink": urlForImage(data?.videoBanner?.video?.videoLink).url(),
+            // "Videolink": "/strategy.mp4",
+            // "Videolink": data?.videoBanner?.video?.videoLink?._ref || null,
             "alt": data?.videoBanner?.video?.alt
           }
         },
