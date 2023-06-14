@@ -62,7 +62,11 @@ export default defineConfig({
   },
   plugins: [
     deskTool({
-      structure: pageStructure([settings, home, pricing, contact, jamstack, faq, about, blogs, caseStudy, ecosystem]),
+      structure: pageStructure({
+        apiVersion,
+        previewSecretId,
+        types: [settings, home, pricing, contact, jamstack, faq, about, blogs, caseStudy, ecosystem]
+      }),
       defaultDocumentNode: previewDocumentNode({ apiVersion, previewSecretId }),
     }),
     singletonPlugin([home.name, settings.name, pricing.name, contact.name, jamstack.name, faq.name, about.name, blogs.name, caseStudy.name, ecosystem.name]),
