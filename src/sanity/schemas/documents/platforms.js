@@ -196,11 +196,32 @@ export default defineType({
                   title: "Label",
                   type: "string",
                 },
-                {
-                  name: "content",
-                  title: "Content",
-                  type: "text",
-                },
+                defineField({
+                  name: 'content',
+                  title: 'Content',
+                  type: 'array',
+                  of: [
+                    defineArrayMember({
+                      type: 'block',
+                      marks: {
+                        annotations: [
+                          {
+                            name: 'link',
+                            type: 'object',
+                            title: 'Link',
+                            fields: [
+                              {
+                                name: 'href',
+                                type: 'url',
+                                title: 'Url',
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    }),
+                  ],
+                }),
                 {
                   name: "layout",
                   title: "Layout",

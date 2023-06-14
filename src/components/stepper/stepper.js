@@ -1,13 +1,14 @@
 import { React, useState } from "react";
 import Button from "../form/button/Button";
 import Accordion from "../accordian/accordion";
-
 import Onboarding from "../svgAnimations/stepper/onboarding";
 import Choose from "../svgAnimations/stepper/choose";
 import Design from "../svgAnimations/stepper/design";
 import Bussiness from "../svgAnimations/stepper/bussiness";
+import { PortableText } from "@portabletext/react";
+import { CustomPortableText } from "../shared/CustomPortableText";
 
-const Stepper = (stepper) => {
+const Stepper = (stepper ) => {
   const [selectedStep, setSelectedStep] = useState(1);
 
   const handleStepClick = (index) => {
@@ -18,9 +19,7 @@ const Stepper = (stepper) => {
     onboarding: Onboarding,
     design: Design,
     bussiness: Bussiness
-
   }
-
 
   return (
     <>
@@ -70,10 +69,9 @@ const Stepper = (stepper) => {
                     <h3 className="pb-5">
                       <span>{index + 1}.</span> {step.label}
                     </h3>
-                    <div
-                      className=""
-                      dangerouslySetInnerHTML={{ __html: step.content }}
-                    ></div>
+                    <div>
+                      <CustomPortableText value={step?.content} />
+                    </div>
                     {step?.faqs?.length && (
                       <Accordion accordin={step?.faqs} isInner={true} />
                     )}

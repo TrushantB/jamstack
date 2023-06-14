@@ -25,7 +25,7 @@ const refactorPlatforms = (data) => {
       "heading": data?.stepperData?.heading,
       "stepper": data?.stepperData?.stepper?.map((item) => ({
         label: item.label,
-        content: item.content,
+        content: item?.content,
         layout: item.layout,
         animationType: item.animationType !== undefined ? item.animationType : null,
         id: item.id,
