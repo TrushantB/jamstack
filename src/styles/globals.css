@@ -362,6 +362,10 @@
   border-bottom: none;
 }
 
+.blogDetailsItems:target {
+  scroll-margin-top: 75px;
+}
+
 @media screen and (min-width: 1024px) {
   body,
   html {
