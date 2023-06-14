@@ -65,7 +65,7 @@ export default function PricingPlan({ customPlan }) {
                     <div className="flex justify-center items-center gap-x-8 md:gap-x-12 gap-y-8 lg:gap-x-24 lg:gap-y-16 flex-wrap mb-8 md:mb-0">
                         {
                             plans.length && plans[current]?.options?.map((option, index) => {
-                                if (plans[current].selected.includes(option)) {
+                                if (plans[current].selected?.includes(option)) {
                                     return
                                 }
                                 return (
@@ -96,7 +96,7 @@ export default function PricingPlan({ customPlan }) {
                                                 {plan.name}
                                             </h4>
                                             {
-                                                plan.selected.length ?
+                                                plan?.selected?.length ?
                                                     plan.selected.map((selectedPlan, planIndex) => {
                                                         return (
                                                             <>
