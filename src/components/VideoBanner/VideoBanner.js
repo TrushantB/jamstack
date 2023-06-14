@@ -1,6 +1,6 @@
 import React from "react";
 
-function VideoBanner({ heading, video }) {
+function VideoBanner({ heading, video, }) {
   return (
     <>
       <div className="container lg:py-24 py-16 mx-auto">
@@ -10,7 +10,7 @@ function VideoBanner({ heading, video }) {
         <div className="mx-4 lg:mx-0 ">
           <video
             className="rounded-3xl video "
-            controls={true}
+            controls={video.controls}
             loop={true}
             autoPlay={true}
           >

@@ -14,7 +14,8 @@ const refactorPricing = (data) => {
       "type": "primary",
       "label": "Start A Project",
       "size": "medium",
-      "layout": "Image Bottom"
+      "layout": "Image Bottom",
+      "animationType":"pricing"
     },
     "textBanner": {
       "sliderControls": {
