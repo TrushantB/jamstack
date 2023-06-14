@@ -1,7 +1,7 @@
 
 import { urlForImage } from '@/lib/sanity.image'
-// TODO: static for now
 const refactorPricing = (data) => {
+
   return {
     "banner": {
       "heading": data?.banner?.heading,
@@ -44,96 +44,19 @@ const refactorPricing = (data) => {
       "description": data?.customPlan?.description,
       "selectPlanHeading": data?.customPlan?.selectPlanHeading,
       "idealPlanHeading": data?.customPlan?.idealPlanHeading,
-      "plans":  [
-        {
-          "name": "Platform",
-          "id": "platform",
-          "options": [
-            {
-              "name": "EcommJ",
-              "icon": "icon-ecomm",
-              "id": "ecommj"
-            },
-            {
-              "name": "WebJ",
-              "icon": "icon-web",
-              "id": "webj"
-            },
-            {
-              "name": "Mobj",
-              "icon": "icon-mob",
-              "id": "mobj"
-            },
-            {
-              "name": "Mobj-WebJ",
-              "icon": "icon-newspaper",
-              "id": "mobjWebj"
-            }
-          ],
-          "selected": []
-        },
-        {
-          "name": "Frontend",
-          "id": "frontend",
-          "options": [
-            {
-              "name": "NextJs",
-              "icon": "icon-web",
-              "id": "nextjs"
-            },
-            {
-              "name": "NuxtJs",
-              "icon": "icon-group",
-              "id": "nuxtjs"
-            }
-          ],
-          "selected": []
-        },
-        {
-          "name": "Backend",
-          "id": "backend",
-          "options": [
-            {
-              "name": "Strapi",
-              "icon": "icon-newspaper",
-              "id": "strapi"
-            },
-            {
-              "name": "Sanity",
-              "icon": "icon-database",
-              "id": "sanity"
-            }
-          ],
-          "selected": []
-        },
-        {
-          "name": "Other Services",
-          "id": "other",
-          "options": [
-            {
-              "name": "GTM",
-              "icon": "icon-stack",
-              "id": "gtm"
-            },
-            {
-              "name": "Sendgrid",
-              "icon": "icon-stackoverflow",
-              "id": "sendgrid"
-            }
-          ],
-          "selected": []
-        }
-      ]
-      //  data?.customPlan?.plans?.map((item) => ({
-      //   name: item?.name,
-      //   id: item?.id,
-      //   options : item?.options?.map((optionItem)=>({
-      //     name : optionItem?.name,
-      //     icon : optionItem?.icon,
-      //     id : optionItem?.id
-      //   }))
-      // }))
+      "plans": data?.customPlan?.plans?.map((item) => ({
+        name: item?.name,
+        id: item?.id,
+        "selected": [],
+        options : item?.options?.map((optionItem)=>({
+          name : optionItem?.name,
+          icon : optionItem?.icon,
+          id : optionItem?.id
+        }))
+      })),
+      
     },
+    
     "accordinData": {
       "heading": data?.accordinData?.heading,
       "button": {
@@ -149,8 +72,8 @@ const refactorPricing = (data) => {
       "heading": data?.ConnectChoose?.heading,
       "description": data?.ConnectChoose?.description,
       "buttonLabel": data?.ConnectChoose?.buttonLabel,
+      label: data?.ConnectChoose?.label,
       "type": data?.ConnectChoose?.type,
-      "label": data?.ConnectChoose?.label,
       "size": data?.ConnectChoose?.size,
       href : data?.ConnectChoose?.href
     }

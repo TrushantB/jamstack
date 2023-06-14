@@ -36,64 +36,9 @@ const refactorAbout = (data) => {
             "processArray": data?.jamStackProcess?.processArray?.map((item) => ({
               title: item.title,
               layout: item.layout,
-              labelArray: item?.labelArray?.map((labelItem) => labelItem?.label),
-            })),
-        //   [
-        //     {
-        //       "title": "Discuss- get started:",
-        //       "image": "articleOne.png",
-        //       "layout": "imageRight",
-        //       "labelArray": [
-        //         { "label": "Brainstorming on idea" },
-        //         { "label": "Strategy planning" },
-        //         { "label": "Requirement gathering" },
-        //         { "label": "Analysis and approach" }
-        //       ]
-        //     },
-        //     {
-        //       "title": "Define and Design:",
-        //       "image": "articleTwo.png",
-        //       "layout": "imageLeft",
-        //       "labelArray": [
-        //         { "label": "Analysis documentation" },
-        //         { "label": "Wireframes and mockups" },
-        //         { "label": "Design architecture" },
-        //         { "label": "Design templates with style guide" }
-        //       ]
-        //     },
-        //     {
-        //       "title": "Develop:",
-        //       "image": "articleThree.png",
-        //       "layout": "imageRight",
-        //       "labelArray": [
-        //         { "label": "Code ready to test" },
-        //         { "label": "Dev documentation and approach" },
-        //         { "label": "Frontend, backend with DB" },
-        //         { "label": "Unit testing" }
-        //       ]
-        //     },
-        //     {
-        //       "title": "Deploy -pre and post methods:",
-        //       "image": "articleFive.svg",
-        //       "layout": "imageLeft",
-        //       "labelArray": [
-        //         { "label": "Quality assurance testing" },
-        //         { "label": "CDN/edge networking" },
-        //         { "label": "Usage guidelines" },
-        //         { "label": "Hosting" }
-        //       ]
-        //     },
-        //     {
-        //       "title": "Accelerate",
-        //       "image": "articleFour.svg",
-        //       "layout": "imageRight",
-        //       "labelArray": [
-        //         { "label": "Business analysis and dashboard" },
-        //         { "label": "Recommendations and insights of the business" },
-        //         { "label": "Recommendations and insights of the business" }
-        //       ]
-        //     }
-        //   ]
+              labelArray: item?.labelArray?.map((labelItem) => {return { label: labelItem?.label}}),
+            })
+            ),
         },
         "jamstackQuote": {
           "heading": data?.jamstackQuote?.heading ,

@@ -437,7 +437,7 @@ export default defineType({
         },
         {
           name: 'label',
-          title: 'Button Accessibility Label',
+          title: 'Label',
           type: 'string',
         },
         {
