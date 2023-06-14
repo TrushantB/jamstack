@@ -1,4 +1,5 @@
 import React from "react";
+import { CustomPortableText } from "../shared/CustomPortableText";
 
 export default function BlogContentWriting({ author }) {
 
@@ -9,11 +10,11 @@ export default function BlogContentWriting({ author }) {
           <div className="md:w-1/5">
             <a href="#" className="inline-block">
               <img
-                className="max-h-36 max-w-36"
+                className="max-h-36 max-w-36 circle"
                 src={author?.image}
                 alt={author?.alt}
               />
-            </a>            
+            </a>
           </div>
           <div className="md:w-4/5">
             <div className="flex items-center justify-between my-4 md:mt-0 md:mb-4">
@@ -24,7 +25,7 @@ export default function BlogContentWriting({ author }) {
                 <ul className="flex gap-4">
                   {author?.socialSharing?.map((item, index) => (
                     <li key={index}>
-                      <a href={item?.href} target={item?.target} 
+                      <a href={item?.href} target={item?.target}
                         className="font-semibold hover:text-primary transition ease-in delay-50">
                         <i className={item?.icon}></i>
                       </a>
@@ -34,7 +35,7 @@ export default function BlogContentWriting({ author }) {
               </div>
             </div>
             <div>
-              <p className="text-sm text-gray-500">{author?.description}</p>
+              <CustomPortableText paragraphClasses={'text-sm text-gray-500'} value={author?.description} />
             </div>
           </div>
         </div>

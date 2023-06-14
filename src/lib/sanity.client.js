@@ -17,7 +17,9 @@ import {
   pricingQuery,
   ecoQuery,
   aboutQuery,
-  caseStudyQuery
+  caseStudyQuery,
+  blogsPageQuery,
+  blogPageQuery
 } from './sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -128,5 +130,18 @@ export async function getPricing({
   token,
 }) {
   return await sanityClient(token)?.fetch(pricingQuery)
+}
+
+export async function getBlogs({
+  token,
+}) {
+  return await sanityClient(token)?.fetch(blogsPageQuery)
+}
+
+export async function getBlog({
+  token,
+  slug
+}) {
+  return await sanityClient(token)?.fetch(blogPageQuery, { slug })
 }
 

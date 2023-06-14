@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import BlogContactCard from "../blogContactCard/blogContactCard";
 import BlogContentWriting from "../blogContentWriting/blogContentWriting";
+import { CustomPortableText } from "../shared/CustomPortableText";
 
 export default function BlogDetailsTableContent({ blogData }) {
   const [selectedContent, setSelectedContent] = useState({});
@@ -26,9 +27,8 @@ export default function BlogDetailsTableContent({ blogData }) {
                   {blogData?.tabelContent?.map((item, index) => (
                     <li
                       key={index}
-                      className={`my-3 ${
-                        selectedContent === item ? "text-primary" : ""
-                      } hover:text-primary`}
+                      className={`my-3 ${selectedContent === item ? "text-primary" : ""
+                        } hover:text-primary`}
                     >
                       <a href={`#${index}`}>
                         <button
@@ -45,7 +45,7 @@ export default function BlogDetailsTableContent({ blogData }) {
               <div>
                 <h5 className="text-xl ">{blogData?.iconHeading}</h5>
                 <ul className="my-2 flex items-center gap-6">
-                  {selectedContent?.socialSharing?.map((item, index) => (
+                  {blogData?.socialSharing?.map((item, index) => (
                     <li key={index}>
                       <a
                         href={item.href}
@@ -66,12 +66,13 @@ export default function BlogDetailsTableContent({ blogData }) {
             <div className="lg:w-3/4">
               {blogData?.tabelContent?.map((item, index) => (
                 <div key={index} className="blogDetailsItems" id={`${index}`}>
-                <h2 className="px-3">{item.title}</h2>
+                  <h2 className="px-3">{item.title}</h2>
                   <div
                     key={index}
                     className="px-3 blogDetailsInnerPage"
-                    dangerouslySetInnerHTML={{ __html: item.content }}
-                  />
+                  >
+                    <CustomPortableText value={item.content} />
+                  </div>
                 </div>
               ))}
               <div className="flex md:justify-end">

@@ -5,6 +5,22 @@ export const homePageQuery = groq`
     ...
   }
 `
+export const blogsPageQuery = groq`
+*[_type == "blogs"][0] {
+   title,
+   blogs[]-> {
+     image,
+     "imageAlt":image.logoAlt,
+     title,
+    "slug":slug.current,
+     author-> {
+     name,
+     image,
+     "imageAlt":image.logoAlt
+     }
+   }
+  }
+`
 export const ecoQuery = groq`
   *[_type == "ecosystem"][0]{
     ...
@@ -79,6 +95,23 @@ export const projectPaths = groq`
 export const pagePaths = groq`
   *[_type == "page" && slug.current != null].slug.current
 `
+export const blogPageQuery = groq`
+*[_type == "blog" && slug.current == $slug][0] {
+  ...,
+  author-> {
+    ...
+  },
+  letTalk {
+    ...,
+    cta {
+      displayName,
+      page-> {
+        "slug":slug.current
+      }
+    }
+  } 
+  }
+  `
 
 export const settingsQuery = groq`
   *[_type == "settings"][0]{
