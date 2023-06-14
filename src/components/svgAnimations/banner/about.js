@@ -48,7 +48,6 @@ const About = () => {
       end: "80% 70%",
       animation: about,
       toggleActions: "restart none none reverse",
-      markers: true,
     });
   }, []);
 
