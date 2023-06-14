@@ -27,6 +27,7 @@ import caseStudy from '@/sanity/schemas/singletons/case-study'
 import ecosystem from '@/sanity/schemas/singletons/ecosystem'
 import faq from '@/sanity/schemas/singletons/faq'
 import navigation from '@/sanity/schemas/objects/navigation'
+import author from '@/sanity/schemas/documents/author'
 
 export const PREVIEWABLE_DOCUMENT_TYPES = [
   home.name,
@@ -55,6 +56,7 @@ export default defineConfig({
       blog,
       caseStudy,
       ecosystem,
+      author,
 
       // Objects
       navigation
