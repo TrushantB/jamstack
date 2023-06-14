@@ -7,9 +7,9 @@ import { refactorSettings } from "@/utils/settings";
 import { refactorFAQ } from "@/utils/faq";
 import { getFAQ, getSettings } from "@/lib/sanity.client";
 
-const Faq = ({ header, footer, faqData }) => {
+const Faq = ({ faqData, settings }) => {
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="container mx-auto">
         <div className="">
           <Banner {...faqData?.banner} />

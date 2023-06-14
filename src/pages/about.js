@@ -1,5 +1,4 @@
 import { React } from "react";
-import { get } from "@/client/api";
 import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
@@ -12,10 +11,10 @@ import { getAbout, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { refactorAbout } from "@/utils/about";
 
-const About = ({ header, footer, aboutData }) => {
+const About = ({ aboutData, settings }) => {
 
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
       <div className="container mx-auto">
         <Banner {...aboutData?.banner} />
       </div>
