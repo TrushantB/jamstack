@@ -269,7 +269,7 @@ function EdgeNetwork({ heading, image }) {
             type="button"
             className="relative min-w-[70px] md:min-w-[96px] z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 text-[#423d3d] mx-auto  font-medium edgenetworkbtn rounded-lg"
           >
-            {city ? city : "India"}
+            {city ? city : "-"}
           </button>
           <div className="flex justify-center -mt-5">
             <div className="my-8">
