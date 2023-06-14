@@ -24,12 +24,12 @@ const JamstackAccordion = ({ accordin }) => {
     security: Security,
     progressive: Progressive,
     decoupled: Decoupled,
-    timeless:Timeless,
-    cdn:Cdn
+    timeless: Timeless,
+    cdn: Cdn,
   };
 
   return (
-    <div className="">
+    <div className="container">
       {accordin?.map((item, index) => {
         const Component = MAP_JAMSTACK_COMPONENT[item.animationType];
         return (

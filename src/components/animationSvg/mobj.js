@@ -2,8 +2,8 @@ const MobJBanner = () => {
   return (
     <svg
       id="mobj"
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 326 551"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -279,8 +279,8 @@ const MobJBanner = () => {
 const StepperOne = () => {
   return (
     <svg
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 397 439"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -467,16 +467,16 @@ const StepperTwo = () => {
   return (
     <svg
       className="technology"
-      width=""
-      height=""
+      width="100%"
+      height="auto"
       viewBox="0 0 465 345"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="WebJ">
         <rect
-          width="1440"
-          height="12277"
+          width="100%"
+          height="auto"
           transform="translate(-175 -2398)"
           fill="white"
         />
@@ -888,8 +888,8 @@ const StepperTwo = () => {
 const StepperThree = () => {
   return (
     <svg
-      width="%"
-      height="%"
+      width="100%"
+      height="auto"
       viewBox="0 0 508 305"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

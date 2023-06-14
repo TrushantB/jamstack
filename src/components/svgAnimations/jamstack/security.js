@@ -37,7 +37,7 @@ const Security = () => {
     };
   }, []);
   return (
-    <div className=" lg:w-10/12">
+    <div className=" lg:w-10/12 mx-auto">
       <JamstackThree />
     </div>
   );
