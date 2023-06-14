@@ -1,5 +1,3 @@
-import { React, useEffect, useState } from "react";
-import { get } from "@/client/api";
 import { EcoSystemBanner } from "@/components/ecoSystemBanner/ecoSystemBanner";
 import Layout from "@/components/layout";
 import ConnectChoose from "@/components/connectChoose/ConnectChoose";
@@ -8,29 +6,29 @@ import { getEcoSystem, getSettings } from "@/lib/sanity.client";
 import { refactorEco } from "@/utils/ecosystem";
 import { refactorSettings } from "@/utils/settings";
 
-const Ecosysterm = ({ header, footer ,ecoData }) => {
+const Ecosysterm = ({ ecosystemData, settings }) => {
 
-  if (!ecoData) {
+  if (!ecosystemData) {
     return <></>;
   }
   return (
-    <Layout header={header} footer={footer}>
+    <Layout header={settings.header} footer={settings.footer}>
 
       <div className="container mx-auto px-4 xl:px-0 py-16 lg:py-24" >
-        {<EcoSystemBanner {...ecoData.ecoBanner} />}
+        {<EcoSystemBanner {...ecosystemData.ecoBanner} />}
       </div>
 
       <div className="container mx-auto px-4 xl:px-0">
         <div className="pb-6">
-          <h2>{ecoData.accordinData?.heading}</h2>
+          <h2>{ecosystemData.accordinData?.heading}</h2>
         </div>
         <div className="">
-          {<EcosystemAccordion  {...ecoData.accordinData} />}
+          {<EcosystemAccordion  {...ecosystemData.accordinData} />}
         </div>
       </div>
 
       <div className="container mx-auto px-4 xl:px-0 pb-6">
-        <ConnectChoose  {...ecoData.ConnectChoose} />
+        <ConnectChoose  {...ecosystemData.ConnectChoose} />
       </div>
     </Layout>
   );
@@ -46,7 +44,7 @@ export const getStaticProps = async (ctx) => {
 
   return {
     props: {
-      ecoData: refactorEco(data),
+      ecosystemData: refactorEco(data),
       settings: refactorSettings(settings),
       preview,
       token: previewData.token ?? null,

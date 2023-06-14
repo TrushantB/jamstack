@@ -2,6 +2,8 @@
  * This plugin contains all the logic for setting up the singletons
  */
 
+import { PreviewPane } from "./previewPane/PreviewPane";
+
 // Schema type objects
 const objectTypes = ['navigation'];
 
@@ -30,11 +32,9 @@ export const singletonPlugin = (types) => {
   }
 }
 
-export const pageStructure = (
-  typeDefArray
-) => {
+export const pageStructure = ({ types, apiVersion, previewSecretId }) => {
   return (S) => {
-    const singletonItems = typeDefArray.map((typeDef) => {
+    const singletonItems = types.map((typeDef) => {
       return S.listItem()
         .title(typeDef.title)
         .icon(typeDef.icon)
@@ -44,7 +44,18 @@ export const pageStructure = (
             .schemaType(typeDef.name)
             .documentId(typeDef.name)
             .views([
+              // Default form view
               S.view.form(),
+              // Preview
+              typeDef.name !== 'settings' && S.view
+                .component((props) => (
+                  <PreviewPane
+                    previewSecretId={previewSecretId}
+                    apiVersion={apiVersion}
+                    {...props}
+                  />
+                ))
+                .title('Preview'),
             ])
         )
     })
@@ -52,7 +63,7 @@ export const pageStructure = (
     // The default root list items (except custom ones)
     const defaultListItems = S.documentTypeListItems().filter(
       (listItem) => {
-        return !typeDefArray.find((singleton) => {
+        return !types.find((singleton) => {
           if (singleton.name === listItem.getId()) {
             return true
           } else if (objectTypes.includes(listItem.getId())) {

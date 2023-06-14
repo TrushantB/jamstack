@@ -27,6 +27,7 @@ import caseStudy from '@/sanity/schemas/singletons/case-study'
 import ecosystem from '@/sanity/schemas/singletons/ecosystem'
 import faq from '@/sanity/schemas/singletons/faq'
 import navigation from '@/sanity/schemas/objects/navigation'
+import author from '@/sanity/schemas/documents/author'
 
 export const PREVIEWABLE_DOCUMENT_TYPES = [
   home.name,
@@ -55,6 +56,7 @@ export default defineConfig({
       blog,
       caseStudy,
       ecosystem,
+      author,
 
       // Objects
       navigation
@@ -62,7 +64,11 @@ export default defineConfig({
   },
   plugins: [
     deskTool({
-      structure: pageStructure([settings, home, pricing, contact, jamstack, faq, about, blogs, caseStudy, ecosystem]),
+      structure: pageStructure({
+        apiVersion,
+        previewSecretId,
+        types: [settings, home, pricing, contact, jamstack, faq, about, blogs, caseStudy, ecosystem]
+      }),
       defaultDocumentNode: previewDocumentNode({ apiVersion, previewSecretId }),
     }),
     singletonPlugin([home.name, settings.name, pricing.name, contact.name, jamstack.name, faq.name, about.name, blogs.name, caseStudy.name, ecosystem.name]),
