@@ -2,9 +2,10 @@ import Layout from "@/components/layout";
 import BlogDetailsBanner from "@/components/blogDetailsBanner/blogDetailsBanner";
 import BlogDetailsTableContent from "@/components/blogDetailsTableContent/blogDetailsTableContent";
 import BlogCard from "@/components/blogCard/BlogCard";
-import { getBlog, getSettings } from "@/lib/sanity.client";
+import { getBlog, getBlogPaths, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { refactorBlog } from "@/utils/blogs";
+import { resolveHref } from "@/lib/sanity.links";
 
 export default function BlogDetails({ blogData, settings }) {
   return (
@@ -19,7 +20,7 @@ export default function BlogDetails({ blogData, settings }) {
             <h2>{blogData?.blogCard?.heading}</h2>
           </div>
           <div className="px-3 ">
-            {/* <BlogCard {...blogData?.blogCard} /> */}
+            <BlogCard {...blogData?.blogCard} />
           </div>
         </div>
       </div>
@@ -47,14 +48,10 @@ export const getStaticProps = async (ctx) => {
 }
 
 export const getStaticPaths = async () => {
+  const paths = await getBlogPaths()
+
   return {
-    paths: [
-      {
-        params: {
-          slug: 'blog-one',
-        },
-      },
-    ],
-    fallback: true,
+    paths: paths?.map((slug) => resolveHref('blog', slug)) || [],
+    fallback: false,
   }
 }

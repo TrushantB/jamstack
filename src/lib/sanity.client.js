@@ -6,7 +6,7 @@ import {
   complienceBySlugQuery,
   platformsQuery,
   projectBySlugQuery,
-  projectPaths,
+  blogPaths,
   settingsQuery,
   platformsQueryEcomj,
   platformsQueryMObj,
@@ -71,8 +71,8 @@ export async function getSettings({
   return await sanityClient(token)?.fetch(settingsQuery)
 }
 
-export async function getProjectPaths() {
-  return await sanityClient()?.fetch(projectPaths)
+export async function getBlogPaths() {
+  return await sanityClient()?.fetch(blogPaths)
 }
 
 export async function getPagePaths() {

@@ -88,8 +88,8 @@ export const projectBySlugQuery = groq`
   }
 `
 
-export const projectPaths = groq`
-  *[_type == "project" && slug.current != null].slug.current
+export const blogPaths = groq`
+  *[_type == "blog" && slug.current != null].slug.current
 `
 
 export const pagePaths = groq`
