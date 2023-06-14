@@ -84,6 +84,7 @@ function EdgeNetwork({ heading, image }) {
               </div>
             </div>
             <button
+            tabIndex={-1}
               type="button"
               className="relative min-w-[70px] md:min-w-[96px] z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 text-center mx-auto bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg"
             >
@@ -267,6 +268,7 @@ function EdgeNetwork({ heading, image }) {
         <div className=" text-center mx-auto -my-9 lg:-my-6">
           <button
             type="button"
+            tabIndex={-1}
             className="relative min-w-[70px] md:min-w-[96px] z-20 shadow-xl text-xs md:text-sm px-1 py-2 md:p-3 mx-auto bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg"
           >
             {city ? city : "India"}

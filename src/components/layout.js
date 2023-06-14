@@ -4,15 +4,17 @@ import { PreviewBanner } from "./preview/PreviewBanner";
 
 export default function Layout({ children, header, footer, preview }) {
   return (
-    <main className="flex flex-col h-screen">
+  <>
       {preview && <PreviewBanner />}
-      <div className="">
+      <header className="sticky top-0 z-50">
         {header && <Header {...header} />}
-        {children}
-      </div>
-      <div className="mt-auto border-t">
+      </header>
+      <main>
+      {children}
+      </main>
+      <footer className="mt-auto border-t">
         {footer && <Footer {...footer} />}
-      </div>
-    </main>
+      </footer>
+      </>
   );
 }
