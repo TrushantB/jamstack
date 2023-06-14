@@ -10,7 +10,6 @@ const ContactPreview = lazy(
   () => import('@/components/pages/contact/preview')
 )
 
-
 const ContactPage = (props) => {
   const { contactData, settings, preview, token } = props
 
