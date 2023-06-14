@@ -66,7 +66,7 @@ const Stepper = (stepper) => {
             >
               {step.layout !== "imageCenter" ? (
                 <>
-                  <div className="lg:w-1/2">
+                  <div >
                     <h3 className="pb-5">
                       <span>{index + 1}.</span> {step.label}
                     </h3>
@@ -85,10 +85,10 @@ const Stepper = (stepper) => {
                 </>
               ) : (
                 <div
-                  className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 "
+                  className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 mx-auto"
                   id={step.id}
                 >
-                  <div className="lg:w-1/2 mx-auto">
+                  <div className="">
                     <div className="icon-ic_launch text-7xl text-center text-tertiary pb-6"></div>
                     <h3 className="pb-4 text-center">
                       <span>{index + 1}.</span> {step.label}
