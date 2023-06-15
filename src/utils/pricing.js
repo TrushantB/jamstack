@@ -14,7 +14,8 @@ const refactorPricing = (data) => {
       "label": data?.banner?.label ,
       "size": data?.banner?.size,
       "layout": data?.banner?.layout,
-      href : data?.banner?.href
+      "href" : data?.banner?.href,
+      "animationType":"pricing"
     },
     "textBanner": {
       "sliderControls": {
