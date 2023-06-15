@@ -2,6 +2,7 @@
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorHome = (data) => {
+  console.log("video==>" , data?.videoBanner?.video);
     return  {
         "id": 1,
         "title": "Home page",
@@ -38,8 +39,8 @@ const refactorHome = (data) => {
         "videoBanner": {
           "heading": data?.videoBanner?.heading,
           "video": {
-            // "Videolink": "/strategy.mp4",
-            // "Videolink": data?.videoBanner?.video?.videoLink?._ref || null,
+            "Videolink": "/Jamstack+.mp4",
+            // "Videolink": urlForImage(data?.videoBanner?.video?.videoLink).url(),
             "alt": data?.videoBanner?.video?.alt
           }
         },
