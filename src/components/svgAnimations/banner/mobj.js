@@ -45,7 +45,7 @@ const Mobj = () => {
 
     ScrollTrigger.create({
       trigger: "#mobj",
-      start: "30% 20%",
+      start: "1% 20%",
       end: "80% 70%",
       animation: mobj,
       toggleActions: "restart none none reverse",
