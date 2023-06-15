@@ -5,53 +5,56 @@ import BlogCard from "@/components/blogCard/BlogCard";
 import { getBlog, getBlogPaths, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { refactorBlog } from "@/utils/blogs";
-import { resolveHref } from "@/lib/sanity.links";
 
 export default function BlogDetails({ blogData, settings }) {
-  return (
-    <Layout header={settings.header} footer={settings.footer}>
-      <div>
-        <BlogDetailsBanner blogData={blogData} />
+    return (
+        <Layout header={settings.header} footer={settings.footer}>
+            <div>
+                <BlogDetailsBanner blogData={blogData} />
 
-        <BlogDetailsTableContent blogData={blogData} />
+                <BlogDetailsTableContent blogData={blogData} />
 
-        <div className="my-8 lg:my-16">
-          <div className="text-center">
-            <h2>{blogData?.blogCard?.heading}</h2>
-          </div>
-          <div className="px-3 ">
-            <BlogCard {...blogData?.blogCard} />
-          </div>
-        </div>
-      </div>
-    </Layout>
-  );
+                <div className="my-8 lg:my-16">
+                    <div className="text-center">
+                        <h2>{blogData?.blogCard?.heading}</h2>
+                    </div>
+                    <div className="px-3 ">
+                        <BlogCard {...blogData?.blogCard} />
+                    </div>
+                </div>
+            </div>
+        </Layout>
+    );
 }
 
 export const getStaticProps = async (ctx) => {
-  const { preview = false, previewData = {}, params } = ctx
+    const { preview = false, previewData = {}, params } = ctx
 
-  const token = previewData.token
-  const [settings, blog] = await Promise.all([
-    getSettings({ token }),
-    getBlog({ token, slug: params.slug }),
-  ])
+    const token = previewData.token
+    const [settings, blog] = await Promise.all([
+        getSettings({ token }),
+        getBlog({ token, slug: params.slug }),
+    ])
 
-  return {
-    props: {
-      blogData: refactorBlog(blog),
-      settings: refactorSettings(settings),
-      preview,
-      token: previewData.token ?? null,
-    },
-  }
+    return {
+        props: {
+            blogData: refactorBlog(blog),
+            settings: refactorSettings(settings),
+            preview,
+            token: previewData.token ?? null,
+        },
+    }
 }
 
 export const getStaticPaths = async () => {
-  const paths = await getBlogPaths()
+    const paths = await getBlogPaths()
 
-  return {
-    paths: paths?.map((slug) => resolveHref('blog', slug)) || [],
-    fallback: false,
-  }
+    return {
+        paths: paths?.map((slug) => ({
+            params: {
+                slug,
+            },
+        })) || [],
+        fallback: false,
+    }
 }

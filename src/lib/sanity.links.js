@@ -13,14 +13,20 @@ export function resolveHref(
       return '/about'
     case 'jamstack':
       return '/jamstack'
-    case 'faqs':
-      return '/faqs'
+    case 'faq':
+      return '/faq'
     case 'blogs':
-      return '/blogs'
+      return '/blog'
     case 'case-study':
       return '/case-study'
     case 'ecosystem':
       return '/ecosystem'
+    case 'webj':
+      return '/webj'
+    case 'mobj':
+      return '/mobj'
+    case 'ecommj':
+      return '/ecommj'
     case 'home':
       return '/'
     case 'compliences':
@@ -31,6 +37,6 @@ export function resolveHref(
       return slug ? `/blog/${slug}` : undefined
     default:
       console.warn('Invalid document type:', documentType)
-      return undefined
+      return ''
   }
 }
