@@ -1,171 +1,82 @@
 
 import { urlForImage } from '@/lib/sanity.image'
-// TODO: static for now
 const refactorPricing = (data) => {
+
   return {
     "banner": {
-      "heading": "Let’s boost your business with powerful ecosystem by Jamstack+.",
+      "heading": data?.banner?.heading,
       "image": "/priceBanner.svg",
       "imageTwo": "/mobileBannerTwo.png",
-      "alt": "image",
-      "backGroundColor": "#ffffff",
-      "headingSize": "medium",
-      "buttonLabel": "Start A Project",
-      "type": "primary",
-      "label": "Start A Project",
-      "size": "medium",
-      "layout": "Image Bottom",
+      "alt": data?.banner?.alt,
+      "backGroundColor": data?.banner?.backgroundColor,
+      "headingSize": data?.banner?.headingSize,
+      "type": data?.banner?.type ,
+      "label": data?.banner?.label ,
+      "size": data?.banner?.size,
+      "layout": data?.banner?.layout,
+      "href" : data?.banner?.href,
       "animationType":"pricing"
     },
     "textBanner": {
       "sliderControls": {
-        "dots": false,
-        "infinite": true,
-        "speed": 500,
-        "autoplaySpeed": 2500,
-        "autoplay": true,
-        "arrows": false,
-        "swipe": true
+        "dots": data?.textBanner?.sliderControls?.dots || null,
+        "infinite": data?.textBanner?.sliderControls?.infinite || null,
+        "speed": data?.textBanner?.sliderControls?.speed || null,
+        "autoplaySpeed": data?.textBanner?.sliderControls?.autoplaySpeed || null,
+        "autoplay": data?.textBanner?.sliderControls?.autoplay || null,
+        "arrows": data?.textBanner?.sliderControls?.arrows || null,
+        "swipe": data?.textBanner?.sliderControls?.swipe || null
       },
-      "info": [
-        {
-          "label": "Google found that 53% of mobile users will leave a website that takes longer than three seconds to load.",
-          "icon": "circle",
-          "alt": "image"
-        },
-        {
-          "label": "Microsoft found that 45% of Ecomm users will leave a website that takes longer than three seconds to load.",
-          "icon": "pentagon",
-          "alt": "image"
-        },
-        {
-          "label": "Yahoo found that 57% of mobile Web User will leave a website that takes longer than three seconds to load.",
-          "icon": "diamond",
-          "alt": "image"
-        }
-      ]
+      "info": data?.textBanner?.info?.map((item) => ({
+        label: item.label,
+        icon: item.icon,
+        alt: item.alt
+      }))
     },
     "Webstatstics": {
-      "heading": "Know your webstatics",
-      "description": "Check your website performance and check how Jamstack+ can help you improve your business.",
-      "placeholder": "Paste website URL here",
-      "buttonLabel": "Request Report",
-      "isButton": true
+      "heading": data?.webStatistics?.heading,
+      "description": data?.webStatistics?.description,
+      "placeholder": data?.webStatistics?.placeholder,
+      "buttonLabel": data?.webStatistics?.buttonLabel,
+      "isButton": data?.webStatistics?.isButton
     },
     "customPlan": {
-      "heading": "Looking for ideal custom plan",
-      "description": "Be updated with the latest technology. Choose your convenient tech stack and steps to upgrade your business with us",
-      "selectPlanHeading": "Select platform",
-      "idealPlanHeading": "Ideal plan",
-      "plans": [
-        {
-          "name": "Platform",
-          "id": "platform",
-          "options": [
-            {
-              "name": "EcommJ",
-              "icon": "icon-ecomm",
-              "id": "ecommj"
-            },
-            {
-              "name": "WebJ",
-              "icon": "icon-web",
-              "id": "webj"
-            },
-            {
-              "name": "Mobj",
-              "icon": "icon-mob",
-              "id": "mobj"
-            },
-            {
-              "name": "Mobj-WebJ",
-              "icon": "icon-newspaper",
-              "id": "mobjWebj"
-            }
-          ],
-          "selected": []
-        },
-        {
-          "name": "Frontend",
-          "id": "frontend",
-          "options": [
-            {
-              "name": "NextJs",
-              "icon": "icon-web",
-              "id": "nextjs"
-            },
-            {
-              "name": "NuxtJs",
-              "icon": "icon-group",
-              "id": "nuxtjs"
-            }
-          ],
-          "selected": []
-        },
-        {
-          "name": "Backend",
-          "id": "backend",
-          "options": [
-            {
-              "name": "Strapi",
-              "icon": "icon-newspaper",
-              "id": "strapi"
-            },
-            {
-              "name": "Sanity",
-              "icon": "icon-database",
-              "id": "sanity"
-            }
-          ],
-          "selected": []
-        },
-        {
-          "name": "Other Services",
-          "id": "other",
-          "options": [
-            {
-              "name": "GTM",
-              "icon": "icon-stack",
-              "id": "gtm"
-            },
-            {
-              "name": "Sendgrid",
-              "icon": "icon-stackoverflow",
-              "id": "sendgrid"
-            }
-          ],
-          "selected": []
-        }
-      ]
+      "heading": data?.customPlan?.heading,
+      "description": data?.customPlan?.description,
+      "selectPlanHeading": data?.customPlan?.selectPlanHeading,
+      "idealPlanHeading": data?.customPlan?.idealPlanHeading,
+      "plans": data?.customPlan?.plans?.map((item) => ({
+        name: item?.name,
+        id: item?.id,
+        "selected": [],
+        options : item?.options?.map((optionItem)=>({
+          name : optionItem?.name,
+          icon : optionItem?.icon,
+          id : optionItem?.id
+        }))
+      })),
+      
     },
+    
     "accordinData": {
-      "heading": "Pricing packages related FAQ",
+      "heading": data?.accordinData?.heading,
       "button": {
-        "buttonLabel": "Know More",
-        "href": "blog"
+        "buttonLabel": data?.accordinData?.button?.buttonLabel,
+        "href": data?.accordinData?.button?.href
       },
-      "accordin": [
-        {
-          "label": "Can I exchange or extend my plan?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "Does the other services are included in basic plan?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        },
-        {
-          "label": "Is there AMC (Annual Maintenance Contract)?",
-          "description": "How much time does it take to develop a JAMstack website having 10-20 pages?"
-        }
-      ]
+      "accordin":  data?.accordinData?.accordin?.map((item) => ({
+        label : item.label,
+        description : item.description
+      }))
     },
     "ConnectChoose": {
-      "heading": "Connect, Check, Choose",
-      "description": "Not sure what will work for you. Connect with Jamstack+ and know how can we help you improve your business.",
-      "buttonLabel": "Connect with Team",
-      "type": "primary",
-      "label": "Connect with Team",
-      "size": "medium"
+      "heading": data?.ConnectChoose?.heading,
+      "description": data?.ConnectChoose?.description,
+      "buttonLabel": data?.ConnectChoose?.buttonLabel,
+      label: data?.ConnectChoose?.label,
+      "type": data?.ConnectChoose?.type,
+      "size": data?.ConnectChoose?.size,
+      href : data?.ConnectChoose?.href
     }
   }
 }
