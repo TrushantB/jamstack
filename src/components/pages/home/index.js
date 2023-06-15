@@ -17,6 +17,7 @@ import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 import { getSettings, getHomePage } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { refactorHome } from "@/utils/home";
+import { SiteMeta } from "@/components/shared/SiteMeta";
 
 const IndexPage = ({ homeData, settings }) => {
   if (!homeData) {
@@ -25,6 +26,11 @@ const IndexPage = ({ homeData, settings }) => {
 
   return (
     <Layout header={settings.header} footer={settings.footer}>
+      <SiteMeta
+        description={homeData.seo.seoDescription}
+        image={homeData.seo.seoImage}
+        title={homeData.seo.seoTitle}
+      />
       <div>{<Banner {...homeData.banner} />}</div>
 
       <WebSection {...homeData.technologySolution} />

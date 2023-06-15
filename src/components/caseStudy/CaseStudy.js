@@ -46,11 +46,10 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                         </div>
                       )}
                       <h4
-                        className={`${
-                          item === selectedItem
+                        className={`${item === selectedItem
                             ? "font-bold text-black text-4xl lg:ml-0 sm:ml-140 w-10/12"
                             : "text-gray-500 w-10/12 ml-[16.6667%]"
-                        }`}
+                          }`}
                       >
                         {item.label}
                       </h4>
@@ -74,7 +73,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 <ReadMoreLink
                   label={label}
                   hasIcon={hasIcon}
-                  href={selectedItem?.href}
+                  href={`${selectedItem?.href}`}
                 />
               </div>
             </div>

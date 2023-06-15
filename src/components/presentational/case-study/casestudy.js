@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import ReadMoreLink from "../link/link";
 
 import diamond from "../../../assets/image/rectangle.png";
@@ -55,11 +54,10 @@ const Casestudy = ({
                   <img className="w w-6 h-6" src={getIcon(icon)} alt="icon" />
                 )}
                 <h4
-                  className={`${
-                    item === selectedItem
-                      ? "font-bold text-black text-5xl"
-                      : "text-gray-500"
-                  }`}
+                  className={`${item === selectedItem
+                    ? "font-bold text-black text-5xl"
+                    : "text-gray-500"
+                    }`}
                 >
                   {item.label}
                 </h4>
@@ -81,7 +79,7 @@ const Casestudy = ({
               <ReadMoreLink
                 label={label}
                 hasIcon={hasIcon}
-                href={selectedItem?.href}
+                href={`${selectedItem?.href}`}
               />
             </div>
           </div>
