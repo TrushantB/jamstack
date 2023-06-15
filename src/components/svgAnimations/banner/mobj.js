@@ -44,7 +44,7 @@ const Mobj = () => {
       .to("#content-card", { x: 0, opacity: 1, duration: 0.3 });
 
     ScrollTrigger.create({
-      trigger: ".mobj",
+      trigger: "#mobj",
       start: "30% 20%",
       end: "80% 70%",
       animation: mobj,
