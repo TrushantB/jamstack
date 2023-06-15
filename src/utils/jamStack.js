@@ -1,4 +1,3 @@
-
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorJamStack = (data) => {

@@ -1,19 +1,19 @@
 import { lazy } from "react";
-import {  getAbout, getSettings } from "@/lib/sanity.client";
+import {  getFAQ, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { PreviewSuspense } from '@sanity/preview-kit'
 import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
-import about from "@/components/pages/about";
-import { refactorAbout } from "@/utils/about";
+import Index from "@/components/pages/faq";
+import { refactorFAQ } from "@/utils/faq";
 
-const AboutDataPreview = lazy(
-  () => import('@/components/pages/about/preview')
+const FaqPagePreview = lazy(
+  () => import('@/components/pages/faq/preview')
 )
 
-const About = (props) => {
-  const { aboutData, settings, preview, token } = props
+const index = (props) => {
+  const { faqData, settings, preview, token } = props
 
-  if (!aboutData) {
+  if (!faqData) {
     return <></>;
   }
 
@@ -22,16 +22,16 @@ const About = (props) => {
       <PreviewSuspense
         fallback={
           <PreviewWrapper>
-            <about aboutData={aboutData} settings={settings} preview={preview} />
+            <Index faqData={faqData} settings={settings} preview={preview} />
           </PreviewWrapper>
         }
       >
-        <AboutDataPreview token={token} settings={settings} />
+        <FaqPagePreview token={token} settings={settings} />
       </PreviewSuspense>
     )
   }
 
-  return <about aboutData={aboutData} settings={settings} />
+  return <Index faqData={faqData} settings={settings} />
 
 };
 
@@ -41,12 +41,12 @@ export async function getStaticProps(ctx) {
   const token = previewData.token
   const [settings, page] = await Promise.all([
     getSettings({ token }),
-    getAbout({ token }),
+    getFAQ({ token }),
   ])
 
   return {
     props: {
-      aboutData: refactorAbout(page),
+      faqData: refactorFAQ(page),
       settings: refactorSettings(settings),
       preview,
       token: previewData.token ?? null,
@@ -54,4 +54,4 @@ export async function getStaticProps(ctx) {
   }
 }
 
-export default About;
+export default index;

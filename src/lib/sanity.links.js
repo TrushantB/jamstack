@@ -13,8 +13,8 @@ export function resolveHref(
       return '/about'
     case 'jamstack':
       return '/jamstack'
-    case 'faq':
-      return '/faq'
+    case 'faqs':
+      return '/faqs'
     case 'blogs':
       return '/blogs'
     case 'case-study':

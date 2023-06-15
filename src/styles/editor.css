@@ -1,0 +1,19 @@
+.blogDetailsInnerPage p  {
+    margin-bottom: 24px;
+ }
+.blogDetailsInnerPage h1,
+.blogDetailsInnerPage h2,
+.blogDetailsInnerPage h3,
+.blogDetailsInnerPage h4,
+.blogDetailsInnerPage h5,
+.blogDetailsInnerPage h6 {
+   margin-bottom: 12px;
+}
+.blogDetailsInnerPage ul,
+.blogDetailsInnerPage ol {
+    margin-left:24px;
+    margin-bottom: 24px;
+}
+.blogDetailsInnerPage li {
+    margin-bottom: 24px;
+}

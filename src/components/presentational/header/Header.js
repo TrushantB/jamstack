@@ -50,7 +50,7 @@ const Header = ({
         <nav className="bg-white border-gray-200">
           <div className="flex items-center justify-between px-6 py-5 mx-auto max-w-7xl lg:px-8 lg:py-3">
             <div className="flex items-center justify-between w-full gap-5">
-              <Link href={logoUrl?.herf} className="flex items-center">
+              <Link href={`/${logoUrl?.herf}`} className="flex items-center">
                 <img
                   src={logoUrl?.url}
                   alt={logoUrl?.alt}
@@ -64,7 +64,7 @@ const Header = ({
                 {headerMenu?.map((menuItems, index) => (
                   <li key={index}>
                     <Link
-                      href={menuItems.href}
+                      href={`/${menuItems.href}`}
                       className={`${`/${menuItems.href}` === activeMenu
                         ? "text-primary"
                         : ""
@@ -104,7 +104,7 @@ const Header = ({
                           }`}
                       >
                         <Link
-                          href={menuItems.href}
+                          href={`/${menuItems.href}`}
                           className="btn-link font-medium"
                           onClick={() => handleMenuClick(`/${menuItems.href}`)}
                         >
@@ -123,7 +123,7 @@ const Header = ({
                         key={index}
                       >
                         <Link
-                          href={sidebarItems.href}
+                          href={`/${sidebarItems.href}`}
                           className="btn-link font-medium"
                           onClick={() =>
                             handleMenuClick(`/${sidebarItems.href}`)
@@ -140,7 +140,7 @@ const Header = ({
                       paragraphClasses=""
                       value={description}
                     />
-                    <Link href={buttonLabel.href}>
+                    <Link href={`/${buttonLabel.href}`}>
                       <button
                         className="mt-4 font-semibold hover:underline hover:text-primary transition duration-200 ease"
                         type="button"
@@ -180,7 +180,7 @@ const Header = ({
                           <Link
                             className={`btn-link ${item.href === activeMenu ? "text-primary" : ""
                               }`}
-                            href={item.href}
+                            href={`${item.href}`}
                             target={item.target}
                             onClick={() => handleMenuClick(item.href)}
                           >
@@ -203,7 +203,7 @@ const Header = ({
                   {headerMenu?.map((menuItems, index) => (
                     <li key={index}>
                       <Link
-                        href={menuItems.href}
+                        href={`/${menuItems.href}`}
                         target={menuItems.target}
                         className="sticky block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                       >
@@ -217,7 +217,7 @@ const Header = ({
                     <li className="py-2 pl-3" key={index}>
                       <h6>
                         <Link
-                          href={sidebarItems.href}
+                          href={`/${sidebarItems.href}`}
                           target={menuItems.target}
                         >
                           {sidebarLink.label}
