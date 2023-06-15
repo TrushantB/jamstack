@@ -81,7 +81,7 @@ const Header = ({
                 ))}
               </ul>
 
-              <button
+              <button aria-label="menu"
                 id="dropdownUserAvatarButton"
                 data-dropdown-toggle="dropdownAvatar"
                 className={` header-toggle ${isOpen ? "header-toggle-open" : ""
@@ -177,7 +177,7 @@ const Header = ({
 
                   <div className="mb-4 lg:mt-6">
                     <ul  className="flex items-center gap-3">
-                      {socialLink?.map((iteccm, index) => (
+                      {socialLink?.map((item, index) => (
                         <li key={index}>
                               
 

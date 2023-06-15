@@ -39,7 +39,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                     className={``}
                     key={index}
                   >
-                    <button className="flex gap-0 items-center w-full text-left" type="button" onClick={() => handleItemClick(item)}>
+                    <button className="flex gap-0 items-center w-full text-left"m onClick={() => handleItemClick(item)}>
                       {item === selectedItem && (
                         <div className="w-2/12 flex">
                           <div className="diamond w-8 h-8 bg-tertiary"></div>

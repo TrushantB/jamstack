@@ -412,18 +412,10 @@ svg.edgenetworksecondaryline line.lineanimation {
 }
 
 .skip-to-main-content-link {
-  position: absolute;
-  left: -9999px;
-  z-index: 999;
-  padding: 10px;
-  background-color: #fff;
-  color: black;
-  opacity: 0;
+  @apply absolute bg-primary z-[999] text-white py-[0.15rem] px-[0.5rem] rounded-b-[13px] text-[10px] opacity-0 leading-normal;
 }
 .skip-to-main-content-link:focus {
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 1;
+  @apply left-0 opacity-100;
 }
 
 
