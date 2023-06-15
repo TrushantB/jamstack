@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 const Jamstack = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
   return (
-    <div>
-      <video
-        controls={false}
-        loop={true}
-        autoPlay={true}
-        className="rounded-3xl video"
-        src="./Jamstack+.mp4"
-      ></video>
+    <div className="player-wrapper">
+      {!loading && (
+        <ReactPlayer
+          url={"./Jamstack+.mp4"}
+          playing={true}
+          muted={true}
+          width="100%"
+          height="100%"
+        ></ReactPlayer>
+      )}
     </div>
   );
 };
