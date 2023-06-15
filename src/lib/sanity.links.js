@@ -29,6 +29,12 @@ export function resolveHref(
       return '/ecommj'
     case 'home':
       return '/'
+    case 'terms-and-conditions':
+      return '/terms-and-conditions'
+    case 'security':
+      return '/security'
+    case 'privacy-policy':
+      return '/privacy-policy'
     case 'compliences':
       return slug ? `/${slug}` : undefined
     case 'platforms':
@@ -37,6 +43,6 @@ export function resolveHref(
       return slug ? `/blog/${slug}` : undefined
     default:
       console.warn('Invalid document type:', documentType)
-      return ''
+      return '/'
   }
 }

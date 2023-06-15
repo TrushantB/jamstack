@@ -84,7 +84,7 @@
   }
 
   .btn {
-    @apply bg-pink-500 text-white rounded-full text-xl border-solid px-4 py-3 font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-black ring-offset-2;
+    @apply bg-primary text-white rounded-full text-xl border-solid px-4 py-3 font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-black ring-offset-2;
   }
 }
 .btn-link {
@@ -410,6 +410,14 @@ svg.edgenetworksecondaryline line.lineanimation {
     rgb(180, 165, 243)
   );
 }
+
+.skip-to-main-content-link {
+  @apply absolute bg-primary z-[999] text-white py-[0.15rem] px-[0.5rem] rounded-b-[13px] text-[10px] opacity-0 leading-normal;
+}
+.skip-to-main-content-link:focus {
+  @apply left-0 opacity-100;
+}
+
 
 .player-wrapper video {
   border-radius: 40px;

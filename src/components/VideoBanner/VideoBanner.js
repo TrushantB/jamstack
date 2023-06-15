@@ -9,8 +9,8 @@ function VideoBanner({ heading, video }) {
   return (
     <>
       <div className="container lg:py-24 py-16 mx-auto">
-        <div className=" mx-4 lg:mx-0 text-center">
-          <h2>{heading}</h2>
+        <div className="mb-12 mx-4 lg:mx-0 text-center">
+          <h2 id="videoBanner">{heading}</h2>
         </div>
         <div className="mx-4 lg:mx-0 player-wrapper">
           {!loading && (

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ReadMoreLink from "../Link/Link";
+import { resolveHref } from "@/lib/sanity.links";
 
 const MAP_ICONS = {
   circle: "/circle.png",
@@ -39,20 +40,20 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                     className={``}
                     key={index}
                   >
-                    <button className="flex gap-0 items-center w-full text-left" type="button" onClick={() => handleItemClick(item)}>
+                    <button className="flex gap-0 items-center w-full text-left" onClick={() => handleItemClick(item)}>
                       {item === selectedItem && (
                         <div className="w-2/12 flex">
                           <div className="diamond w-8 h-8 bg-tertiary"></div>
                         </div>
                       )}
-                      <h4
-                        className={`${item === selectedItem
-                            ? "font-bold text-black text-4xl lg:ml-0 sm:ml-140 w-10/12"
+                      <h3
+                        className={`heading-4 ${item === selectedItem
+                            ? "font-bold text-black text-4xl lg:ml-0 sm:ml-140 w-10/12 "
                             : "text-gray-500 w-10/12 ml-[16.6667%]"
                           }`}
                       >
                         {item.label}
-                      </h4>
+                      </h3>
                     </button>
                   </li>
                 ))}
@@ -64,7 +65,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 {selectedItem &&
                   selectedItem?.percentageList?.map((percentageItem, index) => (
                     <div className={`cursor-auto`} key={index}>
-                      <h2>{percentageItem.percentage}</h2>
+                      <h4 className="heading-2">{percentageItem.percentage}</h4>
                       <p className="">{percentageItem.description}</p>
                     </div>
                   ))}
@@ -73,7 +74,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 <ReadMoreLink
                   label={label}
                   hasIcon={hasIcon}
-                  href={`${selectedItem?.href}`}
+                  href={resolveHref(selectedItem?.href)}
                 />
               </div>
             </div>

@@ -31,61 +31,64 @@ const IndexPage = ({ homeData, settings }) => {
         image={homeData.seo?.seoImage}
         title={homeData.seo?.seoTitle}
       />
-      <div>{<Banner {...homeData.banner} />}</div>
+      <section>{<Banner {...homeData.banner} />}</section>
 
-      <WebSection {...homeData.technologySolution} />
+      <section> 
+        <WebSection {...homeData.technologySolution} />
+      </section>
 
-      <div>
+      <section >
         <TextBannerList {...homeData.textBannerList} />
-      </div>
+      </section>
 
-      <div>
+      <section aria-hidden="true" >
         <VideoBanner {...homeData.videoBanner} />
-      </div>
+      </section>
 
-      <div>
+      <section aria-label="web facts" >
         <TextBanner {...homeData.textBanner} />
-      </div>
+      </section>
+      <section >
+      <WebStactics  {...homeData.Webstatstics} />
+      </section>
 
-      <WebStactics {...homeData.Webstatstics} />
-
-      <div className="">
+      <section>
         <Benefits {...homeData.benefits} />
-      </div>
+      </section>
 
-      <div className=" ">
+      <section className=" ">
         <h2 className="text-center pb-10">{homeData?.productCard?.heading}</h2>
         <ProductCard {...homeData.productCard} />
-      </div>
+      </section>
 
-      <div className="">
+      <section className="">
         <OurClient {...homeData.ourClient} />
-      </div>
+      </section>
 
-      <div className="">
+      <section aria-hidden="true">
         <EdgeNetwork {...homeData.edgeNetwork} />
-      </div>
+      </section>
 
-      <div className="">
+      <section className="">
         <CaseStudy {...homeData.caseStudy} />
-      </div>
+      </section>
 
-      <div className="pt-6 pb-4 my-16 lg:my-24 bg-accent-100 ">
+      <section className="pt-6 pb-4 my-16 lg:my-24 bg-accent-100 ">
         {<MordernTechnology {...homeData.morderTechnology} />}
-      </div>
+      </section>
 
-      <div className="">
+      <section className="">
         <TestimonialCard {...homeData.testimonialCard} />
-      </div>
+      </section>
 
-      <div className="lg:pt-24 pt-14 ">
+      <section className="lg:pt-24 pt-14 ">
         <div className="text-center">
           <h2>{homeData?.blogCard?.heading}</h2>
         </div>
         <div>
           <BlogCard {...homeData.blogCard} />
         </div>
-      </div>
+      </section>
     </Layout>
   );
 };

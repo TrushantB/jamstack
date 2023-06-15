@@ -104,7 +104,7 @@ const refactorHome = (data) => {
       description: data?.caseStudy?.description,
       itemList: data?.caseStudy?.itemList?.map((item) => ({
         label: item.label,
-        href: item.href,
+        href: item.href || "",
         percentageList: item.percentageList.map((percentageItem) => ({
           percentage: percentageItem.percentage,
           description: percentageItem.description,
@@ -138,7 +138,7 @@ const refactorHome = (data) => {
         image: urlForImage(item.image).url() || null,
         alt: item.alt || null,
         description: item.description || null,
-        href: item.href || null
+        href: "blogs" 
       })),
       "hasIcon": data?.blogCard?.hasIcon,
       "label": data?.blogCard?.label

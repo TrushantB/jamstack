@@ -8,7 +8,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
       <div className="mb-12 md:mb-0 mx-4">
         <h2 className="lg:w-8/12 mb-7">{heading}</h2>
         <div className="mb-7 lg:0">
-          <Link href={href} className="btn">
+          <Link href={href} role="button" className="btn" aria-label={label}>
             {label}
           </Link>
         </div>

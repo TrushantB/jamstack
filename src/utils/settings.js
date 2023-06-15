@@ -4,9 +4,9 @@ const refactorSettings = (data) => {
     return {
         header: {
             logoUrl: {
-                url: urlForImage(data.logo).url() ||  '' ,
+                url: urlForImage(data.logo).url() || '',
                 alt: data.logo.logoAlt,
-                href:  data.logo.href || '' ,
+                href: data.logo.href || '',
             },
 
             headerMenu: data?.headerMenus?.menus,
