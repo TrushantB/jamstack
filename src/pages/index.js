@@ -25,7 +25,8 @@ const IndexPage = ({ homeData, settings }) => {
 
   return (
     <Layout header={settings.header} footer={settings.footer}>
-      <section>{<Banner {...homeData.banner} />}</section>
+      <section >{<Banner {...homeData.banner} />}</section>
+
       <section aria-labelledby="webSection"> 
         <WebSection {...homeData.technologySolution} />
       </section>
@@ -34,11 +35,11 @@ const IndexPage = ({ homeData, settings }) => {
         <TextBannerList {...homeData.textBannerList} />
       </section>
 
-      <section>
+      <section aria-labelledby="videoBanner" >
         <VideoBanner {...homeData.videoBanner} />
       </section>
 
-      <section>
+      <section >
         <TextBanner {...homeData.textBanner} />
       </section>
       <section aria-labelledby="webStactics">
