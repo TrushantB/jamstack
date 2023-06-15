@@ -1,16 +1,16 @@
 import { lazy } from "react";
-import {  getEcoSystem, getSettings } from "@/lib/sanity.client";
+import { getEcoSystem, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { PreviewSuspense } from '@sanity/preview-kit'
 import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
-import Index from "@/components/pages/ecosystem";
+import Ecosysterm from "@/components/pages/ecosystem";
 import { refactorEco } from "@/utils/ecosystem";
 
 const EcoSystemPagePreview = lazy(
   () => import('@/components/pages/ecosystem/preview')
 )
 
-const index = (props) => {
+const EcosystermPage = (props) => {
   const { ecosystemData, settings, preview, token } = props
 
   if (!ecosystemData) {
@@ -22,7 +22,7 @@ const index = (props) => {
       <PreviewSuspense
         fallback={
           <PreviewWrapper>
-            <Index ecosystemData={ecosystemData} settings={settings} preview={preview} />
+            <Ecosysterm ecosystemData={ecosystemData} settings={settings} preview={preview} />
           </PreviewWrapper>
         }
       >
@@ -31,7 +31,7 @@ const index = (props) => {
     )
   }
 
-  return <Index ecosystemData={ecosystemData} settings={settings} />
+  return <Ecosysterm ecosystemData={ecosystemData} settings={settings} />
 
 };
 
@@ -54,4 +54,4 @@ export async function getStaticProps(ctx) {
   }
 }
 
-export default index;
+export default EcosystermPage;
