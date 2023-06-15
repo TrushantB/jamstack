@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { CustomPortableText } from "@/components/shared/CustomPortableText";
+import { resolveHref } from "@/lib/sanity.links";
 
 const Footer = ({
   footerLogo,
@@ -37,17 +38,15 @@ const Footer = ({
             </div>
             <div className="col-span-12 sm:col-span-5 mt-5 sm:mt-0 ">
               <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:p-0 lg:p-0">
-                {footerMenu?.map((menuItems, index) => (
-                  <li key={index} className="font-semibold mb-2">
-                    <Link
-                      className="btn-link"
-                      href={`/${menuItems.href}`}
-                      target={menuItems.target}
-                    >
-                      {menuItems.label}
-                    </Link>
-                  </li>
-                ))}
+                {footerMenu?.map((menuItems, index) => {
+                  return (
+                    <li key={index} className="font-semibold mb-2">
+                      <Link className="btn-link" href={resolveHref(menuItems.href)} target={'_self'}>
+                        {menuItems.label}
+                      </Link>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </div>
@@ -55,10 +54,7 @@ const Footer = ({
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
                 <li key={index}>
-                  <Link
-                    href={`/${menuItems.href}`}
-                    className="font-bold btn-link"
-                  >
+                  <Link href={resolveHref(menuItems.href)} className="font-bold btn-link">
                     {menuItems.label}
                   </Link>
                 </li>

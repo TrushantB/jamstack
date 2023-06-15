@@ -1,7 +1,6 @@
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorSettings = (data) => {
-    console.log("here===>", data?.socialLinks);
     return {
         header: {
             logoUrl: {

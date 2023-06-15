@@ -28,10 +28,10 @@ const refactorBlog = (data) => {
       "name": data.author.name,
       "description": data.author.shortDescription,
       "socialSharing": data.author.socialLinks.map((linkItem) => ({
-        icon: linkItem.icon,
-        alt: linkItem.name,
-        href: linkItem.href,
-        target: linkItem.target
+        icon: linkItem?.icon || '',
+        alt: linkItem?.name || '',
+        href: linkItem?.href || '',
+        target: linkItem?.target || '_blank'
       }))
     },
     "publishDate": {
@@ -48,10 +48,10 @@ const refactorBlog = (data) => {
       }
     }),
     "socialSharing": data.socialLinks.map((linkItem) => ({
-      icon: linkItem.icon,
-      alt: linkItem.name,
-      href: linkItem.href,
-      target: linkItem.target
+      icon: linkItem?.icon || '',
+      alt: linkItem?.name || '',
+      href: linkItem?.href || '',
+      target: linkItem?.target || '_blank'
     })),
 
     "suggestionPost": {

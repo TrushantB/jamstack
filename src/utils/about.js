@@ -8,7 +8,8 @@ const refactorAbout = (data) => {
       "description": data?.banner?.description,
       "headingSize": data?.banner?.headingSize,
       "image": "/aboutus.svg",
-      "layout": data?.banner?.layout
+      "layout": data?.banner?.layout,
+      "animationType": data?.banner?.animationType,
     },
     "morderTechnology": {
       "heading": data?.morderTechnology?.heading,

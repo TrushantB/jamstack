@@ -35,9 +35,9 @@ const Banner = ({
     pricing: Pricing,
     jamstack: Jamstack
   };
-  const BannerLeft = MAP_BANNER_LEFT_COMPONENT['about'] || Ecomj;
+  const BannerLeft = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
 
-  const BannerBottom = MAP_BANNER_BOTTOM_COMPONENT['about'] || Pricing;
+  const BannerBottom = MAP_BANNER_BOTTOM_COMPONENT[animationType] || Pricing;
 
   return (
     <div className="container mx-auto lg:py-24 py-16">
