@@ -9,7 +9,7 @@ export default function Layout({ children, header, footer, preview }) {
       <header className="sticky top-0 z-50">
         {header && <Header {...header} />}
       </header>
-      <main>
+      <main id="main">
       {children}
       </main>
       <footer className="mt-auto border-t">

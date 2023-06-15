@@ -50,38 +50,43 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
   };
 
   return (
-    <div className="container lg:mx-auto  py-10  h-full  blog">
-      <div className="mx-4 lg:mx-0 ">
+    <div className="container lg:mx-auto py-10 h-full blog">
+      <div className="mx-4 lg:mx-0">
         <Slider {...sliderSetting} className="flex flex-grow">
           {cards?.map((card, index) => (
             <div
               key={index}
-              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card  py-1 lg:w-1/3 hover:bg-accent-100"
+              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card py-1 lg:w-1/3 hover:bg-accent-100"
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
-              <img
-                className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
-                src={card.image}
-                alt={card.altTag}
-              />
-              <div className="p-4  flex flex-col justify-between">
-                <h3 className="mb-3 heading-4">{card.label}</h3>
-                <p className="leading-relaxed mb-5 w-9/12">
-                  {card.description}
-                </p>
-                <div className="h-8">
-                  {hoverItem === card && (
-                    <Link
-                      className="flex gap-3 items-center text-primary"
-                      href="/jamstack"
-                    >
-                      {label}
-                      <span className="icon-arrow-right2 text-2xl text-primary "></span>
-                    </Link>
-                  )}
-                </div>
-              </div>
+              <Link href="./blog">
+                
+                  <img
+               
+                    className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
+                    src={card.image}
+                    alt={card.altTag}
+                  />
+                  <div className="p-4 flex flex-col justify-between">
+                    <h3 className="mb-3 heading-4">{card.label}</h3>
+                    <p className="leading-relaxed mb-5 w-9/12">
+                      {card.description}
+                    </p>
+                    <div className="h-8">
+                      {hoverItem === card && (
+                        <Link
+                          className="flex gap-3 items-center text-primary"
+                          href="/jamstack"
+                        >
+                          {label}
+                          <span className="icon-arrow-right2 text-2xl text-primary"></span>
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+               
+              </Link>
             </div>
           ))}
         </Slider>

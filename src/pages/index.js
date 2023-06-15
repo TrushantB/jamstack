@@ -59,7 +59,7 @@ const IndexPage = ({ homeData, settings }) => {
         <OurClient {...homeData.ourClient} />
       </section>
 
-      <section className="">
+      <section aria-hidden="true">
         <EdgeNetwork {...homeData.edgeNetwork} />
       </section>
 

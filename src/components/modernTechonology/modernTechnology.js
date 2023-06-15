@@ -28,7 +28,7 @@ function MordernTechnology({
         )}
         {label && (
           <div className="pb-10">
-            <Link href={href} className="btn">
+            <Link href={href} role="button" className="btn">
               {label}
             </Link>
           </div>
