@@ -304,14 +304,30 @@ export default defineType({
                       type: "string",
                     },
                     {
-                      name: "size",
-                      title: "Size",
-                      type: "string",
+                      name: 'type',
+                      title: 'Type',
+                      type: 'string',
+                      options: {
+                        list: [
+                          { title: 'Primary', value: 'primary' },
+                          { title: 'Secondary', value: 'secondary' },
+                          { title: 'Tertiary', value: 'tertiary' },
+                        ],
+                      },
+                      initialValue: 'primary',
                     },
                     {
-                      name: "type",
-                      title: "Type",
+                      name: "size",
                       type: "string",
+                      title: "Size",
+                      options: {
+                        list: [
+                          { title: "Small", value: "small" },
+                          { title: "Medium", value: "medium" },
+                          { title: "Large", value: "large" },
+                        ],
+                      },
+                      initialValue: "medium",
                     },
                     {
                       name: "href",

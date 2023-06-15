@@ -1192,7 +1192,8 @@
           "cta": {
             "label": "Get your plan",
             "size": "medium",
-            "type": "primary"
+            "type": "primary",
+            "href" : "href"
           }
         },
         {

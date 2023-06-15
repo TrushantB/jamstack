@@ -1,7 +1,6 @@
 import { React, useState } from "react";
-import PropTypes from "prop-types";
+import Link from "next/link";
 import classNames from "classnames";
-// import "./Button.css";
 
 const ButtonSize = (size) => {
   return classNames({
@@ -20,7 +19,7 @@ const ButtonType = (type) => {
   });
 };
 
-const Button = ({ type, size, label, ...rest }) => {
+const Button = ({ type, size, label, href , ...rest }) => {
   return (
     <div>
       <button
@@ -28,7 +27,9 @@ const Button = ({ type, size, label, ...rest }) => {
         disabled={type === "disabled"}
         {...rest}
       >
-        {label}
+        <Link href={`${href}`} >
+          {label}
+        </Link>
       </button>
     </div>
   );
