@@ -1,18 +1,17 @@
 import { lazy } from "react";
-import {  getAbout, getSettings } from "@/lib/sanity.client";
+import { getAbout, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { PreviewSuspense } from '@sanity/preview-kit'
 import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
-import about from "@/components/pages/about";
+import About from "@/components/pages/about";
 import { refactorAbout } from "@/utils/about";
 
 const AboutDataPreview = lazy(
   () => import('@/components/pages/about/preview')
 )
 
-const About = (props) => {
+const AboutPage = (props) => {
   const { aboutData, settings, preview, token } = props
-
   if (!aboutData) {
     return <></>;
   }
@@ -22,7 +21,7 @@ const About = (props) => {
       <PreviewSuspense
         fallback={
           <PreviewWrapper>
-            <about aboutData={aboutData} settings={settings} preview={preview} />
+            <About aboutData={aboutData} settings={settings} preview={preview} />
           </PreviewWrapper>
         }
       >
@@ -31,7 +30,7 @@ const About = (props) => {
     )
   }
 
-  return <about aboutData={aboutData} settings={settings} />
+  return <About aboutData={aboutData} settings={settings} />
 
 };
 
@@ -54,4 +53,4 @@ export async function getStaticProps(ctx) {
   }
 }
 
-export default About;
+export default AboutPage;

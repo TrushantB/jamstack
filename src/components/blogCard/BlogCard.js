@@ -63,7 +63,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
               <img
                 className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
                 src={card.image}
-                alt={card.altTag}
+                alt={`${card.altTag}`}
               />
               <div className="p-4  flex flex-col justify-between">
                 <h4 className="mb-3">{card.label}</h4>

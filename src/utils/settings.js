@@ -6,7 +6,7 @@ const refactorSettings = (data) => {
             logoUrl: {
                 url: urlForImage(data.logo).url(),
                 alt: data.logo.logoAlt,
-                herf: '/',
+                herf: '',
             },
 
             headerMenu: data?.headerMenus?.menus,
@@ -36,7 +36,7 @@ const refactorSettings = (data) => {
             footerLogo: {
                 url: urlForImage(data.logo).url(),
                 alt: data.logo.logoAlt,
-                href: '/',
+                href: '',
             },
             copyRight: data?.copyRight,
 

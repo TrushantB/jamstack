@@ -747,7 +747,7 @@ export default defineType({
         },
       ],
     }),
-    
+
     defineField({
       name: "testimonialCard",
       title: "Testimonial Card",
@@ -868,6 +868,11 @@ export default defineType({
         },
       ],
     }),
+    defineField({
+      type: 'seo',
+      title: "SEO",
+      name: "seo"
+    })
   ],
   preview: {
     select: {

@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { CustomPortableText } from "@/components/shared/CustomPortableText";
+import { resolveHref } from "@/lib/sanity.links";
 
 const Header = ({
   headerMenu,
@@ -64,7 +65,7 @@ const Header = ({
                 {headerMenu?.map((menuItems, index) => (
                   <li key={index}>
                     <Link
-                      href={`/${menuItems.href}`}
+                      href={resolveHref(menuItems.href)}
                       className={`${`/${menuItems.href}` === activeMenu
                         ? "text-primary"
                         : ""
@@ -123,7 +124,7 @@ const Header = ({
                         key={index}
                       >
                         <Link
-                          href={`/${sidebarItems.href}`}
+                          href={resolveHref(sidebarItems.href)}
                           className="btn-link font-medium"
                           onClick={() =>
                             handleMenuClick(`/${sidebarItems.href}`)
@@ -140,7 +141,7 @@ const Header = ({
                       paragraphClasses=""
                       value={description}
                     />
-                    <Link href={`/${buttonLabel.href}`}>
+                    <Link href={resolveHref(buttonLabel.href)}>
                       <button
                         className="mt-4 font-semibold hover:underline hover:text-primary transition duration-200 ease"
                         type="button"
@@ -203,7 +204,7 @@ const Header = ({
                   {headerMenu?.map((menuItems, index) => (
                     <li key={index}>
                       <Link
-                        href={`/${menuItems.href}`}
+                        href={resolveHref(menuItems.href)}
                         target={menuItems.target}
                         className="sticky block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0"
                       >
@@ -217,7 +218,7 @@ const Header = ({
                     <li className="py-2 pl-3" key={index}>
                       <h6>
                         <Link
-                          href={`/${sidebarItems.href}`}
+                          href={resolveHref(sidebarItems.href)}
                           target={menuItems.target}
                         >
                           {sidebarLink.label}
