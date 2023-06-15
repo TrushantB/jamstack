@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url(icon.css);
+@import url(editor.css);
 
 @layer base {
 
@@ -316,6 +317,10 @@
 
 .image:last-child {
   border-bottom: none;
+}
+
+.blogDetailsItems:target {
+  scroll-margin-top: 75px;
 }
 
 @media screen and (min-width: 1024px) {

@@ -1,27 +1,27 @@
 import LinkButton from "../Link/Link";
 
-export default function Blogpage({ cards, hasIcon, label }) {
+export default function Blogpage({ cards, hasIcon, label, href }) {
   return (
     <div className=''>
-    <div className="page-title py-8">
+      <div className="page-title py-8">
         <h1>Blog</h1>
       </div>
       {cards && cards.map((item, index) => (
         <div key={index} className="sm:flex items-start gap-5 pb-12 lg:pb-16">
           <div className="lg:w-2/5 pb-5 lg:pb-0">
-            <a href="#.">
+            <a href={item.href}>
               <img className="w-full md:w-96 h-auto rounded-3xl " src={item.image} />
             </a>
           </div>
           <div className="w-ful ">
-            <a href="#.">
+            <a >
               <h4 className='text-2xl md:text-4xl'>{item.heading}</h4>
             </a>
-            <div className="pt-4">              
-                <a href="#." className="flex items-center gap-4">                
-                  <img className="w-8" src={item.profil} />
-                  <p className="w-15 text-sm md:text-md">{item.name}</p>
-                </a>              
+            <div className="pt-4">
+              <a href={item.href} className="flex items-center gap-4">
+                <img className="w-8" src={item.profil} />
+                <p className="w-15 text-sm md:text-md">{item.name}</p>
+              </a>
             </div>
             <div className="pt-7">
               <LinkButton label={label} hasIcon={hasIcon} href={item.href} />

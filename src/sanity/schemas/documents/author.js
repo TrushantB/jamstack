@@ -62,6 +62,46 @@ export default defineType({
           },
         }),
       ],
-    })
+    }),
+    defineField({
+      name: 'socialLinks',
+      title: 'Social Links',
+      type: 'array',
+      of: [
+        {
+          title: 'items',
+          type: 'object',
+          fields: [
+            {
+              name: 'name',
+              type: 'string',
+              title: 'Name',
+            },
+            {
+              name: 'icon',
+              type: 'string',
+              title: 'Icon',
+            },
+            {
+              name: 'href',
+              type: 'string',
+              title: 'Href',
+            },
+            {
+              title: 'Target',
+              name: 'target',
+              type: 'string',
+              options: {
+                list: [
+                  { title: 'Blank', value: '_blank' },
+                  { title: 'Self', value: '_self' },
+                ],
+              },
+            },
+          ],
+        },
+      ],
+
+    }),
   ],
 })
