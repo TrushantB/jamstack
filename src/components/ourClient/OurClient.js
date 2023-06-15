@@ -20,16 +20,15 @@ function OurClient({ heading, imageList, type, label, size, href }) {
               <>
                 <li
                   className={` flex items-center px-4 py-4 lg:px-10 image w-full min-h-[140px] max-h-[140px] h-full
-                ${
-                  index % 3 !== 0 && (index + 1) % 3 !== 0
-                    ? // TODO: Find better solution, This is temporary for now
+                ${index % 3 !== 0 && (index + 1) % 3 !== 0
+                      ? // TODO: Find better solution, This is temporary for now
                       index === 6 || index === 7
-                      ? "border-l-2 border-r-2 border-collapse"
-                      : "border-l-2 border-r-2 border-b-2"
-                    : index !== 6
-                    ? "border-b-2"
-                    : "border-b-0"
-                }`}
+                        ? "border-l-2 border-r-2 border-collapse"
+                        : "border-l-2 border-r-2 border-b-2"
+                      : index !== 6
+                        ? "border-b-2"
+                        : "border-b-0"
+                    }`}
                   key={index}
                 >
                   {item.image ? (
@@ -37,7 +36,7 @@ function OurClient({ heading, imageList, type, label, size, href }) {
                     <img
                       className="w-full h-full object-contain"
                       src={item.image}
-                      alt={item.altTag}
+                      alt={`${item.altTag}`}
                       href={item.href}
                     />
                   ) : (

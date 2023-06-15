@@ -20,7 +20,6 @@ const Stepper = (stepper ) => {
     design: Design,
     bussiness: Bussiness
   }
-
   return (
     <>
       {/* stepper code */}
@@ -65,7 +64,7 @@ const Stepper = (stepper ) => {
             >
               {step.layout !== "imageCenter" ? (
                 <>
-                  <div >
+                  <div className="lg:w-1/2" >
                     <h3 className="pb-5">
                       <span>{index + 1}.</span> {step.label}
                     </h3>
@@ -93,7 +92,7 @@ const Stepper = (stepper ) => {
                     </h3>
                     <CustomPortableText paragraphClasses={'text-center pb-6'} value={step?.content} />
                     <div className="flex justify-center items-center mt-4">
-                      <Button label="Start Project Now" size="medium" />
+                      <Button {...step?.cta} />
                     </div>
                   </div>
                 </div>

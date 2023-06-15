@@ -28,6 +28,7 @@ import ecosystem from '@/sanity/schemas/singletons/ecosystem'
 import faq from '@/sanity/schemas/singletons/faq'
 import navigation from '@/sanity/schemas/objects/navigation'
 import author from '@/sanity/schemas/documents/author'
+import seo from '@/sanity/schemas/objects/seo'
 
 export const PREVIEWABLE_DOCUMENT_TYPES = [
   home.name,
@@ -59,7 +60,8 @@ export default defineConfig({
       author,
 
       // Objects
-      navigation
+      navigation,
+      seo
     ],
   },
   plugins: [
