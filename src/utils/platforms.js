@@ -1,11 +1,10 @@
-
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorPlatforms = (data) => {
   return {
     "banner": {
       "heading": data?.banner?.heading,
-      "description": data?.banner?.description,
+      "description": data?.banner?.description || "", 
       "backGroundColor": data?.banner.backgroundColor,
       "headingSize": data?.banner?.headingSize,
       "image": "/ecommj.svg",
@@ -30,15 +29,15 @@ const refactorPlatforms = (data) => {
         animationType: item.animationType !== undefined ? item.animationType : null,
         id: item.id,
         faqs: item?.faqs?.map((faq) => ({
-          label: faq.label,
-          description: faq.description,
-          icon: faq.icon,
-          arrow: faq.arrow,
+          label: faq.label !== undefined ? faq.label : null,
+          description: faq.description !== undefined ? faq.description : null,
+          icon: faq.icon !== undefined ? faq.icon : null,
+          arrow: faq.arrow !== undefined ? faq.arrow : null,
         })) || [],
         cta: item.cta ? {
-          label: item.cta.label,
-          size: item.cta.size,
-          type: item.cta.type,
+          label: item.cta.label !== undefined ? item.cta.label : null,
+          size: item.cta.size !== undefined ? item.cta.size : null,
+          type: item.cta.type !== undefined ? item.cta.size : null,
         } : [],
       }))
     },

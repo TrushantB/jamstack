@@ -217,6 +217,23 @@ export default defineType({
                               },
                             ],
                           },
+                          {
+                            name: 'image',
+                            type: 'object',
+                            title: 'Image',
+                            fields: [
+                              {
+                                name: 'src',
+                                type: 'url',
+                                title: 'Image URL',
+                              },
+                              {
+                                name: 'alt',
+                                type: 'string',
+                                title: 'Image Alt Text',
+                              },
+                            ],
+                          },
                         ],
                       },
                     }),
@@ -294,6 +311,11 @@ export default defineType({
                     {
                       name: "type",
                       title: "Type",
+                      type: "string",
+                    },
+                    {
+                      name: "href",
+                      title: "Href",
                       type: "string",
                     },
                   ],

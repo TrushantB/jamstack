@@ -29,7 +29,7 @@ const Stepper = (stepper ) => {
       </div>
       <div>
         <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-7 text-center lg:text-left sticky py-2 top-16 bg-white">
-          {stepper?.stepper.map((step, index) => (
+          {stepper?.stepper?.map((step, index) => (
             <a href={`#${step.id}`} key={index} >
               <div
                 className={`flex flex-col lg:flex-row gap-2 items-center ${selectedStep === index + 1 ? "text-primary" : ""
@@ -51,7 +51,7 @@ const Stepper = (stepper ) => {
         </div>
 
         {/* stepper section */}
-        {stepper?.stepper.map((step, index) => {
+        {stepper?.stepper?.map((step, index) => {
 
           const Component = MAP_STEPPER_COMPONENT[step.animationType] || Choose
           return (
@@ -91,7 +91,7 @@ const Stepper = (stepper ) => {
                     <h3 className="pb-4 text-center">
                       <span>{index + 1}.</span> {step.label}
                     </h3>
-                    <p className="text-center pb-6">{step.content}</p>
+                    <CustomPortableText paragraphClasses={'text-center pb-6'} value={step?.content} />
                     <div className="flex justify-center items-center mt-4">
                       <Button label="Start Project Now" size="medium" />
                     </div>
