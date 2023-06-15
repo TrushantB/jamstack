@@ -47,11 +47,10 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                         </div>
                       )}
                       <h3
-                        className={`heading-4 ${
-                          item === selectedItem
+                        className={`heading-4 ${item === selectedItem
                             ? "font-bold text-black text-4xl lg:ml-0 sm:ml-140 w-10/12 "
                             : "text-gray-500 w-10/12 ml-[16.6667%]"
-                        }`}
+                          }`}
                       >
                         {item.label}
                       </h3>

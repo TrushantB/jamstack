@@ -6,7 +6,7 @@ import { resolveHref } from "@/lib/sanity.links";
 const Footer = ({
   footerLogo,
   copyRight,
-  socialIcons,
+  socialLink,
   footerMenu,
   secondaryMenu,
 }) => {
@@ -23,14 +23,14 @@ const Footer = ({
               </div>
               <div className="flex gap-4 mt-3">
                 <div className="flex gap-7">
-                  {socialIcons?.map((item, index) => (
+                  {socialLink?.map((item, index) => (
                     <Link
                       className="flex items-center btn-link"
                       key={index}
                       target={item.target}
                       href={item.href}
                     >
-                      <span className={`${item.icon} text-2xl`}></span>
+                      <span className={`${item.iconName} text-2xl`}></span>
                     </Link>
                   ))}
                 </div>

@@ -49,7 +49,6 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
       },
     ],
   };
-
   return (
     <div className="container lg:mx-auto py-10 h-full blog">
       <div className="mx-4 lg:mx-0">
@@ -61,26 +60,27 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
-              <Link href={resolveHref(card.href)}>
-                  <img
-                    className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
-                    src={card.image}
-                    alt={card.altTag}
-                  />
-                  <div className="p-4 flex flex-col justify-between">
-                    <h3 className="mb-3 heading-4">{card.label}</h3>
-                    <p className="leading-relaxed mb-5 w-9/12">
-                      {card.description}
-                    </p>
-                    <div className="h-8">
-                      {hoverItem === card && (
-                        <a className="flex gap-3 items-center text-primary">
-                          {label}
-                          <span className="icon-arrow-right2 text-2xl text-primary"></span>
-                        </a>
-                      )}
-                    </div>
+              {/* TODO:static for now */}
+              <Link href={'/blog'}>
+                <img
+                  className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
+                  src={card.image}
+                  alt={card.altTag}
+                />
+                <div className="p-4 flex flex-col justify-between">
+                  <h3 className="mb-3 heading-4">{card.label}</h3>
+                  <p className="leading-relaxed mb-5 w-9/12">
+                    {card.description}
+                  </p>
+                  <div className="h-8">
+                    {hoverItem === card && (
+                      <a className="flex gap-3 items-center text-primary">
+                        {label}
+                        <span className="icon-arrow-right2 text-2xl text-primary"></span>
+                      </a>
+                    )}
                   </div>
+                </div>
               </Link>
             </div>
           ))}
