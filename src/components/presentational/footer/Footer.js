@@ -6,13 +6,13 @@ import { resolveHref } from "@/lib/sanity.links";
 const Footer = ({
   footerLogo,
   copyRight,
-  socialIcons,
+  socialLink,
   footerMenu,
   secondaryMenu,
 }) => {
   return (
     <>
-      <footer className="container lg:mx-auto mt-7">
+      <footer className="container lg:mx-auto mt-7 mb-7 md:mb-0">
         <div className="mx-4 lg:mx-0">
           <div className="grid grid-cols-12   ">
             <div className="col-span-12 mt-10 sm:col-span-6 lg:col-span-7 sm:p-5 lg:p-10 lg:pl-0 sm:m-0 lg:pt-0">
@@ -23,14 +23,14 @@ const Footer = ({
               </div>
               <div className="flex gap-4 mt-3">
                 <div className="flex gap-7">
-                  {socialIcons?.map((item, index) => (
+                  {socialLink?.map((item, index) => (
                     <Link
                       className="flex items-center btn-link"
                       key={index}
                       target={item.target}
                       href={item.href}
                     >
-                      <span className={`${item.icon} text-2xl`}></span>
+                      <span className={`${item.iconName} text-2xl`}></span>
                     </Link>
                   ))}
                 </div>
@@ -50,7 +50,7 @@ const Footer = ({
               </ul>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 sm:py-5 lg:py-10 mt-5 sm:mt-0 ">
+          <div className="grid grid-cols-1 sm:grid-cols-3 sm:py-5 lg:py-10 lg:mt-5 sm:mt-0 ">
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
                 <li key={index}>

@@ -20,14 +20,14 @@ function MordernTechnology({
             : "text-center container lg:w-8/12 mx-auto"
         } lg:w-full`}
       >
-        <h2 className="pb-4">{heading}</h2>
+        <h2 className="pb-4 md:pb-8 lg:pb-6">{heading}</h2>
         {description && (
           <div className={`heading-4 ${isInner ? "lg:w-10/12" : " "} pt-2`}>
             <p>{description}</p>
           </div>
         )}
         {label && (
-          <div className="pb-10">
+          <div className="py-4 lg:pb-10">
             <Link href={href} className="btn">
               {label}
             </Link>

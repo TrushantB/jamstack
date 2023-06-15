@@ -34,39 +34,38 @@
     -moz-osx-font-smoothing: grayscale;
     color: #1c1c1c;
   }
-
   h1,
   .heading-1 {
-    font-size: 3.6rem;
-    line-height: 4.1rem;
+    font-size: 2.625rem;
+    line-height: 1.33;
     font-family: "Neo Sans Pro";
   }
 
   h2,
   .heading-2 {
-    font-size: 3rem;
-    line-height: 4.1rem;
+    font-size: 2.063rem;
+    line-height: 1.33;
     font-family: "Neo Sans Pro";
   }
 
   h3,
   .heading-3 {
-    font-size: 2.6rem;
-    line-height: 3.9rem;
+    font-size: 1.625rem;
+    line-height: 1.33;
     font-family: "Neo Sans Pro";
   }
 
   h4,
   .heading-4 {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.25rem;
+    line-height: 1.33;
     font-family: "Neo Sans Pro";
   }
 
   h5,
   .heading-5 {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: 1rem;
+    line-height: 1.33;
     font-family: "Neo Sans Pro";
   }
   h1,
@@ -413,4 +412,53 @@ svg.edgenetworksecondaryline line.lineanimation {
 
 .player-wrapper video {
   border-radius: 40px;
+}
+@media screen and (min-width: 768px) {
+  .stepperItem:target {
+    scroll-margin-top: 150px;
+  }
+  h1,
+  .heading-1 {
+    font-size: 3.6rem;
+    line-height: 4.1rem;
+  
+  }
+  
+  h2,
+  .heading-2 {
+    font-size: 3rem;
+    line-height: 4.1rem;
+  }
+
+  h3,
+  .heading-3 {
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+  }
+
+  h4,
+  .heading-4 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  h5,
+  .heading-5 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body,
+  html {
+    font-size: 20px;
+  }
 }

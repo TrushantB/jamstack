@@ -36,7 +36,7 @@ function ProductCard({ cards }) {
   },[])
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center relative z-40 gap-5 container lg:mx-auto card">
+    <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:flex justify-center relative z-40 gap-5 container md:px-4  mx-auto card">
       {cards &&
         cards.map((card, index) => (
           <div
