@@ -59,9 +59,11 @@ export default function BlogDetailsTableContent({ blogData }) {
                   ))}
                 </ul>
               </div>
-              <div className="my-6 sticky top-0 hidden lg:block">
-                <BlogContactCard blogData={blogData} />
-              </div>
+              {
+                blogData?.suggestionPost?.title && <div className="my-6 sticky top-0 hidden lg:block">
+                  <BlogContactCard blogData={blogData} />
+                </div>
+              }
             </div>
             <div className="lg:w-3/4">
               {blogData?.tabelContent?.map((item, index) => (
