@@ -5,7 +5,7 @@ import { CustomPortableText } from "@/components/shared/CustomPortableText";
 const Footer = ({
   footerLogo,
   copyRight,
-  socialIcons,
+  socialLink,
   footerMenu,
   secondaryMenu,
 }) => {
@@ -22,14 +22,14 @@ const Footer = ({
               </div>
               <div className="flex gap-4 mt-3">
                 <div className="flex gap-7">
-                  {socialIcons?.map((item, index) => (
+                  {socialLink?.map((item, index) => (
                     <Link
                       className="flex items-center btn-link"
                       key={index}
                       target={item.target}
                       href={item.href}
                     >
-                      <span className={`${item.icon} text-2xl`}></span>
+                      <span className={`${item.iconName} text-2xl`}></span>
                     </Link>
                   ))}
                 </div>
@@ -39,7 +39,11 @@ const Footer = ({
               <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:p-0 lg:p-0">
                 {footerMenu?.map((menuItems, index) => (
                   <li key={index} className="font-semibold mb-2">
-                    <Link className="btn-link" href={`/${menuItems.href}`} target={menuItems.target}>
+                    <Link
+                      className="btn-link"
+                      href={`/${menuItems.href}`}
+                      target={menuItems.target}
+                    >
                       {menuItems.label}
                     </Link>
                   </li>
@@ -51,7 +55,10 @@ const Footer = ({
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
                 <li key={index}>
-                  <Link href={`/${menuItems.href}`} className="font-bold btn-link">
+                  <Link
+                    href={`/${menuItems.href}`}
+                    className="font-bold btn-link"
+                  >
                     {menuItems.label}
                   </Link>
                 </li>

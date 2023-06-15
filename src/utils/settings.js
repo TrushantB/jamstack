@@ -1,12 +1,13 @@
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorSettings = (data) => {
+    console.log("here===>", data?.socialLinks);
     return {
         header: {
             logoUrl: {
-                url: urlForImage(data.logo).url(),
+                url: urlForImage(data.logo).url() ||  '' ,
                 alt: data.logo.logoAlt,
-                herf: '/',
+                href:  data.logo.href || '' ,
             },
 
             headerMenu: data?.headerMenus?.menus,
@@ -26,7 +27,7 @@ const refactorSettings = (data) => {
             socialLink: data?.socialLinks?.map(
                 (item) => ({
                     iconName: item.icon,
-                    href: item.href,
+                    href: item.href || '',
                     alt: item.name,
                     target: item.target,
                 })
@@ -34,16 +35,16 @@ const refactorSettings = (data) => {
         },
         footer: {
             footerLogo: {
-                url: urlForImage(data.logo).url(),
+                url: urlForImage(data.logo).url() || '',
                 alt: data.logo.logoAlt,
-                href: '/',
+                href: data.logo.href || '',
             },
             copyRight: data?.copyRight,
 
             socialLink: data?.socialLinks?.map(
                 (item) => ({
                     iconName: item.icon,
-                    href: item?.href || "",
+                    href: item.href || '',
                     alt: item.name,
                     target: item.target,
                 })

@@ -27,9 +27,9 @@ const IndexPage = ({ homeData, settings }) => {
   return (
     <Layout header={settings.header} footer={settings.footer}>
       <SiteMeta
-        description={homeData.seo.seoDescription}
-        image={homeData.seo.seoImage}
-        title={homeData.seo.seoTitle}
+        description={homeData?.seo?.seoDescription}
+        image={homeData.seo?.seoImage}
+        title={homeData.seo?.seoTitle}
       />
       <div>{<Banner {...homeData.banner} />}</div>
 
