@@ -11,6 +11,8 @@ const refactorJamStack = (data) => {
       "type": data?.banner?.type,
       "size": data.banner?.size,
       "layout": data.banner?.layout,
+      "animationType":"jamstack",
+
     },
     "cards": {
       "heading": data?.cards?.heading,

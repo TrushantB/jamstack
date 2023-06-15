@@ -38,8 +38,7 @@ const refactorHome = (data) => {
     "videoBanner": {
       "heading": data?.videoBanner?.heading,
       "video": {
-        // "Videolink": "/strategy.mp4",
-        // "Videolink": data?.videoBanner?.video?.videoLink?._ref || null,
+        "Videolink": "/Jamstack+.mp4",
         "alt": data?.videoBanner?.video?.alt
       }
     },
