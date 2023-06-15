@@ -28,16 +28,16 @@ const Banner = ({
     mobj: Mobj,
     faq: Faq,
     home: Home,
-    about:About
+    about: About
   };
 
   const MAP_BANNER_BOTTOM_COMPONENT = {
-    pricing:Pricing,
-    jamstack:Jamstack
+    pricing: Pricing,
+    jamstack: Jamstack
   };
-  const BannerLeft = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
+  const BannerLeft = MAP_BANNER_LEFT_COMPONENT['about'] || Ecomj;
 
-  const BannerBottom = MAP_BANNER_BOTTOM_COMPONENT[animationType] || Pricing;
+  const BannerBottom = MAP_BANNER_BOTTOM_COMPONENT['about'] || Pricing;
 
   return (
     <div className="container mx-auto lg:py-24 py-16">
@@ -86,7 +86,7 @@ const Banner = ({
         )}
         {layout === "Image Bottom" && (
           <div className="flex items-center justify-center">
-            <BannerBottom/>
+            <BannerBottom />
           </div>
         )}
       </div>
