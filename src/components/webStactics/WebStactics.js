@@ -92,7 +92,7 @@ function WebStactics({
   return (
     <>
       <div className="bg-secondary">
-        <div className="container mx-auto text-white px-3.5 py-6 lg:pt-16 lg:pb-20 relative container mx-auto">
+        <div className="container mx-auto text-white px-6 py-6 lg:pt-16 lg:pb-20 relative container mx-auto">
           <div className="pt-6 lg:pt-0">
             <h2>{heading}</h2>
           </div>
