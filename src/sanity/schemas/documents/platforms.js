@@ -196,11 +196,49 @@ export default defineType({
                   title: "Label",
                   type: "string",
                 },
-                {
-                  name: "content",
-                  title: "Content",
-                  type: "text",
-                },
+                defineField({
+                  name: 'content',
+                  title: 'Content',
+                  type: 'array',
+                  of: [
+                    defineArrayMember({
+                      type: 'block',
+                      marks: {
+                        annotations: [
+                          {
+                            name: 'link',
+                            type: 'object',
+                            title: 'Link',
+                            fields: [
+                              {
+                                name: 'href',
+                                type: 'url',
+                                title: 'Url',
+                              },
+                            ],
+                          },
+                          {
+                            name: 'image',
+                            type: 'object',
+                            title: 'Image',
+                            fields: [
+                              {
+                                name: 'src',
+                                type: 'url',
+                                title: 'Image URL',
+                              },
+                              {
+                                name: 'alt',
+                                type: 'string',
+                                title: 'Image Alt Text',
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    }),
+                  ],
+                }),
                 {
                   name: "layout",
                   title: "Layout",
@@ -273,6 +311,11 @@ export default defineType({
                     {
                       name: "type",
                       title: "Type",
+                      type: "string",
+                    },
+                    {
+                      name: "href",
+                      title: "Href",
                       type: "string",
                     },
                   ],
