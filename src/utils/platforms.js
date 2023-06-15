@@ -36,8 +36,9 @@ const refactorPlatforms = (data) => {
         })) || [],
         cta: item.cta ? {
           label: item.cta.label !== undefined ? item.cta.label : null,
-          size: item.cta.size !== undefined ? item.cta.size : null,
-          type: item.cta.type !== undefined ? item.cta.size : null,
+          size: item.cta.size ,
+          type: item.cta.type ,
+          href : item.cta.href !== undefined ? item.cta.href : "contact"
         } : [],
       }))
     },

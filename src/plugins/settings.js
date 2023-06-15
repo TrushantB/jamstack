@@ -5,7 +5,7 @@
 import { PreviewPane } from "./previewPane/PreviewPane";
 
 // Schema type objects
-const objectTypes = ['navigation'];
+const objectTypes = ['navigation', 'seo'];
 
 export const singletonPlugin = (types) => {
   return {

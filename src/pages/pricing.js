@@ -43,16 +43,6 @@ const Pricing = ({ pricingData, settings }) => {
         <div>
           <Accordion {...pricingData?.accordinData} isActiveFirst={true} />
         </div>
-        <div className="container mx-auto">
-          <div className="flex justify-start items-center">
-            <Link href={pricingData?.accordinData?.button?.href}>
-              {pricingData?.accordinData?.button?.buttonLabel}
-            </Link>
-            <div
-              className={`w-16 h-16 rounded-full bg-primary relative -z-10 -m-10 my-5`}
-            ></div>
-          </div>
-        </div>
       </div>
 
       <div>

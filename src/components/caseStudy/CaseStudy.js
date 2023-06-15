@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ReadMoreLink from "../Link/Link";
+import { resolveHref } from "@/lib/sanity.links";
 
 const MAP_ICONS = {
   circle: "/circle.png",
@@ -39,7 +40,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                     className={``}
                     key={index}
                   >
-                    <button className="flex gap-0 items-center w-full text-left"m onClick={() => handleItemClick(item)}>
+                    <button className="flex gap-0 items-center w-full text-left" onClick={() => handleItemClick(item)}>
                       {item === selectedItem && (
                         <div className="w-2/12 flex">
                           <div className="diamond w-8 h-8 bg-tertiary"></div>
@@ -74,7 +75,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 <ReadMoreLink
                   label={label}
                   hasIcon={hasIcon}
-                  href={selectedItem?.href}
+                  href={resolveHref(selectedItem?.href)}
                 />
               </div>
             </div>

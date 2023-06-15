@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import { resolveHref } from "@/lib/sanity.links";
 
 function BlogCard({ cards, hasIcon, label, sliderControls }) {
   const [hoverItem, setHoverItem] = useState(null);
@@ -60,10 +61,8 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
-              <Link href="./blog">
-                
+              <Link href={resolveHref(card.href)}>
                   <img
-               
                     className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
                     src={card.image}
                     alt={card.altTag}
@@ -75,17 +74,13 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                     </p>
                     <div className="h-8">
                       {hoverItem === card && (
-                        <Link
-                          className="flex gap-3 items-center text-primary"
-                          href="/jamstack"
-                        >
+                        <a className="flex gap-3 items-center text-primary">
                           {label}
                           <span className="icon-arrow-right2 text-2xl text-primary"></span>
-                        </Link>
+                        </a>
                       )}
                     </div>
                   </div>
-               
               </Link>
             </div>
           ))}

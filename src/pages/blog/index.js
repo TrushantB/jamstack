@@ -1,6 +1,7 @@
 import LinkButton from "@/components/Link/Link";
 import Layout from "@/components/layout";
 import { getBlogs, getSettings } from "@/lib/sanity.client";
+import { resolveHref } from "@/lib/sanity.links";
 import { refactorBlogs } from "@/utils/blogs";
 import { refactorSettings } from "@/utils/settings";
 import Link from "next/link";
@@ -31,7 +32,7 @@ function Blogs({ blogData, settings }) {
                   </a>
                 </div>
                 <div className="pt-7">
-                  <LinkButton label={blogData.label} hasIcon={blogData.hasIcon} href={item.slug} />
+                  <LinkButton label={blogData.label} hasIcon={blogData.hasIcon} href={resolveHref('blog', item.slug)} target="_self" />
                 </div>
               </div>
             </div>

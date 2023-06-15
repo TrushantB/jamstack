@@ -28,12 +28,12 @@ const Banner = ({
     mobj: Mobj,
     faq: Faq,
     home: Home,
-    about:About
+    about: About
   };
 
   const MAP_BANNER_BOTTOM_COMPONENT = {
-    pricing:Pricing,
-    jamstack:Jamstack
+    pricing: Pricing,
+    jamstack: Jamstack
   };
   const BannerLeft = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
 
@@ -86,7 +86,7 @@ const Banner = ({
         )}
         {layout === "Image Bottom" && (
           <div className="flex items-center justify-center">
-            <BannerBottom/>
+            <BannerBottom />
           </div>
         )}
       </div>

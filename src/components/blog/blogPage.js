@@ -1,3 +1,4 @@
+import { resolveHref } from "@/lib/sanity.links";
 import LinkButton from "../Link/Link";
 
 export default function Blogpage({ cards, hasIcon, label, href }) {
@@ -24,7 +25,12 @@ export default function Blogpage({ cards, hasIcon, label, href }) {
               </a>
             </div>
             <div className="pt-7">
-              <LinkButton label={label} hasIcon={hasIcon} href={item.href} />
+              <LinkButton
+                label={label}
+                hasIcon={hasIcon}
+                href={resolveHref('blog', item.href)}
+                target={"_self"}
+              />
             </div>
           </div>
         </div>

@@ -2,7 +2,12 @@ import { groq } from 'next-sanity'
 
 export const homePageQuery = groq`
   *[_type == "home"][0]{
-    ...
+    ...,
+    seo {
+    seoTitle,
+    "seoImage":ogImage,
+    seoDescription
+  }
   }
 `
 export const blogsPageQuery = groq`
