@@ -8,6 +8,7 @@ import Faq from "@/components/svgAnimations/banner/faq";
 import Home from "@/components/svgAnimations/banner/home";
 import Pricing from "@/components/svgAnimations/banner/pricingDesktop";
 import About from "@/components/svgAnimations/banner/about";
+import Jamstack from "@/components/svgAnimations/jamstack/jamstack";
 
 const Banner = ({
   heading,
@@ -29,7 +30,14 @@ const Banner = ({
     home: Home,
     about:About
   };
-  const Component = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
+
+  const MAP_BANNER_BOTTOM_COMPONENT = {
+    pricing:Pricing,
+    jamstack:Jamstack
+  };
+  const BannerLeft = MAP_BANNER_LEFT_COMPONENT[animationType] || Ecomj;
+
+  const BannerBottom = MAP_BANNER_BOTTOM_COMPONENT[animationType] || Pricing;
 
   return (
     <div className="container mx-auto lg:py-24 py-16">
@@ -73,12 +81,12 @@ const Banner = ({
         </div>
         {(layout === "Image Left" || layout === "image-left") && (
           <div className="flex sm:justify-center lg:w-2/5 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
-            <Component />
+            <BannerLeft />
           </div>
         )}
         {layout === "Image Bottom" && (
           <div className="flex items-center justify-center">
-            <Pricing />
+            <BannerBottom/>
           </div>
         )}
       </div>

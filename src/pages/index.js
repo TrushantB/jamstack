@@ -1,94 +1,42 @@
-import { React } from "react";
-import Layout from "@/components/layout";
-import Banner from "@/components/presentational/banner/Banner";
-import WebSection from "@/components/webSection/webSection";
-import TextBannerList from "@/components/textBannerList/textBannerList";
-import VideoBanner from "@/components/VideoBanner/VideoBanner";
-import TextBanner from "@/components/textBanner/TextBanner";
-import WebStactics from "@/components/webStactics/WebStactics";
-import Benefits from "@/components/presentational/benefits/Benefits";
-import ProductCard from "@/components/productCard/productCard";
-import OurClient from "@/components/ourClient/OurClient";
-import EdgeNetwork from "@/components/EdgeNetwork/EdgeNetwork";
-import CaseStudy from "@/components/caseStudy/CaseStudy";
-import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
-import BlogCard from "@/components/blogCard/BlogCard";
-import MordernTechnology from "@/components/modernTechonology/modernTechnology";
-import { getSettings, getHomePage } from "@/lib/sanity.client";
+import { lazy } from "react";
+import {  getHomePage, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
+import { PreviewSuspense } from '@sanity/preview-kit'
+import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
+import Index from "@/components/pages/home";
 import { refactorHome } from "@/utils/home";
 
-const IndexPage = ({ homeData, settings }) => {
+const HomePagePreview = lazy(
+  () => import('@/components/pages/home/preview')
+)
+
+const index = (props) => {
+  const { homeData, settings, preview, token } = props
+
   if (!homeData) {
     return <></>;
   }
 
-  return (
-    <Layout header={settings.header} footer={settings.footer}>
-      <section >{<Banner {...homeData.banner} />}</section>
+  if (preview) {
+    return (
+      <PreviewSuspense
+        fallback={
+          <PreviewWrapper>
+            <Index homeData={homeData} settings={settings} preview={preview} />
+          </PreviewWrapper>
+        }
+      >
+        <HomePagePreview token={token} settings={settings} />
+      </PreviewSuspense>
+    )
+  }
 
-      <section aria-labelledby="webSection"> 
-        <WebSection {...homeData.technologySolution} />
-      </section>
+  return <Index homeData={homeData} settings={settings} />
 
-      <section aria-labelledby="textbanner-list">
-        <TextBannerList {...homeData.textBannerList} />
-      </section>
-
-      <section aria-labelledby="videoBanner" >
-        <VideoBanner {...homeData.videoBanner} />
-      </section>
-
-      <section >
-        <TextBanner {...homeData.textBanner} />
-      </section>
-      <section aria-labelledby="webStactics">
-      <WebStactics  {...homeData.Webstatstics} />
-      </section>
-
-      <section className="">
-        <Benefits {...homeData.benefits} />
-      </section>
-
-      <section className=" ">
-        <h2 className="text-center pb-10">{homeData?.productCard?.heading}</h2>
-        <ProductCard {...homeData.productCard} />
-      </section>
-
-      <section className="">
-        <OurClient {...homeData.ourClient} />
-      </section>
-
-      <section aria-hidden="true">
-        <EdgeNetwork {...homeData.edgeNetwork} />
-      </section>
-
-      <section className="">
-        <CaseStudy {...homeData.caseStudy} />
-      </section>
-
-      <section className="pt-6 pb-4 my-16 lg:my-24 bg-accent-100 ">
-        {<MordernTechnology {...homeData.morderTechnology} />}
-      </section>
-
-      <section className="">
-        <TestimonialCard {...homeData.testimonialCard} />
-      </section>
-
-      <section className="lg:pt-24 pt-14 ">
-        <section className="text-center">
-          <h2>{homeData?.blogCard?.heading}</h2>
-        </section>
-        <section>
-          <BlogCard {...homeData.blogCard} />
-        </section>
-      </section>
-    </Layout>
-  );
 };
 
-export const getStaticProps = async (ctx) => {
-  const { preview = false, previewData = {} } = ctx;
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
 
   const token = previewData.token;
   const [settings, page] = await Promise.all([
@@ -106,4 +54,4 @@ export const getStaticProps = async (ctx) => {
   };
 };
 
-export default IndexPage;
+export default index;

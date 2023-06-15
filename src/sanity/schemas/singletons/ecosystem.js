@@ -133,6 +133,11 @@ export default defineType({
           type: 'string',
           title: 'Size',
         },
+        {
+          name: 'href',
+          type: 'string',
+          title: 'Href',
+        },
       ],
     })
   ],
