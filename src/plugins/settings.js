@@ -2,10 +2,10 @@
  * This plugin contains all the logic for setting up the singletons
  */
 
-// import { apiVersion, previewSecretId } from 'lib/sanity.api'
+import { PreviewPane } from "./previewPane/PreviewPane";
 
-// import { PREVIEWABLE_DOCUMENT_TYPES } from '../sanity.config'
-// import { PreviewPane } from './previewPane/PreviewPane'
+// Schema type objects
+const objectTypes = ['navigation'];
 
 export const singletonPlugin = (types) => {
   return {
@@ -32,11 +32,9 @@ export const singletonPlugin = (types) => {
   }
 }
 
-export const pageStructure = (
-  typeDefArray
-) => {
+export const pageStructure = ({ types, apiVersion, previewSecretId }) => {
   return (S) => {
-    const singletonItems = typeDefArray.map((typeDef) => {
+    const singletonItems = types.map((typeDef) => {
       return S.listItem()
         .title(typeDef.title)
         .icon(typeDef.icon)
@@ -46,15 +44,34 @@ export const pageStructure = (
             .schemaType(typeDef.name)
             .documentId(typeDef.name)
             .views([
+              // Default form view
               S.view.form(),
+              // Preview
+              typeDef.name !== 'settings' && S.view
+                .component((props) => (
+                  <PreviewPane
+                    previewSecretId={previewSecretId}
+                    apiVersion={apiVersion}
+                    {...props}
+                  />
+                ))
+                .title('Preview'),
             ])
         )
     })
 
     // The default root list items (except custom ones)
     const defaultListItems = S.documentTypeListItems().filter(
-      (listItem) =>
-        !typeDefArray.find((singleton) => singleton.name === listItem.getId())
+      (listItem) => {
+        return !types.find((singleton) => {
+          if (singleton.name === listItem.getId()) {
+            return true
+          } else if (objectTypes.includes(listItem.getId())) {
+            return true
+          }
+        })
+      }
+
     )
 
     return S.list()

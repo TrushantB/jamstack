@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { EcomJBanner } from "@/components/animationSvg/ecomj";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Ecomj = () => {
   useEffect(() => {
-    const ecomj = gsap.timeline({ repeat: -1 });
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ecomj = gsap.timeline();
 
     gsap.set("#frame", { opacity: 0, y: 20 });
     gsap.set("#avatar-card", { scale: 0, opacity: 0 });
@@ -23,13 +26,13 @@ const Ecomj = () => {
       .to("#text-card", { x: 0, opacity: 1, duration: 0.3 })
       .to("#symbol-card", { x: 0, opacity: 1, duration: 0.3 });
 
-    ecomj.repeatDelay(3);
-
-    ecomj.play();
-
-    return () => {
-      ecomj.kill();
-    };
+    ScrollTrigger.create({
+      trigger: "#ecomj",
+      start: "1% 20%",
+      end: "80% 70%",
+      animation: ecomj,
+      toggleActions: "restart none none reverse",
+    });
   }, []);
 
   return (

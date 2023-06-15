@@ -1,56 +1,57 @@
-import { React, useState, useEffect } from "react";
-import { get } from "@/client/api";
-import Layout from "@/components/layout";
-import Banner from "@/components/presentational/banner/Banner";
-import Card from "@/components/presentational/card/Card";
-import Accordion from "@/components/accordian/accordion";
-import ProductCard from "@/components/productCard/productCard";
-import JamstackAccordion from "@/components/jamstackAccordian/jamstackAccordian";
+import { lazy } from "react";
+import {  getJamStack, getSettings } from "@/lib/sanity.client";
+import { refactorSettings } from "@/utils/settings";
+import { PreviewSuspense } from '@sanity/preview-kit'
+import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
+import Index from "@/components/pages/jamstack";
+import { refactorJamStack } from "@/utils/jamStack";
 
-const Jamstack = ({ header, footer ,jamstackData }) => {
-  
+const JamstackPagePreview = lazy(
+  () => import('@/components/pages/jamstack/preview')
+)
+
+const index = (props) => {
+  const { jamstackData, settings, preview, token } = props
+
   if (!jamstackData) {
     return <></>;
   }
-  return (
-    <Layout header={header} footer={footer}>
-      <div className="pt-0">
-        <Banner {...jamstackData.banner} isInner={true} />
-      </div>
 
-      <div className="flex flex-col gap-10  lg:flex-row px-5 lg:px-24 py-0">
-        <div className=" lg:w-4/12 flex flex-col justify-center">
-          <h2 className="w-10/12 pb-2">{...jamstackData.cards?.heading}</h2>
-          <p className="lg:w-11/12 ">{...jamstackData.cards?.description}</p>
-        </div>
-        <div className="lg:w-8/12 flex justify-center items-center text-4xl">
-          <Card items={jamstackData?.cards?.cardsitems} />
-        </div>
-      </div>
+  if (preview) {
+    return (
+      <PreviewSuspense
+        fallback={
+          <PreviewWrapper>
+            <Index jamstackData={jamstackData} settings={settings} preview={preview} />
+          </PreviewWrapper>
+        }
+      >
+        <JamstackPagePreview token={token} settings={settings} />
+      </PreviewSuspense>
+    )
+  }
 
-      <div className="lg:px-24 py-12 px-5">
-        <div className="pb-6">
-          <h2 className=" ">{jamstackData?.accordian?.heading}</h2>
-        </div>
-        <div>
-          <JamstackAccordion
-            accordin={jamstackData?.accordian?.accordinaList}
-          />
-        </div>
-      </div>
+  return <Index jamstackData={jamstackData} settings={settings} />
 
-      <div className="pb-24">
-        <h2 className="text-center mb-6 md:mb-8">{jamstackData?.productCard?.heading}</h2>
-        <div>
-          <ProductCard cards={jamstackData?.productCard?.cards} />
-        </div>
-      </div>
-    </Layout>
-  );
 };
-export async function getStaticProps() {
-  const jamstackData = await get("jamStack");
-  return { props: { jamstackData } };
+
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, page] = await Promise.all([
+    getSettings({ token }),
+    getJamStack({ token }),
+  ])
+
+  return {
+    props: {
+      jamstackData: refactorJamStack(page),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
-export default Jamstack;
+export default index;

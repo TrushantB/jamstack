@@ -1,59 +1,57 @@
-import { React } from "react";
-import { get } from "@/client/api";
-import Layout from "@/components/layout";
-import Banner from "@/components/presentational/banner/Banner";
-import MordernTechnology from "@/components/modernTechonology/modernTechnology";
-import { JamStackRecipe } from "@/components/jamStackRecipe/jamStackRecipe";
-import { JamStackStories } from "@/components/jamStackStories/JamStackStories";
-import Card from "@/components/presentational/card/Card";
-import JamSTackAuthor from "@/components/jamStactAuthor/JamSTackAuthor";
-import { AboutArticle } from "@/components/aboutArticle/aboutArticle";
+import { lazy } from "react";
+import {  getAbout, getSettings } from "@/lib/sanity.client";
+import { refactorSettings } from "@/utils/settings";
+import { PreviewSuspense } from '@sanity/preview-kit'
+import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
+import about from "@/components/pages/about";
+import { refactorAbout } from "@/utils/about";
 
-const About = ({ header, footer, aboutData }) => {
+const AboutDataPreview = lazy(
+  () => import('@/components/pages/about/preview')
+)
 
-  return (
-    <Layout header={header} footer={footer}>
-      <div className="container mx-auto">
-        <Banner {...aboutData?.banner} />
-      </div>
-      <div className="flex flex-col py-16 bg-accent-100 ">
-        <MordernTechnology {...aboutData?.morderTechnology} isInner={true} />
-      </div>
+const About = (props) => {
+  const { aboutData, settings, preview, token } = props
 
-      <div className="flex justify-center items-center py-24 px-3 lg:px-0  ">
-        <JamStackRecipe {...aboutData?.jamStackRecipe} />
-      </div>
+  if (!aboutData) {
+    return <></>;
+  }
 
-      <div className="text-white bg-secondary py-12 md:py-24 px-4 xl:px-0">
-        <div className="container mx-auto flex flex-col">
-          <JamStackStories {...aboutData?.jamStackStories} />
-        </div>
-      </div>
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between container mx-auto px-4 xl:px-0 pt-16 xl:pt-20 xl:pb-4">
-        <div className="lg:w-3/12 pb-0">
-          <h2>{aboutData && aboutData.cards && aboutData.cards.heading}</h2>
-        </div>
-        <div className="lg:w-8/12">
-          <Card items={aboutData?.cards?.cardsArray} />
-        </div>
-      </div>
+  if (preview) {
+    return (
+      <PreviewSuspense
+        fallback={
+          <PreviewWrapper>
+            <about aboutData={aboutData} settings={settings} preview={preview} />
+          </PreviewWrapper>
+        }
+      >
+        <AboutDataPreview token={token} settings={settings} />
+      </PreviewSuspense>
+    )
+  }
 
-      <div className="container mx-auto px-4 md:px-0 py-16 lg:py-24">
-        <AboutArticle jamStackProcess={aboutData?.jamStackProcess} />
-      </div>
+  return <about aboutData={aboutData} settings={settings} />
 
-      <div className="text-white bg-secondary">
-        <div className="container mx-auto px-4 md:px-0 py-16 lg:py-24 flex flex-col">
-          <JamSTackAuthor {...aboutData?.jamstackQuote} />
-        </div>
-      </div>
-    </Layout>
-  );
 };
 
-export async function getStaticProps() {
-  const aboutData = await get("aboutUs");
-  return { props: { aboutData } };
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, page] = await Promise.all([
+    getSettings({ token }),
+    getAbout({ token }),
+  ])
+
+  return {
+    props: {
+      aboutData: refactorAbout(page),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
 
 export default About;

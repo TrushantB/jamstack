@@ -1,290 +1,322 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { DocumentIcon, ImageIcon } from "@sanity/icons";
+import { defineArrayMember, defineField, defineType } from "sanity";
 
 export default defineType({
-  type: 'document',
-  name: 'platforms',
-  title: 'platforms',
+  type: "document",
+  name: "platforms",
+  title: "Platforms",
   icon: DocumentIcon,
   fields: [
     defineField({
-      type: 'string',
-      name: 'title',
-      title: 'Title',
+      type: "string",
+      name: "title",
+      title: "Title",
       validation: (rule) => rule.required(),
     }),
     defineField({
-      type: 'slug',
-      name: 'slug',
-      title: 'Slug',
+      type: "slug",
+      name: "slug",
+      title: "Slug",
       options: {
-        source: 'title',
+        source: "title",
       },
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'banner',
-      title: 'Banner',
+      name: "banner",
+      title: "Banner",
       description:
-        'This is a block of text that will be displayed at the bottom of the page.',
-      type: 'object',
+        "This is a block of text that will be displayed at the bottom of the page.",
+      type: "object",
       fields: [
         {
-          name: 'heading',
-          type: 'string',
-          title: 'Heading',
+          name: "heading",
+          type: "string",
+          title: "Heading",
         },
         {
-          name: 'backgroundColor',
-          type: 'string',
-          title: 'Background Color',
+          name: "description",
+          type: "string",
+          title: "Description",
         },
         {
-          name: 'popUp',
-          type: 'object',
-          title: 'Pop-up Configuration',
+          name: "backgroundColor",
+          type: "string",
+          title: "Background Color",
+        },
+
+        {
+          name: "headingSize",
+          type: "string",
+          title: "Heading Size",
+          options: {
+            list: [
+              { title: "Small", value: "small" },
+              { title: "Medium", value: "medium" },
+              { title: "Large", value: "large" },
+            ],
+          },
+          initialValue: "medium",
+        },
+        {
+          name: "image",
+          type: "image",
+          title: "Image",
+          options: {
+            accept: "image/svg+xml",
+          },
+        },
+        {
+          name: "type",
+          type: "string",
+          title: "Type",
+          options: {
+            list: [
+              { title: "Primary", value: "primary" },
+              { title: "Secondary", value: "secondary" },
+              { title: "Tertiary", value: "tertiary" },
+            ],
+          },
+          initialValue: "primary",
+        },
+        {
+          name: "label",
+          type: "string",
+          title: "Label",
+          initialValue: "Start A Project",
+        },
+        {
+          name: "size",
+          type: "string",
+          title: "Size",
+          options: {
+            list: [
+              { title: "Small", value: "small" },
+              { title: "Medium", value: "medium" },
+              { title: "Large", value: "large" },
+            ],
+          },
+          initialValue: "medium",
+        },
+        {
+          name: "layout",
+          type: "string",
+          title: "Layout",
+          options: {
+            list: [
+              { title: "Image Left", value: "image-left" },
+              { title: "Image Right", value: "image-right" },
+              { title: "Image Top", value: "image-top" },
+            ],
+          },
+          initialValue: "image-left",
+        },
+        {
+          name: "href",
+          type: "string",
+          title: "Href",
+          initialValue: "contact",
+        },
+        {
+          name: "animationType",
+          type: "string",
+          title: "Animation Type",
+          options: {
+            list: [
+              { title: "webj", value: "webj" },
+              { title: "mobj", value: "mobj" },
+              { title: "ecomj", value: "ecomj" },
+            ],
+          },
+          initialValue: "home",
+        },
+      ],
+    }),
+    defineField({
+      name: "info",
+      title: "Info",
+      type: "object",
+      fields: [
+        {
+          name: "description",
+          type: "string",
+          title: "Description",
+        },
+        {
+          name: "question",
+          type: "string",
+          title: "Question",
+        },
+        {
+          name: "href",
+          type: "string",
+          title: "Href",
+        },
+        {
+          name: "lineImage",
+          type: "object",
+          title: "Line Image",
           fields: [
             {
-              name: 'headingSize',
-              type: 'string',
-              title: 'Heading Size',
-              options: {
-                list: [
-                  { title: 'Small', value: 'small' },
-                  { title: 'Medium', value: 'medium' },
-                  { title: 'Large', value: 'large' },
-                ],
-              },
-              initialValue: 'medium',
+              name: "url",
+              type: "string",
+              title: "URL",
             },
             {
-              name: 'image',
-              type: 'image',
-              title: 'Image',
-              options: {
-                accept: 'image/svg+xml',
-              },
-            },
-            {
-              name: 'type',
-              type: 'string',
-              title: 'Type',
-              options: {
-                list: [
-                  { title: 'Primary', value: 'primary' },
-                  { title: 'Secondary', value: 'secondary' },
-                  { title: 'Tertiary', value: 'tertiary' },
-                ],
-              },
-              initialValue: 'primary',
-            },
-            {
-              name: 'label',
-              type: 'string',
-              title: 'Label',
-              initialValue: 'Start A Project',
-            },
-            {
-              name: 'size',
-              type: 'string',
-              title: 'Size',
-              options: {
-                list: [
-                  { title: 'Small', value: 'small' },
-                  { title: 'Medium', value: 'medium' },
-                  { title: 'Large', value: 'large' },
-                ],
-              },
-              initialValue: 'medium',
-            },
-            {
-              name: 'layout',
-              type: 'string',
-              title: 'Layout',
-              options: {
-                list: [
-                  { title: 'Image Left', value: 'image-left' },
-                  { title: 'Image Right', value: 'image-right' },
-                  { title: 'Image Top', value: 'image-top' },
-                ],
-              },
-              initialValue: 'image-left',
-            },
-            {
-              name: 'href',
-              type: 'string',
-              title: 'Href',
-              initialValue: 'contact',
-            },
-            {
-              name: 'animationType',
-              type: 'string',
-              title: 'Animation Type',
-              options: {
-                list: [
-                  { title: 'Home', value: 'home' },
-                  { title: 'Fade', value: 'fade' },
-                  { title: 'Slide', value: 'slide' },
-                ],
-              },
-              initialValue: 'home',
+              name: "alt",
+              type: "string",
+              title: "Alt",
             },
           ],
         },
       ],
     }),
     defineField({
-      name: 'info',
-      title: 'Info',
-      type: 'object',
+      name: "stepperData",
+      title: "Stepper Data",
+      type: "object",
       fields: [
         {
-          name: 'description',
-          type: 'text',
-          title: 'Description',
+          name: "heading",
+          title: "Heading",
+          type: "string",
         },
         {
-          name: 'question',
-          type: 'string',
-          title: 'Question',
-        },
-        {
-          name: 'href',
-          type: 'string',
-          title: 'URL',
-        },
-        {
-          name: 'lineImage',
-          type: 'object',
-          title: 'Line Image',
-          fields: [
-            {
-              name: 'url',
-              type: 'url',
-              title: 'URL',
-            },
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alt Text',
-            },
-          ],
-        },
-      ],
-    }),
-    defineField({
-      name: 'stepperData',
-      title: 'Stepper Data',
-      type: 'object',
-      fields: [
-        {
-          name: 'heading',
-          type: 'string',
-          title: 'Heading',
-        },
-        {
-          name: 'stepper',
-          type: 'array',
-          title: 'Stepper',
+          name: "stepper",
+          title: "Stepper",
+          type: "array",
           of: [
             {
-              name: 'step',
-              type: 'object',
-              title: 'Step',
+              name: "step",
+              title: "Step",
+              type: "object",
               fields: [
                 {
-                  name: 'label',
-                  type: 'string',
-                  title: 'Label',
+                  name: "label",
+                  title: "Label",
+                  type: "string",
                 },
-                {
+                defineField({
                   name: 'content',
-                  type: 'text',
                   title: 'Content',
-                },
-                {
-                  name: 'layout',
-                  type: 'string',
-                  title: 'Layout',
-                  options: {
-                    list: [
-                      { title: 'Image Right', value: 'imageRight' },
-                      { title: 'Image Left', value: 'imageLeft' },
-                      { title: 'Image Center', value: 'imageCenter' },
-                    ],
-                  },
-                },
-                {
-                  name: 'image',
-                  type: 'image',
-                  title: 'Image',
-                  options: {
-                    hotspot: true,
-                  },
-                },
-                {
-                  name: 'id',
-                  type: 'string',
-                  title: 'ID',
-                },
-                {
-                  name: 'animationType',
-                  type: 'string',
-                  title: 'Animation Type',
-                },
-                {
-                  name: 'faqs',
                   type: 'array',
-                  title: 'FAQs',
+                  of: [
+                    defineArrayMember({
+                      type: 'block',
+                      marks: {
+                        annotations: [
+                          {
+                            name: 'link',
+                            type: 'object',
+                            title: 'Link',
+                            fields: [
+                              {
+                                name: 'href',
+                                type: 'url',
+                                title: 'Url',
+                              },
+                            ],
+                          },
+                          {
+                            name: 'image',
+                            type: 'object',
+                            title: 'Image',
+                            fields: [
+                              {
+                                name: 'src',
+                                type: 'url',
+                                title: 'Image URL',
+                              },
+                              {
+                                name: 'alt',
+                                type: 'string',
+                                title: 'Image Alt Text',
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    }),
+                  ],
+                }),
+                {
+                  name: "layout",
+                  title: "Layout",
+                  type: "string",
+                },
+                {
+                  name: "image",
+                  title: "Image",
+                  type: "image",
+                },
+                {
+                  name: "id",
+                  title: "ID",
+                  type: "string",
+                },
+                {
+                  name: "animationType",
+                  title: "Animation Type",
+                  type: "string",
+                },
+                {
+                  name: "faqs",
+                  title: "FAQs",
+                  type: "array",
                   of: [
                     {
-                      name: 'faq',
-                      type: 'object',
-                      title: 'FAQ',
+                      name: "faq",
+                      title: "FAQ",
+                      type: "object",
                       fields: [
                         {
-                          name: 'label',
-                          type: 'string',
-                          title: 'Label',
+                          name: "label",
+                          title: "Label",
+                          type: "string",
                         },
                         {
-                          name: 'description',
-                          type: 'text',
-                          title: 'Description',
+                          name: "description",
+                          title: "Description",
+                          type: "text",
                         },
                         {
-                          name: 'icon',
-                          type: 'string',
-                          title: 'Icon',
+                          name: "icon",
+                          title: "Icon",
+                          type: "string",
                         },
                         {
-                          name: 'arrow',
-                          type: 'boolean',
-                          title: 'Arrow',
+                          name: "arrow",
+                          title: "Arrow",
+                          type: "boolean",
                         },
                       ],
                     },
                   ],
                 },
                 {
-                  name: 'cta',
-                  type: 'object',
-                  title: 'Call to Action',
+                  name: "cta",
+                  title: "CTA",
+                  type: "object",
                   fields: [
                     {
-                      name: 'label',
-                      type: 'string',
-                      title: 'Label',
+                      name: "label",
+                      title: "Label",
+                      type: "string",
                     },
                     {
-                      name: 'size',
-                      type: 'string',
-                      title: 'Size',
+                      name: "size",
+                      title: "Size",
+                      type: "string",
                     },
                     {
-                      name: 'type',
-                      type: 'string',
-                      title: 'Type',
+                      name: "type",
+                      title: "Type",
+                      type: "string",
+                    },
+                    {
+                      name: "href",
+                      title: "Href",
+                      type: "string",
                     },
                   ],
                 },
@@ -295,74 +327,95 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'morderTechnologyOne',
-      title: 'Modern Technology One',
-      type: 'object',
+      name: "morderTechnologyOne",
+      title: "Morder Technology One",
+      type: "object",
       fields: [
         {
-          name: 'heading',
-          type: 'string',
-          title: 'Heading',
+          name: "heading",
+          title: "Heading",
+          type: "text",
+        },
+        {
+          name: "label",
+          title: "Label",
+          type: "string",
         },
         {
           name: 'type',
-          type: 'string',
           title: 'Type',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Primary', value: 'primary' },
+              { title: 'Secondary', value: 'secondary' },
+              { title: 'Tertiary', value: 'tertiary' },
+            ],
+          },
+          initialValue: 'primary',
         },
         {
-          name: 'label',
-          type: 'string',
-          title: 'Label',
+          name: "size",
+          type: "string",
+          title: "Size",
+          options: {
+            list: [
+              { title: "Small", value: "small" },
+              { title: "Medium", value: "medium" },
+              { title: "Large", value: "large" },
+            ],
+          },
+          initialValue: "medium",
         },
         {
-          name: 'size',
-          type: 'string',
-          title: 'Size',
-        },
-        {
-          name: 'href',
-          type: 'string',
-          title: 'Href',
+          name: "href",
+          title: "Href",
+          type: "string",
         },
       ],
     }),
     defineField({
-      name: 'accordian',
-      title: 'Accordian',
-      type: 'object',
+      name: "accordian",
+      title: "Accordian",
+      type: "object",
       fields: [
         {
-          name: 'heading',
-          type: 'string',
-          title: 'Heading',
+          name: "heading",
+          title: "Heading",
+          type: "string",
         },
         {
-          name: 'accordinaList',
-          type: 'array',
-          title: 'Accordian List',
+          name: "accordianIcon",
+          title: "Accordian Icon",
+          type: "string",
+        },
+        {
+          name: "accordinaList",
+          title: "Accordian List",
+          type: "array",
           of: [
             {
-              type: 'object',
+              type: "object",
               fields: [
                 {
-                  name: 'label',
-                  type: 'string',
-                  title: 'Label',
+                  name: "label",
+                  title: "Label",
+                  type: "string",
                 },
                 {
-                  name: 'description',
-                  type: 'text',
-                  title: 'Description',
+                  name: "description",
+                  title: "Description",
+                  type: "text",
                 },
                 {
-                  name: 'icon',
-                  type: 'string',
-                  title: 'Icon',
+                  name: "icon",
+                  title: "Icon",
+                  type: "string",
                 },
                 {
-                  name: 'arrow',
-                  type: 'boolean',
-                  title: 'Arrow',
+                  name: "arrow",
+                  title: "Arrow",
+                  type: "boolean",
                 },
               ],
             },
@@ -377,41 +430,252 @@ export default defineType({
       fields: [
         {
           name: 'heading',
-          type: 'string',
           title: 'Heading',
+          type: 'string',
         },
         {
           name: 'href',
-          type: 'string',
           title: 'Href',
+          type: 'string',
         },
         {
           name: 'type',
-          type: 'string',
           title: 'Type',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Primary', value: 'primary' },
+              { title: 'Secondary', value: 'secondary' },
+              { title: 'Tertiary', value: 'tertiary' },
+            ],
+          },
+          initialValue: 'primary',
         },
         {
           name: 'label',
-          type: 'string',
           title: 'Label',
+          type: 'string',
         },
         {
           name: 'size',
-          type: 'string',
           title: 'Size',
+          type: 'string',
+          options: {
+            list: [
+              { title: 'Small', value: 'small' },
+              { title: 'Medium', value: 'medium' },
+              { title: 'Large', value: 'large' },
+            ],
+          },
+          initialValue: 'medium',
+        },
+      ],
+    }),
+    defineField({
+      name: "caseStudy",
+      title: "Case Study",
+      type: "object",
+      fields: [
+        {
+          name: "heading",
+          title: "Heading",
+          type: "string",
+        },
+        {
+          name: "description",
+          title: "Description",
+          type: "string",
+        },
+        {
+          name: "itemList",
+          title: "Item List",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  name: "label",
+                  title: "Label",
+                  type: "string",
+                },
+                {
+                  name: "href",
+                  title: "Href",
+                  type: "string",
+                },
+                {
+                  name: "percentageList",
+                  title: "Percentage List",
+                  type: "array",
+                  of: [
+                    {
+                      type: "object",
+                      fields: [
+                        {
+                          name: "percentage",
+                          title: "Percentage",
+                          type: "string",
+                        },
+                        {
+                          name: "description",
+                          title: "Description",
+                          type: "string",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "hasIcon",
+          title: "Has Icon",
+          type: "boolean",
+        },
+        {
+          name: "label",
+          title: "Label",
+          type: "string",
+        },
+        {
+          name: "icon",
+          title: "Icon",
+          type: "string",
+        },
+        {
+          name: "href",
+          title: "Href",
+          type: "string",
+        },
+      ],
+    }),
+    defineField({
+      name: "testimonialCard",
+      title: "Testimonial Card",
+      type: "object",
+      fields: [
+        {
+          name: "heading",
+          title: "Heading",
+          type: "string",
+        },
+        {
+          name: "cards",
+          title: "Cards",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  name: "name",
+                  title: "Name",
+                  type: "string",
+                },
+                {
+                  name: "description",
+                  title: "Description",
+                  type: "string",
+                },
+                {
+                  name: "image",
+                  title: "Image",
+                  type: "image",
+                  options: {
+                    hotspot: true,
+                  },
+                },
+                {
+                  name: "alt",
+                  title: "Alt Text",
+                  type: "string",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "blogCard",
+      title: "Blog Card",
+      type: "object",
+      fields: [
+        {
+          name: "heading",
+          title: "Heading",
+          type: "string",
+        },
+        {
+          name: "cards",
+          title: "Cards",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  name: "image",
+                  title: "Image",
+                  type: "image",
+                  options: {
+                    hotspot: true,
+                  },
+                },
+                {
+                  name: "alt",
+                  title: "Alt Text",
+                  type: "string",
+                },
+                {
+                  name: "label",
+                  title: "Label",
+                  type: "string",
+                },
+                {
+                  name: "description",
+                  title: "Description",
+                  type: "string",
+                },
+                {
+                  name: "buttonLabel",
+                  title: "Button Label",
+                  type: "string",
+                },
+                {
+                  name: "href",
+                  title: "Link Href",
+                  type: "string",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "hasIcon",
+          title: "Has Icon",
+          type: "boolean",
+        },
+        {
+          name: "label",
+          title: "Read More Label",
+          type: "string",
         },
       ],
     }),
   ],
   preview: {
     select: {
-      title: 'title',
+      title: "title",
     },
     prepare({ title }) {
       return {
-        subtitle: 'Platforms',
+        subtitle: "Platforms",
         title,
-      }
+      };
     },
   },
-})
+});

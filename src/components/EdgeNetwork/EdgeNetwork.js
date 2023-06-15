@@ -262,9 +262,9 @@ function EdgeNetwork({ heading, image }) {
           <div
             className="relative max-w-max min-w-[55px] md:min-w-[70px] md:min-w-[96px]  z-20 shadow-xl text-[10px] md:text-sm px-2 py-2 md:p-3 mx-auto bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg"
           >
-            {city ? city : "India"}
+            {city ? city : "-"}
           </div>
-          <div className="flex justify-center ">
+          <div className="flex justify-center -mt-5">
             <div className="my-8">
               <div className="relative">
                 <div className="lg:flex items-center flex-col rotate-[90deg] -mt-9 lg:mt-0 absolute left-[10%] right-0 ">

@@ -2,51 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url(icon.css);
+@import url(editor.css);
 
 @layer base {
-  @font-face {
-    font-family: "Neo Sans Pro";
-    src: url("../assets/fonts/Neo-Sans/Neo-Sans-Pro.woff") format(woff);
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Neo Sans Pro";
-    src: url("../assets/fonts/Neo-Sans/Neo-Sans-Pro-Medium.OTF") format(woff);
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Neo Sans Pro";
-    src: url("../assets/fonts/Neo-Sans/Neo-Sans-Pro-Bold.OTF") format(woff);
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: "Inter";
-    src: url("../assets/fonts/Inter/Inter.woff2") format(woff);
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Inter";
-    src: url("../assets/fonts/Inter/Inter-Medium.ttf") format(woff);
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "Inter";
-    src: url("../assets/fonts/Inter/Inter-Bold.ttf") format(woff);
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-  }
 
   @font-face {
     font-family: "icomoon";
@@ -197,8 +155,8 @@
   transform-style: preserve-3d;
 }
 .blog .slick-track {
-  display: flex !important;
-  gap: 30px !important;
+  display: flex ;
+  gap: 30px ;
   flex-grow: 1;
 }
 
@@ -226,8 +184,8 @@
 }
 
 .blog .slick-track {
-  display: flex !important;
-  gap: 30px !important;
+  display: flex;
+  gap: 30px;
   flex-grow: 1;
 }
 
@@ -238,8 +196,8 @@
   -webkit-line-clamp: 3;
 }
 
-.product .slick-track {
-  display: flex !important;
+.testimonial  .slick-track {
+  display: flex;
   gap: 20px;
 }
 
@@ -359,6 +317,10 @@
 
 .image:last-child {
   border-bottom: none;
+}
+
+.blogDetailsItems:target {
+  scroll-margin-top: 75px;
 }
 
 @media screen and (min-width: 1024px) {

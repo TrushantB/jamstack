@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-const Info = ({ description, question, lineImage }) => {
+const Info = ({ description, question }) => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+
 
     const tl = gsap.timeline({
       defaults: { duration: 6, ease: "linear" },

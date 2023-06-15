@@ -14,7 +14,6 @@ import platforms from '@/sanity/schemas/documents/platforms'
 import settings from '@/sanity/schemas/singletons/settings'
 import pricing from '@/sanity/schemas/singletons/pricing'
 import contact from '@/sanity/schemas/singletons/contact'
-const singletonTypes = new Set(["settings"]);
 import { pageStructure, singletonPlugin } from '@/plugins/settings'
 import { previewDocumentNode } from '@/plugins/previewPane'
 import { productionUrl } from '@/plugins/productionUrl'
@@ -26,6 +25,9 @@ import blogs from '@/sanity/schemas/singletons/blogs'
 import blog from '@/sanity/schemas/documents/blog'
 import caseStudy from '@/sanity/schemas/singletons/case-study'
 import ecosystem from '@/sanity/schemas/singletons/ecosystem'
+import faq from '@/sanity/schemas/singletons/faq'
+import navigation from '@/sanity/schemas/objects/navigation'
+import author from '@/sanity/schemas/documents/author'
 
 export const PREVIEWABLE_DOCUMENT_TYPES = [
   home.name,
@@ -53,17 +55,23 @@ export default defineConfig({
       blogs,
       blog,
       caseStudy,
-      ecosystem
+      ecosystem,
+      author,
+
+      // Objects
+      navigation
     ],
-    templates: (templates) =>
-      templates.filter(({ schemaType }) => !singletonTypes.has(schemaType)),
   },
   plugins: [
     deskTool({
-      structure: pageStructure([settings, home, pricing, contact]),
+      structure: pageStructure({
+        apiVersion,
+        previewSecretId,
+        types: [settings, home, pricing, contact, jamstack, faq, about, blogs, caseStudy, ecosystem]
+      }),
       defaultDocumentNode: previewDocumentNode({ apiVersion, previewSecretId }),
     }),
-    singletonPlugin([home.name, settings.name, pricing.name, contact.name]),
+    singletonPlugin([home.name, settings.name, pricing.name, contact.name, jamstack.name, faq.name, about.name, blogs.name, caseStudy.name, ecosystem.name]),
     productionUrl({
       apiVersion,
       previewSecretId,

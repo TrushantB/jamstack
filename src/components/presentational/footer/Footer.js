@@ -16,7 +16,7 @@ const Footer = ({
           <div className="grid grid-cols-12   ">
             <div className="col-span-12 mt-10 sm:col-span-6 lg:col-span-7 sm:p-5 lg:p-10 lg:pl-0 sm:m-0 lg:pt-0">
               <div>
-                <Link href={footerLogo?.href}>
+                <Link href={`/${footerLogo?.href}`}>
                   <img className="h-10 w-60" src={footerLogo?.url} alt="logo" />
                 </Link>
               </div>
@@ -39,8 +39,8 @@ const Footer = ({
               <ul className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:p-0 lg:p-0">
                 {footerMenu?.map((menuItems, index) => (
                   <li key={index} className="font-semibold mb-2">
-                    <Link className="btn-link capitalize" href={menuItems.href} target={menuItems.target}>
-                      {`${menuItems.label}`.toLowerCase()}
+                    <Link className="btn-link" href={`/${menuItems.href}`} target={menuItems.target}>
+                      {menuItems.label}
                     </Link>
                   </li>
                 ))}
@@ -51,7 +51,7 @@ const Footer = ({
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
                 <li key={index}>
-                  <Link href={menuItems.href} className="font-bold btn-link capitalize">
+                  <Link href={`/${menuItems.href}`} className="font-bold btn-link">
                     {menuItems.label}
                   </Link>
                 </li>

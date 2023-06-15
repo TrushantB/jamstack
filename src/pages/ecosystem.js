@@ -1,39 +1,57 @@
-import { React, useEffect, useState } from "react";
-import { get } from "@/client/api";
-import { EcoSystemBanner } from "@/components/ecoSystemBanner/ecoSystemBanner";
-import Layout from "@/components/layout";
-import ConnectChoose from "@/components/connectChoose/ConnectChoose";
-import EcosystemAccordion from "@/components/ecosystermAccordian/ecosystemAccordian";
+import { lazy } from "react";
+import { getEcoSystem, getSettings } from "@/lib/sanity.client";
+import { refactorSettings } from "@/utils/settings";
+import { PreviewSuspense } from '@sanity/preview-kit'
+import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
+import Ecosysterm from "@/components/pages/ecosystem";
+import { refactorEco } from "@/utils/ecosystem";
 
-const Ecosysterm = ({ header, footer ,ecoData }) => {
+const EcoSystemPagePreview = lazy(
+  () => import('@/components/pages/ecosystem/preview')
+)
 
-  if (!ecoData) {
+const EcosystermPage = (props) => {
+  const { ecosystemData, settings, preview, token } = props
+
+  if (!ecosystemData) {
     return <></>;
   }
-  return (
-    <Layout header={header} footer={footer}>
 
-      <div className="container mx-auto px-4 xl:px-0 py-16 lg:py-24" >
-        {<EcoSystemBanner {...ecoData.ecoBanner} />}
-      </div>
+  if (preview) {
+    return (
+      <PreviewSuspense
+        fallback={
+          <PreviewWrapper>
+            <Ecosysterm ecosystemData={ecosystemData} settings={settings} preview={preview} />
+          </PreviewWrapper>
+        }
+      >
+        <EcoSystemPagePreview token={token} settings={settings} />
+      </PreviewSuspense>
+    )
+  }
 
-      <div className="container mx-auto px-4 xl:px-0">
-        <div className="pb-6">
-          <h2>{ecoData.accordinData?.heading}</h2>
-        </div>
-        <div className="">
-          {<EcosystemAccordion  {...ecoData.accordinData} />}
-        </div>
-      </div>
+  return <Ecosysterm ecosystemData={ecosystemData} settings={settings} />
 
-      <div className="container mx-auto px-4 xl:px-0 pb-6">
-        <ConnectChoose  {...ecoData.ConnectChoose} />
-      </div>
-    </Layout>
-  );
 };
-export async function getStaticProps() {
-  const ecoData = await get("ecoSystem");
-  return { props: { ecoData } };
+
+export async function getStaticProps(ctx) {
+  const { preview = false, previewData = {} } = ctx
+
+  const token = previewData.token
+  const [settings, page] = await Promise.all([
+    getSettings({ token }),
+    getEcoSystem({ token }),
+  ])
+
+  return {
+    props: {
+      ecosystemData: refactorEco(page),
+      settings: refactorSettings(settings),
+      preview,
+      token: previewData.token ?? null,
+    },
+  }
 }
-export default Ecosysterm;
+
+export default EcosystermPage;
