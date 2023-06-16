@@ -53,10 +53,10 @@ const refactorHome = (data) => {
         "swipe": data?.textBanner?.sliderControls?.swipe
       },
       info: data?.textBanner?.info?.map((item) => ({
-        label: item.label,
-        icon: item.icon,
-        alt: item.alt,
-      }))
+        label: item?.label,
+        icon: item?.icon,
+        alt: item?.alt || "",
+      })) || []
     },
     "Webstatstics": {
       "heading": data?.webstatistics?.heading,

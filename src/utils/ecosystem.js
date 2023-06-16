@@ -1,6 +1,5 @@
 const refactorEco = (data) => {
   return {
-    data: data,
     "ecoBanner": {
       "heading": data?.banner?.heading,
       "description": data?.banner?.description,
@@ -17,10 +16,10 @@ const refactorEco = (data) => {
     "ConnectChoose": {
       "heading": data?.ConnectChoose?.heading,
       "description": data?.ConnectChoose?.description,
-      "buttonLabel": data?.ConnectChoose?.buttonLabel,
       "type": data?.ConnectChoose?.type,
       "label": data?.ConnectChoose?.label,
-      "size": data?.ConnectChoose?.size
+      "size": data?.ConnectChoose?.size,
+      href : data?.ConnectChoose?.href
     }
   }
 }

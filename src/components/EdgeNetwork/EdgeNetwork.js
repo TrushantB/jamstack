@@ -85,7 +85,7 @@ function EdgeNetwork({ heading, image }) {
             </div>
             <div
             className="relative min-w-[50px] md:min-w-[70px] md:min-w-[96px] max-w-max z-20 shadow-xl text-[10px] md:text-sm px-2 py-2 md:p-3 mx-auto bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg">
-              Toronto
+            {city ? "Toronto" : "New York"}
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ function EdgeNetwork({ heading, image }) {
             </div>
           </div>
           <span className="relative text-center z-20 min-w-[50px] md:min-w-[70px] md:min-w-[96px] shadow-xl text-[10px] md:text-sm px-2 py-2 md:p-3 bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg inline-block">
-              Chicago
+          {city ? "Chicago" : "New York"}
           </span>
           <div className="rotate-[180deg]">
             <div
@@ -199,7 +199,7 @@ function EdgeNetwork({ heading, image }) {
               />
           </div>
           <div className="relative min-w-[50px] md:min-w-[70px] md:min-w-[96px] text-center z-20 shadow-xl text-[10px] md:text-sm px-2 py-2 md:p-3 bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg inline-block">
-            Sydney
+          {city ? "Sydney" : "New York"}    
           </div>
           <div>
             <div className="-ml-5 ">
@@ -262,7 +262,7 @@ function EdgeNetwork({ heading, image }) {
           <div
             className="relative max-w-max min-w-[55px] md:min-w-[70px] md:min-w-[96px]  z-20 shadow-xl text-[10px] md:text-sm px-2 py-2 md:p-3 mx-auto bg-gradient-to-r from-primary via-purple-500 to-secondary text-white font-medium rounded-lg"
           >
-            {city ? city : "-"}
+            {city ? city : " "}
           </div>
           <div className="flex justify-center -mt-5">
             <div className="my-8">

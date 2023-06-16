@@ -322,6 +322,10 @@
   scroll-margin-top: 75px;
 }
 
+.accordionItem:target {
+  scroll-margin-top: 75px;
+}
+
 @media screen and (min-width: 1024px) {
   body,
   html {
@@ -333,6 +337,7 @@
     scroll-margin-top: 150px;
   }
 }
+
 
 .image:last-child {
   border-bottom: none;

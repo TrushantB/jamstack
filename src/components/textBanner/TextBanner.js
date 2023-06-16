@@ -1,28 +1,79 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect, useState } from "react";
+import Acclerate from "../svgAnimations/ecosystem/acclerate";
+import Presense from "../svgAnimations/ecosystem/presense";
+import Awarness from "../svgAnimations/ecosystem/awarness";
+import Maintainence from "../svgAnimations/ecosystem/maintainence";
 
-function TextBanner({ info, sliderControls }) {
+const EcosystemAccordion = ({ accordin }) => {
+  const [active, setActive] = useState(null); // Initialize active state as null
+
+  const toggleAccordion = (accordianItem) => {
+    if (active !== accordianItem) {
+      setActive(accordianItem);
+    } else {
+      setActive(null); // Reset active state to null instead of an empty object
+    }
+  };
+
+  const MAP_STEPPER_COMPONENT = {
+    awarness: Awarness,
+    presense: Presense,
+    acclerate: Acclerate,
+    maintainence: Maintainence,
+  };
+
+  useEffect(() => {
+    if (accordin?.length) {
+      setActive(accordin[0]);
+    }
+  }, [accordin]);
+
   return (
-    <div className="flex flex-col bg-accent-100 overflow-hidden">
-      <div className="container gap-5 px-6 py-12 mx-auto lg:px-20">
-        <Slider {...sliderControls}>
-          {info &&
-            info?.map((item, index) => (
-              <div key={index}>
-                <div
-                  className={`${item.icon} w-20 h-20 mb-5 bg-tertiary`}
-                ></div>
-                <div>
-                  <h3 className="w-11/12">{item.label}</h3>
+    <div className="">
+      {accordin?.map((item, index) => {
+        const Component = MAP_STEPPER_COMPONENT[item.animationType];
+
+        const handleScroll = () => {
+          const element = document.getElementById(`accordionItem-${index}`);
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+
+        return (
+          <div
+            className={`accordion-item cursor-pointer ${
+              active === item ? "active" : ""
+            }`}
+            onClick={() => toggleAccordion(item)}
+            key={index}
+            id={`accordionItem-${index}`}
+          >
+            <div
+              onClick={handleScroll}
+              className="accordinItemScroll accordion-title flex justify-between py-1 lg:p-5 lg:ps-0 items-center"
+            >
+              <div className="flex items-center gap-4">
+                <div className="diamond w-5 h-5 bg-tertiary"></div>
+                <h3>{item.label}</h3>
+              </div>
+            </div>
+            {active === item && (
+              <div className="accordion-content flex-col lg:flex-row justify-between flex gap-5 items-start pl-6 lg:pl-10 pb-5">
+                <div className="lg:w-1/2">
+                  <div
+                    className="w-full"
+                    dangerouslySetInnerHTML={{ __html: item.content }}
+                  ></div>
+                </div>
+                <div className="lg:w-1/2 flex justify-end items-center">
+                  {Component && <Component />}
                 </div>
               </div>
-            ))}
-        </Slider>
-      </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
-}
+};
 
-export default TextBanner;
+export default EcosystemAccordion;
