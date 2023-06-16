@@ -36,8 +36,8 @@ const Pricing = ({ pricingData, settings }) => {
         <PricingPlanMobile customPlan={pricingData.customPlan} />
       </div>
 
-      <div className="container mx-auto py-16 lg:py-24">
-        <div className="mb-5">
+      <div className="container mx-auto px-6  ">
+        <div className="text-center lg:text-left mt-16 mb-5">
           <h2>{pricingData?.accordinData.heading}</h2>
         </div>
         <div>

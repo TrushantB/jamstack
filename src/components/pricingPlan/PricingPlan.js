@@ -44,12 +44,12 @@ export default function PricingPlan({ customPlan }) {
     }
 
     return (
-        <div className='mt-16'>
+        <div className='mt-16 container mx-auto'>
             <div className="text-center">
                 <h2 className="font-medium text-6xl">
                     {customPlan?.heading}
                 </h2>
-                <p className="my-6 text-xl px-4 lg:px-56">
+                <p className="my-6 text-xl px-4 lg:px-48">
                     {customPlan?.description}
                 </p>
             </div>
@@ -82,7 +82,7 @@ export default function PricingPlan({ customPlan }) {
                         }
                     </div>
                 </div>
-                <div className="lg:w-1/2 rounded-[40px] bg-[#F1F2F6] pl-4 lg:my-0 lg:pl-24 pr-7 py-16">
+                <div className="lg:w-1/2 rounded-[40px] bg-[#F1F2F6] pl-4 lg:my-0 lg:pl-24 pr-7 py-16 mt-1 md:mt-16 lg:mt-0">
                     <h3 className="font-medium text-center">
                         {customPlan?.idealPlanHeading}
                     </h3>

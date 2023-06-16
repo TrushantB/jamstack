@@ -41,9 +41,9 @@ export default function PricingPlanMobile({ customPlan }) {
     }
 
     return (
-        <div className='mt-16'>
+        <div className='mt-16 container mx-auto px-6 lg:px-0'>
             <div className="text-center">
-                <h2 className="font-medium text-6xl">
+                <h2 className="font-medium lg:text-6xl">
                     {customPlan?.heading}
                 </h2>
                 <p className="my-6 text-xl px-4 lg:px-56">

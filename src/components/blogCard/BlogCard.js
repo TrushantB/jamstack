@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
-import { resolveHref } from "@/lib/sanity.links";
 
 function BlogCard({ cards, hasIcon, label, sliderControls }) {
   const [hoverItem, setHoverItem] = useState(null);
@@ -49,6 +48,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
       },
     ],
   };
+
   return (
     <div className="container mx-auto py-5 lg:py-10 h-full blog">
       <div className="mx-4 lg:mx-0">
@@ -81,8 +81,8 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                     )}
                   </div>
                 </div>
-              </Link>
-            </div>
+                </Link>
+              </div>
           ))}
         </Slider>
       </div>
