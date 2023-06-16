@@ -42,7 +42,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true,
+          dots: false,
           autoplay: true,
           autoplaySpeed: 2000,
         },
@@ -50,7 +50,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
     ],
   };
   return (
-    <div className="container lg:mx-auto py-10 h-full blog">
+    <div className="container mx-auto py-5 lg:py-10 h-full blog">
       <div className="mx-4 lg:mx-0">
         <Slider {...sliderSetting} className="flex flex-grow">
           {cards?.map((card, index) => (

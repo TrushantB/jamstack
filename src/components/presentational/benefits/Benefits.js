@@ -2,7 +2,7 @@ import React from "react";
 
 function Benefits({ heading, benefitsList }) {
   return (
-    <div className=" flex flex-col lg:flex-row  lg:py-24 py-16 container lg:mx-auto ">
+    <div className="container mx-auto flex flex-col lg:flex-row  lg:py-24 py-16 container lg:mx-auto ">
       <div className="mx-4 lg:mx-0 lg:w-4/12">
         <h2 className="lg:w-10/12 mb-5">{heading}</h2>
       </div>
