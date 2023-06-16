@@ -1,138 +1,134 @@
 import React, { useState } from "react";
 import Button from "../form/button/Button";
-import axios from 'axios';
 
-const ProgressBar = ({ report, setShowProgressBar, setShowButton }) => {
+const ProgressBar = ({ report = {}, submitReport }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const submitReport = () => {
-    axios.post("/api/postReport", {
-      "reportUrl": report.data,
-      "webSiteUrl": report.meta.redirectedURL,
-      "email": email,
-      "name": name
-    })
-      .then((data) => {
-        setShowProgressBar(false);
-        setShowButton(true);
-        alert('Report sent successfully. Please check your mail')
-      })
-      .catch((error) => {
-        console.error("error", error);
-      });
-  }
   return (
     <div className="container mx-auto pt-24 lg:pt-14">
       <h4 className=" font-normal mb-14 ml-5">Here are your web vitals</h4>
 
       {/* report results */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        <div className="relative pt-1 mx-5 ">
-          <h5 className="mb-5 text-2xl sm:text-3xl">
-            First contentful paint (FCP)
-          </h5>
-          <div className="">
-            <div className="flex justify-center items-center w-3 bg-white flex-col -mb-3 relative  left-[50%] ">
-              <h6>2.2ms</h6>
-              <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
-              <div className="report-line w-1 py-[12px] bg-black"></div>
-            </div>
-            <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
-              <div
-                style={{ width: "60%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
-              ></div>
-              <div
-                style={{ width: "10%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
-              ></div>
-              <div
-                style={{ width: "30%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
-              ></div>
-            </div>
-          </div>
-        </div>
 
-        <div className="relative pt-1 mx-5 ">
-          <h5 className="mb-5 text-2xl sm:text-3xl">First Input Delay (FID)</h5>
-          <div className="">
-            <div className="flex justify-center items-center w-3 bg-white flex-col -mb-3 relative z-50 left-[90%] ">
-              <h6>2.2ms</h6>
-              <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
-              <div className="report-line w-1 py-[12px] bg-black"></div>
-            </div>
-            <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
-              <div
-                style={{ width: "60%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
-              ></div>
-              <div
-                style={{ width: "10%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
-              ></div>
-              <div
-                style={{ width: "30%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
-              ></div>
+        {
+          report?.firstContentfulPaint?.displayValue &&
+          <div className="relative pt-1 mx-5 ">
+            <h5 className="mb-5 text-2xl sm:text-3xl">
+              {report.firstContentfulPaint?.title} (FCP)
+            </h5>
+            <div className="">
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative  left-[${report.firstContentfulPaint?.score * 100}%]`}>
+                <h6>{report.firstContentfulPaint?.displayValue}</h6>
+                <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
+                <div className="report-line w-1 py-[12px] bg-black"></div>
+              </div>
+              <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
+                <div
+                  style={{ width: "50%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
+                ></div>
+                <div
+                  style={{ width: "40%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
+                ></div>
+                <div
+                  style={{ width: "10%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
+                ></div>
+              </div>
             </div>
           </div>
-        </div>
+        }
 
-        <div className="relative pt-1 mx-5 ">
-          <h5 className="mb-5 text-2xl sm:text-3xl">
-            Largest Contentful Paint (LCP)
-          </h5>
-          <div className="">
-            <div className="flex justify-center items-center w-3 bg-white flex-col -mb-3 relative left-[30%] ">
-              <h6>2.2ms</h6>
-              <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
-              <div className="report-line w-1 py-[12px] bg-black"></div>
-            </div>
-            <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
-              <div
-                style={{ width: "60%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
-              ></div>
-              <div
-                style={{ width: "10%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
-              ></div>
-              <div
-                style={{ width: "30%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
-              ></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative pt-1 mx-5 ">
-          <h5 className="mb-5 text-2xl sm:text-3xl">
-            Cumulative Layout Shift (CLS)
-          </h5>
-          <div className="">
-            <div className="flex justify-center items-center w-3 bg-white flex-col -mb-3 relative  left-[20%] ">
-              <h6>2.2ms</h6>
-              <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
-              <div className="report-line w-1 py-[12px] bg-black"></div>
-            </div>
-            <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
-              <div
-                style={{ width: "60%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
-              ></div>
-              <div
-                style={{ width: "10%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
-              ></div>
-              <div
-                style={{ width: "30%" }}
-                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
-              ></div>
+        {
+          report?.interactive?.displayValue &&
+          <div className="relative pt-1 mx-5 ">
+            <h5 className="mb-5 text-2xl sm:text-3xl">
+              {report.interactive?.title} (TTI)
+            </h5>
+            <div className="">
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative` + ' left-[' + Math.round(report.interactive?.score * 100) + '%]'}>
+                <h6>{report.interactive?.displayValue}</h6>
+                <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
+                <div className="report-line w-1 py-[12px] bg-black"></div>
+              </div>
+              <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
+                <div
+                  style={{ width: "50%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
+                ></div>
+                <div
+                  style={{ width: "40%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
+                ></div>
+                <div
+                  style={{ width: "10%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
+                ></div>
+              </div>
             </div>
           </div>
-        </div>
+        }
+        {
+          report?.largestContentfulPaint?.displayValue && report?.largestContentfulPaint?.score &&
+          <div className="relative pt-1 mx-5 ">
+            <h5 className="mb-5 text-2xl sm:text-3xl">
+              {report.largestContentfulPaint?.title} (LCP)
+            </h5>
+            <div className="">
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative` + ' left-[' + Math.round(report?.largestContentfulPaint?.score * 100) + '%]'}>
+                <h6>{report.largestContentfulPaint?.displayValue}</h6>
+                <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
+                <div className="report-line w-1 py-[12px] bg-black"></div>
+              </div>
+              <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
+                <div
+                  style={{ width: "50%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
+                ></div>
+                <div
+                  style={{ width: "40%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
+                ></div>
+                <div
+                  style={{ width: "10%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
+                ></div>
+              </div>
+            </div>
+          </div>
+        }
+        {
+          report?.cumulativeLayoutShift?.displayValue &&
+          <div className="relative pt-1 mx-5 ">
+            <h5 className="mb-5 text-2xl sm:text-3xl">
+              {report.cumulativeLayoutShift?.title} (CLS)
+            </h5>
+            <div className="">
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative` + ' left-[' + Math.round(report?.cumulativeLayoutShift?.score * 100) + '%]'}>
+                <h6>{report.cumulativeLayoutShift?.displayValue}</h6>
+                <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
+                <div className="report-line w-1 py-[12px] bg-black"></div>
+              </div>
+              <div className="overflow-hidden h-3 mb-4 text-xs flex rounded gap-2 relative -z-10">
+                <div
+                  style={{ width: "50%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-tertiary"
+                ></div>
+                <div
+                  style={{ width: "40%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#F0BB00]"
+                ></div>
+                <div
+                  style={{ width: "10%" }}
+                  className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#449237]"
+                ></div>
+              </div>
+            </div>
+          </div>
+        }
       </div>
 
       <div>
@@ -153,7 +149,7 @@ const ProgressBar = ({ report, setShowProgressBar, setShowButton }) => {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <Button onClick={submitReport} label={"Yes send me the results"} />
+          <Button onClick={() => submitReport(name, email)} label={"Yes send me the results"} />
         </div>
       </div>
     </div>

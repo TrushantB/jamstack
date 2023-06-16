@@ -53,10 +53,10 @@ const refactorHome = (data) => {
         "swipe": data?.textBanner?.sliderControls?.swipe
       },
       info: data?.textBanner?.info?.map((item) => ({
-        label: item.label,
-        icon: item.icon,
-        alt: item.alt,
-      }))
+        label: item.label || "",
+        icon: item.icon || "",
+        alt: item?.alt || "",
+      })) || []
     },
     "Webstatstics": {
       "heading": data?.webstatistics?.heading,
@@ -138,7 +138,7 @@ const refactorHome = (data) => {
         image: urlForImage(item.image).url() || null,
         alt: item.alt || null,
         description: item.description || null,
-        href: "blogs" 
+        href: "blogs"
       })),
       "hasIcon": data?.blogCard?.hasIcon,
       "label": data?.blogCard?.label
