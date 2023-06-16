@@ -51,38 +51,38 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
 
   return (
     <div className="container mx-auto py-5 lg:py-10 h-full blog">
-      <div className="lg:mx-0 mb-10">
-        <Slider {...sliderSetting} className=" flex flex-grow">
+      <div className="mx-4 lg:mx-0">
+        <Slider {...sliderSetting} className="flex flex-grow">
           {cards?.map((card, index) => (
             <div
               key={index}
-              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card lg:w-1/3 hover:bg-accent-100"
+              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card py-1 lg:w-1/3 hover:bg-accent-100"
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
-              <img
-                className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl overflow-hidden"
-                src={card.image}
-                alt={`${card.altTag}`}
-              />
-              <div className="p-4  flex flex-col justify-between">
-                <h4 className="mb-3">{card.label}</h4>
-                <p className="leading-relaxed mb-5 w-9/12">
-                  {card.description}
-                </p>
-                <div className="h-8">
-                  {hoverItem === card && (
-                    <Link
-                      className="flex gap-3 items-center text-primary"
-                      href={`/blogs/${card.slug}`}
-                    >
-                      {label}
-                      <span className="icon-arrow-right2 text-2xl text-primary "></span>
-                    </Link>
-                  )}
+              {/* TODO:static for now */}
+              <Link href={'/blog'}>
+                <img
+                  className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
+                  src={card.image}
+                  alt={card.altTag}
+                />
+                <div className="p-4 flex flex-col justify-between">
+                  <h3 className="mb-3 heading-4">{card.label}</h3>
+                  <p className="leading-relaxed mb-5 w-9/12">
+                    {card.description}
+                  </p>
+                  <div className="h-8">
+                    {hoverItem === card && (
+                      <a className="flex gap-3 items-center text-primary">
+                        {label}
+                        <span className="icon-arrow-right2 text-2xl text-primary"></span>
+                      </a>
+                    )}
+                  </div>
                 </div>
+                </Link>
               </div>
-            </div>
           ))}
         </Slider>
       </div>
