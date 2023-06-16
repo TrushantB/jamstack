@@ -325,6 +325,39 @@
   scroll-margin-top: 75px;
 }
 
+/* Toaster */
+.Toastify .Toastify__toast-container{
+  @apply w-full md:w-112;
+}
+.Toastify__toast.Toastify__toast-theme--light{
+  @apply shadow-lg border border-black rounded-lg;
+}
+.Toastify__toast-theme--light{
+  @apply rounded-lg gap-2;
+}
+.Toastify__toast-container .Toastify__close-button--light{
+  @apply bg-red-100 p-1 rounded-md opacity-100 text-red-400 self-center;
+}
+.Toastify__toast-body{
+  @apply gap-2;
+}
+.Toastify__toast-body > div:last-child{
+  @apply text-sm text-gray-700 leading-snug;
+}
+.Toastify__toast.Toastify__toast--success{
+  @apply bg-green-50;
+}
+.Toastify__toast.Toastify__toast--warning{
+  @apply bg-yellow-50;
+}
+.Toastify__toast.Toastify__toast--error{
+  @apply bg-red-50;
+}
+
+/* 
+ =============== M E D I A - Q U E R I E S =================
+*/
+
 @media screen and (min-width: 1024px) {
   body,
   html {

@@ -36,8 +36,7 @@ function WebStactics({
 
   };
 
-  useEffect(() => {
-    toast.success("Yeah! Your core web vitals report is ready. Please fill in your details to get the report on mail.", 10000);
+  useEffect(() => {    
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 768);
     };
