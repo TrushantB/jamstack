@@ -53,13 +53,13 @@ const Stepper = (stepper ) => {
     bussiness: Bussiness
   }
   return (
-    <>
+    <div className="container mx-auto">
       {/* stepper code */}
-      <div className="pb-28 text-center relative">
+      <div className="pb-4 lg:pb-28 text-center relative">
         <h2>{stepper?.heading}</h2>
       </div>
       <div>
-        <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-7 text-center lg:text-left sticky py-2 top-16 bg-white">
+        <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-3 lg:mb-7 text-center lg:text-left sticky py-2 top-16 bg-white">
           {stepper?.stepper?.map((step, index) => (
             <a href={`#${step.id}`} key={index}>
               <div
@@ -89,7 +89,7 @@ const Stepper = (stepper ) => {
           const Component = MAP_STEPPER_COMPONENT[step.animationType] || Choose
           return (
             <div
-              className={`stepperItem flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 pb-14 lg:my-0 ${step.layout === "imageLeft"
+              className={`stepperItem flex flex-col gap-5 py-5 lg:gap-0 p-2 lg:p-5 lg:pb-14 lg:my-0 ${step.layout === "imageLeft"
                 ? "lg:flex-row-reverse"
                 : "lg:flex-row"
                 }`}
@@ -99,7 +99,7 @@ const Stepper = (stepper ) => {
               {step.layout !== "imageCenter" ? (
                 <>
                   <div className="lg:w-1/2" >
-                    <h3 className="pb-5">
+                    <h3 className="pb-3 lg:pb-5">
                       <span>{index + 1}.</span> {step.label}
                     </h3>
                     <div>
@@ -116,16 +116,16 @@ const Stepper = (stepper ) => {
                 </>
               ) : (
                 <div
-                  className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 mx-auto"
+                  className="flex flex-col lg:flex-row gap-5 lg:gap-0 p-2 lg:p-0 my-2 lg:my-0 lg:mx-auto"
                   id={step.id}
                 >
                   <div className="">
-                    <div className="icon-ic_launch text-7xl text-center text-tertiary pb-6"></div>
-                    <h3 className="pb-4 text-center">
+                    <div className="icon-ic_launch text-7xl lg:text-center text-tertiary pb-6"></div>
+                    <h3 className="pb-3 lg:text-center">
                       <span>{index + 1}.</span> {step.label}
                     </h3>
-                    <CustomPortableText paragraphClasses={'text-center pb-6'} value={step?.content} />
-                    <div className="flex justify-center items-center mt-4">
+                    <CustomPortableText paragraphClasses={'lg:text-center pb-6'} value={step?.content} />
+                    <div className="flex lg:justify-center items-center lg:mt-4">
                       <Button {...step?.cta} />
                     </div>
                   </div>
@@ -135,7 +135,7 @@ const Stepper = (stepper ) => {
           )
         })}
       </div>
-    </>
+    </div>
   );
 };
 
