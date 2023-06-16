@@ -53,7 +53,7 @@ const Footer = ({
           <div className="grid grid-cols-1 sm:grid-cols-3 sm:py-5 lg:py-10 lg:mt-5 sm:mt-0 ">
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
-                <li key={index}>
+                <li className="mb-2" key={index}>
                   <Link href={resolveHref(menuItems.href)} className="font-bold btn-link">
                     {menuItems.label}
                   </Link>

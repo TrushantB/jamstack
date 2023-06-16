@@ -12,7 +12,7 @@ const Contact = ({ contactData, settings }) => {
     return (
         <Layout header={settings.header} footer={settings.footer}>
             <div className="container mx-auto">
-                <div className="lg:px-6 px-5 pt-24">
+                <div className="lg:px-6 px-5 pt-10 lg:pt-24">
                     <h2 className="lg:w-3/4">{contactData?.heading}</h2>
                     <p className="lg:w-3/4 pt-6">{contactData?.description}</p>
                 </div>
@@ -20,8 +20,8 @@ const Contact = ({ contactData, settings }) => {
                     <Form script={contactData?.form} />
                 </div>
 
-                <div className="lg:px-6 px-5 pt-16 md:w-3/4">
-                    <h3 className=" pb-5">{contactData?.contactDetails}</h3>
+                <div className="lg:px-6 px-5 pt-5 lg:pt-16 md:w-3/4">
+                    <h3 className=" pb-3">{contactData?.contactDetails}</h3>
                     <a
                         href="mailto: hello@jamstack.plus"
                         className="text-primary heading-5 lg:text-4xl"
@@ -30,9 +30,8 @@ const Contact = ({ contactData, settings }) => {
                     </a>
                 </div>
 
-                <div className="pt-20 md:pt-32 px-5 lg:px-6">
+                <div className="pt-14 md:pt-20 lg:pt-24 px-5 lg:px-6">
                     <CaseStudy {...contactData?.caseStudy} />
-
                 </div>
 
                 <div className="lg:px-6 px-5 pt-28">

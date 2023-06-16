@@ -30,7 +30,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
   return (
     <div className="mx-auto container ">
       <div className="mx-4">
-        {heading && <h2 className="lg:pl-1 mb-8 text-center lg:text-left">{heading}</h2>}
+        {heading && <h2 className="lg:pl-1 mb-6 lg:mb-8 text-center lg:text-left">{heading}</h2>}
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-4/12  pb-6 lg:pb-12 lg:pb-0">
             <ul className="p-1 flex flex-col gap-6">
@@ -42,7 +42,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                   >
                     <button className="flex gap-0 items-center w-full text-left" onClick={() => handleItemClick(item)}>
                       {item === selectedItem && (
-                        <div className="w-2/12 md:w-1/12 lg:w-2/12 flex">
+                        <div className="w-2/12 flex">
                           <div className="diamond w-8 h-8 bg-tertiary"></div>
                         </div>
                       )}
