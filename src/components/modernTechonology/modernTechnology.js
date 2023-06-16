@@ -27,7 +27,7 @@ function MordernTechnology({
         )}
         {label && (
           <div className="py-4 lg:pb-10">
-            <Link href={href} className="btn">
+            <Link href={href} role="button" aria-label={label} className="btn">
               {label}
             </Link>
           </div>
