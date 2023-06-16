@@ -17,7 +17,7 @@ const Ecomj = () => {
       .to("#diamond-card", { x: -30, opacity: 0 })
       .to("#avatar", { y: 30, opacity: 0 })
       .to("#avatar-card", { scale: 0, opacity: 0 })
-      .to("#frame", { opacity: 0, y: 20 });
+      
 
     ScrollTrigger.create({
       trigger: "#ecomj",

@@ -20,7 +20,7 @@ const Mobj = () => {
     .to(".shape .inner", {rotate: 360,opacity: 1,transformOrigin: "center center",duration: 0.6,})
     .to(".shape .outer", { rotate: -360, opacity: 0, transformOrigin: "center center", duration: 0.6 })
     .to("#shapes-card", { y: 30, opacity: 0 })
-    .to("#frame", { opacity: 0, y:20, duration: 0.3 })
+ 
     
     ScrollTrigger.create({
       trigger: "#mobj",
@@ -28,7 +28,6 @@ const Mobj = () => {
       end: "+=300",
       animation: mobj,
       toggleActions: "restart none none reverse",
-      markers:true,
       scrub:true
     });
     

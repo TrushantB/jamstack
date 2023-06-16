@@ -17,7 +17,7 @@ const Pricing = () => {
       .to("#review", { x: -150, opacity: 0, duration: 0.4 })
       .to("#shape-box", { y: 100, opacity: 0, duration: 0.4 })
       .to("#pricing-text", { opacity: 0, duration: 0.4 })
-      .to("#pricing-frame", { opacity: 0, y: 20, duration: 0.4 });
+
 
     ScrollTrigger.create({
       trigger: "#Pricing-Desktop",
@@ -25,9 +25,7 @@ const Pricing = () => {
       end: "+=600",
       animation: pricing,
       toggleActions: "restart none none reverse",
-      scrub: true,
-      markers: true,
-    });
+      scrub: true,});
   }, []);
 
   useEffect(() => {

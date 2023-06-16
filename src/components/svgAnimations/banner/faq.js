@@ -16,7 +16,7 @@ const Faq = () => {
     .to("#section_2", { y: 50, opacity: 0, duration: 0.3 })
     .to("#section_1", { y:50, opacity: 0, duration: 0.3 })
     .to("#text", { x: 100, opacity: 0, duration: 0.3 })
-    .to("#frame", { opacity: 0, y: 20, duration: 0.3 })
+    
 
     ScrollTrigger.create({
       trigger: "#faq",

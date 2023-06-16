@@ -10,9 +10,9 @@ function ConnectChoose({ heading, description, type, size, label , href }) {
         {description}
       </p>
       <div className='pt-8'>
-        <Link href={href} >
-          <Button type={type} size={size} label={label} />
-        </Link>
+        {/* <Link  > */}
+          <Button href={href} type={type} size={size} label={label} />
+        {/* </Link> */}
       </div>
     </div>
   )
