@@ -17,8 +17,8 @@ const Mobj = () => {
     .to("#circle_2", { opacity: 0, duration: 0.3 })
     .to("#circle_1", { opacity: 0, duration: 0.3 })
     .to("#avatar_group", {y: 10, opacity: 0, transformOrigin: "center center",duration: 0.3,})
-    .to(".shape .inner", {rotate: 360,opacity: 1,transformOrigin: "center center",duration: 0.3,})
-    .to(".shape .outer", { rotate: -360, opacity: 0, transformOrigin: "center center", duration: 0.3 })
+    .to(".shape .inner", {rotate: 360,opacity: 1,transformOrigin: "center center",duration: 0.6,})
+    .to(".shape .outer", { rotate: -360, opacity: 0, transformOrigin: "center center", duration: 0.6 })
     .to("#shapes-card", { y: 30, opacity: 0 })
     .to("#frame", { opacity: 0, y:20, duration: 0.3 })
     
