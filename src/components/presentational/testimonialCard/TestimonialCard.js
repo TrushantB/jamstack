@@ -41,7 +41,6 @@ function TestimonialCard({ cards, heading }) {
     arrows: false,
     autoplaySpeed: 2500,
     Infinity:true,
-    // variableWidth: true,
 
     responsive: [
       {
