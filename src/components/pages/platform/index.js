@@ -25,7 +25,7 @@ const Platform = ({ platformsData, settings, preview }) => {
 
             <Info {...platformsData.info} />
 
-            <div className="pb-12 md:pb-24 lg:px-24 px-5 ">
+            <div className="pb-4 md:pb-14 lg:pb-24 lg:px-24 px-5 ">
                 <Stepper {...platformsData?.stepperData} />
             </div>
 
@@ -33,7 +33,7 @@ const Platform = ({ platformsData, settings, preview }) => {
                 <ModernTechnologyOne {...platformsData?.morderTechnologyOne} />
             </div>
 
-            <div className="container mx-auto px-4 md:px-0 py-16 md:py-24">
+            <div className="container mx-auto px-4 md:px-0 pt-8 pb-14 md:py-20 lg:py-24">
                 {<PlatformAccordian {...platformsData?.accordian} />}
             </div>
 
@@ -45,11 +45,11 @@ const Platform = ({ platformsData, settings, preview }) => {
                 <Cta {...platformsData?.cta} />
             </div>
 
-            <div className="py-12 md:py-24 container mx-auto px-4 md:px-0">
+            <div className="py-12 md:py-20 lg:py-24 container mx-auto px-4 md:px-0">
                 <TestimonialCard {...platformsData?.testimonialCard} />
             </div>
 
-            <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
+            <div className="container mx-auto px-4 md:px-0 pb-12 lg:pb-24">
                 <BlogCard {...platformsData?.blogCard} />
             </div>
         </Layout>

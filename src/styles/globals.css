@@ -118,6 +118,7 @@
   @apply box-border relative block h-3 cursor-pointer;
   width: 30px;
   z-index: 9999;
+  right: 0px;
 }
 
 .header-toggle span {
@@ -473,5 +474,16 @@ svg.edgenetworksecondaryline line.lineanimation {
   body,
   html {
     font-size: 20px;
+  }
+}
+@media screen and (max-height:768px) {
+  .right-side-bar-mt {
+    margin-top: 30px;
+  }
+  .right-side-bar-mb {
+    margin-top: 30px;
+  }
+  .right-side-bar-overflow {
+    overflow-y: scroll;
   }
 }
