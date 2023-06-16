@@ -14,11 +14,10 @@ function MordernTechnology({
   return (
     <>
       <div
-        className={`${
-          isInner
+        className={`${isInner
             ? "text-left container mx-auto "
             : "text-center container lg:w-8/12 mx-auto"
-        } lg:w-full`}
+          } lg:w-full`}
       >
         <h2 className="pb-4 md:pb-8 lg:pb-6">{heading}</h2>
         {description && (

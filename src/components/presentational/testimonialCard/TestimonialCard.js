@@ -108,7 +108,7 @@ function TestimonialCard({ cards, heading }) {
                 >
                   <div className="flex gap-7">
                     <div className="w-4/12 lg:w-3/12 flex items-start sm:justify-center mt-7 sm:mt-0">
-                      <img src={item.image} alt={`${item.name}`} />
+                      <img src={item.image} alt={item.name} />
                     </div>
                     <div className="flex-grow sm:text-left w-5/12 lg:w-10/12 mt-6 sm:mt-0">
                       <p className="leading-relaxed text-base pb-3">
