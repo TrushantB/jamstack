@@ -6,7 +6,7 @@ import Maintainence from "../svgAnimations/ecosystem/maintainence";
 
 const EcosystemAccordion = ({ accordin }) => {
 
-  const [active, setActive] = useState(typeof window !== 'undefined' ? {} : null);
+  const [active, setActive] = useState(null);
 
   const toggleAccordion = (accordianItem) => {
     if (active !== accordianItem) {
