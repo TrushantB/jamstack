@@ -71,7 +71,7 @@ const Banner = ({
 
               {label && (
                 <div className="mt-8 md:mt-12 mb-4 lg:mb-0">
-                  <Link href={`${href}`} className="btn">
+                  <Link href={`${href}`} role="button" className="btn" aria-label={label}>
                     {label}
                   </Link>
                 </div>

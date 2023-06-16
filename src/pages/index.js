@@ -38,11 +38,11 @@ const index = (props) => {
 export async function getStaticProps(ctx) {
   const { preview = false, previewData = {} } = ctx
 
-  const token = previewData.token
+  const token = previewData.token;
   const [settings, page] = await Promise.all([
     getSettings({ token }),
     getHomePage({ token }),
-  ])
+  ]);
 
   return {
     props: {
@@ -51,7 +51,7 @@ export async function getStaticProps(ctx) {
       preview,
       token: previewData.token ?? null,
     },
-  }
-}
+  };
+};
 
 export default index;
