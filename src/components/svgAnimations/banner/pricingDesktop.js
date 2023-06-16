@@ -67,7 +67,7 @@ const Pricing = () => {
         <DesktopPricing />
       </div>
 
-      <div className="sm:hidden mx-auto mt-10 lg:mt-0 w-9/12">
+      <div className="sm:hidden mx-auto mt-10 lg:mt-0 ">
         <MobilePricing />
       </div>
     </div>

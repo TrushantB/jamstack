@@ -4,9 +4,9 @@ import Link from "next/link";
 
 function OurClient({ heading, imageList, type, label, size, href }) {
   return (
-    <div className="flex flex-col lg:flex-row container lg:mx-auto  py-16  lg:py-24">
-      <div className="mb-12 md:mb-0 mx-4">
-        <h2 className="lg:w-8/12 mb-7">{heading}</h2>
+    <div className="container mx-auto flex flex-col lg:flex-row py-16 lg:py-24">
+      <div className="text-center lg:text-left mb-6 md:mb-12 md:mb-0 mx-4">
+        <h2 className="lg:w-8/12 mb-7 md:mb-10">{heading}</h2>
         <div className="mb-7 lg:0">
           <Link href={href} role="button" className="btn" aria-label={label}>
             {label}

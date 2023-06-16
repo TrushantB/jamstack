@@ -41,6 +41,7 @@ function TestimonialCard({ cards, heading }) {
     slidesToShow: 1,
     arrows: false,
     autoplaySpeed: 2500,
+    Infinity:true,
 
     responsive: [
       {
@@ -89,9 +90,9 @@ function TestimonialCard({ cards, heading }) {
 
   return (
     <div className="testimonial-card ">
-      <div className="flex flex-col lg:flex-row container  lg:mx-auto">
-        <div className="lg:w-5/12 mx-4 lg:mx-0">
-          <h2 className="mb-5 lg:mb-0">{heading}</h2>
+      <div className="flex flex-col lg:flex-row container mx-auto">
+        <div className="text-center lg:text-left lg:w-5/12 mx-4 lg:mx-0">
+          <h2 className="mb-8 lg:mb-0">{heading}</h2>
         </div>
 
         <div

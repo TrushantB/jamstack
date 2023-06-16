@@ -2,6 +2,9 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false,
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
         primary: "#e002a2",
@@ -25,6 +28,7 @@ module.exports = {
       'body': ['Inter'],
       'title': ['Neo Sans Pro'],
     }
+
   },
   variants: {
     extend: {},
