@@ -40,7 +40,7 @@ const Banner = ({
   const BannerBottom = MAP_BANNER_BOTTOM_COMPONENT[animationType] || Pricing;
 
   return (
-    <div className="container mx-auto lg:py-24 py-16">
+    <div className="container mx-auto md:py-24 py-10">
       <div
         className={classNames({
           "md:flex justify-center px-5 flex-col sm:flex-row": true,
@@ -70,7 +70,7 @@ const Banner = ({
               )}
 
               {label && (
-                <div className="mt-12">
+                <div className="mt-8 md:mt-12 mb-4 lg:mb-0">
                   <Link href={`${href}`} role="button" className="btn" aria-label={label}>
                     {label}
                   </Link>
