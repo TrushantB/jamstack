@@ -5,7 +5,8 @@ import Awarness from "../svgAnimations/ecosystem/awarness";
 import Maintainence from "../svgAnimations/ecosystem/maintainence";
 
 const EcosystemAccordion = ({ accordin }) => {
-  const [active, setActive] = useState({});
+
+  const [active, setActive] = useState(null);
 
   const toggleAccordion = (accordianItem) => {
     if (active !== accordianItem) {
@@ -32,15 +33,31 @@ const EcosystemAccordion = ({ accordin }) => {
     <div className="">
       {accordin?.map((item, index) => {
         const Component = MAP_STEPPER_COMPONENT[item.animationType];
+
+        const handleScroll = () => {
+          const element = document.getElementById(`stepperItem-${index}`);
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+
         return (
-          <div className="accordion-item cursor-pointer" key={index}>
-            <div
-              className="accordion-title flex justify-between py-1 lg:p-5 lg:ps-0 items-center"
-              onClick={() => toggleAccordion(item)}
-            >
+          <div
+            className={`accordion-item cursor-pointer ${
+              active === item ? "active" : ""
+            }`}
+            onClick={() => {
+              toggleAccordion(item);
+              
+            }}
+            key={index}
+            id={`stepperItem-${index}`}
+          >
+            <div onClick={() => {
+              handleScroll();
+              
+            }} className="accordinItemScroll accordion-title flex justify-between py-1 lg:p-5 lg:ps-0 items-center">
               <div className="flex items-center gap-4">
                 <div className="diamond w-5 h-5 bg-tertiary"></div>
-                <h3>{item.label}</h3>
+                <h3  >{item.label}</h3>
               </div>
             </div>
             {active === item && (
@@ -62,5 +79,6 @@ const EcosystemAccordion = ({ accordin }) => {
     </div>
   );
 };
+
 
 export default EcosystemAccordion;

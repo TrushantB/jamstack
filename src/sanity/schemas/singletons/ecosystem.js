@@ -114,11 +114,6 @@ export default defineType({
           title: 'Description',
         },
         {
-          name: 'buttonLabel',
-          type: 'string',
-          title: 'Button Label',
-        },
-        {
           name: 'type',
           type: 'string',
           title: 'Type',

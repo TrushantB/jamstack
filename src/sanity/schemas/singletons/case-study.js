@@ -24,88 +24,77 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "caseStudy",
-      title: "Case Study",
-      description:
-        "This is a block of text that will be displayed at the bottom of the page.",
-      type: "object",
-      fields: [
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'block',
+          marks: {
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: 'Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'Url',
+                  },
+                ],
+              },
+            ],
+            decorators: [
+              { 
+                name: 'color', 
+                type: 'object', 
+                title: 'Color', 
+                fields: [
+                  {
+                    name: 'value',
+                    type: 'color',
+                    title: 'Value',
+                  },
+                ],
+              },
+            ],
+          },
+        }),
         {
-          name: "heading",
-          type: "string",
-          title: "Heading",
-        },
-        {
-          name: "description",
-          type: "text",
-          title: "Description",
-        },
-        {
-          name: "itemList",
-          type: "array",
-          title: "Item List",
-          of: [
-            {
-              type: "object",
-              fields: [
-                {
-                  name: "label",
-                  type: "string",
-                  title: "Label",
-                },
-                {
-                  name: "href",
-                  type: "string",
-                  title: "Href",
-                },
-                {
-                  name: "percentageList",
-                  type: "array",
-                  title: "Percentage List",
-                  of: [
-                    {
-                      type: "object",
-                      fields: [
-                        {
-                          name: "percentage",
-                          type: "string",
-                          title: "Percentage",
-                        },
-                        {
-                          name: "description",
-                          type: "string",
-                          title: "Description",
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          name: "hasIcon",
-          type: "boolean",
-          title: "Has Icon",
-        },
-        {
-          name: "label",
-          type: "string",
-          title: "Label",
-        },
-        {
-          name: "icon",
-          type: "string",
-          title: "Icon",
-        },
-        {
-          name: "href",
-          type: "string",
-          title: "Href",
+          type: 'image',
+          name: 'image',
+          title: 'Image',
         },
       ],
     })
+
+    // defineField({
+    //   name: 'content',
+    //   title: 'Content',
+    //   type: 'array',
+    //   of: [
+    //     defineArrayMember({
+    //       type: 'block',
+    //       marks: {
+    //         annotations: [
+    //           {
+    //             name: 'link',
+    //             type: 'object',
+    //             title: 'Link',
+    //             fields: [
+    //               {
+    //                 name: 'href',
+    //                 type: 'url',
+    //                 title: 'Url',
+    //               },
+    //             ],
+    //           },
+    //         ],
+    //       },
+    //     }),
+    //   ],
+    // })
   ],
   preview: {
     select: {
