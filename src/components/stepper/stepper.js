@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState , useEffect } from "react";
 import Button from "../form/button/Button";
 import Accordion from "../accordian/accordion";
 import Onboarding from "../svgAnimations/stepper/onboarding";
@@ -10,6 +10,38 @@ import { CustomPortableText } from "../shared/CustomPortableText";
 
 const Stepper = (stepper ) => {
   const [selectedStep, setSelectedStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(1);
+
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const stepLabelOffset = 110; 
+
+      const stepPositions = stepper?.stepper?.map((step, index) => {
+        const element = document.getElementById(step.id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top + scrollPosition - stepLabelOffset;
+        }
+        return 0;
+      });
+
+      let currentStep = 1;
+      for (let i = 0; i < stepPositions.length; i++) {
+        if (scrollPosition >= stepPositions[i]) {
+          currentStep = i + 1;
+        }
+      }
+
+      setActiveStep(currentStep);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleStepClick = (index) => {
     setSelectedStep(index);
@@ -29,17 +61,19 @@ const Stepper = (stepper ) => {
       <div>
         <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-7 text-center lg:text-left sticky py-2 top-16 bg-white">
           {stepper?.stepper?.map((step, index) => (
-            <a href={`#${step.id}`} key={index} >
+            <a href={`#${step.id}`} key={index}>
               <div
-                className={`flex flex-col lg:flex-row gap-2 items-center ${selectedStep === index + 1 ? "text-primary" : ""
-                  }`}
+                className={`flex flex-col lg:flex-row gap-2 items-center ${
+                  activeStep === index + 1 ? "text-primary" : ""
+                }`}
                 onClick={() => handleStepClick(index + 1)}
               >
                 <div
-                  className={`${selectedStep === index + 1
-                    ? "bg-black text-white"
-                    : "bg-accent-100 "
-                    } p-3  rounded-full h-5 w-5 flex justify-center items-center`}
+                  className={`${
+                    activeStep === index + 1
+                      ? "bg-black text-white"
+                      : "bg-accent-100"
+                  } p-3 rounded-full h-5 w-5 flex justify-center items-center`}
                 >
                   {index + 1}
                 </div>
