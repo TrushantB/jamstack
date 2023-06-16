@@ -35,7 +35,7 @@ const Onboarding = () => {
       .to("#bottom-card", { opacity: 1, y: 0, duration: 0.3 });
 
     ScrollTrigger.create({
-      trigger: "#main",
+      trigger: "#stepperOne",
       start: "10% 60%",
       end: "80% 70%",
       animation: tl,

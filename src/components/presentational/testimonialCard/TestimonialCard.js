@@ -29,6 +29,7 @@ function TestimonialCard({ cards, heading }) {
           start: "top 60%",
           end: "+=400",
           scrub: true,
+          markers:true
         },
       });
     });

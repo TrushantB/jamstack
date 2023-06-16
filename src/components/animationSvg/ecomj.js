@@ -252,10 +252,11 @@ const StepperOne = () => {
       viewBox="0 0 397 439"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      id="stepperOne"
     >
       <g
-        id="main"
-        className=" overflow-hidden"
+        
+        className=" overflow-hidden "
         clip-path="url(#clip0_5_78)"
         filter="url(#filter0_d_5_78)"
       >
