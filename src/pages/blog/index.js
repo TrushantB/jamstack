@@ -17,8 +17,8 @@ function Blogs({ blogData, settings }) {
           {blogData.blogs && blogData.blogs.map((item, index) => (
             <div key={index} className="sm:flex items-start gap-5 pb-12 lg:pb-16">
               <div className="lg:w-2/5 pb-5 lg:pb-0">
-                <Link href={`/blogs/${item.slug}`}>
-                  <img className="w-full md:w-96 h-auto rounded-3xl " src={item.image} />
+                <Link href={resolveHref('blog', item.slug)}>
+                  <img className="w-full h-auto rounded-3xl" src={item.image} />
                 </Link>
               </div>
               <div className="w-ful ">
