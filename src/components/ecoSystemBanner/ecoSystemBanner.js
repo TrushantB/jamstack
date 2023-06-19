@@ -3,7 +3,7 @@ import EcosystemBanner from "../svgAnimations/ecosystem/ecosystemBanner";
 
 export const EcoSystemBanner = ({ heading, description, title }) => {
   return (
-    <div className="flex flex-col sm:flex-row ">
+    <div className="flex flex-col justify-between sm:flex-row ">
       <div className="w-7/12">
         <h1>{heading}</h1>
         <div

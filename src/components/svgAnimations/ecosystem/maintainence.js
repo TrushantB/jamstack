@@ -7,7 +7,7 @@ const Maintainence = () => {
     const maintainence = gsap.timeline({ repeat: -1 });
 
     gsap.set("#background", { opacity: 0, y: 20 });
-    gsap.set("#multi-box", {
+    gsap.set("#multiBox", {
       scale: 0,
       opacity: 0,
       transformOrigin: "center center",
@@ -16,18 +16,18 @@ const Maintainence = () => {
     gsap.set("#instagram", { x: 20, opacity: 0 });
     gsap.set("#whatsapp", { x: -20, y: -20, opacity: 0 });
     gsap.set("#twitter", { x: 20, y: 20, opacity: 0 });
-    gsap.set("#box-chart", { opacity: 0 });
-    gsap.set("#cut-pie", { opacity: 0 });
+    gsap.set("#boxChart", { opacity: 0 });
+    gsap.set("#cutPie", { opacity: 0 });
 
     maintainence
       .to("#background", { opacity: 1, y: 0, duration: 0.3 })
-      .to("#multi-box", { scale: 1, opacity: 1, duration: 0.3 })
+      .to("#multiBox", { scale: 1, opacity: 1, duration: 0.3 })
       .to("#facebook", { y: 0, opacity: 1, duration: 0.2 })
       .to("#instagram", { x: 0, opacity: 1, duration: 0.2 })
       .to("#whatsapp", { x: 0, y: 0, opacity: 1, duration: 0.2 })
       .to("#twitter", { x: 0, y: 0, opacity: 1, duration: 0.2 })
-      .to("#box-chart", { opacity: 1, duration: 0.3 })
-      .to("#cut-pie", { opacity: 1, duration: 0.3 });
+      .to("#boxChart", { opacity: 1, duration: 0.3 })
+      .to("#cutPie", { opacity: 1, duration: 0.3 });
 
     maintainence.repeatDelay(3);
 

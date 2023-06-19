@@ -8,28 +8,28 @@ const EcosystemBanner = () => {
     gsap.registerPlugin(ScrollTrigger);
     const ecosystem = gsap.timeline();
 
-    gsap.set("#two", { x: 0, y: 0 });
+    gsap.set(".two", { x: 0, y: 0 });
 
     ecosystem
 
-      .to("#nestedDiamond", { y: 30, opacity: 0, duration: 0.6 })
-      .to("#orangeUnion", { x: 50, opacity: 0, duration: 0.6 })
-      .to("#white-pentagon", { x: -50, opacity: 0, duration: 0.6 })
-      .to("#dotCircle", { y: -20, opacity: 0, duration: 0.6 })
-      .to("#blueUnion", { y: -30, opacity: 0, duration: 0.6 })
-      .to("#two", {
+      .to(".nested-diamond", { y: 30, opacity: 0, duration: 0.6 })
+      .to(".orange-union", { x: 50, opacity: 0, duration: 0.6 })
+      .to(".white-pentagon", { x: -50, opacity: 0, duration: 0.6 })
+      .to(".dot-circle", { y: -20, opacity: 0, duration: 0.6 })
+      .to(".blue-union", { y: -30, opacity: 0, duration: 0.6 })
+      .to(".shape-two", {
         opacity: 0,
         rotate: 180,
         scale: 0,
         transformOrigin: "center center",
         duration: 0.6,
       })
-      .to("#one", { opacity: 0, duration: 0.6 })
-      .to("#nestedPentagon", { opacity: 0, duration: 0.6 })
-      .to("#nestedCircle", { x: -50, opacity: 0, duration: 0.6 })
-      .to("#pinkCircle", { x: -30, opacity: 0, duration: 0.6 })
-      .to("#longCylinder", { y: -30, opacity: 0, duration: 0.6 })
-      .to("#grayUnion", { opacity: 0, y: 50, duration: 0.6 });
+      .to(".shape-one", { opacity: 0, duration: 0.6 })
+      .to(".nested-pentagon", { opacity: 0, duration: 0.6 })
+      .to(".nested-circle", { x: -50, opacity: 0, duration: 0.6 })
+      .to(".pink-circle", { x: -30, opacity: 0, duration: 0.6 })
+      .to(".long-cylinder", { y: -30, opacity: 0, duration: 0.6 })
+      .to(".gray-union", { opacity: 0, y: 50, duration: 0.6 });
 
     ScrollTrigger.create({
       trigger: ".ecosystem",

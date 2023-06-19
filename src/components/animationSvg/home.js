@@ -9,11 +9,11 @@ const HomeBanner = () => {
     >
       <g className="home">
         <path
-          className="pinkCircle"
+          className="pink-circle"
           d="M100.833 362.448C100.956 334.834 78.6712 312.348 51.0572 312.224C23.4433 312.101 0.957377 334.386 0.833562 362C0.709747 389.614 22.9949 412.1 50.6089 412.223C78.2228 412.347 100.709 390.062 100.833 362.448Z"
           fill="#F0027F"
         />
-        <g className="nestedCircle">
+        <g className="nested-circle">
           <path
             className="Vector"
             d="M316.833 364.448C316.956 336.834 294.671 314.348 267.057 314.224C239.443 314.101 216.957 336.386 216.834 364C216.71 391.614 238.995 414.1 266.609 414.223C294.223 414.347 316.709 392.062 316.833 364.448Z"
@@ -25,7 +25,7 @@ const HomeBanner = () => {
             fill="#F1F2F6"
           />
         </g>
-        <g className="grayUnion">
+        <g className="gray-union">
           <path
             className="Vector_3"
             fill-rule="evenodd"
@@ -45,11 +45,11 @@ const HomeBanner = () => {
           />
         </g>
         <path
-          className="longCylinder"
+          className="long-cylinder"
           d="M101 257L101 51C101 23.3858 78.6142 1 51 1C23.3858 1 1 23.3858 1 51L1 257C1 284.614 23.3858 307 51 307C78.6142 307 101 284.614 101 257Z"
           fill="#F0027F"
         />
-        <g className="blueUnion">
+        <g className="blue-union">
           <path
             className="blur-union"
             fill-rule="evenodd"
@@ -58,12 +58,12 @@ const HomeBanner = () => {
             fill="#4767F6"
           />
           <path
-            className="white-pentagon"
+            className="whitepentagon"
             d="M392.68 51.2901L371.26 80.7727L336.6 69.5113V33.0688L371.26 21.8073L392.68 51.2901Z"
             fill="white"
           />
         </g>
-        <g className="nestedPentagon">
+        <g className="nested-pentagon">
           <g className="Group-1090">
             <path
               className="Vector_6"
@@ -77,7 +77,7 @@ const HomeBanner = () => {
             />
           </g>
         </g>
-        <g className="dotCircle">
+        <g className="dot-circle">
           <path
             className="Vector_8"
             d="M208.833 51.4479C208.956 23.8339 186.671 1.34802 159.057 1.22421C131.443 1.10039 108.957 23.3856 108.834 50.9995C108.71 78.6135 130.995 101.099 158.609 101.223C186.223 101.347 208.709 79.0619 208.833 51.4479Z"
@@ -89,7 +89,7 @@ const HomeBanner = () => {
             fill="#FF5223"
           />
         </g>
-        <g className="nestedDiamond">
+        <g className="nested-diamond">
           <path
             className="Vector_10"
             d="M415.833 158.448C415.956 130.834 393.671 108.348 366.057 108.224C338.443 108.101 315.957 130.386 315.834 158C315.71 185.614 337.995 208.1 365.609 208.223C393.223 208.347 415.709 186.062 415.833 158.448Z"
@@ -101,7 +101,7 @@ const HomeBanner = () => {
             fill="#4767F6"
           />
         </g>
-        <g className="orangeUnion">
+        <g className="orange-union">
           <g className="Group 1085">
             <g className="Group 1089">
               <path
@@ -126,12 +126,12 @@ const HomeBanner = () => {
         </g>
         <g className="Group-1087">
           <path
-            className="one"
+            className="shape-one"
             d="M208.223 261.448C208.347 233.834 186.062 211.348 158.448 211.224C130.834 211.1 108.348 233.386 108.224 261C108.1 288.613 130.386 311.099 157.999 311.223C185.613 311.347 208.099 289.062 208.223 261.448Z"
             fill="#4767F6"
           />
           <path
-            className="two"
+            className="shape-two"
             d="M158.606 296.429L193.821 261.215L158.606 226L123.391 261.215L158.606 296.429Z"
             fill="white"
           />

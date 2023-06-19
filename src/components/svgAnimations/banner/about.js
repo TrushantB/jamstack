@@ -14,17 +14,17 @@ const About = () => {
 
       .to("#nestedDiamond", { y: 30, opacity: 0, duration: 0.6 })
       .to("#orangeUnion", { x: 50, opacity: 0, duration: 0.6 })
-      .to("#white-pentagon", { x: -50, opacity: 0, duration: 0.6 })
+      .to("#whitePentagon", { x: -50, opacity: 0, duration: 0.6 })
       .to("#dotCircle", { y: -20, opacity: 0, duration: 0.6 })
       .to("#blueUnion", { y: -30, opacity: 0, duration: 0.6 })
-      .to("#two", {
+      .to("#shapeTwo", {
         opacity: 0,
         rotate: 180,
         scale: 0,
         transformOrigin: "center center",
         duration: 0.6,
       })
-      .to("#one", { opacity: 0, duration: 0.6 })
+      .to("#shapeOne", { opacity: 0, duration: 0.6 })
       .to("#nestedPentagon", { opacity: 0, duration: 0.6 })
       .to("#nestedCircle", { x: -50, opacity: 0, duration: 0.6 })
       .to("#pinkCircle", { x: -30, opacity: 0, duration: 0.6 })

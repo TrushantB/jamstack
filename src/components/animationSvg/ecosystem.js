@@ -7,13 +7,13 @@ const Ecosystembanner = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="About">
+      <g id="about">
         <path
-          id="pinkCircle"
+          className="pink-circle"
           d="M100.833 362.448C100.956 334.834 78.6712 312.348 51.0572 312.224C23.4433 312.101 0.957377 334.386 0.833562 362C0.709747 389.614 22.9949 412.1 50.6089 412.223C78.2228 412.347 100.709 390.062 100.833 362.448Z"
           fill="#F0027F"
         />
-        <g id="nestedCircle">
+        <g className="nested-circle">
           <path
             id="Vector"
             d="M316.833 364.448C316.956 336.834 294.671 314.348 267.057 314.224C239.443 314.101 216.957 336.386 216.834 364C216.71 391.614 238.995 414.1 266.609 414.223C294.223 414.347 316.709 392.062 316.833 364.448Z"
@@ -25,7 +25,7 @@ const Ecosystembanner = () => {
             fill="#F1F2F6"
           />
         </g>
-        <g id="grayUnion">
+        <g className="gray-union">
           <path
             id="Vector_3"
             fill-rule="evenodd"
@@ -45,11 +45,11 @@ const Ecosystembanner = () => {
           />
         </g>
         <path
-          id="longCylinder"
+          className="long-cylinder"
           d="M101 257L101 51C101 23.3858 78.6142 1 51 1C23.3858 1 1 23.3858 1 51L1 257C1 284.614 23.3858 307 51 307C78.6142 307 101 284.614 101 257Z"
           fill="#F0027F"
         />
-        <g id="blueUnion">
+        <g className="blue-union">
           <path
             id="blur-union"
             fill-rule="evenodd"
@@ -58,12 +58,12 @@ const Ecosystembanner = () => {
             fill="#4767F6"
           />
           <path
-            id="white-pentagon"
+            className="white-pentagon"
             d="M392.68 51.2901L371.26 80.7727L336.6 69.5113V33.0688L371.26 21.8073L392.68 51.2901Z"
             fill="white"
           />
         </g>
-        <g id="nestedPentagon">
+        <g className="nested-pentagon">
           <g id="Group-1090">
             <path
               id="Vector_6"
@@ -77,7 +77,7 @@ const Ecosystembanner = () => {
             />
           </g>
         </g>
-        <g id="dotCircle">
+        <g className="dot-circle">
           <path
             id="Vector_8"
             d="M208.833 51.4479C208.956 23.8339 186.671 1.34802 159.057 1.22421C131.443 1.10039 108.957 23.3856 108.834 50.9995C108.71 78.6135 130.995 101.099 158.609 101.223C186.223 101.347 208.709 79.0619 208.833 51.4479Z"
@@ -89,7 +89,7 @@ const Ecosystembanner = () => {
             fill="#FF5223"
           />
         </g>
-        <g id="nestedDiamond">
+        <g className="nested-diamond">
           <path
             id="Vector_10"
             d="M415.833 158.448C415.956 130.834 393.671 108.348 366.057 108.224C338.443 108.101 315.957 130.386 315.834 158C315.71 185.614 337.995 208.1 365.609 208.223C393.223 208.347 415.709 186.062 415.833 158.448Z"
@@ -101,7 +101,7 @@ const Ecosystembanner = () => {
             fill="#4767F6"
           />
         </g>
-        <g id="orangeUnion">
+        <g className="orange-union">
           <g id="Group 1085">
             <g id="Group 1089">
               <path
@@ -126,12 +126,12 @@ const Ecosystembanner = () => {
         </g>
         <g id="Group-1087">
           <path
-            id="one"
+            className="shape-one"
             d="M208.223 261.448C208.347 233.834 186.062 211.348 158.448 211.224C130.834 211.1 108.348 233.386 108.224 261C108.1 288.613 130.386 311.099 157.999 311.223C185.613 311.347 208.099 289.062 208.223 261.448Z"
             fill="#4767F6"
           />
           <path
-            id="two"
+            className="shape-two"
             d="M158.606 296.429L193.821 261.215L158.606 226L123.391 261.215L158.606 296.429Z"
             fill="white"
           />
@@ -181,7 +181,7 @@ const EcomsystemOne = () => {
             </g>
           </g>
         </g>
-        <g id="shortcard-2">
+        <g id="shortCardTwo">
           <rect
             id="Rectangle 484"
             x="138"
@@ -235,7 +235,7 @@ const EcomsystemOne = () => {
             fill="#FF5223"
           />
         </g>
-        <g id="shortcard-3">
+        <g id="shortCardThree">
           <rect
             id="Rectangle 484_2"
             x="248"
@@ -270,7 +270,7 @@ const EcomsystemOne = () => {
             />
           </g>
         </g>
-        <g id="long-card">
+        <g id="longCard">
           <g id="Group 1073">
             <rect
               id="Rectangle 611"
@@ -326,7 +326,7 @@ const EcomsystemOne = () => {
           />
           <circle id="Ellipse 257" cx="290" cy="203" r="16" fill="#4767F6" />
         </g>
-        <g id="shortcard-1">
+        <g id="shortCardOne">
           <rect
             id="Rectangle 484_3"
             x="27.8438"
@@ -636,7 +636,7 @@ const EcomsystemThree = () => {
             stroke="#4767F6"
           />
         </g>
-        <g id="dual-square">
+        <g id="dualSquare">
           <path
             id="Vector_3"
             d="M113 45H23C20.7909 45 19 46.7909 19 49V125C19 127.209 20.7909 129 23 129H113C115.209 129 117 127.209 117 125V49C117 46.7909 115.209 45 113 45Z"
@@ -653,7 +653,7 @@ const EcomsystemThree = () => {
             fill="#FF5223"
           />
         </g>
-        <g id="bar-chart">
+        <g id="barChart">
           <path
             id="Vector_6"
             d="M226 45H136C133.791 45 132 46.7909 132 49V125C132 127.209 133.791 129 136 129H226C228.209 129 230 127.209 230 125V49C230 46.7909 228.209 45 226 45Z"
@@ -664,7 +664,7 @@ const EcomsystemThree = () => {
           <path id="Vector_9" d="M197 61H185V120H197V61Z" fill="#D9D9D9" />
           <path id="Vector_10" d="M218 90H206V120H218V90Z" fill="#FF5223" />
         </g>
-        <g id="horizontal-bar">
+        <g id="horizontalBar">
           <path
             id="Vector_11"
             d="M226 150H23C20.7909 150 19 151.791 19 154V237C19 239.209 20.7909 241 23 241H226C228.209 241 230 239.209 230 237V154C230 151.791 228.209 150 226 150Z"
@@ -701,7 +701,7 @@ const EcomsystemThree = () => {
             fill="#F0027F"
           />
         </g>
-        <g id="symbol-box">
+        <g id="symbolBox">
           <path
             id="Vector_18"
             d="M339 45H249C246.791 45 245 46.7909 245 49V125C245 127.209 246.791 129 249 129H339C341.209 129 343 127.209 343 125V49C343 46.7909 341.209 45 339 45Z"
@@ -732,7 +732,7 @@ const EcomsystemThree = () => {
           <path id="Vector_25" d="M307 75H279V81H307V75Z" fill="white" />
           <path id="Vector_26" d="M307 108H279V114H307V108Z" fill="white" />
         </g>
-        <g id="pie-box">
+        <g id="pieBox">
           <path
             id="Vector_27"
             d="M339 150H249C246.791 150 245 151.791 245 154V234C245 236.209 246.791 238 249 238H339C341.209 238 343 236.209 343 234V154C343 151.791 341.209 150 339 150Z"
@@ -909,7 +909,7 @@ const EcomsystemFour = () => {
             fill="#FF5223"
           />
         </g>
-        <g id="box-chart">
+        <g id="boxChart">
           <g id="Group" filter="url(#filter1_d_0_1)">
             <path
               id="Vector_21"
@@ -1038,7 +1038,7 @@ const EcomsystemFour = () => {
             fill="#E0E0E0"
           />
         </g>
-        <g id="multi-box">
+        <g id="multiBox">
           <path
             id="Vector_46"
             d="M192.12 163.937H157.918C155.157 163.937 152.918 166.176 152.918 168.937V200.75C152.918 203.511 155.157 205.75 157.918 205.75H192.12C194.882 205.75 197.12 203.511 197.12 200.75V168.937C197.12 166.176 194.882 163.937 192.12 163.937Z"
@@ -1070,7 +1070,7 @@ const EcomsystemFour = () => {
             fill="#F1F2F6"
           />
         </g>
-        <g id="cut-pie">
+        <g id="cutPie">
           <path
             id="Vector_52"
             d="M35.9852 35.9887L71.5621 30.5531C74.5487 50.0738 60.9416 68.579 41.4209 71.5656C21.9121 74.5523 3.39494 60.9451 0.408297 41.4244C-2.5664 21.9157 11.0407 3.3985 30.5495 0.411853C33.6556 -0.0660095 36.8095 -0.125742 39.9395 0.220709L35.9852 35.9887Z"

@@ -13,13 +13,13 @@ const Pricing = () => {
     const pricing = gsap.timeline();
 
     pricing
-      .to("#jamstack-logo", { opacity: 0, duration: 0.4 })
+      .to("#jamstackLogo", { opacity: 0, duration: 0.4 })
       .to("#review", { x: -150, opacity: 0, duration: 0.4 })
-      .to("#shape-box", { y: 100, opacity: 0, duration: 0.4 })
-      .to("#pricing-text", { opacity: 0, duration: 0.4 });
+      .to("#shapeBox", { y: 100, opacity: 0, duration: 0.4 })
+      .to("#pricingText", { opacity: 0, duration: 0.4 });
 
     ScrollTrigger.create({
-      trigger: "#Pricing-Desktop",
+      trigger: "#pricingDesktop",
       start: "top 25%",
       end: "+=600",
       animation: pricing,
@@ -34,14 +34,13 @@ const Pricing = () => {
     const mobile = gsap.timeline();
 
     mobile
-      .to("#mobile-logo", { opacity: 0 })
-      .to("#mobile-review", { x: 50, opacity: 0 })
-      .to("#mobile-shapes", { y: 50, opacity: 0 })
-      .to("#mobile-heading", { opacity: 0, y: 50 })
-      .to("#mobile-screen", { opacity: 0, y: 20 });
+      .to("#mobileLogo", { opacity: 0 })
+      .to("#mobileReview", { x: 50, opacity: 0 })
+      .to("#mobileShapes", { y: 50, opacity: 0 })
+      .to("#mobileHeading", { opacity: 0, y: 50 });
 
     ScrollTrigger.create({
-      trigger: "#mobile-pricing",
+      trigger: "#mobilePricing",
       start: "top 25%",
       end: "+=560",
       animation: mobile,
