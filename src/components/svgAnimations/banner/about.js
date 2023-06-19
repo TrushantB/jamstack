@@ -8,46 +8,36 @@ const About = () => {
     gsap.registerPlugin(ScrollTrigger);
     const about = gsap.timeline();
 
-    gsap.set("#grayUnion", { opacity: 0, y: 50 });
-    gsap.set("#longCylinder", { y: -30, opacity: 0 });
-    gsap.set("#pinkCircle", { x: -30, opacity: 0 });
-    gsap.set("#nestedCircle", { x: -50, opacity: 0 });
-    gsap.set("#nestedPentagon", { opacity: 0 });
-    gsap.set("#one", { opacity: 0 });
-    gsap.set("#two", { x: 35, y: 35, opacity: 0, scale: 0, rotate: 180 });
-    gsap.set("#dotCircle", { y: -20, opacity: 0 });
-    gsap.set("#blueUnion", { y: -30, opacity: 0 });
-    gsap.set("#white-pentagon", { x: -50, opacity: 0 });
-    gsap.set("#orangeUnion", { x: 50, opacity: 0 });
-    gsap.set("#nestedDiamond", { y: 30, opacity: 0 });
+    gsap.set("#two", { x: 0, y: 0 });
 
     about
 
-      .to("#grayUnion", { opacity: 1, y: 0, duration: 0.25 })
-      .to("#longCylinder", { y: 0, opacity: 1, duration: 0.25 })
-      .to("#pinkCircle", { x: 0, opacity: 1, duration: 0.25 })
-      .to("#nestedCircle", { x: 0, opacity: 1, duration: 0.25 })
-      .to("#nestedPentagon", { opacity: 1, duration: 0.25 })
-      .to("#one", { opacity: 1, duration: 0.25 })
-      .to("#two", {
-        opacity: 1,
-        rotate: 0,
-        scale: 1,
+      .to("#nestedDiamond", { y: 30, opacity: 0, duration: 0.6 })
+      .to("#orangeUnion", { x: 50, opacity: 0, duration: 0.6 })
+      .to("#whitePentagon", { x: -50, opacity: 0, duration: 0.6 })
+      .to("#dotCircle", { y: -20, opacity: 0, duration: 0.6 })
+      .to("#blueUnion", { y: -30, opacity: 0, duration: 0.6 })
+      .to("#shapeTwo", {
+        opacity: 0,
+        rotate: 180,
+        scale: 0,
         transformOrigin: "center center",
-        duration: 0.25,
+        duration: 0.6,
       })
-      .to("#blueUnion", { y: -0, opacity: 1, duration: 0.25 })
-      .to("#dotCircle", { y: 0, opacity: 1, duration: 0.25 })
-      .to("#white-pentagon", { x: 0, opacity: 1, duration: 0.25 })
-      .to("#orangeUnion", { x: 0, opacity: 1, duration: 0.25 })
-      .to("#nestedDiamond", { y: 0, opacity: 1, duration: 0.25 });
+      .to("#shapeOne", { opacity: 0, duration: 0.6 })
+      .to("#nestedPentagon", { opacity: 0, duration: 0.6 })
+      .to("#nestedCircle", { x: -50, opacity: 0, duration: 0.6 })
+      .to("#pinkCircle", { x: -30, opacity: 0, duration: 0.6 })
+      .to("#longCylinder", { y: -30, opacity: 0, duration: 0.6 })
+      .to("#grayUnion", { opacity: 0, y: 50, duration: 0.6 });
 
     ScrollTrigger.create({
       trigger: ".about",
-      start: "8% 20%",
-      end: "80% 70%",
+      start: "top 20%",
+      end: "+=510",
       animation: about,
       toggleActions: "restart none none reverse",
+      scrub: true,
     });
   }, []);
 

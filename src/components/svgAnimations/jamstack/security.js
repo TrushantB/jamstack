@@ -11,7 +11,7 @@ const Security = () => {
     gsap.set("#numbers", { y: 20, opacity: 0 });
     gsap.set("#passcode", { x: 50, opacity: 0 });
     gsap.set("#button", { x: -30, scale: 1.5, opacity: 0 });
-    gsap.set("#lock-circle", { opacity: 0 });
+    gsap.set("#lockCircle", { opacity: 0 });
 
     const security = gsap.timeline({ repeat: -1 });
 
@@ -26,7 +26,7 @@ const Security = () => {
         duration: 0.3,
         transformOrigin: "center center",
       })
-      .to("#lock-circle", { opacity: 1, ease: "ease-in-out" });
+      .to("#lockCircle", { opacity: 1, ease: "ease-in-out" });
 
     security.repeatDelay(3);
 

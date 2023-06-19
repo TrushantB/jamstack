@@ -10,6 +10,7 @@ import Pricing from "@/components/svgAnimations/banner/pricingDesktop";
 import About from "@/components/svgAnimations/banner/about";
 import Jamstack from "@/components/svgAnimations/jamstack/jamstack";
 
+
 const Banner = ({
   heading,
   image,
@@ -28,7 +29,7 @@ const Banner = ({
     mobj: Mobj,
     faq: Faq,
     home: Home,
-    about: About
+    about: About,
   };
 
   const MAP_BANNER_BOTTOM_COMPONENT = {

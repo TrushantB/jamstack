@@ -5,22 +5,22 @@ import { JamstackOne } from "@/components/animationSvg/jamtack";
 
 const Cdn = () => {
   useEffect(() => {
-    gsap.set("#diamond-frame", { opacity: 0 });
-    gsap.set("#main_circle", { opacity: 0 });
-    gsap.set("#diamond_1", { y: 140, opacity: 0 });
-    gsap.set("#diamond_2", { y: -140, opacity: 0 });
-    gsap.set("#pentagon_1", { x: 150, opacity: 0 });
-    gsap.set("#pentagon_2", { x: -150, opacity: 0 });
+    gsap.set("#diamondFrame", { opacity: 0 });
+    gsap.set("#mainCircle", { opacity: 0 });
+    gsap.set("#diamondOne", { y: 140, opacity: 0 });
+    gsap.set("#diamondTwo", { y: -140, opacity: 0 });
+    gsap.set("#pentagonThree", { x: 150, opacity: 0 });
+    gsap.set("#pentagonThree", { x: -150, opacity: 0 });
 
     const decoupled = gsap.timeline({ repeat: -1 });
 
     decoupled
-      .to("#diamond-frame", { opacity: 1 })
-      .to("#main_circle", { opacity: 1 })
-      .to("#diamond_1", { y: 0, opacity: 1 })
-      .to("#diamond_2", { y: 0, opacity: 1 })
-      .to("#pentagon_1", { x: 0, opacity: 1 })
-      .to("#pentagon_2", { x: 0, opacity: 1 });
+      .to("#diamondFrame", { opacity: 1 })
+      .to("#mainCircle", { opacity: 1 })
+      .to("#diamondOne", { y: 0, opacity: 1 })
+      .to("#diamondTwo", { y: 0, opacity: 1 })
+      .to("#pentagonOne", { x: 0, opacity: 1 })
+      .to("#pentagonTwo", { x: 0, opacity: 1 });
 
     decoupled.repeatDelay(3);
 
