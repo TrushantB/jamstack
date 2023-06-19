@@ -158,6 +158,12 @@
   gap: 30px;
   flex-grow: 1;
 }
+.blog .slick-slide{
+  height: auto;
+}
+.blog .slick-slide > div{
+  height: 100%;
+}
 
 .pentagon {
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
@@ -321,6 +327,18 @@
 .blogDetailsItems:target {
   scroll-margin-top: 75px;
 }
+.blogDetailsItems h2{
+  @apply text-4xl leading-snug mb-4;
+}
+.blogDetailsItems h3 {
+  @apply text-3xl leading-snug mb-2;
+}
+.blogDetailsItems h4 {
+  @apply text-2xl leading-snug mb-2;
+}
+.blogDetailsItems h5 {
+  @apply text-xl leading-snug mb-2;
+}
 
 .accordionItem:target {
   scroll-margin-top: 75px;
@@ -425,7 +443,7 @@ svg.edgenetworksecondaryline line.lineanimation {
 
 
 .player-wrapper video {
-  border-radius: 40px;
+  @apply rounded-2xl lg:rounded-3xl;
 }
 @media screen and (min-width: 768px) {
   .stepperItem:target {

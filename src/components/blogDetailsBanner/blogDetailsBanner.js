@@ -35,7 +35,7 @@ export default function BlogDetailsBanner({ blogData }) {
                     </div> */}
                 </div>
                 <div>
-                    <img className='w-full h-auto max-h-[780px]' src={blogData?.blogBanner} alt={blogData?.alt} />
+                    <img className='w-full h-auto max-h-[780px] rounded-3xl' src={blogData?.blogBanner} alt={blogData?.alt} />
                 </div>
             </div>
         </>

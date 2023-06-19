@@ -10,9 +10,15 @@
    margin-bottom: 12px;
 }
 .blogDetailsInnerPage ul,
-.blogDetailsInnerPage ol {
-    margin-left:24px;
+.blogDetailsInnerPage ol {    
     margin-bottom: 24px;
+    @apply ml-8;
+}
+.blogDetailsInnerPage ul{
+    @apply list-disc marker:text-secondary;
+}
+.blogDetailsInnerPage ol {
+  @apply list-decimal marker:text-secondary;
 }
 .blogDetailsInnerPage li {
     margin-bottom: 24px;

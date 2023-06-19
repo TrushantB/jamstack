@@ -6,11 +6,11 @@ export default function BlogContentWriting({ author }) {
   return (
     <>
       <div className="px-3">
-        <div className="flex flex-col md:flex-row gap-2 md:gap-8 my-6">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-8 my-6 items-start">
           <div className="md:w-1/5">
             <a href="#" className="inline-block">
               <img
-                className="max-h-36 max-w-36 circle"
+                className="h-32 w-32 md:w-24 md:h-24 rounded-full object-cover"
                 src={author?.image}
                 alt={author?.alt}
               />
