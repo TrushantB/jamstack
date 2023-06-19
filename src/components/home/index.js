@@ -83,9 +83,4 @@ const Home = ({ header, footer, homeData }) => {
     );
 };
 
-export async function getStaticProps() {
-    const homeData = await get("home");
-    return { props: { homeData } };
-}
-
 export default Home;

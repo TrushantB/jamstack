@@ -3,13 +3,10 @@ import Layout from "@/components/layout";
 import Banner from "@/components/presentational/banner/Banner";
 import BlogCard from "@/components/blogCard/BlogCard";
 import Accordion from "@/components/accordian/accordion";
-import { refactorSettings } from "@/utils/settings";
-import { refactorFAQ } from "@/utils/faq";
-import { getFAQ, getSettings } from "@/lib/sanity.client";
 
-const Faq = ({ faqData, settings }) => {
+const Faq = ({ faqData, settings, preview }) => {
   return (
-    <Layout header={settings.header} footer={settings.footer}>
+    <Layout header={settings.header} footer={settings.footer} preview={preview}>
       <div className="container mx-auto">
         <div className="">
           <Banner {...faqData?.banner} />
@@ -32,30 +29,5 @@ const Faq = ({ faqData, settings }) => {
   );
 };
 
-export const getStaticProps = async (ctx) => {
-  const { preview = false, previewData = {} } = ctx
-
-  const token = previewData.token
-
-  const [settings, faq] = await Promise.all([
-    getSettings({ token }),
-    getFAQ({ token }),
-  ])
-
-  if (!faq) {
-    return {
-      notFound: true,
-    }
-  }
-
-  return {
-    props: {
-      faqData: refactorFAQ(faq),
-      settings: refactorSettings(settings),
-      preview,
-      token: previewData.token ?? null,
-    },
-  }
-}
 
 export default Faq;

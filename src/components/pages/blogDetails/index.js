@@ -3,9 +3,9 @@ import BlogDetailsBanner from "@/components/blogDetailsBanner/blogDetailsBanner"
 import BlogDetailsTableContent from "@/components/blogDetailsTableContent/blogDetailsTableContent";
 import BlogCard from "@/components/blogCard/BlogCard";
 
-export default function BlogDetails({ blogData, settings }) {
+export default function BlogDetails({ blogData, settings, preview }) {
     return (
-        <Layout header={settings.header} footer={settings.footer}>
+        <Layout header={settings.header} footer={settings.footer} preview={preview}>
             <div>
                 <BlogDetailsBanner blogData={blogData} />
 
