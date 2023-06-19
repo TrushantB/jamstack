@@ -14,8 +14,7 @@ const Webj = () => {
       .to("#top-card_1", { x: 100, opacity: 0, duration: 0.3 })
       .to("#middle-card_1", { x: 100, opacity: 0, duration: 0.3 })
       .to("#bottom-card_1", { x: 50, opacity: 0, duration: 0.3 })
-      .to("#side-card", { x: 30, duration: 0.3, opacity: 0 })
-      .to("#frame", { opacity: 0, y: 20, duration: 0.3 });
+      .to("#side-card", { x: 30, duration: 0.3, opacity: 0 });
 
     ScrollTrigger.create({
       trigger: ".webj",
@@ -23,10 +22,7 @@ const Webj = () => {
       end: "+=350",
       animation: webj,
       toggleActions: "restart none none reverse",
-      scrub:true
-
-      
-      
+      scrub: true,
     });
   }, []);
 

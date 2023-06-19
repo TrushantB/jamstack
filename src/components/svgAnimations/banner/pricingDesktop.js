@@ -16,8 +16,7 @@ const Pricing = () => {
       .to("#jamstack-logo", { opacity: 0, duration: 0.4 })
       .to("#review", { x: -150, opacity: 0, duration: 0.4 })
       .to("#shape-box", { y: 100, opacity: 0, duration: 0.4 })
-      .to("#pricing-text", { opacity: 0, duration: 0.4 })
-
+      .to("#pricing-text", { opacity: 0, duration: 0.4 });
 
     ScrollTrigger.create({
       trigger: "#Pricing-Desktop",
@@ -25,7 +24,8 @@ const Pricing = () => {
       end: "+=600",
       animation: pricing,
       toggleActions: "restart none none reverse",
-      scrub: true,});
+      scrub: true,
+    });
   }, []);
 
   useEffect(() => {

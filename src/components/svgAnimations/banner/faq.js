@@ -9,14 +9,12 @@ const Faq = () => {
 
     const faq = gsap.timeline();
 
-
     faq
-    .to("#question_section", { opacity: 0, duration: 0.3 })
-    .to("#color_section", { opacity: 0, duration: 0.3 })
-    .to("#section_2", { y: 50, opacity: 0, duration: 0.3 })
-    .to("#section_1", { y:50, opacity: 0, duration: 0.3 })
-    .to("#text", { x: 100, opacity: 0, duration: 0.3 })
-    
+      .to("#question_section", { opacity: 0, duration: 0.3 })
+      .to("#color_section", { opacity: 0, duration: 0.3 })
+      .to("#section_2", { y: 50, opacity: 0, duration: 0.3 })
+      .to("#section_1", { y: 50, opacity: 0, duration: 0.3 })
+      .to("#text", { x: 100, opacity: 0, duration: 0.3 });
 
     ScrollTrigger.create({
       trigger: "#faq",
@@ -24,8 +22,7 @@ const Faq = () => {
       end: "+=320",
       animation: faq,
       toggleActions: "restart none none reverse",
-      scrub:true,
-      markers:true
+      scrub: true,
     });
   }, []);
   return (

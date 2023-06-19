@@ -34,7 +34,7 @@ const Home = () => {
     ScrollTrigger.create({
       trigger: ".home",
       start: "top 20%",
-      end: "+=300",
+      end: "+=450",
       animation: about,
       toggleActions: "restart none none reverse",
       scrub: true,

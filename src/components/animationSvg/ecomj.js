@@ -255,7 +255,6 @@ const StepperOne = () => {
       id="stepperOne"
     >
       <g
-        
         className=" overflow-hidden "
         clip-path="url(#clip0_5_78)"
         filter="url(#filter0_d_5_78)"
