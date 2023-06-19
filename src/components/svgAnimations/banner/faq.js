@@ -10,10 +10,10 @@ const Faq = () => {
     const faq = gsap.timeline();
 
     faq
-      .to("#question_section", { opacity: 0, duration: 0.3 })
-      .to("#color_section", { opacity: 0, duration: 0.3 })
-      .to("#section_2", { y: 50, opacity: 0, duration: 0.3 })
-      .to("#section_1", { y: 50, opacity: 0, duration: 0.3 })
+      .to("#questionSection", { opacity: 0, duration: 0.3 })
+      .to("#colorSection", { opacity: 0, duration: 0.3 })
+      .to("#sectionTwo", { y: 50, opacity: 0, duration: 0.3 })
+      .to("#sectionOne", { y: 50, opacity: 0, duration: 0.3 })
       .to("#text", { x: 100, opacity: 0, duration: 0.3 });
 
     ScrollTrigger.create({

@@ -11,12 +11,12 @@ const Ecomj = () => {
 
     ecomj
 
-      .to("#symbol-card", { x: 50, opacity: 0 })
-      .to("#text-card", { x: 50, opacity: 0 })
-      .to("#card-dot", { x: 30, opacity: 0 })
-      .to("#diamond-card", { x: -30, opacity: 0 })
+      .to("#symbolCard", { x: 50, opacity: 0 })
+      .to("#textCard", { x: 50, opacity: 0 })
+      .to("#cardDot", { x: 30, opacity: 0 })
+      .to("#diamondCard", { x: -30, opacity: 0 })
       .to("#avatar", { y: 30, opacity: 0 })
-      .to("#avatar-card", { scale: 0, opacity: 0 });
+      .to("#avatarCard", { scale: 0, opacity: 0 });
 
     ScrollTrigger.create({
       trigger: "#ecomj",

@@ -24,7 +24,7 @@ const FaqAnimation = () => {
             stroke="#4767F6"
           />
         </g>
-        <g id="section_2">
+        <g id="sectionTwo">
           <path
             id="Vector_3"
             d="M106 286.75H426"
@@ -46,7 +46,7 @@ const FaqAnimation = () => {
             fill="#FF5223"
           />
         </g>
-        <g id="question_section">
+        <g id="questionSection">
           <path
             id="Vector_10"
             d="M53.5 319C83.0472 319 107 295.047 107 265.5C107 235.953 83.0472 212 53.5 212C23.9528 212 0 235.953 0 265.5C0 295.047 23.9528 319 53.5 319Z"
@@ -58,7 +58,7 @@ const FaqAnimation = () => {
             fill="white"
           />
         </g>
-        <g id="color_section">
+        <g id="colorSection">
           <path
             id="Vector_12"
             d="M518 317H434C428.477 317 424 321.477 424 327V372C424 377.523 428.477 382 434 382H518C523.523 382 528 377.523 528 372V327C528 321.477 523.523 317 518 317Z"
@@ -68,7 +68,7 @@ const FaqAnimation = () => {
           <path id="Vector_14" d="M509 359H439V366H509V359Z" fill="white" />
           <path id="Vector_15" d="M482 346H439V353H482V346Z" fill="white" />
         </g>
-        <g id="section_1">
+        <g id="sectionOne">
           <g id="Group 1012">
             <path
               id="Vector_16"
