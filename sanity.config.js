@@ -35,6 +35,7 @@ export const PREVIEWABLE_DOCUMENT_TYPES = [
   platforms.name,
   contact.name,
   pricing.name,
+  blog.name
 ]
 
 
