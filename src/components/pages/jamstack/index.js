@@ -9,13 +9,13 @@ import { refactorJamStack } from "@/utils/jamStack";
 import { refactorSettings } from "@/utils/settings";
 import Cta from "@/components/cta/cta";
 
-const Jamstack = ({ jamstackData, settings }) => {
+const Jamstack = ({ jamstackData, settings, preview }) => {
 
   if (!jamstackData) {
     return <></>;
   }
   return (
-    <Layout header={settings.header} footer={settings.footer}>
+    <Layout header={settings.header} footer={settings.footer} preview={preview}>
       <div className="pt-0">
         <Banner {...jamstackData.banner} isInner={true} />
       </div>
@@ -54,23 +54,5 @@ const Jamstack = ({ jamstackData, settings }) => {
     </Layout>
   );
 };
-export async function getStaticProps(ctx) {
-  const { preview = false, previewData = {} } = ctx
-
-  const token = previewData.token
-  const [settings, jamstack] = await Promise.all([
-    getSettings({ token }),
-    getJamStack({ token }),
-  ])
-
-  return {
-    props: {
-      jamstackData: refactorJamStack(jamstack),
-      settings: refactorSettings(settings),
-      preview,
-      token: previewData.token ?? null,
-    },
-  }
-}
 
 export default Jamstack;

@@ -4,13 +4,10 @@ import Form from "@/components/form";
 import CaseStudy from "@/components/caseStudy/CaseStudy";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import BlogCard from "@/components/blogCard/BlogCard";
-import { getContacts, getSettings } from "@/lib/sanity.client";
-import { refactorContact } from "@/utils/contact";
-import { refactorSettings } from "@/utils/settings";
 
-const Contact = ({ contactData, settings }) => {
+const Contact = ({ contactData, settings, preview }) => {
     return (
-        <Layout header={settings.header} footer={settings.footer}>
+        <Layout header={settings.header} footer={settings.footer} preview={preview}>
             <div className="container mx-auto">
                 <div className="lg:px-6 px-5 pt-10 lg:pt-24">
                     <h2 className="lg:w-3/4">{contactData?.heading}</h2>
@@ -47,23 +44,5 @@ const Contact = ({ contactData, settings }) => {
     );
 };
 
-export async function getStaticProps(ctx) {
-    const { preview = false, previewData = {} } = ctx
-
-    const token = previewData.token
-    const [settings, contact] = await Promise.all([
-        getSettings({ token }),
-        getContacts({ token }),
-    ])
-
-    return {
-        props: {
-            contactData: refactorContact(contact),
-            settings: refactorSettings(settings),
-            preview,
-            token: previewData.token ?? null,
-        },
-    }
-}
 
 export default Contact;

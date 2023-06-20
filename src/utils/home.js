@@ -1,5 +1,6 @@
 
 import { urlForImage } from '@/lib/sanity.image'
+import { refactorBlog } from './blogs'
 
 const refactorHome = (data) => {
   return {
@@ -132,18 +133,18 @@ const refactorHome = (data) => {
     },
     "blogCard": {
       "heading": data?.blogCard?.heading,
-      "cards": data?.blogCard?.cards.map((item) => ({
-        label: item.label || null,
+      "cards": data?.latestBlogs.map((item) => ({
+        label: item.title || null,
         buttonLabel: item.buttonLabel || null,
         image: urlForImage(item.image).url() || null,
-        alt: item.alt || null,
+        alt: item.image?.logoAlt || null,
         description: item.description || null,
-        href: "blogs" 
+        href: item.slug.current || ''
       })),
       "hasIcon": data?.blogCard?.hasIcon,
       "label": data?.blogCard?.label
     },
-    "seo": data.seo
+    "seo": data.seo,
   }
 }
 

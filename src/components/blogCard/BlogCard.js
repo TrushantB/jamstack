@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+import { resolveHref } from "@/lib/sanity.links";
 
 function BlogCard({ cards, hasIcon, label, sliderControls }) {
   const [hoverItem, setHoverItem] = useState(null);
@@ -56,20 +57,19 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
           {cards?.map((card, index) => (
             <div
               key={index}
-              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card py-1 lg:w-1/3 hover:bg-accent-100"
+              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card pb-1 lg:w-1/3 hover:bg-accent-100 h-full"
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
-              {/* TODO:static for now */}
-              <Link href={'/blog'}>
+              <Link href={resolveHref('blog', card.href)} className="flex flex-col h-full">
                 <img
                   className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
                   src={card.image}
                   alt={card.altTag}
                 />
-                <div className="p-4 flex flex-col justify-between">
-                  <h3 className="mb-3 heading-4">{card.label}</h3>
-                  <p className="leading-relaxed mb-5 w-9/12">
+                <div className="p-4 flex flex-col justify-between flex-1">
+                  <h3 className="mb-3 text-3xl lg:text-2xl">{card.label}</h3>
+                  <p className="leading-relaxed mb-5">
                     {card.description}
                   </p>
                   <div className="h-8">
@@ -81,8 +81,8 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
                     )}
                   </div>
                 </div>
-                </Link>
-              </div>
+              </Link>
+            </div>
           ))}
         </Slider>
       </div>

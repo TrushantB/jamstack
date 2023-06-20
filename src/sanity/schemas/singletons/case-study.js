@@ -23,51 +23,52 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: 'content',
-      title: 'Content',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'block',
-          marks: {
-            annotations: [
-              {
-                name: 'link',
-                type: 'object',
-                title: 'Link',
-                fields: [
-                  {
-                    name: 'href',
-                    type: 'url',
-                    title: 'Url',
-                  },
-                ],
-              },
-            ],
-            decorators: [
-              { 
-                name: 'color', 
-                type: 'object', 
-                title: 'Color', 
-                fields: [
-                  {
-                    name: 'value',
-                    type: 'color',
-                    title: 'Value',
-                  },
-                ],
-              },
-            ],
-          },
-        }),
-        {
-          type: 'image',
-          name: 'image',
-          title: 'Image',
-        },
-      ],
-    })
+    // TODO: Commented for now
+    // defineField({
+    //   name: 'content',
+    //   title: 'Content',
+    //   type: 'array',
+    //   of: [
+    //     defineArrayMember({
+    //       type: 'block',
+    //       marks: {
+    //         annotations: [
+    //           {
+    //             name: 'link',
+    //             type: 'object',
+    //             title: 'Link',
+    //             fields: [
+    //               {
+    //                 name: 'href',
+    //                 type: 'url',
+    //                 title: 'Url',
+    //               },
+    //             ],
+    //           },
+    //         ],
+    //         decorators: [
+    //           { 
+    //             name: 'color', 
+    //             type: 'object', 
+    //             title: 'Color', 
+    //             fields: [
+    //               {
+    //                 name: 'value',
+    //                 type: 'color',
+    //                 title: 'Value',
+    //               },
+    //             ],
+    //           },
+    //         ],
+    //       },
+    //     }),
+    //     {
+    //       type: 'image',
+    //       name: 'image',
+    //       title: 'Image',
+    //     },
+    //   ],
+    // })
 
     // defineField({
     //   name: 'content',

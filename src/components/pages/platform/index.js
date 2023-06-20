@@ -8,9 +8,6 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import ModernTechnologyOne from "@/components/modernTechnologyOne/modernTechnologyOne";
 import PlatformAccordian from "@/components/platformAccordian/platformAccordian";
 import Cta from "@/components/cta/cta";
-import { getPlatformsQuery, getSettings } from "@/lib/sanity.client";
-import { refactorPlatforms } from "@/utils/platforms";
-import { refactorSettings } from "@/utils/settings";
 
 const Platform = ({ platformsData, settings, preview }) => {
 
@@ -55,24 +52,5 @@ const Platform = ({ platformsData, settings, preview }) => {
         </Layout>
     );
 };
-
-export async function getStaticProps(ctx) {
-    const { preview = false, previewData = {} } = ctx
-
-    const token = previewData.token
-    const [settings, platform] = await Promise.all([
-        getSettings({ token }),
-        getPlatformsQuery({ token, slug: "webj" }),
-    ])
-
-    return {
-        props: {
-            platformsData: refactorPlatforms(platform),
-            settings: refactorSettings(settings),
-            preview,
-            token: previewData.token ?? null,
-        },
-    }
-}
 
 export default Platform;

@@ -20,10 +20,10 @@ export default function BlogDetailsTableContent({ blogData }) {
       <div className="max-w-3xl mx-auto">
         <div className="my-8 lg:my-16">
           <div className="md:flex justify-center items-start md:gap-4 lg:gap-4">
-            <div className="md:w-1/4 px-3 mb-8 lg:mb-0 sticky top-[80px]">
+            <div className="md:w-1/4 px-3 mb-8 lg:mb-0 lg:sticky lg:top-[100px]">
               <div className="toc mb-8">
                 <h4 className="text-xl">{blogData?.tableHeading}</h4>
-                <ol className="list-decimal font-medium text-sm ml-4 ">
+                <ol className="list-decimal font-medium text-sm ml-4">
                   {blogData?.tabelContent?.map((item, index) => (
                     <li
                       key={index}
@@ -77,11 +77,14 @@ export default function BlogDetailsTableContent({ blogData }) {
                   </div>
                 </div>
               ))}
-              <div className="flex md:justify-end">
-                <div className="px-3 ">
-                  <BlogContentWriting author={blogData?.author} />
+              {
+                blogData?.author &&
+                <div className="flex md:justify-end">
+                  <div className="px-3 ">
+                    <BlogContentWriting author={blogData?.author} />
+                  </div>
                 </div>
-              </div>
+              }
             </div>
           </div>
         </div>
