@@ -5,8 +5,8 @@ export default function BlogContentWriting({ author }) {
 
   return (
     <>
-      <div className="px-3">
-        <div className="flex flex-col md:flex-row gap-2 md:gap-8 my-6 items-start">
+      <div className="mx-3 px-4 w-full bg-gray-50 rounded-2xl py-4">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-8 items-start">
           <div className="md:w-1/5">
             <a href="#" className="inline-block">
               <img
@@ -17,7 +17,7 @@ export default function BlogContentWriting({ author }) {
             </a>
           </div>
           <div className="md:w-4/5">
-            <div className="flex items-center justify-between my-4 md:mt-0 md:mb-4">
+            <div className="flex items-center justify-between my-2 md:mt-0 md:mb-1">
               <a href="#" className="font-semibold hover:text-primary transition ease-in delay-50">
                 {author?.name}
               </a>
