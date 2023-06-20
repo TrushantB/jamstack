@@ -57,7 +57,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
           {cards?.map((card, index) => (
             <div
               key={index}
-              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card py-1 lg:w-1/3 hover:bg-accent-100 h-full"
+              className="border-2 border-accent-100 border-opacity-60 rounded-2xl card pb-1 lg:w-1/3 hover:bg-accent-100 h-full"
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
