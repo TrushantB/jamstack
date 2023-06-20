@@ -1,31 +1,39 @@
-import Layout from "@/components/layout";
-import BlogDetailsBanner from "@/components/blogDetailsBanner/blogDetailsBanner";
-import BlogDetailsTableContent from "@/components/blogDetailsTableContent/blogDetailsTableContent";
-import BlogCard from "@/components/blogCard/BlogCard";
+import { lazy } from "react";
 import { getBlog, getBlogPaths, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
+import { PreviewSuspense } from '@sanity/preview-kit'
+import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
+import BlogDetails from "@/components/pages/blogDetails";
 import { refactorBlog } from "@/utils/blogs";
 
-export default function BlogDetails({ blogData, settings }) {
-    return (
-        <Layout header={settings.header} footer={settings.footer}>
-            <div>
-                <BlogDetailsBanner blogData={blogData} />
+const BlogDetailsPreview = lazy(
+    () => import('@/components/pages/blogDetails/preview')
+)
 
-                <BlogDetailsTableContent blogData={blogData} />
+export default function BlogDetailPage(props) {
+    const { blogData, settings, preview, token, params } = props
 
-                <div className="my-8 lg:my-16">
-                    <div className="text-center">
-                        <h2>{blogData?.blogCard?.heading}</h2>
-                    </div>
-                    <div className="px-3 ">
-                        <BlogCard {...blogData?.blogCard} />
-                    </div>
-                </div>
-            </div>
-        </Layout>
-    );
-}
+    if (!blogData) {
+        return <></>;
+    }
+
+    if (preview) {
+        return (
+            <PreviewSuspense
+                fallback={
+                    <PreviewWrapper>
+                        <BlogDetails blogData={blogData} settings={settings} preview={preview} />
+                    </PreviewWrapper>
+                }
+            >
+                <BlogDetailsPreview token={token} settings={settings} params={params} />
+            </PreviewSuspense>
+        )
+    }
+
+    return <BlogDetails blogData={blogData} settings={settings} />
+
+};
 
 export const getStaticProps = async (ctx) => {
     const { preview = false, previewData = {}, params } = ctx
@@ -42,6 +50,7 @@ export const getStaticProps = async (ctx) => {
             settings: refactorSettings(settings),
             preview,
             token: previewData.token ?? null,
+            params
         },
     }
 }

@@ -118,6 +118,7 @@
   @apply box-border relative block h-3 cursor-pointer;
   width: 30px;
   z-index: 9999;
+  right: 0px;
 }
 
 .header-toggle span {
@@ -156,6 +157,12 @@
   display: flex;
   gap: 30px;
   flex-grow: 1;
+}
+.blog .slick-slide{
+  height: auto;
+}
+.blog .slick-slide > div{
+  height: 100%;
 }
 
 .pentagon {
@@ -320,6 +327,18 @@
 .blogDetailsItems:target {
   scroll-margin-top: 75px;
 }
+.blogDetailsItems h2{
+  @apply text-4xl leading-snug mb-4;
+}
+.blogDetailsItems h3 {
+  @apply text-3xl leading-snug mb-2;
+}
+.blogDetailsItems h4 {
+  @apply text-2xl leading-snug mb-2;
+}
+.blogDetailsItems h5 {
+  @apply text-xl leading-snug mb-2;
+}
 
 .accordionItem:target {
   scroll-margin-top: 75px;
@@ -457,7 +476,7 @@ svg.edgenetworksecondaryline line.lineanimation {
 
 
 .player-wrapper video {
-  border-radius: 40px;
+  @apply rounded-2xl lg:rounded-3xl;
 }
 @media screen and (min-width: 768px) {
   .stepperItem:target {
@@ -506,5 +525,16 @@ svg.edgenetworksecondaryline line.lineanimation {
   body,
   html {
     font-size: 20px;
+  }
+}
+@media screen and (max-height:768px) {
+  .right-side-bar-mt {
+    margin-top: 30px;
+  }
+  .right-side-bar-mb {
+    margin-top: 30px;
+  }
+  .right-side-bar-overflow {
+    overflow-y: scroll;
   }
 }

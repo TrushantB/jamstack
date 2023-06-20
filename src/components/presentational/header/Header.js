@@ -93,9 +93,9 @@ const Header = ({
             </button>
           </div>
           {isOpen && (
-            <div className="fixed top-0 right-0 z-10 flex flex-col h-screen overflow-y-scroll bg-accent-100 p-7 lg:w-4/12 rounded-3xl">
-              <div>
-                <ul className="mt-10 lg:hidden">
+            <div className="fixed top-0 right-0 z-10  flex flex-col h-screen right-side-bar-overflow bg-accent-100 p-7 lg:w-4/12 rounded-3xl">
+              <div className="flex flex-col justify-between h-full">
+                <ul className="right-side-bar-mt  lg:hidden">
                   {headerMenu?.map((menuItems, index) => (
                     <li
                       key={index}
@@ -114,7 +114,7 @@ const Header = ({
                     </li>
                   ))}
                 </ul>
-                <ul className="mt-10">
+                <ul className="right-side-bar-mt ">
                   {sidebarLink?.map((sidebarItems, index) => (
                     <li
                       className={`my-3 ${`/${sidebarItems.href}` === activeMenu
@@ -136,14 +136,14 @@ const Header = ({
                   ))}
                 </ul>
 
-                <div className=" mt-14 mb-14">
+                <div className="right-side-bar-mb right-side-bar-mt ">
                   <CustomPortableText
                     paragraphClasses=""
                     value={description}
                   />
                   <Link href={resolveHref(buttonLabel.href)}>
                     <button
-                      className="mt-4 font-semibold hover:underline hover:text-primary transition duration-200 ease"
+                      className="mt-[3.08vh] font-semibold underline hover:underline hover:text-primary transition duration-200 ease"
                       type="button"
                     >
                       {buttonLabel?.label}
@@ -151,8 +151,8 @@ const Header = ({
                   </Link>
                 </div>
 
-                <div>
-                  <h5 className="mb-3 font-medium">{label}</h5>
+                <div className="right-side-bar-mb right-side-bar-mt">
+                  <h5 className="mb-2 font-medium">{label}</h5>
                   <ul className="space-y-2">
                     <li>
                       <Link
@@ -172,28 +172,28 @@ const Header = ({
                     </li>
                     <li>{country}</li>
                   </ul>
+                  <div className="mb-4  mt-6">
+                    <ul className="flex items-center gap-3">
+                      {socialLink?.map((item, index) => (
+                        <li key={index}>
+
+
+                          <Link
+                            className={`btn-link ${item.href === activeMenu ? "text-primary" : ""
+                              }`}
+                            href={item.href}
+                            target={item.target}
+                            onClick={() => handleMenuClick(item.href)}
+                          >
+                            <span className="sr-only">{item.alt}</span>
+                            <span aria-hidden="true" className={`${item.iconName} text-xl`}></span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                <div className="mb-4 lg:mt-6">
-                  <ul className="flex items-center gap-3">
-                    {socialLink?.map((item, index) => (
-                      <li key={index}>
-
-
-                        <Link
-                          className={`btn-link ${item.href === activeMenu ? "text-primary" : ""
-                            }`}
-                          href={item.href}
-                          target={item.target}
-                          onClick={() => handleMenuClick(item.href)}
-                        >
-                          <span className="sr-only">{item.alt}</span>
-                          <span aria-hidden="true" className={`${item.iconName} text-xl`}></span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </div>
           )}

@@ -4,7 +4,6 @@ import Layout from "@/components/layout";
 import { getCaseStudy, getSettings } from "@/lib/sanity.client";
 import { refactorCaseStudy } from "@/utils/caseStudy";
 import { refactorSettings } from "@/utils/settings";
-import { CustomPortableText } from "@/components/shared/CustomPortableText";
 
 const CaseStudyPage = ({ caseStudyData, settings }) => {
 
@@ -15,8 +14,7 @@ const CaseStudyPage = ({ caseStudyData, settings }) => {
   return (
     <Layout header={settings.header} footer={settings.footer}>
       <div className="container mx-auto my-9">
-        
-        <CustomPortableText value={caseStudyData?.content} />
+        <CaseStudy {...caseStudyData} />
       </div>
     </Layout>
   );

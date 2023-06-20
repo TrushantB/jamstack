@@ -9,7 +9,7 @@ export default function BlogContactCard({blogData}) {
         <a className='block' href='#'>
             <img className='w-full h-full' src={blogData?.suggestionPost?.image} alt={blogData?.suggestionPost?.alt} />
         </a>
-        <h5 className='font-semibold text-lg my-5'>
+        <h5 className='font-semibold text-base my-5'>
             {blogData?.suggestionPost?.title}
         </h5>
         <div className='font-semibold'>

@@ -9,12 +9,12 @@ export default function Blogpage({ cards, hasIcon, label, href }) {
       </div>
       {cards && cards.map((item, index) => (
         <div key={index} className="sm:flex items-start gap-5 pb-12 lg:pb-16">
-          <div className="lg:w-2/5 pb-5 lg:pb-0">
+          <div className="lg:w-3/5 pb-5 lg:pb-0">
             <a href={item.href}>
               <img className="w-full md:w-96 h-auto rounded-3xl " src={item.image} />
             </a>
           </div>
-          <div className="w-ful ">
+          <div className="w-full">
             <a >
               <h4 className='text-2xl md:text-4xl'>{item.heading}</h4>
             </a>

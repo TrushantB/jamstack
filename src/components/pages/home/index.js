@@ -14,18 +14,15 @@ import CaseStudy from "@/components/caseStudy/CaseStudy";
 import TestimonialCard from "@/components/presentational/testimonialCard/TestimonialCard";
 import BlogCard from "@/components/blogCard/BlogCard";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
-import { getSettings, getHomePage } from "@/lib/sanity.client";
-import { refactorSettings } from "@/utils/settings";
-import { refactorHome } from "@/utils/home";
 import { SiteMeta } from "@/components/shared/SiteMeta";
 
-const IndexPage = ({ homeData, settings }) => {
+const IndexPage = ({ homeData, settings, preview }) => {
   if (!homeData) {
     return <></>;
   }
 
   return (
-    <Layout header={settings.header} footer={settings.footer}>
+    <Layout header={settings.header} footer={settings.footer} preview={preview}>
       <SiteMeta
         description={homeData?.seo?.seoDescription}
         image={homeData.seo?.seoImage}
@@ -33,7 +30,7 @@ const IndexPage = ({ homeData, settings }) => {
       />
       <section>{<Banner {...homeData.banner} />}</section>
 
-      <section> 
+      <section>
         <WebSection {...homeData.technologySolution} />
       </section>
 
@@ -49,7 +46,7 @@ const IndexPage = ({ homeData, settings }) => {
         <TextBanner {...homeData.textBanner} />
       </section>
       <section >
-      <WebStactics  {...homeData.Webstatstics} />
+        <WebStactics  {...homeData.Webstatstics} />
       </section>
 
       <section>
@@ -92,24 +89,5 @@ const IndexPage = ({ homeData, settings }) => {
     </Layout>
   );
 };
-
-export const getStaticProps = async (ctx) => {
-  const { preview = false, previewData = {} } = ctx
-
-  const token = previewData.token
-  const [settings, page] = await Promise.all([
-    getSettings({ token }),
-    getHomePage({ token }),
-  ])
-
-  return {
-    props: {
-      homeData: refactorHome(page),
-      settings: refactorSettings(settings),
-      preview,
-      token: previewData.token ?? null,
-    },
-  }
-}
 
 export default IndexPage;

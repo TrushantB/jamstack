@@ -7,16 +7,16 @@ const Onboarding = () => {
   useEffect(() => {
     const tl = gsap.timeline({});
 
-    gsap.set("#top-card", { opacity: 0, y: 20 });
-    gsap.set("#middle-card", { opacity: 0, y: 20 });
-    gsap.set("#bottom-card", { opacity: 0, y: 50 });
+    gsap.set("#topCard", { opacity: 0, y: 20 });
+    gsap.set("#middleCard", { opacity: 0, y: 20 });
+    gsap.set("#bottomCard", { opacity: 0, y: 50 });
     gsap.set("#bottom", { y: 30, opacity: 0 });
-    gsap.set("#you-circle", {
+    gsap.set("#youCircle", {
       scale: 0,
       opacity: 0,
       transformOrigin: "center center",
     });
-    gsap.set("#j-circle", {
+    gsap.set("#jCircle", {
       scale: 0,
       opacity: 0,
       transformOrigin: "center center",
@@ -27,15 +27,15 @@ const Onboarding = () => {
       transformOrigin: "center center",
     });
 
-    tl.to("#j-circle", { scale: 1, opacity: 1, duration: 0.3 })
+    tl.to("#jCircle", { scale: 1, opacity: 1, duration: 0.3 })
       .to("#transfer", { scale: 1, opacity: 1, duration: 0.3 })
-      .to("#you-circle", { scale: 1, opacity: 1, duration: 0.3 })
-      .to("#top-card", { opacity: 1, y: 0, duration: 0.3 })
-      .to("#middle-card", { opacity: 1, y: 0, duration: 0.3 })
-      .to("#bottom-card", { opacity: 1, y: 0, duration: 0.3 });
+      .to("#youCircle", { scale: 1, opacity: 1, duration: 0.3 })
+      .to("#topCard", { opacity: 1, y: 0, duration: 0.3 })
+      .to("#middleCard", { opacity: 1, y: 0, duration: 0.3 })
+      .to("#bottomCard", { opacity: 1, y: 0, duration: 0.3 });
 
     ScrollTrigger.create({
-      trigger: "#main",
+      trigger: "#stepperOne",
       start: "10% 60%",
       end: "80% 70%",
       animation: tl,

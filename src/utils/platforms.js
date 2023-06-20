@@ -4,7 +4,7 @@ const refactorPlatforms = (data) => {
   return {
     "banner": {
       "heading": data?.banner?.heading,
-      "description": data?.banner?.description || "", 
+      "description": data?.banner?.description || "",
       "backGroundColor": data?.banner.backgroundColor,
       "headingSize": data?.banner?.headingSize,
       "image": "/ecommj.svg",
@@ -36,9 +36,9 @@ const refactorPlatforms = (data) => {
         })) || [],
         cta: item.cta ? {
           label: item.cta.label !== undefined ? item.cta.label : null,
-          size: item.cta.size ,
-          type: item.cta.type ,
-          href : item.cta.href !== undefined ? item.cta.href : "contact"
+          size: item.cta.size,
+          type: item.cta.type,
+          href: item.cta.href !== undefined ? item.cta.href : "contact"
         } : [],
       }))
     },
@@ -53,7 +53,7 @@ const refactorPlatforms = (data) => {
       "accordinaList": data?.accordian?.accordinaList?.map((item) => ({
         label: item.label,
         description: item.description,
-        icon: item.icon || null ,
+        icon: item.icon || null,
         arrow: item.arrow || null
       })) || []
     },
@@ -90,17 +90,17 @@ const refactorPlatforms = (data) => {
     },
     "blogCard": {
       "heading": data?.blogCard?.heading,
-      "cards": data?.blogCard?.cards.map((item) => ({
-        label: item.label || null,
+      "cards": data?.latestBlogs.map((item) => ({
+        label: item.title || null,
         buttonLabel: item.buttonLabel || null,
         image: urlForImage(item.image).url() || null,
-        alt: item.alt || null,
+        alt: item.image?.logoAlt || null,
         description: item.description || null,
-        href: item.href || null
+        href: item.slug.current || ''
       })),
       "hasIcon": data?.blogCard?.hasIcon,
       "label": data?.blogCard?.label
-    }
+    },
   }
 }
 

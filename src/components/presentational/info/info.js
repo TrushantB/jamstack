@@ -29,7 +29,7 @@ const Info = ({ description, question }) => {
   }, []);
 
   return (
-    <div className="mb-20 flex flex-col items-center px-5 lg:px-0 section">
+    <div className="container mx-auto mb-14  md:mb-20 flex flex-col items-center px-5 lg:px-0 section">
       <h2 className="text-center pb-5">{question}</h2>
       <p className="lg:w-7/12 mx-auto text-center">{description}</p>
       <div className="flex justify-between items-center flex-col h-80">

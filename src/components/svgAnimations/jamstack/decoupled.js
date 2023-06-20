@@ -7,9 +7,9 @@ const Decoupled = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.set(".rect-frame", { y: 30, opacity: 0 });
-    gsap.set("#rectangle-1", { x: 30, opacity: 0 });
-    gsap.set("#rectangle-2", { opacity: 0 });
-    gsap.set("#rectangle-3", { x: -30, opacity: 0 });
+    gsap.set("#rectangleOne", { x: 30, opacity: 0 });
+    gsap.set("#rectangleTwo", { opacity: 0 });
+    gsap.set("#rectangleThree", { x: -30, opacity: 0 });
     gsap.set("#star", { opacity: 0 });
     gsap.set("#ellipse", { opacity: 0 });
     gsap.set(".rectangle-box", { opacity: 0 });
@@ -18,9 +18,9 @@ const Decoupled = () => {
 
     decoupled
       .to(".rect-frame", { y: 0, opacity: 1 })
-      .to("#rectangle-2", { opacity: 1 })
-      .to("#rectangle-1", { x: 0, opacity: 1 })
-      .to("#rectangle-3", { x: 0, opacity: 1 })
+      .to("#rectangleTwo", { opacity: 1 })
+      .to("#rectangleOne", { x: 0, opacity: 1 })
+      .to("#rectangleThree", { x: 0, opacity: 1 })
       .to("#star", { opacity: 1 })
       .to("#ellipse", { opacity: 1 })
       .to(".rectangle-box", { opacity: 1 });

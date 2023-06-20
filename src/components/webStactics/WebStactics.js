@@ -36,7 +36,7 @@ function WebStactics({
 
   };
 
-  useEffect(() => {    
+  useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 768);
     };
@@ -188,7 +188,7 @@ function WebStactics({
           <ProgressBar report={report} submitReport={submitReport} />
         </div>
       )}
-      <ToastContainer pauseOnHover={false} />
+      <ToastContainer pauseOnHover={false} hideProgressBar={true} />
     </>
   );
 }

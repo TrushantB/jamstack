@@ -7,8 +7,11 @@ export const homePageQuery = groq`
     seoTitle,
     "seoImage":ogImage,
     seoDescription
-  }
-  }
+  },
+  "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  }[0...3]
+}
 `
 export const blogsPageQuery = groq`
 *[_type == "blogs"][0] {
@@ -55,13 +58,19 @@ export const faqPageQuery = groq`
 
 export const platformsQuery = groq`
   *[_type == "platforms" && slug.current == $slug][0] {
-   ...
+   ...,
+   "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  }[0...3]
   }
   `
 
 export const contactQuery = groq`
 *[_type == "contact"][0] {
-  ...
+  ...,
+  "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  }[0...3]
 }
 `
 export const jamStackQuery = groq`

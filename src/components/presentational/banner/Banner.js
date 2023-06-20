@@ -10,6 +10,7 @@ import Pricing from "@/components/svgAnimations/banner/pricingDesktop";
 import About from "@/components/svgAnimations/banner/about";
 import Jamstack from "@/components/svgAnimations/jamstack/jamstack";
 
+
 const Banner = ({
   heading,
   image,
@@ -28,7 +29,7 @@ const Banner = ({
     mobj: Mobj,
     faq: Faq,
     home: Home,
-    about: About
+    about: About,
   };
 
   const MAP_BANNER_BOTTOM_COMPONENT = {
@@ -80,7 +81,7 @@ const Banner = ({
           </div>
         </div>
         {(layout === "Image Left" || layout === "image-left") && (
-          <div className="flex sm:justify-center lg:w-2/5 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
+          <div className="flex justify-center lg:w-2/5 items-start lg:items-start lg:justify-end mt-10 lg:mt-0">
             <BannerLeft />
           </div>
         )}

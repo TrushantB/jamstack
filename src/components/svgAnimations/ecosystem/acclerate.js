@@ -7,21 +7,19 @@ const Acclerate = () => {
     const acclerate = gsap.timeline({ repeat: -1 });
 
     gsap.set("#frame", { opacity: 0, y: 20 });
-    gsap.set("#dual-square", { opacity: 0 });
-    gsap.set("#bar-chart", { opacity: 0 });
-    gsap.set("#symbol-box", { opacity: 0 });
-    gsap.set("#avatar_group", { opacity: 0 });
-    gsap.set("#pie-box", { opacity: 0 });
-    gsap.set("#horizontal-bar", { x: -100, opacity: 0 });
+    gsap.set("#dualSquare", { opacity: 0 });
+    gsap.set("#barChart", { opacity: 0 });
+    gsap.set("#symbolBox", { opacity: 0 });
+    gsap.set("#pieBox", { opacity: 0 });
+    gsap.set("#horizontalBar", { x: -100, opacity: 0 });
 
     acclerate
       .to("#frame", { opacity: 1, y: 0, duration: 0.3 })
-      .to("#dual-square", { opacity: 1, duration: 0.3 })
-      .to("#bar-chart", { opacity: 1, duration: 0.3 })
-      .to("#symbol-box", { opacity: 1, duration: 0.3 })
-      .to("#avatar_group", { opacity: 1, duration: 0.3 })
-      .to("#pie-box", { opacity: 1 })
-      .to("#horizontal-bar", { x: 0, opacity: 1, duration: 0.3 });
+      .to("#dualSquare", { opacity: 1, duration: 0.3 })
+      .to("#barChart", { opacity: 1, duration: 0.3 })
+      .to("#symbolBox", { opacity: 1, duration: 0.3 })
+      .to("#pieBox", { opacity: 1 })
+      .to("#horizontalBar", { x: 0, opacity: 1, duration: 0.3 });
 
     acclerate.repeatDelay(3);
 
