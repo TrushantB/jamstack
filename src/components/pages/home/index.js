@@ -70,7 +70,7 @@ const IndexPage = ({ homeData, settings, preview }) => {
         <CaseStudy {...homeData.caseStudy} />
       </section>
 
-      <section className="pt-6 pb-4 my-16 lg:my-24 bg-accent-100 ">
+      <section className="py-10 md:pt-6 md:pb-4 my-16 lg:my-24 bg-accent-100">
         {<MordernTechnology {...homeData.morderTechnology} />}
       </section>
 

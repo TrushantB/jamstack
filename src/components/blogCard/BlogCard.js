@@ -63,7 +63,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
             >
               <Link href={resolveHref('blog', card.href)} className="flex flex-col h-full">
                 <img
-                  className="lg:h-48 md:h-36 w-full object-cover object-center rounded-t-2xl"
+                  className="lg:h-48 md:h-36 w-full object-contain object-center rounded-t-2xl"
                   src={card.image}
                   alt={card.altTag}
                 />
