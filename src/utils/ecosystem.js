@@ -3,7 +3,7 @@ const refactorEco = (data) => {
     "ecoBanner": {
       "heading": data?.banner?.heading,
       "description": data?.banner?.description,
-      "title": data?.banner?.title
+      "title": data?.banner?.title || ""
     },
     "accordinData": {
       "heading": data?.accordinData?.heading,
@@ -19,7 +19,7 @@ const refactorEco = (data) => {
       "type": data?.ConnectChoose?.type,
       "label": data?.ConnectChoose?.label,
       "size": data?.ConnectChoose?.size,
-      href : data?.ConnectChoose?.href
+      href: data?.ConnectChoose?.href
     }
   }
 }

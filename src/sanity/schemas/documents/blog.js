@@ -24,6 +24,12 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: "description",
+      type: "text",
+      title: "Short Description",
+      validation: (rule) => rule.required(),
+    }),
     {
       type: 'image',
       icon: ImageIcon,
@@ -43,8 +49,10 @@ export default defineType({
           name: 'logoAlt',
           type: 'string',
           title: 'Alt text',
+          validation: (rule) => rule.required(),
         }),
       ],
+      validation: (rule) => rule.required(),
     },
     defineField({
       title: 'Author',
@@ -55,16 +63,19 @@ export default defineType({
           type: 'author',
         }
       ],
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'publishedDt',
       title: 'Published Date',
       type: 'date',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'tableOfContentHeading',
       type: 'string',
       title: 'Table Of Content Heading',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'tableOfContent',
@@ -173,6 +184,7 @@ export default defineType({
       name: 'shareHeading',
       type: 'string',
       title: 'Social Sharing Heading',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'socialLinks',

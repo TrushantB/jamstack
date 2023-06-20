@@ -52,7 +52,10 @@ export const caseStudyQuery = groq`
   `
 export const faqPageQuery = groq`
   *[_type == "faqs"][0]{
-    ...
+    ...,
+     "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  }[0...3]
   }
 `
 
