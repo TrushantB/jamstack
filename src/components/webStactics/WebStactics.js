@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
+import { ToastContainer, toast } from 'react-toastify';
 import ProgressBar from "./reportUI";
 import axios from 'axios'
 
@@ -51,7 +52,10 @@ function WebStactics({
 
 
   const handleButtonClick = () => {
-    if (`${inputValue}`.trim()) {
+    const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    const regex = new RegExp(expression);
+
+    if (`${inputValue}`.match(regex)) {
       setShowButton(false);
       setAnimateReport(true);
       axios.post("/api/getReport", {
@@ -59,16 +63,18 @@ function WebStactics({
         "output": "html"
       })
         .then((data) => {
+          toast.success("Yeah! Your core web vitals report is ready. Please fill in your details to get the report on mail.");
           setReport(data.data.data.data);
           setAnimateReport(false);
           setShowProgressBar(true);
-          setInputValue('');
         })
         .catch((error) => {
           setAnimateReport(false);
           setShowProgressBar(true);
           console.error("error", error);
         });
+    } else {
+      toast.error("Please enter valid URL.")
     }
   };
 
@@ -89,6 +95,24 @@ function WebStactics({
     } else { }
   }, [animateReport]);
 
+  const submitReport = (name, email) => {
+    toast.success('The report is been shared in your mail successfully.');
+    setShowProgressBar(false);
+    setShowButton(true);
+    axios.post("/api/postReport", {
+      "reportUrl": report?.reportUrl || "",
+      "webSiteUrl": inputValue,
+      "email": email,
+      "name": name
+    })
+      .then((data) => {
+        console.log("mail sent");
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  }
+
   return (
     <>
       <div className="bg-secondary">
@@ -104,7 +128,7 @@ function WebStactics({
             className={`flex lg:flex-row gap-4 pb-10 lg:pb-0 mt-5 lg:gap-0 items-center relative ${showButton ? "" : "hidden"
               }`}
           >
-            <form className="w-full">
+            <form className="w-full" onSubmit={(e) => e.preventDefault()}>
               <input aria-label="paste your website url to know your statistics"
                 placeholder={placeholder}
                 className="border rounded-full p-2 w-full pl-4 pr-14 lg:pr-20 lg:w-3/4 outline-none text-black
@@ -161,9 +185,10 @@ function WebStactics({
 
       {showProgressBar && !animateReport && (
         <div>
-          <ProgressBar report={report} setShowProgressBar={setShowProgressBar} setShowButton={setShowButton} />
+          <ProgressBar report={report} submitReport={submitReport} />
         </div>
       )}
+      <ToastContainer pauseOnHover={false} hideProgressBar={true} />
     </>
   );
 }

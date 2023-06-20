@@ -19,7 +19,7 @@ const ButtonType = (type) => {
   });
 };
 
-const Button = ({ type, size, label, href , ...rest }) => {
+const Button = ({ type, size, label, href, ...rest }) => {
   return (
     <div>
       <button
@@ -27,9 +27,13 @@ const Button = ({ type, size, label, href , ...rest }) => {
         disabled={type === "disabled"}
         {...rest}
       >
-        <Link href={`${href}`} >
-          {label}
-        </Link>
+        {
+          href ?
+            <Link href={`${href}`} >
+              {label}
+            </Link> :
+            label
+        }
       </button>
     </div>
   );

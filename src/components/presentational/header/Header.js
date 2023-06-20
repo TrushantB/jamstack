@@ -47,7 +47,7 @@ const Header = ({
 
   return (
     <>
-      <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+      <a href="#main" className="skip-to-main-content-link">Skip to main content</a>
       <nav className="bg-white border-gray-200">
         <div className="flex items-center justify-between px-6 py-5 mx-auto max-w-7xl lg:px-8 lg:py-3 shadow shadow-slate-100">
           <div className="flex items-center justify-between w-full gap-5 ">
