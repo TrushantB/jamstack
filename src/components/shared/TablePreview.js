@@ -1,49 +1,51 @@
 import React from 'react';
-import { Box, Card, Inline, Grid, Label, Text, ThemeProvider, studioTheme } from '@sanity/ui';
-
-const Table = ({ rows }) => {
-    const numCols = rows.length === 0 ? 0 : rows[0].cells.length;
-
-    return (
-        <Grid columns={numCols} padding={2}>
-            {rows.map((row, index) =>
-                row.cells.map((cell, i) => (
-                    <Card
-                        key={row._key + i}
-                        padding={2}
-                        style={{ outline: '1px solid #DFE2E9' }}
-                    >
-                        <Text style={index === 0 ? { fontWeight: 'bold' } : { textOverflow: 'elipsis' }}>{cell}</Text>
-                    </Card>
-                ))
-            )}
-        </Grid>
-    );
-};
 
 const TablePreview = (props) => {
-    const { schemaType } = props;
-    const { rows = [], title } = props ?? {
+    const { rows = [], tableType } = props ?? {
         title: 'Title missing',
     };
 
     return (
-        <ThemeProvider theme={studioTheme}>
-            <Box padding={3}>
-                <Inline space={3}>
-                    <Card>
-                        <Text>{schemaType?.title ?? title}</Text>
-                    </Card>
-                </Inline>
-            </Box>
-            <Box padding={2}>
-                {rows.length === 0 ? (
-                    <Label muted>Empty Table</Label>
-                ) : (
-                    <Table rows={rows} />
-                )}
-            </Box>
-        </ThemeProvider>
+        <div className="relative overflow-x-auto border sm:rounded-lg mb-8">
+            <table className="w-full text-sm text-left text-blue-100 dark:text-blue-100">
+                <thead className={`text-xs text-white uppercase ${tableType} dark:text-white`}>
+                    <tr>
+                        {
+                            rows[0]?.cells.map((item, index) => {
+                                return (
+                                    <th scope="col" className="px-6 py-3" key={index}>
+                                        {item}
+                                    </th>
+                                )
+                            })
+                        }
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        rows.map((item, rowIndex) => {
+                            if (rowIndex > 0)
+                                return (
+                                    <tr key={rowIndex} className="bg-transparent border-b border-gray-200 text-black">
+                                        {
+                                            item.cells.map((cell, cellIndex) => {
+                                                return (
+                                                    <td key={cellIndex} className="px-6 py-3">
+                                                        {cell}
+                                                    </td>
+                                                )
+                                            })
+                                        }
+
+                                    </tr>
+                                )
+                        })
+                    }
+                </tbody>
+            </table>
+        </div>
     );
 };
 

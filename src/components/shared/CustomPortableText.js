@@ -37,12 +37,12 @@ export function CustomPortableText({
             <ImageBox
               image={value}
               alt={value.alt}
-              classesWrapper="relative aspect-[16/9]"
+              classesWrapper=""
             />
             {value?.caption && (
-              <div className="font-sans text-sm text-gray-600">
+              <span className="font-sans text-xs text-gray-500 block text-center">
                 {value.caption}
-              </div>
+              </span>
             )}
           </div>
         )
@@ -51,9 +51,9 @@ export function CustomPortableText({
         const { items } = value || {}
         return <TimelineSection timelines={items} />
       },
-      table: ({ value }) => {
-        const { rows = [], title } = value || {}
-        return <TablePreview rows={rows} title={title} />
+      customTable: ({ value }) => {
+        const { rows = [], title } = value.table || {}
+        return <TablePreview rows={rows} title={title} tableType={value.tableType} />
       }
     },
   }
