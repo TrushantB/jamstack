@@ -1,5 +1,9 @@
 import React from "react";
 import Aboutone from "../svgAnimations/about/articleOne";
+import Abouttwo from "../svgAnimations/about/articleTwo";
+import Aboutthree from "../svgAnimations/about/articleThree";
+import Aboutfour from "../svgAnimations/about/articleFour";
+
 
 export const AboutArticle = ({ jamStackProcess }) => {
   return (
@@ -33,7 +37,7 @@ export const AboutArticle = ({ jamStackProcess }) => {
                     </ul>
                   </div>
                   <div className="lg:w-1/2">
-                    <img src={item.image} alt="image" />
+                   <Aboutfour/>
                   </div>
                 </li>
               ))}
