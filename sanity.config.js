@@ -6,7 +6,7 @@ import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
-
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
 
 import { apiVersion, dataset, projectId, previewSecretId } from '@/lib/sanity.api'
 import home from '@/sanity/schemas/singletons/home'
@@ -84,6 +84,8 @@ export default defineConfig({
     unsplashImageAsset(),
     visionTool({ defaultApiVersion: apiVersion }),
     table(),
-
+    vercelDeployTool({
+      title: "Deployment",
+    }),
   ],
 })
