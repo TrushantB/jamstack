@@ -1,6 +1,9 @@
 import { PortableText } from '@portabletext/react'
 import ImageBox from '@/components/shared/ImageBox'
 import { TimelineSection } from '@/components/shared/TimelineSection'
+import TablePreview from './TablePreview'
+
+
 
 export function CustomPortableText({
   paragraphClasses,
@@ -48,6 +51,10 @@ export function CustomPortableText({
         const { items } = value || {}
         return <TimelineSection timelines={items} />
       },
+      table: ({ value }) => {
+        const { rows = [], title } = value || {}
+        return <TablePreview rows={rows} title={title} />
+      }
     },
   }
 

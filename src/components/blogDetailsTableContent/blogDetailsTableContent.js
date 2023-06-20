@@ -77,11 +77,14 @@ export default function BlogDetailsTableContent({ blogData }) {
                   </div>
                 </div>
               ))}
-              <div className="flex md:justify-end">
-                <div className="px-3 ">
-                  <BlogContentWriting author={blogData?.author} />
+              {
+                blogData?.author &&
+                <div className="flex md:justify-end">
+                  <div className="px-3 ">
+                    <BlogContentWriting author={blogData?.author} />
+                  </div>
                 </div>
-              </div>
+              }
             </div>
           </div>
         </div>

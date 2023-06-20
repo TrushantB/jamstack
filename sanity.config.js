@@ -29,6 +29,7 @@ import faq from '@/sanity/schemas/singletons/faq'
 import navigation from '@/sanity/schemas/objects/navigation'
 import author from '@/sanity/schemas/documents/author'
 import seo from '@/sanity/schemas/objects/seo'
+import { table } from '@sanity/table';
 
 export const PREVIEWABLE_DOCUMENT_TYPES = [
   home.name,
@@ -82,5 +83,7 @@ export default defineConfig({
     }),
     unsplashImageAsset(),
     visionTool({ defaultApiVersion: apiVersion }),
+    table(),
+
   ],
 })

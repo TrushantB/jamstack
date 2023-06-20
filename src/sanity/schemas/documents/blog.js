@@ -86,6 +86,11 @@ export default defineType({
               of: [
                 defineArrayMember({
                   type: 'block',
+                  lists: [
+                    { title: 'Bullet', value: 'bullet' },
+                    { title: 'Numbered', value: 'number' },
+                    { title: 'Squared', value: 'square' },
+                  ],
                   marks: {
                     annotations: [
                       {
@@ -103,6 +108,34 @@ export default defineType({
                     ],
                   },
                 }),
+                {
+                  type: 'image',
+                  icon: ImageIcon,
+                  name: 'image',
+                  title: 'image',
+                  options: {
+                    hotspot: true,
+                  },
+                  preview: {
+                    select: {
+                      imageUrl: 'asset.url',
+                      title: 'caption',
+                    },
+                  },
+                  fields: [
+                    defineField({
+                      name: 'alt',
+                      type: 'string',
+                      title: 'Alt text',
+                      description:
+                        'Alternative text for screenreaders. Falls back on caption if not set',
+                    }),
+                  ],
+                },
+                {
+                  name: 'table',
+                  type: 'table'
+                }
               ],
             }
           ],
