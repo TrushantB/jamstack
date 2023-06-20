@@ -12,7 +12,7 @@ const refactorContact = (data) => {
       description: data?.caseStudy?.description,
       itemList: data?.caseStudy?.itemList?.map((item) => ({
         label: item.label,
-        href: item.href || "",
+        href: item?.href || "",
         percentageList: item.percentageList?.map((percentageItem) => ({
           percentage: percentageItem?.percentage,
           description: percentageItem?.description,

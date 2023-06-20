@@ -1,5 +1,5 @@
 
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
+import { DocumentIcon, ImageIcon, ThLargeIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -24,6 +24,12 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: "description",
+      type: "text",
+      title: "Short Description",
+      validation: (rule) => rule.required(),
+    }),
     {
       type: 'image',
       icon: ImageIcon,
@@ -43,8 +49,10 @@ export default defineType({
           name: 'logoAlt',
           type: 'string',
           title: 'Alt text',
+          validation: (rule) => rule.required(),
         }),
       ],
+      validation: (rule) => rule.required(),
     },
     defineField({
       title: 'Author',
@@ -55,16 +63,19 @@ export default defineType({
           type: 'author',
         }
       ],
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'publishedDt',
       title: 'Published Date',
       type: 'date',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'tableOfContentHeading',
       type: 'string',
       title: 'Table Of Content Heading',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'tableOfContent',
@@ -126,16 +137,43 @@ export default defineType({
                     defineField({
                       name: 'alt',
                       type: 'string',
-                      title: 'Alt text',
+                      title: 'Alt Text',
                       description:
                         'Alternative text for screenreaders. Falls back on caption if not set',
                     }),
+                    defineField({
+                      name: 'caption',
+                      type: 'string',
+                      title: 'Caption Text',
+                      description: 'Caption for image',
+                    }),
                   ],
                 },
-                {
-                  name: 'table',
-                  type: 'table'
-                }
+                defineField({
+                  name: "customTable",
+                  title: "Custom Table",
+                  type: 'object',
+                  icon: ThLargeIcon,
+                  fields: [
+                    {
+                      title: 'Table Type',
+                      name: 'tableType',
+                      type: 'string',
+                      initialValue: 'bg-primary',
+                      options: {
+                        list: [
+                          { title: 'Primary', value: 'bg-primary' },
+                          { title: 'Secondary', value: 'bg-secondary' },
+                          { title: 'Tertiary', value: 'bg-tertiary' },
+                        ],
+                      },
+                    },
+                    {
+                      name: 'table',
+                      type: 'table'
+                    }
+                  ]
+                })
               ],
             }
           ],
@@ -146,6 +184,7 @@ export default defineType({
       name: 'shareHeading',
       type: 'string',
       title: 'Social Sharing Heading',
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'socialLinks',

@@ -1,5 +1,6 @@
 
 import { urlForImage } from '@/lib/sanity.image'
+import { getDate } from './getDate';
 
 const refactorBlogs = (data) => {
   return {
@@ -41,7 +42,7 @@ const refactorBlog = (data) => {
     "publishDate": {
       "icon": "/calendar.png",
       "alt": "calendar",
-      "date": data?.publishedDt || ''
+      "date": getDate(data?.publishedDt) || ''
     },
     "tableHeading": data.tableOfContentHeading,
     "iconHeading": data?.shareHeading || '',
