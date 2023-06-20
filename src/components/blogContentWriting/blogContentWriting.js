@@ -10,7 +10,7 @@ export default function BlogContentWriting({ author }) {
           <div className="md:w-1/5">
             <a href="#" className="inline-block">
               <img
-                className="h-32 w-32 md:w-24 md:h-24 rounded-full object-cover"
+                className="h-32 w-32 md:w-24 md:h-24 rounded-full object-cover ring-2 ring-gray-200 ring-offset-2"
                 src={author?.image}
                 alt={author?.alt}
               />

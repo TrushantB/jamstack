@@ -34,11 +34,11 @@ export default function BlogDetailsBanner({ blogData }) {
                         {blogData?.heading}
                     </h1>
                 </div>
-                <div className="flex flex-wrap items-center gap-3 md:gap-8 mb-10">
+                <div className="flex flex-wrap items-start gap-3 md:gap-8 mb-10">
                     <div className="flex flex-col items-start md:justify-center gap-2">
                         <span className='text-xs text-gray-500'>Posted by</span>
-                        <a href='#' className='flex gap-2 hover:text-primary transition ease-in delay-50 font-medium text-sm'>
-                            <img className='w-6 h-6 circle' src={blogData?.author?.image} alt={blogData?.author?.alt} />
+                        <a href='#' className='flex items-center gap-2 hover:text-primary transition ease-in delay-50 font-medium text-sm'>
+                            <img className='w-6 h-6 object-cover object-center rounded-full ring ring-offset-2 ring-gray-100 dark:ring-gray-500' src={blogData?.author?.image} alt={blogData?.author?.alt} />
                             <span>{blogData?.author?.name}</span>
                         </a>
                     </div>

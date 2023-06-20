@@ -23,7 +23,7 @@ export default function BlogDetailsTableContent({ blogData }) {
             <div className="md:w-1/4 px-3 mb-8 lg:mb-0 lg:sticky lg:top-[100px]">
               <div className="toc mb-8">
                 <h4 className="text-xl">{blogData?.tableHeading}</h4>
-                <ol className="list-decimal font-medium text-sm ml-4 ">
+                <ol className="list-decimal font-medium text-sm ml-4">
                   {blogData?.tabelContent?.map((item, index) => (
                     <li
                       key={index}
