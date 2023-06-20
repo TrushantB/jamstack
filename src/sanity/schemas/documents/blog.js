@@ -1,5 +1,5 @@
 
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
+import { DocumentIcon, ImageIcon, ThLargeIcon } from '@sanity/icons'
 import { defineArrayMember, defineField, defineType } from 'sanity'
 
 export default defineType({
@@ -126,16 +126,43 @@ export default defineType({
                     defineField({
                       name: 'alt',
                       type: 'string',
-                      title: 'Alt text',
+                      title: 'Alt Text',
                       description:
                         'Alternative text for screenreaders. Falls back on caption if not set',
                     }),
+                    defineField({
+                      name: 'caption',
+                      type: 'string',
+                      title: 'Caption Text',
+                      description: 'Caption for image',
+                    }),
                   ],
                 },
-                {
-                  name: 'table',
-                  type: 'table'
-                }
+                defineField({
+                  name: "customTable",
+                  title: "Custom Table",
+                  type: 'object',
+                  icon: ThLargeIcon,
+                  fields: [
+                    {
+                      title: 'Table Type',
+                      name: 'tableType',
+                      type: 'string',
+                      initialValue: 'bg-primary',
+                      options: {
+                        list: [
+                          { title: 'Primary', value: 'bg-primary' },
+                          { title: 'Secondary', value: 'bg-secondary' },
+                          { title: 'Tertiary', value: 'bg-tertiary' },
+                        ],
+                      },
+                    },
+                    {
+                      name: 'table',
+                      type: 'table'
+                    }
+                  ]
+                })
               ],
             }
           ],
