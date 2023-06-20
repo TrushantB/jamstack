@@ -10,15 +10,15 @@ export default function ImageBox({
   classesWrapper,
 }) {
   const imageUrl =
-    image && urlForImage(image)?.height(height).width(width).fit('crop').url()
+    image && urlForImage(image)?.url()
 
   return (
     <div
       className={`w-full overflow-hidden rounded-[3px] ${classesWrapper} ${imageUrl ? '' : 'bg-gray-50'}`}
     >
       {imageUrl && (
-        <img
-          className="absolute h-full w-full"
+        <Image
+          className="h-auto w-full"
           alt={alt}
           width={width}
           height={height}

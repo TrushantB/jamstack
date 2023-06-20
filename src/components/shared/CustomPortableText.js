@@ -37,7 +37,7 @@ export function CustomPortableText({
             <ImageBox
               image={value}
               alt={value.alt}
-              classesWrapper="relative aspect-[16/9]"
+              classesWrapper=""
             />
             {value?.caption && (
               <div className="font-sans text-sm text-gray-600">
