@@ -1,50 +1,40 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { AboutTwo } from "@/components/animationSvg/about";
 
-const About = () => {
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger); 
+const Abouttwo = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-  //   const articleOne = gsap.timeline();
+    const articleTwo = gsap.timeline();
 
-  //   gsap.set("#frame", {y:10, opacity: 0 ,duration:0.3})
-  //   gsap.set("#icon-list", { opacity: 0})
-  //   gsap.set("#scatter-shape", { rotate:0, opacity: 0})
-  //   gsap.set("#box-text", {  opacity: 0 })
-  //   gsap.set("#dot-square", {  opacity: 0})
-  //   gsap.set("#line_chart", {  opacity: 0  })
-  //   gsap.set("#pie_chart", {  opacity: 0  })
+    articleTwo
+      .to("#dualCard", { x: 30, opacity: 0 })
+      .to("#mobileCirlceDot", { x: -30, opacity: 0 })
+      .to("#mobileReview", { y: -50, opacity: 0 })
+      .to("#mobileIndicator", {
+        scale: 0,
+        opacity: 0,
+        transformOrigin: "center center",
+      })
+      .to("#innerScreen", { y: 30, opacity: 0 });
 
-   
-
-  //   articleOne
-  //     .to("#frame", { opacity: 1,duration:0.3})
-  //     .to("#icon-list", { opacity: 1,duration:0.3})
-  //     .to("#scatter-shape", {  opacity: 1 ,duration:0.3})
-  //     .to("#box-text", {  opacity: 1 ,duration:0.3})
-  //     .to("#dot-square", {  opacity: 1,duration:0.3})
-  //     .to("#line_chart", {  opacity: 1  ,duration:0.3})
-  //     .to("#pie_chart", {  opacity: 1  ,duration:0.3})
- 
-
-
-  //   ScrollTrigger.create({
-  //     trigger: "#articleOne",
-  //     start: "1% 20%",
-  //     end: "80% 70%",
-  //     animation: articleOne,
-  //     toggleActions: "restart none none reverse",
-  //     markers: true,
- 
-  //   });
-  // }, []);
+    ScrollTrigger.create({
+      trigger: "#articleTwo",
+      start: "1% 20%",
+      end: "+=300",
+      animation: articleTwo,
+      toggleActions: "restart none none reverse",
+      scrub: true,
+    });
+  }, []);
 
   return (
-    <div>
-        
+    <div className="w-8/12 mx-auto">
+      <AboutTwo />
     </div>
-  )
-}
+  );
+};
 
-export default Aboutone
+export default Abouttwo;

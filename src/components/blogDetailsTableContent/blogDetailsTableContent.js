@@ -2,9 +2,16 @@ import { React, useEffect, useState } from "react";
 import BlogContactCard from "../blogContactCard/blogContactCard";
 import BlogContentWriting from "../blogContentWriting/blogContentWriting";
 import { CustomPortableText } from "../shared/CustomPortableText";
-
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from 'next-share'
+import { useRouter } from "next/router";
 export default function BlogDetailsTableContent({ blogData }) {
   const [selectedContent, setSelectedContent] = useState({});
+  const router = useRouter();
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL}/${router.asPath}`;
 
   const handleItemClick = (item) => {
     setSelectedContent(item);
@@ -45,18 +52,34 @@ export default function BlogDetailsTableContent({ blogData }) {
               <div>
                 <h5 className="text-xl ">{blogData?.iconHeading}</h5>
                 <ul className="my-2 flex items-center gap-6">
-                  {blogData?.socialSharing?.map((item, index) => (
-                    <li key={index}>
-                      <a
-                        href={item.href}
-                        target={item.target}
-                        className="hover:text-primary transition ease-in delay-50
-                      "
-                      >
-                        <i className={item.icon}></i>
-                      </a>
-                    </li>
-                  ))}
+
+                  <li>
+                    <LinkedinShareButton url={url}>
+                      <i className={'icon-linkedin'}></i>
+                    </LinkedinShareButton>
+                  </li>
+                  <li>
+                    <TwitterShareButton
+                      url={url}
+                    // title={'next-share is a social share buttons for your next React apps.'}
+                    >
+                      <i className={'icon-twitter'}></i>
+                    </TwitterShareButton>
+                  </li>
+                  <li>
+                    <FacebookShareButton
+                      url={url}
+                    // quote={'next-share is a social share buttons for your next React apps.'}
+                    // hashtag={'#nextshare'}
+                    >
+                      <i className={'icon-facebook2'}></i>
+                    </FacebookShareButton>
+                  </li>
+                  <li onClick={() => {
+                    navigator.clipboard.writeText(url);
+                  }}>
+                    <i className={'icon-link cursor-pointer'}></i>
+                  </li>
                 </ul>
               </div>
               {
