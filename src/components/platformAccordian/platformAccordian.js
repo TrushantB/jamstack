@@ -26,17 +26,19 @@ const PlatformAccordian = (accordian) => {
           {accordian?.accordinaList?.map((item, index) => (
             <div className="accordion-item" key={index}>
               <div
+                tabIndex={0}
                 className="accordion-title flex items-center gap-2 pt-4  cursor-pointer"
                 onClick={() => toggleAccordion(item)}
               >
                 <div className="flex items-center gap-2">
                   <div>
                     <div
-                      className={`diamond h-5 w-5  bg-primary symbol-inactive ${active !== item ? "sin" : "symbol-active"
-                        }`}
+                      className={`diamond h-5 w-5  bg-primary symbol-inactive ${
+                        active !== item ? "sin" : "symbol-active"
+                      }`}
                     ></div>
                   </div>
-                  <h5>{item.label}</h5>
+                  <h3 className="heading-5"> {item.label}</h3>
                 </div>
                 <div>
                   {active === item ? (
@@ -80,10 +82,11 @@ const PlatformAccordian = (accordian) => {
                 </div>
               </div>
               <div
-                className={`accordion-content accordian-inactive   ${active === item
+                className={`accordion-content accordian-inactive   ${
+                  active === item
                     ? "  accordian-active ml-7 "
                     : "ml-7 accordian-close "
-                  }`}
+                }`}
               >
                 {item.description}
               </div>

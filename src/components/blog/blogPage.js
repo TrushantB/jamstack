@@ -20,7 +20,7 @@ export default function Blogpage({ cards, hasIcon, label, href }) {
             </a>
             <div className="pt-4">
               <a href={item.href} className="flex items-center gap-4">
-                <img className="w-8" src={item.profil} />
+                <img className="w-8" src={item.profil} alt={item.href} />
                 <p className="w-15 text-sm md:text-md">{item.name}</p>
               </a>
             </div>
