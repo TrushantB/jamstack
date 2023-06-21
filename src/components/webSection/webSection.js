@@ -24,8 +24,8 @@ function WebSection({ heading, description, lineImage, logo }) {
 
     ScrollTrigger.create({
       trigger: ".websection",
-      start: "20% 30%",
-      end: "bottom center",
+      start: "1% 70%",
+      end: "90% center",
       scrub: true,
       animation: tl,
     });

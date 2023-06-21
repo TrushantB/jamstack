@@ -1,13 +1,16 @@
-import { useEffect } from 'react'
+const ScrollUp = () => {
+  function scrollToTop() {
+    window?.scrollTo(0, 0);
+  }
 
-/**
- * Workaround to force pages to scroll to the top when navigating with `<Link>`.
- * Delete this once this issue is resolved in Next 13
- * https://github.com/vercel/next.js/issues/42492
- */
+  return (
+    <div className="bg-primary flex justify-center items-center rounded-full w-10 h-10 p-4">
+      <button
+        className="icon-arrow-up w-1 h-1 flex justify-center items-center text-white"
+        onClick={scrollToTop}
+      ></button>
+    </div>
+  );
+};
 
-export default function ScrollUp() {
-  useEffect(() => window.document.scrollingElement?.scrollTo(0, 0), [])
-
-  return null
-}
+export default ScrollUp;
