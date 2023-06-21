@@ -69,7 +69,7 @@ export default function PricingPlan({ customPlan }) {
                                     return
                                 }
                                 return (
-                                    <button type='button' key={index} draggable={true} onDragStart={() => setDragDetails({ option })} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md" >
+                                    <button type='button' key={index} draggable={true} onDragStart={() => setDragDetails({ option })} className="w-1/3  flex items-center justify-center py-5 px-10 border-2 border-transparent rounded-2xl shadow-md bg-white">
                                         <div className='text-center'>
                                             <span className={`max-h-28 max-w-[112px] mx-auto text-5xl text-tertiary ${option.icon}`}></span>
                                             <p className="font-medium text-center mt-2 text-base">
