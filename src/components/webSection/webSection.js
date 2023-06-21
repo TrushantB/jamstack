@@ -41,7 +41,10 @@ function WebSection({ heading, description, lineImage, logo }) {
           <div className="line border-3 w-[1px] border-green bg-black"></div>
           <div className="w-5 h-5 rounded-full bg-black dot opacity-0 "></div>
         </div>
-        <h2 id="webSection" className="font-bold text-center lg:w-7/12 mt-4 relative -z-30">
+        <h2
+          id="webSection"
+          className="font-bold text-center lg:w-7/12 mt-4 relative -z-30"
+        >
           {heading}
         </h2>
         <img
