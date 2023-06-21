@@ -316,5 +316,29 @@ export default defineType({
 
       ],
     }),
+    defineField({
+      name: "blogCard",
+      title: "Blog Card",
+      type: "object",
+      description:
+        "This is a block of text that will be displayed at the bottom of the page.",
+      fields: [
+        {
+          name: "heading",
+          type: "string",
+          title: "Heading",
+        },
+        {
+          name: "hasIcon",
+          type: "boolean",
+          title: "Has Icon",
+        },
+        {
+          name: "label",
+          type: "string",
+          title: "Label",
+        },
+      ],
+    }),
   ],
 })

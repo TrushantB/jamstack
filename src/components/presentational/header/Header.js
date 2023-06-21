@@ -70,7 +70,7 @@ const Header = ({
                       ? "text-primary"
                       : ""
                       } ${menuItems.href === "contact"
-                        ? "bg-pink-500 text-white rounded-full text-xs border-solid px-3 py-2 font-medium"
+                        ? "bg-primary text-white rounded-full text-xs border-solid px-3 py-2 font-medium"
                         : "block py-2 pl-3 pr-4 text-xs font-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 active:text-pink-500"
                       }`}
                   >

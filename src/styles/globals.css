@@ -141,14 +141,14 @@
   height: 20px;
 }
 .header-toggle.header-toggle-open span:nth-child(1) {
-  @apply bg-pink-500;
+  @apply bg-primary;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(-39deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
 }
 
 .header-toggle.header-toggle-open span:nth-child(2) {
-  @apply bg-pink-500;
+  @apply bg-primary;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(39deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
@@ -346,10 +346,10 @@
 
 /* Toaster */
 .Toastify .Toastify__toast-container{
-  @apply w-full md:w-112;
+  @apply w-full md:w-max md:max-w-sm;
 }
 .Toastify__toast.Toastify__toast-theme--light{
-  @apply shadow-lg border border-black rounded-lg;
+  @apply shadow-lg border border-black rounded-lg min-h-0 py-3 lg:py-2;
 }
 .Toastify__toast-theme--light{
   @apply rounded-lg gap-2;
@@ -357,11 +357,11 @@
 .Toastify__toast-container .Toastify__close-button--light{
   @apply bg-red-100 p-1 rounded-md opacity-100 text-red-400 self-center;
 }
-.Toastify__toast-body{
-  @apply gap-2;
+.Toastify .Toastify__toast-body{
+  @apply gap-2 pr-8;
 }
 .Toastify__toast-body > div:last-child{
-  @apply text-sm text-gray-700 leading-snug;
+  @apply text-base lg:text-sm text-gray-700 leading-snug;
 }
 .Toastify__toast.Toastify__toast--success{
   @apply bg-green-50;

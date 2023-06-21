@@ -22,6 +22,20 @@ const refactorBlogs = (data) => {
 }
 
 const refactorBlog = (data) => {
+  const blogs = [];
+  data?.latestBlogs.map((blog) => {
+    if (blog.slug.current !== data.slug.current && blogs.length < 3) {
+      blogs.push({
+        label: blog.title || null,
+        buttonLabel: blog.buttonLabel || null,
+        image: urlForImage(blog.image).url() || null,
+        alt: blog.image?.logoAlt || null,
+        description: blog.description || null,
+        href: blog.slug.current || ''
+      });
+    }
+  })
+
   return {
     "slug": data.slug.current,
     "heading": data.title,
@@ -65,7 +79,13 @@ const refactorBlog = (data) => {
       "title": data.letTalk?.title || '',
       "buttonLabel": data.letTalk?.cta?.displayName || '',
       "href": data.letTalk?.cta?.page?.slug || ''
-    }
+    },
+    "blogCard": {
+      "heading": data?.blogCard?.heading,
+      "cards": blogs,
+      "hasIcon": data?.blogCard?.hasIcon,
+      "label": data?.blogCard?.label
+    },
   }
 }
 

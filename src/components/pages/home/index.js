@@ -15,6 +15,8 @@ import TestimonialCard from "@/components/presentational/testimonialCard/Testimo
 import BlogCard from "@/components/blogCard/BlogCard";
 import MordernTechnology from "@/components/modernTechonology/modernTechnology";
 import { SiteMeta } from "@/components/shared/SiteMeta";
+import ToTop from "@/components/backToTop";
+import ScrollUp from "@/components/shared/ScrollUp";
 
 const IndexPage = ({ homeData, settings, preview }) => {
   if (!homeData) {
@@ -34,19 +36,19 @@ const IndexPage = ({ homeData, settings, preview }) => {
         <WebSection {...homeData.technologySolution} />
       </section>
 
-      <section >
+      <section>
         <TextBannerList {...homeData.textBannerList} />
       </section>
 
-      <section aria-hidden="true" >
+      <section aria-hidden="true">
         <VideoBanner {...homeData.videoBanner} />
       </section>
 
-      <section aria-label="web facts" >
+      <section aria-label="web facts">
         <TextBanner {...homeData.textBanner} />
       </section>
-      <section >
-        <WebStactics  {...homeData.Webstatstics} />
+      <section>
+        <WebStactics {...homeData.Webstatstics} />
       </section>
 
       <section>
@@ -70,7 +72,7 @@ const IndexPage = ({ homeData, settings, preview }) => {
         <CaseStudy {...homeData.caseStudy} />
       </section>
 
-      <section className="pt-6 pb-4 my-16 lg:my-24 bg-accent-100 ">
+      <section className="py-10 md:pt-6 md:pb-4 my-16 lg:my-24 bg-accent-100">
         {<MordernTechnology {...homeData.morderTechnology} />}
       </section>
 
