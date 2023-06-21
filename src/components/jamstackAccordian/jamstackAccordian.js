@@ -39,7 +39,7 @@ const JamstackAccordion = ({ accordin }) => {
               onClick={() => toggleAccordion(item)}
             >
               <div className="flex items-start lg:items-center  justify-center gap-2">
-                <div className="diamond mt-5 lg:mt-0 w-1 h-1 p-3 bg-tertiary"></div>
+                <div className="diamond w-1 h-1 p-3 bg-tertiary"></div>
                 <h3>{item.label}</h3>
               </div>
             </div>

@@ -128,10 +128,10 @@ function WebStactics({
             className={`flex lg:flex-row gap-4 pb-10 lg:pb-0 mt-5 lg:gap-0 items-center relative ${showButton ? "" : "hidden"
               }`}
           >
-            <form className="w-full" onSubmit={(e) => e.preventDefault()}>
+            <form className="w-full flex relative" onSubmit={(e) => e.preventDefault()}>
               <input aria-label="paste your website url to know your statistics"
                 placeholder={placeholder}
-                className="border rounded-full p-2 w-full pl-4 pr-14 lg:pr-20 lg:w-3/4 outline-none text-black
+                className="border-0 rounded-full p-2 w-full pl-4 pr-14 lg:pr-20 lg:max-w-2xl outline-none text-black
               ring-1 ring-inset ring-gray-50 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-pink-600"
                 onBlur={handleBlur}
                 onChange={handleChange}
@@ -140,15 +140,15 @@ function WebStactics({
               {isMobileView ? (
                 <button
                   onClick={handleButtonClick}
-                  className={`bg-primary rounded-full w-10 flex justify-center items-center -ml-14 h-10`}
+                  className={`bg-primary rounded-full w-10 flex justify-center absolute right-0 top-0 lg:relative whitespace-nowrap items-center -ml-14 h-10`}
                 >
-                  <i className="icon-arrow-right2 text-2xl text-white "></i>
+                  <i className="icon-arrow-right2 text-2xl text-white"></i>
                 </button>
               ) : (
                 isButton && (
                   <button
                     onClick={handleButtonClick}
-                    className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn`}
+                      className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
                   >
                     {buttonLabel}
                   </button>
@@ -156,13 +156,13 @@ function WebStactics({
               )}
             </form>
           </div>
-          {error && (
+          {/* {error && (
             <div aria-hidden="true" className="absolute bottom-4 md:bottom-auto flex flex-wrap items-center w-full sm:w-1/2 text-xs my-2">
               <p className="text-red-600 bg-red-100 py-1 px-3 rounded-full">
                 {error}
               </p>
             </div>
-          )}
+          )} */}
           {/* input end  */}
         </div>
       </div>
