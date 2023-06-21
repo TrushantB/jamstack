@@ -141,14 +141,14 @@
   height: 20px;
 }
 .header-toggle.header-toggle-open span:nth-child(1) {
-  @apply bg-pink-500;
+  @apply bg-primary;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(-39deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
 }
 
 .header-toggle.header-toggle-open span:nth-child(2) {
-  @apply bg-pink-500;
+  @apply bg-primary;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(39deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
