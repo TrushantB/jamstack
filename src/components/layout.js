@@ -2,8 +2,22 @@ import Header from "@/components/presentational/header/Header";
 import Footer from "@/components/presentational/footer/Footer";
 import { PreviewBanner } from "./preview/PreviewBanner";
 import ScrollUp from "./shared/ScrollUp";
+import { useState, useEffect } from "react";
 
 export default function Layout({ children, header, footer, preview }) {
+const [isScrollUp, setIsScrollUp] = useState(false);
+
+useEffect(()=> {
+window.addEventListener('scroll', (event)=> {
+    if(window.scrollY > 10) {
+        setIsScrollUp(true);
+    }
+     else {
+        setIsScrollUp(false);
+     }
+});
+return () => window.removeEventListener('scroll', ()=>{});
+}, [])
   return (
     <>
       {preview && <PreviewBanner />}
@@ -15,7 +29,7 @@ export default function Layout({ children, header, footer, preview }) {
         {footer && <Footer {...footer} />}
       </footer>
       <div className="fixed cursor-pointer right-5 top-[90%]">
-        <ScrollUp />
+        { isScrollUp && <ScrollUp />}
       </div>
     </>
   );
