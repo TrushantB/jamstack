@@ -16,7 +16,7 @@ const Stepper = (stepper ) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const stepLabelOffset = 110; 
+      const stepLabelOffset = 200; 
 
       const stepPositions = stepper?.stepper?.map((step, index) => {
         const element = document.getElementById(step.id);
@@ -59,7 +59,7 @@ const Stepper = (stepper ) => {
         <h2>{stepper?.heading}</h2>
       </div>
       <div>
-        <div className="stepper flex justify-center gap-3 lg:gap-5 text-xs lg:text-sm mb-3 lg:mb-7 text-center lg:text-left sticky py-2 top-16 bg-white">
+        <div className="stepper flex justify-center gap-3 hidden lg:flex  lg:gap-5 text-xs lg:text-sm mb-3 lg:mb-7 text-center lg:text-left sticky py-2 top-16 bg-white">
           {stepper?.stepper?.map((step, index) => (
             <a href={`#${step.id}`} key={index}>
               <div

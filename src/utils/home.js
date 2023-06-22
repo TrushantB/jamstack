@@ -113,7 +113,7 @@ const refactorHome = (data) => {
       hasIcon: data?.caseStudy?.hasIcon,
       label: data?.caseStudy?.label,
       icon: data?.caseStudy?.icon,
-      href: data?.caseStudy?.href || "",
+      href: data?.caseStudy?.href || '',
     },
     "morderTechnology": {
       "heading": data?.modernTechnology?.heading,

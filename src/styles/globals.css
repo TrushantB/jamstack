@@ -385,7 +385,7 @@
 }
 @media screen and (min-width: 768px) {
   .stepperItem:target {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 100px;
   }
 }
 
