@@ -7,21 +7,21 @@ const refactorContact = (data) => {
     "description": data?.contactSection?.description,
     "contactDetails": data?.contactSection?.contactDetails,
     "contactEmail": data?.contactSection?.contactEmail,
-    caseStudy: {
-      heading: data?.caseStudy?.heading,
-      description: data?.caseStudy?.description,
-      itemList: data?.caseStudy?.itemList?.map((item) => ({
-        label: item.label,
-        href: item?.href || "",
-        percentageList: item.percentageList?.map((percentageItem) => ({
-          percentage: percentageItem?.percentage,
-          description: percentageItem?.description,
-        })),
+    caseStudy:{ 
+      heading: data?.caseStudy?.title || '',
+      description: data?.caseStudy?.description || '',
+      itemList: data?.caseStudies?.map((item) => ({
+        label: item?.title || "",
+        href: item?.slug.current || "",
+        percentageList: item?.caseStudy.itemList[0].percentageList?.map((percentageItem) => ({
+          percentage: percentageItem?.percentage || "",
+          description: percentageItem?.description || "",
+        })) || [],
       })),
-      hasIcon: data?.caseStudy?.hasIcon,
-      label: data?.caseStudy?.label,
-      icon: data?.caseStudy?.icon,
-      href: data?.caseStudy?.href || "",
+      hasIcon: data?.caseStudy?.hasIcon || true,
+      label: data?.caseStudy?.label || '',
+      icon: data?.caseStudy?.icon || '',
+      href: data?.caseStudy?.href || '',
     },
     "testimonialCard": {
       "heading": data?.testimonialCard?.heading,

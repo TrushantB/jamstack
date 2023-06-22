@@ -71,7 +71,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
               </div>
               <div className="pt-5">
                 <ReadMoreLink
-                  label={label}
+                  label={label || 'Read More'}
                   hasIcon={hasIcon}
                   target="_self"
                   href={resolveHref( 'case-study-details' ,selectedItem?.href) || ''}

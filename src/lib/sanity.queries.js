@@ -13,7 +13,13 @@ export const homePageQuery = groq`
   },
   "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
-  }[0...3]
+  }[0...3],
+  "caseStudy": *[_type == "caseStudy"][0]{
+    title,
+    description,
+    label,
+    Icon
+  }
 }
 `
 export const blogsPageQuery = groq`
@@ -30,7 +36,6 @@ export const blogsPageQuery = groq`
      "imageAlt":image.logoAlt
      }
   }
-  
   }
 `
 export const ecoQuery = groq`
@@ -72,6 +77,12 @@ export const platformsQuery = groq`
   "caseStudies": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
   },
+  "caseStudy": *[_type == "caseStudy"][0]{
+    title,
+    description,
+    label,
+    Icon,
+  }
   }
   `
 
@@ -80,7 +91,16 @@ export const contactQuery = groq`
   ...,
   "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
-  }[0...3]
+  }[0...3],
+  "caseStudies": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  },
+  "caseStudy": *[_type == "caseStudy"][0]{
+    title,
+    description,
+    label,
+    Icon
+  }
 }
 `
 export const jamStackQuery = groq`

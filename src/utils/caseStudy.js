@@ -1,12 +1,10 @@
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorCaseStudy = (data) => {
-  // TODO:Static things add from CMS
-  return  { 
-    heading: 'Case Study',
-    description: data?.description || 
-    ' We may also automatically collect certain information through cookies to improve our Platform, such as pattern of your use of the Platform, visits, material that you viewed or searched for; page response times, download errors, length of visits to certain pages, page' ,
-    itemList: data?.map((item) => ({
+  return { 
+    heading: data?.caseStudy?.title || '',
+    description: data?.caseStudy?.description || '',
+    itemList: data?.caseStudies?.map((item) => ({
       label: item?.title || "",
       href: item?.slug.current || "",
       percentageList: item?.caseStudy.itemList[0].percentageList?.map((percentageItem) => ({
@@ -14,12 +12,11 @@ const refactorCaseStudy = (data) => {
         description: percentageItem?.description || "",
       })) || [],
     })),
-    hasIcon: data?.hasIcon || true,
-    label: data?.label || 'Read More',
-    icon: data?.icon || '',
-    href: data?.href || '',
-
-}
+    hasIcon: data?.caseStudy?.hasIcon || true,
+    label: data?.caseStudy?.label || '',
+    icon: data?.caseStudy?.icon || '',
+    href: data?.caseStudy?.href || '',
+  }
 }
 
 const refactorCaseStudyDetails = (data) => {
