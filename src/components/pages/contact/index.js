@@ -21,7 +21,7 @@ const Contact = ({ contactData, settings, preview }) => {
                     <h3 className=" pb-3">{contactData?.contactDetails}</h3>
                     <a
                         href="mailto: hello@jamstack.plus"
-                        className="text-primary heading-5 lg:text-4xl"
+                        className="text-primary heading-5 lg:text-4xl hover:border-b-4 hover:border-primary"
                     >
                         {contactData?.contactEmail}
                     </a>

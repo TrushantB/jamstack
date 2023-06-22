@@ -1,16 +1,16 @@
 import { lazy } from "react";
-import {  getJamStack, getSettings } from "@/lib/sanity.client";
+import { getJamStack, getSettings } from "@/lib/sanity.client";
 import { refactorSettings } from "@/utils/settings";
 import { PreviewSuspense } from '@sanity/preview-kit'
 import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
-import Index from "@/components/pages/jamstack";
+import Jamstack from "@/components/pages/jamstack";
 import { refactorJamStack } from "@/utils/jamStack";
 
 const JamstackPagePreview = lazy(
   () => import('@/components/pages/jamstack/preview')
 )
 
-const index = (props) => {
+const JamstackPage = (props) => {
   const { jamstackData, settings, preview, token } = props
 
   if (!jamstackData) {
@@ -22,7 +22,7 @@ const index = (props) => {
       <PreviewSuspense
         fallback={
           <PreviewWrapper>
-            <Index jamstackData={jamstackData} settings={settings} preview={preview} />
+            <Jamstack jamstackData={jamstackData} settings={settings} preview={preview} />
           </PreviewWrapper>
         }
       >
@@ -31,7 +31,7 @@ const index = (props) => {
     )
   }
 
-  return <Index jamstackData={jamstackData} settings={settings} />
+  return <Jamstack jamstackData={jamstackData} settings={settings} />
 
 };
 
@@ -54,4 +54,4 @@ export async function getStaticProps(ctx) {
   }
 }
 
-export default index;
+export default JamstackPage;

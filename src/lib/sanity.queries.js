@@ -19,8 +19,8 @@ export const homePageQuery = groq`
 export const blogsPageQuery = groq`
 *[_type == "blogs"][0] {
    title,
-   blogs[]-> {
-     image,
+   "blogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    image,
      "imageAlt":image.logoAlt,
      title,
     "slug":slug.current,
@@ -29,7 +29,8 @@ export const blogsPageQuery = groq`
      image,
      "imageAlt":image.logoAlt
      }
-   }
+  }
+  
   }
 `
 export const ecoQuery = groq`

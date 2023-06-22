@@ -52,7 +52,8 @@ function WebStactics({
 
 
   const handleButtonClick = () => {
-    const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    const expression = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/
+
     const regex = new RegExp(expression);
 
     if (`${inputValue}`.match(regex)) {
@@ -148,7 +149,7 @@ function WebStactics({
                 isButton && (
                   <button
                     onClick={handleButtonClick}
-                      className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
+                    className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
                   >
                     {buttonLabel}
                   </button>
@@ -183,7 +184,7 @@ function WebStactics({
         </div>
       )}
 
-      {showProgressBar && !animateReport && (
+      {showProgressBar && !animateReport && report && (
         <div>
           <ProgressBar report={report} submitReport={submitReport} />
         </div>

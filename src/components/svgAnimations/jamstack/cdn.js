@@ -9,8 +9,8 @@ const Cdn = () => {
     gsap.set("#mainCircle", { opacity: 0 });
     gsap.set("#diamondOne", { y: 140, opacity: 0 });
     gsap.set("#diamondTwo", { y: -140, opacity: 0 });
-    gsap.set("#pentagonThree", { x: 150, opacity: 0 });
-    gsap.set("#pentagonThree", { x: -150, opacity: 0 });
+    gsap.set("#pentagonOne", { x: 150, opacity: 0 });
+    gsap.set("#pentagonTwo", { x: -150, opacity: 0 });
 
     const decoupled = gsap.timeline({ repeat: -1 });
 
