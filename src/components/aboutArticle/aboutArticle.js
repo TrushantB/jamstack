@@ -36,7 +36,7 @@ export const AboutArticle = ({ jamStackProcess }) => {
                     }
                   >
                     <div className="lg:w-1/2 flex flex-col justify-center">
-                      <h5 className="pb-5">{item.title}</h5>
+                      <h3 className="pb-5 heading-5">{item.title}</h3>
                       <ul className="list-disc list-inside text-tertiary">
                         {item?.labelArray?.map((label, labelIndex) => (
                           <li className="pb-4" key={labelIndex}>

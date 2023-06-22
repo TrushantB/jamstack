@@ -8,22 +8,22 @@ const Faq = ({ faqData, settings, preview }) => {
   return (
     <Layout header={settings.header} footer={settings.footer} preview={preview}>
       <div className="container mx-auto">
-        <div className="">
+        <section className="">
           <Banner {...faqData?.banner} />
-        </div>
+        </section>
 
-        <div className="conatiner mx-auto px-4 lg:px-0">
+        <section className="conatiner mx-auto px-4 lg:px-0">
           <Accordion {...faqData?.accordinData} isActiveFirst={true} />
-        </div>
+        </section>
 
-        <div className="container mx-auto px-4 lg:px-0 py-12 lg:py-18">
+        <section className="container mx-auto px-4 lg:px-0 py-12 lg:py-18">
           <div className="text-center">
             <h2>{faqData?.blogCard?.heading}</h2>
           </div>
           <div>
             <BlogCard {...faqData?.blogCard} page="blog" />
           </div>
-        </div>
+        </section>
       </div>
     </Layout>
   );

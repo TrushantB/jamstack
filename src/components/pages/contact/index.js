@@ -13,11 +13,11 @@ const Contact = ({ contactData, settings, preview }) => {
                     <h2 className="lg:w-3/4">{contactData?.heading}</h2>
                     <p className="lg:w-3/4 pt-6">{contactData?.description}</p>
                 </div>
-                <div className="lg:px-6 px-5 pt-10 pb-10">
+                <section className="lg:px-6 px-5 pt-10 pb-10">
                     <Form script={contactData?.form} />
-                </div>
+                </section>
 
-                <div className="lg:px-6 px-5 pt-5 lg:pt-16 md:w-3/4">
+                <section className="lg:px-6 px-5 pt-5 lg:pt-16 md:w-3/4">
                     <h3 className=" pb-3">{contactData?.contactDetails}</h3>
                     <a
                         href="mailto: hello@jamstack.plus"
@@ -25,19 +25,19 @@ const Contact = ({ contactData, settings, preview }) => {
                     >
                         {contactData?.contactEmail}
                     </a>
-                </div>
+                </section>
 
-                <div className="pt-14 md:pt-20 lg:pt-24 px-5 lg:px-6">
+                <section className="pt-14 md:pt-20 lg:pt-24 px-5 lg:px-6">
                     <CaseStudy {...contactData?.caseStudy} />
-                </div>
+                </section>
 
-                <div className="lg:px-6 px-5 pt-28">
+                <section className="lg:px-6 px-5 pt-28">
                     <TestimonialCard {...contactData?.testimonialCard} />
-                </div>
+                </section>
 
-                <div className="lg:px-6 pt-24">
-                    <BlogCard {...contactData?.blogCard} page="blog" />
-                </div>
+                <section className="lg:px-6 pt-24">
+                    <BlogCard {...contactData?.blogCard} />
+                </section>
             </div>
 
         </Layout>
