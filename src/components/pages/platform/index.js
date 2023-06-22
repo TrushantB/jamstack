@@ -16,39 +16,39 @@ const Platform = ({ platformsData, settings, preview }) => {
     }
     return (
         <Layout header={settings.header} footer={settings.footer} preview={preview}>
-            <div className="pb-0 pt-0">
+            <section className="pb-0 pt-0">
                 <Banner {...platformsData.banner} />
-            </div>
+            </section>
 
             <Info {...platformsData.info} />
 
-            <div className="pb-4 md:pb-14 lg:pb-24 lg:px-24 px-5 ">
+            <section className="pb-4 md:pb-14 lg:pb-24 lg:px-24 px-5 ">
                 <Stepper {...platformsData?.stepperData} />
-            </div>
+            </section>
 
-            <div className="">
+            <section className="">
                 <ModernTechnologyOne {...platformsData?.morderTechnologyOne} />
-            </div>
+            </section>
 
-            <div className="container mx-auto px-4 md:px-0 pt-8 pb-14 md:py-20 lg:py-24">
+            <section className="container mx-auto px-4 md:px-0 pt-8 pb-14 md:py-20 lg:py-24">
                 {<PlatformAccordian {...platformsData?.accordian} />}
-            </div>
+            </section>
 
-            <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
+            <section className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
                 <CaseStudy {...platformsData?.caseStudy} />
-            </div>
+            </section>
 
-            <div className="flex flex-col bg-accent-100 justify-center items-center">
+            <section className="flex flex-col bg-accent-100 justify-center items-center">
                 <Cta {...platformsData?.cta} />
-            </div>
+            </section>
 
-            <div className="py-12 md:py-20 lg:py-24 container mx-auto px-4 md:px-0">
+            <section className="py-12 md:py-20 lg:py-24 container mx-auto px-4 md:px-0">
                 <TestimonialCard {...platformsData?.testimonialCard} />
-            </div>
+            </section>
 
-            <div className="container mx-auto px-4 md:px-0 pb-12 lg:pb-24">
+            <section className="container mx-auto px-4 md:px-0 pb-12 lg:pb-24">
                 <BlogCard {...platformsData?.blogCard} />
-            </div>
+            </section>
         </Layout>
     );
 };

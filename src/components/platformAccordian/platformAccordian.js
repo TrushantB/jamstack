@@ -36,7 +36,7 @@ const PlatformAccordian = (accordian) => {
                         }`}
                     ></div>
                   </div>
-                  <h5>{item.label}</h5>
+                  <h3 className="heading-5">{item.label}</h3>
                 </div>
                 <div>
                   {active === item ? (

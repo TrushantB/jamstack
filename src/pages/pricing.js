@@ -18,36 +18,36 @@ const Pricing = ({ pricingData, settings }) => {
   }
   return (
     <Layout header={settings.header} footer={settings.footer}>
-      <div className="pt-0">
+      <section className="pt-0">
         <Banner {...pricingData?.banner} />
-      </div>
+      </section>
 
-      <div className="pt-0">
+      <section className="pt-0">
         <TextBanner {...pricingData?.textBanner} />
-      </div>
+      </section>
 
-      <div>
+      <section>
         <WebStactics {...pricingData?.Webstatstics} />
-      </div>
-      <div className="hidden md:block">
+      </section>
+      <section className="hidden md:block">
         <PricingPlan customPlan={pricingData.customPlan} />
-      </div>
-      <div className="md:hidden">
+      </section>
+      <section className="md:hidden">
         <PricingPlanMobile customPlan={pricingData.customPlan} />
-      </div>
+      </section>
 
-      <div className="container mx-auto px-6  ">
+      <section className="container mx-auto px-6  ">
         <div className="text-center lg:text-left mt-16 mb-5">
           <h2>{pricingData?.accordinData.heading}</h2>
         </div>
         <div>
           <Accordion {...pricingData?.accordinData} isActiveFirst={true} />
         </div>
-      </div>
+      </section>
 
-      <div>
+      <section>
         <ConnectChoose {...pricingData?.ConnectChoose} />
-      </div>
+      </section>
     </Layout>
   );
 };

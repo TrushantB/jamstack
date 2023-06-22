@@ -30,6 +30,7 @@ const Footer = ({
                       target={item.target}
                       href={item.href}
                     >
+                       <span className="sr-only">{item.alt}</span>
                       <span className={`${item.iconName} text-2xl`}></span>
                     </Link>
                   ))}

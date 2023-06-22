@@ -31,14 +31,14 @@ const Accordion = ({ accordin, isInner = false, isActiveFirst = false }) => {
             onClick={() => toggleAccordion(item)}
           >
             <div>
-              <h5
-                className={`${isInner
+              <h2
+                className={` ${isInner
                   ? "text-base font-body font-bold"
-                  : "text-2xl leading-normal lg:text-3xl font-normal lg:leading-snug"
+                  : "text-2xl leading-normal lg:text-3xl font-normal lg:leading-snug "
                   }`}
               >
                 {item.label}
-              </h5>
+              </h2>
             </div>
             <div>
               {active === item ? (

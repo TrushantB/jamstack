@@ -6,7 +6,7 @@ import BlogCard from "@/components/blogCard/BlogCard";
 export default function BlogDetails({ blogData, settings, preview }) {
     return (
         <Layout header={settings.header} footer={settings.footer} preview={preview}>
-            <div>
+            <section>
                 <BlogDetailsBanner blogData={blogData} />
 
                 <BlogDetailsTableContent blogData={blogData} />
@@ -19,7 +19,7 @@ export default function BlogDetails({ blogData, settings, preview }) {
                         <BlogCard {...blogData?.blogCard} />
                     </div>
                 </div>
-            </div>
+            </section>
         </Layout>
     );
 }

@@ -7,12 +7,12 @@ import { refactorSettings } from '@/utils/settings';
 export default function TermsAndConditions({ compliencesData, settings }) {
   return (
     <Layout header={settings.header} footer={settings.footer}>
-      <div className='max-w-2xl xl:max-w-3xl mx-auto px-4'>
+      <section className='max-w-2xl xl:max-w-3xl mx-auto px-4'>
         <div className='text-page-content max-w-4xl mx-auto pb-12 mt-16'>
           <h1 className='mb-10'><strong>{compliencesData.title}</strong></h1>
           <CustomPortableText value={compliencesData?.content} />
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }

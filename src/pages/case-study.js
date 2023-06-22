@@ -13,9 +13,9 @@ const CaseStudyPage = ({ caseStudyData, settings }) => {
 
   return (
     <Layout header={settings.header} footer={settings.footer}>
-      <div className="container mx-auto my-9">
+      <section className="container mx-auto my-9">
         <CaseStudy {...caseStudyData} />
-      </div>
+      </section>
     </Layout>
   );
 };
