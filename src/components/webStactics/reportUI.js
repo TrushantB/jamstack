@@ -19,7 +19,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
               {report.firstContentfulPaint?.title} (FCP)
             </h5>
             <div className="">
-              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative  left-[${report.firstContentfulPaint?.score * 100}%]`}>
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative`} style={{ left: `${report.firstContentfulPaint?.score * 100}%` }}>
                 <h6>{report.firstContentfulPaint?.displayValue}</h6>
                 <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
                 <div className="report-line w-1 py-[12px] bg-black"></div>
@@ -49,7 +49,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
               {report.interactive?.title} (TTI)
             </h5>
             <div className="">
-              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative` + ' left-[' + Math.round(report.interactive?.score * 100) + '%]'}>
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative`} style={{ left: `${report.interactive?.score * 100}%` }}>
                 <h6>{report.interactive?.displayValue}</h6>
                 <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
                 <div className="report-line w-1 py-[12px] bg-black"></div>
@@ -78,7 +78,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
               {report.largestContentfulPaint?.title} (LCP)
             </h5>
             <div className="">
-              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative` + ' left-[' + Math.round(report?.largestContentfulPaint?.score * 100) + '%]'}>
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative`} style={{ left: `${report.largestContentfulPaint?.score * 100}%` }}>
                 <h6>{report.largestContentfulPaint?.displayValue}</h6>
                 <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
                 <div className="report-line w-1 py-[12px] bg-black"></div>
@@ -107,7 +107,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
               {report.cumulativeLayoutShift?.title} (CLS)
             </h5>
             <div className="">
-              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative` + ' left-[' + Math.round(report?.cumulativeLayoutShift?.score * 100) + '%]'}>
+              <div className={`flex justify-center items-center w-3 bg-white flex-col -mb-3 relative`} style={{ left: `${report.cumulativeLayoutShift?.score * 100}%` }}>
                 <h6>{report.cumulativeLayoutShift?.displayValue}</h6>
                 <div className="report-dot w-4 h-4 bg-black rounded-full"></div>
                 <div className="report-line w-1 py-[12px] bg-black"></div>
@@ -134,7 +134,10 @@ const ProgressBar = ({ report = {}, submitReport }) => {
       <div>
 
         {/* form  */}
-        <div className="flex flex-col gap-8 ml-5 py-24 pb-16 " >
+        <form className="flex flex-col gap-8 ml-5 py-24 pb-16 " onSubmit={(e) => {
+          e.preventDefault();
+          submitReport(name, email)
+        }} >
           <input
             className="sm:w-3/4  rounded-full bg-accent-100 px-6 h-[60px] "
             placeholder="Name"
@@ -149,8 +152,8 @@ const ProgressBar = ({ report = {}, submitReport }) => {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <Button onClick={() => submitReport(name, email)} label={"Yes send me the results"} />
-        </div>
+          <Button label={"Yes send me the results"} />
+        </form>
       </div>
     </div>
   );

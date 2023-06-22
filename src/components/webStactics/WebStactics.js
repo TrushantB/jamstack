@@ -148,7 +148,7 @@ function WebStactics({
                 isButton && (
                   <button
                     onClick={handleButtonClick}
-                      className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
+                    className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
                   >
                     {buttonLabel}
                   </button>
@@ -183,7 +183,7 @@ function WebStactics({
         </div>
       )}
 
-      {showProgressBar && !animateReport && (
+      {showProgressBar && !animateReport && report && (
         <div>
           <ProgressBar report={report} submitReport={submitReport} />
         </div>
