@@ -11,9 +11,7 @@ function TextBannerList({ heading, title, listItems }) {
             </h2>
           </div>
           <div className="bg-accent-100 p-5 sm:p-10  lg:p-11 lg:pl-20 rounded-t-3xl lg:rounded-r-none lg:rounded-l-3xl">
-            <h3 className="mb-4 lg:mb-14 font-normal text-[1.625rem] lg:text-[2rem] header-4">
-              {title}
-            </h3>
+            <h4 className="mb-4 lg:mb-14 font-normal text-[1.625rem] lg:text-[2rem]">{title}</h4>
             <div>
               {listItems &&
                 listItems?.map((item, index) => (

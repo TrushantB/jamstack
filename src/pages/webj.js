@@ -3,15 +3,16 @@ import { getPlatformsQuery, getSettings } from "@/lib/sanity.client";
 import { refactorPlatforms } from "@/utils/platforms";
 import { refactorSettings } from "@/utils/settings";
 
-import { PreviewSuspense } from "@sanity/preview-kit";
+import { PreviewSuspense } from '@sanity/preview-kit'
 import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
 import Platform from "@/components/pages/platform";
-const PlatformPreview = lazy(() =>
-  import("@/components/pages/platform/preview")
-);
+const PlatformPreview = lazy(
+  () => import('@/components/pages/platform/preview')
+)
+
 
 const Webj = (props) => {
-  const { platformsData, settings, preview, token } = props;
+  const { platformsData, settings, preview, token } = props
 
   if (!platformsData) {
     return <></>;
@@ -22,34 +23,26 @@ const Webj = (props) => {
       <PreviewSuspense
         fallback={
           <PreviewWrapper>
-            <Platform
-              platformsData={platformsData}
-              settings={settings}
-              preview={preview}
-            />
+            <Platform platformsData={platformsData} settings={settings} preview={preview} />
           </PreviewWrapper>
         }
       >
-        <PlatformPreview
-          token={token}
-          settings={settings}
-          params={{ slug: "webj" }}
-        />{" "}
-      </PreviewSuspense>
-    );
+        <PlatformPreview token={token} settings={settings} params={{ slug: 'webj' }} />      </PreviewSuspense>
+    )
   }
 
-  return <Platform platformsData={platformsData} settings={settings} />;
+  return <Platform platformsData={platformsData} settings={settings} />
+
 };
 
 export async function getStaticProps(ctx) {
-  const { preview = false, previewData = {} } = ctx;
+  const { preview = false, previewData = {} } = ctx
 
-  const token = previewData.token;
+  const token = previewData.token
   const [settings, platform] = await Promise.all([
     getSettings({ token }),
     getPlatformsQuery({ token, slug: "webj" }),
-  ]);
+  ])
 
   return {
     props: {
@@ -58,7 +51,7 @@ export async function getStaticProps(ctx) {
       preview,
       token: previewData.token ?? null,
     },
-  };
+  }
 }
 
 export default Webj;

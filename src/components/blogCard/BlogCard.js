@@ -61,18 +61,17 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
-              <Link
-                href={resolveHref("blog", card.href)}
-                className="flex flex-col h-full"
-              >
+              <Link href={resolveHref('blog', card.href)} className="flex flex-col h-full">
                 <img
                   className="lg:h-auto md:h-auto w-full object-cover object-center rounded-t-2xl"
                   src={card.image}
-                  alt={card.href}
+                  alt={card.altTag}
                 />
                 <div className="p-4 flex flex-col justify-between flex-1">
                   <h3 className="mb-3 text-3xl lg:text-2xl">{card.label}</h3>
-                  <p className="leading-relaxed mb-5">{card.description}</p>
+                  <p className="leading-relaxed mb-5">
+                    {card.description}
+                  </p>
                   <div className="h-8">
                     {hoverItem === card && (
                       <a className="flex gap-3 items-center text-primary">

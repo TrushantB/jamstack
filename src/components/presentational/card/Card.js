@@ -10,7 +10,7 @@ const Card = ({ items }) => {
             className="bg-accent-100 rounded-3xl flex flex-col  font-bold gap-4 py-3 px-6 pt-5"
           >
             <span className={`${item.class} text-tertiary text-6xl`}></span>
-            <h3 className="heading-5">{item.title}</h3>
+            <h5>{item.title}</h5>
           </div>
         ))}
       </div>

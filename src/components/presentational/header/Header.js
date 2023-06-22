@@ -47,16 +47,11 @@ const Header = ({
 
   return (
     <>
-      <a href="#main" className="skip-to-main-content-link">
-        Skip to main content
-      </a>
+      <a href="#main" className="skip-to-main-content-link">Skip to main content</a>
       <nav className="bg-white border-gray-200">
         <div className="flex items-center justify-between px-6 py-5 mx-auto max-w-7xl lg:px-8 lg:py-3 shadow shadow-slate-100">
           <div className="flex items-center justify-between w-full gap-5 ">
-            <Link
-              href={resolveHref(logoUrl?.herf)}
-              className="flex items-center"
-            >
+            <Link href={resolveHref(logoUrl?.herf)} className="flex items-center">
               <img
                 src={logoUrl?.url}
                 alt={logoUrl?.alt}
@@ -64,21 +59,20 @@ const Header = ({
               />
             </Link>
             <ul
-              className={`${
-                menuOpen ? "block" : "hidden"
-              } lg:flex flex-col md:flex-row items-center justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
+              className={`${menuOpen ? "block" : "hidden"
+                } lg:flex flex-col md:flex-row items-center justify-end p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full hidden`}
             >
               {headerMenu?.map((menuItems, index) => (
                 <li key={index}>
                   <Link
                     href={resolveHref(menuItems.href)}
-                    className={`${
-                      `/${menuItems.href}` === activeMenu ? "text-primary" : ""
-                    } ${
-                      menuItems.href === "contact"
+                    className={`${`/${menuItems.href}` === activeMenu
+                      ? "text-primary"
+                      : ""
+                      } ${menuItems.href === "contact"
                         ? "bg-primary text-white rounded-full text-xs border-solid px-3 py-2 font-medium"
-                        : "block py-2 pl-3 pr-4 text-xs font-medium text-gray-900 rounded md:p-0 active:text-primary"
-                    }`}
+                        : "block py-2 pl-3 pr-4 text-xs font-medium text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 active:text-pink-500"
+                      }`}
                   >
                     {menuItems.label}
                   </Link>
@@ -86,13 +80,11 @@ const Header = ({
               ))}
             </ul>
 
-            <button
-              aria-label="menu"
+            <button aria-label="menu"
               id="dropdownUserAvatarButton"
               data-dropdown-toggle="dropdownAvatar"
-              className={` header-toggle ${
-                isOpen ? "header-toggle-open" : ""
-              } `}
+              className={` header-toggle ${isOpen ? "header-toggle-open" : ""
+                } `}
               type="button"
               onClick={toggleMenu}
             >
@@ -107,11 +99,10 @@ const Header = ({
                   {headerMenu?.map((menuItems, index) => (
                     <li
                       key={index}
-                      className={`my-3 ${
-                        `/${menuItems.href}` === activeMenu
-                          ? "text-primary"
-                          : ""
-                      }`}
+                      className={`my-3 ${`/${menuItems.href}` === activeMenu
+                        ? "text-primary"
+                        : ""
+                        }`}
                     >
                       <Link
                         href={`/${menuItems.href}`}
@@ -126,17 +117,18 @@ const Header = ({
                 <ul className="right-side-bar-mt ">
                   {sidebarLink?.map((sidebarItems, index) => (
                     <li
-                      className={`my-3 ${
-                        `/${sidebarItems.href}` === activeMenu
-                          ? "text-primary"
-                          : ""
-                      }`}
+                      className={`my-3 ${`/${sidebarItems.href}` === activeMenu
+                        ? "text-primary"
+                        : ""
+                        }`}
                       key={index}
                     >
                       <Link
                         href={resolveHref(sidebarItems.href)}
                         className="btn-link font-medium"
-                        onClick={() => handleMenuClick(`/${sidebarItems.href}`)}
+                        onClick={() =>
+                          handleMenuClick(`/${sidebarItems.href}`)
+                        }
                       >
                         {sidebarItems.label}
                       </Link>
@@ -145,7 +137,10 @@ const Header = ({
                 </ul>
 
                 <div className="right-side-bar-mb right-side-bar-mt ">
-                  <CustomPortableText paragraphClasses="" value={description} />
+                  <CustomPortableText
+                    paragraphClasses=""
+                    value={description}
+                  />
                   <Link href={resolveHref(buttonLabel.href)}>
                     <button
                       className="mt-[3.08vh] font-semibold underline hover:underline hover:text-primary transition duration-200 ease"
@@ -181,34 +176,32 @@ const Header = ({
                     <ul className="flex items-center gap-3">
                       {socialLink?.map((item, index) => (
                         <li key={index}>
+
+
                           <Link
-                            className={`btn-link ${
-                              item.href === activeMenu ? "text-primary" : ""
-                            }`}
+                            className={`btn-link ${item.href === activeMenu ? "text-primary" : ""
+                              }`}
                             href={item.href}
                             target={item.target}
                             onClick={() => handleMenuClick(item.href)}
                           >
                             <span className="sr-only">{item.alt}</span>
-                            <span
-                              aria-hidden="true"
-                              className={`${item.iconName} text-xl`}
-                            ></span>
+                            <span aria-hidden="true" className={`${item.iconName} text-xl`}></span>
                           </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+
               </div>
             </div>
           )}
 
           {menuOpen && (
             <div
-              className={`${
-                menuOpen ? "block" : "hidden"
-              } sticky top-0 md:flex font-medium flex-col md:flex-row align-middle p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full`}
+              className={`${menuOpen ? "block" : "hidden"
+                } sticky top-0 md:flex font-medium flex-col md:flex-row align-middle p-4 md:p-0 mt-4 md:mt-0 md:space-x-8 rounded-lg bg-gray-50 md:bg-white dark:bg-gray-900 dark:border-gray-700 w-full`}
             >
               <ul>
                 {headerMenu?.map((menuItems, index) => (
@@ -273,7 +266,10 @@ const Header = ({
                       {socialLink?.map((item, index) => (
                         <li key={index}>
                           <Link href={item.href} target={item.target}>
-                            <span className={`${item.iconName} text-xl`}></span>
+
+                            <span
+                              className={`${item.iconName} text-xl`}
+                            ></span>
                           </Link>
                         </li>
                       ))}

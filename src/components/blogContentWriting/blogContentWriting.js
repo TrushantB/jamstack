@@ -2,6 +2,7 @@ import React from "react";
 import { CustomPortableText } from "../shared/CustomPortableText";
 
 export default function BlogContentWriting({ author }) {
+
   return (
     <>
       <div className="mx-3 px-4 w-full bg-gray-50 rounded-2xl py-4">
@@ -17,22 +18,15 @@ export default function BlogContentWriting({ author }) {
           </div>
           <div className="md:w-4/5">
             <div className="flex items-center justify-between my-2 md:mt-0 md:mb-1">
-              <a
-                href="#"
-                className="font-semibold hover:text-primary transition ease-in delay-50"
-              >
+              <a href="#" className="font-semibold hover:text-primary transition ease-in delay-50">
                 {author?.name}
               </a>
               <div>
                 <ul className="flex gap-4">
                   {author?.socialSharing?.map((item, index) => (
                     <li key={index}>
-                      <a
-                        href={item?.href}
-                        target={item?.target}
-                        aria-label={item.href}
-                        className="font-semibold hover:text-primary transition ease-in delay-50"
-                      >
+                      <a href={item?.href} target={item?.target}
+                        className="font-semibold hover:text-primary transition ease-in delay-50">
                         <i className={item?.icon}></i>
                       </a>
                     </li>
@@ -41,10 +35,7 @@ export default function BlogContentWriting({ author }) {
               </div>
             </div>
             <div>
-              <CustomPortableText
-                paragraphClasses={"text-sm text-gray-500"}
-                value={author?.description}
-              />
+              <CustomPortableText paragraphClasses={'text-sm text-gray-500'} value={author?.description} />
             </div>
           </div>
         </div>

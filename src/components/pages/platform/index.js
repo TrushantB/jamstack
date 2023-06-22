@@ -10,46 +10,47 @@ import PlatformAccordian from "@/components/platformAccordian/platformAccordian"
 import Cta from "@/components/cta/cta";
 
 const Platform = ({ platformsData, settings, preview }) => {
-  if (!platformsData) {
-    return <></>;
-  }
-  return (
-    <Layout header={settings.header} footer={settings.footer} preview={preview}>
-      <section className="pb-0 pt-0">
-        <Banner {...platformsData.banner} />
-      </section>
 
-      <Info {...platformsData.info} />
+    if (!platformsData) {
+        return <></>;
+    }
+    return (
+        <Layout header={settings.header} footer={settings.footer} preview={preview}>
+            <div className="pb-0 pt-0">
+                <Banner {...platformsData.banner} />
+            </div>
 
-      <section className="pb-4 md:pb-14 lg:pb-24 lg:px-24 px-5 ">
-        <Stepper {...platformsData?.stepperData} />
-      </section>
+            <Info {...platformsData.info} />
 
-      <section className="">
-        <ModernTechnologyOne {...platformsData?.morderTechnologyOne} />
-      </section>
+            <div className="pb-4 md:pb-14 lg:pb-24 lg:px-24 px-5 ">
+                <Stepper {...platformsData?.stepperData} />
+            </div>
 
-      <section className="container mx-auto px-4 md:px-0 pt-8 pb-14 md:py-20 lg:py-24">
-        {<PlatformAccordian {...platformsData?.accordian} />}
-      </section>
+            <div className="">
+                <ModernTechnologyOne {...platformsData?.morderTechnologyOne} />
+            </div>
 
-      <section className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
-        <CaseStudy {...platformsData?.caseStudy} />
-      </section>
+            <div className="container mx-auto px-4 md:px-0 pt-8 pb-14 md:py-20 lg:py-24">
+                {<PlatformAccordian {...platformsData?.accordian} />}
+            </div>
 
-      <section className="flex flex-col bg-accent-100 justify-center items-center">
-        <Cta {...platformsData?.cta} />
-      </section>
+            <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-24">
+                <CaseStudy {...platformsData?.caseStudy} />
+            </div>
 
-      <section className="py-12 md:py-20 lg:py-24 container mx-auto px-4 md:px-0">
-        <TestimonialCard {...platformsData?.testimonialCard} />
-      </section>
+            <div className="flex flex-col bg-accent-100 justify-center items-center">
+                <Cta {...platformsData?.cta} />
+            </div>
 
-      <section className="container mx-auto px-4 md:px-0 pb-12 lg:pb-24">
-        <BlogCard {...platformsData?.blogCard} />
-      </section>
-    </Layout>
-  );
+            <div className="py-12 md:py-20 lg:py-24 container mx-auto px-4 md:px-0">
+                <TestimonialCard {...platformsData?.testimonialCard} />
+            </div>
+
+            <div className="container mx-auto px-4 md:px-0 pb-12 lg:pb-24">
+                <BlogCard {...platformsData?.blogCard} />
+            </div>
+        </Layout>
+    );
 };
 
 export default Platform;

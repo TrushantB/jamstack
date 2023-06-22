@@ -30,7 +30,6 @@ const Footer = ({
                       target={item.target}
                       href={item.href}
                     >
-                      <span className="sr-only">{item.alt}</span>
                       <span className={`${item.iconName} text-2xl`}></span>
                     </Link>
                   ))}
@@ -42,15 +41,11 @@ const Footer = ({
                 {footerMenu?.map((menuItems, index) => {
                   return (
                     <li key={index} className="font-semibold mb-2">
-                      <Link
-                        className="btn-link"
-                        href={resolveHref(menuItems.href)}
-                        target={"_self"}
-                      >
+                      <Link className="btn-link" href={resolveHref(menuItems.href)} target={'_self'}>
                         {menuItems.label}
                       </Link>
                     </li>
-                  );
+                  )
                 })}
               </ul>
             </div>
@@ -59,10 +54,7 @@ const Footer = ({
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-6 col-span-2  lg:mx-0">
               {secondaryMenu?.map((menuItems, index) => (
                 <li className="mb-2 md:mb-0" key={index}>
-                  <Link
-                    href={resolveHref(menuItems.href)}
-                    className="font-bold btn-link"
-                  >
+                  <Link href={resolveHref(menuItems.href)} className="font-bold btn-link">
                     {menuItems.label}
                   </Link>
                 </li>

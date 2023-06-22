@@ -10,7 +10,7 @@ export const EcoSystemBanner = ({ heading, description, title }) => {
           className=" pt-5"
           dangerouslySetInnerHTML={{ __html: description }}
         ></div>
-        <h2 className="pt-3 heading-5 " dangerouslySetInnerHTML={{ __html: title }}></h2>
+        <h5 className="pt-3 " dangerouslySetInnerHTML={{ __html: title }}></h5>
       </div>
       <div className="w-4/12">
         <EcosystemBanner />

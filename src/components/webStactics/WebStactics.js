@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
 import ProgressBar from "./reportUI";
-import axios from "axios";
+import axios from 'axios'
 
 function WebStactics({
   heading,
@@ -17,7 +17,7 @@ function WebStactics({
   const [showButton, setShowButton] = useState(true);
   const [showProgressBar, setShowProgressBar] = useState(false);
   const [animateReport, setAnimateReport] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [report, setReport] = useState(null);
 
   const handleBlur = (event) => {
@@ -32,7 +32,8 @@ function WebStactics({
     if (error) {
       setError("");
     }
-    setInputValue(event.target.value);
+    setInputValue(event.target.value)
+
   };
 
   useEffect(() => {
@@ -49,23 +50,20 @@ function WebStactics({
     };
   }, []);
 
+
   const handleButtonClick = () => {
-    const expression =
-      /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
     const regex = new RegExp(expression);
 
     if (`${inputValue}`.match(regex)) {
       setShowButton(false);
       setAnimateReport(true);
-      axios
-        .post("/api/getReport", {
-          url: inputValue,
-          output: "html",
-        })
+      axios.post("/api/getReport", {
+        "url": inputValue,
+        "output": "html"
+      })
         .then((data) => {
-          toast.success(
-            "Yeah! Your core web vitals report is ready. Please fill in your details to get the report on mail."
-          );
+          toast.success("Yeah! Your core web vitals report is ready. Please fill in your details to get the report on mail.");
           setReport(data.data.data.data);
           setAnimateReport(false);
           setShowProgressBar(true);
@@ -76,7 +74,7 @@ function WebStactics({
           console.error("error", error);
         });
     } else {
-      toast.error("Please enter valid URL.");
+      toast.error("Please enter valid URL.")
     }
   };
 
@@ -94,28 +92,26 @@ function WebStactics({
   useEffect(() => {
     if (animateReport) {
       Animation();
-    } else {
-    }
+    } else { }
   }, [animateReport]);
 
   const submitReport = (name, email) => {
-    toast.success("The report is been shared in your mail successfully.");
+    toast.success('The report is been shared in your mail successfully.');
     setShowProgressBar(false);
     setShowButton(true);
-    axios
-      .post("/api/postReport", {
-        reportUrl: report?.reportUrl || "",
-        webSiteUrl: inputValue,
-        email: email,
-        name: name,
-      })
+    axios.post("/api/postReport", {
+      "reportUrl": report?.reportUrl || "",
+      "webSiteUrl": inputValue,
+      "email": email,
+      "name": name
+    })
       .then((data) => {
         console.log("mail sent");
       })
       .catch((error) => {
         console.error("error", error);
       });
-  };
+  }
 
   return (
     <>
@@ -129,16 +125,11 @@ function WebStactics({
           </div>
           {/* input start  */}
           <div
-            className={`flex lg:flex-row gap-4 pb-10 lg:pb-0 mt-5 lg:gap-0 items-center relative ${
-              showButton ? "" : "hidden"
-            }`}
+            className={`flex lg:flex-row gap-4 pb-10 lg:pb-0 mt-5 lg:gap-0 items-center relative ${showButton ? "" : "hidden"
+              }`}
           >
-            <form
-              className="w-full flex relative"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input
-                aria-label="paste your website url to know your statistics"
+            <form className="w-full flex relative" onSubmit={(e) => e.preventDefault()}>
+              <input aria-label="paste your website url to know your statistics"
                 placeholder={placeholder}
                 className="border-0 rounded-full p-2 w-full pl-4 pr-14 lg:pr-20 lg:max-w-2xl outline-none text-black
               ring-1 ring-inset ring-gray-50 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-pink-600"
@@ -149,7 +140,6 @@ function WebStactics({
               {isMobileView ? (
                 <button
                   onClick={handleButtonClick}
-                  aria-label="submit"
                   className={`bg-primary rounded-full w-10 flex justify-center absolute right-0 top-0 lg:relative whitespace-nowrap items-center -ml-14 h-10`}
                 >
                   <i className="icon-arrow-right2 text-2xl text-white"></i>
@@ -158,7 +148,7 @@ function WebStactics({
                 isButton && (
                   <button
                     onClick={handleButtonClick}
-                    className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
+                      className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
                   >
                     {buttonLabel}
                   </button>
