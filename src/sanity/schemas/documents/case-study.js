@@ -54,21 +54,24 @@ export default defineType({
       validation: (rule) => rule.required(),
     },
     defineField({
-      title: 'Author',
-      name: 'author',
-      type: 'reference',
-      to: [
-        {
-          type: 'author',
-        }
-      ],
-      validation: (rule) => rule.required(),
+      name: "client",
+      type: "string",
+      title: "Client",
     }),
     defineField({
-      name: 'publishedDt',
-      title: 'Published Date',
-      type: 'date',
-      validation: (rule) => rule.required(),
+      name: 'year',
+      title: 'Year',
+      type: 'string',
+    }),
+    defineField({
+      name: "timeline",
+      type: "string",
+      title: "Timeline",
+    }),
+    defineField({
+      name: "service",
+      type: "string",
+      title: "Services",
     }),
     defineField({
       name: 'tableOfContentHeading',
@@ -180,52 +183,52 @@ export default defineType({
         },
       ],
     }),
-    defineField({
-      name: 'shareHeading',
-      type: 'string',
-      title: 'Social Sharing Heading',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'socialLinks',
-      title: 'Social Links',
-      type: 'array',
-      of: [
-        {
-          title: 'items',
-          type: 'object',
-          fields: [
-            {
-              name: 'name',
-              type: 'string',
-              title: 'Name',
-            },
-            {
-              name: 'icon',
-              type: 'string',
-              title: 'Icon',
-            },
-            {
-              name: 'href',
-              type: 'string',
-              title: 'Href',
-            },
-            {
-              title: 'Target',
-              name: 'target',
-              type: 'string',
-              options: {
-                list: [
-                  { title: 'Blank', value: '_blank' },
-                  { title: 'Self', value: '_self' },
-                ],
-              },
-            },
-          ],
-        },
-      ],
+    // defineField({
+    //   name: 'shareHeading',
+    //   type: 'string',
+    //   title: 'Social Sharing Heading',
+    //   validation: (rule) => rule.required(),
+    // }),
+    // defineField({
+    //   name: 'socialLinks',
+    //   title: 'Social Links',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       title: 'items',
+    //       type: 'object',
+    //       fields: [
+    //         {
+    //           name: 'name',
+    //           type: 'string',
+    //           title: 'Name',
+    //         },
+    //         {
+    //           name: 'icon',
+    //           type: 'string',
+    //           title: 'Icon',
+    //         },
+    //         {
+    //           name: 'href',
+    //           type: 'string',
+    //           title: 'Href',
+    //         },
+    //         {
+    //           title: 'Target',
+    //           name: 'target',
+    //           type: 'string',
+    //           options: {
+    //             list: [
+    //               { title: 'Blank', value: '_blank' },
+    //               { title: 'Self', value: '_self' },
+    //             ],
+    //           },
+    //         },
+    //       ],
+    //     },
+    //   ],
 
-    }),
+    // }),
     defineField({
       name: "letTalk",
       title: "Let's Talk",
@@ -314,6 +317,89 @@ export default defineType({
           ]
         }
 
+      ],
+    }),
+    defineField({
+      name: "caseStudy",
+      title: "Case Study",
+      description:
+        "This is a block of text that will be displayed at the bottom of the page.",
+      type: "object",
+      fields: [
+        {
+          name: "heading",
+          type: "string",
+          title: "Heading",
+        },
+        {
+          name: "description",
+          type: "text",
+          title: "Description",
+        },
+        {
+          name: "itemList",
+          type: "array",
+          title: "Item List",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  name: "label",
+                  type: "string",
+                  title: "Label",
+                },
+                {
+                  name: "href",
+                  type: "string",
+                  title: "Href",
+                },
+                {
+                  name: "percentageList",
+                  type: "array",
+                  title: "Percentage List",
+                  of: [
+                    {
+                      type: "object",
+                      fields: [
+                        {
+                          name: "percentage",
+                          type: "string",
+                          title: "Percentage",
+                        },
+                        {
+                          name: "description",
+                          type: "string",
+                          title: "Description",
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: "hasIcon",
+          type: "boolean",
+          title: "Has Icon",
+        },
+        {
+          name: "label",
+          type: "string",
+          title: "Label",
+        },
+        {
+          name: "icon",
+          type: "string",
+          title: "Icon",
+        },
+        {
+          name: "href",
+          type: "string",
+          title: "Href",
+        },
       ],
     }),
     defineField({

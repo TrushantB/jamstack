@@ -99,22 +99,25 @@ const refactorHome = (data) => {
       "image": "/world.png",
       "alt": "image"
     },
-    caseStudy: {
-      heading: data?.caseStudy?.heading,
-      description: data?.caseStudy?.description,
-      itemList: data?.caseStudy?.itemList?.map((item) => ({
-        label: item.label,
-        href: item.href || "",
-        percentageList: item.percentageList.map((percentageItem) => ({
-          percentage: percentageItem.percentage,
-          description: percentageItem.description,
-        })),
-      })),
-      hasIcon: data?.caseStudy?.hasIcon,
-      label: data?.caseStudy?.label,
-      icon: data?.caseStudy?.icon,
-      href: data?.caseStudy?.href || '',
-    },
+    // TODO:Static things add from CMS
+    caseStudy:{ 
+    heading: 'Case Study',
+    description: data?.caseStudies?.description || 
+    ' We may also automatically collect certain information through cookies to improve our Platform, such as pattern of your use of the Platform, visits, material that you viewed or searched for; page response times, download errors, length of visits to certain pages, page' ,
+    itemList: data?.caseStudies?.map((item) => ({
+      label: item?.title || "",
+      href: item?.slug.current || "",
+      percentageList: item?.caseStudy.itemList[0].percentageList?.map((percentageItem) => ({
+        percentage: percentageItem?.percentage || "",
+        description: percentageItem?.description || "",
+      })) || [],
+    })),
+    hasIcon: data?.caseStudies?.hasIcon || true,
+    label: data?.caseStudies?.label || 'Read More',
+    icon: data?.caseStudies?.icon || '',
+    href: data?.caseStudies?.href || '',
+  },
+   
     "morderTechnology": {
       "heading": data?.modernTechnology?.heading,
       "href": data?.modernTechnology?.href,

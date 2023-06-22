@@ -5,6 +5,7 @@ import { PreviewSuspense } from '@sanity/preview-kit'
 import { PreviewWrapper } from "@/components/preview/PreviewWrapper";
 import { refactorBlog } from "@/utils/blogs";
 import CaseStudyDetails from "@/components/pages/caseStudyDetails";
+import { refactorCaseStudyDetails } from "@/utils/caseStudy";
 
 const CaseStudyDetailsPreview = lazy(
     () => import('@/components/pages/caseStudyDetails/preview')
@@ -39,14 +40,14 @@ export const getStaticProps = async (ctx) => {
     const { preview = false, previewData = {}, params } = ctx
 
     const token = previewData.token
-    const [settings, blog] = await Promise.all([
+    const [settings, data] = await Promise.all([
         getSettings({ token }),
         getCaseStudyBySlug({ token, slug: params.slug }),
     ])
 
     return {
         props: {
-            caseStudyData: refactorBlog(blog),
+            caseStudyData: refactorCaseStudyDetails(data),
             settings: refactorSettings(settings),
             preview,
             token: previewData.token ?? null,

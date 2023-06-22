@@ -1,15 +1,15 @@
 import Layout from "@/components/layout";
-import BlogDetailsBanner from "@/components/blogDetailsBanner/blogDetailsBanner";
-import BlogDetailsTableContent from "@/components/blogDetailsTableContent/blogDetailsTableContent";
 import BlogCard from "@/components/blogCard/BlogCard";
+import CaseStudyDetailsTableContent from "@/components/caseStudyDetailsTableContent/caseStudyDetailsTableContent";
+import CaseStudyDetailsBanner from "@/components/caseStudyDetailsBanner/caseStudyDetailsBanner";
 
 export default function CaseStudyDetails({ caseStudyData, settings, preview }) {
     return (
         <Layout header={settings.header} footer={settings.footer} preview={preview}>
             <div>
-                <BlogDetailsBanner blogData={caseStudyData} />
+                <CaseStudyDetailsBanner caseStudyData={caseStudyData} />
 
-                <BlogDetailsTableContent blogData={caseStudyData} />
+                <CaseStudyDetailsTableContent caseStudyData={caseStudyData} />
 
                 <div className="my-8 lg:my-16">
                     <div className="text-center">

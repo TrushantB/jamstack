@@ -1,7 +1,7 @@
 import { usePreview } from '@/lib/sanity.preview'
 import { caseStudyPageQuery } from '@/lib/sanity.queries'
-import { refactorBlog } from '@/utils/blogs';
 import CaseStudyDetails from '.';
+import { refactorCaseStudyDetails } from '@/utils/caseStudy';
 
 
 export default function CaseStudyDetailsPreview({
@@ -19,5 +19,5 @@ export default function CaseStudyDetailsPreview({
         )
     }
 
-    return <CaseStudyDetails caseStudyData={refactorBlog(caseStudyDataPreview)} settings={settings} preview={true} />
+    return <CaseStudyDetails caseStudyData={refactorCaseStudyDetails(caseStudyDataPreview)} settings={settings} preview={true} />
 }
