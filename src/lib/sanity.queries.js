@@ -109,6 +109,10 @@ export const blogPaths = groq`
   *[_type == "blog" && slug.current != null].slug.current
 `
 
+export const caseStudyPaths = groq`
+  *[_type == "caseStudyDetails" && slug.current != null].slug.current
+`
+
 export const pagePaths = groq`
   *[_type == "page" && slug.current != null].slug.current
 `
@@ -128,6 +132,27 @@ export const blogPageQuery = groq`
     }
   },
   "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  }[0...4]
+  }
+  `
+
+export const caseStudyPageQuery = groq`
+*[_type == "caseStudyDetails" && slug.current == $slug][0] {
+  ...,
+  author-> {
+    ...
+  },
+  letTalk {
+    ...,
+    cta {
+      displayName,
+      page-> {
+        "slug":slug.current
+      }
+    }
+  },
+  "latestBlogs": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
   }[0...4]
   }

@@ -21,7 +21,7 @@ const Faq = ({ faqData, settings, preview }) => {
             <h2>{faqData?.blogCard?.heading}</h2>
           </div>
           <div>
-            <BlogCard {...faqData?.blogCard} />
+            <BlogCard {...faqData?.blogCard} page="blog" />
           </div>
         </div>
       </div>

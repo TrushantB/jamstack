@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 import { resolveHref } from "@/lib/sanity.links";
 
-function BlogCard({ cards, hasIcon, label, sliderControls }) {
+function BlogCard({ cards, hasIcon, label, sliderControls, page }) {
   const [hoverItem, setHoverItem] = useState(null);
   const onMouseEnter = (card) => {
     setHoverItem(card);
@@ -61,7 +61,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
               onMouseEnter={() => onMouseEnter(card)}
               onMouseLeave={() => onMouseLeave()}
             >
-              <Link href={resolveHref('blog', card.href)} className="flex flex-col h-full">
+              <Link href={resolveHref(page, card.href)} className="flex flex-col h-full">
                 <img
                   className="lg:h-auto md:h-auto w-full object-cover object-center rounded-t-2xl"
                   src={card.image}

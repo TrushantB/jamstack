@@ -24,6 +24,7 @@ import compliences from '@/sanity/schemas/documents/compliences'
 import blogs from '@/sanity/schemas/singletons/blogs'
 import blog from '@/sanity/schemas/documents/blog'
 import caseStudy from '@/sanity/schemas/singletons/case-study'
+import caseStudyDetails from '@/sanity/schemas/documents/case-study'
 import ecosystem from '@/sanity/schemas/singletons/ecosystem'
 import faq from '@/sanity/schemas/singletons/faq'
 import navigation from '@/sanity/schemas/objects/navigation'
@@ -60,6 +61,7 @@ export default defineConfig({
       caseStudy,
       ecosystem,
       author,
+      caseStudyDetails,
 
       // Objects
       navigation,

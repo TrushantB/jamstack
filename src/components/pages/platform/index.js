@@ -47,7 +47,7 @@ const Platform = ({ platformsData, settings, preview }) => {
             </div>
 
             <div className="container mx-auto px-4 md:px-0 pb-12 lg:pb-24">
-                <BlogCard {...platformsData?.blogCard} />
+                <BlogCard {...platformsData?.blogCard} page="blog" />
             </div>
         </Layout>
     );

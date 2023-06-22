@@ -3,20 +3,20 @@ import BlogDetailsBanner from "@/components/blogDetailsBanner/blogDetailsBanner"
 import BlogDetailsTableContent from "@/components/blogDetailsTableContent/blogDetailsTableContent";
 import BlogCard from "@/components/blogCard/BlogCard";
 
-export default function BlogDetails({ blogData, settings, preview }) {
+export default function CaseStudyDetails({ caseStudyData, settings, preview }) {
     return (
         <Layout header={settings.header} footer={settings.footer} preview={preview}>
             <div>
-                <BlogDetailsBanner blogData={blogData} />
+                <BlogDetailsBanner blogData={caseStudyData} />
 
-                <BlogDetailsTableContent blogData={blogData} />
+                <BlogDetailsTableContent blogData={caseStudyData} />
 
                 <div className="my-8 lg:my-16">
                     <div className="text-center">
-                        <h2>{blogData?.blogCard?.heading}</h2>
+                        <h2>{caseStudyData?.blogCard?.heading}</h2>
                     </div>
                     <div className="px-3 ">
-                        <BlogCard {...blogData?.blogCard} page="blog" />
+                        <BlogCard {...caseStudyData?.blogCard} page="case-study-details" />
                     </div>
                 </div>
             </div>
