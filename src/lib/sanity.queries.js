@@ -8,6 +8,9 @@ export const homePageQuery = groq`
     "seoImage":ogImage,
     seoDescription
   },
+  "caseStudies": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  },
   "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
   }[0...3]
@@ -47,9 +50,9 @@ export const pricingQuery = groq`
   }
   `
 export const caseStudyQuery = groq`
-  *[_type == "caseStudy"][0] {
-   ...
-  }
+ *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+  ..., 
+}
   `
 export const faqPageQuery = groq`
   *[_type == "faqs"][0]{
@@ -65,7 +68,10 @@ export const platformsQuery = groq`
    ...,
    "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
-  }[0...3]
+  }[0...3],
+  "caseStudies": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  },
   }
   `
 
@@ -110,6 +116,10 @@ export const blogPaths = groq`
   *[_type == "blog" && slug.current != null].slug.current
 `
 
+export const caseStudyPaths = groq`
+  *[_type == "caseStudyDetails" && slug.current != null].slug.current
+`
+
 export const pagePaths = groq`
   *[_type == "page" && slug.current != null].slug.current
 `
@@ -129,6 +139,24 @@ export const blogPageQuery = groq`
     }
   },
   "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  }[0...4]
+  }
+  `
+
+export const caseStudyPageQuery = groq`
+*[_type == "caseStudyDetails" && slug.current == $slug][0] {
+  ...,
+  letTalk {
+    ...,
+    cta {
+      displayName,
+      page-> {
+        "slug":slug.current
+      }
+    }
+  },
+  "latestBlogs": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
   }[0...4]
   }

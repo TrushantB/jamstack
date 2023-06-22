@@ -37,7 +37,7 @@ const refactorBlog = (data) => {
   })
 
   return {
-    "slug": data.slug.current,
+    "slug": data?.slug?.current,
     "heading": data.title,
     "blogBanner": data?.image ? urlForImage(data.image).url() : '',
     "alt": data?.image?.logoAlt || '',

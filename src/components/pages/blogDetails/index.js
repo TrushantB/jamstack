@@ -16,7 +16,7 @@ export default function BlogDetails({ blogData, settings, preview }) {
                         <h2>{blogData?.blogCard?.heading}</h2>
                     </div>
                     <div className="px-3 ">
-                        <BlogCard {...blogData?.blogCard} />
+                        <BlogCard {...blogData?.blogCard} page="blog" />
                     </div>
                 </div>
             </div>

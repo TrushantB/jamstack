@@ -36,7 +36,7 @@ const Contact = ({ contactData, settings, preview }) => {
                 </div>
 
                 <div className="lg:px-6 pt-24">
-                    <BlogCard {...contactData?.blogCard} />
+                    <BlogCard {...contactData?.blogCard} page="blog" />
                 </div>
             </div>
 
