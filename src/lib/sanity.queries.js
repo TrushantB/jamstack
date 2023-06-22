@@ -126,7 +126,10 @@ export const blogPageQuery = groq`
         "slug":slug.current
       }
     }
-  } 
+  },
+  "latestBlogs": *[_type == "blog" && wasDeleted != true && isDraft != true] | order(publishDate desc){
+    ..., 
+  }[0...4]
   }
   `
 

@@ -28,7 +28,6 @@ export default defineType({
       name: "description",
       type: "text",
       title: "Short Description",
-      validation: (rule) => rule.required(),
     }),
     {
       type: 'image',
@@ -89,6 +88,7 @@ export default defineType({
               name: 'heading',
               type: 'string',
               title: 'Heading',
+              validation: (rule) => rule.required(),
             },
             {
               name: 'content',
@@ -314,6 +314,30 @@ export default defineType({
           ]
         }
 
+      ],
+    }),
+    defineField({
+      name: "blogCard",
+      title: "Blog Card",
+      type: "object",
+      description:
+        "This is a block of text that will be displayed at the bottom of the page.",
+      fields: [
+        {
+          name: "heading",
+          type: "string",
+          title: "Heading",
+        },
+        {
+          name: "hasIcon",
+          type: "boolean",
+          title: "Has Icon",
+        },
+        {
+          name: "label",
+          type: "string",
+          title: "Label",
+        },
       ],
     }),
   ],
