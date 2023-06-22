@@ -15,8 +15,8 @@ function MordernTechnology({
     <>
       <div
         className={`${isInner
-            ? "text-left container mx-auto "
-            : "text-center container lg:w-8/12 mx-auto"
+          ? "text-left container mx-auto px-4 lg:px-0 "
+          : "text-center container lg:w-8/12 mx-auto"
           } lg:w-full`}
       >
         <h2 className="pb-4 md:pb-8 lg:pb-6">{heading}</h2>

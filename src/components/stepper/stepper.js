@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../form/button/Button";
 import Accordion from "../accordian/accordion";
 import Onboarding from "../svgAnimations/stepper/onboarding";
@@ -8,15 +8,15 @@ import Bussiness from "../svgAnimations/stepper/bussiness";
 import { PortableText } from "@portabletext/react";
 import { CustomPortableText } from "../shared/CustomPortableText";
 
-const Stepper = (stepper ) => {
+const Stepper = (stepper) => {
   const [selectedStep, setSelectedStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
 
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const stepLabelOffset = 200; 
+      const stepLabelOffset = 200;
 
       const stepPositions = stepper?.stepper?.map((step, index) => {
         const element = document.getElementById(step.id);
@@ -63,17 +63,15 @@ const Stepper = (stepper ) => {
           {stepper?.stepper?.map((step, index) => (
             <a href={`#${step.id}`} key={index}>
               <div
-                className={`flex flex-col lg:flex-row gap-2 items-center ${
-                  activeStep === index + 1 ? "text-primary" : ""
-                }`}
+                className={`flex flex-col lg:flex-row gap-2 items-center ${activeStep === index + 1 ? "text-primary" : ""
+                  }`}
                 onClick={() => handleStepClick(index + 1)}
               >
                 <div
-                  className={`${
-                    activeStep === index + 1
+                  className={`${activeStep === index + 1
                       ? "bg-black text-white"
                       : "bg-accent-100"
-                  } p-3 rounded-full h-5 w-5 flex justify-center items-center`}
+                    } p-3 rounded-full h-5 w-5 flex justify-center items-center`}
                 >
                   {index + 1}
                 </div>
