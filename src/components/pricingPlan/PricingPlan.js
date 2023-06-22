@@ -37,7 +37,13 @@ export default function PricingPlan({ customPlan }) {
     }
 
     const checkIsValid = () => {
-        return plans.every(plan => plan.selected.length !== 0);
+        return plans.every(plan => {
+            if (plan.id === "other") {
+                return true;
+            } else {
+                return plan.selected.length !== 0;
+            }
+        })
     }
     const scheduleMeeting = () => {
         window.open('https://harishboke-setoo.zohobookings.in/#/customer/contactus', '_blank')

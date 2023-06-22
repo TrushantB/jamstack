@@ -7,7 +7,7 @@ const Jamstack = () => {
     setLoading(false);
   }, []);
   return (
-    <div className="player-wrapper">
+    <div className="player-wrapper mt-5 lg:mt-0">
       {!loading && (
         <ReactPlayer
           url={"./Jamstack+.mp4"}

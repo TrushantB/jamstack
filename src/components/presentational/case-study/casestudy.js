@@ -55,7 +55,7 @@ const Casestudy = ({
                 )}
                 <h4
                   className={`${item === selectedItem
-                    ? "font-bold text-black text-5xl"
+                    ? "font-bold text-black text-2xl"
                     : "text-gray-500"
                     }`}
                 >
