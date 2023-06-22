@@ -219,7 +219,7 @@ export default defineType({
                           },
                           {
                             name: 'image',
-                            type: 'object',
+                            type: 'image',
                             title: 'Image',
                             fields: [
                               {
@@ -237,6 +237,86 @@ export default defineType({
                         ],
                       },
                     }),
+                    {
+                      title: 'Images Inline',
+                      name: 'inlineImages',
+                      type: 'object',
+                      icon: ImageIcon,
+                      fields: [
+                        {
+                          name: "gap",
+                          type: "number",
+                          title: "Gap Between Images",
+                          options: {
+                            list: [
+                              { title: '1', value: 1 },
+                              { title: '2', value: 2 },
+                              { title: '3', value: 3 },
+                              { title: '4', value: 4 },
+                              { title: '5', value: 5 },
+                            ],
+                          },
+                          initialValue: 1,
+                        },
+                        {
+                          name: 'images',
+                          title: 'Images',
+                          icon: ImageIcon,
+                          type: 'array',
+                          of: [
+                            {
+                              type: 'image',
+                              icon: ImageIcon,
+                              name: 'image',
+                              title: 'image',
+                              options: {
+                                hotspot: true,
+                              },
+                              preview: {
+                                select: {
+                                  imageUrl: 'asset.url',
+                                  title: 'caption',
+                                },
+                              },
+                              fields: [
+                                defineField({
+                                  name: 'alt',
+                                  type: 'string',
+                                  title: 'Alt Text',
+                                  description:
+                                    'Alternative text for screenreaders. Falls back on caption if not set',
+                                  validation: (rule) => rule.required(),
+
+                                }),
+                                defineField({
+                                  name: 'caption',
+                                  type: 'string',
+                                  title: 'Caption Text',
+                                  description: 'Caption for image',
+                                  validation: (rule) => rule.required(),
+
+                                }),
+                                {
+                                  name: "width",
+                                  type: "string",
+                                  title: "Width",
+                                  description: "eg. 100px/10%/10vw"
+                                }
+                              ],
+                              validation: (rule) => rule.required(),
+                            },
+                          ]
+                        }
+                      ],
+                      preview: {
+                        prepare() {
+                          return {
+                            subtitle: "Inline Images",
+                            title: "images",
+                          };
+                        },
+                      }
+                    }
                   ],
                 }),
                 {

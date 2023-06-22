@@ -1,6 +1,5 @@
 
 import { urlForImage } from '@/lib/sanity.image'
-import { refactorBlog } from './blogs'
 
 const refactorHome = (data) => {
   return {

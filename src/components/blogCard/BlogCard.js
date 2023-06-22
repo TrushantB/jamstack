@@ -17,7 +17,7 @@ function BlogCard({ cards, hasIcon, label, sliderControls }) {
   const sliderSetting = {
     dots: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: cards.length,
     arrows: false,
     responsive: [
       {

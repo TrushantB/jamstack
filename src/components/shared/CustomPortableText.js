@@ -2,6 +2,7 @@ import { PortableText } from '@portabletext/react'
 import ImageBox from '@/components/shared/ImageBox'
 import { TimelineSection } from '@/components/shared/TimelineSection'
 import TablePreview from './TablePreview'
+import InlineImages from './InlineImages'
 
 
 
@@ -54,6 +55,10 @@ export function CustomPortableText({
       customTable: ({ value }) => {
         const { rows = [], title } = value.table || {}
         return <TablePreview rows={rows} title={title} tableType={value.tableType} />
+      },
+      inlineImages: ({ value }) => {
+        const { images = [], gap } = value || {}
+        return <InlineImages images={images} gap={gap} classesWrapper="" />
       }
     },
   }
