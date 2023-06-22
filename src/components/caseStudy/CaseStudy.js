@@ -11,9 +11,8 @@ const MAP_ICONS = {
 
 function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
   const [selectedItem, setSelectedItem] = useState(null);
-
   useEffect(() => {
-    setSelectedItem(itemList?.length ? itemList[0] : []);
+    setSelectedItem(itemList?.length ? itemList[0] : null);
   }, [itemList]);
 
   const getIcon = (icon) => {
@@ -52,7 +51,7 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                           : "text-gray-500 w-10/12 ml-[16.6667%]"
                           }`}
                       >
-                        {item.label}
+                        {item?.label}
                       </h3>
                     </button>
                   </li>
@@ -65,8 +64,8 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 {selectedItem &&
                   selectedItem?.percentageList?.map((percentageItem, index) => (
                     <div className={`cursor-auto`} key={index}>
-                      <h4 className="heading-2">{percentageItem.percentage}</h4>
-                      <p className="">{percentageItem.description}</p>
+                      <h4 className="heading-2">{percentageItem?.percentage}</h4>
+                      <p className="">{percentageItem?.description}</p>
                     </div>
                   ))}
               </div>
@@ -74,7 +73,8 @@ function CaseStudy({ heading, icon, description, itemList, hasIcon, label }) {
                 <ReadMoreLink
                   label={label}
                   hasIcon={hasIcon}
-                  href={resolveHref(selectedItem?.href)}
+                  target="_self"
+                  href={resolveHref( 'case-study-details' ,selectedItem?.href) || ''}
                 />
               </div>
             </div>

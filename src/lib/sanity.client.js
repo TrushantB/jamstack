@@ -19,7 +19,9 @@ import {
   aboutQuery,
   caseStudyQuery,
   blogsPageQuery,
-  blogPageQuery
+  blogPageQuery,
+  caseStudyPaths,
+  caseStudyPageQuery
 } from './sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -73,6 +75,10 @@ export async function getSettings({
 
 export async function getBlogPaths() {
   return await sanityClient()?.fetch(blogPaths)
+}
+
+export async function getCaseStudyPaths() {
+  return await sanityClient()?.fetch(caseStudyPaths)
 }
 
 export async function getPagePaths() {
@@ -143,5 +149,12 @@ export async function getBlog({
   slug
 }) {
   return await sanityClient(token)?.fetch(blogPageQuery, { slug })
+}
+
+export async function getCaseStudyBySlug({
+  token,
+  slug
+}) {
+  return await sanityClient(token)?.fetch(caseStudyPageQuery, { slug })
 }
 

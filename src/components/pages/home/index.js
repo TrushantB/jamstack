@@ -19,6 +19,7 @@ import ToTop from "@/components/backToTop";
 import ScrollUp from "@/components/shared/ScrollUp";
 
 const IndexPage = ({ homeData, settings, preview }) => {
+  console.log("homeData==>" , homeData);
   if (!homeData) {
     return <></>;
   }
@@ -85,7 +86,7 @@ const IndexPage = ({ homeData, settings, preview }) => {
           <h2>{homeData?.blogCard?.heading}</h2>
         </div>
         <div>
-          <BlogCard {...homeData.blogCard} />
+          <BlogCard {...homeData.blogCard} page="blog" />
         </div>
       </section>
     </Layout>
