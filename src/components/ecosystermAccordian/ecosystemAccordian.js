@@ -35,29 +35,32 @@ const EcosystemAccordion = ({ accordin }) => {
         const Component = MAP_STEPPER_COMPONENT[item.animationType];
 
         const handleScroll = () => {
-          const element = document.getElementById(`stepperItem-${index}`);
+          const element = document.getElementById(`accordionItem-${index}`);
           element.scrollIntoView({ behavior: "smooth", block: "start" });
         };
 
         return (
           <div
-            className={`accordion-item cursor-pointer ${
-              active === item ? "active" : ""
-            }`}
+            className={`accordionItem accordion-item cursor-pointer ${active === item ? "active" : ""
+              }`}
             onClick={() => {
               toggleAccordion(item);
-              
+
             }}
             key={index}
-            id={`stepperItem-${index}`}
+            id={`accordionItem-${index}`}
           >
             <div onClick={() => {
               handleScroll();
-              
+
             }} className="accordinItemScroll accordion-title flex justify-between py-1 lg:p-5 lg:ps-0 items-center">
               <div className="flex items-center gap-4">
                 <div className="diamond w-5 h-5 bg-tertiary"></div>
-                <h3  >{item.label}</h3>
+                <h3>
+                  <a href={`#accordionItem-${index}`}>
+                    {item.label}
+                  </a>
+                </h3>
               </div>
             </div>
             {active === item && (

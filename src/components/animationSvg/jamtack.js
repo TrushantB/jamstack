@@ -758,8 +758,8 @@ const JamstackFour = () => {
 const JamstackFive = () => {
   return (
     <svg
-      width="335"
-      height="208"
+      width="100%"
+      height="auto"
       viewBox="0 0 335 208"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

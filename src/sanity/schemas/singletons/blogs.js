@@ -23,22 +23,7 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
-    defineField({
-      name: 'blogs',
-      type: 'array',
-      of: [
-        {
-          title: 'Items',
-          name: 'items',
-          type: 'reference',
-          to: [
-            {
-              type: 'blog',
-            },
-          ],
-        },
-      ],
-    }),
+
   ],
   preview: {
     select: {

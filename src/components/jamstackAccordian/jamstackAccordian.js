@@ -38,9 +38,15 @@ const JamstackAccordion = ({ accordin }) => {
               className="accordion-title flex justify-between lg:p-5 py-4 lg:py-5 lg:ps-0 items-center"
               onClick={() => toggleAccordion(item)}
             >
-              <div className="flex items-start lg:items-center  justify-center gap-2">
+              <div className="accordionItem flex items-start lg:items-center  justify-center gap-2"
+                id={`accordionItem-${index}`}
+              >
                 <div className="diamond w-1 h-1 p-3 bg-tertiary"></div>
-                <h3>{item.label}</h3>
+                <h3>
+                  <a href={`#accordionItem-${index}`}>
+                    {item.label}
+                  </a>
+                </h3>
               </div>
             </div>
             {active === item && (
