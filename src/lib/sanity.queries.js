@@ -149,7 +149,7 @@ export const blogPaths = groq`
 `
 
 export const caseStudyPaths = groq`
-*[_type == "caseStudy" && slug.current != null].slug.current
+*[_type == "caseStudyDetails" && slug.current != null].slug.current
 `
 
 export const pagePaths = groq`
@@ -190,7 +190,7 @@ export const caseStudyPageQuery = groq`
   },
   "latestBlogs": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
-  }[0...4]
+  }[0...4],
   "caseStudies": *[_type == "caseStudyDetails" && wasDeleted != true && isDraft != true] | order(publishDate desc){
     ..., 
   },
