@@ -11,7 +11,7 @@ const refactorCaseStudy = (data) => {
         percentage: percentageItem?.percentage || "",
         description: percentageItem?.description || "",
       })) || [],
-    })),
+    })) || [],
     hasIcon: data?.caseStudy?.hasIcon || true,
     label: data?.caseStudy?.label || '',
     icon: data?.caseStudy?.icon || '',
