@@ -23,8 +23,7 @@ export default function CaseStudyDetailsTableContent({ caseStudyData }) {
         <div className="my-8 lg:my-16">
           <div className="md:flex justify-center items-start md:gap-4 lg:gap-4">
             <div className="md:w-1/4 px-3 mb-8 lg:mb-0 lg:sticky lg:top-[100px]">
-            {/* // TODO:Implementation remaining */}
-              {/* <div className="toc mb-8">
+              <div className="toc mb-8">
                 <h4 className="text-xl">{caseStudyData?.tableHeading}</h4>
                 <ol className="list-decimal font-medium text-sm ml-4">
                   {caseStudyData?.tabelContent?.map((item, index) => (
@@ -44,7 +43,7 @@ export default function CaseStudyDetailsTableContent({ caseStudyData }) {
                     </li>
                   ))}
                 </ol>
-              </div> */}
+              </div>
               
               {
                 caseStudyData?.suggestionPost?.title && <div className="my-6 sticky top-0 hidden lg:block">

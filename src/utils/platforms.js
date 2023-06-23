@@ -64,11 +64,9 @@ const refactorPlatforms = (data) => {
       "label": data?.cta?.label,
       "size": data?.cta?.size
     },
-    // TODO:Static things add from CMS
     caseStudy:{ 
-      heading: 'Case Study',
-      description: data?.caseStudies?.description || 
-      ' We may also automatically collect certain information through cookies to improve our Platform, such as pattern of your use of the Platform, visits, material that you viewed or searched for; page response times, download errors, length of visits to certain pages, page' ,
+      heading: data?.caseStudy?.title || '',
+      description: data?.caseStudy?.description || '',
       itemList: data?.caseStudies?.map((item) => ({
         label: item?.title || "",
         href: item?.slug.current || "",
@@ -77,10 +75,10 @@ const refactorPlatforms = (data) => {
           description: percentageItem?.description || "",
         })) || [],
       })),
-      hasIcon: data?.caseStudies?.hasIcon || true,
-      label: data?.caseStudies?.label || 'Read More',
-      icon: data?.caseStudies?.icon || '',
-      href: data?.caseStudies?.href || '',
+      hasIcon: data?.caseStudy?.hasIcon || true,
+      label: data?.caseStudy?.label || '',
+      icon: data?.caseStudy?.icon || '',
+      href: data?.caseStudy?.href || '',
     },
     "testimonialCard": {
       "heading": data?.testimonialCard?.heading,

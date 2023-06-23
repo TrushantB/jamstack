@@ -41,50 +41,6 @@ export default defineType({
           title: "Description",
         },
         {
-          name: "itemList",
-          type: "array",
-          title: "Item List",
-          of: [
-            {
-              type: "object",
-              fields: [
-                {
-                  name: "label",
-                  type: "string",
-                  title: "Label",
-                },
-                {
-                  name: "href",
-                  type: "string",
-                  title: "Href",
-                },
-                {
-                  name: "percentageList",
-                  type: "array",
-                  title: "Percentage List",
-                  of: [
-                    {
-                      type: "object",
-                      fields: [
-                        {
-                          name: "percentage",
-                          type: "string",
-                          title: "Percentage",
-                        },
-                        {
-                          name: "description",
-                          type: "string",
-                          title: "Description",
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
           name: "hasIcon",
           type: "boolean",
           title: "Has Icon",
@@ -98,11 +54,6 @@ export default defineType({
           name: "icon",
           type: "string",
           title: "Icon",
-        },
-        {
-          name: "href",
-          type: "string",
-          title: "Href",
         },
       ],
     }),
