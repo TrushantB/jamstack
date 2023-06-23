@@ -1,16 +1,12 @@
 import { apiVersion, dataset, projectId, useCdn } from '@/lib/sanity.api'
 import {
   homePageQuery,
-  homePageTitleQuery,
   pagePaths,
   complienceBySlugQuery,
   platformsQuery,
   projectBySlugQuery,
   blogPaths,
   settingsQuery,
-  platformsQueryEcomj,
-  platformsQueryMObj,
-  platformsQueryWebj,
   contactQuery,
   jamStackQuery,
   faqPageQuery,
@@ -83,22 +79,6 @@ export async function getCaseStudyPaths() {
 
 export async function getPagePaths() {
   return await sanityClient()?.fetch(pagePaths)
-}
-
-export async function getPlatformsQueryEcomj({
-  token,
-}) {
-  return await sanityClient(token)?.fetch(platformsQueryEcomj)
-}
-export async function getPlatformsQueryMObj({
-  token,
-}) {
-  return await sanityClient(token)?.fetch(platformsQueryMObj)
-}
-export async function getPlatformsQueryWebj({
-  token,
-}) {
-  return await sanityClient(token)?.fetch(platformsQueryWebj)
 }
 
 export async function getContacts({
