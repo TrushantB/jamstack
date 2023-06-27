@@ -37,7 +37,7 @@ const refactorCaseStudyDetails = (data) => {
   return {
     "slug": data.slug.current,
     "heading": data.title || '',
-    "subTitle": data?.subTitle,
+    "subTitle": data?.subTitle || '',
     "blogBanner": data?.image ? urlForImage(data.image).url() : '',
     "alt": data?.image?.logoAlt || '',
     client: data?.client || '',
