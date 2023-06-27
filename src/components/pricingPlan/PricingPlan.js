@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../form/button/Button';
+import { ToastContainer, toast } from 'react-toastify';
 const initialValues = {
     name: "",
     email: "",
@@ -192,6 +193,10 @@ export default function PricingPlan({ customPlan }) {
                                     accept-charset="UTF-8"
                                     enctype="multipart/form-data"
                                     className=" pt-8 pb-4 "
+                                    onSubmit={(e) => {
+                                        e.preventDefault();
+                                        toast.success('Your JAMming session is booked! Coming to you soon');
+                                    }}
                                 >
                                     <h6 className='mb-2'>
                                         Please fill up the details
@@ -224,6 +229,7 @@ export default function PricingPlan({ customPlan }) {
                                         </div>
                                     </div>
                                 </form>
+                                <ToastContainer pauseOnHover={false} hideProgressBar={true} />
                             </div>
                         </li>
                     </ul>
