@@ -33,6 +33,11 @@ export default function CaseStudyDetailsBanner({ caseStudyData }) {
                     <h1 className='lg:w-full'>
                         {caseStudyData?.heading}
                     </h1>
+                    {
+                        caseStudyData?.subTitle && <span className='block'>
+                            {caseStudyData?.subTitle}
+                        </span>
+                    }
                 </div>
                 <div className="flex flex-wrap items-start gap-3 md:gap-8 mb-10">
                     {

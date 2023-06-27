@@ -4,13 +4,46 @@ import { useRouter } from "next/router";
 import CaseStudyContactCard from "../caseStudyContactCard/caseStudyContactCard";
 
 export default function CaseStudyDetailsTableContent({ caseStudyData }) {
-  const [selectedContent, setSelectedContent] = useState({});
+  const [selectedContent, setSelectedContent] = useState(null);
+
   const router = useRouter();
   const url = `${process.env.NEXT_PUBLIC_SITE_URL}/${router.asPath}`;
 
   const handleItemClick = (item) => {
     setSelectedContent(item);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const headerOffset = 200;
+
+      const contentPositions = caseStudyData?.tabelContent?.map(
+        (item, index) => {
+          const element = document.getElementById(index.toString());
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top + scrollPosition - headerOffset;
+          }
+          return 0;
+        }
+      );
+
+      let currentContent = null;
+      for (let i = 0; i < contentPositions.length; i++) {
+        if (scrollPosition >= contentPositions[i]) {
+          currentContent = caseStudyData?.tabelContent[i];
+        }
+      }
+
+      setSelectedContent(currentContent);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     caseStudyData?.tabelContent?.length &&
@@ -29,8 +62,9 @@ export default function CaseStudyDetailsTableContent({ caseStudyData }) {
                   {caseStudyData?.tabelContent?.map((item, index) => (
                     <li
                       key={index}
-                      className={`my-3 ${selectedContent === item ? "text-primary" : ""
-                        } hover:text-primary`}
+                      className={`my-3 ${
+                        selectedContent === item ? "text-primary" : ""
+                      } hover:text-primary`}
                     >
                       <a href={`#${index}`}>
                         <button
@@ -44,21 +78,18 @@ export default function CaseStudyDetailsTableContent({ caseStudyData }) {
                   ))}
                 </ol>
               </div>
-              
-              {
-                caseStudyData?.suggestionPost?.title && <div className="my-6 sticky top-0 hidden lg:block">
+
+              {caseStudyData?.suggestionPost?.title && (
+                <div className="my-6 sticky top-0 hidden lg:block">
                   <CaseStudyContactCard caseStudyData={caseStudyData} />
                 </div>
-              }
+              )}
             </div>
             <div className="lg:w-3/4">
               {caseStudyData?.tabelContent?.map((item, index) => (
                 <div key={index} className="blogDetailsItems" id={`${index}`}>
                   <h2 className="px-3">{item.title}</h2>
-                  <div
-                    key={index}
-                    className="px-3 blogDetailsInnerPage"
-                  >
+                  <div key={index} className="px-3 blogDetailsInnerPage">
                     <CustomPortableText value={item.content} />
                   </div>
                 </div>
