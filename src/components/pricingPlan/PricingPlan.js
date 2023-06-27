@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../form/button/Button';
+const initialValues = {
+    name: "",
+    email: "",
+    platform: "",
+    frontend: "",
+    backend: "",
+    others: ""
+}
 export default function PricingPlan({ customPlan }) {
     const [plans, setPlans] = useState([]);
     const [current, setCurrent] = useState(0);
     const [dragDetails, setDragDetails] = useState({});
+    const [values, setValues] = useState(initialValues)
+
     useEffect(() => {
         setPlans(customPlan?.plans || [])
     }, [customPlan?.plans])
@@ -33,7 +43,6 @@ export default function PricingPlan({ customPlan }) {
             }
         }
         setPlans([...plans])
-
     }
 
     const checkIsValid = () => {
@@ -45,9 +54,46 @@ export default function PricingPlan({ customPlan }) {
             }
         })
     }
-    const scheduleMeeting = () => {
-        window.open('https://harishboke-setoo.zohobookings.in/#/customer/contactus', '_blank')
+
+    const scheduleMeeting = async () => {
+        let platform = [];
+        let frontend = [];
+        let backend = [];
+        let others = [];
+        await plans.map((plan) => {
+            switch (plan.id) {
+                case "platform":
+                    plan.selected.map((selectedPlan) => {
+                        platform.push(selectedPlan.name);
+                    })
+                    break;
+                case "frontend":
+                    plan.selected.map((selectedPlan) => {
+                        frontend.push(selectedPlan.name);
+                    })
+
+                    break;
+                case "backend":
+                    plan.selected.map((selectedPlan) => {
+                        backend.push(selectedPlan.name);
+                    })
+
+                    break;
+
+                case "other":
+                    plan.selected.map((selectedPlan) => {
+                        others.push(selectedPlan.name);
+                    })
+                    break;
+            }
+        })
+
+        setValues({ ...values, platform: platform.join(","), frontend: frontend.join(","), others: others.join(", "), backend: backend.join(",") })
     }
+
+    useEffect(() => {
+        scheduleMeeting();
+    }, [plans])
 
     return (
         <div className='mt-16 container mx-auto'>
@@ -92,7 +138,7 @@ export default function PricingPlan({ customPlan }) {
                     <h3 className="font-medium text-center">
                         {customPlan?.idealPlanHeading}
                     </h3>
-                    <ul className="pb-16">
+                    <ul className="">
                         {
                             plans?.map((plan, index) => {
                                 return (
@@ -113,7 +159,7 @@ export default function PricingPlan({ customPlan }) {
                                                                     <span aria-label="Close" tabIndex={0} className="w-6 h-6 rounded-full flex justify-center items-center cursor-pointer  bg-[#6d8ae0] text-center " onClick={() => handleClose(index, planIndex)}>
                                                                         <svg width="14px" height="14px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                                                             <g id="Menu / Close_LG">
-                                                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" stroke-linecap="round" strokeLinejoin="round" />
+                                                                                <path id="Vector" d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="#fff" stroke-width="4" strokeLinecap="round" strokeLinejoin="round" />
                                                                             </g>
                                                                         </svg>
                                                                     </span>
@@ -136,10 +182,51 @@ export default function PricingPlan({ customPlan }) {
                                 )
                             })
                         }
+                        <li >
+                            <div>
+                                <form
+                                    action="https://forms.zohopublic.in/setoosolutionsprivatelimited/form/PricingFormJ/formperma/uXOGCYqJuvuf8V0CYLsF6GFY84gC3xVOERWYRsYmXOg/htmlRecords/submit"
+                                    name="form"
+                                    id="form"
+                                    method="POST"
+                                    accept-charset="UTF-8"
+                                    enctype="multipart/form-data"
+                                    className=" pt-8 pb-4 "
+                                >
+                                    <h6 className='mb-2'>
+                                        Please fill up the details
+                                    </h6>
+                                    <div className='flex flex-col gap-4'>
+                                        <input
+                                            className=" rounded-full bg-accent-200 px-6 h-[60px] "
+                                            placeholder="Name"
+                                            required
+                                            onChange={(e) => setValues({ ...values, name: e.target.value })}
+                                            name="SingleLine"
+                                            value={values.name}
+                                        />
+                                        <input
+                                            className=" rounded-full bg-accent-200 px-6 h-[60px]"
+                                            placeholder="Email"
+                                            name="Email"
+                                            type="email"
+                                            required
+                                            onChange={(e) => setValues({ ...values, email: e.target.value })}
+                                            value={values.email}
+                                        />
+                                        <input type="text" name="SingleLine1" value={values.platform} className='hidden' />
+                                        <input type="text" name="SingleLine2" value={values.frontend} className='hidden' />
+                                        <input type="text" name="SingleLine3" value={values.backend} className='hidden' />
+                                        <input type="text" name="SingleLine4" value={values.others} className='hidden' />
+
+                                        <div >
+                                            <Button label={'Schedule Meeting'} type={checkIsValid() ? 'primary' : 'disabled'} size={'medium'} />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
                     </ul>
-                    <div>
-                        <Button label={'Schedule Meeting'} type={checkIsValid() ? 'primary' : 'disabled'} size={'medium'} onClick={() => scheduleMeeting()} />
-                    </div>
                 </div>
             </div>
         </div>
