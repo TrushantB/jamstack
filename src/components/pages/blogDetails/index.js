@@ -22,5 +22,5 @@ export default function BlogDetails({ blogData, settings, preview }) {
             </section>
         </Layout>
     );
-}
+} 
 
