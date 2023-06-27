@@ -1,7 +1,7 @@
 import { urlForImage } from '@/lib/sanity.image'
 
 const refactorCaseStudy = (data) => {
-  return { 
+  return {
     heading: data?.caseStudy?.title || '',
     description: data?.caseStudy?.description || '',
     itemList: data?.caseStudies?.map((item) => ({
@@ -37,12 +37,13 @@ const refactorCaseStudyDetails = (data) => {
   return {
     "slug": data.slug.current,
     "heading": data.title || '',
+    "subTitle": data?.subTitle,
     "blogBanner": data?.image ? urlForImage(data.image).url() : '',
     "alt": data?.image?.logoAlt || '',
-    client : data?.client || '',
-    timeline : data?.timeline || '',
+    client: data?.client || '',
+    timeline: data?.timeline || '',
     "year": data?.year || '',
-    service : data?.service || '',
+    service: data?.service || '',
     "tableHeading": data.tableOfContentHeading || '',
     "iconHeading": data?.shareHeading || '',
     "tabelContent": data.tableOfContent.map((content) => {
@@ -67,4 +68,4 @@ const refactorCaseStudyDetails = (data) => {
   }
 }
 
-export { refactorCaseStudy , refactorCaseStudyDetails } 
+export { refactorCaseStudy, refactorCaseStudyDetails } 

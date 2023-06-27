@@ -22,5 +22,5 @@ export default function CaseStudyDetails({ caseStudyData, settings, preview }) {
             </div>
         </Layout>
     );
-}
+} 
 
