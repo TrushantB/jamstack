@@ -64,15 +64,19 @@ function WebStactics({
         "output": "html"
       })
         .then((data) => {
-          toast.success("Yeah! Your core web vitals report is ready. Please fill in your details to get the report on mail.");
-          setReport(data.data.data.data);
-          setAnimateReport(false);
-          setShowProgressBar(true);
+          if (data.data.data.data?.firstContentfulPaint?.title) {
+            toast.success("Yeah! Your core web vitals report is ready. Please fill in your details to get the report on mail.");
+            setReport(data.data.data.data);
+            setAnimateReport(false);
+            setShowProgressBar(true);
+          } else {
+            setAnimateReport(false);
+            toast.error("Oops, our bad! Please try again");
+          }
         })
         .catch((error) => {
           setAnimateReport(false);
-          setShowProgressBar(true);
-          console.error("error", error);
+          toast.error("Oops, our bad! Please try again");
         });
     } else {
       toast.error("Please enter valid URL.")
@@ -140,7 +144,7 @@ function WebStactics({
               />
               {isMobileView ? (
                 <button
-                aria-label="submit"
+                  aria-label="submit"
                   onClick={handleButtonClick}
                   className={`bg-primary rounded-full w-10 flex justify-center absolute right-0 top-0 lg:relative whitespace-nowrap items-center -ml-14 h-10`}
                 >
@@ -148,7 +152,7 @@ function WebStactics({
                 </button>
               ) : (
                 isButton && (
-                  <button 
+                  <button
                     onClick={handleButtonClick}
                     className={`bg-primary py-2 px-4 rounded-full -ml-20 text-xl text-white btn whitespace-nowrap`}
                   >

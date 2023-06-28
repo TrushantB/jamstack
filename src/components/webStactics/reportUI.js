@@ -13,7 +13,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
         {
-          report?.firstContentfulPaint?.displayValue &&
+          Boolean(report?.firstContentfulPaint?.title) &&
           <div className="relative pt-1 mx-5 ">
             <h5 className="mb-5 text-2xl sm:text-3xl">
               {report.firstContentfulPaint?.title} (FCP)
@@ -43,7 +43,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
         }
 
         {
-          report?.interactive?.displayValue &&
+          Boolean(report?.interactive?.title) &&
           <div className="relative pt-1 mx-5 ">
             <h5 className="mb-5 text-2xl sm:text-3xl">
               {report.interactive?.title} (TTI)
@@ -72,7 +72,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
           </div>
         }
         {
-          report?.largestContentfulPaint?.displayValue && report?.largestContentfulPaint?.score &&
+          Boolean(report?.largestContentfulPaint?.title) &&
           <div className="relative pt-1 mx-5 ">
             <h5 className="mb-5 text-2xl sm:text-3xl">
               {report.largestContentfulPaint?.title} (LCP)
@@ -101,7 +101,7 @@ const ProgressBar = ({ report = {}, submitReport }) => {
           </div>
         }
         {
-          report?.cumulativeLayoutShift?.displayValue &&
+          Boolean(report?.cumulativeLayoutShift?.title) &&
           <div className="relative pt-1 mx-5 ">
             <h5 className="mb-5 text-2xl sm:text-3xl">
               {report.cumulativeLayoutShift?.title} (CLS)
